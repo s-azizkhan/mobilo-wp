@@ -1,7 +1,11 @@
 .tmb
-/*.backup
-/*.backup
-./*.log
+*.backup
+*.backup
+*.log
+composer.lock
+wp-config.php
+*.az
+*.bk
 wp-content/litespeed/*
 wp-content/debug.log
 wp-content/uploads/wc-logs
@@ -9,7 +13,6 @@ wp-content/uploads/trustedlogin-logs/*
 wp-content/uploads/wpo_wcpdf*
 wp-content/updraft/*.gz
 wp-content/updraft/*.txt
-*.az
 wp-content/vendor
 # FREE THEMES
 wp-content/themes/twentytwentyfive/
