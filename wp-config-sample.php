@@ -1,16 +1,16 @@
 <?php
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'xx');
+define('DB_NAME', 'database_name_here');
 
 /** Database username */
-define('DB_USER', 'xxx');
+define('DB_USER', 'username_here');
 
 /** Database password */
-define('DB_PASSWORD', 'xxxx');
+define('DB_PASSWORD', 'password_here');
 
 /** Database hostname */
-define('DB_HOST', 'xxxxx');
+define('DB_HOST', 'localhost');
 
 /** Database charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
@@ -75,6 +75,9 @@ define('WP_CACHE', true);
 // memory limit
 define('WP_MEMORY_LIMIT', '256M');
 
+// Environment
+define('WP_ENV', 'development');
+
 
 /* Add any custom values between this line and the "stop editing" line. */
 
@@ -84,6 +87,15 @@ define('FS_METHOD', 'direct');
 // Security Headers
 // define( 'FORCE_SSL_ADMIN', true );
 define('COOKIE_DOMAIN', '.mobilo.dev');
+
+// Redis Object Cache (if available)
+if (class_exists('Redis')) {
+	define('WP_REDIS_HOST', '127.0.0.1');
+	define('WP_REDIS_PORT', 6379);
+	define('WP_REDIS_TIMEOUT', 1);
+	define('WP_REDIS_READ_TIMEOUT', 1);
+	define('WP_REDIS_DATABASE', 0);
+}
 
 /* That's all, stop editing! Happy publishing. */
 
