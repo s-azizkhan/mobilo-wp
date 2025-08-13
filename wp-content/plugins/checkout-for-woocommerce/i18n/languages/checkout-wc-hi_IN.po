@@ -1,0 +1,601 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Checkout for WooCommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Clifton Griffin <clif@checkoutwc.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-19 10:50-0400\n"
+"PO-Revision-Date: 2024-03-19 11:01-0400\n"
+"Language: hi_IN\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: checkout-for-woocommerce.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: sources/ts/blocks/OrderBumpSteps.tsx:21
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:54
+msgid "Order Submitted"
+msgstr "आदेश जमा किया"
+
+#: sources/ts/blocks/OrderBumpSteps.tsx:25
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:60
+msgid "Special Offer"
+msgstr "विशेष पेशकश"
+
+#: sources/ts/blocks/OrderBumpSteps.tsx:29
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:66
+msgid "Order Received"
+msgstr "आदेश प्राप्त"
+
+#: sources/ts/frontend/Components/LoginFormModal.tsx:120
+#: sources/php/functions.php:3572
+msgid "Welcome back"
+msgstr "वापसी पर स्वागत है"
+
+#: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:14
+#: sources/ts/frontend/Components/ReviewPane/PaymentMethodReviewPane.tsx:14
+#: sources/ts/frontend/Components/ReviewPane/ShippingMethodReviewPane.tsx:14
+msgid "Contact"
+msgstr "संपर्क करें"
+
+#: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:32
+#: sources/ts/frontend/Components/ReviewPane/PaymentMethodReviewPane.tsx:34
+msgid "Method"
+msgstr "तरीका"
+
+#: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:39
+#: sources/php/functions.php:956
+#: sources/php/template-functions.php:1628
+#: sources/php/template-functions.php:1933
+msgid "Payment"
+msgstr "भुगतान"
+
+#: sources/ts/frontend/Components/SideCartComponent.tsx:35
+msgid "Close Cart"
+msgstr "कार्ट बंद करें"
+
+#: checkout-for-woocommerce.php:141
+msgid "Your site is running an <strong>insecure version</strong> of PHP that is no longer supported. Please contact your web hosting provider to update your PHP version."
+msgstr "आपकी साइट PHP का <strong>असुरक्षित संस्करण</strong> चला रही है जो अब समर्थित नहीं है। अपने PHP संस्करण को अपडेट करने के लिए कृपया अपने वेब होस्टिंग प्रदाता से संपर्क करें।"
+
+#. translators: %s - checkoutwc.com URL for documentation with more details.
+#: checkout-for-woocommerce.php:147
+#, php-format
+msgid "<strong>Note:</strong> CheckoutWC is disabled on your site until you fix the issue. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Need help? Click here.</a>"
+msgstr "<strong>ध्यान दें:</strong> जब तक आप समस्या का समाधान नहीं कर देते, तब तक आपकी साइट पर CheckoutWC अक्षम है। <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">मदद की ज़रूरत है? यहाँ क्लिक करें।</a>"
+
+#. translators: %s - WordPress version.
+#: checkout-for-woocommerce.php:187
+#, php-format
+msgid "CheckoutWC requires WordPress %s or later."
+msgstr "CheckoutWC को WordPress %s या बाद के संस्करण की आवश्यकता है।"
+
+#. translators: %s - WordPress version.
+#: checkout-for-woocommerce.php:225
+#, php-format
+msgid "CheckoutWC requires WooCommerce %s or later."
+msgstr "CheckoutWC को WooCommerce %s या बाद के संस्करण की आवश्यकता है।"
+
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:23
+msgid "No thanks, just complete my order"
+msgstr "नहीं धन्यवाद, बस मेरा आदेश पूरा करें"
+
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:40
+msgid "Your order is almost complete..."
+msgstr "आपका ऑर्डर लगभग पूरा हो गया है..."
+
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:44
+msgid "Add this offer to your order and save!"
+msgstr "इस ऑफ़र को अपने ऑर्डर में जोड़ें और सहेजें!"
+
+#: includes/API/GetVariationFormAPI.php:26
+#: includes/API/OrderBumpOfferFormPreview.php:39
+#: sources/php/functions.php:3690
+msgid "Product not found"
+msgstr "उत्पाद नहीं मिला"
+
+#: includes/API/ProductsAndVariationsSearchAPI.php:66
+msgid "The date the last order for this product was placed, in the site's timezone."
+msgstr "साइट के समयक्षेत्र में इस उत्पाद के लिए अंतिम ऑर्डर दिए जाने की तारीख।"
+
+#: includes/API/ProductsAndVariationsSearchAPI.php:83
+msgid "Limit result set to products that are low or out of stock. (Deprecated)"
+msgstr "परिणाम को उन उत्पादों तक सीमित रखें जो कम हैं या स्टॉक से बाहर हैं। (अस्वीकृत)"
+
+#: includes/API/ProductsAndVariationsSearchAPI.php:89
+msgid "Search by similar product name or sku."
+msgstr "समान उत्पाद नाम या sku के आधार पर खोजें।"
+
+#: includes/Action/LogInAction.php:37
+msgid "There was an error logging in. Please check your credentials and try again."
+msgstr "लॉग इन करने में एक त्रुटि हुई। कृपया अपनी साख जांचें और पुनः प्रयास करें।"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:81
+msgid "Use Recommended"
+msgstr "अनुशंसित का प्रयोग करें"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:82
+msgid "Use Your Address"
+msgstr "अपने पते का प्रयोग करें"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:99
+msgid "Reenter Address"
+msgstr "पता पुनः दर्ज करें"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:100
+msgid "Use Existing Address"
+msgstr "मौजूदा पते का प्रयोग करें"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:168
+msgid "Use recommended address instead?"
+msgstr "इसके बजाय अनुशंसित पते का उपयोग करें?"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:171
+msgid "We're unable to verify your address, but found a close match."
+msgstr "हम आपका पता सत्यापित करने में असमर्थ हैं, लेकिन एक करीबी मेल मिला है।"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:175
+#: includes/Action/SmartyStreetsAddressValidationAction.php:248
+#: includes/Action/SmartyStreetsAddressValidationAction.php:305
+#: includes/Action/SmartyStreetsAddressValidationAction.php:358
+#: includes/Action/SmartyStreetsAddressValidationAction.php:409
+msgid "We are unable to verify your address."
+msgstr "हम आपका पता सत्यापित करने में असमर्थ हैं।"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:179
+msgid "Please confirm you would like to use this address or try again."
+msgstr "कृपया पुष्टि करें कि आप इस पते का उपयोग करना चाहते हैं या फिर से प्रयास करें।"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:186
+msgid "You Entered"
+msgstr "आपने दर्ज किया"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:198
+msgid "Recommended"
+msgstr "अनुशंसित"
+
+#. translators: %s is the postcode field label
+#: includes/Action/ValidateEmailDomainAction.php:35
+msgid "Email address contains invalid domain name."
+msgstr "ईमेल पते में अमान्य डोमेन नाम है।"
+
+#. translators: %s is the postcode field label
+#: includes/Action/ValidatePostcodeAction.php:33
+#, php-format
+msgid "Please enter a valid %s."
+msgstr "कृपया एक मान्य %s दर्ज करें।"
+
+#: includes/AddressFieldsAugmenter.php:124
+msgid "Full name"
+msgstr "पूरा नाम"
+
+#: includes/AddressFieldsAugmenter.php:177
+msgid "House number"
+msgstr "घर का नंबर"
+
+#: includes/AddressFieldsAugmenter.php:189
+msgid "Street name"
+msgstr "सड़क का नाम"
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:178
+#: sources/php/template-functions.php:650
+#: sources/php/template-functions.php:1025
+#: sources/php/template-functions.php:1663
+msgid "Billing address"
+msgstr "बिल भेजने का पता"
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:349
+msgid "Logged in with PayPal. Please continue your order below."
+msgstr "पेपैल के साथ में लॉग इन किया । कृपया नीचे अपना ऑर्डर जारी रखें ।"
+
+#. Plugin Name of the plugin/theme
+#: includes/Compatibility/Plugins/CartFlows.php:62
+msgid "CheckoutWC"
+msgstr "CheckoutWC"
+
+#: includes/Features/AbandonedCartRecovery.php:80
+msgid "You have been unsubscribed from our cart reminder emails."
+msgstr "आप हमारे कार्ट रिमाइंडर ईमेल से अनसब्सक्राइब कर दिए गए हैं।"
+
+#: includes/Features/AbandonedCartRecovery.php:635
+#: sources/php/functions.php:896
+msgid "Complete Order"
+msgstr "पूरा क्रम"
+
+#: includes/Features/AbandonedCartRecovery.php:807
+#: includes/Features/AbandonedCartRecovery.php:871
+msgid "This order was abandoned and subsequently recovered."
+msgstr "इस आदेश को छोड़ दिया गया और बाद में पुनर्प्राप्त किया गया।"
+
+#: includes/Features/FetchifyAddressAutocomplete.php:79
+msgid "Address Search"
+msgstr "पता खोज"
+
+#: includes/Features/FetchifyAddressAutocomplete.php:84
+msgid "Search for your address"
+msgstr "अपना पता खोजें"
+
+#: includes/Features/FetchifyAddressAutocomplete.php:85
+msgid "Or enter address manually."
+msgstr "कृपया मान्य फोन नंबर दर्ज करें।"
+
+#: includes/Features/HideOptionalAddressFields.php:37
+msgid "Add Address Line 2"
+msgstr "पता पंक्ति जोड़ें 2"
+
+#: includes/Features/HideOptionalAddressFields.php:44
+msgid "Add Company"
+msgstr "कंपनी जोड़ें"
+
+#: includes/Features/LocalPickup.php:95
+msgid "Pick up"
+msgstr "उठाना"
+
+#: includes/Features/LocalPickup.php:110
+msgid "Ship"
+msgstr "जहाज़ पर भेजना"
+
+#: includes/Features/LocalPickup.php:141
+msgid "Delivery method"
+msgstr "डिलिवरी विधि"
+
+#: includes/Features/LocalPickup.php:216
+msgid "Pickup locations"
+msgstr "पिकअप स्थान"
+
+#: includes/Features/LocalPickup.php:503
+msgid "Pick up in store"
+msgstr "भंडार से उठाओ"
+
+#: includes/Features/LocalPickup.php:520
+#: includes/Managers/AssetManager.php:651
+msgid "Pickup"
+msgstr "उठाना"
+
+#: includes/Features/LocalPickup.php:561
+msgid "Pickup Location"
+msgstr "लेने की जगह"
+
+#: includes/Features/LocalPickup.php:621
+msgid "Pickup instructions"
+msgstr "पिकअप निर्देश"
+
+#: includes/Features/LocalPickup.php:741
+msgid "Usually ready in 1 hour."
+msgstr "आमतौर पर 1 घंटे में तैयार हो जाता है।"
+
+#: includes/Features/LocalPickup.php:742
+msgid "Usually ready in 2 hours."
+msgstr "आमतौर पर 2 घंटे में तैयार हो जाता है।"
+
+#: includes/Features/LocalPickup.php:743
+msgid "Usually ready in 4 hours."
+msgstr "आमतौर पर 4 घंटे में तैयार हो जाता है।"
+
+#: includes/Features/LocalPickup.php:744
+msgid "Usually ready in 24 hours."
+msgstr "आमतौर पर 24 घंटे में तैयार हो जाता है।"
+
+#: includes/Features/LocalPickup.php:745
+msgid "Usually ready in 2-4 days."
+msgstr "आमतौर पर 2-4 दिनों में तैयार हो जाता है।"
+
+#: includes/Features/LocalPickup.php:746
+msgid "Usually ready in 5+ days."
+msgstr "आमतौर पर 5+ दिनों में तैयार हो जाता है।"
+
+#: includes/Features/OrderReviewStep.php:67
+#: sources/php/template-functions.php:1933
+msgid "Review"
+msgstr "समीक्षा"
+
+#: includes/Features/SideCart.php:445
+#: includes/Features/SideCart.php:679
+msgid "Congrats! You get free standard shipping."
+msgstr "बधाई! आपको मुफ्त मानक शिपिंग मिलती है।"
+
+#. translators: %s is the amount remaining for free shipping
+#: includes/Features/SideCart.php:459
+#: includes/Features/SideCart.php:693
+#, php-format
+msgid "You're %s away from free shipping!"
+msgstr "आप %s मुफ़्त शिपिंग से दूर हैं!"
+
+#: includes/Managers/AssetManager.php:633
+msgid "Please enter a valid phone number."
+msgstr "कृपया मान्य फोन नंबर दर्ज करें।"
+
+#: includes/Managers/AssetManager.php:642
+msgid "Please enter your first and last name."
+msgstr "कृप्या अपना पेहला और आखीरी नाम दर्ज करे।"
+
+#: includes/Managers/AssetManager.php:643
+#: sources/php/template-functions.php:660
+#: sources/php/template-functions.php:1647
+msgid "Shipping address"
+msgstr "शिपिंग पता"
+
+#: includes/Managers/AssetManager.php:644
+#: includes/Managers/AssetManager.php:807
+msgid "Please enter a new quantity:"
+msgstr "कृपया एक नई मात्रा दर्ज करें:"
+
+#: includes/Managers/AssetManager.php:645
+msgid "3-digit security code usually found on the back of your card. American Express cards have a 4-digit code located on the front."
+msgstr "3-अंकीय सुरक्षा कोड आमतौर पर आपके कार्ड के पीछे पाया जाता है। अमेरिकन एक्सप्रेस कार्ड में सामने की ओर 4 अंकों का कोड होता है।"
+
+#: includes/Managers/AssetManager.php:646
+#: includes/Managers/AssetManager.php:808
+msgid "Are you sure you want to remove this item from your cart?"
+msgstr "क्या आप वाकई इस आइटम को अपनी कार्ट से निकालना चाहते हैं?"
+
+#: includes/Managers/AssetManager.php:650
+msgid "Please enter a valid postcode / ZIP."
+msgstr "कृपया एक मान्य पोस्टकोड / ज़िप दर्ज करें।"
+
+#: includes/Managers/AssetManager.php:652
+msgid "Continue to pickup"
+msgstr "उठाना जारी रखें"
+
+#: includes/Managers/AssetManager.php:664
+msgid "Start with post/zip code or street"
+msgstr "पोस्ट/ज़िप कोड या स्ट्रीट से शुरू करें"
+
+#: includes/Managers/AssetManager.php:665
+msgid "Shipping method"
+msgstr "शिपिंग का तरीका"
+
+#: includes/Managers/AssetManager.php:821
+msgid "Apply"
+msgstr "लागू करें"
+
+#: includes/Managers/AssetManager.php:830
+msgid "Have a promo code? Click here."
+msgstr "क्या प्रोमो कोड है? यहाँ क्लिक करें।"
+
+#: includes/Managers/AssetManager.php:839
+msgid "Promo Code"
+msgstr "प्रचार कोड"
+
+#: includes/Managers/AssetManager.php:848
+msgid "Enter Promo Code"
+msgstr "प्रोमो कोड दर्ज करें"
+
+#: includes/Managers/AssetManager.php:849
+msgid "Remove this item"
+msgstr "इस सामान को हटाओ"
+
+#: includes/Managers/AssetManager.php:850
+msgid "Proceed to checkout"
+msgstr "चेक आउट करने के लिए आगे बढ़ें"
+
+#: includes/Managers/AssetManager.php:851
+msgid "Continue shopping"
+msgstr "खरीदारी जारी रखें"
+
+#: includes/Managers/AssetManager.php:852
+msgid "Edit"
+msgstr "संपादित करें"
+
+#: lib/sendwp-sdk/remote-install.php:84
+msgid "Something went wrong. SendWP was not installed correctly."
+msgstr "कुछ गलत हो गया। SendWP ठीक से स्थापित नहीं किया गया था।"
+
+#: sources/php/functions.php:201
+msgid "Ship to"
+msgstr "यहां भेजें"
+
+#: sources/php/functions.php:722
+msgid "No shipping methods available"
+msgstr "कोई शिपिंग तरीके उपलब्ध नहीं हैं"
+
+#: sources/php/functions.php:982
+msgid "All transactions are secure and encrypted."
+msgstr "सभी लेनदेन सुरक्षित और एन्क्रिप्टेड हैं।"
+
+#: sources/php/functions.php:1004
+msgid "Your order is free. No payment is required."
+msgstr "आपका आदेश मुफ़्त है कोई भुगतान की आवश्यकता नहीं है."
+
+#: sources/php/functions.php:1047
+msgid "Same as shipping address"
+msgstr "शिपिंग पते के रूप में ही"
+
+#: sources/php/functions.php:1055
+msgid "Use a different billing address"
+msgstr "किसी भिन्न बिलिंग पते का उपयोग करें"
+
+#: sources/php/functions.php:1289
+msgid "Return to cart"
+msgstr "गाड़ी में वापसी"
+
+#: sources/php/functions.php:1328
+msgid "Continue to shipping"
+msgstr "शिपिंग जारी रखें"
+
+#: sources/php/functions.php:1351
+msgid "Continue to payment"
+msgstr "भुगतान जारी रखें"
+
+#: sources/php/functions.php:1351
+#: sources/php/functions.php:1390
+msgid "Review order"
+msgstr "ऑर्डर की समीक्षा करें"
+
+#: sources/php/functions.php:1412
+msgid "Return to information"
+msgstr "जानकारी पर वापस लौटें"
+
+#: sources/php/functions.php:1434
+msgid "Return to shipping"
+msgstr "शिपिंग पर लौटें"
+
+#: sources/php/functions.php:1456
+msgid "Return to payment"
+msgstr "भुगतान पर लौटें"
+
+#: sources/php/functions.php:1976
+msgid "Or"
+msgstr "या"
+
+#: sources/php/functions.php:2203
+msgid "Decrement"
+msgstr "घटती"
+
+#: sources/php/functions.php:2215
+msgid "Increment"
+msgstr "वेतन वृद्धि"
+
+#: sources/php/functions.php:2890
+msgid "Unsubscribe"
+msgstr "सदस्यता रद्द"
+
+#: sources/php/functions.php:3576
+msgid "It looks like you already have an account. Please enter your login details below."
+msgstr "ऐसा लगता है कि आपके पास पहले से ही एक खाता है। कृप्या नीचे अपना लॉग इन विवरण दर्ज करें।"
+
+#: sources/php/functions.php:3579
+msgid "If you have shopped with us before, please enter your login details below."
+msgstr "यदि आपने पहले हमारे साथ खरीदारी की है, तो कृपया नीचे अपना लॉगिन विवरण दर्ज करें।"
+
+#: sources/php/functions.php:3636
+msgid "Or continue as guest"
+msgstr "या अतिथि के रूप में जारी रखें"
+
+#: sources/php/functions.php:3706
+#: sources/php/functions.php:3843
+msgid "No thanks"
+msgstr "जी नहीं, धन्यवाद"
+
+#: sources/php/template-functions.php:106
+msgid "Show order summary"
+msgstr "ऑर्डर सारांश दिखाएँ"
+
+#: sources/php/template-functions.php:123
+msgid "Hide order summary"
+msgstr "ऑर्डर सारांश छिपाएं"
+
+#: sources/php/template-functions.php:288
+msgid "Express checkout"
+msgstr "स्पष्ट नियंत्रण"
+
+#: sources/php/template-functions.php:320
+#: sources/php/template-functions.php:1610
+#: sources/php/template-functions.php:1904
+msgid "Information"
+msgstr "जानकारी"
+
+#: sources/php/template-functions.php:339
+msgid "Order review"
+msgstr "ऑर्डर की समीक्षा"
+
+#: sources/php/template-functions.php:404
+msgid "Already have an account with us?"
+msgstr "पहले से ही हमारे साथ एक खाता है?"
+
+#: sources/php/template-functions.php:416
+msgid "Log in."
+msgstr "लॉगिन करें."
+
+#. translators: %s: site name
+#: sources/php/template-functions.php:526
+#, php-format
+msgid "Create %s shopping account."
+msgstr "%s खरीदारी खाता बनाएं ।"
+
+#: sources/php/template-functions.php:538
+msgid "If you do not have an account, we will create one for you."
+msgstr "यदि आप एक खाता नहीं है, हम आपके लिए एक पैदा करेगा ।"
+
+#. translators: %1 is the customer's name, %2 is their email address
+#: sources/php/template-functions.php:570
+#, php-format
+msgid "Welcome back, %1$s (%2$s)."
+msgstr "आपका स्वागत है,%1$s (%2$s)।"
+
+#: sources/php/template-functions.php:588
+msgid "Log out."
+msgstr "लोग आउट।"
+
+#: sources/php/template-functions.php:640
+#: sources/php/template-functions.php:1640
+msgid "Billing and Shipping address"
+msgstr "बिलिंग और शिपिंग पता"
+
+#: sources/php/template-functions.php:792
+#: templates/futurist/functions.php:19
+#: templates/glass/functions.php:37
+msgid "Your Cart"
+msgstr "अपनी गाड़ी"
+
+#: sources/php/template-functions.php:1046
+msgid "Select the address that matches your card or payment method."
+msgstr "उस पते का चयन करें जो आपके कार्ड या भुगतान विधि से मेल खाता है।"
+
+#. translators: %s is the order number
+#: sources/php/template-functions.php:1377
+#, php-format
+msgid "Order %s"
+msgstr "आदेश %s"
+
+#. translators: %s is the billing first name
+#: sources/php/template-functions.php:1390
+#, php-format
+msgid "Thank you %s!"
+msgstr "धन्यवाद %s!"
+
+#: sources/php/template-functions.php:1494
+msgid "Order status"
+msgstr "आदेश की स्थिति"
+
+#: sources/php/template-functions.php:1525
+msgid "Order updates"
+msgstr "ऑर्डर अपडेट"
+
+#: sources/php/template-functions.php:1534
+msgid "You’ll get shipping and delivery updates by email."
+msgstr "आपको ईमेल द्वारा शिपिंग और वितरण अपडेट मिलेंगे।"
+
+#: sources/php/template-functions.php:1624
+msgid "Contact information"
+msgstr "संपर्क जानकारी"
+
+#: sources/php/template-functions.php:1676
+#: sources/php/template-functions.php:1919
+msgid "Shipping"
+msgstr "यातायात"
+
+#: sources/php/template-functions.php:1777
+msgid "Login"
+msgstr "लॉग इन"
+
+#: sources/php/template-functions.php:1999
+msgid "Your Cart is Empty"
+msgstr "आपकी गाड़ी खाली है"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.checkoutwc.com"
+msgstr "https://www.checkoutwc.com"
+
+#. Description of the plugin/theme
+msgid "Beautiful, conversion optimized checkout templates for WooCommerce."
+msgstr "WooCommerce के लिए सुंदर, रूपांतरण अनुकूलित चेकआउट टेम्प्लेट।"
+
+#. Author of the plugin/theme
+msgid "Objectiv"
+msgstr "Objectiv"
+
+#. Author URI of the plugin/theme
+msgid "https://objectiv.co"
+msgstr "https://objectiv.co"
+
+#~ msgid "Change"
+#~ msgstr "परिवर्तन"

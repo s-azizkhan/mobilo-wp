@@ -1,0 +1,270 @@
+// WooCommerce (table on shop page or single product page) (3.0)
+.woocommerce-page #{$table-class} {
+
+	.product form.cart {
+		div.quantity {
+			margin-right: 0;
+		}
+
+		div.quantity,
+		.button {
+			float: none;
+			vertical-align: top;
+		}
+
+		.variations {
+			margin-bottom: 0;
+			border: none;
+		}
+
+		.variations select {
+			min-width: 0;
+			margin-right: 0;
+		}
+
+		span.price {
+			font-size: inherit;
+			color: inherit;
+		}
+	}
+}
+
+// WooCommerce Product Addons (3.0)
+#{$table-class} .wc-pao-addons-container {
+	+ .add-to-cart-button {
+		margin-top: 3px;
+	}
+}
+
+#{$table-class} .wc-pao-addon-container,
+#{$table-class} .wc-pao-addon-container .form-row {
+	vertical-align: top;
+	white-space: normal;
+}
+
+#{$table-class} .wc-pao-addon-container {
+	margin: 0 0 7px;
+	line-height: 1.65;
+
+	label,
+	.wc-pao-addon-name,
+	.wc-pao-addon-description {
+		font-size: 0.95em;
+	}
+
+	.form-row {
+		width: auto;
+		padding: 0;
+		margin: 0;
+		display: block;
+
+		label {
+			line-height: 1.6;
+			font-weight: inherit;
+		}
+	}
+
+	span.amount {
+		font-weight: inherit;
+		color: inherit;
+	}
+
+	> label,
+	.form-row label {
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+		text-transform: none;
+	}
+
+	p {
+		margin: 0;
+		padding: 0;
+		font-weight: normal; // TO
+	}
+
+	.wc-pao-addon-name {
+		color: inherit;
+		font-weight: bold;
+		margin: 0 0 3px;
+		padding: 0;
+		border: none;
+		display: block;
+		line-height: 1.5;
+	}
+
+	.wc-pao-addon-description {
+		margin-bottom: 4px;
+		line-height: 1.4;
+	}
+
+	input,
+	textarea {
+		margin: 0;
+		box-sizing: border-box;
+		font-size: inherit;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="number"] {
+		height: 30px;
+		line-height: 1;
+		vertical-align: top;
+		box-sizing: border-box;
+		padding-top: 0;
+		padding-bottom: 0;
+		max-width: 500px;
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		width: auto;
+		margin-right: 2px;
+	}
+
+	input[type="file"] {
+		display: block;
+		border: none;
+	}
+
+	.wc-pao-addon-image-swatch-select {
+		display: none;
+	}
+}
+
+#{$table-class} {
+	.addons-inline {
+		.wc-pao-addons-container {
+			display: inline-block;
+
+			+ .add-to-cart-button {
+				margin-left: 15px;
+			}
+		}
+
+		.wc-pao-addon-container {
+			display: inline-block;
+			margin-left: 12px;
+			text-align: left;
+		}
+	}
+
+	.addons-options-inline {
+		.wc-pao-addon-container {
+			.form-row {
+				display: inline-block;
+				margin-left: 10px;
+
+				&:first-of-type {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	.child {
+		.addons-inline {
+			.wc-pao-addons-container {
+				+ .add-to-cart-button {
+					margin-left: 0;
+				}
+			}
+
+			.wc-pao-addon-container {
+				margin-left: 0;
+			}
+		}
+
+		.addons-options-inline {
+			.wc-pao-addon-container {
+				.form-row {
+					margin-right: 10px;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	#product-addons-total {
+		display: none;
+	}
+}
+
+// WOOF filters
+.page.woof_search_is_going nav.woocommerce-breadcrumb,
+.single.woof_search_is_going nav.woocommerce-breadcrumb {
+	display: block;
+}
+
+.woof_shortcode_output .storefront-sorting {
+	margin-bottom: 0;
+}
+
+// WooCommerce Variations and Swatches
+#{$table-class} {
+	.cart .swatch-control select {
+		display: none !important;
+	}
+
+	.cart .swatch-anchor {
+		text-align: left;
+	}
+
+	.swatch-control.radio-select li {
+		display: inline-block;
+		margin-right: 10px;
+		margin-left: 0;
+	}
+
+	.swatch-control.radio-select li label {
+		margin: 0;
+	}
+}
+
+// YITH Request A Quote Premium
+#{$table-class} {
+	.product a.button.add-request-quote-button {
+		line-height: $cart-button-height - ($cart-button-top-padding * 2) - 3;
+		font-size: $cart-font-size;
+	}
+}
+
+
+// CommerceKit Attribute Swatches  
+#{$table-class} .product-row {
+	.cgkit-attribute-swatches {
+		list-style: none;
+	}
+
+	button.cgkit-swatch {
+		background: #fefefe;
+		border: 1px solid transparent;
+		transition: all 0.15s ease-in-out;
+	}
+
+	button.cgkit-swatch:hover,
+	button.cgkit-swatch.cgkit-swatch-selected {
+		border: 1px solid #ccc;
+		background: #f1f1f1;
+		transition: all 0.15s ease-in-out;
+	}
+}
+
+// Variation Swatches for WooCommerce (Emran Ahmed)
+.woo-variation-swatches {
+	#{$table-class} {
+		.wpt_variations_form.wvs-loaded {
+			.variations {
+				margin-bottom: 4px;
+			}
+		}
+
+		td.col-buy, th.col-buy {
+			.variable-items-wrapper {
+				// Align swatches/buttons right when Buy column is not inside child row.
+				justify-content: flex-end;
+			}
+		}
+	}
+}

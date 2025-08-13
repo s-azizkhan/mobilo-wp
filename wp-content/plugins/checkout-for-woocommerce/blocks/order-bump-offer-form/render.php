@@ -1,0 +1,18 @@
+<?php
+/**
+ * Order Bump Product Form Block Render
+ *
+ * @version 9.0.0
+ * @package Block/OrderBumpProductForm
+ */
+
+global $post;
+$output = cfw_get_order_bump_product_form( $post->ID );
+
+if ( ! is_wp_error( $output ) ) {
+	echo '<div class="cfw-order-bump-offer-form-wrap cfw-grid">';
+	echo $output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo '</div>';
+} else {
+	echo 'Could not load offer form.';
+}

@@ -1,0 +1,5 @@
+Country Code,State Code,ZIP/Postcode,City,Rate %,Tax Name,Priority,Compound,Shipping,Tax Class
+NL,*,*,*,21.0000,Tax,1,0,1,
+US,NY,10001,AMSTERDAM,8.8750,US-NY-NEW YORK-NEW YORK CITY Tax,1,0,1,
+US,NY,*,*,8.8750,US-NY-NEW YORK-NEW YORK CITY Tax,1,0,1,
+NL,*,*,*,21.0000,VAT,1,0,0,

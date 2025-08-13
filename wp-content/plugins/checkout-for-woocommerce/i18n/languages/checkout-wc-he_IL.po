@@ -1,0 +1,603 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Checkout for WooCommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Clifton Griffin <clif@checkoutwc.com>\n"
+"Language-Team: support@checkoutwc.com\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-19 10:50-0400\n"
+"PO-Revision-Date: 2024-03-19 11:02-0400\n"
+"Language: he\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? 2 : 3);\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: checkout-for-woocommerce.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: dist\n"
+"X-Poedit-SearchPathExcluded-2: vendor\n"
+
+#: sources/ts/blocks/OrderBumpSteps.tsx:21
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:54
+msgid "Order Submitted"
+msgstr "הזמנה נשלחה"
+
+#: sources/ts/blocks/OrderBumpSteps.tsx:25
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:60
+msgid "Special Offer"
+msgstr "הצעה מיוחדת"
+
+#: sources/ts/blocks/OrderBumpSteps.tsx:29
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:66
+msgid "Order Received"
+msgstr "ההזמנה התקבלה"
+
+#: sources/ts/frontend/Components/LoginFormModal.tsx:120
+#: sources/php/functions.php:3572
+msgid "Welcome back"
+msgstr "שלום"
+
+#: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:14
+#: sources/ts/frontend/Components/ReviewPane/PaymentMethodReviewPane.tsx:14
+#: sources/ts/frontend/Components/ReviewPane/ShippingMethodReviewPane.tsx:14
+msgid "Contact"
+msgstr "צור קשר"
+
+#: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:32
+#: sources/ts/frontend/Components/ReviewPane/PaymentMethodReviewPane.tsx:34
+msgid "Method"
+msgstr "שיטה"
+
+#: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:39
+#: sources/php/functions.php:956
+#: sources/php/template-functions.php:1628
+#: sources/php/template-functions.php:1933
+msgid "Payment"
+msgstr "תשלום"
+
+#: sources/ts/frontend/Components/SideCartComponent.tsx:35
+msgid "Close Cart"
+msgstr "סגור את העגלה"
+
+#: checkout-for-woocommerce.php:141
+msgid "Your site is running an <strong>insecure version</strong> of PHP that is no longer supported. Please contact your web hosting provider to update your PHP version."
+msgstr "באתר שלך פועלת <strong>גרסה לא מאובטחת</strong> של PHP שאינה נתמכת עוד. אנא צור קשר עם ספק אירוח האינטרנט שלך כדי לעדכן את גרסת ה-PHP שלך."
+
+#. translators: %s - checkoutwc.com URL for documentation with more details.
+#: checkout-for-woocommerce.php:147
+#, php-format
+msgid "<strong>Note:</strong> CheckoutWC is disabled on your site until you fix the issue. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Need help? Click here.</a>"
+msgstr "<strong>הערה:</strong> CheckoutWC מושבת באתר שלך עד שתתקן את הבעיה. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">זקוק לעזרה? לחץ כאן.</a>"
+
+#. translators: %s - WordPress version.
+#: checkout-for-woocommerce.php:187
+#, php-format
+msgid "CheckoutWC requires WordPress %s or later."
+msgstr "CheckoutWC דורש WordPress %s ואילך."
+
+#. translators: %s - WordPress version.
+#: checkout-for-woocommerce.php:225
+#, php-format
+msgid "CheckoutWC requires WooCommerce %s or later."
+msgstr "CheckoutWC דורש WooCommerce %s ואילך."
+
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:23
+msgid "No thanks, just complete my order"
+msgstr "לא תודה, פשוט השלם את ההזמנה שלי"
+
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:40
+msgid "Your order is almost complete..."
+msgstr "ההזמנה שלך כמעט הושלמה..."
+
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:44
+msgid "Add this offer to your order and save!"
+msgstr "הוסף הצעה זו להזמנה שלך וחסוך!"
+
+#: includes/API/GetVariationFormAPI.php:26
+#: includes/API/OrderBumpOfferFormPreview.php:39
+#: sources/php/functions.php:3690
+msgid "Product not found"
+msgstr "המוצר לא נמצא"
+
+#: includes/API/ProductsAndVariationsSearchAPI.php:66
+msgid "The date the last order for this product was placed, in the site's timezone."
+msgstr "תאריך ביצוע ההזמנה האחרונה למוצר זה, לפי אזור הזמן של האתר."
+
+#: includes/API/ProductsAndVariationsSearchAPI.php:83
+msgid "Limit result set to products that are low or out of stock. (Deprecated)"
+msgstr "הגבל את קבוצת התוצאות למוצרים שחסרים להם או אזלו מהמלאי. (הוצא משימוש)"
+
+#: includes/API/ProductsAndVariationsSearchAPI.php:89
+msgid "Search by similar product name or sku."
+msgstr "חפשי לפי שם מוצר דומה או לפי מק\"ט SKU."
+
+#: includes/Action/LogInAction.php:37
+msgid "There was an error logging in. Please check your credentials and try again."
+msgstr "אירעה שגיאה בכניסה. בדוק את אישוריך ונסה שוב."
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:81
+msgid "Use Recommended"
+msgstr "שימוש מומלץ"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:82
+msgid "Use Your Address"
+msgstr "השתמש בכתובת שלך"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:99
+msgid "Reenter Address"
+msgstr "הזן מחדש כתובת"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:100
+msgid "Use Existing Address"
+msgstr "השתמש בכתובת קיימת"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:168
+msgid "Use recommended address instead?"
+msgstr "האם להשתמש בכתובת המומלצת במקום זאת?"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:171
+msgid "We're unable to verify your address, but found a close match."
+msgstr "לא הצלחנו לאמת את הכתובת שלך, אך מצאנו התאמה קרובה."
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:175
+#: includes/Action/SmartyStreetsAddressValidationAction.php:248
+#: includes/Action/SmartyStreetsAddressValidationAction.php:305
+#: includes/Action/SmartyStreetsAddressValidationAction.php:358
+#: includes/Action/SmartyStreetsAddressValidationAction.php:409
+msgid "We are unable to verify your address."
+msgstr "אין באפשרותנו לאמת את הכתובת שלך."
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:179
+msgid "Please confirm you would like to use this address or try again."
+msgstr "אנא אשר שברצונך להשתמש בכתובת זו או נסה שוב."
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:186
+msgid "You Entered"
+msgstr "נכנסת"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:198
+msgid "Recommended"
+msgstr "מומלץ"
+
+#. translators: %s is the postcode field label
+#: includes/Action/ValidateEmailDomainAction.php:35
+msgid "Email address contains invalid domain name."
+msgstr "כתובת האימייל מכילה שם דומיין לא חוקי."
+
+#. translators: %s is the postcode field label
+#: includes/Action/ValidatePostcodeAction.php:33
+#, php-format
+msgid "Please enter a valid %s."
+msgstr "אנא הזן %s חוקי."
+
+#: includes/AddressFieldsAugmenter.php:124
+msgid "Full name"
+msgstr "שם מלא"
+
+#: includes/AddressFieldsAugmenter.php:177
+msgid "House number"
+msgstr "מספר הבית"
+
+#: includes/AddressFieldsAugmenter.php:189
+msgid "Street name"
+msgstr "רחוב"
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:178
+#: sources/php/template-functions.php:650
+#: sources/php/template-functions.php:1025
+#: sources/php/template-functions.php:1663
+msgid "Billing address"
+msgstr "כתובת חיוב"
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:349
+msgid "Logged in with PayPal. Please continue your order below."
+msgstr "התחבר באמצעות PayPal. אנא המשך בהזמנה שלך למטה."
+
+#. Plugin Name of the plugin/theme
+#: includes/Compatibility/Plugins/CartFlows.php:62
+msgid "CheckoutWC"
+msgstr "‫CheckoutWC"
+
+#: includes/Features/AbandonedCartRecovery.php:80
+msgid "You have been unsubscribed from our cart reminder emails."
+msgstr "בוטלת המנוי למייל התזכורות שלנו לעגלה."
+
+#: includes/Features/AbandonedCartRecovery.php:635
+#: sources/php/functions.php:896
+msgid "Complete Order"
+msgstr "הזמנה מלאה"
+
+#: includes/Features/AbandonedCartRecovery.php:807
+#: includes/Features/AbandonedCartRecovery.php:871
+msgid "This order was abandoned and subsequently recovered."
+msgstr "צו זה נזנח ולאחר מכן הוחזר."
+
+#: includes/Features/FetchifyAddressAutocomplete.php:79
+msgid "Address Search"
+msgstr "חיפוש כתובת"
+
+#: includes/Features/FetchifyAddressAutocomplete.php:84
+msgid "Search for your address"
+msgstr "חפש את הכתובת שלך"
+
+#: includes/Features/FetchifyAddressAutocomplete.php:85
+msgid "Or enter address manually."
+msgstr "או הזן כתובת ידנית."
+
+#: includes/Features/HideOptionalAddressFields.php:37
+msgid "Add Address Line 2"
+msgstr "הוסף שורת כתובת 2"
+
+#: includes/Features/HideOptionalAddressFields.php:44
+msgid "Add Company"
+msgstr "הוסף חברה"
+
+#: includes/Features/LocalPickup.php:95
+msgid "Pick up"
+msgstr "איסוף"
+
+#: includes/Features/LocalPickup.php:110
+msgid "Ship"
+msgstr "לִשְׁלוֹחַ"
+
+#: includes/Features/LocalPickup.php:141
+msgid "Delivery method"
+msgstr "שיטת אספקה"
+
+#: includes/Features/LocalPickup.php:216
+msgid "Pickup locations"
+msgstr "נק' איסוף מקומי"
+
+#: includes/Features/LocalPickup.php:503
+msgid "Pick up in store"
+msgstr "איסוף בחנות"
+
+#: includes/Features/LocalPickup.php:520
+#: includes/Managers/AssetManager.php:651
+msgid "Pickup"
+msgstr "איסוף"
+
+#: includes/Features/LocalPickup.php:561
+msgid "Pickup Location"
+msgstr "מיקום האיסוף"
+
+#: includes/Features/LocalPickup.php:621
+msgid "Pickup instructions"
+msgstr "הוראות איסוף"
+
+#: includes/Features/LocalPickup.php:741
+msgid "Usually ready in 1 hour."
+msgstr "בדרך כלל מוכן תוך שעה."
+
+#: includes/Features/LocalPickup.php:742
+msgid "Usually ready in 2 hours."
+msgstr "בדרך כלל מוכן תוך שעתיים."
+
+#: includes/Features/LocalPickup.php:743
+msgid "Usually ready in 4 hours."
+msgstr "בדרך כלל מוכן תוך 4 שעות."
+
+#: includes/Features/LocalPickup.php:744
+msgid "Usually ready in 24 hours."
+msgstr "בדרך כלל מוכן תוך 24 שעות."
+
+#: includes/Features/LocalPickup.php:745
+msgid "Usually ready in 2-4 days."
+msgstr "בדרך כלל מוכן תוך 2-4 ימים."
+
+#: includes/Features/LocalPickup.php:746
+msgid "Usually ready in 5+ days."
+msgstr "בדרך כלל מוכן תוך 5+ ימים."
+
+#: includes/Features/OrderReviewStep.php:67
+#: sources/php/template-functions.php:1933
+msgid "Review"
+msgstr "חוות דעת"
+
+#: includes/Features/SideCart.php:445
+#: includes/Features/SideCart.php:679
+msgid "Congrats! You get free standard shipping."
+msgstr "מזל טוב! אתה מקבל משלוח סטנדרטי חינם."
+
+#. translators: %s is the amount remaining for free shipping
+#: includes/Features/SideCart.php:459
+#: includes/Features/SideCart.php:693
+#, php-format
+msgid "You're %s away from free shipping!"
+msgstr "אתה %s רחוק ממשלוח חינם!"
+
+#: includes/Managers/AssetManager.php:633
+msgid "Please enter a valid phone number."
+msgstr "אנא הזן מספר טלפון תקין."
+
+#: includes/Managers/AssetManager.php:642
+msgid "Please enter your first and last name."
+msgstr "נא להזין את שמך הפרטי ושם המשפחה."
+
+#: includes/Managers/AssetManager.php:643
+#: sources/php/template-functions.php:660
+#: sources/php/template-functions.php:1647
+msgid "Shipping address"
+msgstr "כתובת למשלוח"
+
+#: includes/Managers/AssetManager.php:644
+#: includes/Managers/AssetManager.php:807
+msgid "Please enter a new quantity:"
+msgstr "אנא הכנס כמות חדשה:"
+
+#: includes/Managers/AssetManager.php:645
+msgid "3-digit security code usually found on the back of your card. American Express cards have a 4-digit code located on the front."
+msgstr "קוד אבטחה בן 3 ספרות נמצא בדרך כלל בגב הכרטיס. בכרטיסי אמריקן אקספרס הקוד בן 4 ספרות הממוקם בחזית."
+
+#: includes/Managers/AssetManager.php:646
+#: includes/Managers/AssetManager.php:808
+msgid "Are you sure you want to remove this item from your cart?"
+msgstr "האם אתה בטוח שברצונך להסיר פריט זה מהעגלה שלך?"
+
+#: includes/Managers/AssetManager.php:650
+msgid "Please enter a valid postcode / ZIP."
+msgstr "אנא הזיני מיקוד חוקי."
+
+#: includes/Managers/AssetManager.php:652
+msgid "Continue to pickup"
+msgstr "המשך לאיסוף"
+
+#: includes/Managers/AssetManager.php:664
+msgid "Start with post/zip code or street"
+msgstr "התחל עם מיקוד/מיקוד או רחוב"
+
+#: includes/Managers/AssetManager.php:665
+msgid "Shipping method"
+msgstr "שיטת המשלוח"
+
+#: includes/Managers/AssetManager.php:821
+msgid "Apply"
+msgstr "החל"
+
+#: includes/Managers/AssetManager.php:830
+msgid "Have a promo code? Click here."
+msgstr "יש לך קוד פרומו? לחץ כאן."
+
+#: includes/Managers/AssetManager.php:839
+msgid "Promo Code"
+msgstr "קוד קופון"
+
+#: includes/Managers/AssetManager.php:848
+msgid "Enter Promo Code"
+msgstr "הכנס את קוד הזיכוי"
+
+#: includes/Managers/AssetManager.php:849
+msgid "Remove this item"
+msgstr "הסר פריט זה"
+
+#: includes/Managers/AssetManager.php:850
+msgid "Proceed to checkout"
+msgstr "מעבר לתשלום"
+
+#: includes/Managers/AssetManager.php:851
+msgid "Continue shopping"
+msgstr "המשך בקניות"
+
+#: includes/Managers/AssetManager.php:852
+msgid "Edit"
+msgstr "ערוך"
+
+#: lib/sendwp-sdk/remote-install.php:84
+msgid "Something went wrong. SendWP was not installed correctly."
+msgstr "משהו השתבש. SendWP לא הותקן כהלכה."
+
+#: sources/php/functions.php:201
+msgid "Ship to"
+msgstr "שלח אל"
+
+#: sources/php/functions.php:722
+msgid "No shipping methods available"
+msgstr "אין שיטות משלוח זמינות"
+
+#: sources/php/functions.php:982
+msgid "All transactions are secure and encrypted."
+msgstr "כל העסקאות מאובטחות ומוצפנות."
+
+#: sources/php/functions.php:1004
+msgid "Your order is free. No payment is required."
+msgstr "ההזמנה שלך היא בחינם. אין צורך בתשלום."
+
+#: sources/php/functions.php:1047
+msgid "Same as shipping address"
+msgstr "זהה לכתובת המשלוח"
+
+#: sources/php/functions.php:1055
+msgid "Use a different billing address"
+msgstr "השתמש בכתובת חיוב שונה"
+
+#: sources/php/functions.php:1289
+msgid "Return to cart"
+msgstr "חזרה לסל הקניות"
+
+#: sources/php/functions.php:1328
+msgid "Continue to shipping"
+msgstr "המשך לבחירת משלוח"
+
+#: sources/php/functions.php:1351
+msgid "Continue to payment"
+msgstr "להמשיך לתשלום"
+
+#: sources/php/functions.php:1351
+#: sources/php/functions.php:1390
+msgid "Review order"
+msgstr "בדוק את ההזמנה"
+
+#: sources/php/functions.php:1412
+msgid "Return to information"
+msgstr "חזור למידע"
+
+#: sources/php/functions.php:1434
+msgid "Return to shipping"
+msgstr "חזור למשלוחים"
+
+#: sources/php/functions.php:1456
+msgid "Return to payment"
+msgstr "חזור לתשלום"
+
+#: sources/php/functions.php:1976
+msgid "Or"
+msgstr "או"
+
+#: sources/php/functions.php:2203
+msgid "Decrement"
+msgstr "ירידה"
+
+#: sources/php/functions.php:2215
+msgid "Increment"
+msgstr "הגדלה"
+
+#: sources/php/functions.php:2890
+msgid "Unsubscribe"
+msgstr "בטל הרשמה"
+
+#: sources/php/functions.php:3576
+msgid "It looks like you already have an account. Please enter your login details below."
+msgstr "נראה שכבר יש לך חשבון. אנא הכנס את פרטי הכניסה שלך למטה."
+
+#: sources/php/functions.php:3579
+msgid "If you have shopped with us before, please enter your login details below."
+msgstr "אם קניתם איתנו בעבר, אנא הכנס את פרטי הכניסה שלך למטה."
+
+#: sources/php/functions.php:3636
+msgid "Or continue as guest"
+msgstr "או להמשיך כאורח"
+
+#: sources/php/functions.php:3706
+#: sources/php/functions.php:3843
+msgid "No thanks"
+msgstr "לא, תודה"
+
+#: sources/php/template-functions.php:106
+msgid "Show order summary"
+msgstr "הצג סיכום הזמנה"
+
+#: sources/php/template-functions.php:123
+msgid "Hide order summary"
+msgstr "הסתר סיכום הזמנות"
+
+#: sources/php/template-functions.php:288
+msgid "Express checkout"
+msgstr "קופה מהירה"
+
+#: sources/php/template-functions.php:320
+#: sources/php/template-functions.php:1610
+#: sources/php/template-functions.php:1904
+msgid "Information"
+msgstr "מידע"
+
+#: sources/php/template-functions.php:339
+msgid "Order review"
+msgstr "סקירת הזמנה"
+
+#: sources/php/template-functions.php:404
+msgid "Already have an account with us?"
+msgstr "כבר יש לך איתנו חשבון?"
+
+#: sources/php/template-functions.php:416
+msgid "Log in."
+msgstr "התנתק."
+
+#. translators: %s: site name
+#: sources/php/template-functions.php:526
+#, php-format
+msgid "Create %s shopping account."
+msgstr "צור חשבון קניות של %s."
+
+#: sources/php/template-functions.php:538
+msgid "If you do not have an account, we will create one for you."
+msgstr "אם אין לך חשבון, אנו ניצור לך חשבון."
+
+#. translators: %1 is the customer's name, %2 is their email address
+#: sources/php/template-functions.php:570
+#, php-format
+msgid "Welcome back, %1$s (%2$s)."
+msgstr "ברוך הבא,%1$s (%2$s)."
+
+#: sources/php/template-functions.php:588
+msgid "Log out."
+msgstr "התנתק."
+
+#: sources/php/template-functions.php:640
+#: sources/php/template-functions.php:1640
+msgid "Billing and Shipping address"
+msgstr "כתובת לחיוב ומשלוח"
+
+#: sources/php/template-functions.php:792
+#: templates/futurist/functions.php:19
+#: templates/glass/functions.php:37
+msgid "Your Cart"
+msgstr "סל  קניות"
+
+#: sources/php/template-functions.php:1046
+msgid "Select the address that matches your card or payment method."
+msgstr "בחר את הכתובת התואמת  לכרטיס או לשיטת התשלום שלך."
+
+#. translators: %s is the order number
+#: sources/php/template-functions.php:1377
+#, php-format
+msgid "Order %s"
+msgstr "הזמנה %s"
+
+#. translators: %s is the billing first name
+#: sources/php/template-functions.php:1390
+#, php-format
+msgid "Thank you %s!"
+msgstr "תודה %s!"
+
+#: sources/php/template-functions.php:1494
+msgid "Order status"
+msgstr "סטטוס ההזמנה"
+
+#: sources/php/template-functions.php:1525
+msgid "Order updates"
+msgstr "עדכוני הזמנה"
+
+#: sources/php/template-functions.php:1534
+msgid "You’ll get shipping and delivery updates by email."
+msgstr "תקבל עדכוני משלוח ומשלוח באמצעות הדוא\"ל."
+
+#: sources/php/template-functions.php:1624
+msgid "Contact information"
+msgstr "פרטי התקשרות"
+
+#: sources/php/template-functions.php:1676
+#: sources/php/template-functions.php:1919
+msgid "Shipping"
+msgstr "משלוח"
+
+#: sources/php/template-functions.php:1777
+msgid "Login"
+msgstr "התחבר"
+
+#: sources/php/template-functions.php:1999
+msgid "Your Cart is Empty"
+msgstr "העגלה שלך ריקה"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.checkoutwc.com"
+msgstr "https://www.checkoutwc.com"
+
+#. Description of the plugin/theme
+msgid "Beautiful, conversion optimized checkout templates for WooCommerce."
+msgstr "תבניות קופה אופטימיזציה להמרה יפה עבור WooCommerce."
+
+#. Author of the plugin/theme
+msgid "Objectiv"
+msgstr "אובייקטיבי"
+
+#. Author URI of the plugin/theme
+msgid "https://objectiv.co"
+msgstr "‫https://objectiv.co"
+
+#~ msgid "Change"
+#~ msgstr "שנה"

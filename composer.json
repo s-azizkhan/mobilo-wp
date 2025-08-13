@@ -1,0 +1,112 @@
+{
+    "name": "s-aziz/mobilo-wp",
+    "description": "WordPress is open source software you can use to create a beautiful website, blog, or app.",
+    "keywords": [
+        "wordpress",
+        "blog",
+        "cms"
+    ],
+    "type": "wordpress-core",
+    "homepage": "https://wordpress.org/",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "WordPress Community",
+            "homepage": "https://wordpress.org/about/"
+        }
+    ],
+    "support": {
+        "issues": "https://core.trac.wordpress.org/",
+        "forum": "https://wordpress.org/support/",
+        "wiki": "https://codex.wordpress.org/",
+        "irc": "irc://irc.freenode.net/wordpress",
+        "source": "https://core.trac.wordpress.org/browser"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        }
+    ],
+    "require": {
+        "php": ">=7.2.24",
+        "ext-json": "*",
+        "wpackagist-theme/twentytwentyfive": "*",
+        "wpackagist-plugin/action-scheduler": "*",
+        "wpackagist-plugin/adroll-for-woocommerce-stores-dev": "*",
+        "wpackagist-plugin/advanced-database-cleaner": "*",
+        "wpackagist-plugin/advanced-media-offloader": "*",
+        "wpackagist-plugin/all-in-one-wp-migration": "*",
+        "wpackagist-plugin/aryo-activity-log": "*",
+        "wpackagist-plugin/bnfw": "*",
+        "wpackagist-plugin/cf-images": "*",
+        "wpackagist-plugin/classic-editor": "*",
+        "wpackagist-plugin/cloudflare": "*",
+        "wpackagist-plugin/codirun-codir2me-cdn": "*",
+        "wpackagist-plugin/contact-form-7": "*",
+        "wpackagist-plugin/dashify": "*",
+        "wpackagist-plugin/duplicate-page": "*",
+        "wpackagist-plugin/duplicator": "*",
+        "wpackagist-plugin/duracelltomi-google-tag-manager": "*",
+        "wpackagist-plugin/elementor": "*",
+        "wpackagist-plugin/ht-mega-for-elementor": "*",
+        "wpackagist-plugin/image-optimization": "*",
+        "wpackagist-plugin/insert-php-code-snippet": "*",
+        "wpackagist-plugin/intercom": "*",
+        "wpackagist-plugin/kirki": "*",
+        "wpackagist-plugin/litespeed-cache": "*",
+        "wpackagist-plugin/mailchimp": "*",
+        "wpackagist-plugin/mailchimp-for-woocommerce": "*",
+        "wpackagist-plugin/mollie-payments-for-woocommerce": "*",
+        "wpackagist-plugin/plugin-load-filter": "*",
+        "wpackagist-plugin/plugin-organizer": "*",
+        "wpackagist-plugin/quick-pagepost-redirect-plugin": "*",
+        "wpackagist-plugin/taxjar-simplified-taxes-for-woocommerce": "*",
+        "wpackagist-plugin/updraftplus": "*",
+        "wpackagist-plugin/user-menus": "*",
+        "wpackagist-plugin/woo-checkout-field-editor-pro": "*",
+        "wpackagist-plugin/woo-multi-currency": "*",
+        "wpackagist-plugin/woo-product-bundle": "*",
+        "wpackagist-plugin/woo-stripe-payment": "*",
+        "wpackagist-plugin/woocommerce": "*",
+        "wpackagist-plugin/woocommerce-analytics": "*",
+        "wpackagist-plugin/woocommerce-google-analytics-integration": "*",
+        "wpackagist-plugin/woocommerce-legacy-rest-api": "*",
+        "wpackagist-plugin/woocommerce-payments": "*",
+        "wpackagist-plugin/woocommerce-pdf-invoices-packing-slips": "*",
+        "wpackagist-plugin/woocommerce-services": "*",
+        "wpackagist-plugin/wordpress-seo": "*",
+        "wpackagist-plugin/wp-coder": "*",
+        "wpackagist-plugin/wp-db-backup": "*",
+        "wpackagist-plugin/wp-file-manager": "*",
+        "wpackagist-plugin/wp-mail-logging": "*",
+        "wpackagist-plugin/wp-mail-smtp": "*"
+    },
+    "require-dev": {
+        "wpackagist-plugin/bnfw": "*"
+    },
+    "provide": {
+        "wordpress/core-implementation": "dev-master"
+    },
+    "extra": {
+        "installer-paths": {
+            "wp-content/mu-plugins/{$name}/": [
+                "wpackagist-plugin/akismet"
+            ],
+            "wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin",
+                "type:wordpress-plugin"
+            ]
+        }
+    },
+    "config": {
+        "vendor-dir": "wp-content/vendor",
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}

@@ -1,0 +1,603 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Checkout for WooCommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Clifton Griffin <clif@checkoutwc.com>\n"
+"Language-Team: support@checkoutwc.com\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-19 10:50-0400\n"
+"PO-Revision-Date: 2024-03-19 10:53-0400\n"
+"Language: sk_SK\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: checkout-for-woocommerce.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: dist\n"
+"X-Poedit-SearchPathExcluded-2: vendor\n"
+
+#: sources/ts/blocks/OrderBumpSteps.tsx:21
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:54
+msgid "Order Submitted"
+msgstr "Predložená objednávka"
+
+#: sources/ts/blocks/OrderBumpSteps.tsx:25
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:60
+msgid "Special Offer"
+msgstr "Špeciálna ponuka"
+
+#: sources/ts/blocks/OrderBumpSteps.tsx:29
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:66
+msgid "Order Received"
+msgstr "Prijatá objednávka"
+
+#: sources/ts/frontend/Components/LoginFormModal.tsx:120
+#: sources/php/functions.php:3572
+msgid "Welcome back"
+msgstr "Vitajte späť"
+
+#: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:14
+#: sources/ts/frontend/Components/ReviewPane/PaymentMethodReviewPane.tsx:14
+#: sources/ts/frontend/Components/ReviewPane/ShippingMethodReviewPane.tsx:14
+msgid "Contact"
+msgstr "Kontakt"
+
+#: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:32
+#: sources/ts/frontend/Components/ReviewPane/PaymentMethodReviewPane.tsx:34
+msgid "Method"
+msgstr "Metóda"
+
+#: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:39
+#: sources/php/functions.php:956
+#: sources/php/template-functions.php:1628
+#: sources/php/template-functions.php:1933
+msgid "Payment"
+msgstr "Platba"
+
+#: sources/ts/frontend/Components/SideCartComponent.tsx:35
+msgid "Close Cart"
+msgstr "Zatvoriť košík"
+
+#: checkout-for-woocommerce.php:141
+msgid "Your site is running an <strong>insecure version</strong> of PHP that is no longer supported. Please contact your web hosting provider to update your PHP version."
+msgstr "Na vašom webe je nainštalovaná <strong>nezabezpečená verzia</strong> PHP, ktorá už nie je podporovaná. Obráťte sa na poskytovateľa webhostingu, aby aktualizoval verziu PHP."
+
+#. translators: %s - checkoutwc.com URL for documentation with more details.
+#: checkout-for-woocommerce.php:147
+#, php-format
+msgid "<strong>Note:</strong> CheckoutWC is disabled on your site until you fix the issue. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Need help? Click here.</a>"
+msgstr "<strong>Poznámka</strong>: CheckoutWC je na vašej stránke zakázaný, kým problém neodstránite. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Potrebujete pomoc? Kliknite sem.</a>"
+
+#. translators: %s - WordPress version.
+#: checkout-for-woocommerce.php:187
+#, php-format
+msgid "CheckoutWC requires WordPress %s or later."
+msgstr "CheckoutWC vyžaduje WordPress %s alebo novší."
+
+#. translators: %s - WordPress version.
+#: checkout-for-woocommerce.php:225
+#, php-format
+msgid "CheckoutWC requires WooCommerce %s or later."
+msgstr "CheckoutWC vyžaduje WooCommerce %s alebo novší."
+
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:23
+msgid "No thanks, just complete my order"
+msgstr "Nie, ďakujem, len dokončite moju objednávku"
+
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:40
+msgid "Your order is almost complete..."
+msgstr "Vaša objednávka je takmer dokončená..."
+
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:44
+msgid "Add this offer to your order and save!"
+msgstr "Pridajte túto ponuku do svojej objednávky a ušetrite!"
+
+#: includes/API/GetVariationFormAPI.php:26
+#: includes/API/OrderBumpOfferFormPreview.php:39
+#: sources/php/functions.php:3690
+msgid "Product not found"
+msgstr "Produkt nebol nájdený"
+
+#: includes/API/ProductsAndVariationsSearchAPI.php:66
+msgid "The date the last order for this product was placed, in the site's timezone."
+msgstr "Dátum poslednej objednávky tohto produktu v časovom pásme stránky."
+
+#: includes/API/ProductsAndVariationsSearchAPI.php:83
+msgid "Limit result set to products that are low or out of stock. (Deprecated)"
+msgstr "Obmedziť súbor výsledkov na produkty, ktorých je málo alebo ktoré nie sú na sklade. (Zastarané)"
+
+#: includes/API/ProductsAndVariationsSearchAPI.php:89
+msgid "Search by similar product name or sku."
+msgstr "Vyhľadávanie podľa podobného názvu produktu alebo sku."
+
+#: includes/Action/LogInAction.php:37
+msgid "There was an error logging in. Please check your credentials and try again."
+msgstr "Pri prihlasovaní sa vyskytla chyba. Skontrolujte svoje prihlasovacie údaje a skúste to znova."
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:81
+msgid "Use Recommended"
+msgstr "Odporúčané použitie"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:82
+msgid "Use Your Address"
+msgstr "Použite svoju adresu"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:99
+msgid "Reenter Address"
+msgstr "Znovu zadajte adresu"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:100
+msgid "Use Existing Address"
+msgstr "Použitie existujúcej adresy"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:168
+msgid "Use recommended address instead?"
+msgstr "Použiť namiesto toho odporúčanú adresu?"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:171
+msgid "We're unable to verify your address, but found a close match."
+msgstr "Nemôžeme overiť vašu adresu, ale našli sme blízku zhodu."
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:175
+#: includes/Action/SmartyStreetsAddressValidationAction.php:248
+#: includes/Action/SmartyStreetsAddressValidationAction.php:305
+#: includes/Action/SmartyStreetsAddressValidationAction.php:358
+#: includes/Action/SmartyStreetsAddressValidationAction.php:409
+msgid "We are unable to verify your address."
+msgstr "Nemôžeme overiť vašu adresu."
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:179
+msgid "Please confirm you would like to use this address or try again."
+msgstr "Potvrďte, že chcete používať túto adresu, alebo to skúste znova."
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:186
+msgid "You Entered"
+msgstr "Vstúpili ste"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:198
+msgid "Recommended"
+msgstr "Odporúčané"
+
+#. translators: %s is the postcode field label
+#: includes/Action/ValidateEmailDomainAction.php:35
+msgid "Email address contains invalid domain name."
+msgstr "E-mailová adresa obsahuje neplatný názov domény."
+
+#. translators: %s is the postcode field label
+#: includes/Action/ValidatePostcodeAction.php:33
+#, php-format
+msgid "Please enter a valid %s."
+msgstr "Zadajte platné %s."
+
+#: includes/AddressFieldsAugmenter.php:124
+msgid "Full name"
+msgstr "Celé meno"
+
+#: includes/AddressFieldsAugmenter.php:177
+msgid "House number"
+msgstr "Číslo domu"
+
+#: includes/AddressFieldsAugmenter.php:189
+msgid "Street name"
+msgstr "Názov ulice"
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:178
+#: sources/php/template-functions.php:650
+#: sources/php/template-functions.php:1025
+#: sources/php/template-functions.php:1663
+msgid "Billing address"
+msgstr "Fakturačná adresa"
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:349
+msgid "Logged in with PayPal. Please continue your order below."
+msgstr "Prihláste sa pomocou služby PayPal. Pokračujte v objednávke nižšie."
+
+#. Plugin Name of the plugin/theme
+#: includes/Compatibility/Plugins/CartFlows.php:62
+msgid "CheckoutWC"
+msgstr "CheckoutWC"
+
+#: includes/Features/AbandonedCartRecovery.php:80
+msgid "You have been unsubscribed from our cart reminder emails."
+msgstr "Boli ste odhlásení z odberu našich e-mailov s pripomienkami o košíku."
+
+#: includes/Features/AbandonedCartRecovery.php:635
+#: sources/php/functions.php:896
+msgid "Complete Order"
+msgstr "Kompletná objednávka"
+
+#: includes/Features/AbandonedCartRecovery.php:807
+#: includes/Features/AbandonedCartRecovery.php:871
+msgid "This order was abandoned and subsequently recovered."
+msgstr "Táto objednávka bola zrušená a následne vrátená."
+
+#: includes/Features/FetchifyAddressAutocomplete.php:79
+msgid "Address Search"
+msgstr "Hľadanie adresy"
+
+#: includes/Features/FetchifyAddressAutocomplete.php:84
+msgid "Search for your address"
+msgstr "Vyhľadajte svoju adresu"
+
+#: includes/Features/FetchifyAddressAutocomplete.php:85
+msgid "Or enter address manually."
+msgstr "Alebo zadajte adresu ručne."
+
+#: includes/Features/HideOptionalAddressFields.php:37
+msgid "Add Address Line 2"
+msgstr "Pridať riadok s adresou 2"
+
+#: includes/Features/HideOptionalAddressFields.php:44
+msgid "Add Company"
+msgstr "Pridať novú spoločnosť"
+
+#: includes/Features/LocalPickup.php:95
+msgid "Pick up"
+msgstr "Naloženie"
+
+#: includes/Features/LocalPickup.php:110
+msgid "Ship"
+msgstr "Poslať"
+
+#: includes/Features/LocalPickup.php:141
+msgid "Delivery method"
+msgstr "Spôsob doručenia"
+
+#: includes/Features/LocalPickup.php:216
+msgid "Pickup locations"
+msgstr "Miesta vyzdvihnutia"
+
+#: includes/Features/LocalPickup.php:503
+msgid "Pick up in store"
+msgstr "Vyzdvihnutie v predajni"
+
+#: includes/Features/LocalPickup.php:520
+#: includes/Managers/AssetManager.php:651
+msgid "Pickup"
+msgstr "Vyzvednutie"
+
+#: includes/Features/LocalPickup.php:561
+msgid "Pickup Location"
+msgstr "Miesto vyzdvihnutia"
+
+#: includes/Features/LocalPickup.php:621
+msgid "Pickup instructions"
+msgstr "Pokyny na vyzdvihnutie"
+
+#: includes/Features/LocalPickup.php:741
+msgid "Usually ready in 1 hour."
+msgstr "Zvyčajne je hotová za 1 hodinu."
+
+#: includes/Features/LocalPickup.php:742
+msgid "Usually ready in 2 hours."
+msgstr "Zvyčajne je hotová do 2 hodín."
+
+#: includes/Features/LocalPickup.php:743
+msgid "Usually ready in 4 hours."
+msgstr "Zvyčajne je hotová do 4 hodín."
+
+#: includes/Features/LocalPickup.php:744
+msgid "Usually ready in 24 hours."
+msgstr "Zvyčajne do 24 hodín."
+
+#: includes/Features/LocalPickup.php:745
+msgid "Usually ready in 2-4 days."
+msgstr "Zvyčajne je hotová do 2-4 dní."
+
+#: includes/Features/LocalPickup.php:746
+msgid "Usually ready in 5+ days."
+msgstr "Zvyčajne je hotová za viac ako 5 dní."
+
+#: includes/Features/OrderReviewStep.php:67
+#: sources/php/template-functions.php:1933
+msgid "Review"
+msgstr "Recenzia"
+
+#: includes/Features/SideCart.php:445
+#: includes/Features/SideCart.php:679
+msgid "Congrats! You get free standard shipping."
+msgstr "Gratulujeme! Získate štandardnú dopravu zadarmo."
+
+#. translators: %s is the amount remaining for free shipping
+#: includes/Features/SideCart.php:459
+#: includes/Features/SideCart.php:693
+#, php-format
+msgid "You're %s away from free shipping!"
+msgstr "Ste %s od dopravy zadarmo!"
+
+#: includes/Managers/AssetManager.php:633
+msgid "Please enter a valid phone number."
+msgstr "Prosíme, zadajte platné telefónne číslo."
+
+#: includes/Managers/AssetManager.php:642
+msgid "Please enter your first and last name."
+msgstr "Zadajte svoje meno a priezvisko."
+
+#: includes/Managers/AssetManager.php:643
+#: sources/php/template-functions.php:660
+#: sources/php/template-functions.php:1647
+msgid "Shipping address"
+msgstr "Doručovacia adresa"
+
+#: includes/Managers/AssetManager.php:644
+#: includes/Managers/AssetManager.php:807
+msgid "Please enter a new quantity:"
+msgstr "Zadajte nové množstvo:"
+
+#: includes/Managers/AssetManager.php:645
+msgid "3-digit security code usually found on the back of your card. American Express cards have a 4-digit code located on the front."
+msgstr "Trojciferný bezpečnostný kód sa zvyčajne nachádza na zadnej strane karty. Karty American Express majú 4-ciferný kód umiestnený na prednej strane."
+
+#: includes/Managers/AssetManager.php:646
+#: includes/Managers/AssetManager.php:808
+msgid "Are you sure you want to remove this item from your cart?"
+msgstr "Naozaj chcete odstrániť túto položku z košíka?"
+
+#: includes/Managers/AssetManager.php:650
+msgid "Please enter a valid postcode / ZIP."
+msgstr "Zadajte prosím platné PSČ / ZIP."
+
+#: includes/Managers/AssetManager.php:652
+msgid "Continue to pickup"
+msgstr "Pokračujte v preberaní"
+
+#: includes/Managers/AssetManager.php:664
+msgid "Start with post/zip code or street"
+msgstr "Začnite poštovým/spisovným smerovacím číslom alebo ulicou"
+
+#: includes/Managers/AssetManager.php:665
+msgid "Shipping method"
+msgstr "Spôsob dopravy"
+
+#: includes/Managers/AssetManager.php:821
+msgid "Apply"
+msgstr "Použiť"
+
+#: includes/Managers/AssetManager.php:830
+msgid "Have a promo code? Click here."
+msgstr "Máte promo kód? Kliknite tu."
+
+#: includes/Managers/AssetManager.php:839
+msgid "Promo Code"
+msgstr "Propagačný kód"
+
+#: includes/Managers/AssetManager.php:848
+msgid "Enter Promo Code"
+msgstr "Zadajte propagačný kód"
+
+#: includes/Managers/AssetManager.php:849
+msgid "Remove this item"
+msgstr "Odstrániť túto položku"
+
+#: includes/Managers/AssetManager.php:850
+msgid "Proceed to checkout"
+msgstr "Dokončiť nákup"
+
+#: includes/Managers/AssetManager.php:851
+msgid "Continue shopping"
+msgstr "Pokračovať v nákupe"
+
+#: includes/Managers/AssetManager.php:852
+msgid "Edit"
+msgstr "Upraviť"
+
+#: lib/sendwp-sdk/remote-install.php:84
+msgid "Something went wrong. SendWP was not installed correctly."
+msgstr "Niečo sa pokazilo. Program SendWP nebol nainštalovaný správne."
+
+#: sources/php/functions.php:201
+msgid "Ship to"
+msgstr "Odoslať do"
+
+#: sources/php/functions.php:722
+msgid "No shipping methods available"
+msgstr "Nie sú k dispozícii žiadne spôsoby dopravy"
+
+#: sources/php/functions.php:982
+msgid "All transactions are secure and encrypted."
+msgstr "Všetky transakcie sú zabezpečené a šifrované."
+
+#: sources/php/functions.php:1004
+msgid "Your order is free. No payment is required."
+msgstr "Vaša objednávka je bezplatná. Nevyžaduje sa žiadna platba."
+
+#: sources/php/functions.php:1047
+msgid "Same as shipping address"
+msgstr "Rovnaké ako dodacia adresa"
+
+#: sources/php/functions.php:1055
+msgid "Use a different billing address"
+msgstr "Odoslať na inú adresu"
+
+#: sources/php/functions.php:1289
+msgid "Return to cart"
+msgstr "Vrátiť sa do košíka"
+
+#: sources/php/functions.php:1328
+msgid "Continue to shipping"
+msgstr "Pokračujte v dodávke"
+
+#: sources/php/functions.php:1351
+msgid "Continue to payment"
+msgstr "Pokračujte v platbe"
+
+#: sources/php/functions.php:1351
+#: sources/php/functions.php:1390
+msgid "Review order"
+msgstr "Skontrolovať objednávku"
+
+#: sources/php/functions.php:1412
+msgid "Return to information"
+msgstr "Návrat k informáciám"
+
+#: sources/php/functions.php:1434
+msgid "Return to shipping"
+msgstr "Návrat na prepravu"
+
+#: sources/php/functions.php:1456
+msgid "Return to payment"
+msgstr "Návrat k platbe"
+
+#: sources/php/functions.php:1976
+msgid "Or"
+msgstr "Alebo"
+
+#: sources/php/functions.php:2203
+msgid "Decrement"
+msgstr "Zníženie"
+
+#: sources/php/functions.php:2215
+msgid "Increment"
+msgstr "Prírastok"
+
+#: sources/php/functions.php:2890
+msgid "Unsubscribe"
+msgstr "Zrušiť odber"
+
+#: sources/php/functions.php:3576
+msgid "It looks like you already have an account. Please enter your login details below."
+msgstr "Vyzerá to, že už máte účet. Zadajte prosím svoje prihlasovacie údaje nižšie."
+
+#: sources/php/functions.php:3579
+msgid "If you have shopped with us before, please enter your login details below."
+msgstr "Ak ste u nás už nakupovali, zadajte nižšie svoje prihlasovacie údaje."
+
+#: sources/php/functions.php:3636
+msgid "Or continue as guest"
+msgstr "Alebo pokračujte ako hosť"
+
+#: sources/php/functions.php:3706
+#: sources/php/functions.php:3843
+msgid "No thanks"
+msgstr "Nie, ďakujem"
+
+#: sources/php/template-functions.php:106
+msgid "Show order summary"
+msgstr "Zobraziť zhrnutie objednávky"
+
+#: sources/php/template-functions.php:123
+msgid "Hide order summary"
+msgstr "Skryť zhrnutie objednávky"
+
+#: sources/php/template-functions.php:288
+msgid "Express checkout"
+msgstr "Expresná pokladňa"
+
+#: sources/php/template-functions.php:320
+#: sources/php/template-functions.php:1610
+#: sources/php/template-functions.php:1904
+msgid "Information"
+msgstr "Informácie"
+
+#: sources/php/template-functions.php:339
+msgid "Order review"
+msgstr "Kontrola objednávky"
+
+#: sources/php/template-functions.php:404
+msgid "Already have an account with us?"
+msgstr "Už máte u nás účet?"
+
+#: sources/php/template-functions.php:416
+msgid "Log in."
+msgstr "Prihláste sa."
+
+#. translators: %s: site name
+#: sources/php/template-functions.php:526
+#, php-format
+msgid "Create %s shopping account."
+msgstr "Vytvorte nákupný účet %s."
+
+#: sources/php/template-functions.php:538
+msgid "If you do not have an account, we will create one for you."
+msgstr "Ak nemáte účet, vytvoríme vám ho."
+
+#. translators: %1 is the customer's name, %2 is their email address
+#: sources/php/template-functions.php:570
+#, php-format
+msgid "Welcome back, %1$s (%2$s)."
+msgstr "Vitajte späť,%1$s (%2$s)."
+
+#: sources/php/template-functions.php:588
+msgid "Log out."
+msgstr "Odhlásiť sa."
+
+#: sources/php/template-functions.php:640
+#: sources/php/template-functions.php:1640
+msgid "Billing and Shipping address"
+msgstr "Fakturačná a dodacia adresa"
+
+#: sources/php/template-functions.php:792
+#: templates/futurist/functions.php:19
+#: templates/glass/functions.php:37
+msgid "Your Cart"
+msgstr "Košík"
+
+#: sources/php/template-functions.php:1046
+msgid "Select the address that matches your card or payment method."
+msgstr "Vyberte adresu, ktorá sa zhoduje s vašou kartou alebo spôsobom platby."
+
+#. translators: %s is the order number
+#: sources/php/template-functions.php:1377
+#, php-format
+msgid "Order %s"
+msgstr "Objednávka  %s"
+
+#. translators: %s is the billing first name
+#: sources/php/template-functions.php:1390
+#, php-format
+msgid "Thank you %s!"
+msgstr "Ďakujem ti %s!"
+
+#: sources/php/template-functions.php:1494
+msgid "Order status"
+msgstr "Stav objednávky"
+
+#: sources/php/template-functions.php:1525
+msgid "Order updates"
+msgstr "Aktualizácie objednávok"
+
+#: sources/php/template-functions.php:1534
+msgid "You’ll get shipping and delivery updates by email."
+msgstr "Dostanete aktualizácie o dodávke a doručení e-mailom."
+
+#: sources/php/template-functions.php:1624
+msgid "Contact information"
+msgstr "İletişim bilgileri"
+
+#: sources/php/template-functions.php:1676
+#: sources/php/template-functions.php:1919
+msgid "Shipping"
+msgstr "Doručenie"
+
+#: sources/php/template-functions.php:1777
+msgid "Login"
+msgstr "Prihlásenie"
+
+#: sources/php/template-functions.php:1999
+msgid "Your Cart is Empty"
+msgstr "Vaš košík je prázdny"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.checkoutwc.com"
+msgstr "https://www.checkoutwc.com"
+
+#. Description of the plugin/theme
+msgid "Beautiful, conversion optimized checkout templates for WooCommerce."
+msgstr "Krásne šablóny pokladní optimalizované pre prevod pre WooCommerce."
+
+#. Author of the plugin/theme
+msgid "Objectiv"
+msgstr "Objectiv"
+
+#. Author URI of the plugin/theme
+msgid "https://objectiv.co"
+msgstr "https://objectiv.co"
+
+#~ msgid "Change"
+#~ msgstr "Zmeniť"

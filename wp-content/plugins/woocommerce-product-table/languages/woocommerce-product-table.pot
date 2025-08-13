@@ -1,0 +1,1336 @@
+# Copyright (C) 2023 Barn2 Plugins
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Product Table 3.0.6\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-product-table\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-04-06T12:20:10+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: woocommerce-product-table\n"
+
+#. Plugin Name of the plugin
+msgid "WooCommerce Product Table"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://barn2.com/wordpress-plugins/woocommerce-product-table/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Display and purchase WooCommerce products from a searchable and sortable table. Filter by anything."
+msgstr ""
+
+#. Author of the plugin
+msgid "Barn2 Plugins"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://barn2.com"
+msgstr ""
+
+#: dependencies/src/Api.php:152
+msgid "Could not find the appropriate step."
+msgstr ""
+
+#: dependencies/src/Api.php:192
+msgid "Please enter a license key."
+msgstr ""
+
+#: dependencies/src/Api.php:195
+msgid "Invalid action requested."
+msgstr ""
+
+#. translators: %s: The name of the plugin.
+#: dependencies/src/Setup_Wizard.php:333
+msgid "%s setup wizard"
+msgstr ""
+
+#: dependencies/src/Setup_Wizard.php:423
+#: dependencies/src/Setup_Wizard.php:496
+msgid "Warning: This will overwrite your existing settings for %s. Are you sure you want to continue?"
+msgstr ""
+
+#: dependencies/src/Setup_Wizard.php:473
+#: dependencies/src/Setup_Wizard.php:481
+#: dependencies/src/Setup_Wizard.php:531
+msgid "Setup wizard"
+msgstr ""
+
+#: dependencies/src/Setup_Wizard.php:476
+msgid "If you need to access the setup wizard again, please click on the button below."
+msgstr ""
+
+#: dependencies/src/Steps/Cross_Selling.php:23
+#: includes/Admin/Wizard/Steps/Upsell.php:16
+msgid "More"
+msgstr ""
+
+#: dependencies/src/Steps/Cross_Selling.php:24
+#: includes/Admin/Wizard/Steps/Upsell.php:18
+msgid "Extra features"
+msgstr ""
+
+#: dependencies/src/Steps/Cross_Selling.php:25
+msgid "Enhance your site with these fantastic plugins from Barn2."
+msgstr ""
+
+#: dependencies/src/Steps/Ready.php:23
+#: includes/Admin/Wizard/Steps/Completed.php:23
+msgid "Ready"
+msgstr ""
+
+#: dependencies/src/Steps/Ready.php:24
+#: includes/Admin/Wizard/Steps/Completed.php:24
+msgid "Setup Complete"
+msgstr ""
+
+#: dependencies/src/Steps/Welcome.php:25
+#: dependencies/src/Steps/Welcome_Free.php:24
+#: includes/Admin/Wizard/Steps/License_Verification.php:22
+msgid "Welcome"
+msgstr ""
+
+#: dependencies/src/Util.php:28
+msgid "Select an option"
+msgstr ""
+
+#: includes/Admin/Admin_Controller.php:48
+msgid "Product Table"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:45
+#: includes/Admin/Settings_Page.php:54
+msgid "Product tables"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:50
+msgid "The following options control the WooCommerce Product Table extension."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:51
+#: lib/Admin/Settings_Util.php:68
+msgid "Documentation"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:52
+#: lib/Admin/Settings_Util.php:73
+msgid "Support"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:70
+msgid "Shop integration"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:73
+msgid "Replace the following WooCommerce pages with a product table."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:76
+msgid "Use table layout for"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:79
+#: includes/Admin/Wizard/Steps/Display.php:41
+msgid "Shop page"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:86
+#: includes/Admin/Wizard/Steps/Display.php:51
+msgid "Product search results"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:93
+#: includes/Admin/Wizard/Steps/Display.php:61
+msgid "Product categories"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:100
+#: includes/Admin/Wizard/Steps/Display.php:71
+msgid "Product tags"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:107
+#: includes/Admin/Wizard/Steps/Display.php:81
+msgid "Product attributes"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:129
+msgid "Table content"
+msgstr ""
+
+#. translators: 1: help link open tag, 2: help link close tag.
+#: includes/Admin/Settings_List.php:133
+msgid "You can override any of the settings below for individual tables by %1$sadding options%2$s to the shortcode or block."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:140
+#: includes/Admin/Wizard/Steps/Table_Content.php:39
+msgid "Columns"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:143
+#: includes/Admin/Wizard/Steps/Table_Content.php:42
+msgid "Enter the columns for your product tables."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:148
+msgid "Description length"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:151
+msgid "words"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:152
+msgid "Enter -1 to show the full product description including formatting."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:161
+#: includes/Integration/Quick_View_Pro.php:64
+msgid "Product links"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:164
+msgid "Include links to the single product page and taxonomy archives."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:165
+msgid "Use 'all' to enable all links, 'none' to hide them, or a comma-separated list of: 'sku', 'name', 'image', 'tags', 'categories', 'terms', or 'attributes'"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:170
+msgid "Image size"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:173
+msgid "Enter a width x height in pixels, e.g. 70x50, or a standard image size such as 'thumbnail'"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:189
+msgid "Loading"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:194
+#: includes/Admin/Wizard/Steps/Table_Content.php:49
+msgid "Lazy load"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:197
+#: includes/Admin/Wizard/Steps/Table_Content.php:51
+msgid "Load products one page at a time"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:198
+msgid "Enable this if you have many products or experience slow page load times."
+msgstr ""
+
+#. translators: 1: Help link open tag, 2: help link close tag
+#: includes/Admin/Settings_List.php:201
+msgid "Warning: Lazy load has %1$ssome limitations%2$s &mdash; it limits the search, sorting, dropdown filters, and variations."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:213
+msgid "Product limit"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:216
+msgid "The maximum number of products in one table."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:217
+msgid "Enter -1 to show all products."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:226
+msgid "Show hidden products"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:229
+msgid "Include hidden products in the table"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:244
+msgid "Sorting"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:246
+msgid "How to sort products when the table is first loaded."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:250
+msgid "Sort by"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:254
+msgid "WooCommerce default"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:255
+#: includes/Util/Columns.php:61
+msgid "Name"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:256
+#: includes/Util/Columns.php:57
+msgid "SKU"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:257
+#: includes/Util/Columns.php:109
+msgid "Price"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:258
+msgid "Popularity (sales)"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:259
+#: includes/Widgets/Rating_Filter_Widget.php:32
+msgid "Average rating"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:260
+msgid "Date added"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:261
+msgid "Date modified"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:262
+msgid "Product ID"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:263
+msgid "Other"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:273
+msgid "Sort column"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:277
+msgid "Enter a column name, e.g. description, att:size. Only applied when lazy load is disabled."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:281
+msgid "Sort direction"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:285
+msgid "Automatic"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:286
+msgid "Ascending (A to Z, 1 to 99)"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:287
+msgid "Descending (Z to A, 99 to 1)"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:304
+msgid "Search and filter"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:306
+msgid "How customers search and filter products."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:310
+#: includes/Admin/Wizard/Steps/Filters.php:26
+#: includes/Admin/Wizard/Steps/Filters.php:40
+msgid "Product filters"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:314
+#: includes/Admin/Wizard/Steps/Filters.php:44
+msgid "Disabled"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:315
+#: includes/Admin/Wizard/Steps/Filters.php:45
+msgid "Show based on table content"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:316
+#: includes/Admin/Settings_List.php:544
+#: includes/Admin/Wizard/Steps/Filters.php:46
+msgid "Custom"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:318
+#: includes/Admin/Wizard/Steps/Filters.php:41
+msgid "Filter the table by category, tag, attribute or taxonomy."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:327
+#: includes/Admin/Wizard/Steps/Filters.php:55
+msgid "Custom filters"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:330
+#: includes/Admin/Wizard/Steps/Filters.php:58
+msgid "Enter the filters as a comma-separated list."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:331
+msgid "E.g. categories,tags,att:color"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:335
+msgid "Search box"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:339
+#: includes/Admin/Settings_List.php:352
+#: includes/Admin/Settings_List.php:437
+#: includes/Admin/Settings_List.php:486
+#: includes/Admin/Settings_List.php:499
+msgid "Above table"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:340
+#: includes/Admin/Settings_List.php:353
+#: includes/Admin/Settings_List.php:438
+#: includes/Admin/Settings_List.php:487
+#: includes/Admin/Settings_List.php:500
+msgid "Below table"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:341
+#: includes/Admin/Settings_List.php:354
+#: includes/Admin/Settings_List.php:439
+#: includes/Admin/Settings_List.php:488
+#: includes/Admin/Settings_List.php:501
+msgid "Above and below table"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:342
+#: includes/Admin/Settings_List.php:355
+#: includes/Admin/Settings_List.php:489
+#: includes/Admin/Settings_List.php:502
+msgid "Hidden"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:348
+msgid "Number of products found"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:361
+msgid "Reset search"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:364
+msgid "Show a link to reset the search"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:379
+#: includes/Util/Defaults.php:65
+msgid "Add to cart"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:381
+msgid "How customers buy products from the table."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:385
+#: includes/Admin/Wizard/Steps/Cart.php:42
+msgid "Add to cart method"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:389
+#: includes/Admin/Wizard/Steps/Cart.php:45
+msgid "Cart buttons"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:390
+#: includes/Admin/Wizard/Steps/Cart.php:46
+msgid "Checkboxes"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:391
+#: includes/Admin/Wizard/Steps/Cart.php:47
+msgid "Cart buttons and checkboxes"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:397
+#: includes/Admin/Wizard/Steps/Cart.php:56
+msgid "Quantities"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:400
+#: includes/Admin/Wizard/Steps/Cart.php:57
+msgid "Show a quantity picker for each product"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:404
+#: includes/Admin/Wizard/Steps/Cart.php:63
+msgid "Variations"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:408
+#: includes/Admin/Wizard/Steps/Cart.php:66
+msgid "Show as dropdown lists"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:409
+#: includes/Admin/Wizard/Steps/Cart.php:67
+msgid "Show one variation per row"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:410
+#: includes/Admin/Wizard/Steps/Cart.php:68
+msgid "Read More button linking to the product page"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:412
+#: includes/Admin/Wizard/Steps/Cart.php:74
+msgid "How to display the options for variable products."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:421
+msgid "Variation name format"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:425
+msgid "Full (product name + attributes)"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:426
+msgid "Attributes only"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:427
+msgid "Product name only"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:433
+msgid "Multi-select cart button"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:441
+msgid "The location of the cart button when ordering multiple products using checkboxes."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:446
+msgid "Multi-select cart button text"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:463
+msgid "Pagination"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:465
+msgid "How to paginate products when there are multiple pages of results."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:469
+msgid "Products per page"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:472
+msgid "The number of products per page of results."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:473
+msgid "Enter -1 to show all products on a single page."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:481
+msgid "Products per page control"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:484
+msgid "Allow customers to adjust the number of products per page."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:495
+msgid "Pagination buttons"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:508
+msgid "Pagination type"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:512
+msgid "Page numbers"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:513
+msgid "Prev - Next"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:514
+msgid "Prev - Page numbers - Next"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:515
+msgid "First - Prev - Next - Last"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:516
+msgid "First - Prev - Page numbers - Next - Last"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:533
+#: includes/Admin/Settings_List.php:539
+msgid "Design"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:534
+msgid "Customize the design of the table."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:543
+msgid "Default"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:554
+msgid "Borders"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:557
+msgid "External border icon"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:557
+msgid "External"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:558
+msgid "The border for the outer edges of the table."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:559
+#: includes/Admin/Settings_List.php:568
+#: includes/Admin/Settings_List.php:577
+msgid "Width"
+msgstr ""
+
+#. translators: 'Header' in this context refers to the heading row of a table.
+#: includes/Admin/Settings_List.php:566
+msgid "Header border icon"
+msgstr ""
+
+#. translators: 'Header' in this context refers to the heading row of a table.
+#: includes/Admin/Settings_List.php:566
+msgid "Header"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:567
+msgid "The border for the bottom of the header row."
+msgstr ""
+
+#. translators: 'Cell' in this context refers to a cell in a table or spreadsheet.
+#: includes/Admin/Settings_List.php:575
+msgid "Cell border icon"
+msgstr ""
+
+#. translators: 'Cell' in this context refers to a cell in a table or spreadsheet.
+#: includes/Admin/Settings_List.php:575
+msgid "Body"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:576
+msgid "The border between cells in your table."
+msgstr ""
+
+#: includes/Admin/Settings_List.php:581
+msgid "Header background color"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:584
+#: includes/Admin/Settings_List.php:598
+msgid "Color"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:588
+msgid "Header text"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:595
+msgid "Body background color"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:602
+msgid "Body text"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:622
+msgid "Advanced"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:627
+msgid "AJAX"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:630
+msgid "Use AJAX when adding to the cart"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:634
+msgid "Shortcodes"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:637
+msgid "Show shortcodes, HTML and other formatting in the table"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:641
+msgid "Image lightbox"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:644
+msgid "Show product images in a lightbox"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:648
+msgid "Caching"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:651
+msgid "Cache table contents to improve load times"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:659
+msgid "Cache expiration"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:662
+msgid "hours"
+msgstr ""
+
+#: includes/Admin/Settings_List.php:663
+msgid "Your data will be refreshed after this length of time."
+msgstr ""
+
+#: includes/Admin/Wizard/Setup_Wizard.php:66
+#: lib/Plugin/License/Admin/License_Key_Setting.php:146
+msgid "The licence key is contained in your order confirmation email."
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/Cart.php:26
+msgid "Add to Cart"
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/Cart.php:27
+msgid "How will customers add products to their cart?"
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/Cart.php:28
+msgid "Adding to the cart"
+msgstr ""
+
+#. translators: 1: help link start tag, 2: help link end tag
+#: includes/Admin/Wizard/Steps/Completed.php:28
+msgid "You’re all set! Take a look at our %1$sKnowledge Base%2$s for further instructions, tutorials, videos, and much more."
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/Display.php:24
+msgid "Display"
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/Display.php:25
+msgid "Do you want to use the product table layout for your main store pages? You can also create tables by adding the [product_table] shortcode to any page."
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/Display.php:26
+msgid "Store Pages"
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/Display.php:39
+msgid "Where to display product tables"
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/Filters.php:24
+msgid "Filters"
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/Filters.php:25
+msgid "Add filter dropdowns so that customers can find what they’re looking for more easily. You can also add filter widgets to the sidebar."
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/License_Verification.php:23
+msgid "Welcome to WooCommerce Product Table"
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/License_Verification.php:24
+msgid "This wizard will guide you through the plugin setup process."
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/Table_Content.php:23
+msgid "Content"
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/Table_Content.php:24
+msgid "Now, choose the information that will appear in your product tables."
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/Table_Content.php:25
+msgid "Table Content"
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/Table_Content.php:52
+msgid "Enable this if you have a large number of products."
+msgstr ""
+
+#: includes/Admin/Wizard/Steps/Upsell.php:17
+msgid "Enhance your store with these fantastic plugins from Barn2."
+msgstr ""
+
+#: includes/Ajax_Handler.php:186
+msgid "View Cart"
+msgstr ""
+
+#: includes/Ajax_Handler.php:211
+msgid "There was an error adding to the cart. Please try again."
+msgstr ""
+
+#: includes/Cart_Handler.php:48
+#: includes/Frontend_Scripts.php:142
+msgid "Please select one or more products."
+msgstr ""
+
+#: includes/Cart_Handler.php:100
+msgid "No product selected. Please try again."
+msgstr ""
+
+#: includes/Cart_Handler.php:107
+msgid "Please enter a quantity greater than 0."
+msgstr ""
+
+#: includes/Cart_Handler.php:116
+msgid "This product is no longer available. Please select an alternative."
+msgstr ""
+
+#: includes/Config_Builder.php:74
+msgctxt "show all products option"
+msgid "All"
+msgstr ""
+
+#: includes/Data/Product_Custom_Field.php:160
+msgid "True"
+msgstr ""
+
+#: includes/Data/Product_Custom_Field.php:160
+msgid "False"
+msgstr ""
+
+#. translators: %s: rating
+#: includes/Data/Product_Reviews.php:20
+#: includes/Widgets/Active_Filters_Widget.php:111
+msgid "Rated %s out of 5"
+msgstr ""
+
+#. translators: The sentence is 'out of 5'. The '%s' characters are replaced with extra HTML text.
+#: includes/Data/Product_Reviews.php:23
+msgid "out of %s5%s"
+msgstr ""
+
+#: includes/Data/Product_Reviews.php:24
+msgid "based on %s customer rating"
+msgid_plural "based on %s customer ratings"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Data/Product_Stock.php:21
+msgid "In stock"
+msgstr ""
+
+#: includes/Data/Product_Stock.php:29
+#: templates/add-to-cart/variable.php:23
+msgid "Out of stock"
+msgstr ""
+
+#: includes/Frontend_Scripts.php:118
+msgid "Showing _TOTAL_ products"
+msgstr ""
+
+#: includes/Frontend_Scripts.php:119
+msgid "0 products"
+msgstr ""
+
+#: includes/Frontend_Scripts.php:120
+msgid "(_MAX_ in total)"
+msgstr ""
+
+#: includes/Frontend_Scripts.php:121
+msgid "Show _MENU_ per page"
+msgstr ""
+
+#: includes/Frontend_Scripts.php:122
+#: includes/Frontend_Scripts.php:123
+msgid "No matching products"
+msgstr ""
+
+#: includes/Frontend_Scripts.php:124
+msgid "Search:"
+msgstr ""
+
+#: includes/Frontend_Scripts.php:126
+msgid "First"
+msgstr ""
+
+#: includes/Frontend_Scripts.php:127
+msgid "Last"
+msgstr ""
+
+#: includes/Frontend_Scripts.php:128
+msgid "Next"
+msgstr ""
+
+#: includes/Frontend_Scripts.php:129
+msgid "Previous"
+msgstr ""
+
+#: includes/Frontend_Scripts.php:131
+msgctxt "thousands separator"
+msgid ","
+msgstr ""
+
+#: includes/Frontend_Scripts.php:132
+msgctxt "decimal mark"
+msgid "."
+msgstr ""
+
+#. translators: ARIA text for sorting column in ascending order
+#: includes/Frontend_Scripts.php:135
+msgid ": activate to sort column ascending"
+msgstr ""
+
+#. translators: ARIA text for sorting column in descending order
+#: includes/Frontend_Scripts.php:137
+msgid ": activate to sort column descending"
+msgstr ""
+
+#: includes/Frontend_Scripts.php:140
+msgid "Reset"
+msgstr ""
+
+#: includes/Integration/Product_Addons.php:311
+msgid "Product Addons"
+msgstr ""
+
+#: includes/Integration/Product_Addons.php:313
+msgid "These options control the Product Addons extension."
+msgstr ""
+
+#: includes/Integration/Product_Addons.php:317
+msgid "Addons layout"
+msgstr ""
+
+#: includes/Integration/Product_Addons.php:320
+#: includes/Integration/Product_Addons.php:332
+msgid "Vertical"
+msgstr ""
+
+#: includes/Integration/Product_Addons.php:321
+#: includes/Integration/Product_Addons.php:333
+msgid "Horizontal"
+msgstr ""
+
+#: includes/Integration/Product_Addons.php:324
+msgid "Should product addons display horizontally or vertically within the table?"
+msgstr ""
+
+#: includes/Integration/Product_Addons.php:329
+msgid "Addon options layout"
+msgstr ""
+
+#: includes/Integration/Product_Addons.php:336
+msgid "Should individual options for each addon display horizontally or vertically?"
+msgstr ""
+
+#: includes/Integration/Quick_View_Pro.php:58
+msgid "Quick View Pro"
+msgstr ""
+
+#: includes/Integration/Quick_View_Pro.php:60
+msgid "These opitons control the Quick View Pro extension."
+msgstr ""
+
+#: includes/Integration/Quick_View_Pro.php:67
+msgid "Replace links to the product page with a Quick View"
+msgstr ""
+
+#. translators: 1: help link start, 2: help link end
+#: includes/Integration/Quick_View_Pro.php:70
+msgid "%1$sLearn how%2$s to correctly configure this option."
+msgstr ""
+
+#: includes/Table_Args.php:621
+msgid "Show details"
+msgstr ""
+
+#: includes/Util/Columns.php:53
+msgid "ID"
+msgstr ""
+
+#: includes/Util/Columns.php:65
+msgid "Description"
+msgstr ""
+
+#: includes/Util/Columns.php:69
+msgid "Summary"
+msgstr ""
+
+#: includes/Util/Columns.php:73
+msgid "Date"
+msgstr ""
+
+#: includes/Util/Columns.php:77
+msgid "Updated"
+msgstr ""
+
+#: includes/Util/Columns.php:81
+msgid "Categories"
+msgstr ""
+
+#: includes/Util/Columns.php:85
+msgid "Tags"
+msgstr ""
+
+#: includes/Util/Columns.php:89
+msgid "Image"
+msgstr ""
+
+#: includes/Util/Columns.php:93
+msgid "Stock"
+msgstr ""
+
+#: includes/Util/Columns.php:97
+msgid "Reviews"
+msgstr ""
+
+#: includes/Util/Columns.php:101
+msgid "Weight"
+msgstr ""
+
+#: includes/Util/Columns.php:105
+msgid "Dimensions"
+msgstr ""
+
+#: includes/Util/Columns.php:113
+msgid "Buy"
+msgstr ""
+
+#: includes/Util/Columns.php:117
+msgid "Details"
+msgstr ""
+
+#: includes/Util/Settings.php:97
+msgid "The columns option is invalid. Please check you have entered valid column names."
+msgstr ""
+
+#: includes/Widgets/Active_Filters_Widget.php:25
+msgid "Display a list of active filters for your product table."
+msgstr ""
+
+#: includes/Widgets/Active_Filters_Widget.php:27
+msgid "Product Table: Active Filters"
+msgstr ""
+
+#: includes/Widgets/Active_Filters_Widget.php:31
+msgid "Active filters"
+msgstr ""
+
+#: includes/Widgets/Active_Filters_Widget.php:32
+#: includes/Widgets/Attribute_Filter_Widget.php:82
+#: includes/Widgets/Price_Filter_Widget.php:34
+#: includes/Widgets/Rating_Filter_Widget.php:33
+msgid "Title"
+msgstr ""
+
+#. translators: %s: minimum price
+#. translators: %s: maximum price
+#. translators: %s: rating
+#: includes/Widgets/Active_Filters_Widget.php:88
+#: includes/Widgets/Active_Filters_Widget.php:96
+#: includes/Widgets/Active_Filters_Widget.php:102
+#: includes/Widgets/Active_Filters_Widget.php:111
+msgid "Remove filter"
+msgstr ""
+
+#. translators: %s: minimum price
+#: includes/Widgets/Active_Filters_Widget.php:96
+msgid "Min %s"
+msgstr ""
+
+#. translators: %s: maximum price
+#: includes/Widgets/Active_Filters_Widget.php:102
+msgid "Max %s"
+msgstr ""
+
+#: includes/Widgets/Attribute_Filter_Widget.php:27
+msgid "Display a list of attributes to filter products in your product table."
+msgstr ""
+
+#: includes/Widgets/Attribute_Filter_Widget.php:29
+msgid "Product Table: Filter by Attribute"
+msgstr ""
+
+#: includes/Widgets/Attribute_Filter_Widget.php:81
+msgid "Filter by"
+msgstr ""
+
+#: includes/Widgets/Attribute_Filter_Widget.php:87
+msgid "Attribute"
+msgstr ""
+
+#: includes/Widgets/Attribute_Filter_Widget.php:93
+msgid "Display type"
+msgstr ""
+
+#: includes/Widgets/Attribute_Filter_Widget.php:95
+msgid "List"
+msgstr ""
+
+#: includes/Widgets/Attribute_Filter_Widget.php:96
+msgid "Dropdown"
+msgstr ""
+
+#: includes/Widgets/Attribute_Filter_Widget.php:102
+msgid "Query type"
+msgstr ""
+
+#: includes/Widgets/Attribute_Filter_Widget.php:104
+msgid "AND"
+msgstr ""
+
+#: includes/Widgets/Attribute_Filter_Widget.php:105
+msgid "OR"
+msgstr ""
+
+#. translators: %s: taxonomy name
+#: includes/Widgets/Attribute_Filter_Widget.php:212
+msgid "Any %s"
+msgstr ""
+
+#: includes/Widgets/Attribute_Filter_Widget.php:250
+msgid "Apply"
+msgstr ""
+
+#: includes/Widgets/Attribute_Filter_Widget.php:283
+msgctxt "enhanced select"
+msgid "No matches found"
+msgstr ""
+
+#: includes/Widgets/Price_Filter_Widget.php:27
+msgid "Display a slider to filter your product table by price."
+msgstr ""
+
+#: includes/Widgets/Price_Filter_Widget.php:29
+msgid "Product Table: Filter by Price"
+msgstr ""
+
+#: includes/Widgets/Price_Filter_Widget.php:33
+msgid "Filter by price"
+msgstr ""
+
+#: includes/Widgets/Price_Filter_Widget.php:127
+msgid "Min price"
+msgstr ""
+
+#: includes/Widgets/Price_Filter_Widget.php:128
+msgid "Max price"
+msgstr ""
+
+#: includes/Widgets/Price_Filter_Widget.php:129
+msgid "Filter"
+msgstr ""
+
+#: includes/Widgets/Price_Filter_Widget.php:131
+msgid "Price:"
+msgstr ""
+
+#: includes/Widgets/Rating_Filter_Widget.php:26
+msgid "Display a list of star ratings to filter products in your product table."
+msgstr ""
+
+#: includes/Widgets/Rating_Filter_Widget.php:28
+msgid "Product Table: Filter by Rating"
+msgstr ""
+
+#: lib/Plugin/Admin/Admin_Links.php:52
+msgid "Settings"
+msgstr ""
+
+#. translators: %s: The plugin name
+#: lib/Plugin/Admin/Admin_Links.php:72
+msgid "View %s documentation"
+msgstr ""
+
+#: lib/Plugin/Admin/Admin_Links.php:73
+msgid "Docs"
+msgstr ""
+
+#. translators: 1: licence key link start, 2: license key link end
+#: lib/Plugin/Admin/Plugin_Updater.php:180
+msgid "Activate %1$syour license key%2$s to enable updates."
+msgstr ""
+
+#: lib/Plugin/Admin/Plugin_Updater.php:253
+msgid "Auto-updates unavailable."
+msgstr ""
+
+#: lib/Plugin/License/Admin/License_Key_Setting.php:65
+msgid "License key successfully activated."
+msgstr ""
+
+#: lib/Plugin/License/Admin/License_Key_Setting.php:66
+msgid "There was an error activating your license key."
+msgstr ""
+
+#: lib/Plugin/License/Admin/License_Key_Setting.php:74
+msgid "License key successfully deactivated."
+msgstr ""
+
+#: lib/Plugin/License/Admin/License_Key_Setting.php:75
+msgid "There was an error deactivating your license key, please try again."
+msgstr ""
+
+#: lib/Plugin/License/Admin/License_Key_Setting.php:82
+msgid "The license key looks good!"
+msgstr ""
+
+#: lib/Plugin/License/Admin/License_Key_Setting.php:83
+msgid "There's a problem with your license key."
+msgstr ""
+
+#: lib/Plugin/License/Admin/License_Key_Setting.php:138
+msgid "License key"
+msgstr ""
+
+#: lib/Plugin/License/Admin/License_Key_Setting.php:149
+msgid "License Key"
+msgstr ""
+
+#: lib/Plugin/License/Admin/License_Key_Setting.php:175
+msgid "Check"
+msgstr ""
+
+#: lib/Plugin/License/Admin/License_Key_Setting.php:176
+msgid "Activate"
+msgstr ""
+
+#: lib/Plugin/License/Admin/License_Key_Setting.php:177
+msgid "Deactivate"
+msgstr ""
+
+#: lib/Plugin/License/Admin/License_Key_Setting.php:188
+msgid "License key deactivated."
+msgstr ""
+
+#. translators: 1: the plugin name, 2: settings link start, 3: settings link end.
+#: lib/Plugin/License/Admin/License_Notices.php:93
+msgid "Thank you for installing %1$s. To get started, please %2$senter your license key%3$s."
+msgstr ""
+
+#. translators: 1: the plugin name, 2: renewal link start, 3: renewal link end.
+#: lib/Plugin/License/Admin/License_Notices.php:114
+msgid "Your license key for %1$s has expired. %2$sClick here to renew for 20%% discount%3$s."
+msgstr ""
+
+#. translators: 1: the plugin name, 2: renewal link start, 3: renewal link end.
+#: lib/Plugin/License/Admin/License_Notices.php:135
+msgid "You no longer have a valid license for %1$s. Please %2$spurchase a new license key%3$s to continue using the plugin."
+msgstr ""
+
+#. translators: 1: the plugin name, 2: settings link start, 3: settings link end.
+#: lib/Plugin/License/Admin/License_Notices.php:160
+msgid "%1$s - your site has moved to a new domain. Please %2$sreactivate your license key%3$s."
+msgstr ""
+
+#: lib/Plugin/License/EDD_Licensing.php:184
+msgid "An error has occurred, please try again."
+msgstr ""
+
+#: lib/Plugin/License/Plugin_License.php:92
+msgid "Your license key is active."
+msgstr ""
+
+#: lib/Plugin/License/Plugin_License.php:112
+msgid "Please enter your license key."
+msgstr ""
+
+#: lib/Plugin/License/Plugin_License.php:114
+#: lib/Plugin/License/Plugin_License.php:383
+msgid "Your license key is invalid."
+msgstr ""
+
+#. translators: 1: account page link start, 2: account page link end
+#: lib/Plugin/License/Plugin_License.php:320
+msgid "Invalid license key - please check your order confirmation email or %1$sAccount%2$s."
+msgstr ""
+
+#: lib/Plugin/License/Plugin_License.php:326
+msgid "No URL was supplied for activation, please contact support."
+msgstr ""
+
+#: lib/Plugin/License/Plugin_License.php:329
+msgid "License key mismatch, please contact support."
+msgstr ""
+
+#: lib/Plugin/License/Plugin_License.php:332
+msgid "This license is for a bundled product and cannot be activated."
+msgstr ""
+
+#: lib/Plugin/License/Plugin_License.php:336
+msgid "Your license key is not valid for this plugin."
+msgstr ""
+
+#. translators: %s: The number of sites the license is activated on
+#: lib/Plugin/License/Plugin_License.php:343
+msgid "%s site active"
+msgid_plural "%s sites active"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: The sites active description, e.g. '2 sites active'
+#: lib/Plugin/License/Plugin_License.php:347
+msgid "Your license key has reached its activation limit (%s)."
+msgstr ""
+
+#: lib/Plugin/License/Plugin_License.php:348
+#: lib/Util.php:33
+msgid "Read more"
+msgstr ""
+
+#. translators: support for RTL, 1: the license error, 2: a link
+#: lib/Plugin/License/Plugin_License.php:351
+#: lib/Plugin/License/Plugin_License.php:372
+msgid "%1$s %2$s"
+msgstr ""
+
+#. translators: %s: The license expiry date
+#: lib/Plugin/License/Plugin_License.php:365
+msgid "Your license key expired on %s."
+msgstr ""
+
+#: lib/Plugin/License/Plugin_License.php:369
+msgid "Renew now for 20% discount."
+msgstr ""
+
+#: lib/Plugin/License/Plugin_License.php:624
+msgid "Your license key is not active. Please reactivate or save the settings."
+msgstr ""
+
+#: lib/Plugin/License/Plugin_License.php:628
+msgid "Your license key has expired."
+msgstr ""
+
+#. translators: 1: purchase link start, 2: purchase link end.
+#: lib/Plugin/License/Plugin_License.php:634
+msgid "Your license key has been disabled. Please %1$spurchase a new license key%2$s to continue using the plugin."
+msgstr ""
+
+#: lib/WooCommerce/Admin/Custom_Settings_Fields.php:119
+msgid "Size"
+msgstr ""

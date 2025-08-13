@@ -1,0 +1,652 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Checkout for WooCommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Clifton Griffin <clif@checkoutwc.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-19 10:50-0400\n"
+"PO-Revision-Date: 2024-03-19 10:50-0400\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: checkout-for-woocommerce.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: sources/ts/blocks/OrderBumpSteps.tsx:21
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:54
+msgid "Order Submitted"
+msgstr "订单已提交"
+
+#: sources/ts/blocks/OrderBumpSteps.tsx:25
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:60
+msgid "Special Offer"
+msgstr "特价"
+
+#: sources/ts/blocks/OrderBumpSteps.tsx:29
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:66
+msgid "Order Received"
+msgstr "收到订单"
+
+#: sources/ts/frontend/Components/LoginFormModal.tsx:120
+#: sources/php/functions.php:3572
+msgid "Welcome back"
+msgstr "欢迎您回来"
+
+#: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:14
+#: sources/ts/frontend/Components/ReviewPane/PaymentMethodReviewPane.tsx:14
+#: sources/ts/frontend/Components/ReviewPane/ShippingMethodReviewPane.tsx:14
+msgid "Contact"
+msgstr "联系"
+
+#: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:32
+#: sources/ts/frontend/Components/ReviewPane/PaymentMethodReviewPane.tsx:34
+msgid "Method"
+msgstr "方法"
+
+#: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:39
+#: sources/php/functions.php:956
+#: sources/php/template-functions.php:1628
+#: sources/php/template-functions.php:1933
+msgid "Payment"
+msgstr "付款"
+
+#: sources/ts/frontend/Components/SideCartComponent.tsx:35
+msgid "Close Cart"
+msgstr "关闭购物车"
+
+#: checkout-for-woocommerce.php:141
+msgid "Your site is running an <strong>insecure version</strong> of PHP that is no longer supported. Please contact your web hosting provider to update your PHP version."
+msgstr "你的网站运行的是一个不再支持的<strong>不安全的</strong>PHP<strong>版本</strong>。请联系您的虚拟主机提供商以更新您的 PHP 版本。"
+
+#. translators: %s - checkoutwc.com URL for documentation with more details.
+#: checkout-for-woocommerce.php:147
+#, php-format
+msgid "<strong>Note:</strong> CheckoutWC is disabled on your site until you fix the issue. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Need help? Click here.</a>"
+msgstr "<strong>注意：</strong>CheckoutWC在您的网站上被禁用，直到您解决这个问题。<a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">需要帮助吗？请点击这里。</a>"
+
+#. translators: %s - WordPress version.
+#: checkout-for-woocommerce.php:187
+#, php-format
+msgid "CheckoutWC requires WordPress %s or later."
+msgstr "CheckoutWC需要WordPress%s或更高版本。"
+
+#. translators: %s - WordPress version.
+#: checkout-for-woocommerce.php:225
+#, php-format
+msgid "CheckoutWC requires WooCommerce %s or later."
+msgstr "CheckoutWC需要WooCommerce %s 或更高版本。"
+
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:23
+msgid "No thanks, just complete my order"
+msgstr "不，谢谢，只要完成我的订单"
+
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:40
+msgid "Your order is almost complete..."
+msgstr "您的订单即将完成..."
+
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:44
+msgid "Add this offer to your order and save!"
+msgstr "将此优惠添加到您的订单中，就可以省钱了"
+
+#: includes/API/GetVariationFormAPI.php:26
+#: includes/API/OrderBumpOfferFormPreview.php:39
+#: sources/php/functions.php:3690
+msgid "Product not found"
+msgstr "找不到产品"
+
+#: includes/API/ProductsAndVariationsSearchAPI.php:66
+msgid "The date the last order for this product was placed, in the site's timezone."
+msgstr "该产品的最后订单日期（网站时区）。"
+
+#: includes/API/ProductsAndVariationsSearchAPI.php:83
+msgid "Limit result set to products that are low or out of stock. (Deprecated)"
+msgstr "将结果集限制为库存不足或缺货的产品。(已废弃）"
+
+#: includes/API/ProductsAndVariationsSearchAPI.php:89
+msgid "Search by similar product name or sku."
+msgstr "按相似的产品名称或SKU搜索。"
+
+#: includes/Action/LogInAction.php:37
+msgid "There was an error logging in. Please check your credentials and try again."
+msgstr "登录时出错。请检查您的凭据，然后重试。"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:81
+msgid "Use Recommended"
+msgstr "使用建议"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:82
+msgid "Use Your Address"
+msgstr "使用您的地址"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:99
+msgid "Reenter Address"
+msgstr "重新输入地址"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:100
+msgid "Use Existing Address"
+msgstr "使用现有的地址"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:168
+msgid "Use recommended address instead?"
+msgstr "用推荐的地址代替？"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:171
+msgid "We're unable to verify your address, but found a close match."
+msgstr "我们无法核实你的地址，但找到了一个接近的匹配。"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:175
+#: includes/Action/SmartyStreetsAddressValidationAction.php:248
+#: includes/Action/SmartyStreetsAddressValidationAction.php:305
+#: includes/Action/SmartyStreetsAddressValidationAction.php:358
+#: includes/Action/SmartyStreetsAddressValidationAction.php:409
+msgid "We are unable to verify your address."
+msgstr "我们无法核实你的地址。"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:179
+msgid "Please confirm you would like to use this address or try again."
+msgstr "请确认你想使用这个地址或再试一次。"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:186
+msgid "You Entered"
+msgstr "您进入了"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:198
+msgid "Recommended"
+msgstr "推荐"
+
+#. translators: %s is the postcode field label
+#: includes/Action/ValidateEmailDomainAction.php:35
+msgid "Email address contains invalid domain name."
+msgstr "电子邮件地址包含无效的域名。"
+
+#. translators: %s is the postcode field label
+#: includes/Action/ValidatePostcodeAction.php:33
+#, php-format
+msgid "Please enter a valid %s."
+msgstr "请输入一个有效的%s。"
+
+#: includes/AddressFieldsAugmenter.php:124
+msgid "Full name"
+msgstr "全名"
+
+#: includes/AddressFieldsAugmenter.php:177
+msgid "House number"
+msgstr "房屋号"
+
+#: includes/AddressFieldsAugmenter.php:189
+msgid "Street name"
+msgstr "街道名稱"
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:178
+#: sources/php/template-functions.php:650
+#: sources/php/template-functions.php:1025
+#: sources/php/template-functions.php:1663
+msgid "Billing address"
+msgstr "帳單地址"
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:349
+msgid "Logged in with PayPal. Please continue your order below."
+msgstr "与PayPal签约。 请继续下面的订单。"
+
+#. Plugin Name of the plugin/theme
+#: includes/Compatibility/Plugins/CartFlows.php:62
+msgid "CheckoutWC"
+msgstr "CheckoutWC"
+
+#: includes/Features/AbandonedCartRecovery.php:80
+msgid "You have been unsubscribed from our cart reminder emails."
+msgstr "您已经退订了我们的购物车提醒邮件。"
+
+#: includes/Features/AbandonedCartRecovery.php:635
+#: sources/php/functions.php:896
+msgid "Complete Order"
+msgstr "已完成的订单"
+
+#: includes/Features/AbandonedCartRecovery.php:807
+#: includes/Features/AbandonedCartRecovery.php:871
+msgid "This order was abandoned and subsequently recovered."
+msgstr "这一命令被放弃，随后被收回。"
+
+#: includes/Features/FetchifyAddressAutocomplete.php:79
+msgid "Address Search"
+msgstr "地址搜索"
+
+#: includes/Features/FetchifyAddressAutocomplete.php:84
+msgid "Search for your address"
+msgstr "搜索你的地址"
+
+#: includes/Features/FetchifyAddressAutocomplete.php:85
+msgid "Or enter address manually."
+msgstr "或者手动输入地址。"
+
+#: includes/Features/HideOptionalAddressFields.php:37
+msgid "Add Address Line 2"
+msgstr "添加地址线2"
+
+#: includes/Features/HideOptionalAddressFields.php:44
+msgid "Add Company"
+msgstr "添加公司"
+
+#: includes/Features/LocalPickup.php:95
+msgid "Pick up"
+msgstr "提取"
+
+#: includes/Features/LocalPickup.php:110
+msgid "Ship"
+msgstr "发"
+
+#: includes/Features/LocalPickup.php:141
+msgid "Delivery method"
+msgstr "运费方式"
+
+#: includes/Features/LocalPickup.php:216
+msgid "Pickup locations"
+msgstr "取货地点"
+
+#: includes/Features/LocalPickup.php:503
+msgid "Pick up in store"
+msgstr "到店取货"
+
+#: includes/Features/LocalPickup.php:520
+#: includes/Managers/AssetManager.php:651
+msgid "Pickup"
+msgstr "自取"
+
+#: includes/Features/LocalPickup.php:561
+msgid "Pickup Location"
+msgstr "取货地点"
+
+#: includes/Features/LocalPickup.php:621
+msgid "Pickup instructions"
+msgstr "接机说明"
+
+#: includes/Features/LocalPickup.php:741
+msgid "Usually ready in 1 hour."
+msgstr "通常在1小时内完成。"
+
+#: includes/Features/LocalPickup.php:742
+msgid "Usually ready in 2 hours."
+msgstr "通常在2小时内准备好。"
+
+#: includes/Features/LocalPickup.php:743
+msgid "Usually ready in 4 hours."
+msgstr "通常在4小时内准备好。"
+
+#: includes/Features/LocalPickup.php:744
+msgid "Usually ready in 24 hours."
+msgstr "通常在24小时内准备好。"
+
+#: includes/Features/LocalPickup.php:745
+msgid "Usually ready in 2-4 days."
+msgstr "通常在2-4天内准备好。"
+
+#: includes/Features/LocalPickup.php:746
+msgid "Usually ready in 5+ days."
+msgstr "通常在5天以上准备好。"
+
+#: includes/Features/OrderReviewStep.php:67
+#: sources/php/template-functions.php:1933
+msgid "Review"
+msgstr "评论"
+
+#: includes/Features/SideCart.php:445
+#: includes/Features/SideCart.php:679
+msgid "Congrats! You get free standard shipping."
+msgstr "祝贺你!你可以得到免费的标准运费。"
+
+#. translators: %s is the amount remaining for free shipping
+#: includes/Features/SideCart.php:459
+#: includes/Features/SideCart.php:693
+#, php-format
+msgid "You're %s away from free shipping!"
+msgstr "你离免费送货还有%s步!"
+
+#: includes/Managers/AssetManager.php:633
+msgid "Please enter a valid phone number."
+msgstr "请输入一个有效的电话号码。"
+
+#: includes/Managers/AssetManager.php:642
+msgid "Please enter your first and last name."
+msgstr "请输入你的名字和姓氏。"
+
+#: includes/Managers/AssetManager.php:643
+#: sources/php/template-functions.php:660
+#: sources/php/template-functions.php:1647
+msgid "Shipping address"
+msgstr "配送地址"
+
+#: includes/Managers/AssetManager.php:644
+#: includes/Managers/AssetManager.php:807
+msgid "Please enter a new quantity:"
+msgstr "请输入新的数量："
+
+#: includes/Managers/AssetManager.php:645
+msgid "3-digit security code usually found on the back of your card. American Express cards have a 4-digit code located on the front."
+msgstr "3位数的安全码，通常在卡的背面。美国运通卡的正面有一个4位数的密码。"
+
+#: includes/Managers/AssetManager.php:646
+#: includes/Managers/AssetManager.php:808
+msgid "Are you sure you want to remove this item from your cart?"
+msgstr "您是否确定要从您的购物车中删除此商品？"
+
+#: includes/Managers/AssetManager.php:650
+msgid "Please enter a valid postcode / ZIP."
+msgstr "请输入有效的邮政编码。"
+
+#: includes/Managers/AssetManager.php:652
+msgid "Continue to pickup"
+msgstr "继续取货"
+
+#: includes/Managers/AssetManager.php:664
+msgid "Start with post/zip code or street"
+msgstr "以邮政/邮政编码或街道开始"
+
+#: includes/Managers/AssetManager.php:665
+msgid "Shipping method"
+msgstr "配送方式"
+
+#: includes/Managers/AssetManager.php:821
+msgid "Apply"
+msgstr "应用"
+
+#: includes/Managers/AssetManager.php:830
+msgid "Have a promo code? Click here."
+msgstr "有促销代码吗？请点击这里。"
+
+#: includes/Managers/AssetManager.php:839
+msgid "Promo Code"
+msgstr "优惠码"
+
+#: includes/Managers/AssetManager.php:848
+msgid "Enter Promo Code"
+msgstr "输入促销代码"
+
+#: includes/Managers/AssetManager.php:849
+msgid "Remove this item"
+msgstr "删除此项目"
+
+#: includes/Managers/AssetManager.php:850
+msgid "Proceed to checkout"
+msgstr "进行结算"
+
+#: includes/Managers/AssetManager.php:851
+msgid "Continue shopping"
+msgstr "继续购物"
+
+#: includes/Managers/AssetManager.php:852
+msgid "Edit"
+msgstr "编辑"
+
+#: lib/sendwp-sdk/remote-install.php:84
+msgid "Something went wrong. SendWP was not installed correctly."
+msgstr "出事了未正确安装发送WP。"
+
+#: sources/php/functions.php:201
+msgid "Ship to"
+msgstr "寄送到"
+
+#: sources/php/functions.php:722
+msgid "No shipping methods available"
+msgstr "没有可用的运输方法"
+
+#: sources/php/functions.php:982
+msgid "All transactions are secure and encrypted."
+msgstr "所有的交易都是安全和加密的。"
+
+#: sources/php/functions.php:1004
+msgid "Your order is free. No payment is required."
+msgstr "您的订单是免费的。不需要付款。"
+
+#: sources/php/functions.php:1047
+msgid "Same as shipping address"
+msgstr "跟邮寄地址一样"
+
+#: sources/php/functions.php:1055
+msgid "Use a different billing address"
+msgstr "使用不同的帐单地址"
+
+#: sources/php/functions.php:1289
+msgid "Return to cart"
+msgstr "返回到购物车"
+
+#: sources/php/functions.php:1328
+msgid "Continue to shipping"
+msgstr "继续发货"
+
+#: sources/php/functions.php:1351
+msgid "Continue to payment"
+msgstr "继续付款"
+
+#: sources/php/functions.php:1351
+#: sources/php/functions.php:1390
+msgid "Review order"
+msgstr "检查订单"
+
+#: sources/php/functions.php:1412
+msgid "Return to information"
+msgstr "返回信息"
+
+#: sources/php/functions.php:1434
+msgid "Return to shipping"
+msgstr "返回运输"
+
+#: sources/php/functions.php:1456
+msgid "Return to payment"
+msgstr "返回付款"
+
+#: sources/php/functions.php:1976
+msgid "Or"
+msgstr "或"
+
+#: sources/php/functions.php:2203
+msgid "Decrement"
+msgstr "递减"
+
+#: sources/php/functions.php:2215
+msgid "Increment"
+msgstr "增量"
+
+#: sources/php/functions.php:2890
+msgid "Unsubscribe"
+msgstr "退订"
+
+#: sources/php/functions.php:3576
+msgid "It looks like you already have an account. Please enter your login details below."
+msgstr "看起来你已经有了一个账户。请在下面输入你的登录信息。"
+
+#: sources/php/functions.php:3579
+msgid "If you have shopped with us before, please enter your login details below."
+msgstr "如果你以前在我们这里购物过，请在下面输入你的登录信息。"
+
+#: sources/php/functions.php:3636
+msgid "Or continue as guest"
+msgstr "或继续做客"
+
+#: sources/php/functions.php:3706
+#: sources/php/functions.php:3843
+msgid "No thanks"
+msgstr "不用了，谢谢"
+
+#: sources/php/template-functions.php:106
+msgid "Show order summary"
+msgstr "显示订单总结"
+
+#: sources/php/template-functions.php:123
+msgid "Hide order summary"
+msgstr "隐藏订单摘要"
+
+#: sources/php/template-functions.php:288
+msgid "Express checkout"
+msgstr "快速结帐"
+
+#: sources/php/template-functions.php:320
+#: sources/php/template-functions.php:1610
+#: sources/php/template-functions.php:1904
+msgid "Information"
+msgstr "信息"
+
+#: sources/php/template-functions.php:339
+msgid "Order review"
+msgstr "订单审查"
+
+#: sources/php/template-functions.php:404
+msgid "Already have an account with us?"
+msgstr "已经拥有账户?"
+
+#: sources/php/template-functions.php:416
+msgid "Log in."
+msgstr "登录."
+
+#. translators: %s: site name
+#: sources/php/template-functions.php:526
+#, php-format
+msgid "Create %s shopping account."
+msgstr "创建 %s 购物帐户。"
+
+#: sources/php/template-functions.php:538
+msgid "If you do not have an account, we will create one for you."
+msgstr "如果您没有帐户, 我们将为您创建一个帐户。"
+
+#. translators: %1 is the customer's name, %2 is their email address
+#: sources/php/template-functions.php:570
+#, php-format
+msgid "Welcome back, %1$s (%2$s)."
+msgstr "欢迎回来，%1$s（%2$s）。"
+
+#: sources/php/template-functions.php:588
+msgid "Log out."
+msgstr "注销。"
+
+#: sources/php/template-functions.php:640
+#: sources/php/template-functions.php:1640
+msgid "Billing and Shipping address"
+msgstr "结算和送货地址"
+
+#: sources/php/template-functions.php:792
+#: templates/futurist/functions.php:19
+#: templates/glass/functions.php:37
+msgid "Your Cart"
+msgstr "您的购物车"
+
+#: sources/php/template-functions.php:1046
+msgid "Select the address that matches your card or payment method."
+msgstr "选择与您的卡或支付方式相匹配的地址。"
+
+#. translators: %s is the order number
+#: sources/php/template-functions.php:1377
+#, php-format
+msgid "Order %s"
+msgstr "订单 %s"
+
+#. translators: %s is the billing first name
+#: sources/php/template-functions.php:1390
+#, php-format
+msgid "Thank you %s!"
+msgstr "谢谢 %s!"
+
+#: sources/php/template-functions.php:1494
+msgid "Order status"
+msgstr "订单状态"
+
+#: sources/php/template-functions.php:1525
+msgid "Order updates"
+msgstr "订单更新"
+
+#: sources/php/template-functions.php:1534
+msgid "You’ll get shipping and delivery updates by email."
+msgstr "您将通过电子邮件获得运输和交货更新。"
+
+#: sources/php/template-functions.php:1624
+msgid "Contact information"
+msgstr "联系信息"
+
+#: sources/php/template-functions.php:1676
+#: sources/php/template-functions.php:1919
+msgid "Shipping"
+msgstr "运输"
+
+#: sources/php/template-functions.php:1777
+msgid "Login"
+msgstr "登录"
+
+#: sources/php/template-functions.php:1999
+msgid "Your Cart is Empty"
+msgstr "您的购物车是空的"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.checkoutwc.com"
+msgstr "https://www.checkoutwc.com"
+
+#. Description of the plugin/theme
+msgid "Beautiful, conversion optimized checkout templates for WooCommerce."
+msgstr "漂亮的，经过转换优化的WooCommerce结帐模板。"
+
+#. Author of the plugin/theme
+msgid "Objectiv"
+msgstr "Objectiv"
+
+#. Author URI of the plugin/theme
+msgid "https://objectiv.co"
+msgstr "https://objectiv.co"
+
+#, php-format
+#~ msgctxt "shipping packages"
+#~ msgid "Shipping"
+#~ msgid_plural "Shipping %d"
+#~ msgstr[0] "运输 %d"
+
+#~ msgid "Activated!"
+#~ msgstr "已启用！"
+
+#~ msgid "Activating..."
+#~ msgstr "启用中..."
+
+#~ msgid "Installed!"
+#~ msgstr "已安装！"
+
+#~ msgid "Installing..."
+#~ msgstr "安装中..."
+
+#, php-format
+#~ msgid "Activate %s"
+#~ msgstr "激活 %s"
+
+#, php-format
+#~ msgid "Install %s"
+#~ msgstr "安装 %s"
+
+#, php-format
+#~ msgid "You must provide a hook prefix via %1$s before creating an Installer."
+#~ msgstr "创建安装程序前，必须通过 %1$s 提供钩子前缀。"
+
+#, php-format
+#~ msgid "The %1$s has already been called and set to %2$s."
+#~ msgstr "0] 已被调用并设置为 %2$s。"
+
+#~ msgid "Hook prefix must only contain lowercase letters, numbers, \"_\", or \"-\"."
+#~ msgstr "钩前缀只能包含小写字母、数字、\"_\"或\"-\"。"
+
+#, php-format
+#~ msgid "There was an error and plugin could not be installed, %1$splease install manually%2$s."
+#~ msgstr "出现错误，插件无法安装，%1$s请手动安装%2$s。"
+
+#~ msgid "Insecure request."
+#~ msgstr "不安全请求。"
+
+#, php-format
+#~ msgid "Security Error, Need higher permissions to install %1$s."
+#~ msgstr "安全错误，需要更高权限才能安装 %1$s。"
+
+#~ msgid "Success."
+#~ msgstr "成功。"
+
+#~ msgid "Change"
+#~ msgstr "更改"

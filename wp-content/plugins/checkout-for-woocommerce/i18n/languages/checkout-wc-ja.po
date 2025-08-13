@@ -1,0 +1,603 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Checkout for WooCommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Clifton Griffin <clif@checkoutwc.com>\n"
+"Language-Team: support@checkoutwc.com\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-19 10:50-0400\n"
+"PO-Revision-Date: 2024-03-19 11:00-0400\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: checkout-for-woocommerce.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: dist\n"
+"X-Poedit-SearchPathExcluded-2: vendor\n"
+
+#: sources/ts/blocks/OrderBumpSteps.tsx:21
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:54
+msgid "Order Submitted"
+msgstr "注文の提出"
+
+#: sources/ts/blocks/OrderBumpSteps.tsx:25
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:60
+msgid "Special Offer"
+msgstr "スペシャル・オファー"
+
+#: sources/ts/blocks/OrderBumpSteps.tsx:29
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:66
+msgid "Order Received"
+msgstr "ご注文完了"
+
+#: sources/ts/frontend/Components/LoginFormModal.tsx:120
+#: sources/php/functions.php:3572
+msgid "Welcome back"
+msgstr "ようこそ"
+
+#: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:14
+#: sources/ts/frontend/Components/ReviewPane/PaymentMethodReviewPane.tsx:14
+#: sources/ts/frontend/Components/ReviewPane/ShippingMethodReviewPane.tsx:14
+msgid "Contact"
+msgstr "お問い合わせ"
+
+#: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:32
+#: sources/ts/frontend/Components/ReviewPane/PaymentMethodReviewPane.tsx:34
+msgid "Method"
+msgstr "方法"
+
+#: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:39
+#: sources/php/functions.php:956
+#: sources/php/template-functions.php:1628
+#: sources/php/template-functions.php:1933
+msgid "Payment"
+msgstr "支払い"
+
+#: sources/ts/frontend/Components/SideCartComponent.tsx:35
+msgid "Close Cart"
+msgstr "カートを閉じる"
+
+#: checkout-for-woocommerce.php:141
+msgid "Your site is running an <strong>insecure version</strong> of PHP that is no longer supported. Please contact your web hosting provider to update your PHP version."
+msgstr "あなたのサイトは、サポートが終了した<strong>安全でないバージョンの</strong>PHPを実行しています。PHPのバージョンを更新するために、ウェブホスティングプロバイダに連絡してください。"
+
+#. translators: %s - checkoutwc.com URL for documentation with more details.
+#: checkout-for-woocommerce.php:147
+#, php-format
+msgid "<strong>Note:</strong> CheckoutWC is disabled on your site until you fix the issue. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Need help? Click here.</a>"
+msgstr "<strong>注意：</strong>問題を解決するまで、あなたのサイトではCheckoutWCが無効になっています。<a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">ヘルプが必要ですか？ここをクリックしてください。</a>"
+
+#. translators: %s - WordPress version.
+#: checkout-for-woocommerce.php:187
+#, php-format
+msgid "CheckoutWC requires WordPress %s or later."
+msgstr "CheckoutWCはWordPress %s以降が必要です。"
+
+#. translators: %s - WordPress version.
+#: checkout-for-woocommerce.php:225
+#, php-format
+msgid "CheckoutWC requires WooCommerce %s or later."
+msgstr "CheckoutWCは、WooCommerce %s以降が必要です。"
+
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:23
+msgid "No thanks, just complete my order"
+msgstr "結構です、注文を完了してください"
+
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:40
+msgid "Your order is almost complete..."
+msgstr "ご注文はもうすぐ完了です..."
+
+#: includes/API/AfterCheckoutBumpProductFormAPI.php:44
+msgid "Add this offer to your order and save!"
+msgstr "このキャンペーンをご注文に追加して、お得にお買い求めください！"
+
+#: includes/API/GetVariationFormAPI.php:26
+#: includes/API/OrderBumpOfferFormPreview.php:39
+#: sources/php/functions.php:3690
+msgid "Product not found"
+msgstr "商品が見つかりません"
+
+#: includes/API/ProductsAndVariationsSearchAPI.php:66
+msgid "The date the last order for this product was placed, in the site's timezone."
+msgstr "この商品の最終注文が行われた日付（サイトのタイムゾーン）。"
+
+#: includes/API/ProductsAndVariationsSearchAPI.php:83
+msgid "Limit result set to products that are low or out of stock. (Deprecated)"
+msgstr "在庫が少ない、または在庫切れの商品に結果セットを制限する。(非推奨)"
+
+#: includes/API/ProductsAndVariationsSearchAPI.php:89
+msgid "Search by similar product name or sku."
+msgstr "類似商品名または sku で検索します。"
+
+#: includes/Action/LogInAction.php:37
+msgid "There was an error logging in. Please check your credentials and try again."
+msgstr "ログインにエラーが発生しました。資格情報をご確認の上、再度お試しください。"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:81
+msgid "Use Recommended"
+msgstr "使用推奨"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:82
+msgid "Use Your Address"
+msgstr "住所を利用する"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:99
+msgid "Reenter Address"
+msgstr "アドレスの再入力"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:100
+msgid "Use Existing Address"
+msgstr "既存のアドレスを使用する"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:168
+msgid "Use recommended address instead?"
+msgstr "推奨アドレスで代用？"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:171
+msgid "We're unable to verify your address, but found a close match."
+msgstr "お客様のご住所を確認することができませんが、近いものが見つかりました。"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:175
+#: includes/Action/SmartyStreetsAddressValidationAction.php:248
+#: includes/Action/SmartyStreetsAddressValidationAction.php:305
+#: includes/Action/SmartyStreetsAddressValidationAction.php:358
+#: includes/Action/SmartyStreetsAddressValidationAction.php:409
+msgid "We are unable to verify your address."
+msgstr "お客様のご住所を確認することができません。"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:179
+msgid "Please confirm you would like to use this address or try again."
+msgstr "このアドレスを使用することを確認するか、もう一度やり直してください。"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:186
+msgid "You Entered"
+msgstr "入力しました。"
+
+#: includes/Action/SmartyStreetsAddressValidationAction.php:198
+msgid "Recommended"
+msgstr "推奨"
+
+#. translators: %s is the postcode field label
+#: includes/Action/ValidateEmailDomainAction.php:35
+msgid "Email address contains invalid domain name."
+msgstr "メールアドレスに無効なドメイン名が含まれています。"
+
+#. translators: %s is the postcode field label
+#: includes/Action/ValidatePostcodeAction.php:33
+#, php-format
+msgid "Please enter a valid %s."
+msgstr "有効な%sを入力してください。"
+
+#: includes/AddressFieldsAugmenter.php:124
+msgid "Full name"
+msgstr "フルネーム"
+
+#: includes/AddressFieldsAugmenter.php:177
+msgid "House number"
+msgstr "ハウスナンバー"
+
+#: includes/AddressFieldsAugmenter.php:189
+msgid "Street name"
+msgstr "通り 名"
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:178
+#: sources/php/template-functions.php:650
+#: sources/php/template-functions.php:1025
+#: sources/php/template-functions.php:1663
+msgid "Billing address"
+msgstr "お客様情報"
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:349
+msgid "Logged in with PayPal. Please continue your order below."
+msgstr "PayPal でログインしています。以下のご注文を継続してください。"
+
+#. Plugin Name of the plugin/theme
+#: includes/Compatibility/Plugins/CartFlows.php:62
+msgid "CheckoutWC"
+msgstr "CheckoutWC"
+
+#: includes/Features/AbandonedCartRecovery.php:80
+msgid "You have been unsubscribed from our cart reminder emails."
+msgstr "カートリマインダーメールの配信が停止されています。"
+
+#: includes/Features/AbandonedCartRecovery.php:635
+#: sources/php/functions.php:896
+msgid "Complete Order"
+msgstr "完全な注文"
+
+#: includes/Features/AbandonedCartRecovery.php:807
+#: includes/Features/AbandonedCartRecovery.php:871
+msgid "This order was abandoned and subsequently recovered."
+msgstr "この注文は放棄され、その後、回収されました。"
+
+#: includes/Features/FetchifyAddressAutocomplete.php:79
+msgid "Address Search"
+msgstr "アドレス検索"
+
+#: includes/Features/FetchifyAddressAutocomplete.php:84
+msgid "Search for your address"
+msgstr "住所を検索する"
+
+#: includes/Features/FetchifyAddressAutocomplete.php:85
+msgid "Or enter address manually."
+msgstr "または、アドレスを手入力します。"
+
+#: includes/Features/HideOptionalAddressFields.php:37
+msgid "Add Address Line 2"
+msgstr "アドレス2行目を追加"
+
+#: includes/Features/HideOptionalAddressFields.php:44
+msgid "Add Company"
+msgstr "会社を追加"
+
+#: includes/Features/LocalPickup.php:95
+msgid "Pick up"
+msgstr "ピックアップ"
+
+#: includes/Features/LocalPickup.php:110
+msgid "Ship"
+msgstr "シップ"
+
+#: includes/Features/LocalPickup.php:141
+msgid "Delivery method"
+msgstr "配送方法"
+
+#: includes/Features/LocalPickup.php:216
+msgid "Pickup locations"
+msgstr "ピックアップの場所"
+
+#: includes/Features/LocalPickup.php:503
+msgid "Pick up in store"
+msgstr "店舗でのお受け取り"
+
+#: includes/Features/LocalPickup.php:520
+#: includes/Managers/AssetManager.php:651
+msgid "Pickup"
+msgstr "ピックアップ"
+
+#: includes/Features/LocalPickup.php:561
+msgid "Pickup Location"
+msgstr "受け取り場所"
+
+#: includes/Features/LocalPickup.php:621
+msgid "Pickup instructions"
+msgstr "ピックアップの説明"
+
+#: includes/Features/LocalPickup.php:741
+msgid "Usually ready in 1 hour."
+msgstr "通常1時間で出来上がります。"
+
+#: includes/Features/LocalPickup.php:742
+msgid "Usually ready in 2 hours."
+msgstr "通常2時間で完成します。"
+
+#: includes/Features/LocalPickup.php:743
+msgid "Usually ready in 4 hours."
+msgstr "通常4時間で出来上がります。"
+
+#: includes/Features/LocalPickup.php:744
+msgid "Usually ready in 24 hours."
+msgstr "通常24時間以内に準備可能です。"
+
+#: includes/Features/LocalPickup.php:745
+msgid "Usually ready in 2-4 days."
+msgstr "通常2～4日で出来上がります。"
+
+#: includes/Features/LocalPickup.php:746
+msgid "Usually ready in 5+ days."
+msgstr "通常5日以上かかります。"
+
+#: includes/Features/OrderReviewStep.php:67
+#: sources/php/template-functions.php:1933
+msgid "Review"
+msgstr "レビュー"
+
+#: includes/Features/SideCart.php:445
+#: includes/Features/SideCart.php:679
+msgid "Congrats! You get free standard shipping."
+msgstr "おめでとうございます。標準で送料が無料になります。"
+
+#. translators: %s is the amount remaining for free shipping
+#: includes/Features/SideCart.php:459
+#: includes/Features/SideCart.php:693
+#, php-format
+msgid "You're %s away from free shipping!"
+msgstr "送料無料まであと%sですね。"
+
+#: includes/Managers/AssetManager.php:633
+msgid "Please enter a valid phone number."
+msgstr "有効な電話番号を入力してください。"
+
+#: includes/Managers/AssetManager.php:642
+msgid "Please enter your first and last name."
+msgstr "姓と名を入力してください。"
+
+#: includes/Managers/AssetManager.php:643
+#: sources/php/template-functions.php:660
+#: sources/php/template-functions.php:1647
+msgid "Shipping address"
+msgstr "お届け先住所"
+
+#: includes/Managers/AssetManager.php:644
+#: includes/Managers/AssetManager.php:807
+msgid "Please enter a new quantity:"
+msgstr "新しい数量を入力してください："
+
+#: includes/Managers/AssetManager.php:645
+msgid "3-digit security code usually found on the back of your card. American Express cards have a 4-digit code located on the front."
+msgstr "通常、カードの裏面に記載されている3桁のセキュリティコード。アメリカン・エキスプレス・カードには4桁のコードが前面に記載されています。"
+
+#: includes/Managers/AssetManager.php:646
+#: includes/Managers/AssetManager.php:808
+msgid "Are you sure you want to remove this item from your cart?"
+msgstr "カートからこのアイテムを削除してもよろしいですか？"
+
+#: includes/Managers/AssetManager.php:650
+msgid "Please enter a valid postcode / ZIP."
+msgstr "有効な郵便番号を入力してください。"
+
+#: includes/Managers/AssetManager.php:652
+msgid "Continue to pickup"
+msgstr "引き続きピックアップ"
+
+#: includes/Managers/AssetManager.php:664
+msgid "Start with post/zip code or street"
+msgstr "郵便番号、郵便番号、または郵便番号から始めてください。"
+
+#: includes/Managers/AssetManager.php:665
+msgid "Shipping method"
+msgstr "発送方法"
+
+#: includes/Managers/AssetManager.php:821
+msgid "Apply"
+msgstr "許可"
+
+#: includes/Managers/AssetManager.php:830
+msgid "Have a promo code? Click here."
+msgstr "プロモコードをお持ちですか？ここをクリックしてください。"
+
+#: includes/Managers/AssetManager.php:839
+msgid "Promo Code"
+msgstr "プロモコード"
+
+#: includes/Managers/AssetManager.php:848
+msgid "Enter Promo Code"
+msgstr "プロモコードを入力してください"
+
+#: includes/Managers/AssetManager.php:849
+msgid "Remove this item"
+msgstr "このアイテムを削除"
+
+#: includes/Managers/AssetManager.php:850
+msgid "Proceed to checkout"
+msgstr "お支払いへ進む"
+
+#: includes/Managers/AssetManager.php:851
+msgid "Continue shopping"
+msgstr "買い物を続ける"
+
+#: includes/Managers/AssetManager.php:852
+msgid "Edit"
+msgstr "編集"
+
+#: lib/sendwp-sdk/remote-install.php:84
+msgid "Something went wrong. SendWP was not installed correctly."
+msgstr "何か問題があります。SendWP が正しくインストールされませんでした。"
+
+#: sources/php/functions.php:201
+msgid "Ship to"
+msgstr "お届け先"
+
+#: sources/php/functions.php:722
+msgid "No shipping methods available"
+msgstr "発送方法はありません。"
+
+#: sources/php/functions.php:982
+msgid "All transactions are secure and encrypted."
+msgstr "すべての取引は安全で暗号化されています。"
+
+#: sources/php/functions.php:1004
+msgid "Your order is free. No payment is required."
+msgstr "あなたの注文は無料です。支払いは必要ありません。"
+
+#: sources/php/functions.php:1047
+msgid "Same as shipping address"
+msgstr "配送先住所と同じ"
+
+#: sources/php/functions.php:1055
+msgid "Use a different billing address"
+msgstr "異なる請求先住所を使用します"
+
+#: sources/php/functions.php:1289
+msgid "Return to cart"
+msgstr "戻る"
+
+#: sources/php/functions.php:1328
+msgid "Continue to shipping"
+msgstr "出荷を続ける"
+
+#: sources/php/functions.php:1351
+msgid "Continue to payment"
+msgstr "支払いに進む"
+
+#: sources/php/functions.php:1351
+#: sources/php/functions.php:1390
+msgid "Review order"
+msgstr "注文の確認"
+
+#: sources/php/functions.php:1412
+msgid "Return to information"
+msgstr "情報に戻る"
+
+#: sources/php/functions.php:1434
+msgid "Return to shipping"
+msgstr "出荷に戻る"
+
+#: sources/php/functions.php:1456
+msgid "Return to payment"
+msgstr "支払いに戻る"
+
+#: sources/php/functions.php:1976
+msgid "Or"
+msgstr "または"
+
+#: sources/php/functions.php:2203
+msgid "Decrement"
+msgstr "デクリメント"
+
+#: sources/php/functions.php:2215
+msgid "Increment"
+msgstr "インクリメント"
+
+#: sources/php/functions.php:2890
+msgid "Unsubscribe"
+msgstr "退会"
+
+#: sources/php/functions.php:3576
+msgid "It looks like you already have an account. Please enter your login details below."
+msgstr "すでにアカウントをお持ちのようです。以下にログイン情報を入力してください。"
+
+#: sources/php/functions.php:3579
+msgid "If you have shopped with us before, please enter your login details below."
+msgstr "以前に当店でお買い物をされたことがある方は、以下にログイン情報を入力してください。"
+
+#: sources/php/functions.php:3636
+msgid "Or continue as guest"
+msgstr "またはゲストとして継続"
+
+#: sources/php/functions.php:3706
+#: sources/php/functions.php:3843
+msgid "No thanks"
+msgstr "いいえ、結構です"
+
+#: sources/php/template-functions.php:106
+msgid "Show order summary"
+msgstr "注文の要約を表示する"
+
+#: sources/php/template-functions.php:123
+msgid "Hide order summary"
+msgstr "注文の概要を隠す"
+
+#: sources/php/template-functions.php:288
+msgid "Express checkout"
+msgstr "エクスプレスチェックアウト"
+
+#: sources/php/template-functions.php:320
+#: sources/php/template-functions.php:1610
+#: sources/php/template-functions.php:1904
+msgid "Information"
+msgstr "インフォメーション"
+
+#: sources/php/template-functions.php:339
+msgid "Order review"
+msgstr "注文レビュー"
+
+#: sources/php/template-functions.php:404
+msgid "Already have an account with us?"
+msgstr "既に私たちと口座をお持ちですか？"
+
+#: sources/php/template-functions.php:416
+msgid "Log in."
+msgstr "ログインして."
+
+#. translators: %s: site name
+#: sources/php/template-functions.php:526
+#, php-format
+msgid "Create %s shopping account."
+msgstr "ショッピング アカウント %s を作成します。"
+
+#: sources/php/template-functions.php:538
+msgid "If you do not have an account, we will create one for you."
+msgstr "あなたがアカウントを持っていない場合は、我々はあなたのために1つを作成します。"
+
+#. translators: %1 is the customer's name, %2 is their email address
+#: sources/php/template-functions.php:570
+#, php-format
+msgid "Welcome back, %1$s (%2$s)."
+msgstr "ようこそ、%1$s（%2$s）。"
+
+#: sources/php/template-functions.php:588
+msgid "Log out."
+msgstr "ログアウト."
+
+#: sources/php/template-functions.php:640
+#: sources/php/template-functions.php:1640
+msgid "Billing and Shipping address"
+msgstr "請求先および配送先住所"
+
+#: sources/php/template-functions.php:792
+#: templates/futurist/functions.php:19
+#: templates/glass/functions.php:37
+msgid "Your Cart"
+msgstr "カート"
+
+#: sources/php/template-functions.php:1046
+msgid "Select the address that matches your card or payment method."
+msgstr "ご利用のカードまたはお支払い方法に合った住所を選択してください。"
+
+#. translators: %s is the order number
+#: sources/php/template-functions.php:1377
+#, php-format
+msgid "Order %s"
+msgstr "注文%s"
+
+#. translators: %s is the billing first name
+#: sources/php/template-functions.php:1390
+#, php-format
+msgid "Thank you %s!"
+msgstr "ありがとう、%s!"
+
+#: sources/php/template-functions.php:1494
+msgid "Order status"
+msgstr "注文ステータス"
+
+#: sources/php/template-functions.php:1525
+msgid "Order updates"
+msgstr "注文ステータスの更新"
+
+#: sources/php/template-functions.php:1534
+msgid "You’ll get shipping and delivery updates by email."
+msgstr "メールで配送と配送の最新情報を入手できます。"
+
+#: sources/php/template-functions.php:1624
+msgid "Contact information"
+msgstr "連絡先情報"
+
+#: sources/php/template-functions.php:1676
+#: sources/php/template-functions.php:1919
+msgid "Shipping"
+msgstr "送料"
+
+#: sources/php/template-functions.php:1777
+msgid "Login"
+msgstr "ログイン"
+
+#: sources/php/template-functions.php:1999
+msgid "Your Cart is Empty"
+msgstr "カートは空です"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.checkoutwc.com"
+msgstr "https://www.checkoutwc.com"
+
+#. Description of the plugin/theme
+msgid "Beautiful, conversion optimized checkout templates for WooCommerce."
+msgstr "WooCommerce用の美しい、変換に最適化されたチェックアウトテンプレート。"
+
+#. Author of the plugin/theme
+msgid "Objectiv"
+msgstr "Objectiv"
+
+#. Author URI of the plugin/theme
+msgid "https://objectiv.co"
+msgstr "https://objectiv.co"
+
+#~ msgid "Change"
+#~ msgstr "変更"
