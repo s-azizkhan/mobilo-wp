@@ -1,20 +1,19 @@
 <?php
 
-// Global functions
+// Functions and constants
+
 namespace {
-	if(!function_exists('trigger_deprecation')){
-    function trigger_deprecation(...$args) { return checkoutwc_trigger_deprecation(func_get_args()); }
-}
+
 }
 
-// Everything else – irrelevant that this part is namespaced
+
 namespace CheckoutWC {
-	
-class AliasAutoloader
-{
-	private string $includeFilePath;
 
-    private array $autoloadAliases = array (
+    class AliasAutoloader
+    {
+        private string $includeFilePath;
+
+        private array $autoloadAliases = array (
   'Pelago\\Emogrifier\\Caching\\SimpleStringCache' => 
   array (
     'type' => 'class',
@@ -301,8 +300,9 @@ class AliasAutoloader
     'extends' => 'CheckoutWC\\Sabberworm\\CSS\\CSSList\\CSSList',
     'implements' => 
     array (
-      0 => 'Sabberworm\\CSS\\Renderable',
-      1 => 'Sabberworm\\CSS\\Comment\\Commentable',
+      0 => 'Sabberworm\\CSS\\Comment\\Commentable',
+      1 => 'Sabberworm\\CSS\\CSSElement',
+      2 => 'Sabberworm\\CSS\\Position\\Positionable',
     ),
   ),
   'Sabberworm\\CSS\\CSSList\\Document' => 
@@ -337,7 +337,8 @@ class AliasAutoloader
     'extends' => 'CheckoutWC\\Sabberworm\\CSS\\Comment\\Comment',
     'implements' => 
     array (
-      0 => 'Sabberworm\\CSS\\Renderable',
+      0 => 'Sabberworm\\CSS\\Position\\Positionable',
+      1 => 'Sabberworm\\CSS\\Renderable',
     ),
   ),
   'Sabberworm\\CSS\\OutputFormat' => 
@@ -415,6 +416,7 @@ class AliasAutoloader
     'extends' => 'CheckoutWC\\Sabberworm\\CSS\\Parsing\\SourceException',
     'implements' => 
     array (
+      0 => 'Sabberworm\\CSS\\Position\\Positionable',
     ),
   ),
   'Sabberworm\\CSS\\Parsing\\UnexpectedEOFException' => 
@@ -449,6 +451,7 @@ class AliasAutoloader
     'implements' => 
     array (
       0 => 'Sabberworm\\CSS\\Property\\AtRule',
+      1 => 'Sabberworm\\CSS\\Position\\Positionable',
     ),
   ),
   'Sabberworm\\CSS\\Property\\Charset' => 
@@ -461,6 +464,7 @@ class AliasAutoloader
     'implements' => 
     array (
       0 => 'Sabberworm\\CSS\\Property\\AtRule',
+      1 => 'Sabberworm\\CSS\\Position\\Positionable',
     ),
   ),
   'Sabberworm\\CSS\\Property\\Import' => 
@@ -473,6 +477,7 @@ class AliasAutoloader
     'implements' => 
     array (
       0 => 'Sabberworm\\CSS\\Property\\AtRule',
+      1 => 'Sabberworm\\CSS\\Position\\Positionable',
     ),
   ),
   'Sabberworm\\CSS\\Property\\KeyframeSelector' => 
@@ -506,8 +511,9 @@ class AliasAutoloader
     'extends' => 'CheckoutWC\\Sabberworm\\CSS\\Rule\\Rule',
     'implements' => 
     array (
-      0 => 'Sabberworm\\CSS\\Renderable',
-      1 => 'Sabberworm\\CSS\\Comment\\Commentable',
+      0 => 'Sabberworm\\CSS\\Comment\\Commentable',
+      1 => 'Sabberworm\\CSS\\CSSElement',
+      2 => 'Sabberworm\\CSS\\Position\\Positionable',
     ),
   ),
   'Sabberworm\\CSS\\RuleSet\\AtRuleSet' => 
@@ -542,8 +548,9 @@ class AliasAutoloader
     'extends' => 'CheckoutWC\\Sabberworm\\CSS\\RuleSet\\RuleSet',
     'implements' => 
     array (
-      0 => 'Sabberworm\\CSS\\Renderable',
+      0 => 'Sabberworm\\CSS\\CSSElement',
       1 => 'Sabberworm\\CSS\\Comment\\Commentable',
+      2 => 'Sabberworm\\CSS\\Position\\Positionable',
     ),
   ),
   'Sabberworm\\CSS\\Settings' => 
@@ -676,7 +683,8 @@ class AliasAutoloader
     'extends' => 'CheckoutWC\\Sabberworm\\CSS\\Value\\Value',
     'implements' => 
     array (
-      0 => 'Sabberworm\\CSS\\Renderable',
+      0 => 'Sabberworm\\CSS\\CSSElement',
+      1 => 'Sabberworm\\CSS\\Position\\Positionable',
     ),
   ),
   'Sabberworm\\CSS\\Value\\ValueList' => 
@@ -818,6 +826,17 @@ class AliasAutoloader
     'isabstract' => false,
     'namespace' => 'SmartyStreets\\PhpSdk\\Exceptions',
     'extends' => 'CheckoutWC\\SmartyStreets\\PhpSdk\\Exceptions\\RequestEntityTooLargeException',
+    'implements' => 
+    array (
+    ),
+  ),
+  'SmartyStreets\\PhpSdk\\Exceptions\\RequestNotModifiedException' => 
+  array (
+    'type' => 'class',
+    'classname' => 'RequestNotModifiedException',
+    'isabstract' => false,
+    'namespace' => 'SmartyStreets\\PhpSdk\\Exceptions',
+    'extends' => 'CheckoutWC\\SmartyStreets\\PhpSdk\\Exceptions\\RequestNotModifiedException',
     'implements' => 
     array (
     ),
@@ -1391,6 +1410,17 @@ class AliasAutoloader
     'isabstract' => false,
     'namespace' => 'SmartyStreets\\PhpSdk\\US_Enrichment',
     'extends' => 'CheckoutWC\\SmartyStreets\\PhpSdk\\US_Enrichment\\Result',
+    'implements' => 
+    array (
+    ),
+  ),
+  'SmartyStreets\\PhpSdk\\US_Enrichment\\RiskAttributes' => 
+  array (
+    'type' => 'class',
+    'classname' => 'RiskAttributes',
+    'isabstract' => false,
+    'namespace' => 'SmartyStreets\\PhpSdk\\US_Enrichment',
+    'extends' => 'CheckoutWC\\SmartyStreets\\PhpSdk\\US_Enrichment\\RiskAttributes',
     'implements' => 
     array (
     ),
@@ -2333,18 +2363,6 @@ class AliasAutoloader
       0 => 'Symfony\\Component\\Lock\\Exception\\ExceptionInterface',
     ),
   ),
-  'Symfony\\Component\\Lock\\Exception\\NotSupportedException' => 
-  array (
-    'type' => 'class',
-    'classname' => 'NotSupportedException',
-    'isabstract' => false,
-    'namespace' => 'Symfony\\Component\\Lock\\Exception',
-    'extends' => 'CheckoutWC\\Symfony\\Component\\Lock\\Exception\\NotSupportedException',
-    'implements' => 
-    array (
-      0 => 'Symfony\\Component\\Lock\\Exception\\ExceptionInterface',
-    ),
-  ),
   'Symfony\\Component\\Lock\\Exception\\UnserializableKeyException' => 
   array (
     'type' => 'class',
@@ -2527,19 +2545,6 @@ class AliasAutoloader
     'implements' => 
     array (
       0 => 'Symfony\\Component\\Lock\\SharedLockStoreInterface',
-    ),
-  ),
-  'Symfony\\Component\\Lock\\Store\\RetryTillSaveStore' => 
-  array (
-    'type' => 'class',
-    'classname' => 'RetryTillSaveStore',
-    'isabstract' => false,
-    'namespace' => 'Symfony\\Component\\Lock\\Store',
-    'extends' => 'CheckoutWC\\Symfony\\Component\\Lock\\Store\\RetryTillSaveStore',
-    'implements' => 
-    array (
-      0 => 'Symfony\\Component\\Lock\\BlockingStoreInterface',
-      1 => 'Psr\\Log\\LoggerAwareInterface',
     ),
   ),
   'Symfony\\Component\\Lock\\Store\\SemaphoreStore' => 
@@ -2726,17 +2731,6 @@ class AliasAutoloader
     'implements' => 
     array (
       0 => 'Symfony\\Component\\OptionsResolver\\Options',
-    ),
-  ),
-  'Symfony\\Polyfill\\Php73\\Php73' => 
-  array (
-    'type' => 'class',
-    'classname' => 'Php73',
-    'isabstract' => false,
-    'namespace' => 'Symfony\\Polyfill\\Php73',
-    'extends' => 'CheckoutWC\\Symfony\\Polyfill\\Php73\\Php73',
-    'implements' => 
-    array (
     ),
   ),
   'Symfony\\Polyfill\\Php80\\Php80' => 
@@ -3001,6 +2995,16 @@ class AliasAutoloader
       0 => 'CheckoutWC\\Psr\\Log\\LoggerTrait',
     ),
   ),
+  'Sabberworm\\CSS\\Position\\Position' => 
+  array (
+    'type' => 'trait',
+    'traitname' => 'Position',
+    'namespace' => 'Sabberworm\\CSS\\Position',
+    'use' => 
+    array (
+      0 => 'CheckoutWC\\Sabberworm\\CSS\\Position\\Position',
+    ),
+  ),
   'Symfony\\Component\\Lock\\Store\\DatabaseTableTrait' => 
   array (
     'type' => 'trait',
@@ -3051,6 +3055,16 @@ class AliasAutoloader
       0 => 'CheckoutWC\\Psr\\Log\\LoggerInterface',
     ),
   ),
+  'Sabberworm\\CSS\\CSSElement' => 
+  array (
+    'type' => 'interface',
+    'interfacename' => 'CSSElement',
+    'namespace' => 'Sabberworm\\CSS',
+    'extends' => 
+    array (
+      0 => 'CheckoutWC\\Sabberworm\\CSS\\CSSElement',
+    ),
+  ),
   'Sabberworm\\CSS\\Comment\\Commentable' => 
   array (
     'type' => 'interface',
@@ -3059,6 +3073,16 @@ class AliasAutoloader
     'extends' => 
     array (
       0 => 'CheckoutWC\\Sabberworm\\CSS\\Comment\\Commentable',
+    ),
+  ),
+  'Sabberworm\\CSS\\Position\\Positionable' => 
+  array (
+    'type' => 'interface',
+    'interfacename' => 'Positionable',
+    'namespace' => 'Sabberworm\\CSS\\Position',
+    'extends' => 
+    array (
+      0 => 'CheckoutWC\\Sabberworm\\CSS\\Position\\Positionable',
     ),
   ),
   'Sabberworm\\CSS\\Property\\AtRule' => 
@@ -3343,105 +3367,104 @@ class AliasAutoloader
   ),
 );
 
-    public function __construct() {
-		$this->includeFilePath = __DIR__ . '/autoload_alias.php';
-    }
-    
-    public function autoload($class)
-    {
-        if (!isset($this->autoloadAliases[$class])) {
-            return;
+        public function __construct()
+        {
+            $this->includeFilePath = __DIR__ . '/autoload_alias.php';
         }
-        switch ($this->autoloadAliases[$class]['type']) {
-            case 'class':
-                $this->load(
-                    $this->classTemplate(
-                        $this->autoloadAliases[$class]
-                    )
-                );
-                break;
-            case 'interface':
-                $this->load(
-                    $this->interfaceTemplate(
-                        $this->autoloadAliases[$class]
-                    )
-                );
-                break;
-            case 'trait':
-                $this->load(
-                    $this->traitTemplate(
-                        $this->autoloadAliases[$class]
-                    )
-                );
-                break;
-            default:
-                // Never.
-                break;
-        }
-    }
 
-    private function load(string $includeFile)
-    {
-        file_put_contents($this->includeFilePath, $includeFile);
-        include $this->includeFilePath;
-        file_exists($this->includeFilePath) && unlink($this->includeFilePath);
-    }
-	
-	// TODO: What if this was a real function in this class that could be used for testing, which would be read and written by php-parser?
-    private function classTemplate(array $class): string
-    {
-        $abstract = $class['isabstract'] ? 'abstract ' : '';
-        $classname = $class['classname'];
-        if(isset($class['namespace'])) {
-            $namespace = "namespace {$class['namespace']};";
-            $extends = '\\' . $class['extends'];
-	        $implements = empty($class['implements']) ? ''
-	            : ' implements \\' . implode(', \\', $class['implements']);
-        } else {
-            $namespace = '';
-            $extends = $class['extends'];
-	        $implements = !empty($class['implements']) ? ''
-	            : ' implements ' . implode(', ', $class['implements']);
+        public function autoload($class)
+        {
+            if (!isset($this->autoloadAliases[$class])) {
+                return;
+            }
+            switch ($this->autoloadAliases[$class]['type']) {
+                case 'class':
+                        $this->load(
+                            $this->classTemplate(
+                                $this->autoloadAliases[$class]
+                            )
+                        );
+                    break;
+                case 'interface':
+                    $this->load(
+                        $this->interfaceTemplate(
+                            $this->autoloadAliases[$class]
+                        )
+                    );
+                    break;
+                case 'trait':
+                    $this->load(
+                        $this->traitTemplate(
+                            $this->autoloadAliases[$class]
+                        )
+                    );
+                    break;
+                default:
+                    // Never.
+                    break;
+            }
         }
-        return <<<EOD
-				<?php
-				$namespace
-				$abstract class $classname extends $extends $implements {}
-				EOD;
-    }
-    
-    private function interfaceTemplate(array $interface): string
-    {
-        $interfacename = $interface['interfacename'];
-        $namespace = isset($interface['namespace']) 
+
+        private function load(string $includeFile)
+        {
+            file_put_contents($this->includeFilePath, $includeFile);
+            include $this->includeFilePath;
+            file_exists($this->includeFilePath) && unlink($this->includeFilePath);
+        }
+
+        private function classTemplate(array $class): string
+        {
+            $abstract = $class['isabstract'] ? 'abstract ' : '';
+            $classname = $class['classname'];
+            if (isset($class['namespace'])) {
+                $namespace = "namespace {$class['namespace']};";
+                $extends = '\\' . $class['extends'];
+                $implements = empty($class['implements']) ? ''
+                : ' implements \\' . implode(', \\', $class['implements']);
+            } else {
+                $namespace = '';
+                $extends = $class['extends'];
+                $implements = !empty($class['implements']) ? ''
+                : ' implements ' . implode(', ', $class['implements']);
+            }
+            return <<<EOD
+                <?php
+                $namespace
+                $abstract class $classname extends $extends $implements {}
+                EOD;
+        }
+
+        private function interfaceTemplate(array $interface): string
+        {
+            $interfacename = $interface['interfacename'];
+            $namespace = isset($interface['namespace'])
             ? "namespace {$interface['namespace']};" : '';
-        $extends = isset($interface['namespace'])
+            $extends = isset($interface['namespace'])
             ? '\\' . implode('\\ ,', $interface['extends'])
             : implode(', ', $interface['extends']);
-        return <<<EOD
-				<?php
-				$namespace
-				interface $interfacename extends $extends {}
-				EOD;
-    } 
-    private function traitTemplate(array $trait): string
-    {
-        $traitname = $trait['traitname'];
-        $namespace = isset($trait['namespace']) 
+            return <<<EOD
+                <?php
+                $namespace
+                interface $interfacename extends $extends {}
+                EOD;
+        }
+        private function traitTemplate(array $trait): string
+        {
+            $traitname = $trait['traitname'];
+            $namespace = isset($trait['namespace'])
             ? "namespace {$trait['namespace']};" : '';
-        $uses = isset($trait['namespace'])
+            $uses = isset($trait['namespace'])
             ? '\\' . implode(';' . PHP_EOL . '    use \\', $trait['use'])
             : implode(';' . PHP_EOL . '    use ', $trait['use']);
-        return <<<EOD
-				<?php
-				$namespace
-				trait $traitname { 
-				    use $uses; 
-				}
-				EOD;
-	    }
-	}
-	
-	spl_autoload_register( [ new AliasAutoloader(), 'autoload' ] );
+            return <<<EOD
+                <?php
+                $namespace
+                trait $traitname { 
+                    use $uses; 
+                }
+                EOD;
+        }
+    }
 
+    spl_autoload_register([ new AliasAutoloader(), 'autoload' ]);
 }

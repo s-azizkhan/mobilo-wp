@@ -25,9 +25,9 @@ class Advanced extends PageAbstract {
 
 		$this->set_tabbed_navigation( new TabNavigation( 'advanced' ) );
 
-		$this->get_tabbed_navigation()->add_tab( 'Advanced', add_query_arg( array( 'subpage' => 'advanced' ), $this->get_url() ) );
-		$this->get_tabbed_navigation()->add_tab( 'Scripts', add_query_arg( array( 'subpage' => 'scripts' ), $this->get_url() ) );
-		$this->get_tabbed_navigation()->add_tab( 'Tools', add_query_arg( array( 'subpage' => 'tools' ), $this->get_url() ) );
+		$this->get_tabbed_navigation()->add_tab( __( 'Advanced', 'checkout-wc' ), add_query_arg( array( 'subpage' => 'advanced' ), $this->get_url() ) );
+		$this->get_tabbed_navigation()->add_tab( __( 'Scripts', 'checkout-wc' ), add_query_arg( array( 'subpage' => 'scripts' ), $this->get_url() ) );
+		$this->get_tabbed_navigation()->add_tab( __( 'Tools', 'checkout-wc' ), add_query_arg( array( 'subpage' => 'tools' ), $this->get_url() ) );
 
 		add_action( 'wp_ajax_cfw_generate_settings', array( $this, 'generate_settings_export' ) );
 		add_action( 'admin_init', array( $this, 'maybe_upload_settings' ), 0 );
@@ -62,12 +62,12 @@ class Advanced extends PageAbstract {
 				<?php
 				cfw_admin_page_section(
 					__( 'Export Settings', 'checkout-wc' ),
-					'Download a JSON file containing the current plugin settings.',
+					__( 'Download a JSON file containing the current plugin settings.', 'checkout-wc' ),
 					$this->get_export_settings()
 				);
 				cfw_admin_page_section(
 					__( 'Import Settings', 'checkout-wc' ),
-					'Replace your current settings with a previous settings export.',
+					__( 'Replace your current settings with a previous settings export.', 'checkout-wc' ),
 					$this->get_import_settings()
 				);
 				?>
@@ -171,8 +171,8 @@ class Advanced extends PageAbstract {
 
 			NoticesManager::instance()->add(
 				'cfw_import_settings_error',
-				'CheckoutWC Settings Import Failed',
-				'Unable to import settings. Did you select a JSON file to upload?',
+				__( 'CheckoutWC Settings Import Failed', 'checkout-wc' ),
+				__( 'Unable to import settings. Did you select a JSON file to upload?', 'checkout-wc' ),
 				array(
 					'type'        => 'error',
 					'dismissible' => false,
@@ -184,7 +184,7 @@ class Advanced extends PageAbstract {
 		$upload = ! empty( $_FILES['uploaded_settings'] ) ? $_FILES['uploaded_settings'] : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 		if ( empty( $upload ) ) {
-			wp_die( 'Error. Uploaded file appears empty.' );
+			wp_die( esc_html__( 'Error. Uploaded file appears empty.', 'checkout-wc' ) );
 		}
 
 		$file_tmp_path  = $upload['tmp_name'];
@@ -195,7 +195,7 @@ class Advanced extends PageAbstract {
 		$new_file_name = md5( time() . $file_name ) . '.' . $file_extension;
 
 		if ( 'json' !== $file_extension ) {
-			wp_die( 'Wrong file extension. Uploaded settings must be a JSON file.' );
+			wp_die( esc_html__( 'Wrong file extension. Uploaded settings must be a JSON file.', 'checkout-wc' ) );
 		}
 
 		$wp_uploads = wp_upload_dir();
@@ -203,14 +203,14 @@ class Advanced extends PageAbstract {
 		$dest_path  = $upload_dir . $new_file_name;
 
 		if ( ! move_uploaded_file( $file_tmp_path, $dest_path ) ) {
-			wp_die( 'Error moving uploaded file - check your permissions.' );
+			wp_die( esc_html__( 'Error moving uploaded file - check your permissions.', 'checkout-wc' ) );
 		}
 
 		$contents = file_get_contents( $dest_path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		$decoded  = json_decode( $contents, JSON_OBJECT_AS_ARRAY );
 
 		if ( ! $decoded ) {
-			wp_die( 'Error decoding JSON file.' );
+			wp_die( esc_html__( 'Error decoding JSON file.', 'checkout-wc' ) );
 		}
 
 		$active_template_slug = cfw_get_active_template()->get_slug();
@@ -252,8 +252,8 @@ class Advanced extends PageAbstract {
 
 		NoticesManager::instance()->add(
 			'cfw_import_settings_success',
-			'CheckoutWC Settings Import Successful',
-			'Successfully imported settings.',
+			__( 'CheckoutWC Settings Import Successful', 'checkout-wc' ),
+			__( 'Successfully imported settings.', 'checkout-wc' ),
 			array(
 				'type'        => 'success',
 				'dismissible' => false,

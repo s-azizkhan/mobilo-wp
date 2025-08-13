@@ -4,12 +4,16 @@ namespace CheckoutWC\Sabberworm\CSS\Property;
 
 use CheckoutWC\Sabberworm\CSS\Comment\Comment;
 use CheckoutWC\Sabberworm\CSS\OutputFormat;
+use CheckoutWC\Sabberworm\CSS\Position\Position;
+use CheckoutWC\Sabberworm\CSS\Position\Positionable;
 
 /**
  * `CSSNamespace` represents an `@namespace` rule.
  */
-class CSSNamespace implements AtRule
+class CSSNamespace implements AtRule, Positionable
 {
+    use Position;
+
     /**
      * @var string
      */
@@ -41,16 +45,8 @@ class CSSNamespace implements AtRule
     {
         $this->mUrl = $mUrl;
         $this->sPrefix = $sPrefix;
-        $this->iLineNo = $iLineNo;
+        $this->setPosition($iLineNo);
         $this->aComments = [];
-    }
-
-    /**
-     * @return int
-     */
-    public function getLineNo()
-    {
-        return $this->iLineNo;
     }
 
     /**

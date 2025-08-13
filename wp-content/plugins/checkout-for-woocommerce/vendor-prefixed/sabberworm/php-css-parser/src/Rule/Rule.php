@@ -4,11 +4,13 @@ namespace CheckoutWC\Sabberworm\CSS\Rule;
 
 use CheckoutWC\Sabberworm\CSS\Comment\Comment;
 use CheckoutWC\Sabberworm\CSS\Comment\Commentable;
+use CheckoutWC\Sabberworm\CSS\CSSElement;
 use CheckoutWC\Sabberworm\CSS\OutputFormat;
 use CheckoutWC\Sabberworm\CSS\Parsing\ParserState;
 use CheckoutWC\Sabberworm\CSS\Parsing\UnexpectedEOFException;
 use CheckoutWC\Sabberworm\CSS\Parsing\UnexpectedTokenException;
-use CheckoutWC\Sabberworm\CSS\Renderable;
+use CheckoutWC\Sabberworm\CSS\Position\Position;
+use CheckoutWC\Sabberworm\CSS\Position\Positionable;
 use CheckoutWC\Sabberworm\CSS\Value\RuleValueList;
 use CheckoutWC\Sabberworm\CSS\Value\Value;
 
@@ -17,8 +19,10 @@ use CheckoutWC\Sabberworm\CSS\Value\Value;
  *
  * In CSS, `Rule`s are expressed as follows: “key: value[0][0] value[0][1], value[1][0] value[1][1];”
  */
-class Rule implements Renderable, Commentable
+class Rule implements Commentable, CSSElement, Positionable
 {
+    use Position;
+
     /**
      * @var string
      */
@@ -40,18 +44,6 @@ class Rule implements Renderable, Commentable
     private $aIeHack;
 
     /**
-     * @var int
-     */
-    protected $iLineNo;
-
-    /**
-     * @var int
-     *
-     * @internal since 8.8.0
-     */
-    protected $iColNo;
-
-    /**
      * @var array<array-key, Comment>
      *
      * @internal since 8.8.0
@@ -69,8 +61,7 @@ class Rule implements Renderable, Commentable
         $this->mValue = null;
         $this->bIsImportant = false;
         $this->aIeHack = [];
-        $this->iLineNo = $iLineNo;
-        $this->iColNo = $iColNo;
+        $this->setPosition($iLineNo, $iColNo);
         $this->aComments = [];
     }
 
@@ -140,34 +131,6 @@ class Rule implements Renderable, Commentable
             default:
                 return [',', ' ', '/'];
         }
-    }
-
-    /**
-     * @return int
-     */
-    public function getLineNo()
-    {
-        return $this->iLineNo;
-    }
-
-    /**
-     * @return int
-     */
-    public function getColNo()
-    {
-        return $this->iColNo;
-    }
-
-    /**
-     * @param int $iLine
-     * @param int $iColumn
-     *
-     * @return void
-     */
-    public function setPosition($iLine, $iColumn)
-    {
-        $this->iColNo = $iColumn;
-        $this->iLineNo = $iLine;
     }
 
     /**
@@ -295,7 +258,7 @@ class Rule implements Renderable, Commentable
         }
         if (!$this->mValue instanceof RuleValueList || $this->mValue->getListSeparator() !== $sType) {
             $mCurrentValue = $this->mValue;
-            $this->mValue = new RuleValueList($sType, $this->iLineNo);
+            $this->mValue = new RuleValueList($sType, $this->getLineNumber());
             if ($mCurrentValue) {
                 $this->mValue->addListComponent($mCurrentValue);
             }

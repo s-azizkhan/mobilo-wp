@@ -58,7 +58,7 @@ class AdminPluginsPageManager {
 		if ( is_network_admin() || ! is_multisite() ) {
 			$wp_list_table = _get_list_table( 'WP_Plugins_List_Table' );
 			echo '<tr class="plugin-update-tr"><td colspan="' . sanitize_key( $wp_list_table->get_column_count() ) . '" class="plugin-update colspanchange"><div class="update-message">';
-			echo "<span style='color:red'>You're missing out on important updates because your license key is missing, invalid, or expired.</span>";
+			echo '<span style="color:red">' . esc_html__( "You're missing out on important updates because your license key is missing, invalid, or expired.", 'checkout-wc' ) . '</span>';
 			echo '</div></td></tr>';
 		}
 	}
@@ -109,16 +109,16 @@ class AdminPluginsPageManager {
 				'required'    => 'yes',
 				'extra-class' => '',
 				'options'     => array(
-					'temporary_deactivation_for_debug' => '<strong>It is a temporary deactivation.</strong> I am just debugging an issue.',
-					'site-layout_broke'                => 'The plugin <strong>broke my layout</strong> or some functionality.',
-					'complicated_configuration'        => 'The plugin is <strong>too complicated to configure.</strong>',
-					'other'                            => 'Other',
+					'temporary_deactivation_for_debug' => __( '<strong>It is a temporary deactivation.</strong> I am just debugging an issue.', 'checkout-wc' ),
+					'site-layout_broke'                => __( 'The plugin <strong>broke my layout</strong> or some functionality.', 'checkout-wc' ),
+					'complicated_configuration'        => __( 'The plugin is <strong>too complicated to configure.</strong>', 'checkout-wc' ),
+					'other'                            => __( 'Other', 'checkout-wc' ),
 				),
 			),
 
 			array(
 				'id'          => 'reason_other',
-				'label'       => 'Let us know why you are deactivating CheckoutWC so we can improve the plugin',
+				'label'       => __( 'Let us know why you are deactivating CheckoutWC so we can improve the plugin', 'checkout-wc' ),
 				'type'        => 'textarea',
 				'name'        => 'reason_other',
 				'value'       => '',

@@ -10,7 +10,7 @@
  * Plugin Name:       CheckoutWC
  * Plugin URI:        https://www.checkoutwc.com
  * Description:       Beautiful, conversion optimized checkout templates for WooCommerce.
- * Version:           10.1.17
+ * Version:           10.2.0
  * Author:            Kestrel
  * Author URI:        https://kestrelwp.com/
  * License:           GPLv3 or later
@@ -21,8 +21,8 @@
  * Requires at least: 5.2
  * Tested up to: 6.8.2
  * WC tested up to: 10.0.2
- * Requires PHP: 7.3
- * Build: BwMIUwpQAgJXAVIMAVAEXABVAFcHAQIAUFRWWQVQXlAXAggeAkhVAg==
+ * Requires PHP: 7.4
+ * Build: BwMIUwpQAgJXAVIMAVAEXABVAFcHAQIAUFRWWQVQXlAXAggeAUhU
  */
 
 use Automattic\WooCommerce\Utilities\FeaturesUtil;
@@ -50,7 +50,7 @@ if ( defined( 'CFW_VERSION' ) ) {
 
 define( 'CFW_NAME', 'Checkout for WooCommerce' );
 define( 'CFW_UPDATE_URL', 'https://www.checkoutwc.com' );
-define( 'CFW_VERSION', '10.1.17' );
+define( 'CFW_VERSION', '10.2.0' );
 define( 'CFW_PATH', __DIR__ );
 define( 'CFW_URL', plugins_url( '/', __FILE__ ) );
 define( 'CFW_MAIN_FILE', __FILE__ );
@@ -126,7 +126,7 @@ add_filter(
 /*
  * Protect our gentle, out of date users from our fancy modern code
  */
-if ( version_compare( phpversion(), '7.3', '<' ) ) {
+if ( version_compare( phpversion(), '7.4', '<' ) ) {
 	add_action(
 		'admin_notices',
 		function () {
@@ -138,7 +138,7 @@ if ( version_compare( phpversion(), '7.3', '<' ) ) {
 					<?php
 					printf(
 						wp_kses(
-						/* translators: %s - checkoutwc.com URL for documentation with more details. */
+							/* translators: %s - checkoutwc.com URL for documentation with more details. */
 							__( '<strong>Note:</strong> CheckoutWC is disabled on your site until you fix the issue. <a href="%s" target="_blank" rel="noopener noreferrer">Need help? Click here.</a>', 'checkout-wc' ),
 							array(
 								'a'      => array(
@@ -178,7 +178,7 @@ if ( version_compare( $GLOBALS['wp_version'], '5.2', '<' ) ) {
 				<p>
 					<?php
 					printf(
-					/* translators: %s - WordPress version. */
+						/* translators: %s - WordPress version. */
 						esc_html__( 'CheckoutWC requires WordPress %s or later.', 'checkout-wc' ),
 						'5.2'
 					);
@@ -216,7 +216,7 @@ if (
 				<p>
 					<?php
 					printf(
-					/* translators: %s - WordPress version. */
+						/* translators: %s - WordPress version. */
 						esc_html__( 'CheckoutWC requires WooCommerce %s or later.', 'checkout-wc' ),
 						'5.6'
 					);

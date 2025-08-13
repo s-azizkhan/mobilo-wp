@@ -531,9 +531,9 @@ class SideCart extends FeaturesAbstract {
 		$contents = file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 
 		/**
-		 * If the custom SVG does not have any strokes, assume it's solid and apply our special class
+		 * If the custom SVG does not have any meaningful strokes, assume it's solid and apply our special class
 		 */
-		if ( ! empty( $custom_attachment_id ) && stripos( $contents, 'stroke-' ) === false ) {
+		if ( ! empty( $custom_attachment_id ) && ! self::has_meaningful_stroke( $contents ) ) {
 			$contents = str_replace( '<svg ', '<svg class="cfw-side-cart-icon-solid" ', $contents );
 		}
 
@@ -544,6 +544,15 @@ class SideCart extends FeaturesAbstract {
 		 * @param string $path The contents of the side cart icon file
 		 */
 		return apply_filters( 'cfw_side_cart_icon', $contents ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+	}
+
+	public static function has_meaningful_stroke( $svg_contents ): bool {
+		// Remove stroke-width:0 and stroke:none cases (these are solid icons)
+		$normalized = preg_replace( '/stroke-width\s*:\s*0(px|%|em|rem)?/i', '', $svg_contents );
+		$normalized = preg_replace( '/stroke\s*:\s*none/i', '', $normalized );
+
+		// Now check if any stroke-related properties remain
+		return stripos( $normalized, 'stroke' ) !== false;
 	}
 
 	public function add_side_cart_actions_data( $actions ) {

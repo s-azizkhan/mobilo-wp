@@ -29,8 +29,8 @@ class Appearance extends PageAbstract {
 		add_action( $this->settings_manager->prefix . '_settings_saved', array( $this, 'maybe_activate_theme' ) );
 
 		$this->set_tabbed_navigation( new TabNavigation( 'templates' ) );
-		$this->get_tabbed_navigation()->add_tab( 'Template', add_query_arg( array( 'subpage' => 'templates' ), $this->get_url() ), 'templates' );
-		$this->get_tabbed_navigation()->add_tab( 'Design', add_query_arg( array( 'subpage' => 'design' ), $this->get_url() ) );
+		$this->get_tabbed_navigation()->add_tab( __( 'Template', 'checkout-wc' ), add_query_arg( array( 'subpage' => 'templates' ), $this->get_url() ), 'templates' );
+		$this->get_tabbed_navigation()->add_tab( __( 'Design', 'checkout-wc' ), add_query_arg( array( 'subpage' => 'design' ), $this->get_url() ) );
 
 		parent::init();
 	}
@@ -120,7 +120,7 @@ class Appearance extends PageAbstract {
 
 							<div class="text-base" id="<?php echo esc_attr( $template->get_slug() ); ?>-name">
 								<strong>
-									<?php echo $active ? esc_html( __( 'Active: ' ) ) : ''; ?>
+									<?php echo $active ? esc_html( __( 'Active: ', 'checkout-wc' ) ) : ''; ?>
 								</strong>
 								<?php echo esc_html( $template->get_name() ); ?>
 								<a class="<?php echo $active || $locked ? 'invisible' : ''; ?> block text-sm text-blue-600"
@@ -130,7 +130,7 @@ class Appearance extends PageAbstract {
 							<?php if ( $locked ) : ?>
 								<div class="flex items-center">
 									<a href="https://www.checkoutwc.com/lite-upgrade/?utm_campaign=liteplugin&utm_medium=appearance-templates&utm_source=WordPress&utm_content=Upgrade+to+Premium+to+Unlock" target="_blank" class="button button-primary">
-										<?php echo esc_html( __( 'Upgrade to Premium to Unlock' ) ); ?>
+										<?php echo esc_html( __( 'Upgrade to Premium to Unlock', 'checkout-wc' ) ); ?>
 									</a>
 								</div>
 							<?php else : ?>
@@ -177,8 +177,8 @@ class Appearance extends PageAbstract {
 	}
 
 	public function get_font_settings(): array {
-		$font_settings['inter-cfw']         = 'Inter (default)';
-		$font_settings['System Font Stack'] = 'System Font Stack (fastest)';
+		$font_settings['inter-cfw']         = __( 'Inter (default)', 'checkout-wc' );
+		$font_settings['System Font Stack'] = __( 'System Font Stack (fastest)', 'checkout-wc' );
 		$cfw_google_fonts_list              = $this->get_fonts_list();
 
 		foreach ( $cfw_google_fonts_list as $font ) {
@@ -197,7 +197,7 @@ class Appearance extends PageAbstract {
 
 		// Body
 		$color_settings['body'] = array(
-			'title'    => 'Body',
+			'title'    => __( 'Body', 'checkout-wc' ),
 			'settings' => array(),
 		);
 
@@ -207,7 +207,7 @@ class Appearance extends PageAbstract {
 
 		// Header
 		$color_settings['header'] = array(
-			'title'    => 'Header',
+			'title'    => __( 'Header', 'checkout-wc' ),
 			'settings' => array(),
 		);
 
@@ -219,7 +219,7 @@ class Appearance extends PageAbstract {
 
 		// Footer
 		$color_settings['footer'] = array(
-			'title'    => 'Footer',
+			'title'    => __( 'Footer', 'checkout-wc' ),
 			'settings' => array(),
 		);
 
@@ -231,7 +231,7 @@ class Appearance extends PageAbstract {
 
 		// Cart Summary
 		$color_settings['cart_summary'] = array(
-			'title'    => 'Cart Summary',
+			'title'    => __( 'Cart Summary', 'checkout-wc' ),
 			'settings' => array(),
 		);
 
@@ -249,7 +249,7 @@ class Appearance extends PageAbstract {
 
 		// Breadcrumbs
 		$color_settings['breadcrumbs'] = array(
-			'title'    => 'Breadcrumbs',
+			'title'    => __( 'Breadcrumbs', 'checkout-wc' ),
 			'settings' => array(),
 		);
 
@@ -263,7 +263,7 @@ class Appearance extends PageAbstract {
 		}
 
 		$color_settings['buttons'] = array(
-			'title'    => 'Buttons',
+			'title'    => __( 'Buttons', 'checkout-wc' ),
 			'settings' => array(),
 		);
 
@@ -279,7 +279,7 @@ class Appearance extends PageAbstract {
 
 		// Theme Specific Colors
 		$color_settings['active_theme_colors'] = array(
-			'title'    => 'Theme Specific Colors',
+			'title'    => __( 'Theme Specific Colors', 'checkout-wc' ),
 			/**
 			 * Filters the active theme colors settings.
 			 *

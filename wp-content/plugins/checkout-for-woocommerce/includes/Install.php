@@ -98,6 +98,19 @@ class Install {
 		SettingsManager::instance()->add_setting( 'enable_side_cart_suggested_products', 'no' );
 		SettingsManager::instance()->add_setting( 'enable_side_cart_suggested_products_random_fallback', 'no' );
 		SettingsManager::instance()->add_setting( 'fetchify_access_token', '' );
+
+		// Turnstile settings
+		SettingsManager::instance()->add_setting( 'turnstile_enabled', 'no' );
+		SettingsManager::instance()->add_setting( 'turnstile_site_key', '' );
+		SettingsManager::instance()->add_setting( 'turnstile_secret_key', '' );
+		SettingsManager::instance()->add_setting( 'turnstile_checkout_enabled', 'yes' );
+		SettingsManager::instance()->add_setting( 'turnstile_order_pay_enabled', 'no' );
+		SettingsManager::instance()->add_setting( 'turnstile_login_enabled', 'no' );
+		SettingsManager::instance()->add_setting( 'turnstile_register_enabled', 'no' );
+		SettingsManager::instance()->add_setting( 'turnstile_position', 'before_place_order' );
+		SettingsManager::instance()->add_setting( 'turnstile_theme', 'light' );
+		SettingsManager::instance()->add_setting( 'turnstile_size', 'normal' );
+		SettingsManager::instance()->add_setting( 'turnstile_guest_only', 'no' );
 		SettingsManager::instance()->add_setting( 'pickup_option_label', '' );
 		SettingsManager::instance()->add_setting( 'pickup_ship_option_label', '' );
 		SettingsManager::instance()->add_setting( 'pickup_shipping_method_other_label', '' );

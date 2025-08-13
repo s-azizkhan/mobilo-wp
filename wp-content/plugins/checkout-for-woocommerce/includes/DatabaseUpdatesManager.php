@@ -73,6 +73,7 @@ class DatabaseUpdatesManager extends SingletonAbstract {
 			'10.0.0'  => array( $this, 'update_1000' ), // 10.0.0
 			'10.1.7'  => array( $this, 'update_1017' ),
 			'10.1.8'  => array( $this, 'update_1018' ),
+			'10.2.0'  => array( $this, 'update_1020' ),
 			// TODO: For future updates, bifurcate pro and lite versions
 		);
 	}
@@ -1116,5 +1117,18 @@ class DatabaseUpdatesManager extends SingletonAbstract {
 		 * @since 10.1.8
 		 */
 		do_action( 'cfw_updated_to_1018' );
+	}
+
+	public function update_1020() {
+		// Add default values for new Turnstile settings
+		Install::add_settings();
+
+		/**
+		 * Action hook fired after the 10.2.0 database update routine runs.
+		 * Used to trigger actions when Turnstile feature is added.
+		 *
+		 * @since 10.2.0
+		 */
+		do_action( 'cfw_updated_to_1020' );
 	}
 }

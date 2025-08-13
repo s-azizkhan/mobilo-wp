@@ -45,7 +45,8 @@ class Jupiter extends CompatibilityAbstract {
 						unset( $wp_filter[ $hook ][ $priority ][ $key ] );
 					}
 				} catch ( \Exception $e ) {
-					wc_get_logger()->error( 'CheckoutWC: Failed to unset Jupiter theme callbacks.', array( 'source' => 'checkout-wc' ) );
+					/* translators: Error message logged when Jupiter theme callback removal fails */
+					wc_get_logger()->error( __( 'CheckoutWC: Failed to unset Jupiter theme callbacks.', 'checkout-wc' ), array( 'source' => 'checkout-wc' ) );
 				}
 			}
 		}

@@ -24,7 +24,7 @@ class PageController {
 	}
 
 	public function custom_css() {
-		$custom_css  = 'ul.wp-submenu span.cfw-premium-badge::after, #wpadminbar span.cfw-premium-badge::after { content:"' . __( 'Premium', 'checkout-wc' ) . '"}';
+		$custom_css  = 'ul.wp-submenu span.cfw-premium-badge::after, #wpadminbar span.cfw-premium-badge::after { content:"' . esc_html__( 'Premium', 'checkout-wc' ) . '"}';
 		$custom_css .= 'li a[href*="lite-upgrade"] { background-color: #00a32a !important; color: #fff !important; font-weight: 600 !important;}';
 
 		echo "<style>$custom_css</style>"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped

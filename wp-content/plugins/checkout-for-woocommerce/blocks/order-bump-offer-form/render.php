@@ -14,5 +14,6 @@ if ( ! is_wp_error( $output ) ) {
 	echo $output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	echo '</div>';
 } else {
-	echo 'Could not load offer form.';
+	/* translators: Error message shown when order bump offer form fails to load */
+	echo esc_html__( 'Could not load offer form.', 'checkout-wc' );
 }

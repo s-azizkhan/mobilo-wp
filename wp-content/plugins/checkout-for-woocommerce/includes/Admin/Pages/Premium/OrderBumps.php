@@ -35,9 +35,9 @@ class OrderBumps extends PageAbstract {
 
 		$this->set_tabbed_navigation( new TabNavigation( 'settings' ) );
 
-		$this->get_tabbed_navigation()->add_tab( 'Settings', add_query_arg( array( 'subpage' => 'settings' ), $this->get_url() ) );
+		$this->get_tabbed_navigation()->add_tab( __( 'Settings', 'checkout-wc' ), add_query_arg( array( 'subpage' => 'settings' ), $this->get_url() ) );
 		$this->get_tabbed_navigation()->add_tab(
-			'Manage Bumps',
+			__( 'Manage Bumps', 'checkout-wc' ),
 			add_query_arg(
 				array(
 					'post_type' => $this->post_type_slug,
@@ -78,11 +78,11 @@ class OrderBumps extends PageAbstract {
 			function ( $columns ) {
 				$date = array_pop( $columns );
 
-				$columns['order_bump_id']   = 'ID';
-				$columns['conversion_rate'] = 'Conversion Rate' . wc_help_tip( 'Conversion Rate tracks how often a bump is added to an actual completed purchase. If 20 orders are placed and a bump was displayed on 10 of those orders and the bump was purchased 5 times, the conversion rate is 50%.' );
-				$columns['revenue']         = 'Revenue' . wc_help_tip( 'The additional revenue that an Order Bump has captured. When configured as an upsell, it calculates the relative value between the offer product and the product being replaced. Revenues incurred before version 6.1.4 are estimated.' );
-				$columns['location']        = 'Location';
-				$columns['offer_product']   = 'Offer Product';
+				$columns['order_bump_id']   = __( 'ID', 'checkout-wc' );
+				$columns['conversion_rate'] = __( 'Conversion Rate', 'checkout-wc' ) . wc_help_tip( __( 'Conversion Rate tracks how often a bump is added to an actual completed purchase. If 20 orders are placed and a bump was displayed on 10 of those orders and the bump was purchased 5 times, the conversion rate is 50%.', 'checkout-wc' ) );
+				$columns['revenue']         = __( 'Revenue', 'checkout-wc' ) . wc_help_tip( __( 'The additional revenue that an Order Bump has captured. When configured as an upsell, it calculates the relative value between the offer product and the product being replaced. Revenues incurred before version 6.1.4 are estimated.', 'checkout-wc' ) );
+				$columns['location']        = __( 'Location', 'checkout-wc' );
+				$columns['offer_product']   = __( 'Offer Product', 'checkout-wc' );
 				$columns['date']            = $date;
 
 				return $columns;
@@ -554,7 +554,7 @@ class OrderBumps extends PageAbstract {
 					<?php _e( 'Upgrade Your Plan', 'checkout-wc' ); ?>
 				</h3>
 
-				<?php echo esc_html( sprintf( __( 'Your CheckoutWC plan allows you to create %d Order Bumps. You have used %d.', 'checkout-wc' ), self::get_allowed_bump_count(), self::get_bumps_count() ) ); ?>
+				<?php echo esc_html( sprintf( /* translators: %1$d: Allowed bump count, %2$d: Used bump count */ __( 'Your CheckoutWC plan allows you to create %1$d Order Bumps. You have used %2$d.', 'checkout-wc' ), self::get_allowed_bump_count(), self::get_bumps_count() ) ); ?>
 
 				<p class="text-base italic mt-2 mb-2">
 					<?php _e( 'You cannot create or publish new Order Bumps if you are over the limit.', 'checkout-wc' ); ?>

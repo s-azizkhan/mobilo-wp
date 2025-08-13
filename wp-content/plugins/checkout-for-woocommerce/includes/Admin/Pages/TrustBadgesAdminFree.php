@@ -21,8 +21,8 @@ class TrustBadgesAdminFree extends PageAbstract {
 				<div class="md:grid md:grid-cols-3 md:gap-6">
 					<div class="md:col-span-1">
 						<div class="px-4 sm:px-0">
-							<h3 class="text-lg font-medium leading-6 text-gray-900">Trust Badge Options</h3>
-							<p class="mt-1 text-sm text-gray-600">Configure general Trust Badge options.</p>
+							<h3 class="text-lg font-medium leading-6 text-gray-900"><?php esc_html_e( 'Trust Badge Options', 'checkout-wc' ); ?></h3>
+							<p class="mt-1 text-sm text-gray-600"><?php esc_html_e( 'Configure general Trust Badge options.', 'checkout-wc' ); ?></p>
 						</div>
 					</div>
 					<div class="mt-5 md:mt-0 md:col-span-2" id="trust-badge-options_content">
@@ -35,21 +35,21 @@ class TrustBadgesAdminFree extends PageAbstract {
 										<span aria-hidden="true" class="translate-x-[1.75rem] pointer-events-none inline-block h-6 w-6 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
 									</button>
 									<span class="flex flex-grow flex-col">
-										<span class="text-sm font-medium leading-6 text-gray-900" id="headlessui-label-:r1:">Enable Trust Badges</span>
-										<span class="text-sm text-gray-500" id="headlessui-description-:r2:">Enable trust badges on CheckoutWC templates. Uncheck to hide badges.</span>
+										<span class="text-sm font-medium leading-6 text-gray-900" id="headlessui-label-:r1:"><?php esc_html_e( 'Enable Trust Badges', 'checkout-wc' ); ?></span>
+										<span class="text-sm text-gray-500" id="headlessui-description-:r2:"><?php esc_html_e( 'Enable trust badges on CheckoutWC templates. Uncheck to hide badges.', 'checkout-wc' ); ?></span>
 									</span>
 								</div>
 								<div class="cfw-admin-field-container cfw-admin-field-radio-group ">
-									<legend class="text-base font-medium text-gray-900">Trust Badge Output Location</legend>
-									<p class="text-sm leading-5 text-gray-500">Where to display the trust badges on the checkout page.</p>
+									<legend class="text-base font-medium text-gray-900"><?php esc_html_e( 'Trust Badge Output Location', 'checkout-wc' ); ?></legend>
+									<p class="text-sm leading-5 text-gray-500"><?php esc_html_e( 'Where to display the trust badges on the checkout page.', 'checkout-wc' ); ?></p>
 									<div class="space-y-5 mt-4">
 										<div class="relative flex items-start">
 											<div class="flex items-center h-5">
 												<input name="trust_badge_position" type="radio" id="trust_badge_position_below_cart_summary" class="focus:ring-blue-800 h-4 w-4 text-blue-500 border-gray-300" value="below_cart_summary" checked="">
 											</div>
 											<div class="ml-3 text-sm">
-												<label for="trust_badge_position_below_cart_summary" class="font-medium text-gray-700" style="vertical-align: unset;">Below the checkout cart summary</label>
-												<p id="small-description" class="text-gray-500">Output in a single column below the checkout cart summary totals</p>
+												<label for="trust_badge_position_below_cart_summary" class="font-medium text-gray-700" style="vertical-align: unset;"><?php esc_html_e( 'Below the checkout cart summary', 'checkout-wc' ); ?></label>
+												<p id="small-description" class="text-gray-500"><?php esc_html_e( 'Output in a single column below the checkout cart summary totals', 'checkout-wc' ); ?></p>
 											</div>
 										</div>
 										<div class="relative flex items-start">
@@ -57,8 +57,8 @@ class TrustBadgesAdminFree extends PageAbstract {
 												<input name="trust_badge_position" type="radio" id="trust_badge_position_below_checkout_form" class="focus:ring-blue-800 h-4 w-4 text-blue-500 border-gray-300" value="below_checkout_form">
 											</div>
 											<div class="ml-3 text-sm">
-												<label for="trust_badge_position_below_checkout_form" class="font-medium text-gray-700" style="vertical-align: unset;">After the checkout form</label>
-												<p id="small-description" class="text-gray-500">Output in a single row below the checkout form above the footer</p>
+												<label for="trust_badge_position_below_checkout_form" class="font-medium text-gray-700" style="vertical-align: unset;"><?php esc_html_e( 'After the checkout form', 'checkout-wc' ); ?></label>
+												<p id="small-description" class="text-gray-500"><?php esc_html_e( 'Output in a single row below the checkout form above the footer', 'checkout-wc' ); ?></p>
 											</div>
 										</div>
 										<div class="relative flex items-start">
@@ -66,16 +66,16 @@ class TrustBadgesAdminFree extends PageAbstract {
 												<input name="trust_badge_position" type="radio" id="trust_badge_position_in_footer" class="focus:ring-blue-800 h-4 w-4 text-blue-500 border-gray-300" value="in_footer">
 											</div>
 											<div class="ml-3 text-sm">
-												<label for="trust_badge_position_in_footer" class="font-medium text-gray-700" style="vertical-align: unset;">Top of the footer</label>
-												<p id="small-description" class="text-gray-500">Output in a single row inside the footer</p>
+												<label for="trust_badge_position_in_footer" class="font-medium text-gray-700" style="vertical-align: unset;"><?php esc_html_e( 'Top of the footer', 'checkout-wc' ); ?></label>
+												<p id="small-description" class="text-gray-500"><?php esc_html_e( 'Output in a single row inside the footer', 'checkout-wc' ); ?></p>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="cfw-admin-field-container ">
-									<label for="trust_badges_title" class="block text-sm font-medium text-gray-700">Heading</label>
-									<input name="trust_badges_title" type="text" id="trust_badges_title" placeholder="Example: Why choose us?" class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border border-gray-300 rounded-md" value="We've Got You Covered!">
-									<p class="mt-2 text-sm text-gray-500">Example: Why choose us?</p>
+									<label for="trust_badges_title" class="block text-sm font-medium text-gray-700"><?php esc_html_e( 'Heading', 'checkout-wc' ); ?></label>
+									<input name="trust_badges_title" type="text" id="trust_badges_title" placeholder="<?php esc_attr_e( 'Example: Why choose us?', 'checkout-wc' ); ?>" class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border border-gray-300 rounded-md" value="<?php esc_attr_e( "We've Got You Covered!", 'checkout-wc' ); ?>">
+									<p class="mt-2 text-sm text-gray-500"><?php esc_html_e( 'Example: Why choose us?', 'checkout-wc' ); ?></p>
 								</div>
 							</div>
 						</div>
@@ -86,8 +86,8 @@ class TrustBadgesAdminFree extends PageAbstract {
 				<div class="md:grid md:grid-cols-3 md:gap-6">
 					<div class="md:col-span-1">
 						<div class="px-4 sm:px-0">
-							<h3 class="text-lg font-medium leading-6 text-gray-900">Trust Badges</h3>
-							<p class="mt-1 text-sm text-gray-600">Create trust badges to display on your checkout page.</p>
+							<h3 class="text-lg font-medium leading-6 text-gray-900"><?php esc_html_e( 'Trust Badges', 'checkout-wc' ); ?></h3>
+							<p class="mt-1 text-sm text-gray-600"><?php esc_html_e( 'Create trust badges to display on your checkout page.', 'checkout-wc' ); ?></p>
 						</div>
 					</div>
 					<div class="mt-5 md:mt-0 md:col-span-2" id="trust-badges_content">
@@ -109,57 +109,57 @@ class TrustBadgesAdminFree extends PageAbstract {
 															</div>
 															<div class="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-6 max-w-md">
 																<div class="col-span-full flex space-x-4 items-center group">
-																	<label class="grow block text-sm font-medium leading-6 text-gray-900">Title <input type="text" placeholder="Title" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value="30 Day Money Back Guarantee!">
+																	<label class="grow block text-sm font-medium leading-6 text-gray-900"><?php esc_html_e( 'Title', 'checkout-wc' ); ?> <input type="text" placeholder="<?php esc_attr_e( 'Title', 'checkout-wc' ); ?>" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value="<?php esc_attr_e( '30 Day Money Back Guarantee!', 'checkout-wc' ); ?>">
 																	</label>
-																	<label class="grow block text-sm font-medium leading-6 text-gray-900" style="display: none;">Subtitle <input type="text" placeholder="Subtitle" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value="">
+																	<label class="grow block text-sm font-medium leading-6 text-gray-900" style="display: none;"><?php esc_html_e( 'Subtitle', 'checkout-wc' ); ?> <input type="text" placeholder="<?php esc_attr_e( 'Subtitle', 'checkout-wc' ); ?>" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value="">
 																	</label>
 																</div>
 																<div class="col-span-full flex space-x-4 items-start group">
 																	<div class="grow">
-																		<label class="block text-sm font-medium leading-6 text-gray-900">Template <select class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-																				<option value="guarantee">Guarantee</option>
-																				<option value="review">Review</option>
+																		<label class="block text-sm font-medium leading-6 text-gray-900"><?php esc_html_e( 'Template', 'checkout-wc' ); ?> <select class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+																				<option value="guarantee"><?php esc_html_e( 'Guarantee', 'checkout-wc' ); ?></option>
+																				<option value="review"><?php esc_html_e( 'Review', 'checkout-wc' ); ?></option>
 																			</select>
 																		</label>
 																	</div>
 																	<div class="grow">
-																		<label class="block text-sm font-medium leading-6 text-gray-900">Image <div class="block">
-																				<button type="button" class="mt-2 inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Choose Image</button>
+																		<label class="block text-sm font-medium leading-6 text-gray-900"><?php esc_html_e( 'Image', 'checkout-wc' ); ?> <div class="block">
+																				<button type="button" class="mt-2 inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><?php esc_html_e( 'Choose Image', 'checkout-wc' ); ?></button>
 																			</div>
 																		</label>
-																		<a href="#" class="block font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline mt-1">Clear image</a>
+																		<a href="#" class="block font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline mt-1"><?php esc_html_e( 'Clear image', 'checkout-wc' ); ?></a>
 																	</div>
 																</div>
 																<div class="col-span-full">
-																	<label class="block text-sm font-medium leading-6 text-gray-900">Description</label>
+																	<label class="block text-sm font-medium leading-6 text-gray-900"><?php esc_html_e( 'Description', 'checkout-wc' ); ?></label>
 																	<div>
-																		<textarea class="block min-w-[414px] min-h-[100px] rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">Every product we sell comes with a 30-day money-back guarantee. Have a problem? Let us know and we'll make it right!</textarea>
+																		<textarea class="block min-w-[414px] min-h-[100px] rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"><?php esc_html_e( "Every product we sell comes with a 30-day money-back guarantee. Have a problem? Let us know and we'll make it right!", 'checkout-wc' ); ?></textarea>
 																		<div class="space-y-4 sm:flex sm:items-center sm:space-x-10 sm:space-y-0 mt-2">
 																			<div class="flex items-center">
 																				<input id="WYSIWYG" name="editor-mode-tb-0" type="radio" class="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-600">
-																				<label for="WYSIWYG" class="ml-3 block text-sm font-medium leading-6 text-gray-900">WYSIWYG</label>
+																				<label for="WYSIWYG" class="ml-3 block text-sm font-medium leading-6 text-gray-900"><?php esc_html_e( 'WYSIWYG', 'checkout-wc' ); ?></label>
 																			</div>
 																			<div class="flex items-center">
 																				<input id="HTML" name="editor-mode-tb-0" type="radio" class="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-600" checked="">
-																				<label for="HTML" class="ml-3 block text-sm font-medium leading-6 text-gray-900">HTML</label>
+																				<label for="HTML" class="ml-3 block text-sm font-medium leading-6 text-gray-900"><?php esc_html_e( 'HTML', 'checkout-wc' ); ?></label>
 																			</div>
 																		</div>
 																	</div>
 																</div>
 																<div class="col-span-full">
-																	<label class="block text-sm font-medium leading-6 text-gray-900">Display Conditions</label>
-																	<button type="button" class="rounded-md bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Manage Display Conditions</button>
+																	<label class="block text-sm font-medium leading-6 text-gray-900"><?php esc_html_e( 'Display Conditions', 'checkout-wc' ); ?></label>
+																	<button type="button" class="rounded-md bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"><?php esc_html_e( 'Manage Display Conditions', 'checkout-wc' ); ?></button>
 																</div>
 															</div>
 															<div class="grow h-full flex justify-center items-center">
 																<div class="max-w-xl w-full shadow rounded-lg p-4">
 																	<div class="flex items-center grow mb-6 max-w-lg">
 																		<div class="mr-4 flex-shrink-0">
-																			<img src="<?php echo trailingslashit( CFW_PATH_URL_BASE ); ?>/build/images/30day.png" class="w-full max-w-28 h-auto" alt="30 Day Money Back Guarantee!">
+																			<img src="<?php echo trailingslashit( CFW_PATH_URL_BASE ); ?>/build/images/30day.png" class="w-full max-w-28 h-auto" alt="<?php esc_attr_e( '30 Day Money Back Guarantee!', 'checkout-wc' ); ?>">
 																		</div>
 																		<div>
-																			<h3 class="text-base font-semibold mb-2 text-left text-[--cfw-tb-guarantee-title]">30 Day Money Back Guarantee!</h3>
-																			<p class="text-sm text-left text-[--cfw-tb-guarantee-content]">Every product we sell comes with a 30-day money-back guarantee. Have a problem? Let us know and we'll make it right!</p>
+																			<h3 class="text-base font-semibold mb-2 text-left text-[--cfw-tb-guarantee-title]"><?php esc_html_e( '30 Day Money Back Guarantee!', 'checkout-wc' ); ?></h3>
+																			<p class="text-sm text-left text-[--cfw-tb-guarantee-content]"><?php esc_html_e( "Every product we sell comes with a 30-day money-back guarantee. Have a problem? Let us know and we'll make it right!", 'checkout-wc' ); ?></p>
 																		</div>
 																	</div>
 																</div>
@@ -180,7 +180,7 @@ class TrustBadgesAdminFree extends PageAbstract {
 											</div>
 										</div>
 										<div class="flex justify-center items-center">
-											<button type="button" class="mt-2 inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Add Trust Badge</button>
+											<button type="button" class="mt-2 inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><?php esc_html_e( 'Add Trust Badge', 'checkout-wc' ); ?></button>
 										</div>
 									</div>
 								</div>

@@ -4,6 +4,8 @@ namespace CheckoutWC\Sabberworm\CSS\Property;
 
 use CheckoutWC\Sabberworm\CSS\Comment\Comment;
 use CheckoutWC\Sabberworm\CSS\OutputFormat;
+use CheckoutWC\Sabberworm\CSS\Position\Position;
+use CheckoutWC\Sabberworm\CSS\Position\Positionable;
 use CheckoutWC\Sabberworm\CSS\Value\CSSString;
 
 /**
@@ -14,8 +16,10 @@ use CheckoutWC\Sabberworm\CSS\Value\CSSString;
  * - May only appear at the very top of a Document’s contents.
  * - Must not appear more than once.
  */
-class Charset implements AtRule
+class Charset implements AtRule, Positionable
 {
+    use Position;
+
     /**
      * @var CSSString
      */
@@ -42,16 +46,8 @@ class Charset implements AtRule
     public function __construct(CSSString $oCharset, $iLineNo = 0)
     {
         $this->oCharset = $oCharset;
-        $this->iLineNo = $iLineNo;
+        $this->setPosition($iLineNo);
         $this->aComments = [];
-    }
-
-    /**
-     * @return int
-     */
-    public function getLineNo()
-    {
-        return $this->iLineNo;
     }
 
     /**

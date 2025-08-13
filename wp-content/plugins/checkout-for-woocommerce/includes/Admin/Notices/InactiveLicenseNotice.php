@@ -7,7 +7,8 @@ use Objectiv\Plugins\Checkout\Managers\UpdatesManager;
 class InactiveLicenseNotice extends NoticeAbstract {
 	public function add( string $url ) {
 		$message = sprintf(
-			__( 'Your license key is not active for this site. Please visit <a href="%s">%s</a> to activate your license and restore functionality.', 'checkout-wc' ),
+			/* translators: %1$s: URL to activation page, %2$s: "Start Here" link text */
+			__( 'Your license key is not active for this site. Please visit <a href="%1$s">%2$s</a> to activate your license and restore functionality.', 'checkout-wc' ),
 			$url,
 			__( 'Start Here', 'checkout-wc' )
 		);

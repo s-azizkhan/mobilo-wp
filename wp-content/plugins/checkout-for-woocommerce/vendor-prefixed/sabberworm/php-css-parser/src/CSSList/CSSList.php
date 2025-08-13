@@ -4,11 +4,14 @@ namespace CheckoutWC\Sabberworm\CSS\CSSList;
 
 use CheckoutWC\Sabberworm\CSS\Comment\Comment;
 use CheckoutWC\Sabberworm\CSS\Comment\Commentable;
+use CheckoutWC\Sabberworm\CSS\CSSElement;
 use CheckoutWC\Sabberworm\CSS\OutputFormat;
 use CheckoutWC\Sabberworm\CSS\Parsing\ParserState;
 use CheckoutWC\Sabberworm\CSS\Parsing\SourceException;
 use CheckoutWC\Sabberworm\CSS\Parsing\UnexpectedEOFException;
 use CheckoutWC\Sabberworm\CSS\Parsing\UnexpectedTokenException;
+use CheckoutWC\Sabberworm\CSS\Position\Position;
+use CheckoutWC\Sabberworm\CSS\Position\Positionable;
 use CheckoutWC\Sabberworm\CSS\Property\AtRule;
 use CheckoutWC\Sabberworm\CSS\Property\Charset;
 use CheckoutWC\Sabberworm\CSS\Property\CSSNamespace;
@@ -29,8 +32,10 @@ use CheckoutWC\Sabberworm\CSS\Value\Value;
  *
  * It can also contain `Import` and `Charset` objects stemming from at-rules.
  */
-abstract class CSSList implements Renderable, Commentable
+abstract class CSSList implements Commentable, CSSElement, Positionable
 {
+    use Position;
+
     /**
      * @var array<array-key, Comment>
      *
@@ -46,20 +51,13 @@ abstract class CSSList implements Renderable, Commentable
     protected $aContents;
 
     /**
-     * @var int
-     *
-     * @internal since 8.8.0
-     */
-    protected $iLineNo;
-
-    /**
      * @param int $iLineNo
      */
     public function __construct($iLineNo = 0)
     {
         $this->aComments = [];
         $this->aContents = [];
-        $this->iLineNo = $iLineNo;
+        $this->setPosition($iLineNo);
     }
 
     /**
@@ -256,14 +254,6 @@ abstract class CSSList implements Renderable, Commentable
     {
         return (strcasecmp($sIdentifier, $sMatch) === 0)
             ?: preg_match("/^(-\\w+-)?$sMatch$/i", $sIdentifier) === 1;
-    }
-
-    /**
-     * @return int
-     */
-    public function getLineNo()
-    {
-        return $this->iLineNo;
     }
 
     /**

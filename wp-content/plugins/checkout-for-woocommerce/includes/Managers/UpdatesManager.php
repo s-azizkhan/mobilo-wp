@@ -401,19 +401,19 @@ class UpdatesManager extends SingletonAbstract {
 		?>
 		<div class="cfw-admin-field-container" id="cfw-admin-license-info">
 			<label for="<?php echo esc_attr( $this->get_field_name( 'license_key' ) ); ?>" class="block text-sm font-medium text-gray-700 mb-2">
-				<?php _e( 'CheckoutWC License Key', 'checkout-wc' ); ?>
+				<?php esc_html_e( 'CheckoutWC License Key', 'checkout-wc' ); ?>
 			</label>
 			<?php if ( ! defined( 'CFW_LICENSE_KEY' ) ) : ?>
 				<input type="password" autocomplete="off" name="<?php echo esc_attr( $this->get_field_name( 'license_key' ) ); ?>" value="<?php echo esc_attr( $this->get_field_value( 'license_key' ) ); ?>" id="cfw_license_key" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md" />
 			<?php else : ?>
-				<?php _e( 'Your license key is set with the constant <code>CFW_LICENSE_KEY</code>.', 'checkout-wc' ); ?>
+				<?php esc_html_e( 'Your license key is set with the constant <code>CFW_LICENSE_KEY</code>.', 'checkout-wc' ); ?>
 			<?php endif; ?>
 
 			<div class="mt-2 max-w-xl">
 				<dl>
 					<div class="py-2 grid grid-cols-3">
 						<dt class="text-sm font-medium leading-6 text-gray-900">
-							License Holder
+							<?php esc_html_e( 'License Holder', 'checkout-wc' ); ?>
 						</dt>
 						<dd class="text-sm leading-6 text-gray-700 col-span-2">
 							<?php
@@ -425,7 +425,7 @@ class UpdatesManager extends SingletonAbstract {
 					</div>
 					<div class="py-2 grid grid-cols-3">
 						<dt class="text-sm font-medium leading-6 text-gray-900">
-							Plan
+							<?php esc_html_e( 'Plan', 'checkout-wc' ); ?>
 						</dt>
 						<dd class="text-sm leading-6 text-gray-700 col-span-2">
 							<?php echo wp_kses_post( $this->get_plan_name() ); ?>
@@ -433,7 +433,7 @@ class UpdatesManager extends SingletonAbstract {
 					</div>
 					<div class="py-2 grid grid-cols-3">
 						<dt class="text-sm font-medium leading-6 text-gray-900">
-							Activation Limit
+							<?php esc_html_e( 'Activation Limit', 'checkout-wc' ); ?>
 						</dt>
 						<dd class="text-sm leading-6 text-gray-700 col-span-2">
 							<?php echo wp_kses_post( get_option( 'cfw_license_activation_limit', 0 ) ); ?>
@@ -441,13 +441,15 @@ class UpdatesManager extends SingletonAbstract {
 					</div>
 					<div class="py-2 grid grid-cols-3">
 						<dt class="text-sm font-medium leading-6 text-gray-900">
-							Status
+							<?php esc_html_e( 'Status', 'checkout-wc' ); ?>
 						</dt>
 						<dd class="text-sm leading-6 text-gray-700 col-span-2">
 							<?php self::instance()->admin_page_activation_status_button(); ?>
 
 							<?php if ( $license_data ) : ?>
-								<a href="javascript:" class="mt-2 block text-sm text-blue-600" id="cfw-admin-refresh-license">Refresh License Info</a>
+								<a href="javascript:" class="mt-2 block text-sm text-blue-600" id="cfw-admin-refresh-license">
+									<?php esc_html_e( 'Refresh License Info', 'checkout-wc' ); ?>
+								</a>
 							<?php endif; ?>
 						</dd>
 					</div>
@@ -489,7 +491,7 @@ class UpdatesManager extends SingletonAbstract {
 		<div id="cfw-activation-control" class="cfw-admin-field-container">
 			<?php if ( empty( $license ) ) : ?>
 				<p class="text-sm leading-6 text-gray-700 col-span-2">
-					<?php _e( 'Please enter your license key.', 'checkout-wc' ); ?>
+					<?php esc_html_e( 'Please enter your license key.', 'checkout-wc' ); ?>
 				</p>
 			<?php elseif ( 'inactive' === $key_status || 'site_inactive' === $key_status ) : ?>
 				<input type="submit" name="activate_key" class="button-secondary" value="Activate Site" />
@@ -636,7 +638,8 @@ class UpdatesManager extends SingletonAbstract {
 			return $license_data->license;
 		}
 
-		wc_get_logger()->error( 'License Check Error: You should not be able to get here. I am kind of freaked out.', array( 'source' => 'checkout-wc' ) );
+		/* translators: Debug error message logged when license check reaches unexpected state */
+		wc_get_logger()->error( __( 'License Check Error: You should not be able to get here. I am kind of freaked out.', 'checkout-wc' ), array( 'source' => 'checkout-wc' ) );
 		wc_get_logger()->error( wc_print_r( $license_data, true ), array( 'source' => 'checkout-wc' ) );
 
 		return false;

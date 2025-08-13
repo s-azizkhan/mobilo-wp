@@ -454,10 +454,22 @@ class OrderBumps extends FeaturesAbstract {
 	 * @throws Exception If the cart prices cannot be synced.
 	 */
 	public function sync_bump_cart_prices( WC_Cart $cart ) {
-		foreach ( $cart->get_cart_contents() as $cart_item ) {
+		foreach ( $cart->get_cart_contents() as $cart_item_key => $cart_item ) {
 			$bump = BumpFactory::get( $cart_item['_cfw_order_bump_id'] ?? 0 );
 
 			if ( ! $bump->is_cart_bump_valid() ) {
+				continue;
+			}
+
+			/**
+			 * Filter to determine if cart item pricing should be skipped
+			 *
+			 * @param bool  $skip Whether to skip this cart item
+			 * @param array $cart_item The cart item data
+			 *
+			 * @since 10.2.0
+			 */
+			if ( apply_filters( 'cfw_skip_bump_cart_item_pricing', false, $cart_item ) ) {
 				continue;
 			}
 
@@ -511,6 +523,18 @@ class OrderBumps extends FeaturesAbstract {
 	 * @return string
 	 */
 	public function show_bump_discount_on_cart_item( string $price_html, array $cart_item ): string {
+		/**
+		 * Filter to determine if cart item discount HTML should be skipped
+		 *
+		 * @param bool  $skip Whether to skip this cart item discount HTML
+		 * @param array $cart_item The cart item data
+		 *
+		 * @since 10.2.0
+		 */
+		if ( apply_filters( 'cfw_skip_bump_cart_item_discount_html', false, $cart_item ) ) {
+			return $price_html;
+		}
+
 		$bump = BumpFactory::get( $cart_item['_cfw_order_bump_id'] ?? 0 );
 
 		return $bump->get_cfw_cart_item_discount( $price_html, $cart_item );
@@ -541,7 +565,11 @@ class OrderBumps extends FeaturesAbstract {
 			);
 
 			foreach ( $all_bumps as $bump ) {
-				$bump_filters[ $bump->get_id() ] = sprintf( __( 'Has Bump: %s' ), $bump->get_title() );
+				$bump_filters[ $bump->get_id() ] = sprintf(
+					/* translators: %s: Order bump title */
+					__( 'Has Bump: %s', 'checkout-wc' ),
+					$bump->get_title()
+				);
 			}
 
 			foreach ( $bump_filters as $bump_key => $bump_filter_description ) {

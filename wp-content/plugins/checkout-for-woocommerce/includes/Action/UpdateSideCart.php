@@ -2,6 +2,7 @@
 
 namespace Objectiv\Plugins\Checkout\Action;
 
+use Exception;
 use Objectiv\Plugins\Checkout\Features\OrderBumps;
 use Objectiv\Plugins\Checkout\Managers\AssetManager;
 use Objectiv\Plugins\Checkout\Managers\SettingsManager;
@@ -20,6 +21,9 @@ class UpdateSideCart extends CFWAction {
 		$this->order_bumps_controller = $order_bumps_controller;
 	}
 
+	/**
+	 * @throws Exception Exception getting data.
+	 */
 	public function action() {
 		parse_str( wp_unslash( $_POST['cart_data'] ?? '' ), $cart_data ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Missing
 

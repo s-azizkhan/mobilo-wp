@@ -466,9 +466,6 @@ class AssetManager {
 		);
 		$store_policies = array_values( $store_policies );
 
-		// Only the values to avoid JS objects when arrays are expected
-		$trust_badges = PlanManager::can_access_feature( 'enable_trust_badges' ) ? array_values( cfw_get_trust_badges() ) : array();
-
 		/** This filter is documented in includes/AddressFieldsAugmenter.php */
 		$enable_separate_address_1_fields = apply_filters( 'cfw_enable_separate_address_1_fields', 'yes' === SettingsManager::instance()->get_setting( 'enable_discreet_address_1_fields' ) );  // phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingSinceComment
 		$enable_separate_address_1_fields = apply_filters_deprecated( 'cfw_enable_discrete_address_1_fields', array( $enable_separate_address_1_fields ), '10.0.0', 'cfw_enable_separate_address_1_fields' );
@@ -597,7 +594,6 @@ class AssetManager {
 					 * @since 7.0.17
 					 */
 					'use_fullname_field'                => apply_filters( 'cfw_enable_fullname_field', 'yes' === SettingsManager::instance()->get_setting( 'use_fullname_field' ) ),
-					'trust_badges'                      => $trust_badges,
 					'trust_badges_display'              => SettingsManager::instance()->get_setting( 'trust_badge_position' ),
 					'enable_one_page_checkout'          => SettingsManager::instance()->get_setting( 'enable_one_page_checkout' ) === 'yes',
 					/**
@@ -696,6 +692,7 @@ class AssetManager {
 					'cvv_tooltip_message'               => __( '3-digit security code usually found on the back of your card. American Express cards have a 4-digit code located on the front.', 'checkout-wc' ),
 					'delete_confirm_message'            => __( 'Are you sure you want to remove this item from your cart?', 'checkout-wc' ),
 					'account_already_registered_notice' => cfw_apply_filters( 'woocommerce_registration_error_email_exists', __( 'An account is already registered with your email address. <a href="#" class="showlogin">Please log in.</a>', 'woocommerce' ), '' ),
+					/* translators: %s: Field name */
 					'generic_field_validation_error_message' => __( '%s is a required field.', 'woocommerce' ),
 					'update_checkout_error'             => __( 'There was a problem checking out. Please try again. If the problem persists, please get in touch with us so we can assist.', 'woocommerce' ),
 					'invalid_postcode'                  => __( 'Please enter a valid postcode / ZIP.', 'checkout-wc' ),
@@ -870,6 +867,8 @@ class AssetManager {
 		 */
 		do_action( 'cfw_before_get_data' );
 
+		cfw_do_action( 'woocommerce_check_cart_items' );
+
 		$data = array(
 			'cart'   => array(
 				'isEmpty'       => WC()->cart && WC()->cart->is_empty(),
@@ -886,8 +885,9 @@ class AssetManager {
 				'notices'       => cfw_get_function_output( 'cfw_wc_print_notices', apply_filters( 'cfw_get_data_clear_notices', ! is_checkout() ) ),
 				'shipping'      => cfw_get_cart_shipping_data(),
 			),
-			'bumps'  => array(), // placeholder to prevent errors
-			'review' => cfw_get_review_data(),
+			'bumps'        => array(), // placeholder to prevent errors
+			'trust_badges' => PlanManager::can_access_feature( 'enable_trust_badges' ) ? array_values( cfw_get_trust_badges() ) : array(),
+			'review'       => cfw_get_review_data(),
 		);
 
 		/**
@@ -946,8 +946,9 @@ class AssetManager {
 					'quantity' => 0,
 				),
 			),
-			'bumps'     => array(),
-			'side_cart' => array(
+			'bumps'       => array(),
+			'trust_badges' => array(),
+			'side_cart'   => array(
 				'free_shipping_progress_bar' => array(
 					'has_free_shipping'        => false,
 					'amount_remaining'         => 0,

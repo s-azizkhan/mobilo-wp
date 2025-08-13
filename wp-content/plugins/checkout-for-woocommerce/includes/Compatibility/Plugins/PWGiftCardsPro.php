@@ -26,7 +26,8 @@ class PWGiftCardsPro extends CompatibilityAbstract {
 						if (errorThrown) {
 							alert(errorThrown);
 						} else {
-							alert('Unknown Error');
+							/* translators: JavaScript alert message shown when gift card removal fails with unknown error */
+							alert('<?php echo esc_js( __( 'Unknown Error', 'checkout-wc' ) ); ?>');
 						}
 						location.reload();
 					});

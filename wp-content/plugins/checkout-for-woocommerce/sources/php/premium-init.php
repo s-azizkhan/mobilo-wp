@@ -14,6 +14,7 @@ use Objectiv\Plugins\Checkout\Admin\Notices\InactiveLicenseNotice;
 use Objectiv\Plugins\Checkout\Admin\Notices\InvalidLicenseKeyNotice;
 use Objectiv\Plugins\Checkout\Admin\Notices\TemplateDisabledNotice;
 use Objectiv\Plugins\Checkout\Admin\Notices\WelcomeNotice;
+use Objectiv\Plugins\Checkout\Admin\Notices\TurnstileFeatureNotice;
 use Objectiv\Plugins\Checkout\Admin\Pages\AdminPagesRegistry;
 use Objectiv\Plugins\Checkout\Admin\Pages\Premium\SideCart as SideCartAdminPage;
 use Objectiv\Plugins\Checkout\API\AbandonedCartRecoveryReportAPI;
@@ -38,6 +39,7 @@ use Objectiv\Plugins\Checkout\Features\PhpSnippets;
 use Objectiv\Plugins\Checkout\Features\SideCart;
 use Objectiv\Plugins\Checkout\Features\SmartyStreets;
 use Objectiv\Plugins\Checkout\Features\TrustBadges;
+use Objectiv\Plugins\Checkout\Features\Turnstile;
 use Objectiv\Plugins\Checkout\Managers\AssetManager;
 use Objectiv\Plugins\Checkout\Managers\PlanManager;
 use Objectiv\Plugins\Checkout\Managers\SettingsManager;
@@ -254,6 +256,14 @@ $pickup = new LocalPickup(
 );
 $pickup->init();
 
+$turnstile = new Turnstile(
+	PlanManager::can_access_feature( 'turnstile_enabled', 'pro' ),
+	PlanManager::has_premium_plan_or_higher( 'pro' ),
+	PlanManager::get_english_list_of_required_plans_html( 'pro' ),
+	$settings_manager
+);
+$turnstile->init();
+
 $hide_optional_address_fields = new HideOptionalAddressFields(
 	'yes' === SettingsManager::instance()->get_setting( 'hide_optional_address_fields_behind_link' ),
 	true,
@@ -353,9 +363,12 @@ if ( $settings_manager->get_setting( 'enable_trust_badges' ) === 'yes' ) {
 	add_action( 'init', array( new TrustBadgeImageSizeAdder(), 'add_trust_badge_image_size' ) );
 }
 
+// Initialize TurnstileFeatureNotice immediately to catch the upgrade action
+$turnstile_feature_notice = new TurnstileFeatureNotice();
+
 add_action(
 	'admin_init',
-	function () use ( $acr ) {
+	function () use ( $acr, $turnstile_feature_notice ) {
 		if ( ! is_admin() ) {
 			return;
 		}
@@ -367,10 +380,8 @@ add_action(
 			'cfw_templates_disabled',
 			__( 'CheckoutWC Templates Deactivated', 'checkout-wc' ),
 			sprintf(
-				esc_html__(
-					'Your license is valid and activated for this site but CheckoutWC is disabled for normal customers. To fix this, go to %s > %s and toggle "%s".',
-					'checkout-wc'
-				),
+				/* translators: %1$s: "Settings" text, %2$s: "Start Here" text, %3$s: "Activate CheckoutWC Templates" text */
+				esc_html__( 'Your license is valid and activated for this site but CheckoutWC is disabled for normal customers. To fix this, go to %1$s > %2$s and toggle "%3$s".', 'checkout-wc' ),
 				esc_html__( 'Settings', 'checkout-wc' ),
 				esc_html__( 'Start Here', 'checkout-wc' ),
 				esc_html__( 'Activate CheckoutWC Templates', 'checkout-wc' )
@@ -382,10 +393,8 @@ add_action(
 			'cfw_invalid_license',
 			__( 'Invalid CheckoutWC License', 'checkout-wc' ),
 			sprintf(
-				__(
-					'Your license key is missing or invalid. Please verify that your license key is valid or <a target="_blank" href="%s">%s</a> to restore full functionality.',
-					'checkout-wc'
-				),
+				/* translators: %1$s: Pricing URL, %2$s: "purchase a license" link text */
+				__( 'Your license key is missing or invalid. Please verify that your license key is valid or <a target="_blank" href="%1$s">%2$s</a> to restore full functionality.', 'checkout-wc' ),
 				'https://www.checkoutwc.com/pricing',
 				__( 'purchase a license', 'checkout-wc' )
 			),
@@ -401,16 +410,16 @@ add_action(
 
 		( new WelcomeNotice() )->maybe_add();
 
+		$turnstile_feature_notice->maybe_add();
+
 		$acr_disabled_notice = new AcrDisabledNotice();
 		$acr_disabled_notice->set_feature( $acr );
 		$acr_disabled_notice->maybe_add(
 			'cfw_acr_tracking_disabled',
 			__( 'Abandoned Cart Recovery Tracking Disabled', 'checkout-wc' ),
 			sprintf(
-				__(
-					'You have enabled Abandoned Cart Recovery tracking, but you do not have any emails published. To track carts, you need to publish emails or use this dev filter: <a target="_blank" href="%s">%s</a>.',
-					'checkout-wc'
-				),
+				/* translators: %1$s: Gist URL, %2$s: "Learn More" link text */
+				__( 'You have enabled Abandoned Cart Recovery tracking, but you do not have any emails published. To track carts, you need to publish emails or use this dev filter: <a target="_blank" href="%1$s">%2$s</a>.', 'checkout-wc' ),
 				'https://gist.github.com/clifgriffin/490f366d1e75779becc0447384a3ce13',
 				__( 'Learn More', 'checkout-wc' )
 			),

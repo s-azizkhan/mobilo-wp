@@ -659,10 +659,8 @@ add_action(
 			'cfw_avada_warning',
 			__( 'Configure Avada to Work With CheckoutWC', 'checkout-wc' ),
 			sprintf(
-				__(
-					'CheckoutWC and Avada work great together, but you will need to adjust a couple of theme settings. Please see our guide here: <a target="_blank" href="%s">%s</a>',
-					'checkout-wc'
-				),
+				/* translators: %1$s: Guide URL, %2$s: Guide link text */
+				__( 'CheckoutWC and Avada work great together, but you will need to adjust a couple of theme settings. Please see our guide here: <a target="_blank" href="%1$s">%2$s</a>', 'checkout-wc' ),
 				'https://www.checkoutwc.com/documentation/avada-template-layout-problems/',
 				__( 'Configure Avada to Work With CheckoutWC', 'checkout-wc' )
 			),
@@ -673,10 +671,8 @@ add_action(
 			'cfw_bluehost_warning',
 			__( 'Incompatible Plugin: Please Deactivate The Bluehost Plugin', 'checkout-wc' ),
 			sprintf(
-				__(
-					'CheckoutWC and Bluehost work great together, but you must deactivate The Bluehost Plugin to prevent problems. More info here: <a target="_blank" href="%s">%s</a>',
-					'checkout-wc'
-				),
+				/* translators: %1$s: Help URL, %2$s: Help link text */
+				__( 'CheckoutWC and Bluehost work great together, but you must deactivate The Bluehost Plugin to prevent problems. More info here: <a target="_blank" href="%1$s">%2$s</a>', 'checkout-wc' ),
 				'https://www.checkoutwc.com/documentation/how-to-fix-problems-with-the-bluehost-plugin/',
 				__( 'How To Fix Problems With The Bluehost Plugin', 'checkout-wc' )
 			),
@@ -690,10 +686,8 @@ add_action(
 			'cfw_divi_warning',
 			__( 'Configure Divi to Work With CheckoutWC', 'checkout-wc' ),
 			sprintf(
-				__(
-					'CheckoutWC and Divi work great together, but you will need to adjust a couple of settings. Please see our guide here: <a target="_blank" href="%s">%s</a>',
-					'checkout-wc'
-				),
+				/* translators: %1$s: Guide URL, %2$s: Guide link text */
+				__( 'CheckoutWC and Divi work great together, but you will need to adjust a couple of settings. Please see our guide here: <a target="_blank" href="%1$s">%2$s</a>', 'checkout-wc' ),
 				'https://www.checkoutwc.com/documentation/how-to-fix-styling-issues-with-divi-theme/',
 				__( 'How To Fix Styling Issues With Divi Theme', 'checkout-wc' )
 			),
@@ -704,10 +698,8 @@ add_action(
 			'cfw_porto_warning',
 			__( 'Configure Porto to Work With CheckoutWC', 'checkout-wc' ),
 			sprintf(
-				__(
-					'CheckoutWC and Porto work great together, but you will need to adjust a couple of settings. Please see our guide here: <a target="_blank" href="%s">%s</a>',
-					'checkout-wc'
-				),
+				/* translators: %1$s: Guide URL, %2$s: Guide link text */
+				__( 'CheckoutWC and Porto work great together, but you will need to adjust a couple of settings. Please see our guide here: <a target="_blank" href="%1$s">%2$s</a>', 'checkout-wc' ),
 				'https://www.checkoutwc.com/documentation/fix-problems-with-porto-theme/',
 				__( 'Fix Problems With Porto Theme', 'checkout-wc' )
 			),
@@ -718,10 +710,8 @@ add_action(
 			'cfw_astrapro_warning',
 			__( 'Configure Astra Pro to Work With CheckoutWC', 'checkout-wc' ),
 			sprintf(
-				__(
-					'CheckoutWC and Astra Pro work great together, but there is one setting you should check. More info here: <a target="_blank" href="%s">%s</a>',
-					'checkout-wc'
-				),
+				/* translators: %1$s: Info URL, %2$s: Info link text */
+				__( 'CheckoutWC and Astra Pro work great together, but there is one setting you should check. More info here: <a target="_blank" href="%1$s">%2$s</a>', 'checkout-wc' ),
 				'https://checkoutwc.com/documentation/fix-layout-issues-with-astra-pro/',
 				__( 'Fix Layout Issues with Astra Pro', 'checkout-wc' )
 			),
@@ -732,10 +722,8 @@ add_action(
 			'cfw_woostify_warning',
 			__( 'Configure Woostify to Work With CheckoutWC', 'checkout-wc' ),
 			sprintf(
-				__(
-					'CheckoutWC and Woostify work great together, but there is one setting you should check. More info here: <a target="_blank" href="%s">%s</a>',
-					'checkout-wc'
-				),
+				/* translators: %1$s: Info URL, %2$s: Info link text */
+				__( 'CheckoutWC and Woostify work great together, but there is one setting you should check. More info here: <a target="_blank" href="%1$s">%2$s</a>', 'checkout-wc' ),
 				'https://www.checkoutwc.com/documentation/fix-ajax-add-to-cart-with-woostify-and-checkoutwc/',
 				__( 'Fix AJAX Add To Cart with Woostify and CheckoutWC Side Cart', 'checkout-wc' )
 			),
@@ -837,7 +825,7 @@ add_action(
 		$admin_message = '';
 
 		if ( $templates_disabled ) {
-			$admin_message = 'Admin Preview Mode: CheckoutWC templates are disabled for normal users. To fix this, please activate templates here: WP Admin > CheckoutWC > Start Here';
+			$admin_message = __( 'Admin Preview Mode: CheckoutWC templates are disabled for normal users. To fix this, please activate templates here: WP Admin > CheckoutWC > Start Here', 'checkout-wc' );
 		}
 
 		/**

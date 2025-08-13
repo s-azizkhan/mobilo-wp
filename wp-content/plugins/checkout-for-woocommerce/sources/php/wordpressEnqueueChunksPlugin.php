@@ -46,7 +46,7 @@ function get($key)
         return WPECP_TEST_CONFIG[ $key ];
     }
 
-    $generalConfig = json_decode('{"assetsDir":"build","context":"plugin","delimiter":"-","namespace":"cfw","phpScriptDir":"sources/php","configName":"admin","prefix":"cfw-"}', true);
+    $generalConfig = json_decode('{"assetsDir":"build","context":"plugin","delimiter":"-","namespace":"cfw","phpScriptDir":"sources/php","configName":"frontend","prefix":"cfw-"}', true);
 
     if ( is_null( $config ) ) {
         $configFiles = glob( __DIR__ . '/config-*.json' );

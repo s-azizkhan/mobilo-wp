@@ -25,9 +25,9 @@ class LocalPickupAdmin extends PageAbstract {
 
 		$this->set_tabbed_navigation( new TabNavigation( 'settings' ) );
 
-		$this->get_tabbed_navigation()->add_tab( 'Settings', add_query_arg( array( 'subpage' => 'settings' ), $this->get_url() ), 'settings' );
+		$this->get_tabbed_navigation()->add_tab( __( 'Settings', 'checkout-wc' ), add_query_arg( array( 'subpage' => 'settings' ), $this->get_url() ), 'settings' );
 		$this->get_tabbed_navigation()->add_tab(
-			'Manage Pickup Locations',
+			__( 'Manage Pickup Locations', 'checkout-wc' ),
 			add_query_arg(
 				array(
 					'post_type' => LocalPickup::get_post_type(),

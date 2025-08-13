@@ -31,9 +31,9 @@ class AbandonedCartRecovery extends PageAbstract {
 
 		$this->set_tabbed_navigation( new TabNavigation( 'settings' ) );
 
-		$this->get_tabbed_navigation()->add_tab( 'Settings', add_query_arg( array( 'subpage' => 'settings' ), $this->get_url() ), false, 'cfw_manage_acr' );
+		$this->get_tabbed_navigation()->add_tab( __( 'Settings', 'checkout-wc' ), add_query_arg( array( 'subpage' => 'settings' ), $this->get_url() ), false, 'cfw_manage_acr' );
 		$this->get_tabbed_navigation()->add_tab(
-			'Emails',
+			__( 'Emails', 'checkout-wc' ),
 			add_query_arg(
 				array(
 					'post_type' => \Objectiv\Plugins\Checkout\Features\AbandonedCartRecovery::get_post_type(),
@@ -43,7 +43,7 @@ class AbandonedCartRecovery extends PageAbstract {
 			false,
 			'cfw_manage_acr'
 		);
-		$this->get_tabbed_navigation()->add_tab( 'Report', add_query_arg( array( 'subpage' => 'report' ), $this->get_url() ) );
+		$this->get_tabbed_navigation()->add_tab( __( 'Report', 'checkout-wc' ), add_query_arg( array( 'subpage' => 'report' ), $this->get_url() ) );
 
 		add_filter( 'wp_insert_post_data', array( $this, 'maybe_prevent_post_publication' ), '99', 2 );
 		add_action( 'admin_notices', array( $this, 'maybe_show_post_pending_notice' ) );
@@ -92,8 +92,8 @@ class AbandonedCartRecovery extends PageAbstract {
 				$date = array_pop( $columns );
 
 				$columns['cfw_email_subject_col'] = __( 'Subject', 'checkout-wc' );
-				$columns['cfw_send_after_col']    = 'Send After' . wc_help_tip( 'Send this long after cart has been abandoned.' );
-				$columns['cfw_email_active_col']  = 'Active' . wc_help_tip( 'Active (published) emails, are sent to customers. Inactive (draft / unpublished) emails are not.' );
+				$columns['cfw_send_after_col']    = __( 'Send After', 'checkout-wc' ) . wc_help_tip( __( 'Send this long after cart has been abandoned.', 'checkout-wc' ) );
+				$columns['cfw_email_active_col']  = __( 'Active', 'checkout-wc' ) . wc_help_tip( __( 'Active (published) emails, are sent to customers. Inactive (draft / unpublished) emails are not.', 'checkout-wc' ) );
 
 				return $columns;
 			}
@@ -824,7 +824,16 @@ class AbandonedCartRecovery extends PageAbstract {
 					<?php _e( 'Upgrade Your Plan', 'checkout-wc' ); ?>
 				</h3>
 
-				<?php echo esc_html( sprintf( __( 'Your CheckoutWC plan allows you to create %d Abandoned Cart Emails. You have used %d.', 'checkout-wc' ), self::get_allowed_email_count(), self::get_emails_count() ) ); ?>
+				<?php
+				echo esc_html(
+					sprintf(
+						/* translators: %1$d: Allowed email count, %2$d: Used email count */
+						__( 'Your CheckoutWC plan allows you to create %1$d Abandoned Cart Emails. You have used %2$d.', 'checkout-wc' ),
+						self::get_allowed_email_count(),
+						self::get_emails_count()
+					)
+				);
+				?>
 
 				<p class="text-base italic mt-2 mb-2">
 					<?php _e( 'You cannot create or publish new Abandoned Cart Recovery emails if you are over the limit.', 'checkout-wc' ); ?>

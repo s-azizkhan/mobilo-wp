@@ -361,7 +361,9 @@ function cfw_get_cart_shipping_data(): array {
 		}
 
 		$package_details = implode( ', ', $product_names );
-		$package_name    = cfw_apply_filters( 'woocommerce_shipping_package_name', sprintf( _nx( 'Shipping', 'Shipping %d', ( $i + 1 ), 'shipping packages', 'woocommerce' ), ( $i + 1 ) ), $i, $package );
+		$package_name    = cfw_apply_filters( 'woocommerce_shipping_package_name', sprintf(
+			/* translators: %d: shipping package number */
+			_nx( 'Shipping', 'Shipping %d', ( $i + 1 ), 'shipping packages', 'woocommerce' ), ( $i + 1 ) ), $i, $package );
 
 		$formatted_methods = array();
 
@@ -690,33 +692,6 @@ function cfw_display_item_data( ItemInterface $item ) {
 	}
 }
 
-/**
- * Get shipping methods.
- *
- * @see wc_cart_totals_shipping_html()
- */
-function cfw_cart_totals_shipping_html() {
-	?>
-	<tr class="woocommerce-shipping-totals">
-		<th>
-			<?php
-			/**
-			 * Filters cart totals shipping label
-			 *
-			 * @param string $cart_totals_shipping_label Cart totals shipping label
-			 *
-			 * @since 2.0.0
-			 */
-			echo apply_filters( 'cfw_cart_totals_shipping_label', esc_html__( 'Shipping', 'woocommerce' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			?>
-		</th>
-		<td>
-			<?php echo cfw_get_shipping_total(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-		</td>
-	</tr>
-	<?php
-}
-
 function cfw_all_packages_have_available_shipping_methods( array $packages ): bool {
 	foreach ( $packages as $i => $package ) {
 		/** Documented in cfw_get_cart_shipping_data() */
@@ -737,7 +712,7 @@ function cfw_get_shipping_total(): string {
 	$address_required        = get_option( 'woocommerce_shipping_cost_requires_address' ) === 'yes';
 	$missing_address         = $address_required && ! $has_calculated_shipping;
 
-	if ( $missing_address ) {
+	if ( $missing_address || ! $has_calculated_shipping ) {
 		/**
 		 * Filters shipping total address required text
 		 *
@@ -1199,7 +1174,9 @@ function cfw_order_status_date( $order_id, string $status_search ) {
 
 	add_filter( 'comments_clauses', array( 'WC_Comments', 'exclude_order_comments' ) );
 
-	$pattern = sprintf( __( 'Order status changed from %1$s to %2$s.', 'woocommerce' ), 'X', $status_search );
+	$pattern = sprintf(
+		/* translators: %1$s: Old order status, %2$s: New order status */
+		__( 'Order status changed from %1$s to %2$s.', 'woocommerce' ), 'X', $status_search );
 
 	$pieces         = explode( ' ', $pattern );
 	$last_two_words = implode( ' ', array_splice( $pieces, - 2 ) );
@@ -1743,7 +1720,8 @@ function cfw_maybe_match_new_order_to_user_account( $order_id ) {
 				$order->set_customer_id( $user_data->ID );
 				$order->save();
 			} catch ( \WC_Data_Exception $e ) {
-				wc_get_logger()->error( "CheckoutWC: Error matching {$order_id} to customer {$user_data->ID}", array( 'source' => 'checkout-wc' ) );
+				/* translators: 1: order ID, 2: customer ID - Error message logged when order matching to customer fails */
+				wc_get_logger()->error( sprintf( __( 'CheckoutWC: Error matching %d to customer %d', 'checkout-wc' ), $order_id, $user_data->ID ), array( 'source' => 'checkout-wc' ) );
 			}
 		}
 	}
@@ -2097,7 +2075,6 @@ function cfw_update_cart( array $cart_data, bool $refresh_totals = true, $contex
 		// Calculate shipping before totals. This will ensure any shipping methods that affect things like taxes are chosen prior to final totals being calculated. Ref: #22708.
 		// Without these lines, changes aren't always saved
 		try {
-			WC()->cart->calculate_shipping();
 			WC()->cart->calculate_totals();
 		} catch ( Throwable $e ) {
 			wc_get_logger()->error( 'Could not calculate shipping and/or totals after cart update: ' . $e->getMessage(), array( 'source' => 'checkout-wc' ) );
@@ -3059,7 +3036,7 @@ function cfw_set_script_translations_for_scripts( $scripts ) {
 		wp_set_script_translations(
 			$handle,
 			'checkout-wc',
-			CFW_PATH_BASE . '/languages'
+			CFW_PATH_BASE . 'i18n/languages'
 		);
 	}
 }

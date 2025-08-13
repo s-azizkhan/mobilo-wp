@@ -276,6 +276,7 @@ class EDD_SL_Plugin_Updater {
 			// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 			if ( empty( $version_info->download_link ) ) {
 				printf(
+					/* translators: %1$s: Plugin name, %2$s: Link opening tag, %3$s: Version number, %4$s: Link closing tag */
 					__( 'There is a new version of %1$s available. %2$sView version %3$s details%4$s.', 'easy-digital-downloads' ),
 					esc_html( $version_info->name ),
 					'<a target="_blank" class="thickbox" href="' . esc_url( $changelog_link ) . '">',
@@ -284,6 +285,7 @@ class EDD_SL_Plugin_Updater {
 				);
 			} else {
 				printf(
+					/* translators: %1$s: Plugin name, %2$s: Link opening tag, %3$s: Version number, %4$s: Link closing tag, %5$s: Update link opening tag, %6$s: Update link closing tag */
 					__( 'There is a new version of %1$s available. %2$sView version %3$s details%4$s or %5$supdate now%6$s.', 'easy-digital-downloads' ),
 					esc_html( $version_info->name ),
 					'<a target="_blank" class="thickbox" href="' . esc_url( $changelog_link ) . '">',

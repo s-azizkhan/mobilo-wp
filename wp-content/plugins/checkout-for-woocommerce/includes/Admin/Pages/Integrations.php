@@ -2,6 +2,7 @@
 
 namespace Objectiv\Plugins\Checkout\Admin\Pages;
 
+use Objectiv\Plugins\Checkout\Features\Turnstile;
 use Objectiv\Plugins\Checkout\Managers\PlanManager;
 use Objectiv\Plugins\Checkout\Managers\SettingsManager;
 use Objectiv\Plugins\Checkout\Managers\UpdatesManager;
@@ -41,6 +42,21 @@ class Integrations extends PageAbstract {
 			array(
 				'settings'     => array(
 					'google_places_api_key' => SettingsManager::instance()->get_setting( 'google_places_api_key' ),
+					
+					// Turnstile settings
+					'turnstile_enabled'                    => SettingsManager::instance()->get_setting( 'turnstile_enabled' ) === 'yes',
+					'turnstile_site_key'                   => SettingsManager::instance()->get_setting( 'turnstile_site_key' ),
+					'turnstile_secret_key'                 => SettingsManager::instance()->get_setting( 'turnstile_secret_key' ),
+					'turnstile_checkout_enabled'           => SettingsManager::instance()->get_setting( 'turnstile_checkout_enabled' ) === 'yes',
+					'turnstile_order_pay_enabled'          => SettingsManager::instance()->get_setting( 'turnstile_order_pay_enabled' ) === 'yes',
+					'turnstile_login_enabled'              => SettingsManager::instance()->get_setting( 'turnstile_login_enabled' ) === 'yes',
+					'turnstile_register_enabled'           => SettingsManager::instance()->get_setting( 'turnstile_register_enabled' ) === 'yes',
+					'turnstile_position'                   => SettingsManager::instance()->get_setting( 'turnstile_position' ),
+					'turnstile_theme'                      => SettingsManager::instance()->get_setting( 'turnstile_theme' ),
+					'turnstile_size'                       => SettingsManager::instance()->get_setting( 'turnstile_size' ),
+					'turnstile_guest_only'                 => SettingsManager::instance()->get_setting( 'turnstile_guest_only' ) === 'yes',
+					'turnstile_has_conflict'               => Turnstile::has_conflict(),
+					'turnstile_conflict_notice'            => Turnstile::get_conflict_notice(),
 				),
 				/**
 				 * Filters third party checkboxes here:  WP Admin > CheckoutWC > Advanced > Integrations

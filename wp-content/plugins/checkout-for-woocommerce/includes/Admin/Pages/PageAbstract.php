@@ -76,7 +76,7 @@ abstract class PageAbstract {
 	 */
 	public function output_with_wrap() {
 		cfw_do_action( 'cfw_admin_output_page', $this->get_slug() );
-		$hide_settings_button = ( isset( $_GET['subpage'] ) && 'templates' === $_GET['subpage'] ) || ( isset( $_GET['page'] ) && 'cfw-settings-support' === $_GET['page'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$hide_settings_button = ( isset( $_GET['subpage'] ) && 'templates' === $_GET['subpage'] ) || ( isset( $_GET['page'] ) && 'cfw-settings-appearance' === $_GET['page'] && empty( $_GET['subpage'] ) ) || ( isset( $_GET['page'] ) && 'cfw-settings-support' === $_GET['page'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		?>
 		<div class="cfw-admin-notices-container">
 			<div class="wp-header-end"></div>
@@ -122,9 +122,20 @@ abstract class PageAbstract {
 						</nav>
 					</div>
 
-					<button type="button" id="cfw_admin_header_save_button" class="cfw-save-inactive cfw-shake-animation <?php echo $hide_settings_button ? 'invisible' : ''; ?> mr-10 inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-						<?php _e( 'Save Changes' ); ?>
-					</button>
+					<div class="flex items-center space-x-4 mr-10">
+						<div id="cfw_unsaved_changes_notice" class="hidden flex items-center text-sm text-orange-600">
+							<svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+							</svg>
+							<span><?php _e( 'Unsaved changes.', 'checkout-wc' ); ?></span>
+							<a href="#" id="cfw_discard_changes_button" class="ml-2 text-sm text-gray-500 hover:text-gray-700 underline">
+								<?php _e( 'Discard?', 'checkout-wc' ); ?>
+							</a>
+						</div>
+						<button type="button" id="cfw_admin_header_save_button" class="cfw-save-inactive cfw-shake-animation <?php echo $hide_settings_button ? 'invisible' : ''; ?> inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+							<?php _e( 'Save Changes', 'checkout-wc' ); ?>
+						</button>
+					</div>
 				</div>
 				<?php
 				/**
@@ -139,6 +150,14 @@ abstract class PageAbstract {
 
 			<div class="cfw-admin-content-wrap cfw-admin-screen-<?php echo esc_attr( sanitize_title_with_dashes( $this->title ) ); ?> p-10 z-10">
 				<?php $this->output(); ?>
+
+				<?php if ( ! $hide_settings_button ) : ?>
+					<div class="flex justify-end mt-2">
+						<button type="button" id="cfw_admin_footer_save_button" class="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+							<?php _e( 'Save Changes', 'checkout-wc' ); ?>
+						</button>
+					</div>
+				<?php endif; ?>
 			</div>
 		</div>
 		<?php
@@ -156,7 +175,15 @@ abstract class PageAbstract {
 				</p>
 
 				<div class="text-center italic">
-					<?php echo wp_kses_post( sprintf( __( 'A %s plan is required to access this feature.', 'checkout-wc' ), PlanManager::get_english_list_of_required_plans_html( $required_plan ) ) ); ?>
+					<?php
+					echo wp_kses_post( 
+						sprintf( 
+							/* translators: %s: Required plan name(s) */
+							__( 'A %s plan is required to access this feature.', 'checkout-wc' ), 
+							PlanManager::get_english_list_of_required_plans_html( $required_plan ) 
+						) 
+					);
+					?>
 				</div>
 			</div>
 		</div>
@@ -306,9 +333,26 @@ abstract class PageAbstract {
 					<?php _e( 'Upgrade Your Plan', 'checkout-wc' ); ?>
 				</h3>
 
-				<?php echo wp_kses_post( sprintf( __( 'A %s plan is required to access this feature.', 'checkout-wc' ), $required_plans ) ); ?>
+				<?php
+			echo wp_kses_post( 
+				sprintf( 
+					/* translators: %s: Required plan name(s) */
+					__( 'A %s plan is required to access this feature.', 'checkout-wc' ), 
+					$required_plans 
+				) 
+			);
+			?>
 				<p class="text-base">
-					<?php echo wp_kses_post( sprintf( __( 'You can upgrade your license in <a class="text-blue-600 underline" target="_blank" href="%1$s">Account</a>. For help upgrading your license, <a class="text-blue-600 underline" target="_blank" href="%2$s">click here.</a>', 'checkout-wc' ), 'https://www.checkoutwc.com/account/', 'https://kb.checkoutwc.com/article/53-upgrading-your-license' ) ); ?>
+					<?php
+				echo wp_kses_post( 
+					sprintf( 
+						/* translators: %1$s: Account URL, %2$s: Help URL */
+						__( 'You can upgrade your license in <a class="text-blue-600 underline" target="_blank" href="%1$s">Account</a>. For help upgrading your license, <a class="text-blue-600 underline" target="_blank" href="%2$s">click here.</a>', 'checkout-wc' ), 
+						'https://www.checkoutwc.com/account/', 
+						'https://kb.checkoutwc.com/article/53-upgrading-your-license' 
+					) 
+				);
+				?>
 				</p>
 			</div>
 		</div>

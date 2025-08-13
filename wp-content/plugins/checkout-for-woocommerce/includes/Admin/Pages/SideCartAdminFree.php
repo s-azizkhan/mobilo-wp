@@ -23,15 +23,15 @@ class SideCartAdminFree extends PageAbstract {
 				<div class="md:grid md:grid-cols-3 md:gap-6">
 					<div class="md:col-span-1">
 						<div class="px-4 sm:px-0">
-							<h3 class="text-lg font-medium leading-6 text-gray-900">Side Cart</h3>
-							<p class="mt-1 text-sm text-gray-600">Configure the Side Cart.</p>
+							<h3 class="text-lg font-medium leading-6 text-gray-900"><?php esc_html_e( 'Side Cart', 'checkout-wc' ); ?></h3>
+							<p class="mt-1 text-sm text-gray-600"><?php esc_html_e( 'Configure the Side Cart.', 'checkout-wc' ); ?></p>
 						</div>
 					</div>
 					<div class="mt-5 md:mt-0 md:col-span-2" id="side-cart_content">
 						<div></div>
 						<div class="shadow sm:rounded-md">
 							<div class="cfw-admin-section-component-content px-4 py-5 bg-white space-y-6 sm:p-6">
-								<div class="flex items-center space-x-4"><button class="bg-lime-500 relative inline-flex h-7 w-14 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" id="headlessui-switch-:r0:" role="switch" type="button" tabindex="0" aria-checked="true" data-headlessui-state="checked" aria-labelledby="headlessui-label-:r1:" aria-describedby="headlessui-description-:r2:"><span class="sr-only">Use setting</span><span aria-hidden="true" class="translate-x-[1.75rem] pointer-events-none inline-block h-6 w-6 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span></button><span class="flex flex-grow flex-col"><span class="text-sm font-medium leading-6 text-gray-900" id="headlessui-label-:r1:">Enable Side Cart</span><span class="text-sm text-gray-500" id="headlessui-description-:r2:">Replace your cart page with a beautiful side cart that slides in from the right when items are added to the cart.</span></span></div>
+								<div class="flex items-center space-x-4"><button class="bg-lime-500 relative inline-flex h-7 w-14 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" id="headlessui-switch-:r0:" role="switch" type="button" tabindex="0" aria-checked="true" data-headlessui-state="checked" aria-labelledby="headlessui-label-:r1:" aria-describedby="headlessui-description-:r2:"><span class="sr-only">Use setting</span><span aria-hidden="true" class="translate-x-[1.75rem] pointer-events-none inline-block h-6 w-6 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span></button><span class="flex flex-grow flex-col"><span class="text-sm font-medium leading-6 text-gray-900" id="headlessui-label-:r1:"><?php esc_html_e( 'Enable Side Cart', 'checkout-wc' ); ?></span><span class="text-sm text-gray-500" id="headlessui-description-:r2:"><?php esc_html_e( 'Replace your cart page with a beautiful side cart that slides in from the right when items are added to the cart.', 'checkout-wc' ); ?></span></span></div>
 							</div>
 						</div>
 					</div>
@@ -41,8 +41,8 @@ class SideCartAdminFree extends PageAbstract {
 				<div class="md:grid md:grid-cols-3 md:gap-6">
 					<div class="md:col-span-1">
 						<div class="px-4 sm:px-0">
-							<h3 class="text-lg font-medium leading-6 text-gray-900">Side Cart Icon</h3>
-							<p class="mt-1 text-sm text-gray-600">Used by the Side Cart and Floating Side Cart Button.</p>
+							<h3 class="text-lg font-medium leading-6 text-gray-900"><?php esc_html_e( 'Side Cart Icon', 'checkout-wc' ); ?></h3>
+							<p class="mt-1 text-sm text-gray-600"><?php esc_html_e( 'Used by the Side Cart and Floating Side Cart Button.', 'checkout-wc' ); ?></p>
 						</div>
 					</div>
 					<div class="mt-5 md:mt-0 md:col-span-2" id="side-cart-icon_content">
@@ -52,8 +52,8 @@ class SideCartAdminFree extends PageAbstract {
 								<div class="flex space-x-4">
 									<div class="grow space-y-4 cfw-admin-section-component-content">
 										<div class="cfw-admin-field-container cfw-admin-field-horizontal-icon-radio-group ">
-											<legend class="text-base font-medium text-gray-900">Icon</legend>
-											<p class="text-sm leading-5 text-gray-500">Choose the Side Cart icon.</p>
+											<legend class="text-base font-medium text-gray-900"><?php esc_html_e( 'Icon', 'checkout-wc' ); ?></legend>
+											<p class="text-sm leading-5 text-gray-500"><?php esc_html_e( 'Choose the Side Cart icon.', 'checkout-wc' ); ?></p>
 											<div class="mt-4 space-y-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-10">
 												<div class="relative flex items-start">
 													<div class="flex items-center h-8"><input name="side_cart_icon" type="radio" id="side_cart_icon_cart-outline.svg" class="focus:ring-blue-800 h-4 w-4 text-blue-500 border-gray-300" value="cart-outline.svg" checked=""></div>
@@ -98,14 +98,14 @@ class SideCartAdminFree extends PageAbstract {
 											</div>
 										</div>
 										<div class="cfw-admin-field-container cfw-admin-upload-control-parent ">
-											<legend class="text-base font-medium text-gray-900">Custom Icon</legend>
-											<p class="text-sm leading-5 text-gray-500">Upload a custom icon. Overrides the icon selection above. SVG REQUIRED.</p>
+											<legend class="text-base font-medium text-gray-900"><?php esc_html_e( 'Custom Icon', 'checkout-wc' ); ?></legend>
+											<p class="text-sm leading-5 text-gray-500"><?php esc_html_e( 'Upload a custom icon. Overrides the icon selection above. SVG REQUIRED.', 'checkout-wc' ); ?></p>
 											<div class="cfw-admin-image-preview-wrapper mb-4 mt-4"></div>
-											<div class="block"><button type="button" class="mt-2 inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Upload Image</button><button type="button" class="mt-2 inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Clear</button></div>
+											<div class="block"><button type="button" class="mt-2 inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><?php esc_html_e('Upload Image', 'checkout-wc' ); ?></button><button type="button" class="mt-2 inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><?php esc_html_e( 'Clear', 'checkout-wc' ); ?></button></div>
 										</div>
 										<div class="cfw-admin-field-container ">
-											<label for="side_cart_icon_width" class="block text-sm font-medium text-gray-700">Width</label><input name="side_cart_icon_width" type="number" id="side_cart_icon_width" class="w-64 shadow-sm focus:ring-blue-500 focus:border-blue-500 block sm:text-sm border border-gray-300 rounded-md" value="34">
-											<p class="mt-2 text-sm text-gray-500">The width of the icon in pixels. Default: 34</p>
+											<label for="side_cart_icon_width" class="block text-sm font-medium text-gray-700"><?php esc_html_e( 'Width', 'checkout-wc' ); ?></label><input name="side_cart_icon_width" type="number" id="side_cart_icon_width" class="w-64 shadow-sm focus:ring-blue-500 focus:border-blue-500 block sm:text-sm border border-gray-300 rounded-md" value="34">
+											<p class="mt-2 text-sm text-gray-500"><?php esc_html_e( 'The width of the icon in pixels. Default: 34', 'checkout-wc' ); ?></p>
 										</div>
 									</div>
 								</div>
@@ -118,8 +118,8 @@ class SideCartAdminFree extends PageAbstract {
 				<div class="md:grid md:grid-cols-3 md:gap-6">
 					<div class="md:col-span-1">
 						<div class="px-4 sm:px-0">
-							<h3 class="text-lg font-medium leading-6 text-gray-900">Suggested Products</h3>
-							<p class="mt-1 text-sm text-gray-600">Configure Suggested Products cross-sells.</p>
+							<h3 class="text-lg font-medium leading-6 text-gray-900"><?php esc_html_e( 'Suggested Products', 'checkout-wc' ); ?></h3>
+							<p class="mt-1 text-sm text-gray-600"><?php esc_html_e( 'Configure Suggested Products cross-sells.', 'checkout-wc' ); ?></p>
 						</div>
 					</div>
 					<div class="mt-5 md:mt-0 md:col-span-2" id="suggested-products_content">
@@ -129,8 +129,8 @@ class SideCartAdminFree extends PageAbstract {
 								<div class="cfw-admin-field-container relative flex items-start ">
 									<div class="flex items-center h-5"><input name="enable_side_cart_suggested_products" type="checkbox" id="cfw_checkbox_enable_side_cart_suggested_products" class="focus:ring-blue-800 h-4 w-4 text-blue-500 border-gray-300 rounded disabled:bg-gray-100 disabled:border" value="false"></div>
 									<div class="ml-3 text-sm">
-										<label for="cfw_checkbox_enable_side_cart_suggested_products" class="font-medium text-gray-700" style="vertical-align: unset;">Enable Suggested Products</label>
-										<p class="text-gray-500">Display cross sells / suggested products at the bottom of the side cart.</p>
+										<label for="cfw_checkbox_enable_side_cart_suggested_products" class="font-medium text-gray-700" style="vertical-align: unset;"><?php esc_html_e( 'Enable Suggested Products', 'checkout-wc' ); ?></label>
+										<p class="text-gray-500"><?php esc_html_e( 'Display cross sells / suggested products at the bottom of the side cart.', 'checkout-wc' ); ?></p>
 									</div>
 								</div>
 							</div>
@@ -142,8 +142,8 @@ class SideCartAdminFree extends PageAbstract {
 				<div class="md:grid md:grid-cols-3 md:gap-6">
 					<div class="md:col-span-1">
 						<div class="px-4 sm:px-0">
-							<h3 class="text-lg font-medium leading-6 text-gray-900">Floating Side Cart Button</h3>
-							<p class="mt-1 text-sm text-gray-600">Configure the Floating Side Cart Button</p>
+							<h3 class="text-lg font-medium leading-6 text-gray-900"><?php esc_html_e( 'Floating Side Cart Button', 'checkout-wc' ); ?></h3>
+							<p class="mt-1 text-sm text-gray-600"><?php esc_html_e( 'Configure the Floating Side Cart Button', 'checkout-wc' ); ?></p>
 						</div>
 					</div>
 					<div class="mt-5 md:mt-0 md:col-span-2" id="floating-side-cart-button_content">

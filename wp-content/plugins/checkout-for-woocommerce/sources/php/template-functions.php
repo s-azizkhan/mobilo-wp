@@ -523,7 +523,7 @@ function cfw_create_account_checkbox() {
 					 */
 					apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						'cfw_create_account_checkbox_label',
-						// translators: %s: site name
+						/* translators: %s: site name */
 						esc_html__( 'Create %s shopping account.', 'checkout-wc' )
 					),
 					wp_kses_post( $create_account_site_name )
@@ -578,8 +578,12 @@ function cfw_maybe_show_welcome_back_text() {
 		 */
 		$welcome_back_email = apply_filters( 'cfw_welcome_back_email', wp_get_current_user()->user_email );
 
-		/* translators: %1 is the customer's name, %2 is their email address */
-		$welcome_back_text = sprintf( esc_html__( 'Welcome back, %1$s (%2$s).', 'checkout-wc' ), '<strong>' . $welcome_back_name . '</strong>', $welcome_back_email );
+		$welcome_back_text = sprintf(
+			/* translators: %1 is the customer's name, %2 is their email address */
+			esc_html__( 'Welcome back, %1$s (%2$s).', 'checkout-wc' ),
+			'<strong>' . $welcome_back_name . '</strong>',
+			$welcome_back_email
+		);
 
 		/**
 		 * Filters welcome back statement
@@ -790,7 +794,7 @@ function cfw_show_shipping_total(): bool {
 	 * @param string $show_shipping_total Show shipping total
 	 * @since 2.0.0
 	 */
-	return apply_filters( 'cfw_show_shipping_total', WC()->cart->needs_shipping() && wc_shipping_enabled() && WC()->cart->get_cart_contents() && count( WC()->shipping()->get_packages() ) > 0 ) === true;
+	return apply_filters( 'cfw_show_shipping_total', WC()->cart->needs_shipping() && wc_shipping_enabled() && WC()->cart->get_cart_contents() ) === true;
 }
 
 function cfw_mobile_cart_summary() {
@@ -1386,8 +1390,11 @@ function cfw_thank_you_title( WC_Order $order ) {
 		?>
 		<h5>
 			<?php
-			// translators: %s is the order number
-			$title = sprintf( esc_html__( 'Order %s', 'checkout-wc' ), $order->get_order_number() );
+			$title = sprintf(
+				/* translators: %s is the order number */
+				esc_html__( 'Order %s', 'checkout-wc' ),
+				$order->get_order_number()
+			);
 
 			/**
 			 * Filters thank you page heading title
@@ -1401,8 +1408,12 @@ function cfw_thank_you_title( WC_Order $order ) {
 		</h5>
 		<h4>
 			<?php
-			// translators: %s is the billing first name
-			$subtitle = sprintf( esc_html__( 'Thank you %s!', 'checkout-wc' ), $order->get_billing_first_name() );
+
+			$subtitle = sprintf(
+				/* translators: %s is the billing first name */
+				esc_html__( 'Thank you %s!', 'checkout-wc' ),
+				$order->get_billing_first_name()
+			);
 
 			/**
 			 * Filters thank you page heading subtitle
@@ -1839,6 +1850,15 @@ function cfw_order_pay_payment_form( WC_Order $order, array $available_gateways,
 			<?php cfw_payment_methods( $order, false ); ?>
 
 			<?php wc_get_template( 'checkout/terms.php' ); ?>
+
+			<?php
+			/**
+			 * Fires before order pay submit
+			 *
+			 * @since 10.2.0
+			 */
+			do_action( 'cfw_before_order_pay_submit' );
+			?>
 
 			<div id="cfw-payment-action" class="cfw-bottom-controls">
 				<div class="previous-button"></div>

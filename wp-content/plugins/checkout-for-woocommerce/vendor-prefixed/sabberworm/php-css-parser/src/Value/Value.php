@@ -2,31 +2,28 @@
 
 namespace CheckoutWC\Sabberworm\CSS\Value;
 
+use CheckoutWC\Sabberworm\CSS\CSSElement;
 use CheckoutWC\Sabberworm\CSS\Parsing\ParserState;
 use CheckoutWC\Sabberworm\CSS\Parsing\SourceException;
 use CheckoutWC\Sabberworm\CSS\Parsing\UnexpectedEOFException;
 use CheckoutWC\Sabberworm\CSS\Parsing\UnexpectedTokenException;
-use CheckoutWC\Sabberworm\CSS\Renderable;
+use CheckoutWC\Sabberworm\CSS\Position\Position;
+use CheckoutWC\Sabberworm\CSS\Position\Positionable;
 
 /**
  * Abstract base class for specific classes of CSS values: `Size`, `Color`, `CSSString` and `URL`, and another
  * abstract subclass `ValueList`.
  */
-abstract class Value implements Renderable
+abstract class Value implements CSSElement, Positionable
 {
-    /**
-     * @var int
-     *
-     * @internal since 8.8.0
-     */
-    protected $iLineNo;
+    use Position;
 
     /**
      * @param int $iLineNo
      */
     public function __construct($iLineNo = 0)
     {
-        $this->iLineNo = $iLineNo;
+        $this->setPosition($iLineNo);
     }
 
     /**
@@ -217,13 +214,5 @@ abstract class Value implements Renderable
             $sRange .= $oParserState->consume(1);
         } while (strlen($sRange) < $iCodepointMaxLength && preg_match("/[A-Fa-f0-9\?-]/", $oParserState->peek()));
         return "U+{$sRange}";
-    }
-
-    /**
-     * @return int
-     */
-    public function getLineNo()
-    {
-        return $this->iLineNo;
     }
 }

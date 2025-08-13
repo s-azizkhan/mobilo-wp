@@ -32,23 +32,6 @@ class Stripe extends CompatibilityAbstract {
 			return;
 		}
 
-		/**
-		 * Disable ECE express buttons for WooCommerce Stripe Gateway
-		 *
-		 * The non-ECE buttons are preferred because they can be styled to fit with other gateways express buttons.
-		 *
-		 * @since 9.1.9
-		 * @param bool $allow Whether to disable ECE express buttons (default: true)
-		 */
-		if ( apply_filters( 'cfw_disable_woocommerce_stripe_gateway_ece', true ) ) {
-			add_filter(
-				'pre_option__wcstripe_feature_ece', // WC_Stripe_Feature_Flags::ECE_FEATURE_FLAG_NAME
-				function () {
-					return 'no';
-				}
-			);
-		}
-
 		add_filter(
 			'cfw_detected_gateways',
 			function ( $gateways ) {
@@ -75,33 +58,7 @@ class Stripe extends CompatibilityAbstract {
 			return;
 		}
 
-		$ece_enabled = WC_Stripe_Feature_Flags::is_stripe_ece_enabled();
-
-		if ( ! $ece_enabled ) {
-			$this->add_payment_request_buttons();
-			return;
-		}
-
 		$this->add_payment_request_buttons_ece();
-	}
-
-	public function add_payment_request_buttons() {
-		// Setup Apple Pay
-		if ( ! class_exists( '\\WC_Stripe_Payment_Request' ) || ! cfw_is_checkout() ) {
-			return;
-		}
-
-		$stripe_payment_request = \WC_Stripe_Payment_Request::instance();
-
-		add_filter( 'wc_stripe_show_payment_request_on_checkout', '__return_true' );
-
-		// Remove default stripe request placement
-		remove_action( 'woocommerce_checkout_before_customer_details', array( $stripe_payment_request, 'display_payment_request_button_html' ), 1 );
-		remove_action( 'woocommerce_checkout_before_customer_details', array( $stripe_payment_request, 'display_payment_request_button_separator_html' ), 2 );
-
-		// Add our own stripe requests
-		add_action( 'cfw_payment_request_buttons', array( $stripe_payment_request, 'display_payment_request_button_html' ), 1 );
-		add_filter( 'wc_stripe_payment_request_params', array( $this, 'override_btn_height' ), 10, 1 );
 	}
 
 	public function add_payment_request_buttons_ece() {
@@ -113,23 +70,6 @@ class Stripe extends CompatibilityAbstract {
 
 		remove_action( 'woocommerce_checkout_before_customer_details', array( $stripe_ece, 'display_express_checkout_button_html' ), 1 );
 		add_action( 'cfw_payment_request_buttons', array( $stripe_ece, 'display_express_checkout_button_html' ), 1 );
-	}
-
-	public function override_btn_height( $params ): array {
-		/**
-		 * Filters whether to override Stripe payment request button heights
-		 *
-		 * @since 2.0.0
-		 *
-		 * @param bool $override Whether to override Stripe payment request button heights
-		 */
-		if ( ! apply_filters( 'cfw_stripe_compat_override_request_btn_height', true ) ) {
-			return $params;
-		}
-
-		$params['button']['height'] = '42';
-
-		return $params;
 	}
 
 	public function process_payment_request_ajax_checkout() {

@@ -6,7 +6,8 @@ function cfw_register_ab_test( $name, callable $callback ) {
 
 function cfw_activate_ab_test( $name ) {
 	if ( ! cfw_is_ab_test_registered( $name ) ) {
-		wc_get_logger()->error( 'CheckoutWC: You cannot activate an AB test that is not registered.', array( 'source' => 'checkout-wc' ) );
+		/* translators: Error message logged when trying to activate an unregistered AB test */
+		wc_get_logger()->error( __( 'CheckoutWC: You cannot activate an AB test that is not registered.', 'checkout-wc' ), array( 'source' => 'checkout-wc' ) );
 
 		return;
 	}

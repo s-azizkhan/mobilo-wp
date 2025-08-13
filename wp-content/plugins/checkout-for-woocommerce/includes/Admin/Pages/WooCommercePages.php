@@ -26,9 +26,9 @@ class WooCommercePages extends PageAbstract {
 
 		$this->set_tabbed_navigation( new TabNavigation( 'checkout' ) );
 
-		$this->get_tabbed_navigation()->add_tab( 'Checkout', add_query_arg( array( 'subpage' => 'checkout' ), $this->get_url() ), 'checkout' );
-		$this->get_tabbed_navigation()->add_tab( 'Thank You', add_query_arg( array( 'subpage' => 'thankyou' ), $this->get_url() ), 'thankyou' );
-		$this->get_tabbed_navigation()->add_tab( 'Global Options', add_query_arg( array( 'subpage' => 'globaloptions' ), $this->get_url() ), 'globaloptions' );
+		$this->get_tabbed_navigation()->add_tab( __( 'Checkout', 'checkout-wc' ), add_query_arg( array( 'subpage' => 'checkout' ), $this->get_url() ), 'checkout' );
+		$this->get_tabbed_navigation()->add_tab( __( 'Thank You', 'checkout-wc' ), add_query_arg( array( 'subpage' => 'thankyou' ), $this->get_url() ), 'thankyou' );
+		$this->get_tabbed_navigation()->add_tab( __( 'Global Options', 'checkout-wc' ), add_query_arg( array( 'subpage' => 'globaloptions' ), $this->get_url() ), 'globaloptions' );
 	}
 
 	public function output() {
