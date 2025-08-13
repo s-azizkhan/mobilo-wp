@@ -1,0 +1,310 @@
+{
+    "packages": [
+        {
+            "name": "barn2/datatables",
+            "version": "2.0.2",
+            "version_normalized": "2.0.2.0",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:barn2plugins/barn2-datatables.git",
+                "reference": "7ec4cad455562ebc0a72f7d9ea080f058b1db517"
+            },
+            "require": {
+                "datatables.net/datatables.net-dt": "dev-master",
+                "datatables.net/datatables.net-responsive-dt": "dev-master"
+            },
+            "time": "2023-02-27T15:59:29+00:00",
+            "type": "library",
+            "installation-source": "source",
+            "scripts": {
+                "post-update-cmd": [
+                    "npm run assets"
+                ]
+            },
+            "license": [
+                "GPL-3.0"
+            ],
+            "description": "Data tables component for use in table-based plugins such as PTP, WPT and DLP.",
+            "homepage": "https://barn2.com",
+            "install-path": "../barn2/datatables"
+        },
+        {
+            "name": "components/jquery",
+            "version": "3.6.0",
+            "version_normalized": "3.6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/jquery.git",
+                "reference": "6cf38ee1fd04b6adf8e7dda161283aa35be818c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/jquery/zipball/6cf38ee1fd04b6adf8e7dda161283aa35be818c3",
+                "reference": "6cf38ee1fd04b6adf8e7dda161283aa35be818c3",
+                "shasum": ""
+            },
+            "time": "2021-03-20T19:13:42+00:00",
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "jquery.js"
+                    ],
+                    "files": [
+                        "jquery.min.js",
+                        "jquery.min.map",
+                        "jquery.slim.js",
+                        "jquery.slim.min.js",
+                        "jquery.slim.min.map"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JS Foundation and other contributors"
+                }
+            ],
+            "description": "jQuery JavaScript Library",
+            "homepage": "http://jquery.com",
+            "support": {
+                "forum": "http://forum.jquery.com",
+                "irc": "irc://irc.freenode.org/jquery",
+                "issues": "https://github.com/jquery/jquery/issues",
+                "source": "https://github.com/jquery/jquery",
+                "wiki": "http://docs.jquery.com/"
+            },
+            "install-path": "../components/jquery"
+        },
+        {
+            "name": "datatables.net/datatables.net",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DataTables/Dist-DataTables.git",
+                "reference": "7c73dc5f5b2a4cd5745283a3b079e428e1943ca2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DataTables/Dist-DataTables/zipball/7c73dc5f5b2a4cd5745283a3b079e428e1943ca2",
+                "reference": "7c73dc5f5b2a4cd5745283a3b079e428e1943ca2",
+                "shasum": ""
+            },
+            "require": {
+                "components/jquery": ">=1.7"
+            },
+            "time": "2023-04-05T09:35:38+00:00",
+            "default-branch": true,
+            "type": "library",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "SpryMedia",
+                    "homepage": "https://datatables.net"
+                }
+            ],
+            "description": "DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table. This is jQuery DataTables",
+            "homepage": "http://www.datatables.net/",
+            "keywords": [
+                "datatables",
+                "jquery",
+                "table"
+            ],
+            "support": {
+                "forum": "https://datatables.net/forums",
+                "source": "https://github.com/DataTables/Dist-DataTables"
+            },
+            "install-path": "../datatables.net/datatables.net"
+        },
+        {
+            "name": "datatables.net/datatables.net-dt",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DataTables/Dist-DataTables-DataTables.git",
+                "reference": "aec77031b27fa6dd5c8ff940defe125bf5189e21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DataTables/Dist-DataTables-DataTables/zipball/aec77031b27fa6dd5c8ff940defe125bf5189e21",
+                "reference": "aec77031b27fa6dd5c8ff940defe125bf5189e21",
+                "shasum": ""
+            },
+            "require": {
+                "datatables.net/datatables.net": ">=1.10.15"
+            },
+            "time": "2023-04-05T09:36:13+00:00",
+            "default-branch": true,
+            "type": "library",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "SpryMedia",
+                    "homepage": "https://datatables.net"
+                }
+            ],
+            "description": "DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table. This is DataTables with styling for [DataTables](https://datatables.net/)",
+            "homepage": "http://www.datatables.net/",
+            "keywords": [
+                "datatables",
+                "jquery",
+                "table"
+            ],
+            "support": {
+                "forum": "https://datatables.net/forums",
+                "source": "https://github.com/DataTables/Dist-DataTables-DataTables"
+            },
+            "install-path": "../datatables.net/datatables.net-dt"
+        },
+        {
+            "name": "datatables.net/datatables.net-responsive",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DataTables/Dist-DataTables-Responsive.git",
+                "reference": "7461ad849778a5e6c78e911f566e630264970757"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DataTables/Dist-DataTables-Responsive/zipball/7461ad849778a5e6c78e911f566e630264970757",
+                "reference": "7461ad849778a5e6c78e911f566e630264970757",
+                "shasum": ""
+            },
+            "require": {
+                "datatables.net/datatables.net": ">=1.12.1"
+            },
+            "time": "2023-03-17T17:45:30+00:00",
+            "default-branch": true,
+            "type": "library",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "SpryMedia",
+                    "homepage": "https://datatables.net"
+                }
+            ],
+            "description": "In the modern world of responsive web design tables can often cause a particular problem for designers due to their row based layout. Responsive is an extension for DataTables that resolves that problem by optimising the table's layout for different screen sizes through the dynamic insertion and removal of columns from the table. This is Responsive for DataTables",
+            "homepage": "http://www.datatables.net/",
+            "keywords": [
+                "datatables",
+                "jquery",
+                "responsive",
+                "table"
+            ],
+            "support": {
+                "forum": "https://datatables.net/forums",
+                "source": "https://github.com/DataTables/Dist-DataTables-Responsive"
+            },
+            "install-path": "../datatables.net/datatables.net-responsive"
+        },
+        {
+            "name": "datatables.net/datatables.net-responsive-dt",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DataTables/Dist-DataTables-Responsive-DataTables.git",
+                "reference": "5eaafb41d0c869c29950cc697bc429dfb7adbec4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DataTables/Dist-DataTables-Responsive-DataTables/zipball/5eaafb41d0c869c29950cc697bc429dfb7adbec4",
+                "reference": "5eaafb41d0c869c29950cc697bc429dfb7adbec4",
+                "shasum": ""
+            },
+            "require": {
+                "datatables.net/datatables.net-dt": ">=1.12.1",
+                "datatables.net/datatables.net-responsive": ">=2.3.0"
+            },
+            "time": "2023-03-17T17:45:53+00:00",
+            "default-branch": true,
+            "type": "library",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "SpryMedia",
+                    "homepage": "https://datatables.net"
+                }
+            ],
+            "description": "In the modern world of responsive web design tables can often cause a particular problem for designers due to their row based layout. Responsive is an extension for DataTables that resolves that problem by optimising the table's layout for different screen sizes through the dynamic insertion and removal of columns from the table. This is Responsive for DataTables with styling for [DataTables](https://datatables.net/)",
+            "homepage": "http://www.datatables.net/",
+            "keywords": [
+                "datatables",
+                "jquery",
+                "responsive",
+                "table"
+            ],
+            "support": {
+                "forum": "https://datatables.net/forums",
+                "source": "https://github.com/DataTables/Dist-DataTables-Responsive-DataTables"
+            },
+            "install-path": "../datatables.net/datatables.net-responsive-dt"
+        },
+        {
+            "name": "uninhabited/fitvids.js",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uninhabited/fitvids.js.git",
+                "reference": "8b1e4fd313fc18bdec1fb2de5802031102e16d91"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/uninhabited/fitvids.js/zipball/8b1e4fd313fc18bdec1fb2de5802031102e16d91",
+                "reference": "8b1e4fd313fc18bdec1fb2de5802031102e16d91",
+                "shasum": ""
+            },
+            "time": "2020-10-19T14:12:06+00:00",
+            "default-branch": true,
+            "type": "npm-asset",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "WTFPL"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Rupert",
+                    "email": "rupato@gmail.com",
+                    "homepage": "http://daverupert.com"
+                }
+            ],
+            "description": "A lightweight, easy-to-use jQuery plugin for fluid width video embeds.",
+            "homepage": "http://fitvidsjs.com",
+            "keywords": [
+                "responsive",
+                "video"
+            ],
+            "support": {
+                "source": "https://github.com/uninhabited/fitvids.js/tree/master"
+            },
+            "install-path": "../uninhabited/fitvids.js"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}

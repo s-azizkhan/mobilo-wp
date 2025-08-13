@@ -10,9 +10,11 @@ wp-content/uploads/wpo_wcpdf*
 wp-content/updraft/*.gz
 wp-content/updraft/*.txt
 *.az
-vendor
+wp-content/vendor
 # FREE THEMES
 wp-content/themes/twentytwentyfive/
+wp-content/themes/mobilo/
+
 
 # FREE PLUGINS
 wp-content/plugins/action-scheduler/
