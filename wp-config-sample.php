@@ -73,7 +73,7 @@ define('WP_DEBUG_DISPLAY', false);
 define('WP_CACHE', true);
 
 // memory limit
-define('WP_MEMORY_LIMIT', '256M');
+define('WP_MEMORY_LIMIT', '2048M');
 
 // Environment
 define('WP_ENV', 'development');
