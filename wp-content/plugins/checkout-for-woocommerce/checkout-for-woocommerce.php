@@ -10,7 +10,7 @@
  * Plugin Name:       CheckoutWC
  * Plugin URI:        https://www.checkoutwc.com
  * Description:       Beautiful, conversion optimized checkout templates for WooCommerce.
- * Version:           10.2.0
+ * Version:           10.2.1
  * Author:            Kestrel
  * Author URI:        https://kestrelwp.com/
  * License:           GPLv3 or later
@@ -22,7 +22,7 @@
  * Tested up to: 6.8.2
  * WC tested up to: 10.0.2
  * Requires PHP: 7.4
- * Build: BwMIUwpQAgJXAVIMAVAEXABVAFcHAQIAUFRWWQVQXlAXAggeAUhU
+ * Build: BwMIUwpQAgJXAVIMAVAEXABVAFcHAQIAUFRWWQVQXlAXAggeAUhV
  */
 
 use Automattic\WooCommerce\Utilities\FeaturesUtil;
@@ -50,7 +50,7 @@ if ( defined( 'CFW_VERSION' ) ) {
 
 define( 'CFW_NAME', 'Checkout for WooCommerce' );
 define( 'CFW_UPDATE_URL', 'https://www.checkoutwc.com' );
-define( 'CFW_VERSION', '10.2.0' );
+define( 'CFW_VERSION', '10.2.1' );
 define( 'CFW_PATH', __DIR__ );
 define( 'CFW_URL', plugins_url( '/', __FILE__ ) );
 define( 'CFW_MAIN_FILE', __FILE__ );

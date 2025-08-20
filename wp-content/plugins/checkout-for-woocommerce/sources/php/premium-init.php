@@ -410,7 +410,34 @@ add_action(
 
 		( new WelcomeNotice() )->maybe_add();
 
-		$turnstile_feature_notice->maybe_add();
+		$turnstile_feature_notice->maybe_add(
+			'cfw_turnstile_feature',
+			__( 'New Feature: Cloudflare Turnstile Bot Protection', 'checkout-wc' ),
+			sprintf(
+				/* translators: 1: Cloudflare Turnstile name wrapped in strong tags, 2: Setup link */
+				__( 'CheckoutWC now supports %1$s - a privacy-first, CAPTCHA-free way to protect your checkout from bots and spam orders. %2$s', 'checkout-wc' ),
+				sprintf(
+					'<strong>%s</strong>',
+					/* translators: The name of the Cloudflare Turnstile service */
+					__( 'Cloudflare Turnstile', 'checkout-wc' )
+				),
+				PlanManager::has_premium_plan_or_higher( 'pro' ) ? sprintf(
+					/* translators: 1: Link text to setup feature, 2: Link anchor text for setting up feature */
+					'<a href="%1$s" target="_blank">%2$s</a>',
+					admin_url( 'admin.php?page=cfw-settings-integrations' ),
+					__( 'Setup Cloudflare Turnstile now', 'checkout-wc' )
+				) : sprintf(
+					/* translators: 1: Link text to upgrade plan, 2: Upgrade plan anchor text */
+					'<a href="%1$s" target="_blank">%2$s</a>',
+					'https://www.checkoutwc.com/documentation/upgrading-your-license/',
+					__( 'Upgrade your plan now to access', 'checkout-wc' )
+				)
+			),
+			array(
+				'type'        => 'info',
+				'dismissible' => true,
+			)
+		);
 
 		$acr_disabled_notice = new AcrDisabledNotice();
 		$acr_disabled_notice->set_feature( $acr );

@@ -387,4 +387,4 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # PHP ini override
-php_value memory_limit 256M
+php_value memory_limit 2048M
