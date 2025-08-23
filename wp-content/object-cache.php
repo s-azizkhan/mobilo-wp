@@ -3,7 +3,7 @@
  * Plugin Name: Redis Object Cache Drop-In
  * Plugin URI: https://wordpress.org/plugins/redis-cache/
  * Description: A persistent object cache backend powered by Redis. Supports Predis, PhpRedis, Relay, replication, sentinels, clustering and WP-CLI.
- * Version: 2.6.3
+ * Version: 2.6.5
  * Author: Till Krüss
  * Author URI: https://objectcache.pro
  * License: GPLv3
@@ -354,6 +354,7 @@ function wp_cache_add_non_persistent_groups( $groups ) {
 /**
  * Object cache class definition
  */
+#[AllowDynamicProperties]
 class WP_Object_Cache {
     /**
      * The Redis client.
@@ -2411,12 +2412,13 @@ LUA;
         }
 
         try {
-            $value = (int) $this->parse_redis_response( $this->redis->get( $derived_key ) );
+            $value = (int) $this->parse_redis_response( $this->maybe_unserialize( $this->redis->get( $derived_key ) ) );
             $value += $offset;
             $result = $this->parse_redis_response( $this->redis->set( $derived_key, $this->maybe_serialize( $value ) ) );
 
             if ( $result ) {
                 $this->add_to_internal_cache( $derived_key, $value );
+                $result = $value;
             }
         } catch ( Exception $exception ) {
             $this->handle_exception( $exception );
@@ -2472,12 +2474,13 @@ LUA;
         }
 
         try {
-            $value = (int) $this->parse_redis_response( $this->redis->get( $derived_key ) );
+            $value = (int) $this->parse_redis_response( $this->maybe_unserialize( $this->redis->get( $derived_key ) ) );
             $value -= $offset;
             $result = $this->parse_redis_response( $this->redis->set( $derived_key, $this->maybe_serialize( $value ) ) );
 
             if ( $result ) {
                 $this->add_to_internal_cache( $derived_key, $value );
+                $result = $value;
             }
         } catch ( Exception $exception ) {
             $this->handle_exception( $exception );
@@ -2576,7 +2579,6 @@ LUA;
      *
      * @param   string $key        The key under which to store the value, pre-sanitized.
      * @param   string $group      The group value appended to the $key, pre-sanitized.
-     *
      * @return  string
      */
     public function build_key( $key, $group = 'default' ) {
@@ -2595,7 +2597,6 @@ LUA;
      *
      * @param   string $key        The key under which to store the value, pre-sanitized.
      * @param   string $group      The group value appended to the $key, pre-sanitized.
-     *
      * @return  string
      */
     public function fast_build_key( $key, $group = 'default' ) {
@@ -2606,7 +2607,7 @@ LUA;
         $salt = defined( 'WP_REDIS_PREFIX' ) ? trim( WP_REDIS_PREFIX ) : '';
 
         $prefix = $this->is_global_group( $group ) ? $this->global_prefix : $this->blog_prefix;
-        $prefix = trim( $prefix, '_-:$' );
+        $prefix = trim( (string) $prefix, '_-:$' );
 
         return "{$salt}{$prefix}:{$group}:{$key}";
     }
@@ -2614,7 +2615,7 @@ LUA;
     /**
      * Replaces the set group separator by another one
      *
-     * @param string $part   The string to sanitize.
+     * @param  string $part  The string to sanitize.
      * @return string        Sanitized string.
      */
     protected function sanitize_key_part( $part ) {
