@@ -282,40 +282,40 @@ add_filter(
 /**
  * Admin Settings Pages
  */
-// Handles Parent Menu and General Menu
-$appearance_admin_page = new Appearance();
-$general_admin_page    = new General( $appearance_admin_page );
-
-// These priorities start at 70 because General sets up the main menu on $priority - 5
-// 65 is our target priority for our admin parent menu
-$admin_pages = array(
-	'general'                 => $general_admin_page->set_priority( 70 ),
-	'appearance'              => $appearance_admin_page->set_priority( 72 ),
-	'woocommerce_pages'       => ( new WooCommercePages() )->set_priority( 75 ),
-	'express_checkout'        => ( new ExpressCheckout() )->set_priority( 77 ),
-	'side_cart'               => ( new SideCartAdminFree() )->set_priority( 80 ),
-	'trust_badges'            => ( new TrustBadgesAdminFree() )->set_priority( 90 ),
-	'order_bumps'             => ( new OrderBumpsAdminFree() )->set_priority( 95 ),
-	'local_pickup'            => ( new LocalPickupAdminFree() )->set_priority( 102 ),
-	'abandoned_cart_recovery' => ( new AbandonedCartRecoveryAdminFree() )->set_priority( 104 ),
-	'integrations'            => ( new Integrations() )->set_priority( 105 ),
-	'advanced'                => ( new Advanced() )->set_priority( 110 ),
-	'support'                 => ( new Support() )->set_priority( 120 ),
-);
-
-/**
- * Filters the admin pages.
- *
- * @param array $admin_pages The admin pages.
- * @since 10.1.0
- */
-$admin_pages = apply_filters( 'cfw_admin_pages', $admin_pages );
-
-AdminPagesRegistry::bulk_add( $admin_pages );
-
 add_action(
 	'init',
-	function () use ( $admin_pages ) {
+	function () {
+		// Handles Parent Menu and General Menu - instantiate here to avoid translation loading issues
+		$appearance_admin_page = new Appearance();
+		$general_admin_page    = new General( $appearance_admin_page );
+
+		// These priorities start at 70 because General sets up the main menu on $priority - 5
+		// 65 is our target priority for our admin parent menu
+		$admin_pages = array(
+			'general'                 => $general_admin_page->set_priority( 70 ),
+			'appearance'              => $appearance_admin_page->set_priority( 72 ),
+			'woocommerce_pages'       => ( new WooCommercePages() )->set_priority( 75 ),
+			'express_checkout'        => ( new ExpressCheckout() )->set_priority( 77 ),
+			'side_cart'               => ( new SideCartAdminFree() )->set_priority( 80 ),
+			'trust_badges'            => ( new TrustBadgesAdminFree() )->set_priority( 90 ),
+			'order_bumps'             => ( new OrderBumpsAdminFree() )->set_priority( 95 ),
+			'local_pickup'            => ( new LocalPickupAdminFree() )->set_priority( 102 ),
+			'abandoned_cart_recovery' => ( new AbandonedCartRecoveryAdminFree() )->set_priority( 104 ),
+			'integrations'            => ( new Integrations() )->set_priority( 105 ),
+			'advanced'                => ( new Advanced() )->set_priority( 110 ),
+			'support'                 => ( new Support() )->set_priority( 120 ),
+		);
+
+		/**
+		 * Filters the admin pages.
+		 *
+		 * @param array $admin_pages The admin pages.
+		 * @since 10.1.0
+		 */
+		$admin_pages = apply_filters( 'cfw_admin_pages', $admin_pages );
+
+		AdminPagesRegistry::bulk_add( $admin_pages );
+
 		$page_controller = new PageController( $admin_pages );
 		$page_controller->init();
 	}
@@ -324,9 +324,9 @@ add_action(
 if ( ! PlanManager::has_premium_plan_or_higher() ) {
 	add_action(
 		'admin_menu',
-		function () use ( $general_admin_page ) {
+		function () {
 		add_submenu_page(
-			$general_admin_page::get_parent_slug(),
+			'cfw-settings',
 			esc_html__( 'Upgrade to Premium', 'checkout-wc' ),
 			esc_html__( 'Upgrade to Premium', 'checkout-wc' ),
 			'manage_options',
@@ -650,7 +650,7 @@ NoticesManager::instance()->init();
 
 add_action(
 	'admin_init',
-	function () use ( $general_admin_page ) {
+	function () {
 		if ( ! is_admin() ) {
 			return;
 		}

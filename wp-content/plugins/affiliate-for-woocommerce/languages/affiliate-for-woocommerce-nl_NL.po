@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Affiliate For WooCommerce 8.41.0\n"
+"Project-Id-Version: Affiliate For WooCommerce 8.42.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
@@ -410,7 +410,7 @@ msgid "Guest"
 msgstr "Gast"
 
 #. translators: Email address
-#: includes/admin/class-afwc-admin-affiliates.php:2549
+#: includes/admin/class-afwc-admin-affiliates.php:2551
 msgctxt "Confirmation message for adding the new customer as lifetime commission customer"
 msgid "%s - Would you like to link this customer?"
 msgstr "%s - Wilt u deze klant koppelen?"
@@ -490,44 +490,44 @@ msgctxt "Setting link in dashboard widget"
 msgid "Settings"
 msgstr "Instellingen"
 
-#: includes/admin/class-afwc-admin-dashboard.php:230
+#: includes/admin/class-afwc-admin-dashboard.php:225
 msgctxt "Title for pending affiliate status"
 msgid "Awaiting Approval"
 msgstr "In afwachting van goedkeuring"
 
-#: includes/admin/class-afwc-admin-dashboard.php:231
+#: includes/admin/class-afwc-admin-dashboard.php:226
 msgctxt "Title for active affiliate status"
 msgid "Active"
 msgstr "Actief"
 
-#: includes/admin/class-afwc-admin-dashboard.php:232
+#: includes/admin/class-afwc-admin-dashboard.php:227
 msgctxt "Title for rejected affiliate status"
 msgid "Rejected"
 msgstr "Afgewezen"
 
-#: includes/admin/class-afwc-admin-dashboard.php:288
+#: includes/admin/class-afwc-admin-dashboard.php:283
 msgid "all matching products in the order"
 msgstr "alle overeenkomende producten in de bestelling"
 
-#: includes/admin/class-afwc-admin-dashboard.php:289
+#: includes/admin/class-afwc-admin-dashboard.php:284
 msgid "only the first matching product"
 msgstr "alleen het eerste overeenkomende product"
 
-#: includes/admin/class-afwc-admin-dashboard.php:290
+#: includes/admin/class-afwc-admin-dashboard.php:285
 msgid "continue matching commission plans"
 msgstr "Doorgaan met bijpassende commissieplannen"
 
-#: includes/admin/class-afwc-admin-dashboard.php:291
+#: includes/admin/class-afwc-admin-dashboard.php:286
 msgid "use default commission"
 msgstr "standaardcommissie gebruiken"
 
-#: includes/admin/class-afwc-admin-dashboard.php:292
+#: includes/admin/class-afwc-admin-dashboard.php:287
 msgid "apply zero commission"
 msgstr "nulcommissie toepassen"
 
-#: includes/admin/class-afwc-admin-dashboard.php:513
-#: includes/admin/class-afwc-admin-dashboard.php:1707
-#: includes/admin/class-afwc-admin-dashboard.php:1743
+#: includes/admin/class-afwc-admin-dashboard.php:508
+#: includes/admin/class-afwc-admin-dashboard.php:1702
+#: includes/admin/class-afwc-admin-dashboard.php:1738
 #: includes/admin/class-afwc-campaign-dashboard.php:84
 #: includes/admin/class-afwc-campaign-dashboard.php:102
 #: includes/admin/class-afwc-campaign-dashboard.php:165
@@ -544,143 +544,143 @@ msgctxt "authorization failure message"
 msgid "You are not allowed to use this action"
 msgstr "Je mag deze actie niet gebruiken"
 
-#: includes/admin/class-afwc-admin-dashboard.php:540
+#: includes/admin/class-afwc-admin-dashboard.php:535
 msgctxt "error message for requested parameter missing"
 msgid "Status missing"
 msgstr "Status ontbreekt"
 
-#: includes/admin/class-afwc-admin-dashboard.php:574
-#: includes/admin/class-afwc-admin-dashboard.php:615
+#: includes/admin/class-afwc-admin-dashboard.php:569
+#: includes/admin/class-afwc-admin-dashboard.php:610
 msgid "Required params missing"
 msgstr "Vereiste params ontbreken"
 
-#: includes/admin/class-afwc-admin-dashboard.php:584
+#: includes/admin/class-afwc-admin-dashboard.php:579
 msgid "Failed to update commission status, please try after some time."
 msgstr "Het is niet gelukt om de commissiestatus bij te werken. Probeer het na enige tijd opnieuw."
 
 #. translators: Number of records updated in referrals table.
-#: includes/admin/class-afwc-admin-dashboard.php:593
+#: includes/admin/class-afwc-admin-dashboard.php:588
 msgid "Commission status updated for %d record"
 msgid_plural "Commission status updated for %d records"
 msgstr[0] "Commissiestatus bijgewerkt voor %d record"
 msgstr[1] ""
 
 #. translators: Name of the payout method.
-#: includes/admin/class-afwc-admin-dashboard.php:656
+#: includes/admin/class-afwc-admin-dashboard.php:651
 msgctxt "Payout failed error message"
 msgid "%s payout failed."
 msgstr "%s uitbetaling mislukt."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1060
+#: includes/admin/class-afwc-admin-dashboard.php:1055
 msgctxt "csv export error message"
 msgid "WordPress upload directory is not set."
 msgstr "De uploadmap van WordPress is niet ingesteld."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1142
+#: includes/admin/class-afwc-admin-dashboard.php:1137
 msgctxt "error message when fetching payouts"
 msgid "Required parameter missing - Affiliate ID"
 msgstr "Verplichte parameter ontbreekt - Affiliate ID"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1168
+#: includes/admin/class-afwc-admin-dashboard.php:1163
 msgctxt "error message when fetching products"
 msgid "Required parameter missing - Affiliate ID"
 msgstr "Verplichte parameter ontbreekt - Affiliate ID"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1197
+#: includes/admin/class-afwc-admin-dashboard.php:1192
 #: includes/admin/class-afwc-pending-payout-dashboard.php:96
 msgctxt "error message when fetching profile details"
 msgid "Required parameter missing - Affiliate ID."
 msgstr "Vereiste parameter ontbreekt - Affiliate ID."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1305
+#: includes/admin/class-afwc-admin-dashboard.php:1300
 msgctxt "error message when missing necessary parameters"
 msgid "Required params missing"
 msgstr "Vereiste params ontbreken"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1322
+#: includes/admin/class-afwc-admin-dashboard.php:1317
 msgctxt "multi tier fetching error message"
 msgid "You do not have permission to fetch the multi-tier details."
 msgstr "Je hebt geen toestemming om de meerlagige details op te halen."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1350
+#: includes/admin/class-afwc-admin-dashboard.php:1345
 msgctxt "error message when fetching affiliate KPI details"
 msgid "Required parameter missing - Affiliate ID."
 msgstr "Vereiste parameter ontbreekt - Affiliate ID."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1420
+#: includes/admin/class-afwc-admin-dashboard.php:1415
 msgctxt "error message when fetching affiliate details"
 msgid "Required parameter missing - Affiliate ID."
 msgstr "Vereiste parameter ontbreekt - Affiliate ID."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1609
+#: includes/admin/class-afwc-admin-dashboard.php:1604
 msgctxt "error message for missing of required parameter for linking the lifetime customer"
 msgid "Customer or affiliate ID missing"
 msgstr "Klant- of partner-ID ontbreekt"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1621
+#: includes/admin/class-afwc-admin-dashboard.php:1616
 msgctxt "error message on linking the customer due to the customer is already linked with the same affiliate"
 msgid "Customer is already linked to this affiliate"
 msgstr "Klant is al gekoppeld aan deze partner"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1622
+#: includes/admin/class-afwc-admin-dashboard.php:1617
 msgctxt "error message on linking the customer due to the customer is already linked with another affiliate"
 msgid "Customer is already linked with another affiliate"
 msgstr "Klant is al gekoppeld aan een andere affiliate"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1651
+#: includes/admin/class-afwc-admin-dashboard.php:1646
 msgctxt "error message for missing of required parameter for unlinking the lifetime customer"
 msgid "Customer or affiliate ID missing"
 msgstr "Klant- of partner-ID ontbreekt"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1681
+#: includes/admin/class-afwc-admin-dashboard.php:1676
 msgctxt "error message for missing of search term of linking lifetime customer"
 msgid "Search term is missing"
 msgstr "Zoekterm ontbreekt"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1777
-#: includes/admin/class-afwc-admin-dashboard.php:1870
-#: includes/admin/class-afwc-admin-dashboard.php:1915
+#: includes/admin/class-afwc-admin-dashboard.php:1772
+#: includes/admin/class-afwc-admin-dashboard.php:1865
+#: includes/admin/class-afwc-admin-dashboard.php:1910
 msgctxt "authorization failure message"
 msgid "You are not allowed to perform this action"
 msgstr "U mag deze actie niet uitvoeren"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1781
-#: includes/admin/class-afwc-admin-dashboard.php:1874
-#: includes/admin/class-afwc-admin-dashboard.php:1919
+#: includes/admin/class-afwc-admin-dashboard.php:1776
+#: includes/admin/class-afwc-admin-dashboard.php:1869
+#: includes/admin/class-afwc-admin-dashboard.php:1914
 msgctxt "error message for missing affiliate data"
 msgid "Affiliate profile data is missing"
 msgstr "Affiliate profielgegevens ontbreken"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1786
-#: includes/admin/class-afwc-admin-dashboard.php:1879
-#: includes/admin/class-afwc-admin-dashboard.php:1924
+#: includes/admin/class-afwc-admin-dashboard.php:1781
+#: includes/admin/class-afwc-admin-dashboard.php:1874
+#: includes/admin/class-afwc-admin-dashboard.php:1919
 msgctxt "error message for missing affiliate ID"
 msgid "Affiliate ID is missing"
 msgstr "Affiliate ID ontbreekt"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1800
-#: includes/frontend/class-afwc-my-account.php:2096
+#: includes/admin/class-afwc-admin-dashboard.php:1795
+#: includes/frontend/class-afwc-my-account.php:2095
 msgctxt "referral url identifier updating error message"
 msgid "The URL identifier could not updated"
 msgstr "De URL-identifier kon niet worden bijgewerkt"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1809
-#: includes/frontend/class-afwc-my-account.php:2119
+#: includes/admin/class-afwc-admin-dashboard.php:1804
+#: includes/frontend/class-afwc-my-account.php:2118
 msgctxt "referral url identifier updating error message"
 msgid "Something went wrong"
 msgstr "Er ging iets mis"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1825
+#: includes/admin/class-afwc-admin-dashboard.php:1820
 msgctxt "error message for invalid paypal email address"
 msgid "Invalid PayPal email address"
 msgstr "Ongeldig PayPal e-mailadres"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1888
+#: includes/admin/class-afwc-admin-dashboard.php:1883
 msgctxt "error message while approving an affiliate"
 msgid "Something went wrong while approving an affiliate."
 msgstr "Er is iets misgegaan bij het goedkeuren van een partner."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1975
+#: includes/admin/class-afwc-admin-dashboard.php:1970
 msgctxt "error message when fetching payout KPI details"
 msgid "Required parameter missing."
 msgstr "Vereiste parameter ontbreekt."
@@ -690,7 +690,7 @@ msgid "Getting started"
 msgstr "Aan de slag"
 
 #: includes/admin/class-afwc-admin-notifications.php:93
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Settings"
 msgstr "Instellingen"
 
@@ -741,19 +741,19 @@ msgid "📣 Big update"
 msgstr "Grote update"
 
 #: includes/admin/class-afwc-admin-notifications.php:231
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notice text for affiliate commission rule calculation update"
 msgid "We have improved commission calculations in certain cases. New referral orders may have updated commissions issued (the existing referrals remain unaffected)."
 msgstr "We hebben de commissieberekeningen in bepaalde gevallen verbeterd. Voor nieuwe verwijzingsopdrachten kunnen bijgewerkte provisies worden afgegeven (de bestaande verwijzingen blijven onaangetast)."
 
 #: includes/admin/class-afwc-admin-notifications.php:236
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notice text for affiliate commission rule calculation update"
 msgid "Please review your commission plans and place a test order to verify everything is working as expected."
 msgstr "Bekijk uw commissieplannen en plaats een testbestelling om te controleren of alles werkt zoals verwacht."
 
 #: includes/admin/class-afwc-admin-notifications.php:246
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Link to open plan dashboard"
 msgid "Review plans"
 msgstr "Plannen beoordelen"
@@ -774,8 +774,8 @@ msgid "Search affiliate by email, username, name or user ID to assign this order
 msgstr "Zoek partners op e-mail, gebruikersnaam, naam of gebruikers-ID om deze bestelling aan hen toe te wijzen."
 
 #: includes/admin/class-afwc-admin-order-affiliate-details.php:164
-#: includes/class-affiliate-for-woocommerce.php:1398
-#: includes/common/class-afwc-coupon.php:111
+#: includes/class-affiliate-for-woocommerce.php:966
+#: includes/tracking/class-afwc-coupon.php:111
 msgctxt "affiliate search placeholder"
 msgid "Search by email, username or name"
 msgstr "Zoeken op e-mail, gebruikersnaam of naam"
@@ -2002,67 +2002,67 @@ msgid "Join our affiliate program"
 msgstr "Word lid van ons partnerprogramma"
 
 #: includes/affiliate-for-woocommerce-functions.php:975
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for today"
 msgid "Today"
 msgstr "Vandaag"
 
 #: includes/affiliate-for-woocommerce-functions.php:976
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for yesterday"
 msgid "Yesterday"
 msgstr "Gisteren"
 
 #: includes/affiliate-for-woocommerce-functions.php:979
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for this week"
 msgid "This Week"
 msgstr "Deze week"
 
 #: includes/affiliate-for-woocommerce-functions.php:980
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last week"
 msgid "Last Week"
 msgstr "Vorige week"
 
 #: includes/affiliate-for-woocommerce-functions.php:981
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last 4 weeks"
 msgid "Last 4 Weeks"
 msgstr "Laatste 4 weken"
 
 #: includes/affiliate-for-woocommerce-functions.php:984
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for this month"
 msgid "This Month"
 msgstr "Deze maand"
 
 #: includes/affiliate-for-woocommerce-functions.php:985
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last month"
 msgid "Last Month"
 msgstr "Laatste maand"
 
 #: includes/affiliate-for-woocommerce-functions.php:986
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for 3 months"
 msgid "3 Months"
 msgstr "3 maanden"
 
 #: includes/affiliate-for-woocommerce-functions.php:987
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for 6 months"
 msgid "6 Months"
 msgstr "6 maanden"
 
 #: includes/affiliate-for-woocommerce-functions.php:990
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for this year"
 msgid "This Year"
 msgstr "Dit jaar"
 
 #: includes/affiliate-for-woocommerce-functions.php:991
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last year"
 msgid "Last Year"
 msgstr "Vorig jaar"
@@ -2119,80 +2119,80 @@ msgid "No Affiliate Tags found"
 msgstr "Geen Affiliate Tags gevonden"
 
 #. translators: A small arrow
-#: includes/class-affiliate-for-woocommerce.php:429
+#: includes/class-affiliate-for-woocommerce.php:435
 msgid "Affiliates Dashboard"
 msgstr "Affiliates Dashboard"
 
 #. translators: A small arrow
-#: includes/class-affiliate-for-woocommerce.php:429
-#: assets/js/admin.js:1
+#: includes/class-affiliate-for-woocommerce.php:435
+#: assets/js/admin/admin.js:1
 msgid "Affiliates"
 msgstr "Filialen"
 
-#: includes/class-affiliate-for-woocommerce.php:438
+#: includes/class-affiliate-for-woocommerce.php:444
 msgctxt "Page title for setup guide page"
 msgid "Getting Started"
 msgstr "Aan de slag"
 
-#: includes/class-affiliate-for-woocommerce.php:438
+#: includes/class-affiliate-for-woocommerce.php:444
 msgctxt "Menu name for setup guide page"
 msgid "Getting Started"
 msgstr "Aan de slag"
 
 #. translators: 1: user display name 2: user ID 3: user email
-#: includes/class-affiliate-for-woocommerce.php:1388
-#: includes/common/class-afwc-coupon.php:99
+#: includes/class-affiliate-for-woocommerce.php:956
+#: includes/tracking/class-afwc-coupon.php:99
 msgid "%1$s (#%2$s &ndash; %3$s)"
 msgstr "%1$s (#%2$s &ndash; %3$s)"
 
-#: includes/class-affiliate-for-woocommerce.php:1507
+#: includes/class-affiliate-for-woocommerce.php:1075
 msgctxt "text to copy the affiliate's product-specific referral link"
 msgid "Click to copy referral link"
 msgstr "Klik om doorverwijslink te kopiëren"
 
 #. translators: 1: Callable name 2: Error message
-#: includes/class-affiliate-for-woocommerce.php:1579
+#: includes/class-affiliate-for-woocommerce.php:1147
 msgctxt "Error message details"
 msgid "Error in %1$s. Details: %2$s"
 msgstr "Fout in %1$s. Details: %2$s"
 
-#: includes/class-affiliate-for-woocommerce.php:1658
+#: includes/class-affiliate-for-woocommerce.php:1226
 msgctxt "referral url identifier updating error message"
 msgid "Affiliate ID missing for updating affiliate URL identifier."
 msgstr "Affiliate ID ontbreekt voor het bijwerken van affiliate URL-identifier."
 
-#: includes/class-affiliate-for-woocommerce.php:1668
+#: includes/class-affiliate-for-woocommerce.php:1236
 msgctxt "referral url identifier updating error message"
 msgid "The affiliate URL identifier can not be empty."
 msgstr "De URL-identifier van het filiaal kan niet leeg zijn."
 
-#: includes/class-affiliate-for-woocommerce.php:1677
+#: includes/class-affiliate-for-woocommerce.php:1245
 msgctxt "referral url identifier updating error message"
 msgid "Numeric values are not allowed for affiliate URL identifier."
 msgstr "Numerieke waarden zijn niet toegestaan voor affiliate URL identifier."
 
-#: includes/class-affiliate-for-woocommerce.php:1686
+#: includes/class-affiliate-for-woocommerce.php:1254
 msgctxt "referral identifier pattern validation error message"
 msgid "Invalid affiliate URL identifier. It should be a combination of alphabets and numbers, but the number should not be in the first position."
 msgstr "Ongeldige URL-identificatiecode. Het moet een combinatie van letters en cijfers zijn, maar het cijfer mag niet op de eerste positie staan."
 
-#: includes/class-affiliate-for-woocommerce.php:1701
+#: includes/class-affiliate-for-woocommerce.php:1269
 msgctxt "referral url identifier updating error message"
 msgid "Old and new affiliate URL identifier are same. Please choose a different identifier."
 msgstr "De oude en nieuwe URL-identificatie zijn hetzelfde. Kies een andere identifier."
 
-#: includes/class-affiliate-for-woocommerce.php:1709
+#: includes/class-affiliate-for-woocommerce.php:1277
 msgctxt "referral url identifier updating error message"
 msgid "The URL identifier already exists. Please choose a different identifier."
 msgstr "De URL-identifier bestaat al. Kies een andere identifier."
 
 #. translators: Affiliate For WooCommerce icon
-#: includes/class-afwc-admin-bar-menu.php:66
+#: includes/admin/class-afwc-admin-bar-menu.php:66
 msgctxt "label in the admin bar"
 msgid "%s Affiliates"
 msgstr "%s Affiliates"
 
-#: includes/class-afwc-admin-bar-menu.php:77
+#: includes/admin/class-afwc-admin-bar-menu.php:77
 msgctxt "Meta title of the admin bar"
 msgid "Access affiliates dashboard"
 msgstr "Toegang affiliates dashboard"
@@ -2215,12 +2215,12 @@ msgctxt "Greeting for admin"
 msgid "there"
 msgstr "daar"
 
-#: includes/class-afwc-multi-tier.php:399
+#: includes/multi-tier/class-afwc-multi-tier.php:399
 msgctxt "Title for Affiliate registration parent user's id field"
 msgid "Referral affiliate user ID"
 msgstr "Referral affiliate gebruikers-ID"
 
-#: includes/class-afwc-multi-tier.php:559
+#: includes/multi-tier/class-afwc-multi-tier.php:559
 msgctxt "Input label for parent affiliate in user edit setting"
 msgid "Parent affiliate"
 msgstr "Moedermaatschappij"
@@ -2374,35 +2374,35 @@ msgid "You are not registered as an affiliate."
 msgstr "Je bent niet geregistreerd als affiliate."
 
 #. translators: 1: The current task class name
-#: includes/class-afwc-report-background-emailer.php:164
+#: includes/queue/class-afwc-report-background-emailer.php:164
 msgctxt "Error message for data unavailable"
 msgid "Data are not available to run task in %s"
 msgstr "Er zijn geen gegevens beschikbaar om de taak in %s uit te voeren"
 
 #. translators: 1: The affiliate IDs
-#: includes/class-afwc-report-background-emailer.php:186
+#: includes/queue/class-afwc-report-background-emailer.php:186
 msgctxt "Logger for summary email report"
 msgid "AFWC summary email report failed to send for Affiliate ID: %d"
 msgstr "AFWC samenvattend e-mailrapport is niet verzonden voor Affiliate ID: %d"
 
 #. translators: 1: The affiliate IDs
-#: includes/class-afwc-report-background-emailer.php:195
+#: includes/queue/class-afwc-report-background-emailer.php:195
 msgctxt "Logger for summary email report"
 msgid "AFWC summary email report sent successfully for Affiliate ID: %d"
 msgstr "AFWC samenvattend e-mailrapport succesvol verzonden voor Affiliate ID: %d"
 
 #. translators: 1: The affiliate ID 2: The task class name
-#: includes/class-afwc-report-background-emailer.php:206
+#: includes/queue/class-afwc-report-background-emailer.php:206
 msgctxt "Logger for batch stopped due to health status"
 msgid "Batch stopped due to health status after Affiliate ID : %1$d in task: %2$s"
 msgstr "Batch gestopt vanwege gezondheidsstatus na Affiliate ID : %1$d in taak: %2$s"
 
-#: includes/class-afwc-visits.php:225
+#: includes/reports/class-afwc-visits.php:225
 msgctxt "Referral medium title for link"
 msgid "Link"
 msgstr "Link"
 
-#: includes/class-afwc-visits.php:226
+#: includes/reports/class-afwc-visits.php:226
 msgctxt "Referral medium title for coupon"
 msgid "Coupon"
 msgstr "Coupon"
@@ -2672,38 +2672,38 @@ msgctxt "Error message for referral order count rule"
 msgid "Unable to fetch the total count for valid referral orders"
 msgstr "Kan het totale aantal geldige verwijzingsopdrachten niet ophalen"
 
-#: includes/common/class-afwc-coupon.php:110
+#: includes/tracking/class-afwc-coupon.php:110
 msgid "Assign to affiliate"
 msgstr "Toewijzen aan filiaal"
 
-#: includes/common/class-afwc-coupon.php:120
+#: includes/tracking/class-afwc-coupon.php:120
 msgctxt "help tip for search and assign affiliate"
 msgid "Search affiliate by email, username, name or user id to assign this coupon to them. Affiliates will see this coupon in their My account > Affiliates > Profile."
 msgstr "Zoek affiliates op e-mail, gebruikersnaam, naam of gebruikers-id om deze coupon aan hen toe te wijzen. Affiliates zien deze coupon in hun Mijn account > Affiliates > Profiel."
 
-#: includes/common/class-afwc-landing-page.php:153
+#: includes/tracking/class-afwc-landing-page.php:153
 msgctxt "Title for landing page meta box"
 msgid "Affiliate Landing Page"
 msgstr "Affiliate landingspagina"
 
-#: includes/common/class-afwc-landing-page.php:181
+#: includes/tracking/class-afwc-landing-page.php:181
 msgctxt "Label for the landing page assignment field"
 msgid "Assign to affiliate"
 msgstr "Toewijzen aan filiaal"
 
-#: includes/common/class-afwc-landing-page.php:185
+#: includes/tracking/class-afwc-landing-page.php:185
 msgctxt "Description for assign to affiliate - landing page meta box field"
 msgid "This will be set as a landing page for the selected affiliate."
 msgstr "Deze wordt ingesteld als landingspagina voor de geselecteerde affiliate."
 
 #. translators: 1: Merge tag for affiliate Id 2: Merge tag for affiliate name 3: Merge tag for affiliate link
-#: includes/common/class-afwc-landing-page.php:189
+#: includes/tracking/class-afwc-landing-page.php:189
 msgctxt "Show the available merge tags"
 msgid "Available merge tags: <code>%1$s</code> <code>%2$s</code> <code>%3$s</code>"
 msgstr "Beschikbare samenvoeg tags: <code>%1$s</code> <code>%2$s</code> <code>%3$s</code>"
 
 #. translators: Affiliate ID
-#: includes/common/class-afwc-landing-page.php:284
+#: includes/tracking/class-afwc-landing-page.php:284
 msgctxt "Exception message for landing page fetching query failed"
 msgid "Database query failed while fetching the landing page for %d"
 msgstr "Database query mislukt tijdens het ophalen van de landingspagina voor %d"
@@ -3266,7 +3266,7 @@ msgid "Affiliate Network"
 msgstr "Affiliate Netwerk"
 
 #: includes/frontend/class-afwc-my-account.php:258
-#: includes/frontend/class-afwc-my-account.php:2148
+#: includes/frontend/class-afwc-my-account.php:2147
 msgid "Affiliate"
 msgstr "Affiliate"
 
@@ -3287,7 +3287,7 @@ msgstr "Registreren als partner"
 
 #: includes/frontend/class-afwc-my-account.php:627
 #: templates/my-account/dashboard/referrals-table.php:68
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Deleted campaign ID in referral table"
 msgid "Deleted"
 msgstr "Verwijderd"
@@ -3323,111 +3323,111 @@ msgctxt "Affiliate my account tab title for campaigns"
 msgid "Campaigns"
 msgstr "Campagnes"
 
-#: includes/frontend/class-afwc-my-account.php:1870
+#: includes/frontend/class-afwc-my-account.php:1869
 msgctxt "Default value for customer name in my account referral reports"
 msgid "Guest"
 msgstr "Gast"
 
-#: includes/frontend/class-afwc-my-account.php:1935
+#: includes/frontend/class-afwc-my-account.php:1934
 msgctxt "referral identifier pattern validation error message"
 msgid "Invalid identifier. It should be a combination of alphabets and numbers, but the number should not be in the first position."
 msgstr "Ongeldige identifier. Het moet een combinatie van letters en cijfers zijn, maar het cijfer mag niet op de eerste positie staan."
 
-#: includes/frontend/class-afwc-my-account.php:2003
+#: includes/frontend/class-afwc-my-account.php:2002
 msgctxt "account details updating error message"
 msgid "Invalid user"
 msgstr "Ongeldige gebruiker"
 
-#: includes/frontend/class-afwc-my-account.php:2013
+#: includes/frontend/class-afwc-my-account.php:2012
 msgctxt "account details updating error message"
 msgid "Missing data"
 msgstr "Ontbrekende gegevens"
 
-#: includes/frontend/class-afwc-my-account.php:2047
+#: includes/frontend/class-afwc-my-account.php:2046
 msgctxt "Affiliate My Account page: PayPal email validation"
 msgid "The PayPal email address is incorrect."
 msgstr "Het e-mailadres van PayPal is onjuist."
 
-#: includes/frontend/class-afwc-my-account.php:2071
+#: includes/frontend/class-afwc-my-account.php:2070
 msgctxt "referral url identifier updating error message"
 msgid "Missing data"
 msgstr "Ontbrekende gegevens"
 
-#: includes/frontend/class-afwc-my-account.php:2086
+#: includes/frontend/class-afwc-my-account.php:2085
 msgctxt "referral url identifier updating error message"
 msgid "Custom affiliate URL identifier not allowed."
 msgstr "Aangepaste affiliate URL-identifier niet toegestaan."
 
-#: includes/frontend/class-afwc-my-account.php:2107
+#: includes/frontend/class-afwc-my-account.php:2106
 msgctxt "referral url identifier updated message"
 msgid "Identifier saved successfully."
 msgstr "Identifier succesvol opgeslagen."
 
-#: includes/frontend/class-afwc-my-account.php:2149
+#: includes/frontend/class-afwc-my-account.php:2148
 msgid "Endpoint for the My Account &rarr; Affiliate page"
 msgstr "Eindpunt voor de pagina Mijn account &rarr; Affiliate"
 
-#: includes/frontend/class-afwc-my-account.php:2415
+#: includes/frontend/class-afwc-my-account.php:2414
 msgctxt "Referrals table header title for date column"
 msgid "Date"
 msgstr "Datum"
 
-#: includes/frontend/class-afwc-my-account.php:2416
+#: includes/frontend/class-afwc-my-account.php:2415
 msgctxt "Referrals table header title for order id column"
 msgid "Order ID"
 msgstr "Bestel ID"
 
-#: includes/frontend/class-afwc-my-account.php:2417
+#: includes/frontend/class-afwc-my-account.php:2416
 msgctxt "Referrals table header title for commission column"
 msgid "Commission"
 msgstr "Commissie"
 
-#: includes/frontend/class-afwc-my-account.php:2418
+#: includes/frontend/class-afwc-my-account.php:2417
 msgctxt "Referrals table header title for payout status column"
 msgid "Payout status"
 msgstr "Uitbetalingsstatus"
 
-#: includes/frontend/class-afwc-my-account.php:2422
+#: includes/frontend/class-afwc-my-account.php:2421
 msgctxt "Referrals table header title for customer column"
 msgid "Customer"
 msgstr "Klant"
 
-#: includes/frontend/class-afwc-my-account.php:2425
+#: includes/frontend/class-afwc-my-account.php:2424
 msgctxt "Referrals table header title for campaign column"
 msgid "Campaign"
 msgstr "Campagne"
 
-#: includes/frontend/class-afwc-my-account.php:2439
+#: includes/frontend/class-afwc-my-account.php:2438
 msgctxt "Products table header title for product name column"
 msgid "Product"
 msgstr "Product"
 
-#: includes/frontend/class-afwc-my-account.php:2440
+#: includes/frontend/class-afwc-my-account.php:2439
 msgctxt "Products table header title for quantity column"
 msgid "Quantity"
 msgstr "Hoeveelheid"
 
-#: includes/frontend/class-afwc-my-account.php:2441
+#: includes/frontend/class-afwc-my-account.php:2440
 msgctxt "Products table header title for sales column"
 msgid "Sales"
 msgstr "Verkoop"
 
-#: includes/frontend/class-afwc-my-account.php:2456
+#: includes/frontend/class-afwc-my-account.php:2455
 msgctxt "Payouts table header title for date column"
 msgid "Date"
 msgstr "Datum"
 
-#: includes/frontend/class-afwc-my-account.php:2457
+#: includes/frontend/class-afwc-my-account.php:2456
 msgctxt "Payouts table header title for payout amount column"
 msgid "Amount"
 msgstr "Bedrag"
 
-#: includes/frontend/class-afwc-my-account.php:2458
+#: includes/frontend/class-afwc-my-account.php:2457
 msgctxt "Payouts table header title for payout method column"
 msgid "Method"
 msgstr "Methode"
 
-#: includes/frontend/class-afwc-my-account.php:2459
+#: includes/frontend/class-afwc-my-account.php:2458
 msgctxt "Payouts table header title for payout notes column"
 msgid "Notes"
 msgstr "Opmerkingen"
@@ -5115,7 +5115,7 @@ msgid "View all"
 msgstr "Bekijk alle"
 
 #: templates/my-account/affiliate-title-card.php:22
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "affiliate profile image"
 msgid "Affiliate profile image"
 msgstr "Affiliate profielafbeelding"
@@ -5220,7 +5220,7 @@ msgstr "Meer laden"
 #: templates/my-account/dashboard/products-table.php:77
 #: templates/my-account/dashboard/referrals-table.php:113
 #: templates/my-account/dashboard/visits-table.php:137
-#: assets/js/my-account/affiliate-reports.js:65
+#: assets/js/frontend/my-account/affiliate-reports.js:65
 msgctxt "Text for no data to load"
 msgid "No more data to load"
 msgstr "Geen gegevens meer om te laden"
@@ -5383,1685 +5383,1685 @@ msgstr "Onze producten"
 msgid "Here is our complete product catalog: %s."
 msgstr "Hier is onze volledige productcatalogus: %s."
 
-#: assets/js/admin.js:1
-#: assets/js/frontend.js:1
+#: assets/js/admin/admin.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "default loader message"
 msgid "Loading"
 msgstr "Laden"
 
-#: assets/js/admin.js:1
-#: assets/js/frontend.js:1
+#: assets/js/admin/admin.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "Loading text for campaigns"
 msgid "Loading Campaigns"
 msgstr "Campagnes laden"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for successful campaign creation"
 msgid "Campaign created successfully"
 msgstr "Campagne succesvol aangemaakt"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for successful campaign update"
 msgid "Campaign updated successfully"
 msgstr "Campagne succesvol bijgewerkt"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for failed campaign creation or update"
 msgid "Failed to create or update campaign"
 msgstr "Campagne niet gemaakt of bijgewerkt"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for successful campaign deletion"
 msgid "Campaign deleted successfully"
 msgstr "Campagne succesvol verwijderd"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for failed campaign deletion"
 msgid "Failed to delete campaign"
 msgstr "Campagne niet verwijderd"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "re-generating sample campaigns loader message"
 msgid "Generating Sample Campaigns"
 msgstr "Voorbeeldcampagnes genereren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for successful sample campaigns creation"
 msgid "Sample campaigns created successfully"
 msgstr "Voorbeeldcampagnes succesvol gemaakt"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for failed sample campaigns creation"
 msgid "Failed to create sample campaigns"
 msgstr "Mislukt bij het maken van voorbeeldcampagnes"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Loading text for commissions"
 msgid "Loading Commission Plans"
 msgstr "Plannen laadcommissie"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification success message after creating a new commission plan"
 msgid "The commission plan created successfully"
 msgstr "Het commissieplan creëerde met succes"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification success message after updating a commission plan"
 msgid "The commission plan updated successfully"
 msgstr "Het commissieplan met succes bijgewerkt"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification error message for failed commission plan creation or update"
 msgid "Failed to create or update the commission plan"
 msgstr "Het commissieplan is niet gemaakt of bijgewerkt"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification success message after deleting a commission plan"
 msgid "The commission plan deleted successfully"
 msgstr "Het commissieplan met succes verwijderd"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification error message for failed commission plan deletion"
 msgid "Failed to delete the commission plan"
 msgstr "Het lukte niet om het commissieplan te verwijderen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for successful payout"
 msgid "Payout processed successfully"
 msgstr "Uitbetaling succesvol verwerkt"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Success message for removal of linked lifetime commission customer"
 msgid "Customer unlinked successfully"
 msgstr "Klant succesvol ontkoppeld"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Error message for failing of the unlinking the customer for lifetime commissions"
 msgid "Customer can't be unlinked"
 msgstr "Klant kan niet worden ontkoppeld"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Success message after linking the customer for lifetime commissions"
 msgid "Customer linked successfully"
 msgstr "Klant succesvol gekoppeld"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Error message for failing of linking the customer for lifetime commissions"
 msgid "Customer can't be linked"
 msgstr "Klant kan niet worden gekoppeld"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "email label at in affiliate profile tab"
 msgid "Email"
 msgstr "E-mail"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "first name label at in affiliate profile tab"
 msgid "First Name"
 msgstr "Voornaam"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "last name label at in affiliate profile tab"
 msgid "Last Name"
 msgstr "Achternaam"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "user website label at in affiliate profile tab"
 msgid "Website"
 msgstr "Website"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "contact label at in affiliate profile tab"
 msgid "Way To Contact"
 msgstr "Manier om contact op te nemen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "skype id label at in affiliate profile tab"
 msgid "Skype ID"
 msgstr "Skype-ID"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "affiliate description label at in affiliate profile tab"
 msgid "About Affiliate"
 msgstr "Over Affiliate"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "affiliate paypal email label at in affiliate profile tab"
 msgid "PayPal Email Address"
 msgstr "E-mailadres PayPal"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "affiliate parent affiliate label at in affiliate profile tab"
 msgid "Parent Affiliate"
 msgstr "Moedermaatschappij"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "confirmation message before leaving unsaved profile tab"
 msgid "Are you sure you want to leave? Unsaved changes will be lost."
 msgstr "Weet je zeker dat je weg wilt? Niet-opgeslagen wijzigingen gaan verloren."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "title text for disabled date filter due to unsaved changes on profile"
 msgid "You cannot change dates as the affiliate profile has unsaved changes."
 msgstr "Je kunt geen data wijzigen omdat het partnerprofiel niet opgeslagen wijzigingen heeft."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "self linking alert"
 msgid "Are you sure you want to link the same affiliate as a lifetime customer?"
 msgstr "Weet je zeker dat je dezelfde affiliate wilt koppelen als een levenslange klant?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - title for affiliate identifier edit icon"
 msgid "Edit identifier"
 msgstr "Identificatiecode bewerken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder for Affiliate identifier field"
 msgid "Enter affiliate identifier"
 msgstr "Voer affiliate identificatiecode in"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - title for edit affiliate identifier cancel icon"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Profile warning for personalizing affiliate identifier can not use"
 msgid "The affiliate cannot use this identifier as the "
 msgstr "De aangeslotene kan deze identifier niet gebruiken als de"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - setting name for personalizing affiliate identifier at profile warning"
 msgid "Personalize affiliate identifier"
 msgstr "Affiliate identificatie personaliseren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Profile warning for personalizing affiliate identifier setting is disabled"
 msgid " setting is disabled. "
 msgstr " instelling is uitgeschakeld."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Profile warning for allow setting to personalizing affiliate identifier"
 msgid "Enable the setting to allow the affiliate to use this identifier in the referral URL."
 msgstr "Schakel de instelling in om de affiliate toe te staan deze identifier te gebruiken in de verwijzings-URL."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - tooltip title for copying referral link"
 msgid "Click to copy"
 msgstr "Klik om te kopiëren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - title for coupon edit icon"
 msgid "Edit coupon"
 msgstr "Coupon bewerken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty coupon message"
 msgid "No coupons assigned"
 msgstr "Geen coupons toegewezen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Create coupon link message"
 msgid "Create a coupon"
 msgstr "Een coupon maken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder of disabling affiliate tag search field"
 msgid "Tag assign input is disabled for the rejected affiliate"
 msgstr "De tagtoewijzing is uitgeschakeld voor de afgewezen partner"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder for searching the affiliate tag"
 msgid "Search tags"
 msgstr "Tags zoeken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder of disabling parent affiliate search field"
 msgid "Parent affiliate input is disabled for the rejected affiliate"
 msgstr "De invoer van de moedermaatschappij is uitgeschakeld voor de afgewezen partner"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Placeholder for parent affiliate search input"
 msgid "Search for a parent affiliate"
 msgstr "Zoek een ouderfiliaal"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for the parent affiliate field in affiliate profile"
 msgid "The commission will be distributed to this parent affiliate on a multi-tier commission plan."
 msgstr "De commissie wordt verdeeld onder deze moederfiliaal op basis van een meerlagig commissieplan."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - title for landing page edit icon"
 msgid "Edit page"
 msgstr "Pagina bewerken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty landing page message"
 msgid "No landing page assigned"
 msgstr "Geen landingspagina toegewezen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder for searching the customer"
 msgid "Search and Link customer"
 msgstr "Klant zoeken en linken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder of disabling the customer search"
 msgid "Lifetime commission is disabled for the affiliate"
 msgstr "Lifetime commissie is uitgeschakeld voor de affiliate"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder for PayPal email address field"
 msgid "Enter PayPal email address where affiliate will receive commission"
 msgstr "Voer het PayPal e-mailadres in waarop de affiliate commissie zal ontvangen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description for PayPal email field"
 msgid "This affiliate will receive their commission on the above PayPal email address."
 msgstr "Deze affiliate ontvangt zijn commissie op het bovenstaande PayPal e-mailadres."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "loading text for profile tab save button"
 msgid "Updating"
 msgstr "bijwerken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "message after profile update successfully"
 msgid "Affiliate profile updated successfully."
 msgstr "Affiliateprofiel succesvol bijgewerkt."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "update button text for profile tab"
 msgid "Update"
 msgstr "Update"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "profile tab's referral details accordion title"
 msgid "Referral Details"
 msgstr "Details verwijzing"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Referral link label"
 msgid "Referral Link"
 msgstr "Verwijzingslink"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Affiliate identifier label"
 msgid "Affiliate Identifier"
 msgstr "Affiliate identificatiecode"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Referral coupons label"
 msgid "Referral Coupons"
 msgstr "Verwijzingsbonnen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Affiliate tags label"
 msgid "Tags"
 msgstr "Tags"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty tags message"
 msgid "No tags assigned"
 msgstr "Geen tags toegewezen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Parent affiliate label"
 msgid "Parent Affiliate"
 msgstr "Moedermaatschappij"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Landing page label"
 msgid "Landing Pages"
 msgstr "Landingspagina's"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Lifetime customers label"
 msgid "Lifetime Customers"
 msgstr "Levenslange klanten"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "payout details's referral details accordion title"
 msgid "Payout Details"
 msgstr "Uitbetaling"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for Payout method"
 msgid "Payout Method"
 msgstr "Uitbetalingsmethode"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - PayPal email address label"
 msgid "PayPal Email Address"
 msgstr "E-mailadres PayPal"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description if user is selected for automatic payout"
 msgid "Is Selected For Automatic Payout?"
 msgstr "Is geselecteerd voor automatische uitbetaling?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "affiliate is selected for automatic payout"
 msgid "Yes"
 msgstr "Ja"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "affiliate is not selected for automatic payout"
 msgid "No"
 msgstr "Geen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Registration form details accordion title"
 msgid "Registration Form Details"
 msgstr "Details registratieformulier"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - tab title"
 msgid "Referrals"
 msgstr "Verwijzingen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - tab title"
 msgid "Payouts"
 msgstr "Uitbetalingen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - tab title"
 msgid "Products"
 msgstr "Producten"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - tab title"
 msgid "Profile"
 msgstr "Profiel"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - tab title"
 msgid "Multi-Tier"
 msgstr "Multi-Tier"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Loading Affiliates"
 msgstr "Affiliates laden"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "searchbox icon title"
 msgid "Affiliate status"
 msgstr "Affiliate status"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "searchbox icon title"
 msgid "Commission status"
 msgstr "Status van de Commissie"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "searchbox icon title"
 msgid "Affiliate tags"
 msgstr "Affiliate tags"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Search & Filter"
 msgstr "Zoeken en filteren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Click on a label to filter. Type in the search box to search."
 msgstr "Klik op een label om te filteren. Typ in het zoekvak om te zoeken."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliates dashboard search box filter reset button text"
 msgid "Reset Filters"
 msgstr "Reset filters"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for the plan updated notice"
 msgid "📣 Big update"
 msgstr "Grote update"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "PayPal Payout migration notice"
 msgid "[PayPal Payouts] PayPal have deprecated MassPay API and it will be removed soon. So we recommend you switch to a new Payout API for smoother commission payouts."
 msgstr "[PayPal Payouts] PayPal heeft de MassPay API afgeschreven en zal deze binnenkort verwijderen. We raden je dus aan om over te stappen op een nieuwe Payout API voor soepelere commissie-uitbetalingen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "refer to the provided doc"
 msgid "Refer to"
 msgstr "Verwijzen naar"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "link text for the doc"
 msgid "this doc"
 msgstr "dit document"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "text for more details regarding PayPal API migration"
 msgid "for more details."
 msgstr "voor meer informatie."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "ask to check whether switched to the PayPal Payout API"
 msgid "If you have already switched to the new PayPal Payout API, run migration."
 msgstr "Als je al bent overgestapt op de nieuwe PayPal Payout API, voer dan de migratie uit."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Link text for PayPal Payout migration"
 msgid "Run migration"
 msgstr "Migratie uitvoeren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Migration process is running:"
 msgstr "Migratieproces wordt uitgevoerd:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "[Important] Affiliate for WooCommerce requires a database migration."
 msgstr "[Belangrijk] Affiliate voor WooCommerce vereist een databasemigratie."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Run migration"
 msgstr "Migratie uitvoeren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Migration done successfully."
 msgstr "Migratie succesvol uitgevoerd."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "tasks completed."
 msgstr "voltooide taken."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "tasks starting"
 msgstr "taken starten"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Navigation menu title for main dashboard in admin dashboard"
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Navigation menu title for campaigns in admin dashboard"
 msgid "Campaigns"
 msgstr "Campagnes"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Navigation menu title for plans in admin dashboard"
 msgid "Plans"
 msgstr "Plannen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Navigation menu title for Payouts in admin dashboard"
 msgid "Pending Payouts"
 msgstr "In afwachting van uitbetalingen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Add a Campaign"
 msgstr "Een campagne toevoegen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Add a Plan"
 msgstr "Een plan toevoegen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder for search & filter"
 msgid "Search & Filter"
 msgstr "Zoeken en filteren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder"
 msgid "start date"
 msgstr "begindatum"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "to"
 msgstr "naar"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder"
 msgid "end date"
 msgstr "einddatum"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for doc link"
 msgid "Docs"
 msgstr "Docs"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for manage affiliate tag page link"
 msgid "Manage affiliate tags"
 msgstr "Filiaal tags beheren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliates KPI label: Total Revenue"
 msgid "%1$s%% of Total Revenue"
 msgstr "%1$s%% van totale inkomsten"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliates KPI label: Number of affiliate"
 msgid "Affiliates"
 msgstr "Filialen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliates KPI label: Visitors"
 msgid "Visitors"
 msgstr "Bezoekers"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliates KPI label: Customers"
 msgid "Customers"
 msgstr "Klanten"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliates KPI label: Conversion Rate"
 msgid "Conversion Rate"
 msgstr "Omrekeningskoers"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Pending Payouts"
 msgstr "In afwachting van uitbetalingen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "affiliate"
 msgstr "affiliate"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "affiliates"
 msgstr "filialen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "needs to be paid total commission of"
 msgstr "moet een totale commissie van"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Load More"
 msgstr "Meer laden"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - KPI label for affiliate's net unpaid commission"
 msgid "Net Unpaid Commission"
 msgstr "Netto onbetaalde commissie"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - signup date label"
 msgid "Since:"
 msgstr "Sinds:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Referral link label"
 msgid "Referral Link:"
 msgstr "Verwijzingslink:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate KPI label: Visitors"
 msgid "Visitors"
 msgstr "Bezoekers"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate KPI label: Customers"
 msgid "Customers"
 msgstr "Klanten"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate KPI label: Conversion"
 msgid "Conversion"
 msgstr "Conversie"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate KPI label: Revenue"
 msgid "Revenue"
 msgstr "Inkomsten"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate KPI label: Gross Commission"
 msgid "Gross Commission"
 msgstr "Bruto Commissie"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate KPI label: Net Commission"
 msgid "Net Commission"
 msgstr "Netto Commissie"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Referral table name"
 msgid "Referral details"
 msgstr "Details verwijzing"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Column header for referral table"
 msgid "Date"
 msgstr "Datum"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Column header for referral table"
 msgid "Order"
 msgstr "Bestel"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Column header for referral table"
 msgid "Commission"
 msgstr "Commissie"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Column header for referral table"
 msgid "Customer"
 msgstr "Klant"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Column header for referral table"
 msgid "Campaign"
 msgstr "Campagne"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Column header for referral table"
 msgid "Medium"
 msgstr "Medium"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "title text for refund period remaining for referral"
 msgid "Refund period: Payout ready after %d days"
 msgstr "Terugbetalingstermijn: Uitbetaling klaar na %d dagen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty referral message"
 msgid "Referrals are unavailable for this date range or filter. Adjust either dates or filter then retry."
 msgstr "Verwijzingen zijn niet beschikbaar voor dit datumbereik of deze filter. Pas de datums of filters aan en probeer het opnieuw."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Payout method title"
 msgid "PayPal: Pay & Record"
 msgstr "PayPal: Betalen & opnemen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - PayPal pay & record"
 msgid "Automatically pay via PayPal and record payout."
 msgstr "Automatisch betalen via PayPal en uitbetaling registreren."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Payout method title"
 msgid "PayPal: Record Only"
 msgstr "PayPal: Alleen opnemen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - PayPal: record only"
 msgid "Record a manual payout done via PayPal. This method does not send money."
 msgstr "Neem een handmatige uitbetaling op via PayPal. Deze methode verstuurt geen geld."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Payout method title"
 msgid "Other"
 msgstr "Andere"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - other"
 msgid "Record a manual payout done via any method. This method does not send money."
 msgstr "Neem een handmatige uitbetaling op via een willekeurige methode. Deze methode verstuurt geen geld."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Payout method title"
 msgid "Stripe: Pay & Record"
 msgstr "Stripe: Betalen & Registreren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - Stripe: pay & record"
 msgid "Pay via Stripe and record payout."
 msgstr "Betaal via Stripe en registreer de uitbetaling."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Payout method title"
 msgid "Coupon: Fixed Cart"
 msgstr "Coupon: Vaste kar"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - Coupon: Fixed Cart"
 msgid "Issue a coupon and record payout."
 msgstr "Geef een coupon uit en registreer de uitbetaling."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - Coupon: Fixed Cart to use Smart Coupons > Store Credit instead"
 msgid "Affiliate Store Credit Payouts"
 msgstr "Affiliate uitbetaling van winkelkrediet"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - Coupon: Fixed Cart to use Smart Coupons > Store Credit instead"
 msgid " to offer payout as a Store Credit instead of a Fixed cart coupon."
 msgstr " om uitbetaling aan te bieden als een winkeltegoed in plaats van een coupon voor een vaste winkelwagen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Payout method title"
 msgid "Coupon: Store Credit"
 msgstr "Coupon: Tegoed"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - Coupon: Store Credit"
 msgid "Issue a store credit coupon and record payout."
 msgstr "Geef een tegoedbon uit en registreer de uitbetaling."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "payout processing loader message"
 msgid "Processing"
 msgstr "Verwerking"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "confirmation message at payout model close"
 msgid "Are you sure you want to cancel? Any changes made will be lost."
 msgstr "Weet je zeker dat je wilt annuleren? Alle gemaakte wijzigingen gaan verloren."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Pay"
 msgstr "Betaal"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label to select payout method for commission"
 msgid "Payout Method"
 msgstr "Uitbetalingsmethode"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Record Date"
 msgstr "Registratiedatum"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder: payout date"
 msgid "Select payout date"
 msgstr "Selecteer uitbetalingsdatum"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Notes"
 msgstr "Opmerkingen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Send"
 msgstr "Stuur"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "loader message while updating commission status"
 msgid "Updating commission status"
 msgstr "Commissiestatus bijwerken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "success message after updating commission status"
 msgid "Commission status updated successfully"
 msgstr "Commissiestatus succesvol bijgewerkt"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "warning message when no referral is selected for commission status update"
 msgid "Please select a referral"
 msgstr "Selecteer een verwijzing"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "action name to mark commission as paid"
 msgid "Mark as Paid"
 msgstr "Markeren als betaald"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "action name to mark commission as unpaid"
 msgid "Mark as Unpaid"
 msgstr "Markeer als onbetaald"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "action name to mark commission as rejected"
 msgid "Mark as Rejected"
 msgstr "Markeren als afgewezen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "multi currency not allowed message"
 msgid "Payout is not allowed for multiple currency"
 msgstr "Uitbetaling is niet toegestaan voor meerdere valuta"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commissions payout title"
 msgid "Send Payout:"
 msgstr "Uitbetaling verzenden:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "minimum commission message"
 msgid "(below minimum commission of %s)"
 msgstr "(onder minimumcommissie van %s)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "number of selected records"
 msgid "%s record"
 msgid_plural "%s records"
 msgstr[0] "%s record"
 msgstr[1] ""
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "text for commission amount"
 msgid "commission"
 msgstr "commissie"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "commission batch action"
 msgid "Batch Actions"
 msgstr "Batchacties"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "update button title for commission status"
 msgid "Update"
 msgstr "Update"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout table header for date column"
 msgid "Date"
 msgstr "Datum"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout table header for amount column"
 msgid "Amount"
 msgstr "Bedrag"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout table header for payout method column"
 msgid "Method"
 msgstr "Methode"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout table header for payout notes column"
 msgid "Notes"
 msgstr "Opmerkingen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout table header for invoice column"
 msgid "Invoice"
 msgstr "Factuur"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "number of referrals"
 msgid "%s referral"
 msgid_plural "%s referrals"
 msgstr[0] "%s verwijzing"
 msgstr[1] ""
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "title for printing the invoice icon"
 msgid "Print"
 msgstr "Afdrukken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty payout message"
 msgid "Payout details are unavailable for this date range. Adjust the dates and retry."
 msgstr "Uitbetalingsgegevens zijn niet beschikbaar voor dit datumbereik. Pas de datums aan en probeer het opnieuw."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "label for all time commission"
 msgid "Commission (All Time)"
 msgstr "Commissie (aller tijden)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "label for all time paid commissions"
 msgid "Paid (All Time)"
 msgstr "Betaald (alle tijden)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "label for all time unpaid commissions"
 msgid "Unpaid (All Time)"
 msgstr "Onbetaald (Allertijden)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Load more link for payouts"
 msgid "Load More"
 msgstr "Meer laden"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Product table row title for product name"
 msgid "Product"
 msgstr "Product"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Product table row title for quantity"
 msgid "Quantity"
 msgstr "Hoeveelheid"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Product table row title for sales"
 msgid "Sales"
 msgstr "Verkoop"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty product message"
 msgid "Products are unavailable for this date range. Adjust the dates and retry."
 msgstr "Producten zijn niet beschikbaar voor dit datumbereik. Pas de datums aan en probeer het opnieuw."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Load more link for products report"
 msgid "Load More"
 msgstr "Meer laden"
 
-#: includes/class-afwc-visits.php:581
+#: includes/reports/class-afwc-visits.php:581
 msgctxt "Icon title for mobile"
 msgid "Mobile"
 msgstr "Mobiel"
 
-#: includes/class-afwc-visits.php:585
+#: includes/reports/class-afwc-visits.php:585
 msgctxt "Icon title for tablet"
 msgid "Tablet"
 msgstr "Tablet"
 
-#: includes/class-afwc-visits.php:589
+#: includes/reports/class-afwc-visits.php:589
 msgctxt "Icon title for desktop"
 msgid "Desktop"
 msgstr "Desktop"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "success message when affiliate is approved"
 msgid "Affiliate %1$s is approved"
 msgstr "Affiliate %1$s is goedgekeurd"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "success message when affiliate is rejected"
 msgid "Affiliate %1$s is rejected"
 msgstr "Affiliate %1$s is afgewezen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "label for affiliate approve action"
 msgid "Approve"
 msgstr "Goedkeuren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "label for affiliate reject action"
 msgid "Reject"
 msgstr "Weiger"
 
-#: assets/js/admin.js:1
-#: assets/js/frontend.js:1
+#: assets/js/admin/admin.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "empty chain message"
 msgid "No children found. View/set parent affiliate from affiliate's profile."
 msgstr "Geen kinderen gevonden. Bekijk/stel ouder affiliate in affiliate's profiel."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Export"
 msgstr "Exporteer"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Standard CSV"
 msgstr "Standaard CSV"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Mass Payout CSV"
 msgstr "CSV massale uitbetaling"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Message when there are no affiliates."
 msgid "No affiliates yet. Let's get started."
 msgstr "Nog geen partners. Laten we beginnen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "instruction to edit affiliate registration form."
 msgid "Edit your affiliate registration form (Settings > Affiliate > Registration Form) and link it from your site."
 msgstr "Bewerk je affiliate registratieformulier (Instellingen > Affiliate > Registratieformulier) en link het vanaf je site."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "documentation link to registration form feature"
 msgid "Here's how."
 msgstr "Zo."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "instruction to make affiliates via user role through settings."
 msgid "or go to Settings > Affiliate > General and select any user roles to automatically make them affiliates."
 msgstr "of ga naar Instellingen > Affiliate > Algemeen en selecteer gebruikersrollen om ze automatisch affiliate te maken."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "documentation link to make affiliates via user role feature"
 msgid "Here's how."
 msgstr "Zo."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "instruction to make a user an affiliate via profile."
 msgid "Or go to an individual user's profile in WordPress and make them an affiliate."
 msgstr "Of ga naar het profiel van een individuele gebruiker in WordPress en maak hem een affiliate."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "documentation link to individually making a user as an affiliate feature"
 msgid "Here's how."
 msgstr "Zo."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Visitors"
 msgstr "Bezoekers"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Orders"
 msgstr "Bestellingen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Conversion Rate"
 msgstr "Omrekeningskoers"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when campaign title is missing"
 msgid "Please add a campaign title"
 msgstr "Voeg een campagnetitel toe"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder for searching target affiliates for campaign visibility"
 msgid "Search by affiliates or affiliate tags"
 msgstr "Zoeken op filialen of affiliate tags"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Heading of campaign create/edit tab"
 msgid "Campaign Detail"
 msgstr "Campagne Detail"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign status"
 msgid "Status"
 msgstr "Status"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign save"
 msgid "Save"
 msgstr "Sla"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for delete campaign button"
 msgid "Delete campaign"
 msgstr "Campagne verwijderen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "confirmation alert for deleting a campaign"
 msgid "Are you sure you want to permanently delete this campaign?"
 msgstr "Weet je zeker dat je deze campagne definitief wilt verwijderen?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for campaign close panel button on admin side"
 msgid "Close panel"
 msgstr "Paneel sluiten"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign title"
 msgid "Name"
 msgstr "Naam"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign title description"
 msgid "A descriptive title for this campaign so affiliates can easily understand purpose of the campaign."
 msgstr "Een beschrijvende titel voor deze campagne, zodat affiliates het doel van de campagne gemakkelijk kunnen begrijpen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign slug"
 msgid "Slug"
 msgstr "Slak"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign short text description"
 msgid "Short text in links for this campaign: "
 msgstr "Korte tekst in links voor deze campagne:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign url"
 msgid "Destination Link"
 msgstr "Bestemming Link"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign destination link description"
 msgid "Want to take campaign visitors to a specific product / landing page? Or shop / home page? Enter it here."
 msgstr "Wil je campagnebezoekers naar een specifieke product-/landingspagina brengen? Of winkel / homepage? Voer het hier in."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for visibility in campaign editor"
 msgid "Visibility"
 msgstr "Zichtbaarheid"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for visibility in campaign editor"
 msgid "Choose individual affiliates or affiliate tags you want to show this campaign to. Leave it blank to show it to all."
 msgstr "Kies individuele affiliates of affiliate-tags waaraan je deze campagne wilt tonen. Laat het leeg om het aan iedereen te tonen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign short description"
 msgid "Short Description"
 msgstr "Korte beschrijving"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign short description"
 msgid "This will show along with campaign name before people see all the details. Summarize the campaign here."
 msgstr "Dit wordt samen met de campagnenaam weergegeven voordat mensen alle details zien. Vat hier de campagne samen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign description"
 msgid "Full Description"
 msgstr "Volledige beschrijving"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign full description"
 msgid "Use this editor to insert all the details, rules, creatives, swipes, videos, guidelines or anything else you want to present to affiliate partners. Format it well so that they can easily copy out for their own usage."
 msgstr "Gebruik deze editor om alle details, regels, creatives, swipes, video's, richtlijnen of iets anders in te voegen dat je aan affiliate partners wilt presenteren. Formatteer het goed zodat ze het gemakkelijk kunnen kopiëren voor eigen gebruik."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign full description"
 msgid "If you prefer, create a .zip file with multiple assets. Upload it to your WordPress Media, and link the file from here. You can also link to any external resources as usual."
 msgstr "Als je dat liever doet, maak dan een .zip bestand met meerdere assets. Upload het naar je WordPress Media en link het bestand vanaf hier. Je kunt ook linken naar externe bronnen zoals gebruikelijk."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Campaigns screen headline"
 msgid "Campaigns"
 msgstr "Campagnes"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for visibility of the campaign in the campaign list"
 msgid "Visibility:"
 msgstr "Zichtbaarheid:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visibility label where rules are applied in the campaigns"
 msgid "Restricted"
 msgstr "Beperkt"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visibility label where none of any rule applied in the campaigns"
 msgid "All"
 msgstr "Alle"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of campaigns feature and usage"
 msgid "Campaigns help you organize all your marketing assets, promotional materials, and instructions you need to provide to your affiliate partners."
 msgstr "Campagnes helpen je bij het organiseren van al je marketingmaterialen, promotiemateriaal en instructies die je aan je partners moet geven."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of campaigns feature and visibility for affiliates"
 msgid "Your affiliates can view these campaigns under their My Account > Affiliates > Campaigns tab. This tab will be automatically hidden when there are no active campaigns."
 msgstr "Je affiliates kunnen deze campagnes bekijken onder hun tabblad Mijn account > Affiliates > Campagnes. Dit tabblad wordt automatisch verborgen als er geen actieve campagnes zijn."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "documentation link to campaigns feature"
 msgid "How to create affiliate marketing campaigns"
 msgstr "Hoe affiliate marketingcampagnes maken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of campaigns re-generate feature"
 msgid "After activation, the plugin adds a few sample campaigns to help you quickly get started."
 msgstr "Na activering voegt de plugin een paar voorbeeldcampagnes toe om je te helpen snel aan de slag te gaan."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of campaigns to re-import"
 msgid "You can easily re-import these campaigns with just a click. Simply "
 msgstr "Je kunt deze campagnes eenvoudig opnieuw importeren met slechts één klik. Eenvoudig"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "link to re-generate sample campaigns"
 msgid "re-generate sample campaigns"
 msgstr "voorbeeldcampagnes opnieuw genereren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description for no campaigns exist"
 msgid "No campaigns yet."
 msgstr "Nog geen campagnes."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of add campaign"
 msgid "Go ahead, click that \"Add a Campaign\" button in the top bar to create your first campaign."
 msgstr "Klik op de knop \"Een campagne toevoegen\" in de bovenste balk om je eerste campagne te maken."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of campaigns to re-import"
 msgid "You can easily import sample campaigns with just a click - "
 msgstr "Je kunt eenvoudig voorbeeldcampagnes importeren met slechts één klik."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "link to generate sample campaigns"
 msgid "Generate sample campaigns"
 msgstr "Voorbeeldcampagnes genereren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder"
 msgid "Search for a value"
 msgstr "Zoeken naar een waarde"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "This group is a \"pass\" when"
 msgstr "Deze groep is een \"pas\" als"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "all"
 msgstr "alle"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "at least one"
 msgstr "ten minste één"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "of the following rules are true."
 msgstr "van de volgende regels waar zijn."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Add a rule"
 msgstr "Een regel toevoegen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Add another group"
 msgstr "Nog een groep toevoegen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Remove this group"
 msgstr "Verwijder deze groep"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for Tier 1 distribution"
 msgid "Tier 1"
 msgstr "Niveau 1"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for parent distribution"
 msgid "Tier %d"
 msgstr "Niveau %d"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for total commission across tiers"
 msgid "Total commissions: "
 msgstr "Totale commissies:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for setting number of tier for multi-tier commission"
 msgid "Multi-level commission? How many tiers?"
 msgstr "Commissies op meerdere niveaus? Hoeveel niveaus?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for multi-tier commission and distribution"
 msgid "Tier-wise commission distribution"
 msgstr "Verdeling van commissies per niveau"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when no commission amount is set in the commission plan"
 msgid "Empty commission amount is not allowed"
 msgstr "Leeg commissiebedrag is niet toegestaan"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when the commission amount is empty for any tier in the commission plan"
 msgid "The commission amount cannot be empty for Tier %d"
 msgstr "Het commissiebedrag kan niet leeg zijn voor niveau %d"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when negative commission amount is set in the commission plan"
 msgid "Negative commission amount is not allowed"
 msgstr "Negatief commissiebedrag is niet toegestaan"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when the commission amount is negative for any tier in the commission plan"
 msgid "The commission amount cannot be negative for Tier %d"
 msgstr "Het commissiebedrag kan niet negatief zijn voor niveau %d"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when the commission percentage is greater than 100 in the commission plan"
 msgid "The commission percentage cannot be greater than 100"
 msgstr "Het commissiepercentage kan niet hoger zijn dan 100"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when the commission percentage is greater than 100 for any tier in the commission plan"
 msgid "The commission percentage cannot be greater than 100 for Tier %d"
 msgstr "Het commissiepercentage kan niet groter zijn dan 100 voor niveau %d"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when commission data missing details"
 msgid "Something went wrong. The commission data was not found correctly."
 msgstr "Er is iets misgegaan. De commissiegegevens zijn niet correct gevonden."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when commission title is empty in the commission plan"
 msgid "Please add a commission title"
 msgstr "Voeg een opdrachttitel toe"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when there are no rules in the commission plan"
 msgid "Empty rule values are not allowed"
 msgstr "Lege regelwaarden zijn niet toegestaan"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission plan name/title"
 msgid "Name"
 msgstr "Naam"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "plan name"
 msgid "Plan name"
 msgstr "Naam plan"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission plan name/title placeholder"
 msgid "Enter a name for this commission plan"
 msgstr "Voer een naam in voor dit commissieplan"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission status label"
 msgid "Status"
 msgstr "Status"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission status dropdown"
 msgid "Commission status"
 msgstr "Status van de Commissie"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Button label to save commission plan"
 msgid "Save"
 msgstr "Sla"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "confirmation alert for deleting a commission plan"
 msgid "Are you sure you want to permanently delete this plan?"
 msgstr "Weet je zeker dat je dit plan permanent wilt verwijderen?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Delete plan icon"
 msgid "Delete plan"
 msgstr "Plan verwijderen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Close plan icon"
 msgid "Close plan"
 msgstr "Sluit plan"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for commission amount and type"
 msgid "Commission"
 msgstr "Commissie"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission plan type"
 msgid "Commission Type"
 msgstr "Type Commissie"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission plan type: percentage"
 msgid "Percentage (%)"
 msgstr "Percentage (%)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission plan type: flat with store currency code"
 msgid "Flat (%s)"
 msgstr "Plat (%s)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission plan type: flat"
 msgid "Flat"
 msgstr "Plat"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for commission rules"
 msgid "Rules"
 msgstr "Regels"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for main rule condition"
 msgid "When"
 msgstr "Wanneer"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Message for main rule condition"
 msgid "rule groups pass"
 msgstr "regelgroepen passeren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for commission actions"
 msgid "Actions"
 msgstr "Acties"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for commission action - apply to"
 msgid "Apply to"
 msgstr "Solliciteer bij"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for commission action on the remaining products"
 msgid "And then, for remaining products in the order..."
 msgstr "En dan, voor de resterende producten in de bestelling..."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "success message after saving commission plan order"
 msgid "Plan order saved successfully"
 msgstr "Bestelling opgeslagen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission plans screen headline"
 msgid "Commission Plans"
 msgstr "Plannen van de Commissie"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "While calculating affiliate commission, plans are validated one after the other, starting from the top. Drag and Drop to reorder and prioritize plans. Click on Save Order to save."
 msgstr "Bij het berekenen van de affiliate commissie worden de plannen één voor één gevalideerd, beginnend bij het begin. Sleep om plannen te herschikken en te prioriteren. Klik op Volgorde opslaan om op te slaan."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "The affiliate commission is calculated based on the order's subtotal. It does not consider taxes, shipping costs, or discounts from coupons."
 msgstr "De affiliate commissie wordt berekend op basis van het subtotaal van de bestelling. Er wordt geen rekening gehouden met belastingen, verzendkosten of kortingen van kortingsbonnen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "not about storewide default commission plan"
 msgid "Note: The storewide default commission plan is not sortable. It will be validated at the end - after all the other plans."
 msgstr "Opmerking: Het storewide standaard commissieplan is niet sorteerbaar. Het wordt aan het einde gevalideerd, na alle andere plannen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "text to view documentation link"
 msgid "Learn more: "
 msgstr "Meer informatie:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "documentation link to commissions plan feature"
 msgid "How to create custom commission plans"
 msgstr "Hoe maak je aangepaste commissieplannen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "No commission plans yet."
 msgstr "Nog geen commissieplannen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Go ahead, click that \"Add a Plan\" button in the top bar to create your first commission."
 msgstr "Klik op de knop \"Een plan toevoegen\" in de bovenste balk om je eerste commissie aan te maken."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for loader while updating the record"
 msgid "Updating"
 msgstr "bijwerken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Placeholder for selecting affiliate user roles"
 msgid "Select user roles"
 msgstr "Gebruikersrollen selecteren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for affiliate user roles"
 msgid "Affiliate user roles"
 msgstr "Affiliate gebruikersrollen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for Getting started step"
 msgid "You're all set up and good to go!"
 msgstr "Je bent er helemaal klaar voor!"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Heading for commission setup step"
 msgid "Commissions"
 msgstr "Commissies"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Heading for getting started step"
 msgid "Getting started"
 msgstr "Aan de slag"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Skip button label"
 msgid "Skip"
 msgstr "Skip"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Plugin icon alt text in onboarding"
 msgid "Affiliate For WooCommerce logo"
 msgstr "Affiliate voor WooCommerce logo"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Plugin name in onboarding"
 msgid "Affiliate For WooCommerce"
 msgstr "Affiliate voor WooCommerce"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for successful payout snoozed"
 msgid "Automatic payout snoozed successfully till next period."
 msgstr "Automatische uitbetaling met succes uitgesteld tot de volgende periode."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for failed payout snoozed"
 msgid "Could not schedule automatic payout till the next period."
 msgstr "Kon automatische uitbetaling niet plannen tot de volgende periode."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Pending Payout table row title for affiliate name"
 msgid "Name"
 msgstr "Naam"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Pending Payout table row title for payout method"
 msgid "Payout method"
 msgstr "Uitbetalingsmethode"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Pending Payout table row title for unpaid commissions"
 msgid "Total unpaid commissions"
 msgstr "Totaal onbetaalde commissies"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Pending Payout table row title for scheduled commissions"
 msgid "Total scheduled commissions"
 msgstr "Totaal geplande commissies"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Link to snooze the scheduled payout date"
 msgid "Snooze"
 msgstr "Snooze"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty pending payout message"
 msgid "No outstanding payouts."
 msgstr "Geen uitstaande uitbetalingen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Pending Payout screen headline"
 msgid "Pending Payouts"
 msgstr "In afwachting van uitbetalingen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of pending payouts dashboard feature and usage"
 msgid "Pending Payouts shows a list of affiliates and their unpaid commissions."
 msgstr "Pending Payouts toont een lijst van affiliates en hun onbetaalde commissies."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of pending payouts dashboard feature and a new column based on automatic payouts"
 msgid "If automatic payouts are enabled, the Total Scheduled Commissions column will show the commissions your affiliates will receive."
 msgstr "Als automatische uitbetalingen zijn ingeschakeld, zal de kolom Totale Geplande Commissies de commissies tonen die je affiliates zullen ontvangen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of pending payouts dashboard for automatic payouts"
 msgid "Commissions in the Total Scheduled Commissions are calculated based on a few settings: Refund period, Minimum affiliate commission for payout, Maximum commission to pay an affiliate and Automatic payouts include affiliates."
 msgstr "Commissies in de Totale Geplande Commissies worden berekend op basis van een paar instellingen: Terugbetalingsperiode, Minimale affiliatecommissie voor uitbetaling, Maximale commissie om een affiliate te betalen en Automatische uitbetalingen omvatten affiliates."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Load more link for pending payouts"
 msgid "Load More"
 msgstr "Meer laden"
 
-#: assets/js/affiliate-search.js:116
+#: assets/js/lib/affiliate-search.js:116
 msgctxt "self refer alert"
 msgid "Are you sure you want to set the affiliate same as the customer? This overrides the setting Affiliate self-refer."
 msgstr "Weet je zeker dat je de affiliate hetzelfde wilt instellen als de klant? Dit overschrijft de instelling Affiliate zelf doorverwijzen."
 
-#: assets/js/afwc-affiliate-link.js:55
+#: assets/js/lib/afwc-affiliate-link.js:55
 msgctxt "Success message after copying"
 msgid "Copied"
 msgstr "Gekopieerd"
 
-#: assets/js/afwc-reg-form.js:11
+#: assets/js/frontend/afwc-reg-form.js:11
 msgctxt "Registration form error message for password mismatch"
 msgid "Passwords do not match."
 msgstr "Wachtwoorden komen niet overeen."
 
-#: assets/js/afwc-reg-form.js:33
+#: assets/js/frontend/afwc-reg-form.js:33
 msgctxt "Registration form success message for user register"
 msgid "User registered successfully."
 msgstr "Gebruiker succesvol geregistreerd."
 
-#: assets/js/afwc-reg-form.js:55
+#: assets/js/frontend/afwc-reg-form.js:55
 msgctxt "Prefix for affiliate registration error message"
 msgid "Error: "
 msgstr "Fout:"
 
-#: assets/js/afwc-settings.js:22
+#: assets/js/admin/afwc-settings.js:22
 msgctxt "alert when changing affiliate tracking param name"
 msgid "Changing tracking param name will stop affiliate tracking for the existing URL with the current tracking param name. Are you sure you want to continue?"
 msgstr "Als je de naam van de trackingparam verandert, wordt het bijhouden van de bestaande URL met de huidige naam van de trackingparam gestopt. Weet je zeker dat je wilt doorgaan?"
 
-#: assets/js/afwc-settings.js:191
+#: assets/js/admin/afwc-settings.js:191
 msgctxt "Media uploader title"
 msgid "Select image"
 msgstr "Afbeelding selecteren"
 
-#: assets/js/afwc-settings.js:192
+#: assets/js/admin/afwc-settings.js:192
 msgctxt "Media select button"
 msgid "Select"
 msgstr "Selecteer"
 
-#: assets/js/afwc-settings.js:228
+#: assets/js/admin/afwc-settings.js:228
 msgctxt "Media uploader button text"
 msgid "Upload image"
 msgstr "Afbeelding uploaden"
 
-#: assets/js/afwc-user-profile.js:23
+#: assets/js/admin/afwc-user-profile.js:23
 msgid "Are you sure you want to remove this user as an affiliate? Doing this will remove this affiliate and its entire chain from part of the parent-chain relationship of any other affiliate in a multi-tier commission distribution. This change is irreversible."
 msgstr "Weet je zeker dat je deze gebruiker wilt verwijderen als affiliate? Als je dit doet, worden deze affiliate en zijn volledige keten verwijderd uit de ouder-ketenrelatie van elke andere affiliate in een meerlagige commissieverdeling. Deze wijziging is onomkeerbaar."
 
-#: assets/js/frontend.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "Campaign tracking link"
 msgid "Link: "
 msgstr "Link:"
 
-#: assets/js/frontend.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "My account - tooltip title for copying campaign referral link"
 msgid "Click to copy"
 msgstr "Klik om te kopiëren"
 
-#: assets/js/frontend.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "campaign loading text on my-account"
 msgid "Loading..."
 msgstr "Aan het laden..."
 
-#: assets/js/frontend.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "description for no campaigns exist"
 msgid "No Campaign yet"
 msgstr "Nog geen campagne"
 
 #. translators: %s: payout method name
-#: assets/js/my-account/affiliate-profile.js:61
+#: assets/js/frontend/my-account/affiliate-profile.js:61
 msgctxt "Success message after affiliate save default payout method"
 msgid "Successfully saved and set \"%s\" as default payout method."
 msgstr "Succesvol \"%s\" opgeslagen en ingesteld als standaard uitbetalingsmethode."
 
-#: assets/js/my-account/affiliate-profile.js:64
+#: assets/js/frontend/my-account/affiliate-profile.js:64
 msgctxt "Success message for payout method setting update"
 msgid "Successfully removed the payout method"
 msgstr "Succesvol de uitbetalingsmethode verwijderd"
 
-#: assets/js/my-account/affiliate-profile.js:73
+#: assets/js/frontend/my-account/affiliate-profile.js:73
 msgctxt "Error message for payout method setting update"
 msgid "An error occurred while saving the payout method"
 msgstr "Er is een fout opgetreden bij het opslaan van de uitbetalingsmethode"
 
-#: assets/js/my-account/affiliate-profile.js:113
+#: assets/js/frontend/my-account/affiliate-profile.js:113
 msgctxt "referral identifier validation message"
 msgid "Identifier cannot be empty."
 msgstr "Identifier kan niet leeg zijn."
 
-#: assets/js/my-account/affiliate-profile.js:117
+#: assets/js/frontend/my-account/affiliate-profile.js:117
 msgctxt "referral identifier validation message"
 msgid "You are already using this identifier."
 msgstr "U gebruikt deze identificatiecode al."
 
-#: assets/js/my-account/affiliate-profile.js:201
+#: assets/js/frontend/my-account/affiliate-profile.js:201
 msgctxt "Stripe Connect message"
 msgid "Connect with Stripe"
 msgstr "Maak verbinding met Stripe"
 
-#: assets/js/my-account/affiliate-profile.js:204
+#: assets/js/frontend/my-account/affiliate-profile.js:204
 msgctxt "Stripe Disconnect message"
 msgid "Disconnect from Stripe"
 msgstr "Verbinding met Stripe verbreken"
 
-#: assets/js/wc-analytics/afwc-wc-analytics-extends.js:13
+#: assets/js/admin/wc-analytics/afwc-wc-analytics-extends.js:13
 msgctxt "Header for affiliate name in WooCommerce orders report"
 msgid "Affiliate"
 msgstr "Affiliate"
@@ -7078,7 +7078,7 @@ msgctxt "success message on migration of affiliate user data"
 msgid "Successfully migrated affiliate with user ID: %s"
 msgstr "Affiliate met gebruikers-ID succesvol gemigreerd: %s"
 
-#: includes/admin/class-afwc-admin-dashboard.php:2073
+#: includes/admin/class-afwc-admin-dashboard.php:2068
 msgctxt "error message when dismissing notice"
 msgid "Required parameter missing."
 msgstr "Vereiste parameter ontbreekt."
@@ -7088,42 +7088,42 @@ msgctxt "Disabled description for Affiliate users roles setting"
 msgid "This setting is no longer functional because some affiliates are imported from other plugins."
 msgstr "Deze instelling is niet langer functioneel omdat sommige affiliates worden geïmporteerd vanuit andere plugins."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Confirmation before importing affiliate data - line 1"
 msgid "After the import, the Affiliate users roles feature will no longer work."
 msgstr "Na het importeren werkt de functie Affiliate gebruikersrollen niet meer."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Confirmation before importing affiliate data - line 2"
 msgid "Users with the selected affiliate user role will lose their affiliate status, and you’ll need to manually reassign them as affiliates."
 msgstr "Gebruikers met de geselecteerde affiliate gebruikersrol verliezen hun affiliate status en je moet ze handmatig opnieuw toewijzen als affiliate."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Confirmation before importing affiliate data - line 3"
 msgid "Are you sure you want to continue?"
 msgstr "Weet je zeker dat je wilt doorgaan?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate import running text in notice"
 msgid "Affiliate data import is in progress..."
 msgstr "Affiliate gegevens worden geïmporteerd..."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Import data message"
 msgid "Import affiliates with their referral link data from %s."
 msgstr "Importeer affiliates met hun verwijzingslinkgegevens uit %s."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate data import button"
 msgid "Start import"
 msgstr "Import starten"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notice text on migration status"
 msgid "Migration completed successfully."
 msgstr "Migratie succesvol voltooid."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Import affiliate button"
 msgid "Import affiliates"
 msgstr "Filialen importeren"
@@ -7134,88 +7134,88 @@ msgctxt "Logger for affiliate migration batch stopped due to health status"
 msgid "Batch stopped due to health status in task: %s"
 msgstr "Batch gestopt vanwege gezondheidsstatus in taak: %s"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Load more link for referrals report"
 msgid "Load More"
 msgstr "Meer laden"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Asking how plugin is doing"
 msgid "Is our plugin doing what it promised - helping you expand your reach and boost your sales?"
 msgstr "Doet onze plugin wat hij belooft - je helpen je bereik te vergroten en je verkoop te stimuleren?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Positive response button"
 msgid "Yes, all good"
 msgstr "Ja, allemaal goed"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Negative response button"
 msgid "Could be better"
 msgstr "Kan beter"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Thank you message for positive feedback"
 msgid "Thanks for the love!"
 msgstr "Bedankt voor de liefde!"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Request the user to leave a review"
 msgid "Awesome! Mind leaving us a 5-star review? It really motivates us to keep improving and reach more store owners like you."
 msgstr "Geweldig! Vind je het erg om een 5-sterren review achter te laten? Het motiveert ons om te blijven verbeteren en meer winkeleigenaren zoals jij te bereiken."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Review response button"
 msgid "Yes, I'll rate now!"
 msgstr "Ja, ik zal nu beoordelen!"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Apology message for negative feedback"
 msgid "We hear you - let's make it better!"
 msgstr "We horen je - laten we het beter maken!"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Support offer message"
 msgid "Thanks for your honesty. Let our support team assist you so you can get back to growing your store hassle-free."
 msgstr "Bedankt voor je eerlijkheid. Laat ons ondersteuningsteam je helpen zodat je weer probleemloos verder kunt met de groei van je winkel."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Support contact button"
 msgid "Contact support"
 msgstr "Contact opnemen met ondersteuning"
 
 #: includes/admin/class-afwc-admin-notifications.php:256
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notice title to announce admin summary report"
 msgid "📣 Big update"
 msgstr "Grote update"
 
 #: includes/admin/class-afwc-admin-notifications.php:258
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notice text for explaining admin summary email feature"
 msgid "A monthly affiliate program summary email will now be sent to the Affiliate Manager and Store Admin."
 msgstr "Er wordt nu een maandelijkse e-mail met een samenvatting van het Affiliate-programma verzonden naar de Affiliate Manager en Store Admin."
 
 #: includes/admin/class-afwc-admin-notifications.php:264
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notice text stating admin summary email is auto-enabled"
 msgid "This email is automatically enabled for you based on your store settings."
 msgstr "Deze e-mail wordt automatisch voor je ingeschakeld op basis van je winkelinstellingen."
 
 #: includes/admin/class-afwc-admin-notifications.php:265
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Button text to view admin summary email settings"
 msgid "Review email"
 msgstr "Beoordeling e-mail"
 
 #: includes/admin/class-afwc-admin-notifications.php:267
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notice text for stating admin summary email is disabled"
 msgid "This email is disabled for you as your store settings do not meet the requirements."
 msgstr "Deze e-mail is voor u uitgeschakeld omdat uw winkelinstellingen niet voldoen aan de vereisten."
 
 #: includes/admin/class-afwc-admin-notifications.php:268
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Button text to check requirements for enabling admin summary email"
 msgid "Review email requirements"
 msgstr "Vereisten voor e-mail controleren"
@@ -7257,7 +7257,7 @@ msgstr "Gebruik <code>via</code>, <code>buddy</code>, <code>aff</code> of een an
 
 #: includes/frontend/class-afwc-my-account.php:452
 #: templates/my-account/dashboard/visits-table.php:52
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Device type label in visits dashboard"
 msgid "Device:"
 msgstr "Apparaat:"
@@ -7280,12 +7280,12 @@ msgctxt "Country type label in visits dashboard"
 msgid "Country:"
 msgstr "Land:"
 
-#: includes/frontend/class-afwc-my-account.php:2396
+#: includes/frontend/class-afwc-my-account.php:2395
 msgctxt "Visits table header title for medium column"
 msgid "Medium"
 msgstr "Medium"
 
-#: includes/frontend/class-afwc-my-account.php:2398
+#: includes/frontend/class-afwc-my-account.php:2397
 msgctxt "Visits table header title for conversion column"
 msgid "Converted"
 msgstr "Omgebouwd"
@@ -7310,77 +7310,77 @@ msgctxt "message to show when no visits data available"
 msgid "No data to display"
 msgstr "Geen gegevens om weer te geven"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - tab title"
 msgid "Visits"
 msgstr "Bezoek"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visit table row title for datetime"
 msgid "Datetime"
 msgstr "Datetime"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visit table row title for medium"
 msgid "Medium"
 msgstr "Medium"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visit table row title for landing URL"
 msgid "Landing URL"
 msgstr "URL landen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visit table row title to know if a hit is converted"
 msgid "Converted"
 msgstr "Omgebouwd"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visit table row title for user agent"
 msgid "User agent"
 msgstr "Gebruiker agent"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Browser name label in visits dashboard"
 msgid "Browser:"
 msgstr "Browser:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "OS name label in  visits dashboard"
 msgid "OS:"
 msgstr "OS:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "IP address label in visits dashboard"
 msgid "IP:"
 msgstr "IP:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Country name label in visits dashboard"
 msgid "Country:"
 msgstr "Land:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty visits message"
 msgid "Visits are unavailable for this date range. Adjust the dates and retry."
 msgstr "Bezoeken zijn niet beschikbaar voor dit datumbereik. Pas de data aan en probeer het opnieuw."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Load more link for visits report"
 msgid "Load More"
 msgstr "Meer laden"
 
-#: includes/frontend/class-afwc-my-account.php:2395
+#: includes/frontend/class-afwc-my-account.php:2394
 msgctxt "Visits table header title for date column"
 msgid "Datetime"
 msgstr "Datetime"
 
-#: includes/frontend/class-afwc-my-account.php:2397
+#: includes/frontend/class-afwc-my-account.php:2396
 msgctxt "Visits table header title for landing url column"
 msgid "Landing URL"
 msgstr "URL landen"
 
-#: includes/frontend/class-afwc-my-account.php:2402
+#: includes/frontend/class-afwc-my-account.php:2401
 msgctxt "Visits table header title for user agent info column"
 msgid "User Agent"
 msgstr "Gebruikersagent"
@@ -7395,382 +7395,382 @@ msgctxt "Visits table load more link text in my account"
 msgid "Load more"
 msgstr "Meer laden"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for setting up affiliates in onboarding"
 msgid "Choosing affiliates"
 msgstr "Filialen kiezen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for setting up affiliates in onboarding"
 msgid "Set up your affiliate program and allow affiliates to join."
 msgstr "Zet je affiliateprogramma op en laat affiliates toe."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for registration form"
 msgid "Registration form"
 msgstr "Registratieformulier"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for enabling registration form"
 msgid "Invite users to sign up as affiliates through the registration form"
 msgstr "Nodig gebruikers uit om zich aan te melden als affiliate via het registratieformulier"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Message for default registration form and page created"
 msgid "We have automatically created a default form and added it to a page on your site - "
 msgstr "We hebben automatisch een standaardformulier gemaakt en toegevoegd aan een pagina op je site."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "View docs link text"
 msgid "View Docs"
 msgstr "Documenten bekijken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Link to review registration form page"
 msgid "Review page"
 msgstr "Herzieningspagina"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Link to edit default registration form setting"
 msgid "Edit form"
 msgstr "Formulier bewerken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for making existing users as affiliates"
 msgid "Use existing users to grow your affiliate network"
 msgstr "Gebruik bestaande gebruikers om je partnernetwerk te laten groeien"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for converting users by user role to affiliate setting"
 msgid "Convert users by their user roles"
 msgstr "Converteer gebruikers op hun gebruikersrollen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for selecting user roles"
 msgid "Select user roles to automatically make them your affiliates - "
 msgstr "Selecteer gebruikersrollen om ze automatisch je filialen te maken."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "View Docs link text"
 msgid "View Docs"
 msgstr "Documenten bekijken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for register as an affiliate setting"
 msgid "Register as an affiliate"
 msgstr "Registreren als partner"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for register as an affiliate setting"
 msgid "Allow existing users to apply as affiliates directly from their My Account page - "
 msgstr "Bestaande gebruikers toestaan om zich rechtstreeks aan te melden als filiaal vanuit hun pagina Mijn account - De pagina Mijn account openen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for making individual user as an affiliate"
 msgid "You can make existing/individual users as affiliates from their User Profile - "
 msgstr "Je kunt bestaande/individuele gebruikers als filiaal aanmaken vanuit hun gebruikersprofiel."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for basic settings in onboarding"
 msgid "A few essential things we need to set up"
 msgstr "Een paar essentiële dingen die we moeten instellen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for basic settings in onboarding"
 msgid "Please set up the following options that are at the core of your affiliate program. If you are not quite sure how you want these options set, go with defaults and change them later."
 msgstr "Stel de volgende opties in die de kern vormen van je affiliateprogramma. Als je niet zeker weet hoe je deze opties wilt instellen, gebruik dan de standaardinstellingen en wijzig ze later."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for tracking param name setting"
 msgid "Tracking parameter name"
 msgstr "Naam traceerparameter"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Tracking parameter name setting description"
 msgid "This will be added to referral URLs to track affiliate traffic. No special characters or numbers allowed. Example link: "
 msgstr "Dit wordt toegevoegd aan verwijzings-URL's om affiliateverkeer bij te houden. Speciale tekens of getallen zijn niet toegestaan. Voorbeeldlink:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for enabling referral coupons setting"
 msgid "Enable use of referral coupons"
 msgstr "Gebruik van verwijzingscoupons mogelijk maken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for enabling referral coupons setting"
 msgid "Let affiliates earn commission when customers use their coupon - even without clicking their link. You can create the coupons later."
 msgstr "Laat affiliates commissie verdienen als klanten hun coupon gebruiken - zelfs zonder op hun link te klikken. Je kunt de coupons later aanmaken."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for affiliate self-refer setting"
 msgid "Allow self-referrals"
 msgstr "Zelfverwijzingen toestaan"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate self-refer setting description"
 msgid "Let affiliates earn commission when they buy from your store using their own link or coupon. Turn this off to help prevent misuse or self-referral fraud."
 msgstr "Laat affiliates commissie verdienen als ze via hun eigen link of coupon iets kopen in je winkel. Schakel dit uit om misbruik of zelfverwijzingsfraude te helpen voorkomen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for affiliate manager email setting"
 msgid "Affiliate manager email"
 msgstr "Affiliate manager e-mail"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Placeholder to enter email address for affiliate manager email setting"
 msgid "Enter email address"
 msgstr "E-mailadres invoeren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate manager email setting description"
 msgid "This is the email where you will receive all affiliate program emails and your affiliates will use to contact you. And it'll show as a 'Contact' link in their dashboard. Leave it blank if you don't want to show any contact link."
 msgstr "Dit is het e-mailadres waarop je alle e-mails van het affiliateprogramma ontvangt en dat je affiliates zullen gebruiken om contact met je op te nemen. En het zal worden weergegeven als een 'Contact' link in hun dashboard. Laat het leeg als je geen contactlink wilt weergeven."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for My Account setup note"
 msgid "Important: "
 msgstr "Belangrijk:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "My Account setup note"
 msgid "The affiliate dashboard is set up automatically, giving affiliates access to their account, referral links, coupons, and other stats."
 msgstr "Het affiliate dashboard wordt automatisch ingesteld en geeft affiliates toegang tot hun account, doorverwijslinks, coupons en andere statistieken."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "My Account setup note"
 msgid "You can review/change it later from the settings."
 msgstr "Je kunt het later bekijken/wijzigen via de instellingen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for setting up commission settings in onboarding"
 msgid "Commissions"
 msgstr "Commissies"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for setting up commission plan in onboarding"
 msgid "Set up referral and default commission rate for affiliates."
 msgstr "Verwijzing en standaard commissietarief voor affiliates instellen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for cookie duration setting"
 msgid "Cookie duration (in days)"
 msgstr "Duur van het cookie (in dagen)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Cookie duration setting description"
 msgid "Referrals are tracked using browser cookies. Set how long you want to credit affiliates for a sale after someone clicks their link or applies a coupon. Use '0' for same-visit only or 36500 for lifetime."
 msgstr "Verwijzingen worden bijgehouden met behulp van browsercookies. Stel in hoe lang je affiliates wilt crediteren voor een verkoop nadat iemand op hun link heeft geklikt of een coupon heeft toegepast. Gebruik '0' voor alleen hetzelfde bezoek of 36500 voor levenslang."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for credit first or last affiliate setting"
 msgid "Give commission to the affiliate who"
 msgstr "Geef commissie aan de affiliate die"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for whether to credit first affiliate who referred to the customer"
 msgid "First referred the customer"
 msgstr "Eerst de klant doorverwezen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for whether to credit last affiliate who referred to the customer"
 msgid "Last referred the customer"
 msgstr "Laatste doorverwijzing naar de klant"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Credit first or last affiliate setting description"
 msgid "Decide whether to credit the first or last affiliate who referred the customer before a purchase."
 msgstr "Beslis of je de eerste of de laatste affiliate die de klant heeft doorverwezen wilt crediteren voor een aankoop."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for default commission plan rate"
 msgid "Default commission rate"
 msgstr "Standaard commissietarief"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Placeholder to set default commission rate"
 msgid "Set amount"
 msgstr "Bedrag instellen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "different type of commission setup description"
 msgid "Create unlimited custom commission plans under Affiliate > Plans — based on affiliates, products, referral sources and more."
 msgstr "Maak onbeperkt aangepaste commissieplannen onder Affiliate > Plannen - gebaseerd op affiliates, producten, verwijzingsbronnen en meer."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "how commission calculation works description"
 msgid "Commissions are calculated on the order subtotal only (excluding taxes, shipping and coupon discounts)."
 msgstr "Commissies worden alleen berekend over het subtotaal van de bestelling (exclusief belastingen, verzendkosten en couponkortingen)."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for payouts settings in onboarding"
 msgid "Payouts"
 msgstr "Uitbetalingen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for setting up payout settings in onboarding"
 msgid "Configure a few settings for commission payouts. Choose your preferred payout methods later in settings."
 msgstr "Configureer een paar instellingen voor commissie-uitbetalingen. Kies later in de instellingen de uitbetalingsmethode van je voorkeur."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for refund period setting"
 msgid "Refund period (in days)"
 msgstr "Restitutieperiode (in dagen)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Refund period setting description"
 msgid "Set how many days to wait before paying commission - just in case the order gets refunded. Enter '0' if you don't offer refunds. Referrals in this period will show how many days are left."
 msgstr "Stel in hoeveel dagen je moet wachten voordat je commissie betaalt - voor het geval de bestelling wordt terugbetaald. Voer '0' in als je geen terugbetalingen aanbiedt. Verwijzingen in deze periode laten zien hoeveel dagen er nog over zijn."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for minimum affiliate commission payout setting"
 msgid "Minimum affiliate commission for payout"
 msgstr "Minimum affiliate commissie voor uitbetaling"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Minimum affiliate commission payout setting description"
 msgid "An affiliate's earnings must reach this threshold to qualify for a payout. Only referrals from eligible orders will be included."
 msgstr "De verdiensten van een affiliate moeten deze drempel bereiken om in aanmerking te komen voor een uitbetaling. Alleen verwijzingen van in aanmerking komende bestellingen worden meegenomen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Text for supported payout methods"
 msgid "Supported Payout Methods"
 msgstr "Ondersteunde uitbetalingsmethoden"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "List of payout methods supported"
 msgid "PayPal | Stripe | Coupon | Store Credit"
 msgstr "PayPal | Stripe | Coupon | Winkelkrediet"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payouts methods configuration note"
 msgid "Both automatic and manual payouts are supported. You can configure each method later."
 msgstr "Zowel automatische als handmatige uitbetalingen worden ondersteund. Je kunt elke methode later configureren."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Text for automatic payouts supported"
 msgid "Automatic Payouts"
 msgstr "Automatische uitbetalingen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Automatic payouts configuration note"
 msgid "We've got automatic commission payouts too! You can set them up anytime from the settings."
 msgstr "We hebben ook automatische commissie-uitbetalingen! Je kunt ze op elk moment instellen via de instellingen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for before proceed in onboarding"
 msgid "Almost there, few more:"
 msgstr "Bijna klaar, nog een paar:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for before proceed in onboarding"
 msgid "Take note of few more things to do"
 msgstr "Noteer nog een paar dingen die je moet doen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "caching note liner start"
 msgid "Important: Review these "
 msgstr "Belangrijk: Bekijk deze"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "works with caching documentation link text"
 msgid "settings to tweak for referral tracking to work with your caching plugin"
 msgstr "instellingen die je moet aanpassen om het bijhouden van verwijzingen te laten werken met je caching-plugin"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for referral links and caching"
 msgid "Recommended: Enable this to test affiliate functionality with your account."
 msgstr "Aanbevolen: Schakel dit in om de partnerfunctionaliteit met je account te testen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for making current user as an affiliate"
 msgid "Make me an affiliate"
 msgstr "Maak mij een affiliate"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for Getting started step"
 msgid "Affiliate For WooCommerce is ready to run your affiliate program."
 msgstr "Affiliate For WooCommerce is klaar om je affiliateprogramma uit te voeren."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for Getting started step"
 msgid "We have enabled a few emails for you automatically - "
 msgstr "We hebben een aantal e-mails automatisch voor je ingeschakeld -"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visit email settings link label"
 msgid "Review all emails"
 msgstr "Alle e-mails bekijken"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for viewing settings page"
 msgid "You can always visit the plugin's settings to view or modify the other settings - "
 msgstr "Je kunt altijd naar de instellingen van de plugin gaan om de andere instellingen te bekijken of te wijzigen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visit settings link label"
 msgid "Review settings"
 msgstr "Instellingen herzien"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "View docs text"
 msgid "Explore the documentation"
 msgstr "Verken de documentatie"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Welcome headline on the onboarding"
 msgid "Let's kickstart your affiliate program!"
 msgstr "Laten we je partnerprogramma een kickstart geven!"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "text for onboarding welcome page"
 msgid "Glad to have you onboard."
 msgstr "Blij dat je aan boord bent."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "text for onboarding welcome page"
 msgid "You're now part of 5,000+ smart users growing their business and boosting revenue."
 msgstr "Je maakt nu deel uit van meer dan 5.000 slimme gebruikers die hun bedrijf laten groeien en hun omzet vergroten."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "text for onboarding welcome page"
 msgid "Click the button below, and we'll walk you through the setup. It only takes a couple of minutes."
 msgstr "Klik op de knop hieronder en we begeleiden je bij de installatie. Het duurt maar een paar minuten."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "text for onboarding welcome page"
 msgid "And don't worry, you can modify these later at anytime."
 msgstr "En maak je geen zorgen, je kunt deze later op elk moment aanpassen."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Start button label"
 msgid "I'm ready, let's get started"
 msgstr "Ik ben er klaar voor, laten we beginnen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Skip button label"
 msgid "Skip this and go to Dashboard"
 msgstr "Sla dit over en ga naar Dashboard"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Heading for basic setting steps"
 msgid "Essential settings"
 msgstr "Essentiële instellingen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Heading for payout settings setup step"
 msgid "Payouts"
 msgstr "Uitbetalingen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Heading for affiliate setup step"
 msgid "Affiliates"
 msgstr "Filialen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Onboarding complete button label"
 msgid "Ready to roll - open dashboard"
 msgstr "Klaar voor gebruik - dashboard openen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Save and next screen button label"
 msgid "Save & Next"
 msgstr "Opslaan & Volgende"
@@ -7785,42 +7785,42 @@ msgctxt "success message on feedback option update"
 msgid "Feedback option updated"
 msgstr "Feedback optie bijgewerkt"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Rule selection"
 msgid "Select rule"
 msgstr "Regel selecteren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Operator selection"
 msgid "Select operator"
 msgstr "Operator selecteren"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Rule condition selection"
 msgid "Rule condition"
 msgstr "Regelvoorwaarde"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Rule group condition selection"
 msgid "Rule group condition"
 msgstr "Voorwaarde regelgroep"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Question asking user opinion about plugin"
 msgid "Happy with the Affiliate plugin?"
 msgstr "Tevreden met de Affiliate plugin?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Campaign status selection label"
 msgid "Select campaign status"
 msgstr "Selecteer campagnestatus"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Campaign ID label"
 msgid "Campaign ID"
 msgstr "Campagne-ID"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Campaign Status label"
 msgid "Campaign Status"
 msgstr "Campagnestatus"
@@ -7830,27 +7830,27 @@ msgctxt "Table label for referrals table in affiliate dashboard"
 msgid "Affiliate Referrals"
 msgstr "Affiliate verwijzingen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "context behind contact links on plans dashboard"
 msgid "Click to log in and share your requirements. We'll help set things up"
 msgstr "Klik om in te loggen en je wensen te delen. Wij helpen je met het opzetten"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "contactsupport link to offer help on setting up commission plans"
 msgid "Need help? Let us handle the setup"
 msgstr "Hulp nodig? Laat ons de installatie verzorgen"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label to save commission plan order once sorted"
 msgid "Save plan order"
 msgstr "Bestelling opslaan"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label to save commission plan order once sorted"
 msgid "Drag the plans to change the order"
 msgstr "Versleep de plannen om de volgorde te wijzigen"
 
-#: assets/js/frontend.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "Campaign list label"
 msgid "Campaigns"
 msgstr "Campagnes"

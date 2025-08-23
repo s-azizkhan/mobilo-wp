@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Affiliate For WooCommerce 8.41.0\n"
+"Project-Id-Version: Affiliate For WooCommerce 8.42.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
@@ -428,7 +428,7 @@ msgid "Guest"
 msgstr "게스트"
 
 #. translators: Email address
-#: includes/admin/class-afwc-admin-affiliates.php:2549
+#: includes/admin/class-afwc-admin-affiliates.php:2551
 msgctxt "Confirmation message for adding the new customer as lifetime commission customer"
 msgid "%s - Would you like to link this customer?"
 msgstr "%s - 이 고객을 연결하시겠습니까?"
@@ -508,44 +508,44 @@ msgctxt "Setting link in dashboard widget"
 msgid "Settings"
 msgstr "설정"
 
-#: includes/admin/class-afwc-admin-dashboard.php:230
+#: includes/admin/class-afwc-admin-dashboard.php:225
 msgctxt "Title for pending affiliate status"
 msgid "Awaiting Approval"
 msgstr "승인 대기 중"
 
-#: includes/admin/class-afwc-admin-dashboard.php:231
+#: includes/admin/class-afwc-admin-dashboard.php:226
 msgctxt "Title for active affiliate status"
 msgid "Active"
 msgstr "활성"
 
-#: includes/admin/class-afwc-admin-dashboard.php:232
+#: includes/admin/class-afwc-admin-dashboard.php:227
 msgctxt "Title for rejected affiliate status"
 msgid "Rejected"
 msgstr "거부됨"
 
-#: includes/admin/class-afwc-admin-dashboard.php:288
+#: includes/admin/class-afwc-admin-dashboard.php:283
 msgid "all matching products in the order"
 msgstr "주문에 일치하는 모든 제품"
 
-#: includes/admin/class-afwc-admin-dashboard.php:289
+#: includes/admin/class-afwc-admin-dashboard.php:284
 msgid "only the first matching product"
 msgstr "첫 번째 일치하는 제품만"
 
-#: includes/admin/class-afwc-admin-dashboard.php:290
+#: includes/admin/class-afwc-admin-dashboard.php:285
 msgid "continue matching commission plans"
 msgstr "커미션 플랜 계속 매칭"
 
-#: includes/admin/class-afwc-admin-dashboard.php:291
+#: includes/admin/class-afwc-admin-dashboard.php:286
 msgid "use default commission"
 msgstr "기본 수수료 사용"
 
-#: includes/admin/class-afwc-admin-dashboard.php:292
+#: includes/admin/class-afwc-admin-dashboard.php:287
 msgid "apply zero commission"
 msgstr "수수료 제로 적용"
 
-#: includes/admin/class-afwc-admin-dashboard.php:513
-#: includes/admin/class-afwc-admin-dashboard.php:1707
-#: includes/admin/class-afwc-admin-dashboard.php:1743
+#: includes/admin/class-afwc-admin-dashboard.php:508
+#: includes/admin/class-afwc-admin-dashboard.php:1702
+#: includes/admin/class-afwc-admin-dashboard.php:1738
 #: includes/admin/class-afwc-campaign-dashboard.php:84
 #: includes/admin/class-afwc-campaign-dashboard.php:102
 #: includes/admin/class-afwc-campaign-dashboard.php:165
@@ -562,147 +562,147 @@ msgctxt "authorization failure message"
 msgid "You are not allowed to use this action"
 msgstr "이 작업은 사용할 수 없습니다."
 
-#: includes/admin/class-afwc-admin-dashboard.php:540
+#: includes/admin/class-afwc-admin-dashboard.php:535
 msgctxt "error message for requested parameter missing"
 msgid "Status missing"
 msgstr "상태 누락"
 
-#: includes/admin/class-afwc-admin-dashboard.php:574
-#: includes/admin/class-afwc-admin-dashboard.php:615
+#: includes/admin/class-afwc-admin-dashboard.php:569
+#: includes/admin/class-afwc-admin-dashboard.php:610
 msgid "Required params missing"
 msgstr "필수 매개변수 누락"
 
-#: includes/admin/class-afwc-admin-dashboard.php:584
+#: includes/admin/class-afwc-admin-dashboard.php:579
 msgid "Failed to update commission status, please try after some time."
 msgstr "커미션 상태를 업데이트하지 못했습니다. 잠시 후 다시 시도하세요."
 
 #. translators: Number of records updated in referrals table.
-#: includes/admin/class-afwc-admin-dashboard.php:593
+#: includes/admin/class-afwc-admin-dashboard.php:588
 msgid "Commission status updated for %d record"
 msgid_plural "Commission status updated for %d records"
 msgstr[0] "d 레코드에 대한 커미션 상태 업데이트"
 
 #. translators: Name of the payout method.
-#: includes/admin/class-afwc-admin-dashboard.php:656
+#: includes/admin/class-afwc-admin-dashboard.php:651
 msgctxt "Payout failed error message"
 msgid "%s payout failed."
 msgstr "%s 지급에 실패했습니다."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1060
+#: includes/admin/class-afwc-admin-dashboard.php:1055
 msgctxt "csv export error message"
 msgid "WordPress upload directory is not set."
 msgstr "워드프레스 업로드 디렉터리가 설정되지 않았습니다."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1142
+#: includes/admin/class-afwc-admin-dashboard.php:1137
 msgctxt "error message when fetching payouts"
 msgid "Required parameter missing - Affiliate ID"
 msgstr "필수 매개변수 누락 - 제휴사 ID"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1168
+#: includes/admin/class-afwc-admin-dashboard.php:1163
 msgctxt "error message when fetching products"
 msgid "Required parameter missing - Affiliate ID"
 msgstr "필수 매개변수 누락 - 제휴사 ID"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1197
+#: includes/admin/class-afwc-admin-dashboard.php:1192
 #: includes/admin/class-afwc-pending-payout-dashboard.php:96
 msgctxt "error message when fetching profile details"
 msgid "Required parameter missing - Affiliate ID."
 msgstr "필수 매개변수 누락 - 제휴사 ID."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1305
+#: includes/admin/class-afwc-admin-dashboard.php:1300
 msgctxt "error message when missing necessary parameters"
 msgid "Required params missing"
 msgstr "필수 매개변수 누락"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1322
+#: includes/admin/class-afwc-admin-dashboard.php:1317
 msgctxt "multi tier fetching error message"
 msgid "You do not have permission to fetch the multi-tier details."
 msgstr "다중 계층 세부 정보를 가져올 수 있는 권한이 없습니다."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1350
+#: includes/admin/class-afwc-admin-dashboard.php:1345
 msgctxt "error message when fetching affiliate KPI details"
 msgid "Required parameter missing - Affiliate ID."
 msgstr "필수 매개변수 누락 - 제휴사 ID."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1420
+#: includes/admin/class-afwc-admin-dashboard.php:1415
 msgctxt "error message when fetching affiliate details"
 msgid "Required parameter missing - Affiliate ID."
 msgstr "필수 매개변수 누락 - 제휴사 ID."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1609
+#: includes/admin/class-afwc-admin-dashboard.php:1604
 msgctxt "error message for missing of required parameter for linking the lifetime customer"
 msgid "Customer or affiliate ID missing"
 msgstr "고객 또는 제휴사 ID 누락"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1621
+#: includes/admin/class-afwc-admin-dashboard.php:1616
 msgctxt "error message on linking the customer due to the customer is already linked with the same affiliate"
 msgid "Customer is already linked to this affiliate"
 msgstr "고객이 이미 이 제휴사에 연결되어 있습니다."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1622
+#: includes/admin/class-afwc-admin-dashboard.php:1617
 msgctxt "error message on linking the customer due to the customer is already linked with another affiliate"
 msgid "Customer is already linked with another affiliate"
 msgstr "고객이 이미 다른 제휴사와 연결되어 있습니다."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1651
+#: includes/admin/class-afwc-admin-dashboard.php:1646
 msgctxt "error message for missing of required parameter for unlinking the lifetime customer"
 msgid "Customer or affiliate ID missing"
 msgstr "고객 또는 제휴사 ID 누락"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1681
+#: includes/admin/class-afwc-admin-dashboard.php:1676
 msgctxt "error message for missing of search term of linking lifetime customer"
 msgid "Search term is missing"
 msgstr "검색어가 누락되었습니다."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1777
-#: includes/admin/class-afwc-admin-dashboard.php:1870
-#: includes/admin/class-afwc-admin-dashboard.php:1915
+#: includes/admin/class-afwc-admin-dashboard.php:1772
+#: includes/admin/class-afwc-admin-dashboard.php:1865
+#: includes/admin/class-afwc-admin-dashboard.php:1910
 msgctxt "authorization failure message"
 msgid "You are not allowed to perform this action"
 msgstr "이 작업을 수행할 수 없습니다."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1781
-#: includes/admin/class-afwc-admin-dashboard.php:1874
-#: includes/admin/class-afwc-admin-dashboard.php:1919
+#: includes/admin/class-afwc-admin-dashboard.php:1776
+#: includes/admin/class-afwc-admin-dashboard.php:1869
+#: includes/admin/class-afwc-admin-dashboard.php:1914
 msgctxt "error message for missing affiliate data"
 msgid "Affiliate profile data is missing"
 msgstr "제휴사 프로필 데이터가 누락되었습니다."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1786
-#: includes/admin/class-afwc-admin-dashboard.php:1879
-#: includes/admin/class-afwc-admin-dashboard.php:1924
+#: includes/admin/class-afwc-admin-dashboard.php:1781
+#: includes/admin/class-afwc-admin-dashboard.php:1874
+#: includes/admin/class-afwc-admin-dashboard.php:1919
 msgctxt "error message for missing affiliate ID"
 msgid "Affiliate ID is missing"
 msgstr "제휴사 ID가 누락되었습니다."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1800
-#: includes/frontend/class-afwc-my-account.php:2096
+#: includes/admin/class-afwc-admin-dashboard.php:1795
+#: includes/frontend/class-afwc-my-account.php:2095
 msgctxt "referral url identifier updating error message"
 msgid "The URL identifier could not updated"
 msgstr "URL 식별자를 업데이트할 수 없습니다."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1809
-#: includes/frontend/class-afwc-my-account.php:2119
+#: includes/admin/class-afwc-admin-dashboard.php:1804
+#: includes/frontend/class-afwc-my-account.php:2118
 msgctxt "referral url identifier updating error message"
 msgid "Something went wrong"
 msgstr "문제가 발생했습니다."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1825
+#: includes/admin/class-afwc-admin-dashboard.php:1820
 msgctxt "error message for invalid paypal email address"
 msgid "Invalid PayPal email address"
 msgstr "잘못된 PayPal 이메일 주소"
 
-#: includes/admin/class-afwc-admin-dashboard.php:1888
+#: includes/admin/class-afwc-admin-dashboard.php:1883
 msgctxt "error message while approving an affiliate"
 msgid "Something went wrong while approving an affiliate."
 msgstr "제휴사를 승인하는 동안 문제가 발생했습니다."
 
-#: includes/admin/class-afwc-admin-dashboard.php:1975
+#: includes/admin/class-afwc-admin-dashboard.php:1970
 msgctxt "error message when fetching payout KPI details"
 msgid "Required parameter missing."
 msgstr "필수 매개 변수가 누락되었습니다."
 
-#: includes/admin/class-afwc-admin-dashboard.php:2073
+#: includes/admin/class-afwc-admin-dashboard.php:2068
 msgctxt "error message when dismissing notice"
 msgid "Required parameter missing."
 msgstr "필수 매개 변수가 누락되었습니다."
@@ -712,7 +712,7 @@ msgid "Getting started"
 msgstr "시작하기"
 
 #: includes/admin/class-afwc-admin-notifications.php:93
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Settings"
 msgstr "설정"
 
@@ -763,55 +763,55 @@ msgid "📣 Big update"
 msgstr "📣 대규모 업데이트"
 
 #: includes/admin/class-afwc-admin-notifications.php:231
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notice text for affiliate commission rule calculation update"
 msgid "We have improved commission calculations in certain cases. New referral orders may have updated commissions issued (the existing referrals remain unaffected)."
 msgstr "특정 경우의 커미션 계산이 개선되었습니다. 새로운 추천 주문에는 업데이트된 수수료가 지급될 수 있습니다(기존 추천은 영향을 받지 않음)."
 
 #: includes/admin/class-afwc-admin-notifications.php:236
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notice text for affiliate commission rule calculation update"
 msgid "Please review your commission plans and place a test order to verify everything is working as expected."
 msgstr "수수료 계획을 검토하고 모든 것이 예상대로 작동하는지 확인하기 위해 테스트 주문을 하세요."
 
 #: includes/admin/class-afwc-admin-notifications.php:246
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Link to open plan dashboard"
 msgid "Review plans"
 msgstr "계획 검토"
 
 #: includes/admin/class-afwc-admin-notifications.php:256
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notice title to announce admin summary report"
 msgid "📣 Big update"
 msgstr "📣 대규모 업데이트"
 
 #: includes/admin/class-afwc-admin-notifications.php:258
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notice text for explaining admin summary email feature"
 msgid "A monthly affiliate program summary email will now be sent to the Affiliate Manager and Store Admin."
 msgstr "이제 제휴 관리자 및 스토어 관리자에게 월간 제휴 프로그램 요약 이메일이 전송됩니다."
 
 #: includes/admin/class-afwc-admin-notifications.php:264
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notice text stating admin summary email is auto-enabled"
 msgid "This email is automatically enabled for you based on your store settings."
 msgstr "이 이메일은 스토어 설정에 따라 자동으로 사용하도록 설정됩니다."
 
 #: includes/admin/class-afwc-admin-notifications.php:265
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Button text to view admin summary email settings"
 msgid "Review email"
 msgstr "이메일 검토"
 
 #: includes/admin/class-afwc-admin-notifications.php:267
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notice text for stating admin summary email is disabled"
 msgid "This email is disabled for you as your store settings do not meet the requirements."
 msgstr "스토어 설정이 요구 사항을 충족하지 않으므로 이 이메일은 사용할 수 없습니다."
 
 #: includes/admin/class-afwc-admin-notifications.php:268
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Button text to check requirements for enabling admin summary email"
 msgid "Review email requirements"
 msgstr "이메일 요구 사항 검토"
@@ -842,8 +842,8 @@ msgid "Search affiliate by email, username, name or user ID to assign this order
 msgstr "이메일, 사용자 이름, 이름 또는 사용자 ID로 제휴사를 검색하여 이 주문을 할당합니다."
 
 #: includes/admin/class-afwc-admin-order-affiliate-details.php:164
-#: includes/class-affiliate-for-woocommerce.php:1398
-#: includes/common/class-afwc-coupon.php:111
+#: includes/class-affiliate-for-woocommerce.php:966
+#: includes/tracking/class-afwc-coupon.php:111
 msgctxt "affiliate search placeholder"
 msgid "Search by email, username or name"
 msgstr "이메일, 사용자 아이디 또는 이름으로 검색"
@@ -2075,67 +2075,67 @@ msgid "Join our affiliate program"
 msgstr "제휴 프로그램 가입하기"
 
 #: includes/affiliate-for-woocommerce-functions.php:975
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for today"
 msgid "Today"
 msgstr "오늘"
 
 #: includes/affiliate-for-woocommerce-functions.php:976
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for yesterday"
 msgid "Yesterday"
 msgstr "어제"
 
 #: includes/affiliate-for-woocommerce-functions.php:979
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for this week"
 msgid "This Week"
 msgstr "이번 주"
 
 #: includes/affiliate-for-woocommerce-functions.php:980
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last week"
 msgid "Last Week"
 msgstr "지난 주"
 
 #: includes/affiliate-for-woocommerce-functions.php:981
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last 4 weeks"
 msgid "Last 4 Weeks"
 msgstr "지난 4주"
 
 #: includes/affiliate-for-woocommerce-functions.php:984
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for this month"
 msgid "This Month"
 msgstr "이번 달"
 
 #: includes/affiliate-for-woocommerce-functions.php:985
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last month"
 msgid "Last Month"
 msgstr "지난 달"
 
 #: includes/affiliate-for-woocommerce-functions.php:986
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for 3 months"
 msgid "3 Months"
 msgstr "3 개월"
 
 #: includes/affiliate-for-woocommerce-functions.php:987
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for 6 months"
 msgid "6 Months"
 msgstr "6개월"
 
 #: includes/affiliate-for-woocommerce-functions.php:990
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for this year"
 msgid "This Year"
 msgstr "올해"
 
 #: includes/affiliate-for-woocommerce-functions.php:991
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last year"
 msgid "Last Year"
 msgstr "작년"
@@ -2192,80 +2192,80 @@ msgid "No Affiliate Tags found"
 msgstr "제휴 태그가 없습니다."
 
 #. translators: A small arrow
-#: includes/class-affiliate-for-woocommerce.php:429
+#: includes/class-affiliate-for-woocommerce.php:435
 msgid "Affiliates Dashboard"
 msgstr "제휴사 대시보드"
 
 #. translators: A small arrow
-#: includes/class-affiliate-for-woocommerce.php:429
-#: assets/js/admin.js:1
+#: includes/class-affiliate-for-woocommerce.php:435
+#: assets/js/admin/admin.js:1
 msgid "Affiliates"
 msgstr "제휴사"
 
-#: includes/class-affiliate-for-woocommerce.php:438
+#: includes/class-affiliate-for-woocommerce.php:444
 msgctxt "Page title for setup guide page"
 msgid "Getting Started"
 msgstr "시작하기"
 
-#: includes/class-affiliate-for-woocommerce.php:438
+#: includes/class-affiliate-for-woocommerce.php:444
 msgctxt "Menu name for setup guide page"
 msgid "Getting Started"
 msgstr "시작하기"
 
 #. translators: 1: user display name 2: user ID 3: user email
-#: includes/class-affiliate-for-woocommerce.php:1388
-#: includes/common/class-afwc-coupon.php:99
+#: includes/class-affiliate-for-woocommerce.php:956
+#: includes/tracking/class-afwc-coupon.php:99
 msgid "%1$s (#%2$s &ndash; %3$s)"
 msgstr "1$s (#%2$s &ndash; %3$s)"
 
-#: includes/class-affiliate-for-woocommerce.php:1507
+#: includes/class-affiliate-for-woocommerce.php:1075
 msgctxt "text to copy the affiliate's product-specific referral link"
 msgid "Click to copy referral link"
 msgstr "추천 링크를 복사하려면 클릭하세요."
 
 #. translators: 1: Callable name 2: Error message
-#: includes/class-affiliate-for-woocommerce.php:1579
+#: includes/class-affiliate-for-woocommerce.php:1147
 msgctxt "Error message details"
 msgid "Error in %1$s. Details: %2$s"
 msgstr "1$s에 오류가 발생했습니다. 세부 정보입니다: %2$s"
 
-#: includes/class-affiliate-for-woocommerce.php:1658
+#: includes/class-affiliate-for-woocommerce.php:1226
 msgctxt "referral url identifier updating error message"
 msgid "Affiliate ID missing for updating affiliate URL identifier."
 msgstr "제휴사 URL 식별자 업데이트에 필요한 제휴사 ID가 누락되었습니다."
 
-#: includes/class-affiliate-for-woocommerce.php:1668
+#: includes/class-affiliate-for-woocommerce.php:1236
 msgctxt "referral url identifier updating error message"
 msgid "The affiliate URL identifier can not be empty."
 msgstr "제휴사 URL 식별자는 비워둘 수 없습니다."
 
-#: includes/class-affiliate-for-woocommerce.php:1677
+#: includes/class-affiliate-for-woocommerce.php:1245
 msgctxt "referral url identifier updating error message"
 msgid "Numeric values are not allowed for affiliate URL identifier."
 msgstr "제휴사 URL 식별자에는 숫자 값을 사용할 수 없습니다."
 
-#: includes/class-affiliate-for-woocommerce.php:1686
+#: includes/class-affiliate-for-woocommerce.php:1254
 msgctxt "referral identifier pattern validation error message"
 msgid "Invalid affiliate URL identifier. It should be a combination of alphabets and numbers, but the number should not be in the first position."
 msgstr "잘못된 제휴사 URL 식별자입니다. 알파벳과 숫자의 조합이어야 하지만 숫자가 첫 번째 위치에 있으면 안 됩니다."
 
-#: includes/class-affiliate-for-woocommerce.php:1701
+#: includes/class-affiliate-for-woocommerce.php:1269
 msgctxt "referral url identifier updating error message"
 msgid "Old and new affiliate URL identifier are same. Please choose a different identifier."
 msgstr "이전 및 새 제휴사 URL 식별자는 동일합니다. 다른 식별자를 선택해 주세요."
 
-#: includes/class-affiliate-for-woocommerce.php:1709
+#: includes/class-affiliate-for-woocommerce.php:1277
 msgctxt "referral url identifier updating error message"
 msgid "The URL identifier already exists. Please choose a different identifier."
 msgstr "URL 식별자가 이미 존재합니다. 다른 식별자를 선택해 주세요."
 
 #. translators: Affiliate For WooCommerce icon
-#: includes/class-afwc-admin-bar-menu.php:66
+#: includes/admin/class-afwc-admin-bar-menu.php:66
 msgctxt "label in the admin bar"
 msgid "%s Affiliates"
 msgstr "%s 계열사"
 
-#: includes/class-afwc-admin-bar-menu.php:77
+#: includes/admin/class-afwc-admin-bar-menu.php:77
 msgctxt "Meta title of the admin bar"
 msgid "Access affiliates dashboard"
 msgstr "제휴 대시보드에 액세스"
@@ -2288,12 +2288,12 @@ msgctxt "Greeting for admin"
 msgid "there"
 msgstr "거기"
 
-#: includes/class-afwc-multi-tier.php:399
+#: includes/multi-tier/class-afwc-multi-tier.php:399
 msgctxt "Title for Affiliate registration parent user's id field"
 msgid "Referral affiliate user ID"
 msgstr "추천 제휴사 사용자 ID"
 
-#: includes/class-afwc-multi-tier.php:559
+#: includes/multi-tier/class-afwc-multi-tier.php:559
 msgctxt "Input label for parent affiliate in user edit setting"
 msgid "Parent affiliate"
 msgstr "상위 제휴사"
@@ -2447,50 +2447,50 @@ msgid "You are not registered as an affiliate."
 msgstr "제휴사로 등록되어 있지 않습니다."
 
 #. translators: 1: The current task class name
-#: includes/class-afwc-report-background-emailer.php:164
+#: includes/queue/class-afwc-report-background-emailer.php:164
 msgctxt "Error message for data unavailable"
 msgid "Data are not available to run task in %s"
 msgstr "에서 작업을 실행하는 데 데이터를 사용할 수 없습니다 %s."
 
 #. translators: 1: The affiliate IDs
-#: includes/class-afwc-report-background-emailer.php:186
+#: includes/queue/class-afwc-report-background-emailer.php:186
 msgctxt "Logger for summary email report"
 msgid "AFWC summary email report failed to send for Affiliate ID: %d"
 msgstr "제휴사 ID: %d에 대한 AFWC 요약 이메일 보고서를 보내지 못했습니다."
 
 #. translators: 1: The affiliate IDs
-#: includes/class-afwc-report-background-emailer.php:195
+#: includes/queue/class-afwc-report-background-emailer.php:195
 msgctxt "Logger for summary email report"
 msgid "AFWC summary email report sent successfully for Affiliate ID: %d"
 msgstr "제휴사 ID: %d에 대한 AFWC 요약 이메일 보고서가 성공적으로 전송되었습니다."
 
 #. translators: 1: The affiliate ID 2: The task class name
-#: includes/class-afwc-report-background-emailer.php:206
+#: includes/queue/class-afwc-report-background-emailer.php:206
 msgctxt "Logger for batch stopped due to health status"
 msgid "Batch stopped due to health status after Affiliate ID : %1$d in task: %2$s"
 msgstr "작업의 제휴사 ID: %1$d 이후 건강 상태로 인해 일괄 처리가 중지되었습니다: %2$s"
 
-#: includes/class-afwc-visits.php:225
+#: includes/reports/class-afwc-visits.php:225
 msgctxt "Referral medium title for link"
 msgid "Link"
 msgstr "링크"
 
-#: includes/class-afwc-visits.php:226
+#: includes/reports/class-afwc-visits.php:226
 msgctxt "Referral medium title for coupon"
 msgid "Coupon"
 msgstr "쿠폰"
 
-#: includes/class-afwc-visits.php:581
+#: includes/reports/class-afwc-visits.php:581
 msgctxt "Icon title for mobile"
 msgid "Mobile"
 msgstr "모바일"
 
-#: includes/class-afwc-visits.php:585
+#: includes/reports/class-afwc-visits.php:585
 msgctxt "Icon title for tablet"
 msgid "Tablet"
 msgstr "태블릿"
 
-#: includes/class-afwc-visits.php:589
+#: includes/reports/class-afwc-visits.php:589
 msgctxt "Icon title for desktop"
 msgid "Desktop"
 msgstr "데스크톱"
@@ -2790,38 +2790,38 @@ msgctxt "Error message for referral order count rule"
 msgid "Unable to fetch the total count for valid referral orders"
 msgstr "유효한 추천 주문의 총 개수를 가져올 수 없습니다."
 
-#: includes/common/class-afwc-coupon.php:110
+#: includes/tracking/class-afwc-coupon.php:110
 msgid "Assign to affiliate"
 msgstr "제휴사에 할당"
 
-#: includes/common/class-afwc-coupon.php:120
+#: includes/tracking/class-afwc-coupon.php:120
 msgctxt "help tip for search and assign affiliate"
 msgid "Search affiliate by email, username, name or user id to assign this coupon to them. Affiliates will see this coupon in their My account > Affiliates > Profile."
 msgstr "이메일, 사용자 아이디, 이름 또는 사용자 아이디로 제휴사를 검색하여 이 쿠폰을 할당합니다. 제휴사는 내 계정 > 제휴사 > 프로필에서 이 쿠폰을 확인할 수 있습니다."
 
-#: includes/common/class-afwc-landing-page.php:153
+#: includes/tracking/class-afwc-landing-page.php:153
 msgctxt "Title for landing page meta box"
 msgid "Affiliate Landing Page"
 msgstr "제휴 랜딩 페이지"
 
-#: includes/common/class-afwc-landing-page.php:181
+#: includes/tracking/class-afwc-landing-page.php:181
 msgctxt "Label for the landing page assignment field"
 msgid "Assign to affiliate"
 msgstr "제휴사에 할당"
 
-#: includes/common/class-afwc-landing-page.php:185
+#: includes/tracking/class-afwc-landing-page.php:185
 msgctxt "Description for assign to affiliate - landing page meta box field"
 msgid "This will be set as a landing page for the selected affiliate."
 msgstr "선택한 제휴사의 랜딩 페이지로 설정됩니다."
 
 #. translators: 1: Merge tag for affiliate Id 2: Merge tag for affiliate name 3: Merge tag for affiliate link
-#: includes/common/class-afwc-landing-page.php:189
+#: includes/tracking/class-afwc-landing-page.php:189
 msgctxt "Show the available merge tags"
 msgid "Available merge tags: <code>%1$s</code> <code>%2$s</code> <code>%3$s</code>"
 msgstr "사용 가능한 병합 태그입니다: <코드>%1$s</코드> <코드>%2$s</코드> <코드>%3$s</코드>"
 
 #. translators: Affiliate ID
-#: includes/common/class-afwc-landing-page.php:284
+#: includes/tracking/class-afwc-landing-page.php:284
 msgctxt "Exception message for landing page fetching query failed"
 msgid "Database query failed while fetching the landing page for %d"
 msgstr "D에 대한 랜딩 페이지를 가져오는 동안 데이터베이스 쿼리가 실패했습니다."
@@ -3384,7 +3384,7 @@ msgid "Affiliate Network"
 msgstr "제휴 네트워크"
 
 #: includes/frontend/class-afwc-my-account.php:258
-#: includes/frontend/class-afwc-my-account.php:2148
+#: includes/frontend/class-afwc-my-account.php:2147
 msgid "Affiliate"
 msgstr "제휴"
 
@@ -3405,7 +3405,7 @@ msgstr "제휴사로 등록하기"
 
 #: includes/frontend/class-afwc-my-account.php:452
 #: templates/my-account/dashboard/visits-table.php:52
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Device type label in visits dashboard"
 msgid "Device:"
 msgstr "장치:"
@@ -3430,7 +3430,7 @@ msgstr "국가:"
 
 #: includes/frontend/class-afwc-my-account.php:627
 #: templates/my-account/dashboard/referrals-table.php:68
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Deleted campaign ID in referral table"
 msgid "Deleted"
 msgstr "삭제됨"
@@ -3466,136 +3466,136 @@ msgctxt "Affiliate my account tab title for campaigns"
 msgid "Campaigns"
 msgstr "캠페인"
 
-#: includes/frontend/class-afwc-my-account.php:1870
+#: includes/frontend/class-afwc-my-account.php:1869
 msgctxt "Default value for customer name in my account referral reports"
 msgid "Guest"
 msgstr "게스트"
 
-#: includes/frontend/class-afwc-my-account.php:1935
+#: includes/frontend/class-afwc-my-account.php:1934
 msgctxt "referral identifier pattern validation error message"
 msgid "Invalid identifier. It should be a combination of alphabets and numbers, but the number should not be in the first position."
 msgstr "식별자가 잘못되었습니다. 알파벳과 숫자의 조합이어야 하지만 숫자가 첫 번째 위치에 있으면 안 됩니다."
 
-#: includes/frontend/class-afwc-my-account.php:2003
+#: includes/frontend/class-afwc-my-account.php:2002
 msgctxt "account details updating error message"
 msgid "Invalid user"
 msgstr "잘못된 사용자"
 
-#: includes/frontend/class-afwc-my-account.php:2013
+#: includes/frontend/class-afwc-my-account.php:2012
 msgctxt "account details updating error message"
 msgid "Missing data"
 msgstr "누락된 데이터"
 
-#: includes/frontend/class-afwc-my-account.php:2047
+#: includes/frontend/class-afwc-my-account.php:2046
 msgctxt "Affiliate My Account page: PayPal email validation"
 msgid "The PayPal email address is incorrect."
 msgstr "PayPal 이메일 주소가 올바르지 않습니다."
 
-#: includes/frontend/class-afwc-my-account.php:2071
+#: includes/frontend/class-afwc-my-account.php:2070
 msgctxt "referral url identifier updating error message"
 msgid "Missing data"
 msgstr "누락된 데이터"
 
-#: includes/frontend/class-afwc-my-account.php:2086
+#: includes/frontend/class-afwc-my-account.php:2085
 msgctxt "referral url identifier updating error message"
 msgid "Custom affiliate URL identifier not allowed."
 msgstr "사용자 지정 제휴사 URL 식별자는 허용되지 않습니다."
 
-#: includes/frontend/class-afwc-my-account.php:2107
+#: includes/frontend/class-afwc-my-account.php:2106
 msgctxt "referral url identifier updated message"
 msgid "Identifier saved successfully."
 msgstr "식별자가 성공적으로 저장되었습니다."
 
-#: includes/frontend/class-afwc-my-account.php:2149
+#: includes/frontend/class-afwc-my-account.php:2148
 msgid "Endpoint for the My Account &rarr; Affiliate page"
 msgstr "내 계정 &rarr; 제휴 페이지의 엔드포인트"
 
-#: includes/frontend/class-afwc-my-account.php:2395
+#: includes/frontend/class-afwc-my-account.php:2394
 msgctxt "Visits table header title for date column"
 msgid "Datetime"
 msgstr "날짜 시간"
 
-#: includes/frontend/class-afwc-my-account.php:2396
+#: includes/frontend/class-afwc-my-account.php:2395
 msgctxt "Visits table header title for medium column"
 msgid "Medium"
 msgstr "Medium"
 
-#: includes/frontend/class-afwc-my-account.php:2397
+#: includes/frontend/class-afwc-my-account.php:2396
 msgctxt "Visits table header title for landing url column"
 msgid "Landing URL"
 msgstr "랜딩 URL"
 
-#: includes/frontend/class-afwc-my-account.php:2398
+#: includes/frontend/class-afwc-my-account.php:2397
 msgctxt "Visits table header title for conversion column"
 msgid "Converted"
 msgstr "변환됨"
 
-#: includes/frontend/class-afwc-my-account.php:2402
+#: includes/frontend/class-afwc-my-account.php:2401
 msgctxt "Visits table header title for user agent info column"
 msgid "User Agent"
 msgstr "사용자 에이전트"
 
-#: includes/frontend/class-afwc-my-account.php:2415
+#: includes/frontend/class-afwc-my-account.php:2414
 msgctxt "Referrals table header title for date column"
 msgid "Date"
 msgstr "날짜"
 
-#: includes/frontend/class-afwc-my-account.php:2416
+#: includes/frontend/class-afwc-my-account.php:2415
 msgctxt "Referrals table header title for order id column"
 msgid "Order ID"
 msgstr "주문 ID"
 
-#: includes/frontend/class-afwc-my-account.php:2417
+#: includes/frontend/class-afwc-my-account.php:2416
 msgctxt "Referrals table header title for commission column"
 msgid "Commission"
 msgstr "커미션"
 
-#: includes/frontend/class-afwc-my-account.php:2418
+#: includes/frontend/class-afwc-my-account.php:2417
 msgctxt "Referrals table header title for payout status column"
 msgid "Payout status"
 msgstr "지급 상태"
 
-#: includes/frontend/class-afwc-my-account.php:2422
+#: includes/frontend/class-afwc-my-account.php:2421
 msgctxt "Referrals table header title for customer column"
 msgid "Customer"
 msgstr "고객"
 
-#: includes/frontend/class-afwc-my-account.php:2425
+#: includes/frontend/class-afwc-my-account.php:2424
 msgctxt "Referrals table header title for campaign column"
 msgid "Campaign"
 msgstr "캠페인"
 
-#: includes/frontend/class-afwc-my-account.php:2439
+#: includes/frontend/class-afwc-my-account.php:2438
 msgctxt "Products table header title for product name column"
 msgid "Product"
 msgstr "제품"
 
-#: includes/frontend/class-afwc-my-account.php:2440
+#: includes/frontend/class-afwc-my-account.php:2439
 msgctxt "Products table header title for quantity column"
 msgid "Quantity"
 msgstr "수량"
 
-#: includes/frontend/class-afwc-my-account.php:2441
+#: includes/frontend/class-afwc-my-account.php:2440
 msgctxt "Products table header title for sales column"
 msgid "Sales"
 msgstr "판매"
 
-#: includes/frontend/class-afwc-my-account.php:2456
+#: includes/frontend/class-afwc-my-account.php:2455
 msgctxt "Payouts table header title for date column"
 msgid "Date"
 msgstr "날짜"
 
-#: includes/frontend/class-afwc-my-account.php:2457
+#: includes/frontend/class-afwc-my-account.php:2456
 msgctxt "Payouts table header title for payout amount column"
 msgid "Amount"
 msgstr "금액"
 
-#: includes/frontend/class-afwc-my-account.php:2458
+#: includes/frontend/class-afwc-my-account.php:2457
 msgctxt "Payouts table header title for payout method column"
 msgid "Method"
 msgstr "방법"
 
-#: includes/frontend/class-afwc-my-account.php:2459
+#: includes/frontend/class-afwc-my-account.php:2458
 msgctxt "Payouts table header title for payout notes column"
 msgid "Notes"
 msgstr "참고"
@@ -5298,7 +5298,7 @@ msgid "View all"
 msgstr "모두 보기"
 
 #: templates/my-account/affiliate-title-card.php:22
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "affiliate profile image"
 msgid "Affiliate profile image"
 msgstr "제휴사 프로필 이미지"
@@ -5408,7 +5408,7 @@ msgstr "더 보기"
 #: templates/my-account/dashboard/products-table.php:77
 #: templates/my-account/dashboard/referrals-table.php:113
 #: templates/my-account/dashboard/visits-table.php:137
-#: assets/js/my-account/affiliate-reports.js:65
+#: assets/js/frontend/my-account/affiliate-reports.js:65
 msgctxt "Text for no data to load"
 msgid "No more data to load"
 msgstr "더 이상 로드할 데이터 없음"
@@ -5586,2238 +5586,2238 @@ msgstr "당사 제품"
 msgid "Here is our complete product catalog: %s."
 msgstr "전체 제품 카탈로그는 다음과 같습니다: %s."
 
-#: assets/js/admin.js:1
-#: assets/js/frontend.js:1
+#: assets/js/admin/admin.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "default loader message"
 msgid "Loading"
 msgstr "로드 중"
 
-#: assets/js/admin.js:1
-#: assets/js/frontend.js:1
+#: assets/js/admin/admin.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "Loading text for campaigns"
 msgid "Loading Campaigns"
 msgstr "캠페인 로드 중"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for successful campaign creation"
 msgid "Campaign created successfully"
 msgstr "캠페인이 성공적으로 생성되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for successful campaign update"
 msgid "Campaign updated successfully"
 msgstr "캠페인 업데이트 성공"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for failed campaign creation or update"
 msgid "Failed to create or update campaign"
 msgstr "캠페인을 만들거나 업데이트하지 못했습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for successful campaign deletion"
 msgid "Campaign deleted successfully"
 msgstr "캠페인이 성공적으로 삭제되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for failed campaign deletion"
 msgid "Failed to delete campaign"
 msgstr "캠페인을 삭제하지 못했습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "re-generating sample campaigns loader message"
 msgid "Generating Sample Campaigns"
 msgstr "샘플 캠페인 생성"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for successful sample campaigns creation"
 msgid "Sample campaigns created successfully"
 msgstr "성공적으로 생성된 샘플 캠페인"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for failed sample campaigns creation"
 msgid "Failed to create sample campaigns"
 msgstr "샘플 캠페인을 만들지 못했습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Loading text for commissions"
 msgid "Loading Commission Plans"
 msgstr "커미션 플랜 로드"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification success message after creating a new commission plan"
 msgid "The commission plan created successfully"
 msgstr "커미션 플랜이 성공적으로 생성되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification success message after updating a commission plan"
 msgid "The commission plan updated successfully"
 msgstr "커미션 플랜이 성공적으로 업데이트되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification error message for failed commission plan creation or update"
 msgid "Failed to create or update the commission plan"
 msgstr "커미션 플랜을 생성하거나 업데이트하지 못했습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification success message after deleting a commission plan"
 msgid "The commission plan deleted successfully"
 msgstr "수수료 플랜이 성공적으로 삭제되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification error message for failed commission plan deletion"
 msgid "Failed to delete the commission plan"
 msgstr "수수료 플랜을 삭제하지 못했습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for successful payout"
 msgid "Payout processed successfully"
 msgstr "지급이 성공적으로 처리되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Success message for removal of linked lifetime commission customer"
 msgid "Customer unlinked successfully"
 msgstr "고객 연결 해제 성공"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Error message for failing of the unlinking the customer for lifetime commissions"
 msgid "Customer can't be unlinked"
 msgstr "고객 연결을 해제할 수 없음"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Success message after linking the customer for lifetime commissions"
 msgid "Customer linked successfully"
 msgstr "고객 연결 성공"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Error message for failing of linking the customer for lifetime commissions"
 msgid "Customer can't be linked"
 msgstr "고객을 연결할 수 없습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "email label at in affiliate profile tab"
 msgid "Email"
 msgstr "이메일"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "first name label at in affiliate profile tab"
 msgid "First Name"
 msgstr "이름"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "last name label at in affiliate profile tab"
 msgid "Last Name"
 msgstr "성"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "user website label at in affiliate profile tab"
 msgid "Website"
 msgstr "웹사이트"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "contact label at in affiliate profile tab"
 msgid "Way To Contact"
 msgstr "연락 방법"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "skype id label at in affiliate profile tab"
 msgid "Skype ID"
 msgstr "Skype ID"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "affiliate description label at in affiliate profile tab"
 msgid "About Affiliate"
 msgstr "제휴사 정보"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "affiliate paypal email label at in affiliate profile tab"
 msgid "PayPal Email Address"
 msgstr "PayPal 이메일 주소"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "affiliate parent affiliate label at in affiliate profile tab"
 msgid "Parent Affiliate"
 msgstr "상위 제휴사"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "confirmation message before leaving unsaved profile tab"
 msgid "Are you sure you want to leave? Unsaved changes will be lost."
 msgstr "정말 탈퇴하시겠습니까? 저장하지 않은 변경 사항은 손실됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "title text for disabled date filter due to unsaved changes on profile"
 msgid "You cannot change dates as the affiliate profile has unsaved changes."
 msgstr "제휴 프로필에 저장되지 않은 변경 사항이 있으므로 날짜를 변경할 수 없습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "self linking alert"
 msgid "Are you sure you want to link the same affiliate as a lifetime customer?"
 msgstr "평생 고객과 동일한 제휴사를 연결하시겠습니까?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - title for affiliate identifier edit icon"
 msgid "Edit identifier"
 msgstr "식별자 수정"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder for Affiliate identifier field"
 msgid "Enter affiliate identifier"
 msgstr "제휴사 식별자 입력"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - title for edit affiliate identifier cancel icon"
 msgid "Cancel"
 msgstr "취소"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Profile warning for personalizing affiliate identifier can not use"
 msgid "The affiliate cannot use this identifier as the "
 msgstr "제휴사는 이 식별자를 다음과 같이 사용할 수 없습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - setting name for personalizing affiliate identifier at profile warning"
 msgid "Personalize affiliate identifier"
 msgstr "제휴사 식별자 개인화"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Profile warning for personalizing affiliate identifier setting is disabled"
 msgid " setting is disabled. "
 msgstr " 설정이 비활성화되어 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Profile warning for allow setting to personalizing affiliate identifier"
 msgid "Enable the setting to allow the affiliate to use this identifier in the referral URL."
 msgstr "제휴사가 추천 URL에서 이 식별자를 사용할 수 있도록 허용하려면 설정을 활성화합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - tooltip title for copying referral link"
 msgid "Click to copy"
 msgstr "복사하려면 클릭"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - title for coupon edit icon"
 msgid "Edit coupon"
 msgstr "쿠폰 수정"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty coupon message"
 msgid "No coupons assigned"
 msgstr "할당된 쿠폰 없음"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Create coupon link message"
 msgid "Create a coupon"
 msgstr "쿠폰 만들기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder of disabling affiliate tag search field"
 msgid "Tag assign input is disabled for the rejected affiliate"
 msgstr "거부된 제휴사에 대해 태그 할당 입력이 비활성화됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder for searching the affiliate tag"
 msgid "Search tags"
 msgstr "태그 검색"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder of disabling parent affiliate search field"
 msgid "Parent affiliate input is disabled for the rejected affiliate"
 msgstr "거부된 제휴사에 대해 상위 제휴사 입력이 비활성화됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Placeholder for parent affiliate search input"
 msgid "Search for a parent affiliate"
 msgstr "상위 제휴사 검색"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for the parent affiliate field in affiliate profile"
 msgid "The commission will be distributed to this parent affiliate on a multi-tier commission plan."
 msgstr "수수료는 다단계 수수료 플랜에 따라 이 상위 제휴사에 배분됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - title for landing page edit icon"
 msgid "Edit page"
 msgstr "페이지 편집"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty landing page message"
 msgid "No landing page assigned"
 msgstr "지정한 랜딩 페이지 없음"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder for searching the customer"
 msgid "Search and Link customer"
 msgstr "고객 검색 및 연결"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder of disabling the customer search"
 msgid "Lifetime commission is disabled for the affiliate"
 msgstr "제휴사에 대해 평생 수수료가 비활성화됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder for PayPal email address field"
 msgid "Enter PayPal email address where affiliate will receive commission"
 msgstr "제휴사가 커미션을 받을 페이팔 이메일 주소를 입력합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description for PayPal email field"
 msgid "This affiliate will receive their commission on the above PayPal email address."
 msgstr "이 제휴사는 위의 PayPal 이메일 주소로 수수료를 받게 됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "loading text for profile tab save button"
 msgid "Updating"
 msgstr "업데이트"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "message after profile update successfully"
 msgid "Affiliate profile updated successfully."
 msgstr "제휴사 프로필이 성공적으로 업데이트되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "update button text for profile tab"
 msgid "Update"
 msgstr "업데이트"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "profile tab's referral details accordion title"
 msgid "Referral Details"
 msgstr "추천 세부 정보"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Referral link label"
 msgid "Referral Link"
 msgstr "추천 링크"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Affiliate identifier label"
 msgid "Affiliate Identifier"
 msgstr "제휴사 식별자"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Referral coupons label"
 msgid "Referral Coupons"
 msgstr "추천 쿠폰"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Affiliate tags label"
 msgid "Tags"
 msgstr "태그"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty tags message"
 msgid "No tags assigned"
 msgstr "할당된 태그 없음"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Parent affiliate label"
 msgid "Parent Affiliate"
 msgstr "상위 제휴사"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Landing page label"
 msgid "Landing Pages"
 msgstr "랜딩 페이지"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Lifetime customers label"
 msgid "Lifetime Customers"
 msgstr "평생 고객"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "payout details's referral details accordion title"
 msgid "Payout Details"
 msgstr "지급 세부 정보"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for Payout method"
 msgid "Payout Method"
 msgstr "지급 방법"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - PayPal email address label"
 msgid "PayPal Email Address"
 msgstr "PayPal 이메일 주소"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description if user is selected for automatic payout"
 msgid "Is Selected For Automatic Payout?"
 msgstr "자동 지급을 선택하셨나요?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "affiliate is selected for automatic payout"
 msgid "Yes"
 msgstr "예"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "affiliate is not selected for automatic payout"
 msgid "No"
 msgstr "아니요"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Registration form details accordion title"
 msgid "Registration Form Details"
 msgstr "등록 양식 세부 정보"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - tab title"
 msgid "Referrals"
 msgstr "추천"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - tab title"
 msgid "Payouts"
 msgstr "지급금"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - tab title"
 msgid "Products"
 msgstr "제품"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - tab title"
 msgid "Visits"
 msgstr "방문"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - tab title"
 msgid "Profile"
 msgstr "프로필"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - tab title"
 msgid "Multi-Tier"
 msgstr "멀티 티어"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Loading Affiliates"
 msgstr "제휴사 로드"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Confirmation before importing affiliate data - line 1"
 msgid "After the import, the Affiliate users roles feature will no longer work."
 msgstr "가져오기 후에는 제휴 사용자 역할 기능이 더 이상 작동하지 않습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Confirmation before importing affiliate data - line 2"
 msgid "Users with the selected affiliate user role will lose their affiliate status, and you’ll need to manually reassign them as affiliates."
 msgstr "선택한 제휴 사용자 역할을 가진 사용자는 제휴 자격을 잃게 되며, 수동으로 제휴 회원으로 다시 할당해야 합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Confirmation before importing affiliate data - line 3"
 msgid "Are you sure you want to continue?"
 msgstr "계속 진행하시겠습니까?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "searchbox icon title"
 msgid "Affiliate status"
 msgstr "제휴사 상태"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "searchbox icon title"
 msgid "Commission status"
 msgstr "커미션 상태"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "searchbox icon title"
 msgid "Affiliate tags"
 msgstr "제휴 태그"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Search & Filter"
 msgstr "검색 및 필터링"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Click on a label to filter. Type in the search box to search."
 msgstr "필터링할 레이블을 클릭합니다. 검색창에 입력하여 검색합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliates dashboard search box filter reset button text"
 msgid "Reset Filters"
 msgstr "필터 재설정"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Question asking user opinion about plugin"
 msgid "Happy with the Affiliate plugin?"
 msgstr "제휴 플러그인에 만족하십니까?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Asking how plugin is doing"
 msgid "Is our plugin doing what it promised - helping you expand your reach and boost your sales?"
 msgstr "플러그인이 약속한 대로 도달 범위를 넓히고 매출을 늘리는 데 도움이 되나요?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Positive response button"
 msgid "Yes, all good"
 msgstr "예, 모두 괜찮습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Negative response button"
 msgid "Could be better"
 msgstr "더 좋을 수 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Thank you message for positive feedback"
 msgid "Thanks for the love!"
 msgstr "사랑해 주셔서 감사합니다!"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Request the user to leave a review"
 msgid "Awesome! Mind leaving us a 5-star review? It really motivates us to keep improving and reach more store owners like you."
 msgstr "굉장해요! 별점 5점 리뷰를 남겨주시겠어요? 고객님처럼 더 많은 스토어 소유자에게 다가갈 수 있도록 계속 개선하는 데 큰 힘이 됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Review response button"
 msgid "Yes, I'll rate now!"
 msgstr "네, 지금 평가하겠습니다!"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Apology message for negative feedback"
 msgid "We hear you - let's make it better!"
 msgstr "여러분의 의견을 듣고 개선해 나가겠습니다!"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Support offer message"
 msgid "Thanks for your honesty. Let our support team assist you so you can get back to growing your store hassle-free."
 msgstr "솔직하게 말씀해 주셔서 감사합니다. 번거로움 없이 스토어 성장에 집중할 수 있도록 지원팀에 도움을 요청하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Support contact button"
 msgid "Contact support"
 msgstr "지원팀에 문의"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for the plan updated notice"
 msgid "📣 Big update"
 msgstr "📣 대규모 업데이트"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "PayPal Payout migration notice"
 msgid "[PayPal Payouts] PayPal have deprecated MassPay API and it will be removed soon. So we recommend you switch to a new Payout API for smoother commission payouts."
 msgstr "[페이팔 지급액] 페이팔에서 MassPay API를 더 이상 지원하지 않으며 곧 제거될 예정입니다. 따라서 보다 원활한 커미션 지급을 위해 새로운 지급 API로 전환하는 것이 좋습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "refer to the provided doc"
 msgid "Refer to"
 msgstr "다음을 참조하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "link text for the doc"
 msgid "this doc"
 msgstr "이 문서"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "text for more details regarding PayPal API migration"
 msgid "for more details."
 msgstr "에서 자세한 내용을 확인하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "ask to check whether switched to the PayPal Payout API"
 msgid "If you have already switched to the new PayPal Payout API, run migration."
 msgstr "이미 새로운 PayPal 지급액 API로 전환한 경우 마이그레이션을 실행하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Link text for PayPal Payout migration"
 msgid "Run migration"
 msgstr "마이그레이션 실행"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Migration process is running:"
 msgstr "마이그레이션 프로세스가 실행 중입니다:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "[Important] Affiliate for WooCommerce requires a database migration."
 msgstr "[중요] WooCommerce용 제휴사에는 데이터베이스 마이그레이션이 필요합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Run migration"
 msgstr "마이그레이션 실행"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate import running text in notice"
 msgid "Affiliate data import is in progress..."
 msgstr "제휴사 데이터 가져오기가 진행 중입니다..."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Import data message"
 msgid "Import affiliates with their referral link data from %s."
 msgstr "에서 추천 링크 데이터가 있는 제휴사를 가져옵니다 %s."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate data import button"
 msgid "Start import"
 msgstr "가져오기 시작"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Migration done successfully."
 msgstr "마이그레이션이 성공적으로 완료되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notice text on migration status"
 msgid "Migration completed successfully."
 msgstr "마이그레이션이 성공적으로 완료되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "tasks completed."
 msgstr "작업이 완료되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "tasks starting"
 msgstr "작업 시작"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Navigation menu title for main dashboard in admin dashboard"
 msgid "Dashboard"
 msgstr "대시보드"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Navigation menu title for campaigns in admin dashboard"
 msgid "Campaigns"
 msgstr "캠페인"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Navigation menu title for plans in admin dashboard"
 msgid "Plans"
 msgstr "요금제"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Navigation menu title for Payouts in admin dashboard"
 msgid "Pending Payouts"
 msgstr "보류 중인 지급금"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Add a Campaign"
 msgstr "캠페인 추가"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Add a Plan"
 msgstr "요금제 추가"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder for search & filter"
 msgid "Search & Filter"
 msgstr "검색 및 필터링"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder"
 msgid "start date"
 msgstr "시작 날짜"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "to"
 msgstr "에"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder"
 msgid "end date"
 msgstr "종료 날짜"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for doc link"
 msgid "Docs"
 msgstr "문서"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for manage affiliate tag page link"
 msgid "Manage affiliate tags"
 msgstr "제휴 태그 관리"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliates KPI label: Total Revenue"
 msgid "%1$s%% of Total Revenue"
 msgstr "총 수익의 %1$s%%"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliates KPI label: Number of affiliate"
 msgid "Affiliates"
 msgstr "제휴사"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliates KPI label: Visitors"
 msgid "Visitors"
 msgstr "방문자"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliates KPI label: Customers"
 msgid "Customers"
 msgstr "고객"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliates KPI label: Conversion Rate"
 msgid "Conversion Rate"
 msgstr "전환율"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Pending Payouts"
 msgstr "보류 중인 지급금"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "affiliate"
 msgstr "제휴"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "affiliates"
 msgstr "제휴사"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "needs to be paid total commission of"
 msgstr "의 총 수수료를 지불해야 합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Load More"
 msgstr "더 보기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - KPI label for affiliate's net unpaid commission"
 msgid "Net Unpaid Commission"
 msgstr "순 미지급 수수료"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - signup date label"
 msgid "Since:"
 msgstr "이후:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Referral link label"
 msgid "Referral Link:"
 msgstr "추천 링크:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate KPI label: Visitors"
 msgid "Visitors"
 msgstr "방문자"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate KPI label: Customers"
 msgid "Customers"
 msgstr "고객"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate KPI label: Conversion"
 msgid "Conversion"
 msgstr "전환"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate KPI label: Revenue"
 msgid "Revenue"
 msgstr "수익"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate KPI label: Gross Commission"
 msgid "Gross Commission"
 msgstr "총 수수료"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate KPI label: Net Commission"
 msgid "Net Commission"
 msgstr "순 수수료"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Referral table name"
 msgid "Referral details"
 msgstr "추천 세부 정보"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Column header for referral table"
 msgid "Date"
 msgstr "날짜"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Column header for referral table"
 msgid "Order"
 msgstr "주문"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Column header for referral table"
 msgid "Commission"
 msgstr "커미션"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Column header for referral table"
 msgid "Customer"
 msgstr "고객"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Column header for referral table"
 msgid "Campaign"
 msgstr "캠페인"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Column header for referral table"
 msgid "Medium"
 msgstr "Medium"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "title text for refund period remaining for referral"
 msgid "Refund period: Payout ready after %d days"
 msgstr "환불 기간: 일 후에 지급 준비 완료"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty referral message"
 msgid "Referrals are unavailable for this date range or filter. Adjust either dates or filter then retry."
 msgstr "이 날짜 범위 또는 필터에 대해 추천을 사용할 수 없습니다. 날짜 또는 필터를 조정한 후 다시 시도하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Payout method title"
 msgid "PayPal: Pay & Record"
 msgstr "PayPal: 결제 및 기록"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - PayPal pay & record"
 msgid "Automatically pay via PayPal and record payout."
 msgstr "PayPal을 통해 자동으로 결제하고 지급 내역을 기록합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Payout method title"
 msgid "PayPal: Record Only"
 msgstr "PayPal: 기록 전용"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - PayPal: record only"
 msgid "Record a manual payout done via PayPal. This method does not send money."
 msgstr "PayPal을 통해 수동 지급을 기록합니다. 이 방법은 돈을 송금하지 않습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Payout method title"
 msgid "Other"
 msgstr "기타"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - other"
 msgid "Record a manual payout done via any method. This method does not send money."
 msgstr "모든 방법을 통해 수동 지급을 기록합니다. 이 방법은 돈을 송금하지 않습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Payout method title"
 msgid "Stripe: Pay & Record"
 msgstr "스트라이프: 결제 및 기록"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - Stripe: pay & record"
 msgid "Pay via Stripe and record payout."
 msgstr "Stripe을 통해 결제하고 지급액을 기록합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Payout method title"
 msgid "Coupon: Fixed Cart"
 msgstr "쿠폰: 고정 장바구니"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - Coupon: Fixed Cart"
 msgid "Issue a coupon and record payout."
 msgstr "쿠폰을 발행하고 결제 내역을 기록합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - Coupon: Fixed Cart to use Smart Coupons > Store Credit instead"
 msgid "Affiliate Store Credit Payouts"
 msgstr "제휴 스토어 크레딧 지급액"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - Coupon: Fixed Cart to use Smart Coupons > Store Credit instead"
 msgid " to offer payout as a Store Credit instead of a Fixed cart coupon."
 msgstr " 를 사용하여 고정 카트 쿠폰 대신 스토어 크레딧으로 지급액을 제공할 수 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Admin - Payout method title"
 msgid "Coupon: Store Credit"
 msgstr "쿠폰: 스토어 크레딧"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout method description for method - Coupon: Store Credit"
 msgid "Issue a store credit coupon and record payout."
 msgstr "스토어 크레딧 쿠폰을 발행하고 결제 내역을 기록합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "payout processing loader message"
 msgid "Processing"
 msgstr "처리"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "confirmation message at payout model close"
 msgid "Are you sure you want to cancel? Any changes made will be lost."
 msgstr "취소하시겠습니까? 변경한 내용은 모두 손실됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Pay"
 msgstr "결제"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label to select payout method for commission"
 msgid "Payout Method"
 msgstr "지급 방법"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Record Date"
 msgstr "기록 날짜"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder: payout date"
 msgid "Select payout date"
 msgstr "지급 날짜 선택"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Notes"
 msgstr "참고"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Cancel"
 msgstr "취소"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Send"
 msgstr "보내기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "loader message while updating commission status"
 msgid "Updating commission status"
 msgstr "커미션 상태 업데이트"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "success message after updating commission status"
 msgid "Commission status updated successfully"
 msgstr "커미션 상태 업데이트 성공"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "warning message when no referral is selected for commission status update"
 msgid "Please select a referral"
 msgstr "추천을 선택해 주세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "action name to mark commission as paid"
 msgid "Mark as Paid"
 msgstr "유료로 표시"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "action name to mark commission as unpaid"
 msgid "Mark as Unpaid"
 msgstr "미지급으로 표시"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "action name to mark commission as rejected"
 msgid "Mark as Rejected"
 msgstr "거부됨으로 표시"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "multi currency not allowed message"
 msgid "Payout is not allowed for multiple currency"
 msgstr "여러 통화에 대한 결제는 허용되지 않습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commissions payout title"
 msgid "Send Payout:"
 msgstr "지급금 보내기:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "minimum commission message"
 msgid "(below minimum commission of %s)"
 msgstr "(최소 수수료 %s 미만)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "number of selected records"
 msgid "%s record"
 msgid_plural "%s records"
 msgstr[0] "레코드"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "text for commission amount"
 msgid "commission"
 msgstr "수수료"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "commission batch action"
 msgid "Batch Actions"
 msgstr "일괄 작업"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "update button title for commission status"
 msgid "Update"
 msgstr "업데이트"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Load more link for referrals report"
 msgid "Load More"
 msgstr "더 보기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout table header for date column"
 msgid "Date"
 msgstr "날짜"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout table header for amount column"
 msgid "Amount"
 msgstr "금액"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout table header for payout method column"
 msgid "Method"
 msgstr "방법"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout table header for payout notes column"
 msgid "Notes"
 msgstr "참고"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payout table header for invoice column"
 msgid "Invoice"
 msgstr "인보이스"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "number of referrals"
 msgid "%s referral"
 msgid_plural "%s referrals"
 msgstr[0] "추천"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "title for printing the invoice icon"
 msgid "Print"
 msgstr "인쇄"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty payout message"
 msgid "Payout details are unavailable for this date range. Adjust the dates and retry."
 msgstr "이 날짜 범위에는 지급액 세부 정보를 사용할 수 없습니다. 날짜를 조정하고 다시 시도하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "label for all time commission"
 msgid "Commission (All Time)"
 msgstr "수수료(전체 시간)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "label for all time paid commissions"
 msgid "Paid (All Time)"
 msgstr "유료(전체 시간)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "label for all time unpaid commissions"
 msgid "Unpaid (All Time)"
 msgstr "미지급(전체 시간)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Load more link for payouts"
 msgid "Load More"
 msgstr "더 보기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Product table row title for product name"
 msgid "Product"
 msgstr "제품"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Product table row title for quantity"
 msgid "Quantity"
 msgstr "수량"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Product table row title for sales"
 msgid "Sales"
 msgstr "판매"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty product message"
 msgid "Products are unavailable for this date range. Adjust the dates and retry."
 msgstr "이 날짜 범위에는 제품을 사용할 수 없습니다. 날짜를 조정하고 다시 시도하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Load more link for products report"
 msgid "Load More"
 msgstr "더 보기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visit table row title for datetime"
 msgid "Datetime"
 msgstr "날짜 시간"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visit table row title for medium"
 msgid "Medium"
 msgstr "Medium"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visit table row title for landing URL"
 msgid "Landing URL"
 msgstr "랜딩 URL"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visit table row title to know if a hit is converted"
 msgid "Converted"
 msgstr "변환됨"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visit table row title for user agent"
 msgid "User agent"
 msgstr "사용자 에이전트"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Browser name label in visits dashboard"
 msgid "Browser:"
 msgstr "브라우저:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "OS name label in  visits dashboard"
 msgid "OS:"
 msgstr "OS:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "IP address label in visits dashboard"
 msgid "IP:"
 msgstr "IP:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Country name label in visits dashboard"
 msgid "Country:"
 msgstr "국가:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty visits message"
 msgid "Visits are unavailable for this date range. Adjust the dates and retry."
 msgstr "이 날짜 범위에서는 방문을 사용할 수 없습니다. 날짜를 조정하고 다시 시도하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Load more link for visits report"
 msgid "Load More"
 msgstr "더 보기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "success message when affiliate is approved"
 msgid "Affiliate %1$s is approved"
 msgstr "제휴사 %1$s가 승인되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "success message when affiliate is rejected"
 msgid "Affiliate %1$s is rejected"
 msgstr "제휴사 %1$s가 거부되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "label for affiliate approve action"
 msgid "Approve"
 msgstr "승인"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "label for affiliate reject action"
 msgid "Reject"
 msgstr "거부"
 
-#: assets/js/admin.js:1
-#: assets/js/frontend.js:1
+#: assets/js/admin/admin.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "empty chain message"
 msgid "No children found. View/set parent affiliate from affiliate's profile."
 msgstr "어린이를 찾을 수 없습니다. 제휴사의 프로필에서 상위 제휴사를 확인/설정합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Export"
 msgstr "내보내기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Standard CSV"
 msgstr "표준 CSV"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Mass Payout CSV"
 msgstr "대량 지급 CSV"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Message when there are no affiliates."
 msgid "No affiliates yet. Let's get started."
 msgstr "아직 제휴사가 없습니다. 시작해 보겠습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "instruction to edit affiliate registration form."
 msgid "Edit your affiliate registration form (Settings > Affiliate > Registration Form) and link it from your site."
 msgstr "제휴 등록 양식(설정 > 제휴 > 등록 양식)을 편집하고 사이트에서 링크합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "documentation link to registration form feature"
 msgid "Here's how."
 msgstr "방법은 다음과 같습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "instruction to make affiliates via user role through settings."
 msgid "or go to Settings > Affiliate > General and select any user roles to automatically make them affiliates."
 msgstr "를 클릭하거나 설정 > 제휴사 > 일반으로 이동하여 사용자 역할을 선택하여 자동으로 제휴사로 설정합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "documentation link to make affiliates via user role feature"
 msgid "Here's how."
 msgstr "방법은 다음과 같습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "instruction to make a user an affiliate via profile."
 msgid "Or go to an individual user's profile in WordPress and make them an affiliate."
 msgstr "또는 워드프레스에서 개별 사용자의 프로필로 이동하여 제휴사로 만들 수 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "documentation link to individually making a user as an affiliate feature"
 msgid "Here's how."
 msgstr "방법은 다음과 같습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Visitors"
 msgstr "방문자"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Orders"
 msgstr "주문"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Conversion Rate"
 msgstr "전환율"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when campaign title is missing"
 msgid "Please add a campaign title"
 msgstr "캠페인 제목을 추가하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder for searching target affiliates for campaign visibility"
 msgid "Search by affiliates or affiliate tags"
 msgstr "제휴사 또는 제휴사 태그로 검색"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Heading of campaign create/edit tab"
 msgid "Campaign Detail"
 msgstr "캠페인 세부 정보"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign status"
 msgid "Status"
 msgstr "상태"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Campaign status selection label"
 msgid "Select campaign status"
 msgstr "캠페인 상태 선택"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign save"
 msgid "Save"
 msgstr "저장"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for delete campaign button"
 msgid "Delete campaign"
 msgstr "캠페인 삭제"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "confirmation alert for deleting a campaign"
 msgid "Are you sure you want to permanently delete this campaign?"
 msgstr "이 캠페인을 영구 삭제하시겠습니까?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for campaign close panel button on admin side"
 msgid "Close panel"
 msgstr "패널 닫기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign title"
 msgid "Name"
 msgstr "이름"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign title description"
 msgid "A descriptive title for this campaign so affiliates can easily understand purpose of the campaign."
 msgstr "제휴사가 캠페인의 목적을 쉽게 이해할 수 있도록 캠페인에 대한 설명이 포함된 제목입니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign slug"
 msgid "Slug"
 msgstr "슬러그"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign short text description"
 msgid "Short text in links for this campaign: "
 msgstr "이 캠페인의 링크에 포함된 짧은 텍스트입니다:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign url"
 msgid "Destination Link"
 msgstr "대상 링크"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign destination link description"
 msgid "Want to take campaign visitors to a specific product / landing page? Or shop / home page? Enter it here."
 msgstr "캠페인 방문자를 특정 제품/랜딩 페이지로 유도하고 싶으신가요? 아니면 상점/홈페이지로 이동하고 싶으신가요? 여기에 입력하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for visibility in campaign editor"
 msgid "Visibility"
 msgstr "가시성"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for visibility in campaign editor"
 msgid "Choose individual affiliates or affiliate tags you want to show this campaign to. Leave it blank to show it to all."
 msgstr "이 캠페인을 표시할 개별 제휴사 또는 제휴 태그를 선택합니다. 모든 사람에게 표시하려면 비워 두세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign short description"
 msgid "Short Description"
 msgstr "짧은 설명"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign short description"
 msgid "This will show along with campaign name before people see all the details. Summarize the campaign here."
 msgstr "사람들이 모든 세부 정보를 보기 전에 캠페인 이름과 함께 표시됩니다. 여기에서 캠페인을 요약합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign description"
 msgid "Full Description"
 msgstr "전체 설명"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign full description"
 msgid "Use this editor to insert all the details, rules, creatives, swipes, videos, guidelines or anything else you want to present to affiliate partners. Format it well so that they can easily copy out for their own usage."
 msgstr "이 편집기를 사용하여 모든 세부 정보, 규칙, 크리에이티브, 스와이프, 동영상, 가이드라인 또는 제휴 파트너에게 제시하고 싶은 모든 것을 삽입할 수 있습니다. 파트너가 쉽게 복사하여 사용할 수 있도록 서식을 잘 지정하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "campaign full description"
 msgid "If you prefer, create a .zip file with multiple assets. Upload it to your WordPress Media, and link the file from here. You can also link to any external resources as usual."
 msgstr "원하는 경우 여러 개의 에셋이 포함된 .zip 파일을 만듭니다. 워드프레스 미디어에 업로드하고 여기에서 파일을 링크합니다. 평소처럼 외부 리소스에 링크할 수도 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Campaigns screen headline"
 msgid "Campaigns"
 msgstr "캠페인"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Campaign ID label"
 msgid "Campaign ID"
 msgstr "캠페인 ID"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Campaign Status label"
 msgid "Campaign Status"
 msgstr "캠페인 상태"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for visibility of the campaign in the campaign list"
 msgid "Visibility:"
 msgstr "가시성:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visibility label where rules are applied in the campaigns"
 msgid "Restricted"
 msgstr "제한됨"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visibility label where none of any rule applied in the campaigns"
 msgid "All"
 msgstr "모두"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of campaigns feature and usage"
 msgid "Campaigns help you organize all your marketing assets, promotional materials, and instructions you need to provide to your affiliate partners."
 msgstr "캠페인은 제휴 파트너에게 제공해야 하는 모든 마케팅 자산, 홍보 자료 및 지침을 정리하는 데 도움이 됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of campaigns feature and visibility for affiliates"
 msgid "Your affiliates can view these campaigns under their My Account > Affiliates > Campaigns tab. This tab will be automatically hidden when there are no active campaigns."
 msgstr "제휴사는 내 계정 > 제휴사 > 캠페인 탭에서 이러한 캠페인을 볼 수 있습니다. 활성 캠페인이 없는 경우 이 탭은 자동으로 숨겨집니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "documentation link to campaigns feature"
 msgid "How to create affiliate marketing campaigns"
 msgstr "제휴 마케팅 캠페인을 만드는 방법"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of campaigns re-generate feature"
 msgid "After activation, the plugin adds a few sample campaigns to help you quickly get started."
 msgstr "활성화 후 플러그인에는 빠르게 시작할 수 있도록 몇 가지 샘플 캠페인이 추가됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of campaigns to re-import"
 msgid "You can easily re-import these campaigns with just a click. Simply "
 msgstr "클릭 한 번으로 이러한 캠페인을 쉽게 다시 가져올 수 있습니다. 간단히"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "link to re-generate sample campaigns"
 msgid "re-generate sample campaigns"
 msgstr "샘플 캠페인 재생성"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description for no campaigns exist"
 msgid "No campaigns yet."
 msgstr "아직 캠페인이 없습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of add campaign"
 msgid "Go ahead, click that \"Add a Campaign\" button in the top bar to create your first campaign."
 msgstr "상단 표시줄의 '캠페인 추가' 버튼을 클릭하여 첫 번째 캠페인을 생성하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of campaigns to re-import"
 msgid "You can easily import sample campaigns with just a click - "
 msgstr "클릭 한 번으로 샘플 캠페인을 쉽게 가져올 수 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "link to generate sample campaigns"
 msgid "Generate sample campaigns"
 msgstr "샘플 캠페인 생성"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "placeholder"
 msgid "Search for a value"
 msgstr "값 검색"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Rule selection"
 msgid "Select rule"
 msgstr "규칙 선택"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Operator selection"
 msgid "Select operator"
 msgstr "운영자 선택"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "This group is a \"pass\" when"
 msgstr "이 그룹은 다음과 같은 경우에 \"통과\"됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Rule condition selection"
 msgid "Rule condition"
 msgstr "규칙 조건"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "all"
 msgstr "모두"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "at least one"
 msgstr "하나 이상"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "of the following rules are true."
 msgstr "중 하나에 해당합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Add a rule"
 msgstr "규칙 추가하기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Add another group"
 msgstr "다른 그룹 추가"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Remove this group"
 msgstr "이 그룹 제거"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for Tier 1 distribution"
 msgid "Tier 1"
 msgstr "계층 1"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for parent distribution"
 msgid "Tier %d"
 msgstr "계층 %d"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for total commission across tiers"
 msgid "Total commissions: "
 msgstr "총 수수료:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for setting number of tier for multi-tier commission"
 msgid "Multi-level commission? How many tiers?"
 msgstr "다단계 커미션? 몇 개의 티어가 있나요?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for multi-tier commission and distribution"
 msgid "Tier-wise commission distribution"
 msgstr "티어별 수수료 분배"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when no commission amount is set in the commission plan"
 msgid "Empty commission amount is not allowed"
 msgstr "빈 수수료 금액은 허용되지 않습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when the commission amount is empty for any tier in the commission plan"
 msgid "The commission amount cannot be empty for Tier %d"
 msgstr "티어 %d에 대한 수수료 금액은 비워둘 수 없습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when negative commission amount is set in the commission plan"
 msgid "Negative commission amount is not allowed"
 msgstr "마이너스 수수료 금액은 허용되지 않습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when the commission amount is negative for any tier in the commission plan"
 msgid "The commission amount cannot be negative for Tier %d"
 msgstr "티어 %d의 수수료 금액은 음수일 수 없습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when the commission percentage is greater than 100 in the commission plan"
 msgid "The commission percentage cannot be greater than 100"
 msgstr "수수료 비율은 100%를 초과할 수 없습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when the commission percentage is greater than 100 for any tier in the commission plan"
 msgid "The commission percentage cannot be greater than 100 for Tier %d"
 msgstr "티어 %d의 수수료 비율은 100보다 클 수 없습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when commission data missing details"
 msgid "Something went wrong. The commission data was not found correctly."
 msgstr "문제가 발생했습니다. 커미션 데이터를 올바르게 찾지 못했습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when commission title is empty in the commission plan"
 msgid "Please add a commission title"
 msgstr "커미션 제목을 추가하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "error message when there are no rules in the commission plan"
 msgid "Empty rule values are not allowed"
 msgstr "빈 규칙 값은 허용되지 않습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission plan name/title"
 msgid "Name"
 msgstr "이름"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "plan name"
 msgid "Plan name"
 msgstr "요금제 이름"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission plan name/title placeholder"
 msgid "Enter a name for this commission plan"
 msgstr "이 커미션 플랜의 이름을 입력하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission status label"
 msgid "Status"
 msgstr "상태"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission status dropdown"
 msgid "Commission status"
 msgstr "커미션 상태"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Button label to save commission plan"
 msgid "Save"
 msgstr "저장"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "confirmation alert for deleting a commission plan"
 msgid "Are you sure you want to permanently delete this plan?"
 msgstr "이 요금제를 영구 삭제하시겠습니까?"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Delete plan icon"
 msgid "Delete plan"
 msgstr "요금제 삭제"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Close plan icon"
 msgid "Close plan"
 msgstr "계획 닫기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for commission amount and type"
 msgid "Commission"
 msgstr "커미션"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission plan type"
 msgid "Commission Type"
 msgstr "커미션 유형"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission plan type: percentage"
 msgid "Percentage (%)"
 msgstr "백분율(%)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission plan type: flat with store currency code"
 msgid "Flat (%s)"
 msgstr "플랫(%s)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission plan type: flat"
 msgid "Flat"
 msgstr "플랫"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for commission rules"
 msgid "Rules"
 msgstr "규칙"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for main rule condition"
 msgid "When"
 msgstr "언제"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Rule group condition selection"
 msgid "Rule group condition"
 msgstr "규칙 그룹 조건"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Message for main rule condition"
 msgid "rule groups pass"
 msgstr "규칙 그룹 통과"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for commission actions"
 msgid "Actions"
 msgstr "작업"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for commission action - apply to"
 msgid "Apply to"
 msgstr "신청하기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for commission action on the remaining products"
 msgid "And then, for remaining products in the order..."
 msgstr "그런 다음 주문에 남은 제품에 대해..."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "success message after saving commission plan order"
 msgid "Plan order saved successfully"
 msgstr "플랜 주문이 성공적으로 저장되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Commission plans screen headline"
 msgid "Commission Plans"
 msgstr "커미션 플랜"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "While calculating affiliate commission, plans are validated one after the other, starting from the top. Drag and Drop to reorder and prioritize plans. Click on Save Order to save."
 msgstr "제휴 커미션을 계산하는 동안 플랜은 위에서부터 차례로 유효성이 검사됩니다. 드래그 앤 드롭으로 플랜을 재정렬하고 우선순위를 지정합니다. 주문 저장을 클릭하여 저장합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "The affiliate commission is calculated based on the order's subtotal. It does not consider taxes, shipping costs, or discounts from coupons."
 msgstr "제휴 수수료는 주문의 소계를 기준으로 계산됩니다. 세금, 배송비 또는 쿠폰 할인은 고려되지 않습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "not about storewide default commission plan"
 msgid "Note: The storewide default commission plan is not sortable. It will be validated at the end - after all the other plans."
 msgstr "참고: 스토어 전체 기본 수수료 플랜은 정렬할 수 없습니다. 다른 모든 플랜이 끝난 후 마지막에 유효성이 검사됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "text to view documentation link"
 msgid "Learn more: "
 msgstr "자세히 알아보기:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "documentation link to commissions plan feature"
 msgid "How to create custom commission plans"
 msgstr "사용자 지정 커미션 플랜을 만드는 방법"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "No commission plans yet."
 msgstr "아직 수수료 계획이 없습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgid "Go ahead, click that \"Add a Plan\" button in the top bar to create your first commission."
 msgstr "상단 표시줄에 있는 '요금제 추가' 버튼을 클릭하여 첫 번째 커미션을 생성하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for loader while updating the record"
 msgid "Updating"
 msgstr "업데이트"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for setting up affiliates in onboarding"
 msgid "Choosing affiliates"
 msgstr "제휴사 선택"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for setting up affiliates in onboarding"
 msgid "Set up your affiliate program and allow affiliates to join."
 msgstr "제휴 프로그램을 설정하고 제휴사의 가입을 허용합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for registration form"
 msgid "Registration form"
 msgstr "등록 양식"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for enabling registration form"
 msgid "Invite users to sign up as affiliates through the registration form"
 msgstr "등록 양식을 통해 사용자가 제휴사로 가입하도록 초대하기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Message for default registration form and page created"
 msgid "We have automatically created a default form and added it to a page on your site - "
 msgstr "기본 양식이 자동으로 생성되어 사이트의 페이지에 추가되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "View docs link text"
 msgid "View Docs"
 msgstr "문서 보기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Link to review registration form page"
 msgid "Review page"
 msgstr "리뷰 페이지"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Link to edit default registration form setting"
 msgid "Edit form"
 msgstr "양식 편집"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for making existing users as affiliates"
 msgid "Use existing users to grow your affiliate network"
 msgstr "기존 사용자를 활용하여 제휴 네트워크 성장"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for converting users by user role to affiliate setting"
 msgid "Convert users by their user roles"
 msgstr "사용자 역할별로 사용자 전환"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Placeholder for selecting affiliate user roles"
 msgid "Select user roles"
 msgstr "사용자 역할 선택"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for affiliate user roles"
 msgid "Affiliate user roles"
 msgstr "제휴 사용자 역할"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for selecting user roles"
 msgid "Select user roles to automatically make them your affiliates - "
 msgstr "사용자 역할을 선택하면 자동으로 제휴사로 지정됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "View Docs link text"
 msgid "View Docs"
 msgstr "문서 보기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for register as an affiliate setting"
 msgid "Register as an affiliate"
 msgstr "제휴사로 등록하기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for register as an affiliate setting"
 msgid "Allow existing users to apply as affiliates directly from their My Account page - "
 msgstr "기존 사용자가 내 계정 페이지에서 바로 제휴사로 신청할 수 있도록 허용합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for making individual user as an affiliate"
 msgid "You can make existing/individual users as affiliates from their User Profile - "
 msgstr "기존/개인 사용자를 사용자 프로필에서 제휴사로 만들 수 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for basic settings in onboarding"
 msgid "A few essential things we need to set up"
 msgstr "설정해야 할 몇 가지 필수 사항"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for basic settings in onboarding"
 msgid "Please set up the following options that are at the core of your affiliate program. If you are not quite sure how you want these options set, go with defaults and change them later."
 msgstr "제휴 프로그램의 핵심이 되는 다음 옵션을 설정하세요. 이러한 옵션을 어떻게 설정할지 잘 모르겠다면 기본값으로 설정하고 나중에 변경하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for tracking param name setting"
 msgid "Tracking parameter name"
 msgstr "추적 매개변수 이름"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Tracking parameter name setting description"
 msgid "This will be added to referral URLs to track affiliate traffic. No special characters or numbers allowed. Example link: "
 msgstr "제휴 트래픽을 추적하기 위해 추천 URL에 추가됩니다. 특수 문자나 숫자는 사용할 수 없습니다. 링크 예시:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for enabling referral coupons setting"
 msgid "Enable use of referral coupons"
 msgstr "추천 쿠폰 사용 활성화"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for enabling referral coupons setting"
 msgid "Let affiliates earn commission when customers use their coupon - even without clicking their link. You can create the coupons later."
 msgstr "제휴사는 고객이 링크를 클릭하지 않아도 쿠폰을 사용할 때 수수료를 받을 수 있습니다. 쿠폰은 나중에 생성할 수 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for affiliate self-refer setting"
 msgid "Allow self-referrals"
 msgstr "셀프 추천 허용"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate self-refer setting description"
 msgid "Let affiliates earn commission when they buy from your store using their own link or coupon. Turn this off to help prevent misuse or self-referral fraud."
 msgstr "제휴자가 자신의 링크나 쿠폰을 사용하여 스토어에서 구매할 때 커미션을 받을 수 있도록 하세요. 이 기능을 끄면 오용이나 셀프 추천 사기를 방지할 수 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for affiliate manager email setting"
 msgid "Affiliate manager email"
 msgstr "제휴 관리자 이메일"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Placeholder to enter email address for affiliate manager email setting"
 msgid "Enter email address"
 msgstr "이메일 주소 입력"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Affiliate manager email setting description"
 msgid "This is the email where you will receive all affiliate program emails and your affiliates will use to contact you. And it'll show as a 'Contact' link in their dashboard. Leave it blank if you don't want to show any contact link."
 msgstr "이 이메일은 모든 제휴 프로그램 이메일을 수신하는 이메일이며 제휴사가 회원님에게 연락할 때 사용합니다. 그리고 대시보드에 '연락처' 링크로 표시됩니다. 연락처 링크를 표시하지 않으려면 비워두세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for My Account setup note"
 msgid "Important: "
 msgstr "중요:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "My Account setup note"
 msgid "The affiliate dashboard is set up automatically, giving affiliates access to their account, referral links, coupons, and other stats."
 msgstr "제휴 대시보드가 자동으로 설정되어 제휴사가 자신의 계정, 추천 링크, 쿠폰 및 기타 통계에 액세스할 수 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "My Account setup note"
 msgid "You can review/change it later from the settings."
 msgstr "나중에 설정에서 검토/변경할 수 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for setting up commission settings in onboarding"
 msgid "Commissions"
 msgstr "커미션"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for setting up commission plan in onboarding"
 msgid "Set up referral and default commission rate for affiliates."
 msgstr "제휴사에 대한 추천 및 기본 커미션 요율을 설정합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for cookie duration setting"
 msgid "Cookie duration (in days)"
 msgstr "쿠키 기간(일)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Cookie duration setting description"
 msgid "Referrals are tracked using browser cookies. Set how long you want to credit affiliates for a sale after someone clicks their link or applies a coupon. Use '0' for same-visit only or 36500 for lifetime."
 msgstr "추천은 브라우저 쿠키를 사용하여 추적됩니다. 누군가 링크를 클릭하거나 쿠폰을 적용한 후 판매에 대해 제휴사에 크레딧을 지급할 기간을 설정합니다. 동일 방문에만 사용하려면 '0'을, 평생 사용하려면 36500을 사용합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for credit first or last affiliate setting"
 msgid "Give commission to the affiliate who"
 msgstr "다음과 같은 제휴사에게 커미션을 제공합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for whether to credit first affiliate who referred to the customer"
 msgid "First referred the customer"
 msgstr "먼저 고객 추천"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for whether to credit last affiliate who referred to the customer"
 msgid "Last referred the customer"
 msgstr "마지막으로 고객을 추천한 고객"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Credit first or last affiliate setting description"
 msgid "Decide whether to credit the first or last affiliate who referred the customer before a purchase."
 msgstr "구매 전에 고객을 추천한 첫 번째 제휴사 또는 마지막 제휴사 중 어느 쪽에 크레딧을 줄지 결정합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for default commission plan rate"
 msgid "Default commission rate"
 msgstr "기본 수수료율"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Placeholder to set default commission rate"
 msgid "Set amount"
 msgstr "금액 설정"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "different type of commission setup description"
 msgid "Create unlimited custom commission plans under Affiliate > Plans — based on affiliates, products, referral sources and more."
 msgstr "제휴 > 플랜에서 제휴사, 제품, 추천 소스 등을 기반으로 무제한 사용자 지정 커미션 플랜을 생성할 수 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "how commission calculation works description"
 msgid "Commissions are calculated on the order subtotal only (excluding taxes, shipping and coupon discounts)."
 msgstr "수수료는 주문 소계에 대해서만 계산됩니다(세금, 배송비 및 쿠폰 할인 제외)."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for payouts settings in onboarding"
 msgid "Payouts"
 msgstr "지급금"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for setting up payout settings in onboarding"
 msgid "Configure a few settings for commission payouts. Choose your preferred payout methods later in settings."
 msgstr "커미션 지급에 대한 몇 가지 설정을 구성합니다. 나중에 설정에서 선호하는 지급 방법을 선택하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for refund period setting"
 msgid "Refund period (in days)"
 msgstr "환불 기간(일 단위)"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Refund period setting description"
 msgid "Set how many days to wait before paying commission - just in case the order gets refunded. Enter '0' if you don't offer refunds. Referrals in this period will show how many days are left."
 msgstr "주문이 환불될 경우를 대비하여 수수료를 지급하기 전에 대기할 일수를 설정합니다. 환불을 제공하지 않는 경우 '0'을 입력합니다. 이 기간의 추천에는 남은 일수가 표시됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for minimum affiliate commission payout setting"
 msgid "Minimum affiliate commission for payout"
 msgstr "지급액에 대한 최소 제휴 수수료"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Minimum affiliate commission payout setting description"
 msgid "An affiliate's earnings must reach this threshold to qualify for a payout. Only referrals from eligible orders will be included."
 msgstr "제휴사의 수익이 이 임계값에 도달해야 지급금을 받을 수 있습니다. 적격 주문에서 발생한 추천만 포함됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Text for supported payout methods"
 msgid "Supported Payout Methods"
 msgstr "지원되는 지급 방법"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "List of payout methods supported"
 msgid "PayPal | Stripe | Coupon | Store Credit"
 msgstr "페이팔 | 스트라이프 | 쿠폰 | 스토어 크레딧"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Payouts methods configuration note"
 msgid "Both automatic and manual payouts are supported. You can configure each method later."
 msgstr "자동 및 수동 지급이 모두 지원됩니다. 나중에 각 방법을 구성할 수 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Text for automatic payouts supported"
 msgid "Automatic Payouts"
 msgstr "자동 지급"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Automatic payouts configuration note"
 msgid "We've got automatic commission payouts too! You can set them up anytime from the settings."
 msgstr "자동 수수료 지급 기능도 있습니다! 설정에서 언제든지 설정할 수 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for before proceed in onboarding"
 msgid "Almost there, few more:"
 msgstr "거의 다 왔고, 조금만 더 가면 됩니다:"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for before proceed in onboarding"
 msgid "Take note of few more things to do"
 msgstr "몇 가지 추가 사항을 참고하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "caching note liner start"
 msgid "Important: Review these "
 msgstr "중요: 중요: 다음 내용을 검토하십시오."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "works with caching documentation link text"
 msgid "settings to tweak for referral tracking to work with your caching plugin"
 msgstr "설정을 조정하여 캐싱 플러그인과 함께 작동하도록 추천인 추적을 조정할 수 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for referral links and caching"
 msgid "Recommended: Enable this to test affiliate functionality with your account."
 msgstr "권장: 계정에서 제휴 기능을 테스트하려면 이 기능을 활성화하세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label for making current user as an affiliate"
 msgid "Make me an affiliate"
 msgstr "제휴사 만들기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Title for Getting started step"
 msgid "You're all set up and good to go!"
 msgstr "모든 설정이 완료되어 바로 사용할 수 있습니다!"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for Getting started step"
 msgid "Affiliate For WooCommerce is ready to run your affiliate program."
 msgstr "제휴 프로그램은 제휴 프로그램을 운영할 준비가 되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for Getting started step"
 msgid "We have enabled a few emails for you automatically - "
 msgstr "몇 가지 이메일이 자동으로 전송되도록 설정했습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visit email settings link label"
 msgid "Review all emails"
 msgstr "모든 이메일 검토"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Description for viewing settings page"
 msgid "You can always visit the plugin's settings to view or modify the other settings - "
 msgstr "언제든지 플러그인 설정으로 이동하여 다른 설정을 보거나 수정할 수 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Visit settings link label"
 msgid "Review settings"
 msgstr "설정 검토"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "View docs text"
 msgid "Explore the documentation"
 msgstr "문서 살펴보기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Welcome headline on the onboarding"
 msgid "Let's kickstart your affiliate program!"
 msgstr "제휴 프로그램을 시작해보세요!"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "text for onboarding welcome page"
 msgid "Glad to have you onboard."
 msgstr "함께하게 되어 반갑습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "text for onboarding welcome page"
 msgid "You're now part of 5,000+ smart users growing their business and boosting revenue."
 msgstr "이제 5,000명 이상의 스마트 사용자들이 비즈니스를 성장시키고 수익을 높이고 있습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "text for onboarding welcome page"
 msgid "Click the button below, and we'll walk you through the setup. It only takes a couple of minutes."
 msgstr "아래 버튼을 클릭하시면 설정 과정을 안내해 드립니다. 몇 분 밖에 걸리지 않습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "text for onboarding welcome page"
 msgid "And don't worry, you can modify these later at anytime."
 msgstr "나중에 언제든지 수정할 수 있으니 걱정하지 마세요."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Start button label"
 msgid "I'm ready, let's get started"
 msgstr "준비 완료, 시작하겠습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Skip button label"
 msgid "Skip this and go to Dashboard"
 msgstr "이 단계를 건너뛰고 대시보드로 이동합니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Heading for basic setting steps"
 msgid "Essential settings"
 msgstr "필수 설정"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Heading for commission setup step"
 msgid "Commissions"
 msgstr "커미션"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Heading for payout settings setup step"
 msgid "Payouts"
 msgstr "지급금"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Heading for affiliate setup step"
 msgid "Affiliates"
 msgstr "제휴사"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Heading for getting started step"
 msgid "Getting started"
 msgstr "시작하기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Skip button label"
 msgid "Skip"
 msgstr "건너뛰기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Import affiliate button"
 msgid "Import affiliates"
 msgstr "제휴사 가져오기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Onboarding complete button label"
 msgid "Ready to roll - open dashboard"
 msgstr "준비 완료 - 대시보드 열기"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Save and next screen button label"
 msgid "Save & Next"
 msgstr "저장 및 다음"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Plugin icon alt text in onboarding"
 msgid "Affiliate For WooCommerce logo"
 msgstr "WooCommerce용 제휴사 로고"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Plugin name in onboarding"
 msgid "Affiliate For WooCommerce"
 msgstr "WooCommerce용 제휴"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for successful payout snoozed"
 msgid "Automatic payout snoozed successfully till next period."
 msgstr "자동 지급이 다음 기간까지 성공적으로 일시 중지되었습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Notification message for failed payout snoozed"
 msgid "Could not schedule automatic payout till the next period."
 msgstr "다음 기간까지 자동 지급을 예약할 수 없습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Pending Payout table row title for affiliate name"
 msgid "Name"
 msgstr "이름"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Pending Payout table row title for payout method"
 msgid "Payout method"
 msgstr "지급 방법"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Pending Payout table row title for unpaid commissions"
 msgid "Total unpaid commissions"
 msgstr "총 미지급 수수료"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Pending Payout table row title for scheduled commissions"
 msgid "Total scheduled commissions"
 msgstr "총 예약 수수료"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Link to snooze the scheduled payout date"
 msgid "Snooze"
 msgstr "스누즈"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "empty pending payout message"
 msgid "No outstanding payouts."
 msgstr "미지급금이 없습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Pending Payout screen headline"
 msgid "Pending Payouts"
 msgstr "보류 중인 지급금"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of pending payouts dashboard feature and usage"
 msgid "Pending Payouts shows a list of affiliates and their unpaid commissions."
 msgstr "보류 중인 지급액에는 제휴사 목록과 미지급 수수료가 표시됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of pending payouts dashboard feature and a new column based on automatic payouts"
 msgid "If automatic payouts are enabled, the Total Scheduled Commissions column will show the commissions your affiliates will receive."
 msgstr "자동 지급이 활성화된 경우 총 예약 커미션 열에 제휴사가 받게 될 커미션이 표시됩니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "description of pending payouts dashboard for automatic payouts"
 msgid "Commissions in the Total Scheduled Commissions are calculated based on a few settings: Refund period, Minimum affiliate commission for payout, Maximum commission to pay an affiliate and Automatic payouts include affiliates."
 msgstr "총 예약 커미션의 커미션은 몇 가지 설정에 따라 계산됩니다: 환불 기간, 지급액에 대한 최소 제휴사 수수료, 제휴사에 지급할 최대 수수료 및 자동 지급액에 제휴사 포함."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Load more link for pending payouts"
 msgid "Load More"
 msgstr "더 보기"
 
-#: assets/js/affiliate-search.js:116
+#: assets/js/lib/affiliate-search.js:116
 msgctxt "self refer alert"
 msgid "Are you sure you want to set the affiliate same as the customer? This overrides the setting Affiliate self-refer."
 msgstr "제휴사를 고객과 동일하게 설정하시겠습니까? 이렇게 하면 제휴사 자체 참조 설정이 재정의됩니다."
 
-#: assets/js/afwc-affiliate-link.js:55
+#: assets/js/lib/afwc-affiliate-link.js:55
 msgctxt "Success message after copying"
 msgid "Copied"
 msgstr "복사됨"
 
-#: assets/js/afwc-reg-form.js:11
+#: assets/js/frontend/afwc-reg-form.js:11
 msgctxt "Registration form error message for password mismatch"
 msgid "Passwords do not match."
 msgstr "비밀번호가 일치하지 않습니다."
 
-#: assets/js/afwc-reg-form.js:33
+#: assets/js/frontend/afwc-reg-form.js:33
 msgctxt "Registration form success message for user register"
 msgid "User registered successfully."
 msgstr "사용자가 성공적으로 등록했습니다."
 
-#: assets/js/afwc-reg-form.js:55
+#: assets/js/frontend/afwc-reg-form.js:55
 msgctxt "Prefix for affiliate registration error message"
 msgid "Error: "
 msgstr "오류:"
 
-#: assets/js/afwc-settings.js:22
+#: assets/js/admin/afwc-settings.js:22
 msgctxt "alert when changing affiliate tracking param name"
 msgid "Changing tracking param name will stop affiliate tracking for the existing URL with the current tracking param name. Are you sure you want to continue?"
 msgstr "추적 매개변수 이름을 변경하면 현재 추적 매개변수 이름을 가진 기존 URL에 대한 제휴사 추적이 중지됩니다. 계속 진행하시겠습니까?"
 
-#: assets/js/afwc-settings.js:191
+#: assets/js/admin/afwc-settings.js:191
 msgctxt "Media uploader title"
 msgid "Select image"
 msgstr "이미지 선택"
 
-#: assets/js/afwc-settings.js:192
+#: assets/js/admin/afwc-settings.js:192
 msgctxt "Media select button"
 msgid "Select"
 msgstr "선택"
 
-#: assets/js/afwc-settings.js:228
+#: assets/js/admin/afwc-settings.js:228
 msgctxt "Media uploader button text"
 msgid "Upload image"
 msgstr "이미지 업로드"
 
-#: assets/js/afwc-user-profile.js:23
+#: assets/js/admin/afwc-user-profile.js:23
 msgid "Are you sure you want to remove this user as an affiliate? Doing this will remove this affiliate and its entire chain from part of the parent-chain relationship of any other affiliate in a multi-tier commission distribution. This change is irreversible."
 msgstr "이 사용자를 제휴사에서 제거하시겠습니까? 이렇게 하면 다중 계층 커미션 분배에서 다른 제휴사의 상위 체인 관계의 일부에서 이 제휴사와 전체 체인이 제거됩니다. 이 변경 사항은 되돌릴 수 없습니다."
 
-#: assets/js/frontend.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "Campaign tracking link"
 msgid "Link: "
 msgstr "링크:"
 
-#: assets/js/frontend.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "My account - tooltip title for copying campaign referral link"
 msgid "Click to copy"
 msgstr "복사하려면 클릭"
 
-#: assets/js/frontend.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "campaign loading text on my-account"
 msgid "Loading..."
 msgstr "로드 중..."
 
-#: assets/js/frontend.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "description for no campaigns exist"
 msgid "No Campaign yet"
 msgstr "아직 캠페인 없음"
 
 #. translators: %s: payout method name
-#: assets/js/my-account/affiliate-profile.js:61
+#: assets/js/frontend/my-account/affiliate-profile.js:61
 msgctxt "Success message after affiliate save default payout method"
 msgid "Successfully saved and set \"%s\" as default payout method."
 msgstr "\"%s\"를 기본 지급 방법으로 저장하고 설정하는 데 성공했습니다."
 
-#: assets/js/my-account/affiliate-profile.js:64
+#: assets/js/frontend/my-account/affiliate-profile.js:64
 msgctxt "Success message for payout method setting update"
 msgid "Successfully removed the payout method"
 msgstr "지급 방법을 성공적으로 제거했습니다."
 
-#: assets/js/my-account/affiliate-profile.js:73
+#: assets/js/frontend/my-account/affiliate-profile.js:73
 msgctxt "Error message for payout method setting update"
 msgid "An error occurred while saving the payout method"
 msgstr "지급 방법을 저장하는 동안 오류가 발생했습니다."
 
-#: assets/js/my-account/affiliate-profile.js:113
+#: assets/js/frontend/my-account/affiliate-profile.js:113
 msgctxt "referral identifier validation message"
 msgid "Identifier cannot be empty."
 msgstr "식별자는 비워둘 수 없습니다."
 
-#: assets/js/my-account/affiliate-profile.js:117
+#: assets/js/frontend/my-account/affiliate-profile.js:117
 msgctxt "referral identifier validation message"
 msgid "You are already using this identifier."
 msgstr "이미 이 식별자를 사용하고 있습니다."
 
-#: assets/js/my-account/affiliate-profile.js:201
+#: assets/js/frontend/my-account/affiliate-profile.js:201
 msgctxt "Stripe Connect message"
 msgid "Connect with Stripe"
 msgstr "Stripe과 연결"
 
-#: assets/js/my-account/affiliate-profile.js:204
+#: assets/js/frontend/my-account/affiliate-profile.js:204
 msgctxt "Stripe Disconnect message"
 msgid "Disconnect from Stripe"
 msgstr "Stripe에서 연결 해제"
 
-#: assets/js/wc-analytics/afwc-wc-analytics-extends.js:13
+#: assets/js/admin/wc-analytics/afwc-wc-analytics-extends.js:13
 msgctxt "Header for affiliate name in WooCommerce orders report"
 msgid "Affiliate"
 msgstr "제휴"
@@ -7827,27 +7827,27 @@ msgctxt "Table label for referrals table in affiliate dashboard"
 msgid "Affiliate Referrals"
 msgstr "제휴사 추천"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "context behind contact links on plans dashboard"
 msgid "Click to log in and share your requirements. We'll help set things up"
 msgstr "클릭하여 로그인하고 요구 사항을 공유하세요. 설정을 도와드리겠습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "contactsupport link to offer help on setting up commission plans"
 msgid "Need help? Let us handle the setup"
 msgstr "도움이 필요하신가요? 설정은 저희가 처리해드리겠습니다."
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label to save commission plan order once sorted"
 msgid "Save plan order"
 msgstr "요금제 주문 저장"
 
-#: assets/js/admin.js:1
+#: assets/js/admin/admin.js:1
 msgctxt "Label to save commission plan order once sorted"
 msgid "Drag the plans to change the order"
 msgstr "계획을 드래그하여 순서 변경"
 
-#: assets/js/frontend.js:1
+#: assets/js/frontend/frontend.js:1
 msgctxt "Campaign list label"
 msgid "Campaigns"
 msgstr "캠페인"

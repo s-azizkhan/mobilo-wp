@@ -4,7 +4,7 @@
  *
  * @package     affiliate-for-woocommerce/includes/frontend/
  * @since       1.8.0
- * @version     1.5.2
+ * @version     1.5.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -71,8 +71,8 @@ if ( ! class_exists( 'AFWC_Registration_Form' ) ) {
 			ob_start();
 
 			$plugin_data = Affiliate_For_WooCommerce::get_plugin_data();
-			wp_enqueue_style( 'afwc-reg-form-style', AFWC_PLUGIN_URL . '/assets/css/afwc-reg-form.css', array(), $plugin_data['Version'] );
-			wp_enqueue_script( 'afwc-reg-form-js', AFWC_PLUGIN_URL . '/assets/js/afwc-reg-form.js', array( 'jquery', 'wp-i18n' ), $plugin_data['Version'], true );
+			wp_enqueue_style( 'afwc-reg-form-style', AFWC_PLUGIN_URL . '/assets/css/frontend/afwc-reg-form.css', array(), $plugin_data['Version'] );
+			wp_enqueue_script( 'afwc-reg-form-js', AFWC_PLUGIN_URL . '/assets/js/frontend/afwc-reg-form.js', array( 'jquery', 'wp-i18n' ), $plugin_data['Version'], true );
 			if ( function_exists( 'wp_set_script_translations' ) ) {
 				wp_set_script_translations( 'afwc-reg-form-js', 'affiliate-for-woocommerce', AFWC_PLUGIN_DIR_PATH . 'languages' );
 			}

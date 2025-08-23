@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       3.3.0
- * @version     4.27.0
+ * @version     4.28.0
  *
  * @package     woocommerce-smart-coupons/includes/
  */
@@ -375,7 +375,7 @@ if ( ! class_exists( 'WC_SC_Display_Coupons' ) ) {
 							continue;
 						}
 
-						if ( in_array( $coupon->get_code(), $coupons_applied, true ) ) {
+						if ( $this->sc_coupon_code_exists( $coupon->get_code(), $coupons_applied ) ) {
 							continue;
 						}
 
@@ -1226,7 +1226,7 @@ if ( ! class_exists( 'WC_SC_Display_Coupons' ) ) {
 					continue;
 				}
 
-				if ( in_array( $coupon->get_code(), $coupons_applied, true ) ) {
+				if ( $this->sc_coupon_code_exists( $coupon->get_code(), $coupons_applied ) ) {
 					continue;
 				}
 

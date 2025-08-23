@@ -103,8 +103,8 @@ msgid "Phone"
 msgstr "Điện thoại"
 
 #: templates/glass/functions.php:40
-#: sources/php/template-functions.php:808
 #: templates/futurist/functions.php:16
+#: sources/php/template-functions.php:808
 msgid "Your Cart"
 msgstr "Giỏ hàng của bạn"
 
@@ -256,7 +256,7 @@ msgstr "Thông tin liên hệ"
 
 #: sources/php/template-functions.php:1665
 #: sources/php/template-functions.php:2001
-#: sources/php/functions.php:951
+#: sources/php/functions.php:958
 #: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:40
 msgid "Payment"
 msgstr "Thanh toán"
@@ -269,7 +269,7 @@ msgstr "Không áp dụng"
 
 #: sources/php/template-functions.php:1717
 #: sources/php/template-functions.php:1981
-#: sources/php/functions.php:3268
+#: sources/php/functions.php:3281
 msgid "Shipping"
 msgid_plural "Shipping %d"
 msgstr[0] "Vận chuyển"
@@ -280,17 +280,17 @@ msgid "Continue shopping"
 msgstr "Tiếp tục mua hàng"
 
 #: sources/php/template-functions.php:1774
-#: includes/Loaders/LoaderAbstract.php:112
+#: includes/Loaders/LoaderAbstract.php:111
 msgid "Pay for order"
 msgstr "Thanh toán đơn hàng"
 
 #: sources/php/template-functions.php:1818
-#: sources/php/functions.php:3833
+#: sources/php/functions.php:3846
 msgid "Login"
 msgstr "Đăng nhập"
 
 #: sources/php/template-functions.php:1821
-#: sources/php/functions.php:3826
+#: sources/php/functions.php:3839
 msgid "Lost your password?"
 msgstr "Quên mật khẩu?"
 
@@ -305,16 +305,16 @@ msgstr "Đánh giá"
 msgid "Your Cart is Empty"
 msgstr "Giỏ của bạn trống trơn"
 
-#: sources/php/premium-init.php:378
+#: sources/php/premium-init.php:387
 msgid "CheckoutWC Templates Deactivated"
 msgstr "Mẫu CheckoutWC Đã Bị Vô Hiệu Hóa"
 
 # %1$s: "Settings" text, %2$s: "Start Here" text, %3$s: "Activate CheckoutWC Templates" text
-#: sources/php/premium-init.php:381
+#: sources/php/premium-init.php:390
 msgid "Your license is valid and activated for this site but CheckoutWC is disabled for normal customers. To fix this, go to %1$s > %2$s and toggle \"%3$s\"."
 msgstr "Giấy phép của bạn hợp lệ và đã được kích hoạt cho trang web này nhưng CheckoutWC bị vô hiệu hóa cho khách hàng thông thường. Để khắc phục, hãy vào %1$s > %2$s và bật/tắt \"%3$s\"."
 
-#: sources/php/premium-init.php:382
+#: sources/php/premium-init.php:391
 #: includes/Admin/AdminPluginsPageManager.php:36
 #: includes/Admin/Pages/OrderBumpsAdminFree.php:25
 #: includes/Admin/Pages/LocalPickupAdminFree.php:27
@@ -325,40 +325,63 @@ msgstr "Giấy phép của bạn hợp lệ và đã được kích hoạt cho t
 msgid "Settings"
 msgstr "Cài đặt"
 
-#: sources/php/premium-init.php:383
+#: sources/php/premium-init.php:392
 #: includes/Admin/Pages/General.php:25
 #: includes/Admin/Notices/InactiveLicenseNotice.php:13
 msgid "Start Here"
 msgstr "Bắt đầu tại đây"
 
-#: sources/php/premium-init.php:384
+#: sources/php/premium-init.php:393
 #: includes/Admin/Pages/General.php:198
 msgid "Activate CheckoutWC Templates"
 msgstr "Kích hoạt Mẫu CheckoutWC"
 
-#: sources/php/premium-init.php:391
+#: sources/php/premium-init.php:400
 msgid "Invalid CheckoutWC License"
 msgstr "Giấy Phép CheckoutWC Không Hợp Lệ"
 
 # %1$s: Pricing URL, %2$s: "purchase a license" link text
-#: sources/php/premium-init.php:394
+#: sources/php/premium-init.php:403
 msgid "Your license key is missing or invalid. Please verify that your license key is valid or <a target=\"_blank\" href=\"%1$s\">%2$s</a> to restore full functionality."
 msgstr "Khóa giấy phép của bạn bị thiếu hoặc không hợp lệ. Vui lòng xác minh khóa giấy phép của bạn hợp lệ hoặc <a target=\"_blank\" href=\"%1$s\">%2$s</a> để khôi phục đầy đủ chức năng."
 
-#: sources/php/premium-init.php:396
+#: sources/php/premium-init.php:405
 msgid "purchase a license"
 msgstr "mua giấy phép"
 
-#: sources/php/premium-init.php:416
+#: sources/php/premium-init.php:421
+msgid "New Feature: Cloudflare Turnstile Bot Protection"
+msgstr "Tính năng mới: Bảo vệ Bot Cloudflare Turnstile"
+
+# 1: Cloudflare Turnstile name wrapped in strong tags, 2: Setup link
+#: sources/php/premium-init.php:424
+msgid "CheckoutWC now supports %1$s - a privacy-first, CAPTCHA-free way to protect your checkout from bots and spam orders. %2$s"
+msgstr "CheckoutWC hiện hỗ trợ %1$s - một cách bảo mật quyền riêng tư, không CAPTCHA để bảo vệ thanh toán của bạn khỏi bot và đơn hàng spam. %2$s"
+
+# The name of the Cloudflare Turnstile service
+#: sources/php/premium-init.php:428
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:64
+msgid "Cloudflare Turnstile"
+msgstr "Cloudflare Turnstile"
+
+#: sources/php/premium-init.php:434
+msgid "Setup Cloudflare Turnstile now"
+msgstr "Thiết lập Cloudflare Turnstile ngay bây giờ"
+
+#: sources/php/premium-init.php:439
+msgid "Upgrade your plan now to access"
+msgstr "Nâng cấp gói của bạn ngay để truy cập"
+
+#: sources/php/premium-init.php:452
 msgid "Abandoned Cart Recovery Tracking Disabled"
 msgstr "Theo Dõi Khôi Phục Giỏ Hàng Bỏ Quên Đã Bị Tắt"
 
 # %1$s: Gist URL, %2$s: "Learn More" link text
-#: sources/php/premium-init.php:419
+#: sources/php/premium-init.php:455
 msgid "You have enabled Abandoned Cart Recovery tracking, but you do not have any emails published. To track carts, you need to publish emails or use this dev filter: <a target=\"_blank\" href=\"%1$s\">%2$s</a>."
 msgstr "Bạn đã bật theo dõi Khôi phục Giỏ hàng Bỏ quên, nhưng bạn chưa xuất bản email nào. Để theo dõi giỏ hàng, bạn cần xuất bản email hoặc sử dụng bộ lọc phát triển này: <a target=\"_blank\" href=\"%1$s\">%2$s</a>."
 
-#: sources/php/premium-init.php:421
+#: sources/php/premium-init.php:457
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:82
 msgid "Learn More"
 msgstr "Tìm Hiểu Thêm"
@@ -462,107 +485,107 @@ msgstr "Tàu"
 msgid "Address"
 msgstr "Địa chỉ"
 
-#: sources/php/functions.php:572
+#: sources/php/functions.php:579
 msgid "Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements."
 msgstr "Xin lỗi, có vẻ như không có phương thức thanh toán nào phù hợp với vị trí của bạn. Vui lòng liên hệ với chúng tôi nếu bạn cần hỗ trợ hoặc muốn sắp xếp phương thức khác."
 
-#: sources/php/functions.php:723
-msgid "Enter your address to view shipping options."
-msgstr "Nhập địa chỉ của bạn để xem các tùy chọn vận chuyển."
+#: sources/php/functions.php:732
+msgid "Shipping costs are calculated during checkout."
+msgstr "Chi phí vận chuyển được tính trong quá trình thanh toán."
 
-#: sources/php/functions.php:736
+#: sources/php/functions.php:743
 msgid "No shipping methods available"
 msgstr "Không có phương thức vận chuyển nào"
 
-#: sources/php/functions.php:763
+#: sources/php/functions.php:770
 #: includes/Model/Bumps/BumpAbstract.php:704
 msgid "Free!"
 msgstr "Miễn phí!"
 
-#: sources/php/functions.php:893
+#: sources/php/functions.php:900
 #: includes/Features/AbandonedCartRecovery.php:676
 msgid "Complete Order"
 msgstr "Kết thúc đặt hàng"
 
-#: sources/php/functions.php:976
+#: sources/php/functions.php:983
 msgid "All transactions are secure and encrypted."
 msgstr "Tất cả các giao dịch đều được bảo mật và mã hóa."
 
-#: sources/php/functions.php:997
+#: sources/php/functions.php:1004
 msgid "Your order is free. No payment is required."
 msgstr "Đơn đặt hàng của bạn là miễn phí. Không cần thanh toán."
 
-#: sources/php/functions.php:1041
+#: sources/php/functions.php:1048
 msgid "Same as shipping address"
 msgstr "Tương tự như địa chỉ giao hàng"
 
-#: sources/php/functions.php:1050
+#: sources/php/functions.php:1057
 msgid "Use a different billing address"
 msgstr "Sử dụng một địa chỉ thanh toán khác"
 
 # %1$s: Old order status, %2$s: New order status
-#: sources/php/functions.php:1179
+#: sources/php/functions.php:1186
 #, php-format
 msgid "Order status changed from %1$s to %2$s."
 msgstr "Trạng thái đơn hàng đã thay đổi từ %1$s sang %2$s."
 
-#: sources/php/functions.php:1201
+#: sources/php/functions.php:1211
 msgid "Tracking Number:"
 msgstr "Số theo dõi:"
 
-#: sources/php/functions.php:1287
+#: sources/php/functions.php:1297
 msgid "Return to cart"
 msgstr "Quay lại cửa hàng"
 
-#: sources/php/functions.php:1324
+#: sources/php/functions.php:1334
 msgid "Continue to shipping"
 msgstr "Tiếp tục vận chuyển"
 
-#: sources/php/functions.php:1346
+#: sources/php/functions.php:1356
 msgid "Continue to payment"
 msgstr "Tiếp tục thanh toán"
 
-#: sources/php/functions.php:1346
-#: sources/php/functions.php:1382
+#: sources/php/functions.php:1356
+#: sources/php/functions.php:1392
 msgid "Review order"
 msgstr "Xác nhận đơn hàng"
 
-#: sources/php/functions.php:1402
+#: sources/php/functions.php:1412
 msgid "Return to information"
 msgstr "Quay lại thông tin"
 
-#: sources/php/functions.php:1422
+#: sources/php/functions.php:1432
 msgid "Return to shipping"
 msgstr "Quay lại giao hàng"
 
-#: sources/php/functions.php:1442
+#: sources/php/functions.php:1452
 msgid "Return to payment"
 msgstr "Trở lại thanh toán"
 
-#: sources/php/functions.php:1489
+#: sources/php/functions.php:1499
 #: includes/Features/SideCart.php:210
 msgid "Cart"
 msgstr "Giỏ hàng"
 
-#: sources/php/functions.php:1724
-msgid "CheckoutWC: Error matching %d to customer %d"
-msgstr "CheckoutWC: Lỗi khi khớp %d với khách hàng %d"
+#: sources/php/functions.php:1734
+msgid "CheckoutWC: Error matching %1$d to customer %2$d"
+msgstr "CheckoutWC: Lỗi khi đối chiếu %1$d với khách hàng %2$d"
 
-#: sources/php/functions.php:1970
+#: sources/php/functions.php:1980
 msgid "Or"
 msgstr "Hoặc"
 
-#: sources/php/functions.php:2050
+#: sources/php/functions.php:2060
 #, php-format
 msgid "You can only have 1 %s in your cart."
 msgstr "Bạn chỉ có thể có 1 %s trong giỏ hàng của mình."
 
-#: sources/php/functions.php:2200
+#: sources/php/functions.php:2210
 #: sources/ts/frontend/Components/CartItemQuantityControl.tsx:55
 msgid "Decrement"
 msgstr "Giảm"
 
-#: sources/php/functions.php:2209
+#: sources/php/functions.php:2219
 #: includes/Managers/AssetManager.php:720
 #: includes/Managers/AssetManager.php:839
 #: includes/Features/LocalPickup.php:439
@@ -571,105 +594,105 @@ msgstr "Giảm"
 msgid "Edit"
 msgstr "Sửa"
 
-#: sources/php/functions.php:2212
+#: sources/php/functions.php:2222
 #: sources/ts/frontend/Components/CartItemQuantityControl.tsx:70
 msgid "Increment"
 msgstr "Tăng"
 
-#: sources/php/functions.php:2932
+#: sources/php/functions.php:2945
 msgid "Unsubscribe"
 msgstr "Bỏ đăng ký"
 
-#: sources/php/functions.php:3294
+#: sources/php/functions.php:3307
 #: includes/Features/AbandonedCartRecovery.php:731
 #: sources/ts/admin/Components/acr/carts.tsx:69
 msgid "Subtotal"
 msgstr "Tổng phụ"
 
-#: sources/php/functions.php:3298
+#: sources/php/functions.php:3311
 msgid "Total"
 msgstr "Tổng cộng"
 
-#: sources/php/functions.php:3350
+#: sources/php/functions.php:3363
 msgid "There are no shipping options available. Please ensure that your address has been entered correctly, or contact us if you need any help."
 msgstr "Không có tùy chọn vận chuyển nào khả dụng. Vui lòng đảm bảo rằng địa chỉ của bạn đã được nhập chính xác, hoặc liên hệ với chúng tôi nếu bạn cần giúp đỡ."
 
-#: sources/php/functions.php:3569
+#: sources/php/functions.php:3582
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:73
 msgid "SendWP - Transactional Email"
 msgstr "SendWP - Email giao dịch"
 
-#: sources/php/functions.php:3574
+#: sources/php/functions.php:3587
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:77
 msgid "SendWP makes getting emails delivered as simple as a few clicks. So you can relax know those important emails are being delivered on time."
 msgstr "SendWP giúp việc gửi email trở nên đơn giản chỉ với vài cú nhấp chuột. Vì vậy bạn có thể yên tâm rằng những email quan trọng sẽ được gửi đúng hạn."
 
-#: sources/php/functions.php:3577
+#: sources/php/functions.php:3590
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:79
 msgid "Try SendWP now and <strong>get your first month for just $1.</strong>"
 msgstr "Hãy thử SendWP ngay và <strong>nhận tháng đầu tiên chỉ với $1.</strong>"
 
-#: sources/php/functions.php:3587
+#: sources/php/functions.php:3600
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:87
 msgid "Note: SendWP is optional. You can use any transactional email service you prefer."
 msgstr "Lưu ý: SendWP là tùy chọn. Bạn có thể sử dụng bất kỳ dịch vụ email giao dịch nào bạn thích."
 
-#: sources/php/functions.php:3596
+#: sources/php/functions.php:3609
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:94
 msgid "Connect to SendWP"
 msgstr "Kết nối với SendWP"
 
-#: sources/php/functions.php:3744
+#: sources/php/functions.php:3757
 msgid "Welcome back"
 msgstr "Chào mừng trở lại"
 
-#: sources/php/functions.php:3757
+#: sources/php/functions.php:3770
 msgid "It looks like you already have an account. Please enter your login details below."
 msgstr "Có vẻ như bạn đã có một tài khoản. Vui lòng nhập thông tin đăng nhập của bạn dưới đây."
 
-#: sources/php/functions.php:3770
+#: sources/php/functions.php:3783
 msgid "If you have shopped with us before, please enter your login details below."
 msgstr "Nếu bạn đã mua sắm với chúng tôi trước đây, vui lòng nhập thông tin đăng nhập của bạn vào bên dưới."
 
-#: sources/php/functions.php:3780
-#: sources/php/functions.php:3781
+#: sources/php/functions.php:3793
+#: sources/php/functions.php:3794
 msgid "Username or email address"
 msgstr "Tên đăng nhập hoặc địa chỉ email"
 
-#: sources/php/functions.php:3794
-#: sources/php/functions.php:3795
+#: sources/php/functions.php:3807
+#: sources/php/functions.php:3808
 msgid "Password"
 msgstr "Mật khẩu"
 
-#: sources/php/functions.php:3815
+#: sources/php/functions.php:3828
 msgid "Remember me"
 msgstr "Ghi nhớ tôi"
 
-#: sources/php/functions.php:3844
+#: sources/php/functions.php:3857
 msgid "Or continue as guest"
 msgstr "Hoặc tiếp tục với tư cách khách"
 
-#: sources/php/functions.php:3862
+#: sources/php/functions.php:3875
 msgid "Lost your password? Please enter your username or email address. You will receive a link to create a new password via email."
 msgstr "Quên mật khẩu? Vui lòng nhập tên đăng nhập hoặc địa chỉ email của bạn. Bạn sẽ nhận được liên kết để tạo mật khẩu mới qua email."
 
-#: sources/php/functions.php:3872
-#: sources/php/functions.php:3873
+#: sources/php/functions.php:3885
+#: sources/php/functions.php:3886
 msgid "Email address"
 msgstr "Địa chỉ email"
 
-#: sources/php/functions.php:3885
+#: sources/php/functions.php:3898
 msgid "Reset password"
 msgstr "Đặt lại mật khẩu"
 
-#: sources/php/functions.php:3900
+#: sources/php/functions.php:3913
 #: includes/API/OrderBumpOfferFormPreviewAPI.php:46
 #: includes/API/GetVariationFormAPI.php:33
 msgid "Product not found"
 msgstr "Không tim thấy sản phẩm"
 
-#: sources/php/functions.php:3916
-#: sources/php/functions.php:4053
+#: sources/php/functions.php:3929
+#: sources/php/functions.php:4066
 msgid "No thanks"
 msgstr "Không, cảm ơn"
 
@@ -762,6 +785,14 @@ msgstr "Làm mới thông tin giấy phép"
 #: includes/Managers/UpdatesManager.php:494
 msgid "Please enter your license key."
 msgstr "Vui lòng nhập khóa bản quyền của bạn."
+
+#: includes/Managers/UpdatesManager.php:497
+msgid "Activate Site"
+msgstr "Kích hoạt Trang web"
+
+#: includes/Managers/UpdatesManager.php:500
+msgid "Deactivate Site"
+msgstr "Hủy kích hoạt Trang web"
 
 # Debug error message logged when license check reaches unexpected state
 #: includes/Managers/UpdatesManager.php:642
@@ -879,63 +910,59 @@ msgstr "Xóa mục này"
 msgid "Proceed to checkout"
 msgstr "Tiến hành thanh toán"
 
-#: includes/Loaders/LoaderAbstract.php:71
-#: includes/Features/CartEditingAtCheckout.php:45
-msgid "Checkout is not available whilst your cart is empty."
-msgstr "Không thể thanh toán khi giỏ hàng của bạn đang trống."
-
-#: includes/Loaders/LoaderAbstract.php:135
-#: includes/Loaders/LoaderAbstract.php:245
+#: includes/Loaders/LoaderAbstract.php:134
+#: includes/Loaders/LoaderAbstract.php:244
 msgid "Sorry, this order is invalid and cannot be paid for."
 msgstr "Xin lỗi, đơn hàng này không hợp lệ và không thể thanh toán."
 
-#: includes/Loaders/LoaderAbstract.php:139
+#: includes/Loaders/LoaderAbstract.php:138
 msgid "Please log in to your account below to continue to the payment form."
 msgstr "Vui lòng đăng nhập vào tài khoản của bạn bên dưới để tiếp tục đến biểu mẫu thanh toán."
 
-#: includes/Loaders/LoaderAbstract.php:146
+#: includes/Loaders/LoaderAbstract.php:145
 msgid "You are paying for a guest order. Please continue with payment only if you recognize this order."
 msgstr "Bạn đang thanh toán cho đơn hàng khách. Vui lòng tiếp tục thanh toán chỉ khi bạn nhận ra đơn hàng này."
 
-#: includes/Loaders/LoaderAbstract.php:152
+#: includes/Loaders/LoaderAbstract.php:151
 msgid "This order cannot be paid for. Please contact us if you need assistance."
 msgstr "Đơn hàng này không thể thanh toán. Vui lòng liên hệ với chúng tôi nếu bạn cần hỗ trợ."
 
-#: includes/Loaders/LoaderAbstract.php:158
-#: includes/Loaders/LoaderAbstract.php:242
+#: includes/Loaders/LoaderAbstract.php:157
+#: includes/Loaders/LoaderAbstract.php:241
 #, php-format
 msgid "This order&rsquo;s status is &ldquo;%s&rdquo;&mdash;it cannot be paid for. Please contact us if you need assistance."
 msgstr "Trạng thái đơn hàng này là “%s” — không thể thanh toán. Vui lòng liên hệ với chúng tôi nếu bạn cần hỗ trợ."
 
-#: includes/Loaders/LoaderAbstract.php:187
+#: includes/Loaders/LoaderAbstract.php:186
 #, php-format
 msgid "Sorry, \"%s\" is no longer in stock so this order cannot be paid for. We apologize for any inconvenience caused."
 msgstr "Xin lỗi, \"%s\" không còn trong kho nên đơn hàng này không thể thanh toán. Chúng tôi xin lỗi vì sự bất tiện này."
 
-#: includes/Loaders/LoaderAbstract.php:201
+#: includes/Loaders/LoaderAbstract.php:200
 #, php-format
 msgid "Sorry, we do not have enough \"%1$s\" in stock to fulfill your order (%2$s available). We apologize for any inconvenience caused."
 msgstr "Xin lỗi, chúng tôi không có đủ \"%1$s\" trong kho để hoàn thành đơn hàng của bạn (%2$s có sẵn). Chúng tôi xin lỗi vì sự bất tiện này."
 
-#: includes/Loaders/LoaderAbstract.php:248
+#: includes/Loaders/LoaderAbstract.php:247
 msgid "Invalid order."
 msgstr "Đơn hàng không hợp lệ."
 
-#: includes/Features/Turnstile.php:133
-#: includes/Features/Turnstile.php:187
-#: includes/Features/Turnstile.php:316
+#: includes/Features/Turnstile.php:134
+#: includes/Features/Turnstile.php:188
+#: includes/Features/Turnstile.php:362
 msgid "Please complete the verification challenge."
 msgstr "Vui lòng hoàn thành thử thách xác minh."
 
-#: includes/Features/Turnstile.php:335
+#: includes/Features/Turnstile.php:382
 msgid "Verification service unavailable. Please try again."
 msgstr "Dịch vụ xác minh không khả dụng. Vui lòng thử lại."
 
-#: includes/Features/Turnstile.php:351
+#: includes/Features/Turnstile.php:394
+#: includes/Features/Turnstile.php:413
 msgid "Verification failed. Please try again."
 msgstr "Xác minh thất bại. Vui lòng thử lại."
 
-#: includes/Features/Turnstile.php:378
+#: includes/Features/Turnstile.php:448
 msgid "We have detected that Simple Cloudflare Turnstile is active. To enable CheckoutWC Turnstile functionality, please deactivate Simple Cloudflare Turnstile."
 msgstr "Chúng tôi đã phát hiện Simple Cloudflare Turnstile đang hoạt động. Để kích hoạt chức năng CheckoutWC Turnstile, vui lòng tắt Simple Cloudflare Turnstile."
 
@@ -957,16 +984,16 @@ msgstr "CheckoutWC:"
 msgid "Settings marked with asterisks (**) may be overridden based on your Side Cart settings. (CheckoutWC > Side Cart)"
 msgstr "Các cài đặt được đánh dấu bằng dấu hoa thị (**) có thể bị ghi đè dựa trên cài đặt Giỏ hàng Bên của bạn. (CheckoutWC > Giỏ hàng Bên)"
 
-#: includes/Features/OrderBumps.php:561
+#: includes/Features/OrderBumps.php:563
 msgid "All orders"
 msgstr "Tất cả đơn hàng"
 
-#: includes/Features/OrderBumps.php:564
+#: includes/Features/OrderBumps.php:566
 msgid "Contains Any Order Bump"
 msgstr "Chứa Bất kỳ Đơn hàng Bump nào"
 
 # %s: Order bump title
-#: includes/Features/OrderBumps.php:570
+#: includes/Features/OrderBumps.php:572
 #, php-format
 msgid "Has Bump: %s"
 msgstr "Có Bump: %s"
@@ -1098,6 +1125,10 @@ msgstr "Tìm kiếm địa chỉ của bạn"
 #: includes/Features/FetchifyAddressAutocomplete.php:78
 msgid "Or enter address manually."
 msgstr "Hoặc nhập địa chỉ thủ công."
+
+#: includes/Features/CartEditingAtCheckout.php:45
+msgid "Checkout is not available whilst your cart is empty."
+msgstr "Không thể thanh toán khi giỏ hàng của bạn đang trống."
 
 #: includes/Features/AbandonedCartRecovery.php:84
 msgid "You have been unsubscribed from our cart reminder emails."
@@ -1678,158 +1709,6 @@ msgstr "Bạn không có quyền cài đặt cập nhật plugin"
 msgid "Error"
 msgstr "Lỗi"
 
-# Error message logged when Jupiter theme callback removal fails
-#: includes/Compatibility/Themes/Jupiter.php:49
-msgid "CheckoutWC: Failed to unset Jupiter theme callbacks."
-msgstr "CheckoutWC: Không thể hủy đăng ký các callback của giao diện Jupiter."
-
-#: includes/Compatibility/Themes/Astra.php:81
-msgid "Enable Astra Support (Beta)"
-msgstr "Bật hỗ trợ Astra (Beta)"
-
-#: includes/Compatibility/Themes/Astra.php:82
-msgid "Allow Astra to replace header and footer. Allows Astra / Astra Addon to load its styles and scripts on the checkout page."
-msgstr "Cho phép Astra thay thế phần đầu và chân trang. Cho phép Astra / Astra Addon tải các kiểu và tập lệnh của nó trên trang thanh toán."
-
-#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:38
-msgid "Please update to the latest version of PayPal for WooCommerce to get full support."
-msgstr "Vui lòng cập nhật lên phiên bản mới nhất của PayPal cho WooCommerce để nhận được hỗ trợ đầy đủ."
-
-#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:363
-msgid "Logged in with PayPal. Please continue your order below."
-msgstr "Đã đăng nhập bằng PayPal. Vui lòng tiếp tục đặt hàng của bạn bên dưới."
-
-#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:64
-#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:72
-msgid "Enter your code&hellip;"
-msgstr "Nhập mã của bạn&hellip;"
-
-#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:94
-msgid "Have a gift card?"
-msgstr "Có thẻ quà tặng?"
-
-#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:68
-msgid "Enable Checkout Field Editor address field overrides. (Not Recommended)"
-msgstr "Bật ghi đè trường địa chỉ của Checkout Field Editor. (Không khuyến nghị)"
-
-#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:69
-msgid "Allow WooCommerce Checkout Field Editor to modify billing and shipping address fields. Not compatible with these features: Separate House Number and Street Name Address Fields, Full Name Field, Fetchify"
-msgstr "Cho phép WooCommerce Checkout Field Editor sửa đổi các trường địa chỉ thanh toán và giao hàng. Không tương thích với các tính năng sau: Trường Địa chỉ Số Nhà và Tên Đường riêng biệt, Trường Họ Tên đầy đủ, Fetchify"
-
-#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:103
-msgid "Full-width"
-msgstr "Toàn chiều rộng"
-
-#: includes/Compatibility/Plugins/WPRocket.php:116
-msgid "Enable WP Rocket Delay JS Execution compatibility mode"
-msgstr "Bật chế độ tương thích trì hoãn thực thi JS của WP Rocket"
-
-#: includes/Compatibility/Plugins/WPRocket.php:117
-msgid "By default, we exclude our scripts and script dependencies to prevent compatibility problems. Uncheck to allow CheckoutWC scripts to be delayed for maximum performance."
-msgstr "Theo mặc định, chúng tôi loại trừ các tập lệnh và phụ thuộc tập lệnh của mình để tránh các vấn đề tương thích. Bỏ chọn để cho phép các tập lệnh CheckoutWC bị trì hoãn nhằm tối đa hiệu suất."
-
-#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:28
-msgid "Points"
-msgstr "Điểm"
-
-#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:29
-msgid "Apply Points"
-msgstr "Áp dụng điểm"
-
-#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:31
-msgid " Points"
-msgstr "Điểm"
-
-#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditorPro.php:69
-msgid "Enable ThemeHigh Checkout Field Editor address field overrides"
-msgstr "Bật ghi đè trường địa chỉ của ThemeHigh Checkout Field Editor"
-
-#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditorPro.php:70
-#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditor.php:47
-msgid "Allow ThemeHigh Checkout Field Editor to modify billing and shipping address fields. (Not Recommended)"
-msgstr "Cho phép ThemeHigh Checkout Field Editor sửa đổi các trường địa chỉ thanh toán và giao hàng. (Không khuyến nghị)"
-
-#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditor.php:46
-msgid "Enable ThemeHigh Checkout Field Editor address field overrides."
-msgstr "Bật ghi đè trường địa chỉ của ThemeHigh Checkout Field Editor."
-
-#: includes/Compatibility/Plugins/ShipMondo.php:16
-msgid "Please select a pickup point before placing your order."
-msgstr "Vui lòng chọn điểm nhận hàng trước khi đặt hàng."
-
-#: includes/Compatibility/Plugins/SendCloud.php:16
-msgid "Please choose a service point."
-msgstr "Vui lòng chọn một điểm dịch vụ."
-
-#: includes/Compatibility/Plugins/PostNL4.php:65
-#: includes/Compatibility/Plugins/PostNL4.php:66
-#: includes/Compatibility/Plugins/PostNL.php:67
-#: includes/Compatibility/Plugins/PostNL.php:68
-#: includes/Compatibility/Plugins/NLPostcodeChecker.php:67
-#: includes/Compatibility/Plugins/NLPostcodeChecker.php:68
-#: includes/Compatibility/Plugins/MyParcel.php:63
-msgid "Nr."
-msgstr "Số"
-
-#: includes/Compatibility/Plugins/PostNL4.php:80
-#: includes/Compatibility/Plugins/PostNL4.php:81
-#: includes/Compatibility/Plugins/PostNL.php:82
-#: includes/Compatibility/Plugins/PostNL.php:83
-#: includes/Compatibility/Plugins/MyParcel.php:78
-msgid "Suffix"
-msgstr "Hậu tố"
-
-#: includes/Compatibility/Plugins/PWGiftCardsPro.php:30
-msgid "Unknown Error"
-msgstr "Lỗi không xác định"
-
-#: includes/Compatibility/Plugins/MyParcel.php:47
-msgid "street_name"
-msgstr "street_name"
-
-#: includes/Compatibility/Plugins/MyParcel.php:62
-msgid "abbreviation_house_number"
-msgstr "abbreviation_house_number"
-
-#: includes/Compatibility/Plugins/MyParcel.php:77
-msgid "suffix"
-msgstr "hậu tố"
-
-#: includes/Compatibility/Plugins/ElementorPro.php:95
-msgid "Enable Elementor Pro support."
-msgstr "Bật hỗ trợ Elementor Pro."
-
-#: includes/Compatibility/Plugins/ElementorPro.php:96
-msgid "Allow Elementor Pro to replace header and footer."
-msgstr "Cho phép Elementor Pro thay thế phần đầu và chân trang."
-
-#: includes/Compatibility/Plugins/CashierForWooCommerce.php:62
-msgid "Enable Cashier for WooCommerce address field overrides. (Not Recommended)"
-msgstr "Bật Cashier để ghi đè trường địa chỉ WooCommerce. (Không khuyến nghị)"
-
-#: includes/Compatibility/Plugins/CashierForWooCommerce.php:63
-msgid "Allow WooCommerce Cashier Checkout Field Editor module to modify billing and shipping address fields. Not compatible with these features: Separate House Number and Street Name Address Fields, Full Name Field"
-msgstr "Cho phép mô-đun WooCommerce Cashier Checkout Field Editor sửa đổi các trường địa chỉ thanh toán và giao hàng. Không tương thích với các tính năng sau: Trường Địa chỉ Số Nhà và Tên Đường riêng biệt, Trường Họ Tên đầy đủ"
-
-#: includes/Admin/Pages/PickupLocationsAdminFree.php:218
-#: includes/Admin/Pages/PageAbstract.php:106
-#: includes/Admin/Pages/General.php:326
-#: includes/Compatibility/Plugins/CartFlows.php:62
-#: includes/Admin/Pages/Premium/PickupLocations.php:217
-#: includes/Admin/Pages/Premium/OrderBumps.php:206
-#: includes/Admin/Pages/Premium/LocalPickupAdmin.php:165
-#: includes/Admin/Pages/Premium/AbandonedCartRecovery.php:238
-msgid "CheckoutWC"
-msgstr "CheckoutWC"
-
-#: includes/Compatibility/Plugins/BeaverThemer.php:38
-msgid "Enable Beaver Themer Support"
-msgstr "Bật hỗ trợ Beaver Themer"
-
-#: includes/Compatibility/Plugins/BeaverThemer.php:39
-msgid "Allow Beaver Themer to replace header and footer."
-msgstr "Cho phép Beaver Themer thay thế phần đầu và chân trang."
-
 #: includes/Admin/Pages/WooCommercePages.php:21
 msgid "Pages"
 msgstr "Trang"
@@ -2202,6 +2081,17 @@ msgstr "Thời gian lấy hàng ước tính"
 #: includes/Admin/Pages/Premium/PickupLocations.php:130
 msgid "Pickup Instructions"
 msgstr "Hướng dẫn nhận hàng"
+
+#: includes/Compatibility/Plugins/CartFlows.php:62
+#: includes/Admin/Pages/PickupLocationsAdminFree.php:218
+#: includes/Admin/Pages/PageAbstract.php:106
+#: includes/Admin/Pages/General.php:326
+#: includes/Admin/Pages/Premium/PickupLocations.php:217
+#: includes/Admin/Pages/Premium/OrderBumps.php:206
+#: includes/Admin/Pages/Premium/LocalPickupAdmin.php:165
+#: includes/Admin/Pages/Premium/AbandonedCartRecovery.php:238
+msgid "CheckoutWC"
+msgstr "CheckoutWC"
 
 #: includes/Admin/Pages/PageController.php:27
 msgid "Premium"
@@ -2952,27 +2842,6 @@ msgstr "Cảm ơn bạn đã cài đặt CheckoutWC! Chúng tôi đã tự độ
 msgid "Thank you for installing CheckoutWC! To get started, enter your <strong>License Key</strong> below, save, and click <strong>Activate Site</strong>."
 msgstr "Cảm ơn bạn đã cài đặt CheckoutWC! Để bắt đầu, hãy nhập <strong>Khóa Bản Quyền</strong> của bạn bên dưới, lưu lại và nhấn <strong>Kích Hoạt Trang</strong>."
 
-# Admin notice title for new Cloudflare Turnstile feature
-#: includes/Admin/Notices/TurnstileFeatureNotice.php:21
-msgid "New Feature: Cloudflare Turnstile Bot Protection"
-msgstr "Tính năng mới: Bảo vệ Bot Cloudflare Turnstile"
-
-# 1: Cloudflare Turnstile name wrapped in strong tags, 2: Setup link
-#: includes/Admin/Notices/TurnstileFeatureNotice.php:25
-msgid "CheckoutWC now supports %1$s - a privacy-first, CAPTCHA-free way to protect your checkout from bots and spam orders. %2$s"
-msgstr "CheckoutWC hiện hỗ trợ %1$s - một cách bảo mật quyền riêng tư, không CAPTCHA để bảo vệ thanh toán của bạn khỏi bot và đơn hàng spam. %2$s"
-
-# The name of the Cloudflare Turnstile service
-#: includes/Admin/Notices/TurnstileFeatureNotice.php:29
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:63
-msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
-
-# Link text to setup Cloudflare Turnstile
-#: includes/Admin/Notices/TurnstileFeatureNotice.php:35
-msgid "Setup Cloudflare Turnstile now"
-msgstr "Thiết lập Cloudflare Turnstile ngay bây giờ"
-
 # %1$s: URL to pricing page, %2$s: "purchase a new license" link text, %3$s: Support email URL, %4$s: "please contact support" link text
 #: includes/Admin/Notices/InvalidLicenseKeyNotice.php:15
 msgid "Your license key appears to have expired. Please <a href=\"%1$s\" target=\"_blank\">%2$s</a> to restore functionality. If you believe this is in error, <a href=\"%3$s\">%4$s</a>."
@@ -2990,6 +2859,147 @@ msgstr "vui lòng liên hệ hỗ trợ"
 #: includes/Admin/Notices/InactiveLicenseNotice.php:11
 msgid "Your license key is not active for this site. Please visit <a href=\"%1$s\">%2$s</a> to activate your license and restore functionality."
 msgstr "Khóa giấy phép của bạn không hoạt động cho trang này. Vui lòng truy cập <a href=\"%1$s\">%2$s</a> để kích hoạt giấy phép và khôi phục chức năng."
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:38
+msgid "Please update to the latest version of PayPal for WooCommerce to get full support."
+msgstr "Vui lòng cập nhật lên phiên bản mới nhất của PayPal cho WooCommerce để nhận được hỗ trợ đầy đủ."
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:363
+msgid "Logged in with PayPal. Please continue your order below."
+msgstr "Đã đăng nhập bằng PayPal. Vui lòng tiếp tục đặt hàng của bạn bên dưới."
+
+# Error message logged when Jupiter theme callback removal fails
+#: includes/Compatibility/Themes/Jupiter.php:49
+msgid "CheckoutWC: Failed to unset Jupiter theme callbacks."
+msgstr "CheckoutWC: Không thể hủy đăng ký các callback của giao diện Jupiter."
+
+#: includes/Compatibility/Themes/Astra.php:81
+msgid "Enable Astra Support (Beta)"
+msgstr "Bật hỗ trợ Astra (Beta)"
+
+#: includes/Compatibility/Themes/Astra.php:82
+msgid "Allow Astra to replace header and footer. Allows Astra / Astra Addon to load its styles and scripts on the checkout page."
+msgstr "Cho phép Astra thay thế phần đầu và chân trang. Cho phép Astra / Astra Addon tải các kiểu và tập lệnh của nó trên trang thanh toán."
+
+#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:64
+#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:72
+msgid "Enter your code&hellip;"
+msgstr "Nhập mã của bạn&hellip;"
+
+#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:94
+msgid "Have a gift card?"
+msgstr "Có thẻ quà tặng?"
+
+#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:68
+msgid "Enable Checkout Field Editor address field overrides. (Not Recommended)"
+msgstr "Bật ghi đè trường địa chỉ của Checkout Field Editor. (Không khuyến nghị)"
+
+#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:69
+msgid "Allow WooCommerce Checkout Field Editor to modify billing and shipping address fields. Not compatible with these features: Separate House Number and Street Name Address Fields, Full Name Field, Fetchify"
+msgstr "Cho phép WooCommerce Checkout Field Editor sửa đổi các trường địa chỉ thanh toán và giao hàng. Không tương thích với các tính năng sau: Trường Địa chỉ Số Nhà và Tên Đường riêng biệt, Trường Họ Tên đầy đủ, Fetchify"
+
+#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:103
+msgid "Full-width"
+msgstr "Toàn chiều rộng"
+
+#: includes/Compatibility/Plugins/WPRocket.php:116
+msgid "Enable WP Rocket Delay JS Execution compatibility mode"
+msgstr "Bật chế độ tương thích trì hoãn thực thi JS của WP Rocket"
+
+#: includes/Compatibility/Plugins/WPRocket.php:117
+msgid "By default, we exclude our scripts and script dependencies to prevent compatibility problems. Uncheck to allow CheckoutWC scripts to be delayed for maximum performance."
+msgstr "Theo mặc định, chúng tôi loại trừ các tập lệnh và phụ thuộc tập lệnh của mình để tránh các vấn đề tương thích. Bỏ chọn để cho phép các tập lệnh CheckoutWC bị trì hoãn nhằm tối đa hiệu suất."
+
+#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:28
+msgid "Points"
+msgstr "Điểm"
+
+#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:29
+msgid "Apply Points"
+msgstr "Áp dụng điểm"
+
+#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:31
+msgid " Points"
+msgstr "Điểm"
+
+#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditorPro.php:69
+msgid "Enable ThemeHigh Checkout Field Editor address field overrides"
+msgstr "Bật ghi đè trường địa chỉ của ThemeHigh Checkout Field Editor"
+
+#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditorPro.php:70
+#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditor.php:47
+msgid "Allow ThemeHigh Checkout Field Editor to modify billing and shipping address fields. (Not Recommended)"
+msgstr "Cho phép ThemeHigh Checkout Field Editor sửa đổi các trường địa chỉ thanh toán và giao hàng. (Không khuyến nghị)"
+
+#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditor.php:46
+msgid "Enable ThemeHigh Checkout Field Editor address field overrides."
+msgstr "Bật ghi đè trường địa chỉ của ThemeHigh Checkout Field Editor."
+
+#: includes/Compatibility/Plugins/ShipMondo.php:16
+msgid "Please select a pickup point before placing your order."
+msgstr "Vui lòng chọn điểm nhận hàng trước khi đặt hàng."
+
+#: includes/Compatibility/Plugins/SendCloud.php:16
+msgid "Please choose a service point."
+msgstr "Vui lòng chọn một điểm dịch vụ."
+
+#: includes/Compatibility/Plugins/PostNL4.php:65
+#: includes/Compatibility/Plugins/PostNL4.php:66
+#: includes/Compatibility/Plugins/PostNL.php:67
+#: includes/Compatibility/Plugins/PostNL.php:68
+#: includes/Compatibility/Plugins/NLPostcodeChecker.php:67
+#: includes/Compatibility/Plugins/NLPostcodeChecker.php:68
+#: includes/Compatibility/Plugins/MyParcel.php:63
+msgid "Nr."
+msgstr "Số"
+
+#: includes/Compatibility/Plugins/PostNL4.php:80
+#: includes/Compatibility/Plugins/PostNL4.php:81
+#: includes/Compatibility/Plugins/PostNL.php:82
+#: includes/Compatibility/Plugins/PostNL.php:83
+#: includes/Compatibility/Plugins/MyParcel.php:78
+msgid "Suffix"
+msgstr "Hậu tố"
+
+#: includes/Compatibility/Plugins/PWGiftCardsPro.php:30
+msgid "Unknown Error"
+msgstr "Lỗi không xác định"
+
+#: includes/Compatibility/Plugins/MyParcel.php:47
+msgid "street_name"
+msgstr "street_name"
+
+#: includes/Compatibility/Plugins/MyParcel.php:62
+msgid "abbreviation_house_number"
+msgstr "abbreviation_house_number"
+
+#: includes/Compatibility/Plugins/MyParcel.php:77
+msgid "suffix"
+msgstr "hậu tố"
+
+#: includes/Compatibility/Plugins/ElementorPro.php:95
+msgid "Enable Elementor Pro support."
+msgstr "Bật hỗ trợ Elementor Pro."
+
+#: includes/Compatibility/Plugins/ElementorPro.php:96
+msgid "Allow Elementor Pro to replace header and footer."
+msgstr "Cho phép Elementor Pro thay thế phần đầu và chân trang."
+
+#: includes/Compatibility/Plugins/CashierForWooCommerce.php:62
+msgid "Enable Cashier for WooCommerce address field overrides. (Not Recommended)"
+msgstr "Bật Cashier để ghi đè trường địa chỉ WooCommerce. (Không khuyến nghị)"
+
+#: includes/Compatibility/Plugins/CashierForWooCommerce.php:63
+msgid "Allow WooCommerce Cashier Checkout Field Editor module to modify billing and shipping address fields. Not compatible with these features: Separate House Number and Street Name Address Fields, Full Name Field"
+msgstr "Cho phép mô-đun WooCommerce Cashier Checkout Field Editor sửa đổi các trường địa chỉ thanh toán và giao hàng. Không tương thích với các tính năng sau: Trường Địa chỉ Số Nhà và Tên Đường riêng biệt, Trường Họ Tên đầy đủ"
+
+#: includes/Compatibility/Plugins/BeaverThemer.php:38
+msgid "Enable Beaver Themer Support"
+msgstr "Bật hỗ trợ Beaver Themer"
+
+#: includes/Compatibility/Plugins/BeaverThemer.php:39
+msgid "Allow Beaver Themer to replace header and footer."
+msgstr "Cho phép Beaver Themer thay thế phần đầu và chân trang."
 
 #: sources/ts/frontend/Actions/CompleteOrderAction.ts:196
 msgid "Could not connect to server. Please refresh and try again or contact site administrator."
@@ -3109,30 +3119,6 @@ msgstr "Mở khóa với Premium"
 #: sources/ts/admin/Components/LockedFieldWrapper.tsx:40
 msgid "A %s plan is required to access these features."
 msgstr "Cần có gói %s để truy cập các tính năng này."
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:12
-msgid "CheckoutWC Side Cart"
-msgstr "Giỏ hàng bên CheckoutWC"
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:43
-msgid "CheckoutWC: After Side Cart Items"
-msgstr "CheckoutWC: Sau các mục trong Giỏ hàng bên"
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:49
-msgid "CheckoutWC: Before Side Cart Footer Above Promo Code"
-msgstr "CheckoutWC: Trước chân trang Giỏ hàng bên trên Mã khuyến mãi"
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:55
-msgid "CheckoutWC: Before Side Cart Totals"
-msgstr "CheckoutWC: Trước Tổng số Giỏ hàng bên"
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:61
-msgid "CheckoutWC: After Side Cart Totals"
-msgstr "CheckoutWC: Sau Tổng số Giỏ hàng bên"
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:67
-msgid "CheckoutWC: After Side Cart Buttons"
-msgstr "CheckoutWC: Sau các nút Giỏ hàng bên"
 
 #: includes/Admin/Pages/Premium/OrderBumps.php:81
 msgid "ID"
@@ -3306,6 +3292,30 @@ msgstr "Gói CheckoutWC của bạn cho phép bạn tạo %1$d Email giỏ hàng
 #: includes/Admin/Pages/Premium/AbandonedCartRecovery.php:839
 msgid "You cannot create or publish new Abandoned Cart Recovery emails if you are over the limit."
 msgstr "Bạn không thể tạo hoặc xuất bản email Khôi phục Giỏ hàng Bỏ quên mới nếu vượt quá giới hạn."
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:12
+msgid "CheckoutWC Side Cart"
+msgstr "Giỏ hàng bên CheckoutWC"
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:43
+msgid "CheckoutWC: After Side Cart Items"
+msgstr "CheckoutWC: Sau các mục trong Giỏ hàng bên"
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:49
+msgid "CheckoutWC: Before Side Cart Footer Above Promo Code"
+msgstr "CheckoutWC: Trước chân trang Giỏ hàng bên trên Mã khuyến mãi"
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:55
+msgid "CheckoutWC: Before Side Cart Totals"
+msgstr "CheckoutWC: Trước Tổng số Giỏ hàng bên"
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:61
+msgid "CheckoutWC: After Side Cart Totals"
+msgstr "CheckoutWC: Sau Tổng số Giỏ hàng bên"
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:67
+msgid "CheckoutWC: After Side Cart Buttons"
+msgstr "CheckoutWC: Sau các nút Giỏ hàng bên"
 
 #: sources/ts/frontend/Components/ReviewPane/ShippingMethodReviewPane.tsx:15
 #: sources/ts/frontend/Components/ReviewPane/PaymentMethodReviewPane.tsx:15
@@ -4048,184 +4058,184 @@ msgstr "Bật Regex"
 msgid "Match local shipping method name with regex."
 msgstr "Khớp tên phương thức vận chuyển địa phương với regex."
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:64
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:65
 msgid "Configure Cloudflare Turnstile CAPTCHA protection for your checkout and account pages."
 msgstr "Cấu hình bảo vệ CAPTCHA Cloudflare Turnstile cho trang thanh toán và trang tài khoản của bạn."
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:69
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:71
 msgid "Enable Cloudflare Turnstile"
 msgstr "Bật Cloudflare Turnstile"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:70
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:72
 msgid "Enable Cloudflare Turnstile CAPTCHA protection"
 msgstr "Bật bảo vệ CAPTCHA Cloudflare Turnstile"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:83
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:86
 msgid "Site Key"
 msgstr "Khóa trang"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:84
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:87
 msgid "Your Cloudflare Turnstile site key"
 msgstr "Khóa trang Cloudflare Turnstile của bạn"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:90
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:93
 msgid "Secret Key"
 msgstr "Khóa bí mật"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:92
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:95
 msgid "Your Cloudflare Turnstile secret key"
 msgstr "Khóa bí mật Cloudflare Turnstile của bạn"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:98
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:101
 msgid "Enable on Checkout"
 msgstr "Bật trên trang thanh toán"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:99
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:102
 msgid "Show Turnstile on the checkout page"
 msgstr "Hiển thị Turnstile trên trang thanh toán"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:105
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:108
 msgid "Enable on Order Pay"
 msgstr "Bật trên trang thanh toán đơn hàng"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:106
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:109
 msgid "Show Turnstile on the order pay page"
 msgstr "Hiển thị Turnstile trên trang thanh toán đơn hàng"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:112
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:115
 msgid "Enable on Login"
 msgstr "Bật khi đăng nhập"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:113
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:116
 msgid "Show Turnstile on the My Account login form"
 msgstr "Hiển thị Turnstile trên biểu mẫu đăng nhập Tài khoản của tôi"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:119
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:122
 msgid "Enable on Registration"
 msgstr "Bật khi đăng ký"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:120
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:123
 msgid "Show Turnstile on the My Account registration form"
 msgstr "Hiển thị Turnstile trên biểu mẫu đăng ký Tài khoản của tôi"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:126
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:129
 msgid "Position on Checkout"
 msgstr "Vị trí trên trang thanh toán"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:127
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:130
 msgid "Where to display the Turnstile widget on checkout"
 msgstr "Nơi hiển thị widget Turnstile trên trang thanh toán"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:131
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:134
 msgid "Before Place Order Button"
 msgstr "Trước nút Đặt hàng"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:132
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:135
 msgid "Display just before the place order button"
 msgstr "Hiển thị ngay trước nút đặt hàng"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:136
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:139
 msgid "Before Payment Methods"
 msgstr "Trước phương thức thanh toán"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:137
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:140
 msgid "Display before payment method selection"
 msgstr "Hiển thị trước khi chọn phương thức thanh toán"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:141
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:144
 msgid "After Payment Methods"
 msgstr "Sau phương thức thanh toán"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:142
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:145
 msgid "Display after payment method selection"
 msgstr "Hiển thị sau khi chọn phương thức thanh toán"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:150
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:153
 msgid "Theme"
 msgstr "Chủ đề"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:151
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:154
 msgid "Visual theme for the Turnstile widget"
 msgstr "Chủ đề hình ảnh cho widget Turnstile"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:153
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:156
 msgid "Light"
 msgstr "Sáng"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:153
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:156
 msgid "Light theme"
 msgstr "Chủ đề sáng"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:154
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:157
 msgid "Dark"
 msgstr "Tối"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:154
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:157
 msgid "Dark theme"
 msgstr "Chủ đề tối"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:155
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:158
 msgid "Auto"
 msgstr "Tự động"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:155
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:158
 msgid "Automatic based on user preference"
 msgstr "Tự động dựa trên sở thích người dùng"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:162
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:165
 msgid "Size"
 msgstr "Kích thước"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:163
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:166
 msgid "Size of the Turnstile widget"
 msgstr "Kích thước widget Turnstile"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:165
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:168
 #: sources/ts/admin/Components/Forms/AppearanceDesignSettingsForm.tsx:84
 msgid "Normal"
 msgstr "Bình thường"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:165
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:168
 msgid "Standard size widget"
 msgstr "Widget kích thước tiêu chuẩn"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:166
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:169
 msgid "Compact"
 msgstr "Nhỏ gọn"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:166
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:169
 msgid "Smaller widget size"
 msgstr "Widget kích thước nhỏ hơn"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:173
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:176
 msgid "Guest Users Only"
 msgstr "Chỉ dành cho người dùng khách"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:174
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:177
 msgid "Only show Turnstile for guest (non-logged-in) users"
 msgstr "Chỉ hiển thị Turnstile cho người dùng khách (chưa đăng nhập)"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:184
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:187
 msgid "Google API"
 msgstr "Google API"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:185
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:188
 msgid "Used for the maps embed on the thank you page as well as Google Address Autocomplete."
 msgstr "Được sử dụng cho nhúng bản đồ trên trang cảm ơn cũng như Tự động hoàn thành địa chỉ của Google."
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:190
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:193
 msgid "Google API Key"
 msgstr "Khóa API Google"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:191
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:194
 msgid "Used by Address Autocomplete and Thank You Page Maps Embed."
 msgstr "Được sử dụng bởi Tự động hoàn thành địa chỉ và Nhúng bản đồ trên trang cảm ơn."
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:203
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:206
 msgid "Themes and Plugins"
 msgstr "Chủ đề và Plugin"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:204
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:207
 msgid "Integrations with 3rd party themes and plugins."
 msgstr "Tích hợp với các chủ đề và plugin bên thứ ba."
 
@@ -5286,8 +5296,8 @@ msgid "Delete Rule"
 msgstr "Xóa quy tắc"
 
 # %d: shipping package number
-#: sources/php/functions.php:366
-#: sources/php/functions.php:3254
+#: sources/php/functions.php:368
+#: sources/php/functions.php:3267
 msgctxt "woocommerce"
 msgid "Shipping"
 msgid_plural "Shipping %d"

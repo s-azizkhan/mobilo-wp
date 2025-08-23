@@ -132,19 +132,25 @@ $acr = new AbandonedCartRecovery(
 
 $acr->init();
 
-// Admin Pages
-add_filter(
-	'cfw_admin_pages',
-	function ( $admin_pages ) use ( $acr ) {
-		$admin_pages['side_cart']               = ( new SideCartAdminPage() )->set_priority( 80 );
-		$admin_pages['trust_badges']            = ( new TrustBadgesAdminPage() )->set_priority( 90 );
-		$admin_pages['order_bumps']             = ( new OrderBumpsAdminPage( BumpAbstract::get_post_type(), PlanManager::get_english_list_of_required_plans_html( 'plus' ), PlanManager::has_premium_plan_or_higher( 'plus' ) ) )->set_priority( 95 );
-		$admin_pages['local_pickup']            = ( new LocalPickupAdminPage() )->set_priority( 102 );
-		$admin_pages['pickup_locations']        = ( new PickupLocationsAdminPage( LocalPickup::get_post_type(), true ) )->set_priority( 103 );
-		$admin_pages['abandoned_cart_recovery'] = ( new AbandonedCartRecoveryAdminPage( $acr ) )->set_priority( 104 );
+// Admin Pages - defer instantiation until init to avoid translation loading issues
+add_action(
+	'init',
+	function () use ( $acr ) {
+		add_filter(
+			'cfw_admin_pages',
+			function ( $admin_pages ) use ( $acr ) {
+				$admin_pages['side_cart']               = ( new SideCartAdminPage() )->set_priority( 80 );
+				$admin_pages['trust_badges']            = ( new TrustBadgesAdminPage() )->set_priority( 90 );
+				$admin_pages['order_bumps']             = ( new OrderBumpsAdminPage( BumpAbstract::get_post_type(), PlanManager::get_english_list_of_required_plans_html( 'plus' ), PlanManager::has_premium_plan_or_higher( 'plus' ) ) )->set_priority( 95 );
+				$admin_pages['local_pickup']            = ( new LocalPickupAdminPage() )->set_priority( 102 );
+				$admin_pages['pickup_locations']        = ( new PickupLocationsAdminPage( LocalPickup::get_post_type(), true ) )->set_priority( 103 );
+				$admin_pages['abandoned_cart_recovery'] = ( new AbandonedCartRecoveryAdminPage( $acr ) )->set_priority( 104 );
 
-		return $admin_pages;
-	}
+				return $admin_pages;
+			}
+		);
+	},
+	5 // Run before the main init hook that processes admin pages
 );
 
 /**

@@ -103,8 +103,8 @@ msgid "Phone"
 msgstr "טלפון"
 
 #: templates/glass/functions.php:40
-#: sources/php/template-functions.php:808
 #: templates/futurist/functions.php:16
+#: sources/php/template-functions.php:808
 msgid "Your Cart"
 msgstr "סל  קניות"
 
@@ -256,7 +256,7 @@ msgstr "פרטי התקשרות"
 
 #: sources/php/template-functions.php:1665
 #: sources/php/template-functions.php:2001
-#: sources/php/functions.php:951
+#: sources/php/functions.php:958
 #: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:40
 msgid "Payment"
 msgstr "תשלום"
@@ -269,7 +269,7 @@ msgstr "לא זמין"
 
 #: sources/php/template-functions.php:1717
 #: sources/php/template-functions.php:1981
-#: sources/php/functions.php:3268
+#: sources/php/functions.php:3281
 msgid "Shipping"
 msgid_plural "Shipping %d"
 msgstr[0] "משלוח"
@@ -283,17 +283,17 @@ msgid "Continue shopping"
 msgstr "המשך בקניות"
 
 #: sources/php/template-functions.php:1774
-#: includes/Loaders/LoaderAbstract.php:112
+#: includes/Loaders/LoaderAbstract.php:111
 msgid "Pay for order"
 msgstr "שלם עבור ההזמנה"
 
 #: sources/php/template-functions.php:1818
-#: sources/php/functions.php:3833
+#: sources/php/functions.php:3846
 msgid "Login"
 msgstr "התחבר"
 
 #: sources/php/template-functions.php:1821
-#: sources/php/functions.php:3826
+#: sources/php/functions.php:3839
 msgid "Lost your password?"
 msgstr "שכחת את הסיסמה?"
 
@@ -308,16 +308,16 @@ msgstr "חוות דעת"
 msgid "Your Cart is Empty"
 msgstr "העגלה שלך ריקה"
 
-#: sources/php/premium-init.php:378
+#: sources/php/premium-init.php:387
 msgid "CheckoutWC Templates Deactivated"
 msgstr "תבניות CheckoutWC מושבתות"
 
 # %1$s: "Settings" text, %2$s: "Start Here" text, %3$s: "Activate CheckoutWC Templates" text
-#: sources/php/premium-init.php:381
+#: sources/php/premium-init.php:390
 msgid "Your license is valid and activated for this site but CheckoutWC is disabled for normal customers. To fix this, go to %1$s > %2$s and toggle \"%3$s\"."
 msgstr "הרישיון שלך תקף ומופעל לאתר זה אך CheckoutWC מושבת ללקוחות רגילים. כדי לתקן זאת, עבור אל %1$s > %2$s והפעל את \"%3$s\"."
 
-#: sources/php/premium-init.php:382
+#: sources/php/premium-init.php:391
 #: includes/Admin/AdminPluginsPageManager.php:36
 #: includes/Admin/Pages/OrderBumpsAdminFree.php:25
 #: includes/Admin/Pages/LocalPickupAdminFree.php:27
@@ -328,40 +328,63 @@ msgstr "הרישיון שלך תקף ומופעל לאתר זה אך CheckoutWC 
 msgid "Settings"
 msgstr "הגדרות"
 
-#: sources/php/premium-init.php:383
+#: sources/php/premium-init.php:392
 #: includes/Admin/Pages/General.php:25
 #: includes/Admin/Notices/InactiveLicenseNotice.php:13
 msgid "Start Here"
 msgstr "התחל כאן"
 
-#: sources/php/premium-init.php:384
+#: sources/php/premium-init.php:393
 #: includes/Admin/Pages/General.php:198
 msgid "Activate CheckoutWC Templates"
 msgstr "הפעל תבניות CheckoutWC"
 
-#: sources/php/premium-init.php:391
+#: sources/php/premium-init.php:400
 msgid "Invalid CheckoutWC License"
 msgstr "רישיון CheckoutWC לא תקין"
 
 # %1$s: Pricing URL, %2$s: "purchase a license" link text
-#: sources/php/premium-init.php:394
+#: sources/php/premium-init.php:403
 msgid "Your license key is missing or invalid. Please verify that your license key is valid or <a target=\"_blank\" href=\"%1$s\">%2$s</a> to restore full functionality."
 msgstr "מפתח הרישיון שלך חסר או לא תקין. אנא ודא שמפתח הרישיון שלך תקף או <a target=\"_blank\" href=\"%1$s\">%2$s</a> כדי לשחזר את כל הפונקציונליות."
 
-#: sources/php/premium-init.php:396
+#: sources/php/premium-init.php:405
 msgid "purchase a license"
 msgstr "רכוש רישיון"
 
-#: sources/php/premium-init.php:416
+#: sources/php/premium-init.php:421
+msgid "New Feature: Cloudflare Turnstile Bot Protection"
+msgstr "תכונה חדשה: הגנת בוטים Cloudflare Turnstile"
+
+# 1: Cloudflare Turnstile name wrapped in strong tags, 2: Setup link
+#: sources/php/premium-init.php:424
+msgid "CheckoutWC now supports %1$s - a privacy-first, CAPTCHA-free way to protect your checkout from bots and spam orders. %2$s"
+msgstr "CheckoutWC תומך כעת ב-%1$s - דרך פרטית, ללא CAPTCHA, להגן על תהליך התשלום שלך מפני בוטים והזמנות ספאם. %2$s"
+
+# The name of the Cloudflare Turnstile service
+#: sources/php/premium-init.php:428
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:64
+msgid "Cloudflare Turnstile"
+msgstr "Cloudflare Turnstile"
+
+#: sources/php/premium-init.php:434
+msgid "Setup Cloudflare Turnstile now"
+msgstr "הגדר את Cloudflare Turnstile עכשיו"
+
+#: sources/php/premium-init.php:439
+msgid "Upgrade your plan now to access"
+msgstr "שדרג את התוכנית שלך עכשיו כדי לגשת"
+
+#: sources/php/premium-init.php:452
 msgid "Abandoned Cart Recovery Tracking Disabled"
 msgstr "מעקב שחזור עגלת קניות נטושה מושבת"
 
 # %1$s: Gist URL, %2$s: "Learn More" link text
-#: sources/php/premium-init.php:419
+#: sources/php/premium-init.php:455
 msgid "You have enabled Abandoned Cart Recovery tracking, but you do not have any emails published. To track carts, you need to publish emails or use this dev filter: <a target=\"_blank\" href=\"%1$s\">%2$s</a>."
 msgstr "הפעלת מעקב שחזור עגלת קניות נטושה, אך אין לך מיילים שפורסמו. כדי לעקוב אחרי עגלות, עליך לפרסם מיילים או להשתמש בפילטר הפיתוח הזה: <a target=\"_blank\" href=\"%1$s\">%2$s</a>."
 
-#: sources/php/premium-init.php:421
+#: sources/php/premium-init.php:457
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:82
 msgid "Learn More"
 msgstr "למידע נוסף"
@@ -465,105 +488,105 @@ msgstr "שלח אל"
 msgid "Address"
 msgstr "כתובת"
 
-#: sources/php/functions.php:572
+#: sources/php/functions.php:579
 msgid "Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements."
 msgstr "מצטערים, נראה שאין שיטות תשלום זמינות למיקומך. אנא צור קשר אם אתה זקוק לעזרה או מעוניין לסדר סידורים חלופיים."
 
-#: sources/php/functions.php:723
-msgid "Enter your address to view shipping options."
-msgstr "הזן את כתובתך כדי לראות אפשרויות משלוח."
+#: sources/php/functions.php:732
+msgid "Shipping costs are calculated during checkout."
+msgstr "עלויות המשלוח מחושבות במהלך התשלום."
 
-#: sources/php/functions.php:736
+#: sources/php/functions.php:743
 msgid "No shipping methods available"
 msgstr "אין שיטות משלוח זמינות"
 
-#: sources/php/functions.php:763
+#: sources/php/functions.php:770
 #: includes/Model/Bumps/BumpAbstract.php:704
 msgid "Free!"
 msgstr "חינם!"
 
-#: sources/php/functions.php:893
+#: sources/php/functions.php:900
 #: includes/Features/AbandonedCartRecovery.php:676
 msgid "Complete Order"
 msgstr "הזמנה מלאה"
 
-#: sources/php/functions.php:976
+#: sources/php/functions.php:983
 msgid "All transactions are secure and encrypted."
 msgstr "כל העסקאות מאובטחות ומוצפנות."
 
-#: sources/php/functions.php:997
+#: sources/php/functions.php:1004
 msgid "Your order is free. No payment is required."
 msgstr "ההזמנה שלך היא בחינם. אין צורך בתשלום."
 
-#: sources/php/functions.php:1041
+#: sources/php/functions.php:1048
 msgid "Same as shipping address"
 msgstr "זהה לכתובת המשלוח"
 
-#: sources/php/functions.php:1050
+#: sources/php/functions.php:1057
 msgid "Use a different billing address"
 msgstr "השתמש בכתובת חיוב שונה"
 
 # %1$s: Old order status, %2$s: New order status
-#: sources/php/functions.php:1179
+#: sources/php/functions.php:1186
 msgid "Order status changed from %1$s to %2$s."
 msgstr "סטטוס ההזמנה שונה מ-%1$s ל-%2$s."
 
-#: sources/php/functions.php:1201
+#: sources/php/functions.php:1211
 msgid "Tracking Number:"
 msgstr "מספר מעקב:"
 
-#: sources/php/functions.php:1287
+#: sources/php/functions.php:1297
 msgid "Return to cart"
 msgstr "חזרה לסל הקניות"
 
-#: sources/php/functions.php:1324
+#: sources/php/functions.php:1334
 msgid "Continue to shipping"
 msgstr "המשך לבחירת משלוח"
 
-#: sources/php/functions.php:1346
+#: sources/php/functions.php:1356
 msgid "Continue to payment"
 msgstr "להמשיך לתשלום"
 
-#: sources/php/functions.php:1346
-#: sources/php/functions.php:1382
+#: sources/php/functions.php:1356
+#: sources/php/functions.php:1392
 msgid "Review order"
 msgstr "בדוק את ההזמנה"
 
-#: sources/php/functions.php:1402
+#: sources/php/functions.php:1412
 msgid "Return to information"
 msgstr "חזור למידע"
 
-#: sources/php/functions.php:1422
+#: sources/php/functions.php:1432
 msgid "Return to shipping"
 msgstr "חזור למשלוחים"
 
-#: sources/php/functions.php:1442
+#: sources/php/functions.php:1452
 msgid "Return to payment"
 msgstr "חזור לתשלום"
 
-#: sources/php/functions.php:1489
+#: sources/php/functions.php:1499
 #: includes/Features/SideCart.php:210
 msgid "Cart"
 msgstr "עגלה"
 
-#: sources/php/functions.php:1724
-msgid "CheckoutWC: Error matching %d to customer %d"
-msgstr "CheckoutWC: שגיאה בהתאמת %d ללקוח %d"
+#: sources/php/functions.php:1734
+msgid "CheckoutWC: Error matching %1$d to customer %2$d"
+msgstr "CheckoutWC: שגיאה בהתאמת %1$d ללקוח %2$d"
 
-#: sources/php/functions.php:1970
+#: sources/php/functions.php:1980
 msgid "Or"
 msgstr "או"
 
-#: sources/php/functions.php:2050
+#: sources/php/functions.php:2060
 msgid "You can only have 1 %s in your cart."
 msgstr "ניתן להחזיק רק %s אחד בעגלה שלך."
 
-#: sources/php/functions.php:2200
+#: sources/php/functions.php:2210
 #: sources/ts/frontend/Components/CartItemQuantityControl.tsx:55
 msgid "Decrement"
 msgstr "ירידה"
 
-#: sources/php/functions.php:2209
+#: sources/php/functions.php:2219
 #: includes/Managers/AssetManager.php:720
 #: includes/Managers/AssetManager.php:839
 #: includes/Features/LocalPickup.php:439
@@ -572,105 +595,105 @@ msgstr "ירידה"
 msgid "Edit"
 msgstr "ערוך"
 
-#: sources/php/functions.php:2212
+#: sources/php/functions.php:2222
 #: sources/ts/frontend/Components/CartItemQuantityControl.tsx:70
 msgid "Increment"
 msgstr "הגדלה"
 
-#: sources/php/functions.php:2932
+#: sources/php/functions.php:2945
 msgid "Unsubscribe"
 msgstr "בטל הרשמה"
 
-#: sources/php/functions.php:3294
+#: sources/php/functions.php:3307
 #: includes/Features/AbandonedCartRecovery.php:731
 #: sources/ts/admin/Components/acr/carts.tsx:69
 msgid "Subtotal"
 msgstr "סכום ביניים"
 
-#: sources/php/functions.php:3298
+#: sources/php/functions.php:3311
 msgid "Total"
 msgstr "סך הכל"
 
-#: sources/php/functions.php:3350
+#: sources/php/functions.php:3363
 msgid "There are no shipping options available. Please ensure that your address has been entered correctly, or contact us if you need any help."
 msgstr "אין אפשרויות משלוח זמינות. אנא ודא שהזנת את הכתובת נכון, או צור קשר אם אתה זקוק לעזרה."
 
-#: sources/php/functions.php:3569
+#: sources/php/functions.php:3582
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:73
 msgid "SendWP - Transactional Email"
 msgstr "SendWP - דואר אלקטרוני עסקי"
 
-#: sources/php/functions.php:3574
+#: sources/php/functions.php:3587
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:77
 msgid "SendWP makes getting emails delivered as simple as a few clicks. So you can relax know those important emails are being delivered on time."
 msgstr "SendWP עושה את שליחת האימיילים לפשוטה כמו כמה לחיצות. כך תוכל להירגע בידיעה שהאימיילים החשובים נשלחים בזמן."
 
-#: sources/php/functions.php:3577
+#: sources/php/functions.php:3590
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:79
 msgid "Try SendWP now and <strong>get your first month for just $1.</strong>"
 msgstr "נסה את SendWP עכשיו ו<strong>קבל את החודש הראשון שלך רק ב-$1.</strong>"
 
-#: sources/php/functions.php:3587
+#: sources/php/functions.php:3600
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:87
 msgid "Note: SendWP is optional. You can use any transactional email service you prefer."
 msgstr "הערה: SendWP הוא אופציונלי. ניתן להשתמש בכל שירות דואר אלקטרוני עסקי שתבחר."
 
-#: sources/php/functions.php:3596
+#: sources/php/functions.php:3609
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:94
 msgid "Connect to SendWP"
 msgstr "התחבר ל-SendWP"
 
-#: sources/php/functions.php:3744
+#: sources/php/functions.php:3757
 msgid "Welcome back"
 msgstr "שלום"
 
-#: sources/php/functions.php:3757
+#: sources/php/functions.php:3770
 msgid "It looks like you already have an account. Please enter your login details below."
 msgstr "נראה שכבר יש לך חשבון. אנא הכנס את פרטי הכניסה שלך למטה."
 
-#: sources/php/functions.php:3770
+#: sources/php/functions.php:3783
 msgid "If you have shopped with us before, please enter your login details below."
 msgstr "אם קניתם איתנו בעבר, אנא הכנס את פרטי הכניסה שלך למטה."
 
-#: sources/php/functions.php:3780
-#: sources/php/functions.php:3781
+#: sources/php/functions.php:3793
+#: sources/php/functions.php:3794
 msgid "Username or email address"
 msgstr "שם משתמש או כתובת אימייל"
 
-#: sources/php/functions.php:3794
-#: sources/php/functions.php:3795
+#: sources/php/functions.php:3807
+#: sources/php/functions.php:3808
 msgid "Password"
 msgstr "סיסמה"
 
-#: sources/php/functions.php:3815
+#: sources/php/functions.php:3828
 msgid "Remember me"
 msgstr "זכור אותי"
 
-#: sources/php/functions.php:3844
+#: sources/php/functions.php:3857
 msgid "Or continue as guest"
 msgstr "או להמשיך כאורח"
 
-#: sources/php/functions.php:3862
+#: sources/php/functions.php:3875
 msgid "Lost your password? Please enter your username or email address. You will receive a link to create a new password via email."
 msgstr "שכחת את הסיסמה? אנא הזן את שם המשתמש או כתובת האימייל שלך. תקבל קישור ליצירת סיסמה חדשה בדואר האלקטרוני."
 
-#: sources/php/functions.php:3872
-#: sources/php/functions.php:3873
+#: sources/php/functions.php:3885
+#: sources/php/functions.php:3886
 msgid "Email address"
 msgstr "כתובת אימייל"
 
-#: sources/php/functions.php:3885
+#: sources/php/functions.php:3898
 msgid "Reset password"
 msgstr "אפס סיסמה"
 
-#: sources/php/functions.php:3900
+#: sources/php/functions.php:3913
 #: includes/API/OrderBumpOfferFormPreviewAPI.php:46
 #: includes/API/GetVariationFormAPI.php:33
 msgid "Product not found"
 msgstr "המוצר לא נמצא"
 
-#: sources/php/functions.php:3916
-#: sources/php/functions.php:4053
+#: sources/php/functions.php:3929
+#: sources/php/functions.php:4066
 msgid "No thanks"
 msgstr "לא, תודה"
 
@@ -763,6 +786,14 @@ msgstr "רענן פרטי הרישיון"
 #: includes/Managers/UpdatesManager.php:494
 msgid "Please enter your license key."
 msgstr "אנא הזן את מפתח הרישיון שלך."
+
+#: includes/Managers/UpdatesManager.php:497
+msgid "Activate Site"
+msgstr "הפעל אתר"
+
+#: includes/Managers/UpdatesManager.php:500
+msgid "Deactivate Site"
+msgstr "השבת אתר"
 
 # Debug error message logged when license check reaches unexpected state
 #: includes/Managers/UpdatesManager.php:642
@@ -879,60 +910,56 @@ msgstr "הסר פריט זה"
 msgid "Proceed to checkout"
 msgstr "מעבר לתשלום"
 
-#: includes/Loaders/LoaderAbstract.php:71
-#: includes/Features/CartEditingAtCheckout.php:45
-msgid "Checkout is not available whilst your cart is empty."
-msgstr "התשלום אינו זמין כאשר העגלה שלך ריקה."
-
-#: includes/Loaders/LoaderAbstract.php:135
-#: includes/Loaders/LoaderAbstract.php:245
+#: includes/Loaders/LoaderAbstract.php:134
+#: includes/Loaders/LoaderAbstract.php:244
 msgid "Sorry, this order is invalid and cannot be paid for."
 msgstr "מצטערים, הזמנה זו אינה תקפה ולא ניתן לשלם עבורה."
 
-#: includes/Loaders/LoaderAbstract.php:139
+#: includes/Loaders/LoaderAbstract.php:138
 msgid "Please log in to your account below to continue to the payment form."
 msgstr "אנא התחבר לחשבונך למטה כדי להמשיך לטופס התשלום."
 
-#: includes/Loaders/LoaderAbstract.php:146
+#: includes/Loaders/LoaderAbstract.php:145
 msgid "You are paying for a guest order. Please continue with payment only if you recognize this order."
 msgstr "אתה משלם עבור הזמנת אורח. אנא המשך בתשלום רק אם אתה מזהה הזמנה זו."
 
-#: includes/Loaders/LoaderAbstract.php:152
+#: includes/Loaders/LoaderAbstract.php:151
 msgid "This order cannot be paid for. Please contact us if you need assistance."
 msgstr "לא ניתן לשלם עבור הזמנה זו. אנא צור קשר אם אתה זקוק לסיוע."
 
-#: includes/Loaders/LoaderAbstract.php:158
-#: includes/Loaders/LoaderAbstract.php:242
+#: includes/Loaders/LoaderAbstract.php:157
+#: includes/Loaders/LoaderAbstract.php:241
 msgid "This order&rsquo;s status is &ldquo;%s&rdquo;&mdash;it cannot be paid for. Please contact us if you need assistance."
 msgstr "סטטוס ההזמנה הוא &ldquo;%s&rdquo;&mdash;לא ניתן לשלם עבורה. אנא צור קשר אם אתה זקוק לסיוע."
 
-#: includes/Loaders/LoaderAbstract.php:187
+#: includes/Loaders/LoaderAbstract.php:186
 msgid "Sorry, \"%s\" is no longer in stock so this order cannot be paid for. We apologize for any inconvenience caused."
 msgstr "מצטערים, \"%s\" כבר לא במלאי ולכן לא ניתן לשלם עבור הזמנה זו. אנו מתנצלים על אי הנוחות."
 
-#: includes/Loaders/LoaderAbstract.php:201
+#: includes/Loaders/LoaderAbstract.php:200
 msgid "Sorry, we do not have enough \"%1$s\" in stock to fulfill your order (%2$s available). We apologize for any inconvenience caused."
 msgstr "מצטערים, אין לנו מספיק \"%1$s\" במלאי כדי למלא את הזמנתך (%2$s זמינים). אנו מתנצלים על אי הנוחות."
 
-#: includes/Loaders/LoaderAbstract.php:248
+#: includes/Loaders/LoaderAbstract.php:247
 msgid "Invalid order."
 msgstr "הזמנה לא תקינה."
 
-#: includes/Features/Turnstile.php:133
-#: includes/Features/Turnstile.php:187
-#: includes/Features/Turnstile.php:316
+#: includes/Features/Turnstile.php:134
+#: includes/Features/Turnstile.php:188
+#: includes/Features/Turnstile.php:362
 msgid "Please complete the verification challenge."
 msgstr "אנא השלם את אתגר האימות."
 
-#: includes/Features/Turnstile.php:335
+#: includes/Features/Turnstile.php:382
 msgid "Verification service unavailable. Please try again."
 msgstr "שירות האימות אינו זמין. אנא נסה שוב."
 
-#: includes/Features/Turnstile.php:351
+#: includes/Features/Turnstile.php:394
+#: includes/Features/Turnstile.php:413
 msgid "Verification failed. Please try again."
 msgstr "האימות נכשל. אנא נסה שוב."
 
-#: includes/Features/Turnstile.php:378
+#: includes/Features/Turnstile.php:448
 msgid "We have detected that Simple Cloudflare Turnstile is active. To enable CheckoutWC Turnstile functionality, please deactivate Simple Cloudflare Turnstile."
 msgstr "זיהינו כי Simple Cloudflare Turnstile פעיל. כדי לאפשר את פונקציית Turnstile של CheckoutWC, אנא השבת את Simple Cloudflare Turnstile."
 
@@ -954,16 +981,16 @@ msgstr "CheckoutWC:"
 msgid "Settings marked with asterisks (**) may be overridden based on your Side Cart settings. (CheckoutWC > Side Cart)"
 msgstr "הגדרות המסומנות בכוכביות (**) עשויות להיות מוחלפות בהתאם להגדרות העגלה הצדדית שלך. (CheckoutWC > עגלה צדדית)"
 
-#: includes/Features/OrderBumps.php:561
+#: includes/Features/OrderBumps.php:563
 msgid "All orders"
 msgstr "כל ההזמנות"
 
-#: includes/Features/OrderBumps.php:564
+#: includes/Features/OrderBumps.php:566
 msgid "Contains Any Order Bump"
 msgstr "מכיל כל תוספת הזמנה"
 
 # %s: Order bump title
-#: includes/Features/OrderBumps.php:570
+#: includes/Features/OrderBumps.php:572
 msgid "Has Bump: %s"
 msgstr "יש תוספת: %s"
 
@@ -1094,6 +1121,10 @@ msgstr "חפש את הכתובת שלך"
 #: includes/Features/FetchifyAddressAutocomplete.php:78
 msgid "Or enter address manually."
 msgstr "או הזן כתובת ידנית."
+
+#: includes/Features/CartEditingAtCheckout.php:45
+msgid "Checkout is not available whilst your cart is empty."
+msgstr "התשלום אינו זמין כאשר העגלה שלך ריקה."
 
 #: includes/Features/AbandonedCartRecovery.php:84
 msgid "You have been unsubscribed from our cart reminder emails."
@@ -1672,158 +1703,6 @@ msgstr "אין לך הרשאה להתקין עדכוני תוספים"
 msgid "Error"
 msgstr "שגיאה"
 
-# Error message logged when Jupiter theme callback removal fails
-#: includes/Compatibility/Themes/Jupiter.php:49
-msgid "CheckoutWC: Failed to unset Jupiter theme callbacks."
-msgstr "CheckoutWC: נכשל בנטרול קריאות חזרה של נושא Jupiter."
-
-#: includes/Compatibility/Themes/Astra.php:81
-msgid "Enable Astra Support (Beta)"
-msgstr "הפעל תמיכה באסטרה (בטא)"
-
-#: includes/Compatibility/Themes/Astra.php:82
-msgid "Allow Astra to replace header and footer. Allows Astra / Astra Addon to load its styles and scripts on the checkout page."
-msgstr "אפשר לאסטרה להחליף את הכותרת והתחתית. מאפשר לאסטרה / תוסף אסטרה לטעון את הסגנונות והסקריפטים בדף התשלום."
-
-#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:38
-msgid "Please update to the latest version of PayPal for WooCommerce to get full support."
-msgstr "אנא עדכן לגרסה האחרונה של PayPal עבור WooCommerce לקבלת תמיכה מלאה."
-
-#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:363
-msgid "Logged in with PayPal. Please continue your order below."
-msgstr "התחבר באמצעות PayPal. אנא המשך בהזמנה שלך למטה."
-
-#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:64
-#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:72
-msgid "Enter your code&hellip;"
-msgstr "הזן את הקוד שלך&hellip;"
-
-#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:94
-msgid "Have a gift card?"
-msgstr "יש לך כרטיס מתנה?"
-
-#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:68
-msgid "Enable Checkout Field Editor address field overrides. (Not Recommended)"
-msgstr "אפשר ביטול כתובת שדות עורך שדה התשלום. (לא מומלץ)"
-
-#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:69
-msgid "Allow WooCommerce Checkout Field Editor to modify billing and shipping address fields. Not compatible with these features: Separate House Number and Street Name Address Fields, Full Name Field, Fetchify"
-msgstr "אפשר לעורך שדות התשלום של WooCommerce לשנות שדות כתובת לחיוב ומשלוח. לא תואם לתכונות הבאות: שדות נפרדים למספר בית ושם רחוב, שדה שם מלא, Fetchify"
-
-#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:103
-msgid "Full-width"
-msgstr "רוחב מלא"
-
-#: includes/Compatibility/Plugins/WPRocket.php:116
-msgid "Enable WP Rocket Delay JS Execution compatibility mode"
-msgstr "אפשר מצב תאימות לדחיית ביצוע JS של WP Rocket"
-
-#: includes/Compatibility/Plugins/WPRocket.php:117
-msgid "By default, we exclude our scripts and script dependencies to prevent compatibility problems. Uncheck to allow CheckoutWC scripts to be delayed for maximum performance."
-msgstr "ברירת המחדל היא שנחריג את הסקריפטים שלנו ותלויות הסקריפטים כדי למנוע בעיות תאימות. בטל את הסימון כדי לאפשר דחיית סקריפטים של CheckoutWC לביצועים מקסימליים."
-
-#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:28
-msgid "Points"
-msgstr "נקודות"
-
-#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:29
-msgid "Apply Points"
-msgstr "החל נקודות"
-
-#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:31
-msgid " Points"
-msgstr "נקודות"
-
-#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditorPro.php:69
-msgid "Enable ThemeHigh Checkout Field Editor address field overrides"
-msgstr "אפשר ביטול כתובת שדות עורך שדה התשלום של ThemeHigh"
-
-#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditorPro.php:70
-#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditor.php:47
-msgid "Allow ThemeHigh Checkout Field Editor to modify billing and shipping address fields. (Not Recommended)"
-msgstr "אפשר לעורך שדות התשלום של ThemeHigh לשנות שדות כתובת לחיוב ומשלוח. (לא מומלץ)"
-
-#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditor.php:46
-msgid "Enable ThemeHigh Checkout Field Editor address field overrides."
-msgstr "אפשר ביטול כתובת שדות עורך שדה התשלום של ThemeHigh."
-
-#: includes/Compatibility/Plugins/ShipMondo.php:16
-msgid "Please select a pickup point before placing your order."
-msgstr "אנא בחר נקודת איסוף לפני ביצוע ההזמנה."
-
-#: includes/Compatibility/Plugins/SendCloud.php:16
-msgid "Please choose a service point."
-msgstr "אנא בחר נקודת שירות."
-
-#: includes/Compatibility/Plugins/PostNL4.php:65
-#: includes/Compatibility/Plugins/PostNL4.php:66
-#: includes/Compatibility/Plugins/PostNL.php:67
-#: includes/Compatibility/Plugins/PostNL.php:68
-#: includes/Compatibility/Plugins/NLPostcodeChecker.php:67
-#: includes/Compatibility/Plugins/NLPostcodeChecker.php:68
-#: includes/Compatibility/Plugins/MyParcel.php:63
-msgid "Nr."
-msgstr "מס'"
-
-#: includes/Compatibility/Plugins/PostNL4.php:80
-#: includes/Compatibility/Plugins/PostNL4.php:81
-#: includes/Compatibility/Plugins/PostNL.php:82
-#: includes/Compatibility/Plugins/PostNL.php:83
-#: includes/Compatibility/Plugins/MyParcel.php:78
-msgid "Suffix"
-msgstr "סיומת"
-
-#: includes/Compatibility/Plugins/PWGiftCardsPro.php:30
-msgid "Unknown Error"
-msgstr "שגיאה לא ידועה"
-
-#: includes/Compatibility/Plugins/MyParcel.php:47
-msgid "street_name"
-msgstr "street_name"
-
-#: includes/Compatibility/Plugins/MyParcel.php:62
-msgid "abbreviation_house_number"
-msgstr "abbreviation_house_number"
-
-#: includes/Compatibility/Plugins/MyParcel.php:77
-msgid "suffix"
-msgstr "suffix"
-
-#: includes/Compatibility/Plugins/ElementorPro.php:95
-msgid "Enable Elementor Pro support."
-msgstr "אפשר תמיכה ב-Elementor Pro."
-
-#: includes/Compatibility/Plugins/ElementorPro.php:96
-msgid "Allow Elementor Pro to replace header and footer."
-msgstr "אפשר ל-Elementor Pro להחליף כותרת עליונה ותחתונה."
-
-#: includes/Compatibility/Plugins/CashierForWooCommerce.php:62
-msgid "Enable Cashier for WooCommerce address field overrides. (Not Recommended)"
-msgstr "אפשר ביטול כתובת שדות Cashier עבור WooCommerce. (לא מומלץ)"
-
-#: includes/Compatibility/Plugins/CashierForWooCommerce.php:63
-msgid "Allow WooCommerce Cashier Checkout Field Editor module to modify billing and shipping address fields. Not compatible with these features: Separate House Number and Street Name Address Fields, Full Name Field"
-msgstr "אפשר למודול עורך שדות התשלום של WooCommerce Cashier לשנות שדות כתובת לחיוב ומשלוח. לא תואם לתכונות הבאות: שדות נפרדים למספר בית ושם רחוב, שדה שם מלא"
-
-#: includes/Admin/Pages/PickupLocationsAdminFree.php:218
-#: includes/Admin/Pages/PageAbstract.php:106
-#: includes/Admin/Pages/General.php:326
-#: includes/Compatibility/Plugins/CartFlows.php:62
-#: includes/Admin/Pages/Premium/PickupLocations.php:217
-#: includes/Admin/Pages/Premium/OrderBumps.php:206
-#: includes/Admin/Pages/Premium/LocalPickupAdmin.php:165
-#: includes/Admin/Pages/Premium/AbandonedCartRecovery.php:238
-msgid "CheckoutWC"
-msgstr "‫CheckoutWC"
-
-#: includes/Compatibility/Plugins/BeaverThemer.php:38
-msgid "Enable Beaver Themer Support"
-msgstr "אפשר תמיכה ב-Beaver Themer"
-
-#: includes/Compatibility/Plugins/BeaverThemer.php:39
-msgid "Allow Beaver Themer to replace header and footer."
-msgstr "אפשר ל-Beaver Themer להחליף כותרת עליונה ותחתונה."
-
 #: includes/Admin/Pages/WooCommercePages.php:21
 msgid "Pages"
 msgstr "דפים"
@@ -2196,6 +2075,17 @@ msgstr "זמן איסוף משוער"
 #: includes/Admin/Pages/Premium/PickupLocations.php:130
 msgid "Pickup Instructions"
 msgstr "הוראות איסוף"
+
+#: includes/Compatibility/Plugins/CartFlows.php:62
+#: includes/Admin/Pages/PickupLocationsAdminFree.php:218
+#: includes/Admin/Pages/PageAbstract.php:106
+#: includes/Admin/Pages/General.php:326
+#: includes/Admin/Pages/Premium/PickupLocations.php:217
+#: includes/Admin/Pages/Premium/OrderBumps.php:206
+#: includes/Admin/Pages/Premium/LocalPickupAdmin.php:165
+#: includes/Admin/Pages/Premium/AbandonedCartRecovery.php:238
+msgid "CheckoutWC"
+msgstr "‫CheckoutWC"
 
 #: includes/Admin/Pages/PageController.php:27
 msgid "Premium"
@@ -2944,27 +2834,6 @@ msgstr "תודה שהתקנת את CheckoutWC! הפעלנו אוטומטית א�
 msgid "Thank you for installing CheckoutWC! To get started, enter your <strong>License Key</strong> below, save, and click <strong>Activate Site</strong>."
 msgstr "תודה שהתקנת את CheckoutWC! כדי להתחיל, הזן את <strong>מפתח הרישיון</strong> שלך למטה, שמור ולחץ על <strong>הפעל אתר</strong>."
 
-# Admin notice title for new Cloudflare Turnstile feature
-#: includes/Admin/Notices/TurnstileFeatureNotice.php:21
-msgid "New Feature: Cloudflare Turnstile Bot Protection"
-msgstr "תכונה חדשה: הגנת בוטים Cloudflare Turnstile"
-
-# 1: Cloudflare Turnstile name wrapped in strong tags, 2: Setup link
-#: includes/Admin/Notices/TurnstileFeatureNotice.php:25
-msgid "CheckoutWC now supports %1$s - a privacy-first, CAPTCHA-free way to protect your checkout from bots and spam orders. %2$s"
-msgstr "CheckoutWC תומך כעת ב-%1$s - דרך פרטית, ללא CAPTCHA, להגן על תהליך התשלום שלך מפני בוטים והזמנות ספאם. %2$s"
-
-# The name of the Cloudflare Turnstile service
-#: includes/Admin/Notices/TurnstileFeatureNotice.php:29
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:63
-msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
-
-# Link text to setup Cloudflare Turnstile
-#: includes/Admin/Notices/TurnstileFeatureNotice.php:35
-msgid "Setup Cloudflare Turnstile now"
-msgstr "הגדר את Cloudflare Turnstile עכשיו"
-
 # %1$s: URL to pricing page, %2$s: "purchase a new license" link text, %3$s: Support email URL, %4$s: "please contact support" link text
 #: includes/Admin/Notices/InvalidLicenseKeyNotice.php:15
 msgid "Your license key appears to have expired. Please <a href=\"%1$s\" target=\"_blank\">%2$s</a> to restore functionality. If you believe this is in error, <a href=\"%3$s\">%4$s</a>."
@@ -2982,6 +2851,147 @@ msgstr "אנא פנה לתמיכה"
 #: includes/Admin/Notices/InactiveLicenseNotice.php:11
 msgid "Your license key is not active for this site. Please visit <a href=\"%1$s\">%2$s</a> to activate your license and restore functionality."
 msgstr "מפתח הרישיון שלך אינו פעיל לאתר זה. אנא בקר ב- <a href=\"%1$s\">%2$s</a> כדי להפעיל את הרישיון שלך ולשחזר את הפונקציונליות."
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:38
+msgid "Please update to the latest version of PayPal for WooCommerce to get full support."
+msgstr "אנא עדכן לגרסה האחרונה של PayPal עבור WooCommerce לקבלת תמיכה מלאה."
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:363
+msgid "Logged in with PayPal. Please continue your order below."
+msgstr "התחבר באמצעות PayPal. אנא המשך בהזמנה שלך למטה."
+
+# Error message logged when Jupiter theme callback removal fails
+#: includes/Compatibility/Themes/Jupiter.php:49
+msgid "CheckoutWC: Failed to unset Jupiter theme callbacks."
+msgstr "CheckoutWC: נכשל בנטרול קריאות חזרה של נושא Jupiter."
+
+#: includes/Compatibility/Themes/Astra.php:81
+msgid "Enable Astra Support (Beta)"
+msgstr "הפעל תמיכה באסטרה (בטא)"
+
+#: includes/Compatibility/Themes/Astra.php:82
+msgid "Allow Astra to replace header and footer. Allows Astra / Astra Addon to load its styles and scripts on the checkout page."
+msgstr "אפשר לאסטרה להחליף את הכותרת והתחתית. מאפשר לאסטרה / תוסף אסטרה לטעון את הסגנונות והסקריפטים בדף התשלום."
+
+#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:64
+#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:72
+msgid "Enter your code&hellip;"
+msgstr "הזן את הקוד שלך&hellip;"
+
+#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:94
+msgid "Have a gift card?"
+msgstr "יש לך כרטיס מתנה?"
+
+#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:68
+msgid "Enable Checkout Field Editor address field overrides. (Not Recommended)"
+msgstr "אפשר ביטול כתובת שדות עורך שדה התשלום. (לא מומלץ)"
+
+#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:69
+msgid "Allow WooCommerce Checkout Field Editor to modify billing and shipping address fields. Not compatible with these features: Separate House Number and Street Name Address Fields, Full Name Field, Fetchify"
+msgstr "אפשר לעורך שדות התשלום של WooCommerce לשנות שדות כתובת לחיוב ומשלוח. לא תואם לתכונות הבאות: שדות נפרדים למספר בית ושם רחוב, שדה שם מלא, Fetchify"
+
+#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:103
+msgid "Full-width"
+msgstr "רוחב מלא"
+
+#: includes/Compatibility/Plugins/WPRocket.php:116
+msgid "Enable WP Rocket Delay JS Execution compatibility mode"
+msgstr "אפשר מצב תאימות לדחיית ביצוע JS של WP Rocket"
+
+#: includes/Compatibility/Plugins/WPRocket.php:117
+msgid "By default, we exclude our scripts and script dependencies to prevent compatibility problems. Uncheck to allow CheckoutWC scripts to be delayed for maximum performance."
+msgstr "ברירת המחדל היא שנחריג את הסקריפטים שלנו ותלויות הסקריפטים כדי למנוע בעיות תאימות. בטל את הסימון כדי לאפשר דחיית סקריפטים של CheckoutWC לביצועים מקסימליים."
+
+#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:28
+msgid "Points"
+msgstr "נקודות"
+
+#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:29
+msgid "Apply Points"
+msgstr "החל נקודות"
+
+#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:31
+msgid " Points"
+msgstr "נקודות"
+
+#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditorPro.php:69
+msgid "Enable ThemeHigh Checkout Field Editor address field overrides"
+msgstr "אפשר ביטול כתובת שדות עורך שדה התשלום של ThemeHigh"
+
+#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditorPro.php:70
+#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditor.php:47
+msgid "Allow ThemeHigh Checkout Field Editor to modify billing and shipping address fields. (Not Recommended)"
+msgstr "אפשר לעורך שדות התשלום של ThemeHigh לשנות שדות כתובת לחיוב ומשלוח. (לא מומלץ)"
+
+#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditor.php:46
+msgid "Enable ThemeHigh Checkout Field Editor address field overrides."
+msgstr "אפשר ביטול כתובת שדות עורך שדה התשלום של ThemeHigh."
+
+#: includes/Compatibility/Plugins/ShipMondo.php:16
+msgid "Please select a pickup point before placing your order."
+msgstr "אנא בחר נקודת איסוף לפני ביצוע ההזמנה."
+
+#: includes/Compatibility/Plugins/SendCloud.php:16
+msgid "Please choose a service point."
+msgstr "אנא בחר נקודת שירות."
+
+#: includes/Compatibility/Plugins/PostNL4.php:65
+#: includes/Compatibility/Plugins/PostNL4.php:66
+#: includes/Compatibility/Plugins/PostNL.php:67
+#: includes/Compatibility/Plugins/PostNL.php:68
+#: includes/Compatibility/Plugins/NLPostcodeChecker.php:67
+#: includes/Compatibility/Plugins/NLPostcodeChecker.php:68
+#: includes/Compatibility/Plugins/MyParcel.php:63
+msgid "Nr."
+msgstr "מס'"
+
+#: includes/Compatibility/Plugins/PostNL4.php:80
+#: includes/Compatibility/Plugins/PostNL4.php:81
+#: includes/Compatibility/Plugins/PostNL.php:82
+#: includes/Compatibility/Plugins/PostNL.php:83
+#: includes/Compatibility/Plugins/MyParcel.php:78
+msgid "Suffix"
+msgstr "סיומת"
+
+#: includes/Compatibility/Plugins/PWGiftCardsPro.php:30
+msgid "Unknown Error"
+msgstr "שגיאה לא ידועה"
+
+#: includes/Compatibility/Plugins/MyParcel.php:47
+msgid "street_name"
+msgstr "street_name"
+
+#: includes/Compatibility/Plugins/MyParcel.php:62
+msgid "abbreviation_house_number"
+msgstr "abbreviation_house_number"
+
+#: includes/Compatibility/Plugins/MyParcel.php:77
+msgid "suffix"
+msgstr "suffix"
+
+#: includes/Compatibility/Plugins/ElementorPro.php:95
+msgid "Enable Elementor Pro support."
+msgstr "אפשר תמיכה ב-Elementor Pro."
+
+#: includes/Compatibility/Plugins/ElementorPro.php:96
+msgid "Allow Elementor Pro to replace header and footer."
+msgstr "אפשר ל-Elementor Pro להחליף כותרת עליונה ותחתונה."
+
+#: includes/Compatibility/Plugins/CashierForWooCommerce.php:62
+msgid "Enable Cashier for WooCommerce address field overrides. (Not Recommended)"
+msgstr "אפשר ביטול כתובת שדות Cashier עבור WooCommerce. (לא מומלץ)"
+
+#: includes/Compatibility/Plugins/CashierForWooCommerce.php:63
+msgid "Allow WooCommerce Cashier Checkout Field Editor module to modify billing and shipping address fields. Not compatible with these features: Separate House Number and Street Name Address Fields, Full Name Field"
+msgstr "אפשר למודול עורך שדות התשלום של WooCommerce Cashier לשנות שדות כתובת לחיוב ומשלוח. לא תואם לתכונות הבאות: שדות נפרדים למספר בית ושם רחוב, שדה שם מלא"
+
+#: includes/Compatibility/Plugins/BeaverThemer.php:38
+msgid "Enable Beaver Themer Support"
+msgstr "אפשר תמיכה ב-Beaver Themer"
+
+#: includes/Compatibility/Plugins/BeaverThemer.php:39
+msgid "Allow Beaver Themer to replace header and footer."
+msgstr "אפשר ל-Beaver Themer להחליף כותרת עליונה ותחתונה."
 
 #: sources/ts/frontend/Actions/CompleteOrderAction.ts:196
 msgid "Could not connect to server. Please refresh and try again or contact site administrator."
@@ -3101,30 +3111,6 @@ msgstr "פתח עם פרימיום"
 #: sources/ts/admin/Components/LockedFieldWrapper.tsx:40
 msgid "A %s plan is required to access these features."
 msgstr "נדרש תוכנית %s כדי לגשת לתכונות אלו."
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:12
-msgid "CheckoutWC Side Cart"
-msgstr "עגלה צדדית של CheckoutWC"
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:43
-msgid "CheckoutWC: After Side Cart Items"
-msgstr "CheckoutWC: אחרי פריטי עגלה צדדית"
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:49
-msgid "CheckoutWC: Before Side Cart Footer Above Promo Code"
-msgstr "CheckoutWC: לפני תחתית עגלה צדדית מעל קוד קופון"
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:55
-msgid "CheckoutWC: Before Side Cart Totals"
-msgstr "CheckoutWC: לפני סיכומי עגלה צדדית"
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:61
-msgid "CheckoutWC: After Side Cart Totals"
-msgstr "CheckoutWC: אחרי סיכומי עגלה צדדית"
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:67
-msgid "CheckoutWC: After Side Cart Buttons"
-msgstr "CheckoutWC: אחרי כפתורי עגלה צדדית"
 
 #: includes/Admin/Pages/Premium/OrderBumps.php:81
 msgid "ID"
@@ -3298,6 +3284,30 @@ msgstr "תוכנית CheckoutWC שלך מאפשרת ליצור %1$d מיילים
 #: includes/Admin/Pages/Premium/AbandonedCartRecovery.php:839
 msgid "You cannot create or publish new Abandoned Cart Recovery emails if you are over the limit."
 msgstr "אתה לא יכול ליצור או לפרסם מיילים חדשים לשחזור עגלת קניות נטושה אם אתה מעל המגבלה."
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:12
+msgid "CheckoutWC Side Cart"
+msgstr "עגלה צדדית של CheckoutWC"
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:43
+msgid "CheckoutWC: After Side Cart Items"
+msgstr "CheckoutWC: אחרי פריטי עגלה צדדית"
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:49
+msgid "CheckoutWC: Before Side Cart Footer Above Promo Code"
+msgstr "CheckoutWC: לפני תחתית עגלה צדדית מעל קוד קופון"
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:55
+msgid "CheckoutWC: Before Side Cart Totals"
+msgstr "CheckoutWC: לפני סיכומי עגלה צדדית"
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:61
+msgid "CheckoutWC: After Side Cart Totals"
+msgstr "CheckoutWC: אחרי סיכומי עגלה צדדית"
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:67
+msgid "CheckoutWC: After Side Cart Buttons"
+msgstr "CheckoutWC: אחרי כפתורי עגלה צדדית"
 
 #: sources/ts/frontend/Components/ReviewPane/ShippingMethodReviewPane.tsx:15
 #: sources/ts/frontend/Components/ReviewPane/PaymentMethodReviewPane.tsx:15
@@ -4040,184 +4050,184 @@ msgstr "אפשר ביטויים רגולריים"
 msgid "Match local shipping method name with regex."
 msgstr "התאם את שם שיטת המשלוח המקומית עם ביטוי רגולרי."
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:64
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:65
 msgid "Configure Cloudflare Turnstile CAPTCHA protection for your checkout and account pages."
 msgstr "הגדר הגנת CAPTCHA של Cloudflare Turnstile עבור דפי התשלום והחשבון שלך."
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:69
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:71
 msgid "Enable Cloudflare Turnstile"
 msgstr "אפשר Cloudflare Turnstile"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:70
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:72
 msgid "Enable Cloudflare Turnstile CAPTCHA protection"
 msgstr "אפשר הגנת CAPTCHA של Cloudflare Turnstile"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:83
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:86
 msgid "Site Key"
 msgstr "מפתח אתר"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:84
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:87
 msgid "Your Cloudflare Turnstile site key"
 msgstr "מפתח האתר שלך של Cloudflare Turnstile"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:90
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:93
 msgid "Secret Key"
 msgstr "מפתח סודי"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:92
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:95
 msgid "Your Cloudflare Turnstile secret key"
 msgstr "המפתח הסודי שלך של Cloudflare Turnstile"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:98
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:101
 msgid "Enable on Checkout"
 msgstr "אפשר בתשלום"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:99
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:102
 msgid "Show Turnstile on the checkout page"
 msgstr "הצג את Turnstile בדף התשלום"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:105
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:108
 msgid "Enable on Order Pay"
 msgstr "אפשר בתשלום הזמנה"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:106
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:109
 msgid "Show Turnstile on the order pay page"
 msgstr "הצג את Turnstile בדף תשלום ההזמנה"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:112
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:115
 msgid "Enable on Login"
 msgstr "אפשר בהתחברות"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:113
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:116
 msgid "Show Turnstile on the My Account login form"
 msgstr "הצג את Turnstile בטופס ההתחברות של החשבון שלי"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:119
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:122
 msgid "Enable on Registration"
 msgstr "אפשר בהרשמה"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:120
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:123
 msgid "Show Turnstile on the My Account registration form"
 msgstr "הצג את Turnstile בטופס ההרשמה של החשבון שלי"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:126
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:129
 msgid "Position on Checkout"
 msgstr "מיקום בתשלום"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:127
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:130
 msgid "Where to display the Turnstile widget on checkout"
 msgstr "איפה להציג את ווידג'ט Turnstile בתשלום"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:131
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:134
 msgid "Before Place Order Button"
 msgstr "לפני כפתור ביצוע ההזמנה"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:132
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:135
 msgid "Display just before the place order button"
 msgstr "הצג ממש לפני כפתור ביצוע ההזמנה"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:136
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:139
 msgid "Before Payment Methods"
 msgstr "לפני שיטות התשלום"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:137
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:140
 msgid "Display before payment method selection"
 msgstr "הצג לפני בחירת שיטת התשלום"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:141
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:144
 msgid "After Payment Methods"
 msgstr "אחרי שיטות התשלום"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:142
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:145
 msgid "Display after payment method selection"
 msgstr "הצג אחרי בחירת שיטת התשלום"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:150
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:153
 msgid "Theme"
 msgstr "ערכת נושא"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:151
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:154
 msgid "Visual theme for the Turnstile widget"
 msgstr "ערכת נושא ויזואלית לווידג'ט Turnstile"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:153
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:156
 msgid "Light"
 msgstr "בהיר"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:153
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:156
 msgid "Light theme"
 msgstr "ערכת נושא בהירה"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:154
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:157
 msgid "Dark"
 msgstr "כהה"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:154
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:157
 msgid "Dark theme"
 msgstr "ערכת נושא כהה"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:155
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:158
 msgid "Auto"
 msgstr "אוטומטי"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:155
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:158
 msgid "Automatic based on user preference"
 msgstr "אוטומטי בהתאם להעדפת המשתמש"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:162
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:165
 msgid "Size"
 msgstr "גודל"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:163
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:166
 msgid "Size of the Turnstile widget"
 msgstr "גודל הווידג'ט של Turnstile"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:165
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:168
 #: sources/ts/admin/Components/Forms/AppearanceDesignSettingsForm.tsx:84
 msgid "Normal"
 msgstr "רגיל"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:165
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:168
 msgid "Standard size widget"
 msgstr "ווידג'ט בגודל סטנדרטי"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:166
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:169
 msgid "Compact"
 msgstr "קומפקטי"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:166
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:169
 msgid "Smaller widget size"
 msgstr "ווידג'ט בגודל קטן יותר"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:173
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:176
 msgid "Guest Users Only"
 msgstr "רק למשתמשים אורחים"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:174
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:177
 msgid "Only show Turnstile for guest (non-logged-in) users"
 msgstr "הצג את Turnstile רק למשתמשים אורחים (שאינם מחוברים)"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:184
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:187
 msgid "Google API"
 msgstr "Google API"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:185
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:188
 msgid "Used for the maps embed on the thank you page as well as Google Address Autocomplete."
 msgstr "משמש להטמעת מפות בדף התודה וכן לאוטומציה של כתובות בגוגל."
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:190
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:193
 msgid "Google API Key"
 msgstr "מפתח Google API"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:191
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:194
 msgid "Used by Address Autocomplete and Thank You Page Maps Embed."
 msgstr "משמש לאוטומציה של כתובות ולהטמעת מפות בדף התודה."
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:203
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:206
 msgid "Themes and Plugins"
 msgstr "ערכות נושא ותוספים"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:204
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:207
 msgid "Integrations with 3rd party themes and plugins."
 msgstr "אינטגרציות עם ערכות נושא ותוספים של צד שלישי."
 
@@ -5278,8 +5288,8 @@ msgid "Delete Rule"
 msgstr "מחק כלל"
 
 # %d: shipping package number
-#: sources/php/functions.php:366
-#: sources/php/functions.php:3254
+#: sources/php/functions.php:368
+#: sources/php/functions.php:3267
 msgctxt "woocommerce"
 msgid "Shipping"
 msgid_plural "Shipping %d"

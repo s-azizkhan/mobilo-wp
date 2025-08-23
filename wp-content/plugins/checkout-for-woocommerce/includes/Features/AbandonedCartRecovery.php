@@ -619,7 +619,7 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 			'site_url'            => esc_url(
 				add_query_arg(
 					array(
-						'utm_source'   => 'CheckoutWC ACR',
+						'utm_source'   => 'CheckoutWC_ACR',
 						'utm_medium'   => 'email',
 						'utm_campaign' => 'abandoned_cart',
 						'utm_term'     => $email_id,
@@ -658,7 +658,7 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 			add_query_arg(
 				array(
 					'cfw_acr_cart_id' => $cart->id ?? 0,
-					'utm_source'      => 'CheckoutWC ACR',
+					'utm_source'      => 'CheckoutWC_ACR',
 					'utm_medium'      => 'email',
 					'utm_campaign'    => 'abandoned_cart',
 					'utm_term'        => $email_id,

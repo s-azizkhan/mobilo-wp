@@ -361,9 +361,16 @@ function cfw_get_cart_shipping_data(): array {
 		}
 
 		$package_details = implode( ', ', $product_names );
-		$package_name    = cfw_apply_filters( 'woocommerce_shipping_package_name', sprintf(
+		$package_name    = cfw_apply_filters(
+			'woocommerce_shipping_package_name',
+			sprintf(
 			/* translators: %d: shipping package number */
-			_nx( 'Shipping', 'Shipping %d', ( $i + 1 ), 'shipping packages', 'woocommerce' ), ( $i + 1 ) ), $i, $package );
+				_nx( 'Shipping', 'Shipping %d', ( $i + 1 ), 'shipping packages', 'woocommerce' ),
+				( $i + 1 )
+			),
+			$i,
+			$package
+		);
 
 		$formatted_methods = array();
 
@@ -708,11 +715,13 @@ function cfw_all_packages_have_available_shipping_methods( array $packages ): bo
 function cfw_get_shipping_total(): string {
 	$small_format = '<span class="cfw-small">%s</span>';
 
-	$has_calculated_shipping = WC()->customer->has_calculated_shipping();
-	$address_required        = get_option( 'woocommerce_shipping_cost_requires_address' ) === 'yes';
-	$missing_address         = $address_required && ! $has_calculated_shipping;
+	$packages                                     = WC()->shipping()->get_packages();
+	$all_packages_have_available_shipping_methods = cfw_all_packages_have_available_shipping_methods( $packages );
+	$has_calculated_shipping                      = WC()->customer->has_calculated_shipping();
+	$address_required                             = get_option( 'woocommerce_shipping_cost_requires_address' ) === 'yes';
+	$missing_address                              = $address_required && ! $has_calculated_shipping;
 
-	if ( $missing_address || ! $has_calculated_shipping ) {
+	if ( ! $all_packages_have_available_shipping_methods && ( $missing_address || ! $has_calculated_shipping ) ) {
 		/**
 		 * Filters shipping total address required text
 		 *
@@ -720,12 +729,10 @@ function cfw_get_shipping_total(): string {
 		 *
 		 * @since 2.0.0
 		 */
-		return sprintf( $small_format, apply_filters( 'cfw_shipping_total_address_required_text', esc_html__( 'Enter your address to view shipping options.', 'woocommerce' ) ) );
+		return sprintf( $small_format, apply_filters( 'cfw_shipping_total_address_required_text', esc_html__( 'Shipping costs are calculated during checkout.', 'woocommerce' ) ) );
 	}
 
-	$packages = WC()->shipping()->get_packages();
-
-	if ( ! cfw_all_packages_have_available_shipping_methods( $packages ) ) {
+	if ( ! $all_packages_have_available_shipping_methods ) {
 		/**
 		 * Filters shipping total text when no shipping methods are available
 		 *
@@ -1176,7 +1183,10 @@ function cfw_order_status_date( $order_id, string $status_search ) {
 
 	$pattern = sprintf(
 		/* translators: %1$s: Old order status, %2$s: New order status */
-		__( 'Order status changed from %1$s to %2$s.', 'woocommerce' ), 'X', $status_search );
+		__( 'Order status changed from %1$s to %2$s.', 'woocommerce' ),
+		'X',
+		$status_search
+	);
 
 	$pieces         = explode( ' ', $pattern );
 	$last_two_words = implode( ' ', array_splice( $pieces, - 2 ) );
@@ -1721,7 +1731,7 @@ function cfw_maybe_match_new_order_to_user_account( $order_id ) {
 				$order->save();
 			} catch ( \WC_Data_Exception $e ) {
 				/* translators: 1: order ID, 2: customer ID - Error message logged when order matching to customer fails */
-				wc_get_logger()->error( sprintf( __( 'CheckoutWC: Error matching %d to customer %d', 'checkout-wc' ), $order_id, $user_data->ID ), array( 'source' => 'checkout-wc' ) );
+				wc_get_logger()->error( sprintf( __( 'CheckoutWC: Error matching %1$d to customer %2$d', 'checkout-wc' ), $order_id, $user_data->ID ), array( 'source' => 'checkout-wc' ) );
 			}
 		}
 	}
@@ -2459,7 +2469,7 @@ function cfw_get_suggested_products( int $limit = 3, bool $random_fallback = fal
 		}
 
 		if ( count( $cross_sells ) === 0 && $random_fallback ) {
-			$cross_sells = wc_get_products(
+			$random_products = wc_get_products(
 				array(
 					'limit'        => $limit,
 					'exclude'      => $cart_item_ids,
@@ -2468,6 +2478,9 @@ function cfw_get_suggested_products( int $limit = 3, bool $random_fallback = fal
 					'stock_status' => 'instock',
 				)
 			);
+
+			// Ensure we always have an array
+			$cross_sells = is_array( $random_products ) ? $random_products : array( $random_products );
 		}
 
 		// Clean up non-products

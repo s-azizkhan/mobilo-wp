@@ -1,5 +1,12 @@
 *** Affiliate For WooCommerce Changelog ***
 
+2025-08-18 - version 8.42.0
+* Fix: PHP fatal error: Call to undefined function WC() during WooCommerce plugin update or if folder renamed
+* Update: Restructure plugin files and folders for better maintainability
+* Update: Code improvements
+* Update: Translations synced
+* Update: POT file
+
 2025-08-08 - version 8.41.0
 * Fix: Parent affiliate not assigned when a user registers as an affiliate via a referral link
 * Update: Assign referral to affiliate if a lifetime customer purchases as a guest using the same billing email as their user email

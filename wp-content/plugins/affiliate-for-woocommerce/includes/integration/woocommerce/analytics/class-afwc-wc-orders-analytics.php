@@ -4,7 +4,7 @@
  *
  * @package   affiliate-for-woocommerce/includes/integration/woocommerce/analytics/
  * @since     6.20.0
- * @version   1.0.5
+ * @version   1.0.6
  */
 
 // Exit if accessed directly.
@@ -138,7 +138,7 @@ if ( ! class_exists( 'AFWC_WC_Orders_Analytics' ) ) {
 
 			$plugin_data = Affiliate_For_WooCommerce::get_plugin_data();
 
-			wp_register_script( 'afwc-wc-analytics-extends', AFWC_PLUGIN_URL . '/assets/js/wc-analytics/afwc-wc-analytics-extends.js', array( 'wp-i18n', 'react', 'afwc-date-functions' ), $plugin_data['Version'], true );
+			wp_register_script( 'afwc-wc-analytics-extends', AFWC_PLUGIN_URL . '/assets/js/admin/wc-analytics/afwc-wc-analytics-extends.js', array( 'wp-i18n', 'react', 'afwc-date-functions' ), $plugin_data['Version'], true );
 			wp_localize_script(
 				'afwc-wc-analytics-extends',
 				'afwcParams',

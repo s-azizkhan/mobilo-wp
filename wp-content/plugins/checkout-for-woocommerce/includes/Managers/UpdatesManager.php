@@ -494,10 +494,10 @@ class UpdatesManager extends SingletonAbstract {
 					<?php esc_html_e( 'Please enter your license key.', 'checkout-wc' ); ?>
 				</p>
 			<?php elseif ( 'inactive' === $key_status || 'site_inactive' === $key_status ) : ?>
-				<input type="submit" name="activate_key" class="button-secondary" value="Activate Site" />
+				<input type="submit" name="activate_key" class="button-secondary" value="<?php esc_attr_e( 'Activate Site', 'checkout-wc' ); ?>" />
 				<p class="mt-2 text-sm leading-6 col-span-2 text-red-600"><?php echo esc_html( $this->key_statuses[ $key_status ] ); ?></p>
 			<?php elseif ( 'valid' === $key_status ) : ?>
-				<input type="submit" name="deactivate_key" class="button-secondary" value="Deactivate Site" />
+				<input type="submit" name="deactivate_key" class="button-secondary" value="<?php esc_attr_e( 'Deactivate Site', 'checkout-wc' ); ?>" />
 				<p class="mt-2 text-sm leading-6 col-span-2 text-green-600" style="color:green;"><?php echo esc_html( $this->key_statuses[ $key_status ] ); ?></p>
 			<?php else : ?>
 				<p style="color:red;"><?php echo esc_html( $this->key_statuses[ $key_status ] ); ?></p>

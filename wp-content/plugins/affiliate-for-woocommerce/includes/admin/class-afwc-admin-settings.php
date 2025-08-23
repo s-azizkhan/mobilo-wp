@@ -4,7 +4,7 @@
  *
  * @package     affiliate-for-woocommerce/includes/admin/
  * @since       1.0.0
- * @version     1.6.2
+ * @version     1.6.3
  */
 
 // Exit if accessed directly.
@@ -84,7 +84,7 @@ if ( ! class_exists( 'AFWC_Admin_Settings' ) ) {
 			}
 
 			$plugin_data = Affiliate_For_WooCommerce::get_plugin_data();
-			wp_enqueue_script( 'afwc-setting-js', AFWC_PLUGIN_URL . '/assets/js/afwc-settings.js', array( 'jquery', 'wp-i18n' ), $plugin_data['Version'], true );
+			wp_enqueue_script( 'afwc-setting-js', AFWC_PLUGIN_URL . '/assets/js/admin/afwc-settings.js', array( 'jquery', 'wp-i18n' ), $plugin_data['Version'], true );
 			wp_enqueue_style( 'afwc-setting-css', AFWC_PLUGIN_URL . '/assets/css/admin/afwc-admin-settings.css', array(), $plugin_data['Version'] );
 
 			if ( function_exists( 'wp_set_script_translations' ) ) {

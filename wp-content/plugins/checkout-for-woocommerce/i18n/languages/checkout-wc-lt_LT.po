@@ -103,8 +103,8 @@ msgid "Phone"
 msgstr "Telefonas"
 
 #: templates/glass/functions.php:40
-#: sources/php/template-functions.php:808
 #: templates/futurist/functions.php:16
+#: sources/php/template-functions.php:808
 msgid "Your Cart"
 msgstr "Jūsų krepšelis"
 
@@ -256,7 +256,7 @@ msgstr "Kontaktinė informacija"
 
 #: sources/php/template-functions.php:1665
 #: sources/php/template-functions.php:2001
-#: sources/php/functions.php:951
+#: sources/php/functions.php:958
 #: sources/ts/frontend/Components/ReviewPane/OrderReviewStepReviewPane.tsx:40
 msgid "Payment"
 msgstr "Mokėjimas"
@@ -269,7 +269,7 @@ msgstr "Netaikoma"
 
 #: sources/php/template-functions.php:1717
 #: sources/php/template-functions.php:1981
-#: sources/php/functions.php:3268
+#: sources/php/functions.php:3281
 msgid "Shipping"
 msgid_plural "Shipping %d"
 msgstr[0] "Pristatymas"
@@ -282,17 +282,17 @@ msgid "Continue shopping"
 msgstr "Tęsti apsipirkimą"
 
 #: sources/php/template-functions.php:1774
-#: includes/Loaders/LoaderAbstract.php:112
+#: includes/Loaders/LoaderAbstract.php:111
 msgid "Pay for order"
 msgstr "Apmokėti užsakymą"
 
 #: sources/php/template-functions.php:1818
-#: sources/php/functions.php:3833
+#: sources/php/functions.php:3846
 msgid "Login"
 msgstr "Prisijungti"
 
 #: sources/php/template-functions.php:1821
-#: sources/php/functions.php:3826
+#: sources/php/functions.php:3839
 msgid "Lost your password?"
 msgstr "Pamiršote slaptažodį?"
 
@@ -307,16 +307,16 @@ msgstr "Peržiūra"
 msgid "Your Cart is Empty"
 msgstr "Jūsų krepšelis tuščias"
 
-#: sources/php/premium-init.php:378
+#: sources/php/premium-init.php:387
 msgid "CheckoutWC Templates Deactivated"
 msgstr "CheckoutWC šablonai išjungti"
 
 # %1$s: "Settings" text, %2$s: "Start Here" text, %3$s: "Activate CheckoutWC Templates" text
-#: sources/php/premium-init.php:381
+#: sources/php/premium-init.php:390
 msgid "Your license is valid and activated for this site but CheckoutWC is disabled for normal customers. To fix this, go to %1$s > %2$s and toggle \"%3$s\"."
 msgstr "Jūsų licencija galioja ir yra aktyvuota šiai svetainei, tačiau CheckoutWC yra išjungtas įprastiems klientams. Norėdami išspręsti šią problemą, eikite į %1$s > %2$s ir įjunkite \"%3$s\"."
 
-#: sources/php/premium-init.php:382
+#: sources/php/premium-init.php:391
 #: includes/Admin/AdminPluginsPageManager.php:36
 #: includes/Admin/Pages/OrderBumpsAdminFree.php:25
 #: includes/Admin/Pages/LocalPickupAdminFree.php:27
@@ -327,40 +327,63 @@ msgstr "Jūsų licencija galioja ir yra aktyvuota šiai svetainei, tačiau Check
 msgid "Settings"
 msgstr "Nustatymai"
 
-#: sources/php/premium-init.php:383
+#: sources/php/premium-init.php:392
 #: includes/Admin/Pages/General.php:25
 #: includes/Admin/Notices/InactiveLicenseNotice.php:13
 msgid "Start Here"
 msgstr "Pradėkite čia"
 
-#: sources/php/premium-init.php:384
+#: sources/php/premium-init.php:393
 #: includes/Admin/Pages/General.php:198
 msgid "Activate CheckoutWC Templates"
 msgstr "Aktyvuoti CheckoutWC šablonus"
 
-#: sources/php/premium-init.php:391
+#: sources/php/premium-init.php:400
 msgid "Invalid CheckoutWC License"
 msgstr "Neteisinga CheckoutWC licencija"
 
 # %1$s: Pricing URL, %2$s: "purchase a license" link text
-#: sources/php/premium-init.php:394
+#: sources/php/premium-init.php:403
 msgid "Your license key is missing or invalid. Please verify that your license key is valid or <a target=\"_blank\" href=\"%1$s\">%2$s</a> to restore full functionality."
 msgstr "Jūsų licencijos raktas trūksta arba yra neteisingas. Prašome patikrinti, ar jūsų licencijos raktas galioja, arba <a target=\"_blank\" href=\"%1$s\">%2$s</a>, kad atkurtumėte visą funkcionalumą."
 
-#: sources/php/premium-init.php:396
+#: sources/php/premium-init.php:405
 msgid "purchase a license"
 msgstr "įsigyti licenciją"
 
-#: sources/php/premium-init.php:416
+#: sources/php/premium-init.php:421
+msgid "New Feature: Cloudflare Turnstile Bot Protection"
+msgstr "Nauja funkcija: Cloudflare Turnstile botų apsauga"
+
+# 1: Cloudflare Turnstile name wrapped in strong tags, 2: Setup link
+#: sources/php/premium-init.php:424
+msgid "CheckoutWC now supports %1$s - a privacy-first, CAPTCHA-free way to protect your checkout from bots and spam orders. %2$s"
+msgstr "CheckoutWC dabar palaiko %1$s – privatumo pirmumo, be CAPTCHA būdą apsaugoti jūsų atsiskaitymą nuo botų ir šlamšto užsakymų. %2$s"
+
+# The name of the Cloudflare Turnstile service
+#: sources/php/premium-init.php:428
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:64
+msgid "Cloudflare Turnstile"
+msgstr "Cloudflare Turnstile"
+
+#: sources/php/premium-init.php:434
+msgid "Setup Cloudflare Turnstile now"
+msgstr "Nustatyti Cloudflare Turnstile dabar"
+
+#: sources/php/premium-init.php:439
+msgid "Upgrade your plan now to access"
+msgstr "Atnaujinkite savo planą dabar, kad gautumėte prieigą"
+
+#: sources/php/premium-init.php:452
 msgid "Abandoned Cart Recovery Tracking Disabled"
 msgstr "Apleistų krepšelių atkūrimo sekimas išjungtas"
 
 # %1$s: Gist URL, %2$s: "Learn More" link text
-#: sources/php/premium-init.php:419
+#: sources/php/premium-init.php:455
 msgid "You have enabled Abandoned Cart Recovery tracking, but you do not have any emails published. To track carts, you need to publish emails or use this dev filter: <a target=\"_blank\" href=\"%1$s\">%2$s</a>."
 msgstr "Jūs įjungėte apleistų krepšelių atkūrimo sekimą, tačiau neturite paskelbtų el. laiškų. Norėdami sekti krepšelius, turite paskelbti el. laiškus arba naudoti šį kūrėjo filtrą: <a target=\"_blank\" href=\"%1$s\">%2$s</a>."
 
-#: sources/php/premium-init.php:421
+#: sources/php/premium-init.php:457
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:82
 msgid "Learn More"
 msgstr "Sužinokite daugiau"
@@ -464,105 +487,105 @@ msgstr "Pristatyti"
 msgid "Address"
 msgstr "Adresas"
 
-#: sources/php/functions.php:572
+#: sources/php/functions.php:579
 msgid "Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements."
 msgstr "Atsiprašome, atrodo, kad jūsų vietovėje nėra galimų mokėjimo būdų. Prašome susisiekti su mumis, jei reikia pagalbos arba norite sudaryti kitokias sąlygas."
 
-#: sources/php/functions.php:723
-msgid "Enter your address to view shipping options."
-msgstr "Įveskite savo adresą, kad pamatytumėte pristatymo galimybes."
+#: sources/php/functions.php:732
+msgid "Shipping costs are calculated during checkout."
+msgstr "Pristatymo išlaidos apskaičiuojamos atsiskaitymo metu."
 
-#: sources/php/functions.php:736
+#: sources/php/functions.php:743
 msgid "No shipping methods available"
 msgstr "Siuntimo būdų nėra"
 
-#: sources/php/functions.php:763
+#: sources/php/functions.php:770
 #: includes/Model/Bumps/BumpAbstract.php:704
 msgid "Free!"
 msgstr "Nemokamai!"
 
-#: sources/php/functions.php:893
+#: sources/php/functions.php:900
 #: includes/Features/AbandonedCartRecovery.php:676
 msgid "Complete Order"
 msgstr "Užpildykite užsakymą"
 
-#: sources/php/functions.php:976
+#: sources/php/functions.php:983
 msgid "All transactions are secure and encrypted."
 msgstr "Visos operacijos yra saugios ir užšifruotos."
 
-#: sources/php/functions.php:997
+#: sources/php/functions.php:1004
 msgid "Your order is free. No payment is required."
 msgstr "Jūsų užsakymas nemokamas. Mokėti nereikia."
 
-#: sources/php/functions.php:1041
+#: sources/php/functions.php:1048
 msgid "Same as shipping address"
 msgstr "Tas pats kaip siuntimo adresas"
 
-#: sources/php/functions.php:1050
+#: sources/php/functions.php:1057
 msgid "Use a different billing address"
 msgstr "Naudokite kitą atsiskaitymo adresą"
 
 # %1$s: Old order status, %2$s: New order status
-#: sources/php/functions.php:1179
+#: sources/php/functions.php:1186
 msgid "Order status changed from %1$s to %2$s."
 msgstr "Užsakymo būsena pakeista iš %1$s į %2$s."
 
-#: sources/php/functions.php:1201
+#: sources/php/functions.php:1211
 msgid "Tracking Number:"
 msgstr "Sekimo numeris:"
 
-#: sources/php/functions.php:1287
+#: sources/php/functions.php:1297
 msgid "Return to cart"
 msgstr "Grįžti prie krepšelio"
 
-#: sources/php/functions.php:1324
+#: sources/php/functions.php:1334
 msgid "Continue to shipping"
 msgstr "Toliau pristatykite"
 
-#: sources/php/functions.php:1346
+#: sources/php/functions.php:1356
 msgid "Continue to payment"
 msgstr "Tęsti toliau kad apmokėti"
 
-#: sources/php/functions.php:1346
-#: sources/php/functions.php:1382
+#: sources/php/functions.php:1356
+#: sources/php/functions.php:1392
 msgid "Review order"
 msgstr "Peržiūrėkite užsakymą"
 
-#: sources/php/functions.php:1402
+#: sources/php/functions.php:1412
 msgid "Return to information"
 msgstr "Grįžti prie informacijos"
 
-#: sources/php/functions.php:1422
+#: sources/php/functions.php:1432
 msgid "Return to shipping"
 msgstr "Grįžti prie pristatymo"
 
-#: sources/php/functions.php:1442
+#: sources/php/functions.php:1452
 msgid "Return to payment"
 msgstr "Grįžti prie mokėjimo"
 
-#: sources/php/functions.php:1489
+#: sources/php/functions.php:1499
 #: includes/Features/SideCart.php:210
 msgid "Cart"
 msgstr "Krepšelis"
 
-#: sources/php/functions.php:1724
-msgid "CheckoutWC: Error matching %d to customer %d"
-msgstr "CheckoutWC: Klaida priskiriant %d klientui %d"
+#: sources/php/functions.php:1734
+msgid "CheckoutWC: Error matching %1$d to customer %2$d"
+msgstr "CheckoutWC: Klaida suderinant %1$d su klientu %2$d"
 
-#: sources/php/functions.php:1970
+#: sources/php/functions.php:1980
 msgid "Or"
 msgstr "Tai"
 
-#: sources/php/functions.php:2050
+#: sources/php/functions.php:2060
 msgid "You can only have 1 %s in your cart."
 msgstr "Jūsų krepšelyje gali būti tik 1 %s."
 
-#: sources/php/functions.php:2200
+#: sources/php/functions.php:2210
 #: sources/ts/frontend/Components/CartItemQuantityControl.tsx:55
 msgid "Decrement"
 msgstr "Brangiausi viršuje"
 
-#: sources/php/functions.php:2209
+#: sources/php/functions.php:2219
 #: includes/Managers/AssetManager.php:720
 #: includes/Managers/AssetManager.php:839
 #: includes/Features/LocalPickup.php:439
@@ -571,105 +594,105 @@ msgstr "Brangiausi viršuje"
 msgid "Edit"
 msgstr "Redaguoti"
 
-#: sources/php/functions.php:2212
+#: sources/php/functions.php:2222
 #: sources/ts/frontend/Components/CartItemQuantityControl.tsx:70
 msgid "Increment"
 msgstr "Pigiausi viršuje"
 
-#: sources/php/functions.php:2932
+#: sources/php/functions.php:2945
 msgid "Unsubscribe"
 msgstr "Atsisakyti prenumeratos"
 
-#: sources/php/functions.php:3294
+#: sources/php/functions.php:3307
 #: includes/Features/AbandonedCartRecovery.php:731
 #: sources/ts/admin/Components/acr/carts.tsx:69
 msgid "Subtotal"
 msgstr "Tarpinė suma"
 
-#: sources/php/functions.php:3298
+#: sources/php/functions.php:3311
 msgid "Total"
 msgstr "Iš viso"
 
-#: sources/php/functions.php:3350
+#: sources/php/functions.php:3363
 msgid "There are no shipping options available. Please ensure that your address has been entered correctly, or contact us if you need any help."
 msgstr "Pristatymo galimybės nėra. Prašome įsitikinti, kad jūsų adresas įvestas teisingai, arba susisiekite su mumis, jei reikia pagalbos."
 
-#: sources/php/functions.php:3569
+#: sources/php/functions.php:3582
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:73
 msgid "SendWP - Transactional Email"
 msgstr "SendWP - tranzakciniai el. laiškai"
 
-#: sources/php/functions.php:3574
+#: sources/php/functions.php:3587
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:77
 msgid "SendWP makes getting emails delivered as simple as a few clicks. So you can relax know those important emails are being delivered on time."
 msgstr "SendWP leidžia lengvai išsiųsti el. laiškus vos keliais paspaudimais. Taip galite ramiai žinoti, kad svarbūs laiškai pristatomi laiku."
 
-#: sources/php/functions.php:3577
+#: sources/php/functions.php:3590
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:79
 msgid "Try SendWP now and <strong>get your first month for just $1.</strong>"
 msgstr "Išbandykite SendWP dabar ir <strong>pirmą mėnesį gaukite tik už 1 $.</strong>"
 
-#: sources/php/functions.php:3587
+#: sources/php/functions.php:3600
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:87
 msgid "Note: SendWP is optional. You can use any transactional email service you prefer."
 msgstr "Pastaba: SendWP yra neprivalomas. Galite naudoti bet kurią jums patinkančią tranzakcinių el. laiškų paslaugą."
 
-#: sources/php/functions.php:3596
+#: sources/php/functions.php:3609
 #: includes/Admin/Pages/AbandonedCartRecoveryAdminFree.php:94
 msgid "Connect to SendWP"
 msgstr "Prisijungti prie SendWP"
 
-#: sources/php/functions.php:3744
+#: sources/php/functions.php:3757
 msgid "Welcome back"
 msgstr "Laukiame sugrįžę"
 
-#: sources/php/functions.php:3757
+#: sources/php/functions.php:3770
 msgid "It looks like you already have an account. Please enter your login details below."
 msgstr "Atrodo, kad jau turite paskyrą. Toliau įveskite savo prisijungimo duomenis."
 
-#: sources/php/functions.php:3770
+#: sources/php/functions.php:3783
 msgid "If you have shopped with us before, please enter your login details below."
 msgstr "Jei jau esate apsipirkę pas mus anksčiau, toliau įveskite savo prisijungimo duomenis."
 
-#: sources/php/functions.php:3780
-#: sources/php/functions.php:3781
+#: sources/php/functions.php:3793
+#: sources/php/functions.php:3794
 msgid "Username or email address"
 msgstr "Vartotojo vardas arba el. pašto adresas"
 
-#: sources/php/functions.php:3794
-#: sources/php/functions.php:3795
+#: sources/php/functions.php:3807
+#: sources/php/functions.php:3808
 msgid "Password"
 msgstr "Slaptažodis"
 
-#: sources/php/functions.php:3815
+#: sources/php/functions.php:3828
 msgid "Remember me"
 msgstr "Prisiminti mane"
 
-#: sources/php/functions.php:3844
+#: sources/php/functions.php:3857
 msgid "Or continue as guest"
 msgstr "Arba tęsti kaip svečias"
 
-#: sources/php/functions.php:3862
+#: sources/php/functions.php:3875
 msgid "Lost your password? Please enter your username or email address. You will receive a link to create a new password via email."
 msgstr "Pamiršote slaptažodį? Įveskite savo vartotojo vardą arba el. pašto adresą. Gaunate nuorodą naujam slaptažodžiui sukurti el. paštu."
 
-#: sources/php/functions.php:3872
-#: sources/php/functions.php:3873
+#: sources/php/functions.php:3885
+#: sources/php/functions.php:3886
 msgid "Email address"
 msgstr "El. pašto adresas"
 
-#: sources/php/functions.php:3885
+#: sources/php/functions.php:3898
 msgid "Reset password"
 msgstr "Atstatyti slaptažodį"
 
-#: sources/php/functions.php:3900
+#: sources/php/functions.php:3913
 #: includes/API/OrderBumpOfferFormPreviewAPI.php:46
 #: includes/API/GetVariationFormAPI.php:33
 msgid "Product not found"
 msgstr "Produktų nerasta"
 
-#: sources/php/functions.php:3916
-#: sources/php/functions.php:4053
+#: sources/php/functions.php:3929
+#: sources/php/functions.php:4066
 msgid "No thanks"
 msgstr "Ne, ačiū"
 
@@ -762,6 +785,14 @@ msgstr "Atnaujinti licencijos informaciją"
 #: includes/Managers/UpdatesManager.php:494
 msgid "Please enter your license key."
 msgstr "Įveskite savo licencijos raktą."
+
+#: includes/Managers/UpdatesManager.php:497
+msgid "Activate Site"
+msgstr "Aktyvuoti svetainę"
+
+#: includes/Managers/UpdatesManager.php:500
+msgid "Deactivate Site"
+msgstr "Deaktyvuoti svetainę"
 
 # Debug error message logged when license check reaches unexpected state
 #: includes/Managers/UpdatesManager.php:642
@@ -878,60 +909,56 @@ msgstr "Pašalinti šią prekę"
 msgid "Proceed to checkout"
 msgstr "Pereikite prie apmokėjimo"
 
-#: includes/Loaders/LoaderAbstract.php:71
-#: includes/Features/CartEditingAtCheckout.php:45
-msgid "Checkout is not available whilst your cart is empty."
-msgstr "Atsiskaitymas nepasiekiamas, kol jūsų krepšelis tuščias."
-
-#: includes/Loaders/LoaderAbstract.php:135
-#: includes/Loaders/LoaderAbstract.php:245
+#: includes/Loaders/LoaderAbstract.php:134
+#: includes/Loaders/LoaderAbstract.php:244
 msgid "Sorry, this order is invalid and cannot be paid for."
 msgstr "Atsiprašome, šis užsakymas yra neteisingas ir negali būti apmokėtas."
 
-#: includes/Loaders/LoaderAbstract.php:139
+#: includes/Loaders/LoaderAbstract.php:138
 msgid "Please log in to your account below to continue to the payment form."
 msgstr "Norėdami tęsti mokėjimo formą, prisijunkite prie savo paskyros žemiau."
 
-#: includes/Loaders/LoaderAbstract.php:146
+#: includes/Loaders/LoaderAbstract.php:145
 msgid "You are paying for a guest order. Please continue with payment only if you recognize this order."
 msgstr "Jūs mokate už svečio užsakymą. Prašome tęsti mokėjimą tik jei atpažįstate šį užsakymą."
 
-#: includes/Loaders/LoaderAbstract.php:152
+#: includes/Loaders/LoaderAbstract.php:151
 msgid "This order cannot be paid for. Please contact us if you need assistance."
 msgstr "Šio užsakymo negalima apmokėti. Jei reikia pagalbos, susisiekite su mumis."
 
-#: includes/Loaders/LoaderAbstract.php:158
-#: includes/Loaders/LoaderAbstract.php:242
+#: includes/Loaders/LoaderAbstract.php:157
+#: includes/Loaders/LoaderAbstract.php:241
 msgid "This order&rsquo;s status is &ldquo;%s&rdquo;&mdash;it cannot be paid for. Please contact us if you need assistance."
 msgstr "Šio užsakymo būsena yra „%s“ — jis negali būti apmokėtas. Jei reikia pagalbos, susisiekite su mumis."
 
-#: includes/Loaders/LoaderAbstract.php:187
+#: includes/Loaders/LoaderAbstract.php:186
 msgid "Sorry, \"%s\" is no longer in stock so this order cannot be paid for. We apologize for any inconvenience caused."
 msgstr "Atsiprašome, \"%s\" nebėra sandėlyje, todėl šio užsakymo negalima apmokėti. Atsiprašome už nepatogumus."
 
-#: includes/Loaders/LoaderAbstract.php:201
+#: includes/Loaders/LoaderAbstract.php:200
 msgid "Sorry, we do not have enough \"%1$s\" in stock to fulfill your order (%2$s available). We apologize for any inconvenience caused."
 msgstr "Atsiprašome, neturime pakankamai \"%1$s\" sandėlyje, kad įvykdytume jūsų užsakymą (%2$s yra). Atsiprašome už nepatogumus."
 
-#: includes/Loaders/LoaderAbstract.php:248
+#: includes/Loaders/LoaderAbstract.php:247
 msgid "Invalid order."
 msgstr "Neteisinga užsakymas."
 
-#: includes/Features/Turnstile.php:133
-#: includes/Features/Turnstile.php:187
-#: includes/Features/Turnstile.php:316
+#: includes/Features/Turnstile.php:134
+#: includes/Features/Turnstile.php:188
+#: includes/Features/Turnstile.php:362
 msgid "Please complete the verification challenge."
 msgstr "Prašome užbaigti patvirtinimo iššūkį."
 
-#: includes/Features/Turnstile.php:335
+#: includes/Features/Turnstile.php:382
 msgid "Verification service unavailable. Please try again."
 msgstr "Patvirtinimo paslauga nepasiekiama. Bandykite dar kartą."
 
-#: includes/Features/Turnstile.php:351
+#: includes/Features/Turnstile.php:394
+#: includes/Features/Turnstile.php:413
 msgid "Verification failed. Please try again."
 msgstr "Patvirtinimas nepavyko. Bandykite dar kartą."
 
-#: includes/Features/Turnstile.php:378
+#: includes/Features/Turnstile.php:448
 msgid "We have detected that Simple Cloudflare Turnstile is active. To enable CheckoutWC Turnstile functionality, please deactivate Simple Cloudflare Turnstile."
 msgstr "Nustatėme, kad Simple Cloudflare Turnstile yra aktyvus. Norėdami įjungti CheckoutWC Turnstile funkcionalumą, išjunkite Simple Cloudflare Turnstile."
 
@@ -953,16 +980,16 @@ msgstr "CheckoutWC:"
 msgid "Settings marked with asterisks (**) may be overridden based on your Side Cart settings. (CheckoutWC > Side Cart)"
 msgstr "Nustatymai, pažymėti žvaigždutėmis (**), gali būti pakeisti pagal jūsų Šoninio krepšelio nustatymus. (CheckoutWC > Šoninis krepšelis)"
 
-#: includes/Features/OrderBumps.php:561
+#: includes/Features/OrderBumps.php:563
 msgid "All orders"
 msgstr "Visi užsakymai"
 
-#: includes/Features/OrderBumps.php:564
+#: includes/Features/OrderBumps.php:566
 msgid "Contains Any Order Bump"
 msgstr "Turi bet kokį užsakymo priedą"
 
 # %s: Order bump title
-#: includes/Features/OrderBumps.php:570
+#: includes/Features/OrderBumps.php:572
 msgid "Has Bump: %s"
 msgstr "Turi priedą: %s"
 
@@ -1093,6 +1120,10 @@ msgstr "Ieškokite savo adreso"
 #: includes/Features/FetchifyAddressAutocomplete.php:78
 msgid "Or enter address manually."
 msgstr "Arba įveskite adresą rankiniu būdu."
+
+#: includes/Features/CartEditingAtCheckout.php:45
+msgid "Checkout is not available whilst your cart is empty."
+msgstr "Atsiskaitymas nepasiekiamas, kol jūsų krepšelis tuščias."
 
 #: includes/Features/AbandonedCartRecovery.php:84
 msgid "You have been unsubscribed from our cart reminder emails."
@@ -1671,158 +1702,6 @@ msgstr "Jūs neturite leidimo įdiegti papildinių atnaujinimus"
 msgid "Error"
 msgstr "Klaida"
 
-# Error message logged when Jupiter theme callback removal fails
-#: includes/Compatibility/Themes/Jupiter.php:49
-msgid "CheckoutWC: Failed to unset Jupiter theme callbacks."
-msgstr "CheckoutWC: Nepavyko atšaukti Jupiter temos atgalinių kvietimų."
-
-#: includes/Compatibility/Themes/Astra.php:81
-msgid "Enable Astra Support (Beta)"
-msgstr "Įgalinti Astra palaikymą (Beta)"
-
-#: includes/Compatibility/Themes/Astra.php:82
-msgid "Allow Astra to replace header and footer. Allows Astra / Astra Addon to load its styles and scripts on the checkout page."
-msgstr "Leisti Astra pakeisti antraštę ir poraštę. Leidžia Astra / Astra priedui įkelti savo stilius ir scenarijus atsiskaitymo puslapyje."
-
-#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:38
-msgid "Please update to the latest version of PayPal for WooCommerce to get full support."
-msgstr "Prašome atnaujinti į naujausią PayPal for WooCommerce versiją, kad gautumėte pilną palaikymą."
-
-#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:363
-msgid "Logged in with PayPal. Please continue your order below."
-msgstr "Prisijungėte naudodami „PayPal“. Prašome tęsti užsakymą žemiau."
-
-#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:64
-#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:72
-msgid "Enter your code&hellip;"
-msgstr "Įveskite savo kodą&hellip;"
-
-#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:94
-msgid "Have a gift card?"
-msgstr "Ar turite dovanų kortelę?"
-
-#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:68
-msgid "Enable Checkout Field Editor address field overrides. (Not Recommended)"
-msgstr "Įgalinti Checkout Field Editor adreso laukų perrašymus. (Nerekomenduojama)"
-
-#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:69
-msgid "Allow WooCommerce Checkout Field Editor to modify billing and shipping address fields. Not compatible with these features: Separate House Number and Street Name Address Fields, Full Name Field, Fetchify"
-msgstr "Leisti WooCommerce Checkout Field Editor keisti atsiskaitymo ir pristatymo adreso laukus. Nesuderinama su šiomis funkcijomis: Atskirti namo numerio ir gatvės pavadinimo adresų laukai, Pilno vardo laukas, Fetchify"
-
-#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:103
-msgid "Full-width"
-msgstr "Viso pločio"
-
-#: includes/Compatibility/Plugins/WPRocket.php:116
-msgid "Enable WP Rocket Delay JS Execution compatibility mode"
-msgstr "Įgalinti WP Rocket Delay JS Execution suderinamumo režimą"
-
-#: includes/Compatibility/Plugins/WPRocket.php:117
-msgid "By default, we exclude our scripts and script dependencies to prevent compatibility problems. Uncheck to allow CheckoutWC scripts to be delayed for maximum performance."
-msgstr "Pagal numatytuosius nustatymus mes pašaliname mūsų scenarijus ir jų priklausomybes, kad išvengtume suderinamumo problemų. Nuimkite varnelę, kad leistumėte CheckoutWC scenarijams būti atidėtiems maksimaliai našumui."
-
-#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:28
-msgid "Points"
-msgstr "Taškai"
-
-#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:29
-msgid "Apply Points"
-msgstr "Pritaikyti taškus"
-
-#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:31
-msgid " Points"
-msgstr "Taškai"
-
-#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditorPro.php:69
-msgid "Enable ThemeHigh Checkout Field Editor address field overrides"
-msgstr "Įgalinti ThemeHigh Checkout Field Editor adreso laukų perrašymus"
-
-#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditorPro.php:70
-#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditor.php:47
-msgid "Allow ThemeHigh Checkout Field Editor to modify billing and shipping address fields. (Not Recommended)"
-msgstr "Leisti ThemeHigh Checkout Field Editor keisti atsiskaitymo ir pristatymo adreso laukus. (Nerekomenduojama)"
-
-#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditor.php:46
-msgid "Enable ThemeHigh Checkout Field Editor address field overrides."
-msgstr "Įgalinti ThemeHigh Checkout Field Editor adreso laukų perrašymus."
-
-#: includes/Compatibility/Plugins/ShipMondo.php:16
-msgid "Please select a pickup point before placing your order."
-msgstr "Prašome pasirinkti atsiėmimo punktą prieš pateikiant užsakymą."
-
-#: includes/Compatibility/Plugins/SendCloud.php:16
-msgid "Please choose a service point."
-msgstr "Prašome pasirinkti paslaugų punktą."
-
-#: includes/Compatibility/Plugins/PostNL4.php:65
-#: includes/Compatibility/Plugins/PostNL4.php:66
-#: includes/Compatibility/Plugins/PostNL.php:67
-#: includes/Compatibility/Plugins/PostNL.php:68
-#: includes/Compatibility/Plugins/NLPostcodeChecker.php:67
-#: includes/Compatibility/Plugins/NLPostcodeChecker.php:68
-#: includes/Compatibility/Plugins/MyParcel.php:63
-msgid "Nr."
-msgstr "Nr."
-
-#: includes/Compatibility/Plugins/PostNL4.php:80
-#: includes/Compatibility/Plugins/PostNL4.php:81
-#: includes/Compatibility/Plugins/PostNL.php:82
-#: includes/Compatibility/Plugins/PostNL.php:83
-#: includes/Compatibility/Plugins/MyParcel.php:78
-msgid "Suffix"
-msgstr "Priesaga"
-
-#: includes/Compatibility/Plugins/PWGiftCardsPro.php:30
-msgid "Unknown Error"
-msgstr "Nežinoma klaida"
-
-#: includes/Compatibility/Plugins/MyParcel.php:47
-msgid "street_name"
-msgstr "gatvės_pavadinimas"
-
-#: includes/Compatibility/Plugins/MyParcel.php:62
-msgid "abbreviation_house_number"
-msgstr "abbreviation_house_number"
-
-#: includes/Compatibility/Plugins/MyParcel.php:77
-msgid "suffix"
-msgstr "priesaga"
-
-#: includes/Compatibility/Plugins/ElementorPro.php:95
-msgid "Enable Elementor Pro support."
-msgstr "Įgalinti Elementor Pro palaikymą."
-
-#: includes/Compatibility/Plugins/ElementorPro.php:96
-msgid "Allow Elementor Pro to replace header and footer."
-msgstr "Leisti Elementor Pro pakeisti antraštę ir poraštę."
-
-#: includes/Compatibility/Plugins/CashierForWooCommerce.php:62
-msgid "Enable Cashier for WooCommerce address field overrides. (Not Recommended)"
-msgstr "Įgalinti Cashier for WooCommerce adreso laukų perrašymus. (Nerekomenduojama)"
-
-#: includes/Compatibility/Plugins/CashierForWooCommerce.php:63
-msgid "Allow WooCommerce Cashier Checkout Field Editor module to modify billing and shipping address fields. Not compatible with these features: Separate House Number and Street Name Address Fields, Full Name Field"
-msgstr "Leisti WooCommerce Cashier Checkout Field Editor moduliui keisti atsiskaitymo ir pristatymo adreso laukus. Nesuderinama su šiomis funkcijomis: Atskirti namo numerio ir gatvės pavadinimo adresų laukai, Pilno vardo laukas"
-
-#: includes/Admin/Pages/PickupLocationsAdminFree.php:218
-#: includes/Admin/Pages/PageAbstract.php:106
-#: includes/Admin/Pages/General.php:326
-#: includes/Compatibility/Plugins/CartFlows.php:62
-#: includes/Admin/Pages/Premium/PickupLocations.php:217
-#: includes/Admin/Pages/Premium/OrderBumps.php:206
-#: includes/Admin/Pages/Premium/LocalPickupAdmin.php:165
-#: includes/Admin/Pages/Premium/AbandonedCartRecovery.php:238
-msgid "CheckoutWC"
-msgstr "CheckoutWC"
-
-#: includes/Compatibility/Plugins/BeaverThemer.php:38
-msgid "Enable Beaver Themer Support"
-msgstr "Įgalinti Beaver Themer palaikymą"
-
-#: includes/Compatibility/Plugins/BeaverThemer.php:39
-msgid "Allow Beaver Themer to replace header and footer."
-msgstr "Leisti Beaver Themer pakeisti antraštę ir poraštę."
-
 #: includes/Admin/Pages/WooCommercePages.php:21
 msgid "Pages"
 msgstr "Puslapiai"
@@ -2195,6 +2074,17 @@ msgstr "Numatomas atsiėmimo laikas"
 #: includes/Admin/Pages/Premium/PickupLocations.php:130
 msgid "Pickup Instructions"
 msgstr "Atsiėmimo instrukcijos"
+
+#: includes/Compatibility/Plugins/CartFlows.php:62
+#: includes/Admin/Pages/PickupLocationsAdminFree.php:218
+#: includes/Admin/Pages/PageAbstract.php:106
+#: includes/Admin/Pages/General.php:326
+#: includes/Admin/Pages/Premium/PickupLocations.php:217
+#: includes/Admin/Pages/Premium/OrderBumps.php:206
+#: includes/Admin/Pages/Premium/LocalPickupAdmin.php:165
+#: includes/Admin/Pages/Premium/AbandonedCartRecovery.php:238
+msgid "CheckoutWC"
+msgstr "CheckoutWC"
 
 #: includes/Admin/Pages/PageController.php:27
 msgid "Premium"
@@ -2943,27 +2833,6 @@ msgstr "Ačiū, kad įdiegėte CheckoutWC! Jūsų licencija buvo automatiškai s
 msgid "Thank you for installing CheckoutWC! To get started, enter your <strong>License Key</strong> below, save, and click <strong>Activate Site</strong>."
 msgstr "Ačiū, kad įdiegėte CheckoutWC! Norėdami pradėti, įveskite žemiau savo <strong>licencijos raktą</strong>, išsaugokite ir spustelėkite <strong>Aktyvuoti svetainę</strong>."
 
-# Admin notice title for new Cloudflare Turnstile feature
-#: includes/Admin/Notices/TurnstileFeatureNotice.php:21
-msgid "New Feature: Cloudflare Turnstile Bot Protection"
-msgstr "Nauja funkcija: Cloudflare Turnstile botų apsauga"
-
-# 1: Cloudflare Turnstile name wrapped in strong tags, 2: Setup link
-#: includes/Admin/Notices/TurnstileFeatureNotice.php:25
-msgid "CheckoutWC now supports %1$s - a privacy-first, CAPTCHA-free way to protect your checkout from bots and spam orders. %2$s"
-msgstr "CheckoutWC dabar palaiko %1$s – privatumo pirmumo, be CAPTCHA būdą apsaugoti jūsų atsiskaitymą nuo botų ir šlamšto užsakymų. %2$s"
-
-# The name of the Cloudflare Turnstile service
-#: includes/Admin/Notices/TurnstileFeatureNotice.php:29
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:63
-msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
-
-# Link text to setup Cloudflare Turnstile
-#: includes/Admin/Notices/TurnstileFeatureNotice.php:35
-msgid "Setup Cloudflare Turnstile now"
-msgstr "Nustatyti Cloudflare Turnstile dabar"
-
 # %1$s: URL to pricing page, %2$s: "purchase a new license" link text, %3$s: Support email URL, %4$s: "please contact support" link text
 #: includes/Admin/Notices/InvalidLicenseKeyNotice.php:15
 msgid "Your license key appears to have expired. Please <a href=\"%1$s\" target=\"_blank\">%2$s</a> to restore functionality. If you believe this is in error, <a href=\"%3$s\">%4$s</a>."
@@ -2981,6 +2850,147 @@ msgstr "prašome susisiekti su palaikymu"
 #: includes/Admin/Notices/InactiveLicenseNotice.php:11
 msgid "Your license key is not active for this site. Please visit <a href=\"%1$s\">%2$s</a> to activate your license and restore functionality."
 msgstr "Jūsų licencijos raktas nėra aktyvus šiai svetainei. Prašome apsilankyti <a href=\"%1$s\">%2$s</a>, kad suaktyvintumėte licenciją ir atkurtumėte funkcionalumą."
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:38
+msgid "Please update to the latest version of PayPal for WooCommerce to get full support."
+msgstr "Prašome atnaujinti į naujausią PayPal for WooCommerce versiją, kad gautumėte pilną palaikymą."
+
+#: includes/Compatibility/Gateways/PayPalForWooCommerce.php:363
+msgid "Logged in with PayPal. Please continue your order below."
+msgstr "Prisijungėte naudodami „PayPal“. Prašome tęsti užsakymą žemiau."
+
+# Error message logged when Jupiter theme callback removal fails
+#: includes/Compatibility/Themes/Jupiter.php:49
+msgid "CheckoutWC: Failed to unset Jupiter theme callbacks."
+msgstr "CheckoutWC: Nepavyko atšaukti Jupiter temos atgalinių kvietimų."
+
+#: includes/Compatibility/Themes/Astra.php:81
+msgid "Enable Astra Support (Beta)"
+msgstr "Įgalinti Astra palaikymą (Beta)"
+
+#: includes/Compatibility/Themes/Astra.php:82
+msgid "Allow Astra to replace header and footer. Allows Astra / Astra Addon to load its styles and scripts on the checkout page."
+msgstr "Leisti Astra pakeisti antraštę ir poraštę. Leidžia Astra / Astra priedui įkelti savo stilius ir scenarijus atsiskaitymo puslapyje."
+
+#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:64
+#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:72
+msgid "Enter your code&hellip;"
+msgstr "Įveskite savo kodą&hellip;"
+
+#: includes/Compatibility/Plugins/WooCommerceGiftCards.php:94
+msgid "Have a gift card?"
+msgstr "Ar turite dovanų kortelę?"
+
+#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:68
+msgid "Enable Checkout Field Editor address field overrides. (Not Recommended)"
+msgstr "Įgalinti Checkout Field Editor adreso laukų perrašymus. (Nerekomenduojama)"
+
+#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:69
+msgid "Allow WooCommerce Checkout Field Editor to modify billing and shipping address fields. Not compatible with these features: Separate House Number and Street Name Address Fields, Full Name Field, Fetchify"
+msgstr "Leisti WooCommerce Checkout Field Editor keisti atsiskaitymo ir pristatymo adreso laukus. Nesuderinama su šiomis funkcijomis: Atskirti namo numerio ir gatvės pavadinimo adresų laukai, Pilno vardo laukas, Fetchify"
+
+#: includes/Compatibility/Plugins/WooCommerceCheckoutFieldEditor.php:103
+msgid "Full-width"
+msgstr "Viso pločio"
+
+#: includes/Compatibility/Plugins/WPRocket.php:116
+msgid "Enable WP Rocket Delay JS Execution compatibility mode"
+msgstr "Įgalinti WP Rocket Delay JS Execution suderinamumo režimą"
+
+#: includes/Compatibility/Plugins/WPRocket.php:117
+msgid "By default, we exclude our scripts and script dependencies to prevent compatibility problems. Uncheck to allow CheckoutWC scripts to be delayed for maximum performance."
+msgstr "Pagal numatytuosius nustatymus mes pašaliname mūsų scenarijus ir jų priklausomybes, kad išvengtume suderinamumo problemų. Nuimkite varnelę, kad leistumėte CheckoutWC scenarijams būti atidėtiems maksimaliai našumui."
+
+#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:28
+msgid "Points"
+msgstr "Taškai"
+
+#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:29
+msgid "Apply Points"
+msgstr "Pritaikyti taškus"
+
+#: includes/Compatibility/Plugins/UltimateRewardsPoints.php:31
+msgid " Points"
+msgstr "Taškai"
+
+#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditorPro.php:69
+msgid "Enable ThemeHigh Checkout Field Editor address field overrides"
+msgstr "Įgalinti ThemeHigh Checkout Field Editor adreso laukų perrašymus"
+
+#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditorPro.php:70
+#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditor.php:47
+msgid "Allow ThemeHigh Checkout Field Editor to modify billing and shipping address fields. (Not Recommended)"
+msgstr "Leisti ThemeHigh Checkout Field Editor keisti atsiskaitymo ir pristatymo adreso laukus. (Nerekomenduojama)"
+
+#: includes/Compatibility/Plugins/ThemeHighCheckoutFieldEditor.php:46
+msgid "Enable ThemeHigh Checkout Field Editor address field overrides."
+msgstr "Įgalinti ThemeHigh Checkout Field Editor adreso laukų perrašymus."
+
+#: includes/Compatibility/Plugins/ShipMondo.php:16
+msgid "Please select a pickup point before placing your order."
+msgstr "Prašome pasirinkti atsiėmimo punktą prieš pateikiant užsakymą."
+
+#: includes/Compatibility/Plugins/SendCloud.php:16
+msgid "Please choose a service point."
+msgstr "Prašome pasirinkti paslaugų punktą."
+
+#: includes/Compatibility/Plugins/PostNL4.php:65
+#: includes/Compatibility/Plugins/PostNL4.php:66
+#: includes/Compatibility/Plugins/PostNL.php:67
+#: includes/Compatibility/Plugins/PostNL.php:68
+#: includes/Compatibility/Plugins/NLPostcodeChecker.php:67
+#: includes/Compatibility/Plugins/NLPostcodeChecker.php:68
+#: includes/Compatibility/Plugins/MyParcel.php:63
+msgid "Nr."
+msgstr "Nr."
+
+#: includes/Compatibility/Plugins/PostNL4.php:80
+#: includes/Compatibility/Plugins/PostNL4.php:81
+#: includes/Compatibility/Plugins/PostNL.php:82
+#: includes/Compatibility/Plugins/PostNL.php:83
+#: includes/Compatibility/Plugins/MyParcel.php:78
+msgid "Suffix"
+msgstr "Priesaga"
+
+#: includes/Compatibility/Plugins/PWGiftCardsPro.php:30
+msgid "Unknown Error"
+msgstr "Nežinoma klaida"
+
+#: includes/Compatibility/Plugins/MyParcel.php:47
+msgid "street_name"
+msgstr "gatvės_pavadinimas"
+
+#: includes/Compatibility/Plugins/MyParcel.php:62
+msgid "abbreviation_house_number"
+msgstr "abbreviation_house_number"
+
+#: includes/Compatibility/Plugins/MyParcel.php:77
+msgid "suffix"
+msgstr "priesaga"
+
+#: includes/Compatibility/Plugins/ElementorPro.php:95
+msgid "Enable Elementor Pro support."
+msgstr "Įgalinti Elementor Pro palaikymą."
+
+#: includes/Compatibility/Plugins/ElementorPro.php:96
+msgid "Allow Elementor Pro to replace header and footer."
+msgstr "Leisti Elementor Pro pakeisti antraštę ir poraštę."
+
+#: includes/Compatibility/Plugins/CashierForWooCommerce.php:62
+msgid "Enable Cashier for WooCommerce address field overrides. (Not Recommended)"
+msgstr "Įgalinti Cashier for WooCommerce adreso laukų perrašymus. (Nerekomenduojama)"
+
+#: includes/Compatibility/Plugins/CashierForWooCommerce.php:63
+msgid "Allow WooCommerce Cashier Checkout Field Editor module to modify billing and shipping address fields. Not compatible with these features: Separate House Number and Street Name Address Fields, Full Name Field"
+msgstr "Leisti WooCommerce Cashier Checkout Field Editor moduliui keisti atsiskaitymo ir pristatymo adreso laukus. Nesuderinama su šiomis funkcijomis: Atskirti namo numerio ir gatvės pavadinimo adresų laukai, Pilno vardo laukas"
+
+#: includes/Compatibility/Plugins/BeaverThemer.php:38
+msgid "Enable Beaver Themer Support"
+msgstr "Įgalinti Beaver Themer palaikymą"
+
+#: includes/Compatibility/Plugins/BeaverThemer.php:39
+msgid "Allow Beaver Themer to replace header and footer."
+msgstr "Leisti Beaver Themer pakeisti antraštę ir poraštę."
 
 #: sources/ts/frontend/Actions/CompleteOrderAction.ts:196
 msgid "Could not connect to server. Please refresh and try again or contact site administrator."
@@ -3100,30 +3110,6 @@ msgstr "Atrakinti su Premium"
 #: sources/ts/admin/Components/LockedFieldWrapper.tsx:40
 msgid "A %s plan is required to access these features."
 msgstr "Norint pasiekti šias funkcijas, reikalingas %s planas."
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:12
-msgid "CheckoutWC Side Cart"
-msgstr "CheckoutWC šoninis krepšelis"
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:43
-msgid "CheckoutWC: After Side Cart Items"
-msgstr "CheckoutWC: po šoninio krepšelio prekių"
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:49
-msgid "CheckoutWC: Before Side Cart Footer Above Promo Code"
-msgstr "CheckoutWC: prieš šoninio krepšelio poraštę virš reklamos kodo"
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:55
-msgid "CheckoutWC: Before Side Cart Totals"
-msgstr "CheckoutWC: prieš šoninio krepšelio sumas"
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:61
-msgid "CheckoutWC: After Side Cart Totals"
-msgstr "CheckoutWC: po šoninio krepšelio sumų"
-
-#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:67
-msgid "CheckoutWC: After Side Cart Buttons"
-msgstr "CheckoutWC: po šoninio krepšelio mygtukų"
 
 #: includes/Admin/Pages/Premium/OrderBumps.php:81
 msgid "ID"
@@ -3297,6 +3283,30 @@ msgstr "Jūsų CheckoutWC planas leidžia sukurti %1$d apleistų krepšelių el.
 #: includes/Admin/Pages/Premium/AbandonedCartRecovery.php:839
 msgid "You cannot create or publish new Abandoned Cart Recovery emails if you are over the limit."
 msgstr "Negalite kurti ar publikuoti naujų Pamestų Krepšelio Atkūrimo el. laiškų, jei viršijate ribą."
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:12
+msgid "CheckoutWC Side Cart"
+msgstr "CheckoutWC šoninis krepšelis"
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:43
+msgid "CheckoutWC: After Side Cart Items"
+msgstr "CheckoutWC: po šoninio krepšelio prekių"
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:49
+msgid "CheckoutWC: Before Side Cart Footer Above Promo Code"
+msgstr "CheckoutWC: prieš šoninio krepšelio poraštę virš reklamos kodo"
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:55
+msgid "CheckoutWC: Before Side Cart Totals"
+msgstr "CheckoutWC: prieš šoninio krepšelio sumas"
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:61
+msgid "CheckoutWC: After Side Cart Totals"
+msgstr "CheckoutWC: po šoninio krepšelio sumų"
+
+#: includes/Compatibility/Plugins/Helpers/WooCommerceProductRecommendationsSideCartLocation.php:67
+msgid "CheckoutWC: After Side Cart Buttons"
+msgstr "CheckoutWC: po šoninio krepšelio mygtukų"
 
 #: sources/ts/frontend/Components/ReviewPane/ShippingMethodReviewPane.tsx:15
 #: sources/ts/frontend/Components/ReviewPane/PaymentMethodReviewPane.tsx:15
@@ -4039,184 +4049,184 @@ msgstr "Įjungti Regex"
 msgid "Match local shipping method name with regex."
 msgstr "Atitikti vietinio pristatymo būdo pavadinimą su regex."
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:64
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:65
 msgid "Configure Cloudflare Turnstile CAPTCHA protection for your checkout and account pages."
 msgstr "Konfigūruokite Cloudflare Turnstile CAPTCHA apsaugą savo atsiskaitymo ir paskyros puslapiams."
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:69
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:71
 msgid "Enable Cloudflare Turnstile"
 msgstr "Įjungti Cloudflare Turnstile"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:70
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:72
 msgid "Enable Cloudflare Turnstile CAPTCHA protection"
 msgstr "Įjungti Cloudflare Turnstile CAPTCHA apsaugą"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:83
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:86
 msgid "Site Key"
 msgstr "Svetainės raktas"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:84
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:87
 msgid "Your Cloudflare Turnstile site key"
 msgstr "Jūsų Cloudflare Turnstile svetainės raktas"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:90
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:93
 msgid "Secret Key"
 msgstr "Slaptasis raktas"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:92
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:95
 msgid "Your Cloudflare Turnstile secret key"
 msgstr "Jūsų Cloudflare Turnstile slaptasis raktas"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:98
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:101
 msgid "Enable on Checkout"
 msgstr "Įjungti atsiskaityme"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:99
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:102
 msgid "Show Turnstile on the checkout page"
 msgstr "Rodyti Turnstile atsiskaitymo puslapyje"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:105
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:108
 msgid "Enable on Order Pay"
 msgstr "Įjungti užsakymo apmokėjime"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:106
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:109
 msgid "Show Turnstile on the order pay page"
 msgstr "Rodyti Turnstile užsakymo apmokėjimo puslapyje"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:112
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:115
 msgid "Enable on Login"
 msgstr "Įjungti prisijungime"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:113
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:116
 msgid "Show Turnstile on the My Account login form"
 msgstr "Rodyti Turnstile mano paskyros prisijungimo formoje"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:119
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:122
 msgid "Enable on Registration"
 msgstr "Įjungti registracijoje"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:120
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:123
 msgid "Show Turnstile on the My Account registration form"
 msgstr "Rodyti Turnstile mano paskyros registracijos formoje"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:126
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:129
 msgid "Position on Checkout"
 msgstr "Pozicija atsiskaityme"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:127
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:130
 msgid "Where to display the Turnstile widget on checkout"
 msgstr "Kur rodyti Turnstile valdiklį atsiskaityme"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:131
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:134
 msgid "Before Place Order Button"
 msgstr "Prieš užsakymo pateikimo mygtuką"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:132
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:135
 msgid "Display just before the place order button"
 msgstr "Rodyti tiesiai prieš užsakymo pateikimo mygtuką"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:136
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:139
 msgid "Before Payment Methods"
 msgstr "Prieš mokėjimo būdus"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:137
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:140
 msgid "Display before payment method selection"
 msgstr "Rodyti prieš mokėjimo būdo pasirinkimą"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:141
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:144
 msgid "After Payment Methods"
 msgstr "Po mokėjimo būdų"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:142
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:145
 msgid "Display after payment method selection"
 msgstr "Rodyti po mokėjimo būdo pasirinkimo"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:150
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:153
 msgid "Theme"
 msgstr "Tema"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:151
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:154
 msgid "Visual theme for the Turnstile widget"
 msgstr "Turnstile valdiklio vizualinė tema"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:153
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:156
 msgid "Light"
 msgstr "Šviesi"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:153
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:156
 msgid "Light theme"
 msgstr "Šviesi tema"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:154
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:157
 msgid "Dark"
 msgstr "Tamsi"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:154
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:157
 msgid "Dark theme"
 msgstr "Tamsi tema"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:155
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:158
 msgid "Auto"
 msgstr "Automatinė"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:155
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:158
 msgid "Automatic based on user preference"
 msgstr "Automatinė pagal vartotojo pageidavimą"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:162
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:165
 msgid "Size"
 msgstr "Dydis"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:163
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:166
 msgid "Size of the Turnstile widget"
 msgstr "Turnstile valdiklio dydis"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:165
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:168
 #: sources/ts/admin/Components/Forms/AppearanceDesignSettingsForm.tsx:84
 msgid "Normal"
 msgstr "Normalus"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:165
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:168
 msgid "Standard size widget"
 msgstr "Standartinio dydžio valdiklis"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:166
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:169
 msgid "Compact"
 msgstr "Kompaktiškas"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:166
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:169
 msgid "Smaller widget size"
 msgstr "Mažesnio dydžio valdiklis"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:173
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:176
 msgid "Guest Users Only"
 msgstr "Tik svečiams"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:174
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:177
 msgid "Only show Turnstile for guest (non-logged-in) users"
 msgstr "Rodyti Turnstile tik svečiams (neprisijungusiems vartotojams)"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:184
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:187
 msgid "Google API"
 msgstr "Google API"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:185
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:188
 msgid "Used for the maps embed on the thank you page as well as Google Address Autocomplete."
 msgstr "Naudojama žemėlapių įterpimui padėkos puslapyje ir Google adreso automatinio užpildymo funkcijai."
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:190
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:193
 msgid "Google API Key"
 msgstr "Google API raktas"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:191
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:194
 msgid "Used by Address Autocomplete and Thank You Page Maps Embed."
 msgstr "Naudojamas adreso automatinio užpildymo ir padėkos puslapio žemėlapių įterpimui."
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:203
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:206
 msgid "Themes and Plugins"
 msgstr "Temos ir papildiniai"
 
-#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:204
+#: sources/ts/admin/Components/Forms/IntegrationSettingsForm.tsx:207
 msgid "Integrations with 3rd party themes and plugins."
 msgstr "Integracijos su trečiųjų šalių temomis ir papildiniais."
 
@@ -5277,8 +5287,8 @@ msgid "Delete Rule"
 msgstr "Ištrinti Taisyklę"
 
 # %d: shipping package number
-#: sources/php/functions.php:366
-#: sources/php/functions.php:3254
+#: sources/php/functions.php:368
+#: sources/php/functions.php:3267
 msgctxt "woocommerce"
 msgid "Shipping"
 msgid_plural "Shipping %d"

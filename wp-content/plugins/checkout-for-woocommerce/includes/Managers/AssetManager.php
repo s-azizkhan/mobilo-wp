@@ -167,7 +167,7 @@ class AssetManager {
 			if ( isset( $this->manifest['chunks']['thank-you-styles']['file'] ) ) {
 				self::enqueue_style( 'thank-you-styles', 'cfw_front' );
 			}
-			
+
 			self::enqueue_style( 'fontawesome' );
 		}
 
@@ -372,9 +372,9 @@ class AssetManager {
 
 		return array(
 			'settings' => array(
-				'user_logged_in'                                                => is_user_logged_in(),
-				'shipping_countries'                                            => $shipping_countries,
-				'allowed_countries'                                             => $allowed_countries,
+				'user_logged_in'                   => is_user_logged_in(),
+				'shipping_countries'               => $shipping_countries,
+				'allowed_countries'                => $allowed_countries,
 				/**
 				 * Filter whether to disable cart quantity prompt
 				 *
@@ -382,7 +382,7 @@ class AssetManager {
 				 *
 				 * @since 8.2.19
 				 */
-				'disable_cart_quantity_prompt'                                  => apply_filters( 'cfw_disable_cart_quantity_prompt', false ),
+				'disable_cart_quantity_prompt'     => apply_filters( 'cfw_disable_cart_quantity_prompt', false ),
 				/**
 				 * Filters whether to link cart items to products
 				 *
@@ -390,9 +390,9 @@ class AssetManager {
 				 *
 				 * @since 1.0.0
 				 */
-				'link_items'                                                    => apply_filters( 'cfw_link_cart_items', SettingsManager::instance()->get_setting( 'cart_item_link' ) === 'enabled' ),
-				'cart_item_link_target_new_window'                              => SettingsManager::instance()->get_setting( 'cart_item_link_target_new_window' ) === 'yes',
-				'show_item_remove_button'                                       => PlanManager::can_access_feature( 'show_item_remove_button' ),
+				'link_items'                       => apply_filters( 'cfw_link_cart_items', SettingsManager::instance()->get_setting( 'cart_item_link' ) === 'enabled' ),
+				'cart_item_link_target_new_window' => SettingsManager::instance()->get_setting( 'cart_item_link_target_new_window' ) === 'yes',
+				'show_item_remove_button'          => PlanManager::can_access_feature( 'show_item_remove_button' ),
 				/**
 				 * Filters whether to show cart item discount on cart item
 				 *
@@ -400,10 +400,10 @@ class AssetManager {
 				 *
 				 * @since 2.0.0
 				 */
-				'show_item_discount'                                            => apply_filters( 'cfw_show_cart_item_discount', SettingsManager::instance()->get_setting( 'show_side_cart_item_discount' ) === 'yes' ),
-				'max_bumps'                                                     => $max_bumps < 0 ? 999 : $max_bumps,
-				'coupons_enabled'                                               => wc_coupons_enabled(),
-				'show_free_shipping_progress_bar_without_calculated_packages'   => apply_filters( 'cfw_show_free_shipping_progress_bar_without_calculated_packages', false ),
+				'show_item_discount'               => apply_filters( 'cfw_show_cart_item_discount', SettingsManager::instance()->get_setting( 'show_side_cart_item_discount' ) === 'yes' ),
+				'max_bumps'                        => $max_bumps < 0 ? 999 : $max_bumps,
+				'coupons_enabled'                  => wc_coupons_enabled(),
+				'show_free_shipping_progress_bar_without_calculated_packages' => apply_filters( 'cfw_show_free_shipping_progress_bar_without_calculated_packages', false ),
 			),
 			'messages' => array(
 				/**
@@ -867,10 +867,13 @@ class AssetManager {
 		 */
 		do_action( 'cfw_before_get_data' );
 
+		// required to work with Advanced Coupons
+		// Ticket: https://secure.helpscout.net/conversation/3002667039/22184?viewId=8492330
+		WC()->cart->calculate_totals();
 		cfw_do_action( 'woocommerce_check_cart_items' );
 
 		$data = array(
-			'cart'   => array(
+			'cart'         => array(
 				'isEmpty'       => WC()->cart && WC()->cart->is_empty(),
 				'needsPayment'  => WC()->cart && WC()->cart->needs_payment(),
 				'items'         => cfw_get_cart_items_data(),
@@ -913,7 +916,7 @@ class AssetManager {
 
 	public static function get_default_data(): array {
 		return array(
-			'cart'      => array(
+			'cart'         => array(
 				'isEmpty'       => WC()->cart && WC()->cart->is_empty(),
 				'needsPayment'  => false,
 				'items'         => array(),
@@ -946,9 +949,9 @@ class AssetManager {
 					'quantity' => 0,
 				),
 			),
-			'bumps'       => array(),
+			'bumps'        => array(),
 			'trust_badges' => array(),
-			'side_cart'   => array(
+			'side_cart'    => array(
 				'free_shipping_progress_bar' => array(
 					'has_free_shipping'        => false,
 					'amount_remaining'         => 0,

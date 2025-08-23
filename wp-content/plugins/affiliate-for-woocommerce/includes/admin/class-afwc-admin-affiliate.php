@@ -4,7 +4,7 @@
  *
  * @package     affiliate-for-woocommerce/includes/admin/
  * @since       1.0.0
- * @version     1.7.1
+ * @version     1.7.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -92,9 +92,9 @@ if ( ! class_exists( 'AFWC_Admin_Affiliate' ) ) {
 			$is_affiliate = afwc_is_user_affiliate( $user );
 
 			$plugin_data = Affiliate_For_WooCommerce::get_plugin_data();
-			wp_enqueue_style( 'afwc-admin-affiliate-style', AFWC_PLUGIN_URL . '/assets/css/afwc-admin-affiliate.css', array(), $plugin_data['Version'] );
+			wp_enqueue_style( 'afwc-admin-affiliate-style', AFWC_PLUGIN_URL . '/assets/css/admin/afwc-user-profile.css', array(), $plugin_data['Version'] );
 			// Register script.
-			wp_register_script( 'afwc-user-profile-js', AFWC_PLUGIN_URL . '/assets/js/afwc-user-profile.js', array( 'jquery', 'wp-i18n', 'select2' ), $plugin_data['Version'], true );
+			wp_register_script( 'afwc-user-profile-js', AFWC_PLUGIN_URL . '/assets/js/admin/afwc-user-profile.js', array( 'jquery', 'wp-i18n', 'select2' ), $plugin_data['Version'], true );
 			if ( function_exists( 'wp_set_script_translations' ) ) {
 				wp_set_script_translations( 'afwc-user-profile-js', 'affiliate-for-woocommerce', AFWC_PLUGIN_DIR_PATH . 'languages' );
 			}

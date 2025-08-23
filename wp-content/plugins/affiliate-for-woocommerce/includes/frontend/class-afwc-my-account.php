@@ -4,7 +4,7 @@
  *
  * @package   affiliate-for-woocommerce/includes/frontend/
  * @since     1.0.0
- * @version   1.16.1
+ * @version   1.16.2
  */
 
 // Exit if accessed directly.
@@ -307,7 +307,7 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 				wp_enqueue_script( 'wp-i18n' );
 			}
 
-			wp_enqueue_style( 'afwc-my-account', AFWC_PLUGIN_URL . '/assets/css/afwc-my-account.css', array(), $plugin_data['Version'] );
+			wp_enqueue_style( 'afwc-my-account', AFWC_PLUGIN_URL . '/assets/css/frontend/my-account/afwc-my-account.css', array(), $plugin_data['Version'] );
 		}
 
 		/**
@@ -340,7 +340,7 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 				// Dashboard scripts.
 				wp_register_script( 'mithril', AFWC_PLUGIN_URL . '/assets/js/mithril/mithril.min.js', array(), $plugin_data['Version'], true );
 				wp_register_script( 'afwc-frontend-styles', AFWC_PLUGIN_URL . '/assets/js/styles.js', array( 'mithril' ), $plugin_data['Version'], true );
-				wp_register_script( 'afwc-frontend-dashboard', AFWC_PLUGIN_URL . '/assets/js/frontend.js', array( 'afwc-frontend-styles', 'wp-i18n', 'afwc-click-to-copy' ), $plugin_data['Version'], true );
+				wp_register_script( 'afwc-frontend-dashboard', AFWC_PLUGIN_URL . '/assets/js/frontend/frontend.js', array( 'afwc-frontend-styles', 'wp-i18n', 'afwc-click-to-copy' ), $plugin_data['Version'], true );
 				if ( function_exists( 'wp_set_script_translations' ) ) {
 					wp_set_script_translations( 'afwc-frontend-dashboard', 'affiliate-for-woocommerce', AFWC_PLUGIN_DIR_PATH . 'languages' );
 				}
@@ -374,7 +374,7 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 					)
 				);
 
-				wp_register_style( 'afwc_frontend', AFWC_PLUGIN_URL . '/assets/css/frontend.css', array(), $plugin_data['Version'] );
+				wp_register_style( 'afwc_frontend', AFWC_PLUGIN_URL . '/assets/css/frontend/frontend.css', array(), $plugin_data['Version'] );
 				if ( ! wp_style_is( 'afwc_frontend' ) ) {
 					wp_enqueue_style( 'afwc_frontend' );
 				}
@@ -938,14 +938,14 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 			if ( is_callable( array( 'AFWC_Payout_Invoice', 'is_enabled_for_affiliate' ) ) && AFWC_Payout_Invoice::is_enabled_for_affiliate() ) {
 				// Register the scripts for payout invoice.
 				if ( ! wp_style_is( 'afwc-report-payout-invoice' ) ) {
-					wp_enqueue_style( 'afwc-report-payout-invoice', AFWC_PLUGIN_URL . '/assets/css/my-account/afwc-report-payout-invoice.css', array(), $plugin_data['Version'], 'all' );
+					wp_enqueue_style( 'afwc-report-payout-invoice', AFWC_PLUGIN_URL . '/assets/css/frontend/my-account/afwc-report-payout-invoice.css', array(), $plugin_data['Version'], 'all' );
 				}
 
 				if ( ! wp_script_is( 'afwc-print-invoice', 'registered' ) ) {
 					global $wp_version;
 					wp_register_script(
 						'afwc-print-invoice',
-						AFWC_PLUGIN_URL . '/assets/js/my-account/afwc-print-invoice.js',
+						AFWC_PLUGIN_URL . '/assets/js/frontend/my-account/afwc-print-invoice.js',
 						array(),
 						$plugin_data['Version'],
 						version_compare( $wp_version, '6.3', '>=' ) ? array( 'strategy' => 'defer' ) : true
@@ -954,10 +954,10 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 				wp_enqueue_script( 'afwc-print-invoice' );
 			}
 
-			wp_register_script( 'afwc-country-flag', AFWC_PLUGIN_URL . '/assets/js/common/afwc-country-flag.js', array(), $plugin_data['Version'], true );
+			wp_register_script( 'afwc-country-flag', AFWC_PLUGIN_URL . '/assets/js/lib/afwc-country-flag.js', array(), $plugin_data['Version'], true );
 
 			if ( ! wp_script_is( 'afwc-reports' ) ) {
-				wp_register_script( 'afwc-reports', AFWC_PLUGIN_URL . '/assets/js/my-account/affiliate-reports.js', array_filter( array( 'jquery', 'wp-i18n', 'wp-url', 'afwc-date-functions', 'afwc-click-to-copy', 'afwc-country-flag', wp_script_is( 'afwc-print-invoice', 'registered' ) ? 'afwc-print-invoice' : '' ), 'strlen' ), $plugin_data['Version'], true );
+				wp_register_script( 'afwc-reports', AFWC_PLUGIN_URL . '/assets/js/frontend/my-account/affiliate-reports.js', array_filter( array( 'jquery', 'wp-i18n', 'wp-url', 'afwc-date-functions', 'afwc-click-to-copy', 'afwc-country-flag', wp_script_is( 'afwc-print-invoice', 'registered' ) ? 'afwc-print-invoice' : '' ), 'strlen' ), $plugin_data['Version'], true );
 				if ( function_exists( 'wp_set_script_translations' ) ) {
 					wp_set_script_translations( 'afwc-reports', 'affiliate-for-woocommerce', AFWC_PLUGIN_DIR_PATH . 'languages' );
 				}
@@ -1729,7 +1729,6 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 					return $this->get_referrals_report( $params );
 				},
 				'referrals',
-				'limit',
 				'rows'
 			);
 		}
@@ -1913,7 +1912,7 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 
 			$plugin_data = $affiliate_for_woocommerce->get_plugin_data();
 			if ( ! wp_script_is( 'afwc-profile-js' ) ) {
-				wp_register_script( 'afwc-profile-js', AFWC_PLUGIN_URL . '/assets/js/my-account/affiliate-profile.js', array( 'jquery', 'wp-i18n', 'afwc-affiliate-link', 'afwc-click-to-copy' ), $plugin_data['Version'], true );
+				wp_register_script( 'afwc-profile-js', AFWC_PLUGIN_URL . '/assets/js/frontend/my-account/affiliate-profile.js', array( 'jquery', 'wp-i18n', 'afwc-affiliate-link', 'afwc-click-to-copy' ), $plugin_data['Version'], true );
 				if ( function_exists( 'wp_set_script_translations' ) ) {
 					wp_set_script_translations( 'afwc-profile-js', 'affiliate-for-woocommerce', AFWC_PLUGIN_DIR_PATH . 'languages' );
 				}
@@ -1952,7 +1951,7 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 
 			wp_localize_script( 'afwc-profile-js', 'afwcProfileParams', $localize_params );
 
-			wp_register_style( 'afwc-profile-css', AFWC_PLUGIN_URL . '/assets/css/my-account/affiliate-profile.css', array(), $plugin_data['Version'], 'all' );
+			wp_register_style( 'afwc-profile-css', AFWC_PLUGIN_URL . '/assets/css/frontend/my-account/affiliate-profile.css', array(), $plugin_data['Version'], 'all' );
 			if ( ! wp_style_is( 'afwc-profile-css', 'enqueued' ) ) {
 				wp_enqueue_style( 'afwc-profile-css' );
 			}
@@ -2278,7 +2277,6 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 						: array();
 				},
 				'visits',
-				'limit',
 				'rows'
 			);
 		}
@@ -2294,7 +2292,9 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 			return $this->get_table_data(
 				$args,
 				function ( $params ) {
-					$products = ( is_callable( array( 'Affiliate_For_WooCommerce', 'get_products_data' ) ) ) ? Affiliate_For_WooCommerce::get_products_data( $params ) : array();
+					$products_obj = new AFWC_Referred_Products( $params );
+					$products     = is_callable( array( $products_obj, 'get_reports' ) ) ? $products_obj->get_reports() : array();
+
 					foreach ( $products as $key => &$product ) {
 						$product['sales'] = afwc_format_price( floatval( ! empty( $product['sales'] ) ? $product['sales'] : 0 ) );
 
@@ -2305,7 +2305,6 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 					return $products;
 				},
 				'products',
-				'batch_limit',
 				'rows'
 			);
 		}
@@ -2323,7 +2322,9 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 				function ( $params ) {
 					$date_format = get_option( 'date_format', 'Y-m-d' );
 
-					$payouts = ( is_callable( array( 'Affiliate_For_WooCommerce', 'get_affiliates_payout_history' ) ) ) ? Affiliate_For_WooCommerce::get_affiliates_payout_history( $params ) : array();
+					$payouts_history_obj = new AFWC_Payout_History( $params );
+					$payouts             = is_callable( array( $payouts_history_obj, 'get_reports' ) ) ? $payouts_history_obj->get_reports() : array();
+
 					foreach ( $payouts as &$payout ) {
 						$payout['payout_amount'] = afwc_format_price( floatval( ! empty( $payout['amount'] ) ? $payout['amount'] : 0 ), empty( $payout['currency'] ) ? $payout['currency'] : '' );
 						$payout['method']        = ! empty( $payout['method'] ) ? afwc_get_payout_methods( $payout['method'] ) : '';
@@ -2332,7 +2333,6 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 					return $payouts;
 				},
 				'payouts',
-				'batch_limit',
 				'payouts'
 			);
 		}
@@ -2343,12 +2343,11 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 		 * @param array    $args           Arguments for data filtering and limits.
 		 * @param callable $data_callback  Callback to fetch the data.
 		 * @param string   $data_name      Slug for identifying the type of data.
-		 * @param string   $limit_key      The key used to determine pagination limit.
 		 * @param string   $output_key     The key to store data in final result array.
 		 *
 		 * @return array An array containing formatted data with optional pagination info.
 		 */
-		protected function get_table_data( $args = array(), callable $data_callback = null, $data_name = '', $limit_key = 'limit', $output_key = 'rows' ) {
+		protected function get_table_data( $args = array(), callable $data_callback = null, $data_name = '', $output_key = 'rows' ) {
 			$args = is_array( $args ) ? $args : array();
 
 			if ( ! afwc_is_valid_date_range( $args ) ) {
@@ -2362,8 +2361,8 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 				: apply_filters( "afwc_my_account_{$data_name}_per_page", get_option( "afwc_my_account_{$data_name}_per_page", AFWC_MY_ACCOUNT_DEFAULT_BATCH_LIMIT ), array( 'source' => $this ) );
 
 			// If data is with load more logic, fetch one extra row to check if more data exists.
-			$limit              = $is_for_load_more ? $limit + 1 : $limit;
-			$args[ $limit_key ] = $limit;
+			$limit         = $is_for_load_more ? $limit + 1 : $limit;
+			$args['limit'] = $limit;
 
 			$data_rows = is_callable( $data_callback ) ? call_user_func( $data_callback, $args ) : array();
 

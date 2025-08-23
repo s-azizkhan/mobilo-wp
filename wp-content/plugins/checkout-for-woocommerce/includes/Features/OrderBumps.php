@@ -95,6 +95,8 @@ class OrderBumps extends FeaturesAbstract {
 
 		// Handle invalidations
 		add_action( 'woocommerce_cart_item_removed', array( $this, 'maybe_remove_bump_from_cart' ), 10 );
+		add_action( 'woocommerce_add_to_cart', array( $this, 'maybe_remove_bump_from_cart' ), 10 );
+		add_action( 'cfw_cart_updated', array( $this, 'maybe_remove_bump_from_cart' ), 10 );
 
 		// Add filter to queries on admin orders screen to filter on order type. To avoid WC overriding our query args, we have to hook at 11+
 		add_filter( 'request', array( $this, 'filter_orders_query' ), 11 );

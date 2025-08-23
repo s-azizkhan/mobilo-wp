@@ -10,8 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2025-06-05T13:18:32+00:00\n"
 "PO-Revision-Date: 2025-08-07 08:04+0000\n"
 "Language: ar\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100 >= 3 "
-"&& n%100<=10 ? 3 : n%100 >= 11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100 >= 3 && n%100<=10 ? 3 : n%100 >= 11 && n%100<=99 ? 4 : 5;\n"
 "X-Domain: woocommerce-smart-coupons\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.7.1; wp-6.8.1\n"
@@ -25,14 +24,16 @@ msgstr " &amp;"
 #: includes/class-wc-sc-display-coupons.php:1079
 #: includes/class-wc-sc-display-coupons.php:2963
 #: includes/class-wc-sc-shortcode.php:540
-#: includes/class-wc-smart-coupons.php:5503
+#: includes/class-wc-smart-coupons.php:5506
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:373
-#: templates/combined-email.php:129 templates/email.php:126
+#: templates/combined-email.php:129
+#: templates/email.php:126
 #: templates/print-coupons-default.php:146
 msgid " & "
 msgstr " &amp; "
 
-#: templates/plain/combined-email.php:88 templates/plain/email.php:83
+#: templates/plain/combined-email.php:88
+#: templates/plain/email.php:83
 #: templates/plain/expiry-reminder-email.php:64
 msgid " &amp; "
 msgstr " &amp; "
@@ -67,17 +68,14 @@ msgstr " على "
 
 #. translators: %s: Maximum coupon discount amount
 #: includes/class-wc-sc-display-coupons.php:794
-#: includes/class-wc-smart-coupons.php:1474
+#: includes/class-wc-smart-coupons.php:1483
 #: includes/emails/class-wc-sc-email-coupon.php:446
 msgid " upto %s"
 msgstr " حتى %s"
 
 #: includes/class-wc-sc-admin-notifications.php:247
-msgid ""
-"! If things aren't going quite as expected, we're happy to help -- please "
-"reach out to"
-msgstr ""
-"! إذا لم تسر الأمور كما هو متوقع، يسعدنا تقديم المساعدة - يرجى التواصل مع"
+msgid "! If things aren't going quite as expected, we're happy to help -- please reach out to"
+msgstr "! إذا لم تسر الأمور كما هو متوقع، يسعدنا تقديم المساعدة - يرجى التواصل مع"
 
 #: includes/class-wc-sc-settings.php:844
 msgid "\"Coupons with Product\" description"
@@ -87,62 +85,62 @@ msgstr "وصف \"كوبونات مع المنتج\""
 msgid "\"Store Credit Receiver detail\" form not appearing on checkout page?"
 msgstr "نموذج \"تفاصيل مستلم رصيد المتجر\" لا يظهر في صفحة الدفع؟"
 
-#: includes/class-wc-smart-coupons.php:6791
+#: includes/class-wc-smart-coupons.php:6794
 msgid "$coupon is not an object of WC_Coupon"
 msgstr "القسيمة بالدولار الأمريكي ليست كائنًا من WC_Coupon"
 
-#: includes/class-wc-smart-coupons.php:6793
+#: includes/class-wc-smart-coupons.php:6796
 msgid "$coupon is: "
 msgstr "الكوبون بالدولار هو: "
 
-#: includes/class-wc-smart-coupons.php:7469
-#: includes/class-wc-smart-coupons.php:7522
+#: includes/class-wc-smart-coupons.php:7472
+#: includes/class-wc-smart-coupons.php:7525
 msgid "$item is not an object of WC_Order_Item"
 msgstr "$item $ ليس كائنًا من WC_Order_Item"
 
-#: includes/class-wc-smart-coupons.php:7471
-#: includes/class-wc-smart-coupons.php:7524
+#: includes/class-wc-smart-coupons.php:7474
+#: includes/class-wc-smart-coupons.php:7527
 msgid "$item is: "
 msgstr "العنصر $ هو: "
 
-#: includes/class-wc-smart-coupons.php:7614
+#: includes/class-wc-smart-coupons.php:7617
 msgid "$item_id is required"
 msgstr "$item_id مطلوب"
 
-#: includes/class-wc-smart-coupons.php:7316
-#: includes/class-wc-smart-coupons.php:7375
-#: includes/class-wc-smart-coupons.php:7409
-#: includes/class-wc-smart-coupons.php:7438
-#: includes/class-wc-smart-coupons.php:7616
+#: includes/class-wc-smart-coupons.php:7319
+#: includes/class-wc-smart-coupons.php:7378
+#: includes/class-wc-smart-coupons.php:7412
+#: includes/class-wc-smart-coupons.php:7441
+#: includes/class-wc-smart-coupons.php:7619
 msgid "$item_id is: "
 msgstr "$item_id هو: "
 
-#: includes/class-wc-smart-coupons.php:7317
-#: includes/class-wc-smart-coupons.php:7376
-#: includes/class-wc-smart-coupons.php:7410
-#: includes/class-wc-smart-coupons.php:7439
+#: includes/class-wc-smart-coupons.php:7320
+#: includes/class-wc-smart-coupons.php:7379
+#: includes/class-wc-smart-coupons.php:7413
+#: includes/class-wc-smart-coupons.php:7442
 msgid "$item_key is: "
 msgstr "مفتاح_مفتاح_العنصر هو: "
 
-#: includes/class-wc-smart-coupons.php:7193
-#: includes/class-wc-smart-coupons.php:7253
+#: includes/class-wc-smart-coupons.php:7196
+#: includes/class-wc-smart-coupons.php:7256
 msgid "$key is required"
 msgstr "المفتاح بالدولار مطلوب"
 
-#: includes/class-wc-smart-coupons.php:7195
-#: includes/class-wc-smart-coupons.php:7255
+#: includes/class-wc-smart-coupons.php:7198
+#: includes/class-wc-smart-coupons.php:7258
 msgid "$key is: "
 msgstr "المفتاح بالدولار هو: "
 
-#: includes/class-wc-smart-coupons.php:6909
-#: includes/class-wc-smart-coupons.php:7029
-#: includes/class-wc-smart-coupons.php:7148
+#: includes/class-wc-smart-coupons.php:6912
+#: includes/class-wc-smart-coupons.php:7032
+#: includes/class-wc-smart-coupons.php:7151
 msgid "$meta_key is: "
 msgstr "مفتاح_ميتا_مفتاح هو: "
 
-#: includes/class-wc-smart-coupons.php:6908
-#: includes/class-wc-smart-coupons.php:7028
-#: includes/class-wc-smart-coupons.php:7147
+#: includes/class-wc-smart-coupons.php:6911
+#: includes/class-wc-smart-coupons.php:7031
+#: includes/class-wc-smart-coupons.php:7150
 msgid "$post_id is: "
 msgstr "$post_id هو: "
 
@@ -156,7 +154,8 @@ msgid "%1$s %2$s %3$s removed because coupon %4$s is removed."
 msgstr "تمت إزالة %1$$s %2$s %3$s بسبب إزالة القسيمة %4$s."
 
 #. translators: 1. The coupon code, 2. The discount type
-#: includes/class-wc-sc-ajax.php:258 includes/class-wc-sc-settings.php:404
+#: includes/class-wc-sc-ajax.php:258
+#: includes/class-wc-sc-settings.php:404
 msgid "%1$s (Type: %2$s)"
 msgstr "%1$s (النوع: %2$s)"
 
@@ -184,12 +183,8 @@ msgstr "تمت استعادة %1$s من رصيد المتجر بقيمة %1$s إ
 
 #. translators: 1: HTML small tag start 2: HTML small tag end
 #: includes/class-wc-sc-admin-pages.php:1359
-msgid ""
-"%1$s(This will add the same coupon description in all the bulk generated "
-"coupons)%2$s"
-msgstr ""
-"%1$s(سيؤدي هذا إلى إضافة نفس وصف القسيمة في جميع القسائم التي تم إنشاؤها "
-"بالجملة)%2$s"
+msgid "%1$s(This will add the same coupon description in all the bulk generated coupons)%2$s"
+msgstr "%1$s(سيؤدي هذا إلى إضافة نفس وصف القسيمة في جميع القسائم التي تم إنشاؤها بالجملة)%2$s"
 
 #. translators: 1: site title, 2: coupon type (e.g. Store Credit)
 #: includes/emails/class-wc-sc-acknowledgement-email.php:89
@@ -219,55 +214,28 @@ msgstr ""
 
 #. translators: 1. Error title 2. The bulk process
 #: includes/class-wc-sc-background-coupon-importer.php:390
-msgid ""
-"%1$s: The coupon bulk %2$s process stopped. Please review the coupons list "
-"to check the status."
-msgstr ""
-"%1$s: توقفت عملية الكوبونات المجمعة %2$s. يرجى مراجعة قائمة القسائم للتحقق "
-"من الحالة."
+msgid "%1$s: The coupon bulk %2$s process stopped. Please review the coupons list to check the status."
+msgstr "%1$s: توقفت عملية الكوبونات المجمعة %2$s. يرجى مراجعة قائمة القسائم للتحقق من الحالة."
 
 #. translators: 1. Important 2. Upload path
 #: includes/class-wc-sc-background-coupon-importer.php:338
-msgid ""
-"%1$s: To allow bulk generation of coupons, please make sure %2$s directory "
-"is writable."
-msgstr ""
-"%1$s: للسماح بإنشاء القسائم بالجملة، يرجى التأكد من أن دليل %2$s قابل "
-"للكتابة."
+msgid "%1$s: To allow bulk generation of coupons, please make sure %2$s directory is writable."
+msgstr "%1$s: للسماح بإنشاء القسائم بالجملة، يرجى التأكد من أن دليل %2$s قابل للكتابة."
 
 #. translators: 1. Message type 2. Functionality name "Bulk Generate" 3. Functionality name "Import-Export"
 #: includes/class-wc-sc-admin-notifications.php:292
-msgid ""
-"%1$s: To ensure %2$s and %3$s work correctly, contact your system "
-"administrator or host provider to resolve below:"
-msgstr ""
-"%1$s: للتأكد من عمل %2$s و %3$s بشكل صحيح، اتصل بمسؤول النظام أو موفر خدمة "
-"المضيف لحل المشكلة أدناه:"
+msgid "%1$s: To ensure %2$s and %3$s work correctly, contact your system administrator or host provider to resolve below:"
+msgstr "%1$s: للتأكد من عمل %2$s و %3$s بشكل صحيح، اتصل بمسؤول النظام أو موفر خدمة المضيف لحل المشكلة أدناه:"
 
 #. translators: 1: WooCommerce Smart Coupons 2: Link for the Smart Coupons settings
 #: includes/class-wc-sc-admin-notifications.php:260
-msgid ""
-"%1$s: You are using a custom coupon style which is planned to be removed "
-"from the plugin in upcoming versions. New, improved styles & colors are "
-"added in the version 4.9.0. We would request you to choose a color scheme & "
-"a style for coupon from the newly added colors & styles. You can do this "
-"from %2$s."
-msgstr ""
-"%1$s: أنت تستخدم نمط قسيمة مخصص من المخطط إزالته من الإضافة في الإصدارات "
-"القادمة. تمت إضافة أنماط وألوان جديدة ومحسنة في الإصدار 4.9.0. نطلب منك "
-"اختيار نظام ألوان ونمط للقسيمة من الألوان والأنماط المضافة حديثًا. يمكنك "
-"القيام بذلك من %2$s."
+msgid "%1$s: You are using a custom coupon style which is planned to be removed from the plugin in upcoming versions. New, improved styles & colors are added in the version 4.9.0. We would request you to choose a color scheme & a style for coupon from the newly added colors & styles. You can do this from %2$s."
+msgstr "%1$s: أنت تستخدم نمط قسيمة مخصص من المخطط إزالته من الإضافة في الإصدارات القادمة. تمت إضافة أنماط وألوان جديدة ومحسنة في الإصدار 4.9.0. نطلب منك اختيار نظام ألوان ونمط للقسيمة من الألوان والأنماط المضافة حديثًا. يمكنك القيام بذلك من %2$s."
 
 #. translators: 1$-2$: opening and closing <strong> tags, 3$-4$: link tags, takes to woocommerce plugin on wp.org, 5$-6$: opening and closing link tags, leads to plugins.php in admin.
 #: woocommerce-smart-coupons.php:61
-msgid ""
-"%1$sWooCommerce Smart Coupons is inactive.%2$s The %3$sWooCommerce "
-"plugin%4$s must be active for the Smart Coupons to work. Please %5$sinstall "
-"& activate WooCommerce &raquo;%6$s"
-msgstr ""
-"%1$1$sWooCommerce Smart Coupons غير نشط.%2$s يجب أن يكون المكون الإضافي "
-"%3$sWooCommerce%4$s نشطاً لكي تعمل القسائم الذكية. الرجاء تثبيت %5$$s وتفعيل "
-"WooCommerce \"%6$s"
+msgid "%1$sWooCommerce Smart Coupons is inactive.%2$s The %3$sWooCommerce plugin%4$s must be active for the Smart Coupons to work. Please %5$sinstall & activate WooCommerce &raquo;%6$s"
+msgstr "%1$1$sWooCommerce Smart Coupons غير نشط.%2$s يجب أن يكون المكون الإضافي %3$sWooCommerce%4$s نشطاً لكي تعمل القسائم الذكية. الرجاء تثبيت %5$$s وتفعيل WooCommerce \"%6$s"
 
 #. translators: %s: Plugin name
 #: includes/class-wc-sc-admin-notifications.php:482
@@ -321,8 +289,7 @@ msgstr "٪s لأن PayPal لا يقبل الخصم على الشحن والضر�
 
 #. translators: %s: Plugin name
 #: includes/class-wc-sc-admin-notifications.php:533
-msgid ""
-"%s database update completed. Thank you for updating to the latest version!"
+msgid "%s database update completed. Thank you for updating to the latest version!"
 msgstr "اكتمل تحديث %s قاعدة البيانات. شكراً لك على التحديث إلى أحدث إصدار!"
 
 #. translators: %s: Label for store credit
@@ -331,12 +298,12 @@ msgid "%s discount is inclusive of tax"
 msgstr "النسبة المئوية للخصم شاملة الضريبة"
 
 #. translators: 1. The discount text
-#: includes/class-wc-smart-coupons.php:1977
+#: includes/class-wc-smart-coupons.php:1986
 msgid "%s discount on anything you want."
 msgstr "خصم % على أي شيء تريده"
 
 #. translators: 1. The discount text
-#: includes/class-wc-smart-coupons.php:1979
+#: includes/class-wc-smart-coupons.php:1988
 msgid "%s discount on entire store."
 msgstr "خصم % على المتجر بالكامل."
 
@@ -364,12 +331,8 @@ msgstr "%هل تشمل الضريبة؟"
 
 #. translators: %s: Plugin name
 #: includes/class-wc-sc-admin-notifications.php:520
-msgid ""
-"%s is updating the database in the background. The database update process "
-"may take a little while, so please be patient."
-msgstr ""
-"يقوم %s بتحديث قاعدة البيانات في الخلفية. قد تستغرق عملية تحديث قاعدة "
-"البيانات بعض الوقت، لذا يرجى التحلي بالصبر."
+msgid "%s is updating the database in the background. The database update process may take a little while, so please be patient."
+msgstr "يقوم %s بتحديث قاعدة البيانات في الخلفية. قد تستغرق عملية تحديث قاعدة البيانات بعض الوقت، لذا يرجى التحلي بالصبر."
 
 #. translators: %s: singular name for store credit
 #: includes/class-wc-sc-display-coupons.php:753
@@ -408,9 +371,7 @@ msgstr "&amp;"
 
 #: includes/class-wc-sc-admin-pages.php:1285
 msgid "(Add to store and email generated coupons to recipients)"
-msgstr ""
-"(إضافة إلى المتجر وإرسال القسائم التي تم إنشاؤها بالبريد الإلكتروني إلى "
-"المستلمين)"
+msgstr "(إضافة إلى المتجر وإرسال القسائم التي تم إنشاؤها بالبريد الإلكتروني إلى المستلمين)"
 
 #: includes/class-wc-sc-admin-coupons-dashboard-actions.php:199
 msgid "(Copy)"
@@ -439,26 +400,13 @@ msgid "--:--:--"
 msgstr "--:--:--"
 
 #: includes/class-wc-sc-admin-welcome.php:563
-msgid ""
-". If still the issue persist, temporarily de-activate all plugins except "
-"WooCommerce & Smart Coupons. Re-check the issue, if the issue still persists,"
-" contact us (from the link at the end of this page). If the issue goes away, "
-"re-activate other plugins one-by-one & re-checking the fields, to find out "
-"which plugin is conflicting."
-msgstr ""
-". إذا استمرت المشكلة، قم بإلغاء تنشيط جميع الإضافات مؤقتًا باستثناء "
-"WooCommerce والقسائم الذكية. أعد التحقق من المشكلة، إذا استمرت المشكلة، اتصل "
-"بنا (من الرابط في نهاية هذه الصفحة). إذا اختفت المشكلة، أعد تنشيط الإضافات "
-"الأخرى واحدًا تلو الآخر وأعد التحقق من الحقول، لمعرفة الإضافة المتعارضة."
+msgid ". If still the issue persist, temporarily de-activate all plugins except WooCommerce & Smart Coupons. Re-check the issue, if the issue still persists, contact us (from the link at the end of this page). If the issue goes away, re-activate other plugins one-by-one & re-checking the fields, to find out which plugin is conflicting."
+msgstr ". إذا استمرت المشكلة، قم بإلغاء تنشيط جميع الإضافات مؤقتًا باستثناء WooCommerce والقسائم الذكية. أعد التحقق من المشكلة، إذا استمرت المشكلة، اتصل بنا (من الرابط في نهاية هذه الصفحة). إذا اختفت المشكلة، أعد تنشيط الإضافات الأخرى واحدًا تلو الآخر وأعد التحقق من الحقول، لمعرفة الإضافة المتعارضة."
 
 #. translators: Documentation link for 'How to Apply Single or Multiple Coupons on Click of a Link'
 #: includes/class-wc-sc-admin-welcome.php:580
-msgid ""
-". Replace www.mysite.com with your own site URL and replace discount5 with "
-"the your coupon code."
-msgstr ""
-". استبدل www.mysite.com بعنوان URL الخاص بموقعك واستبدل discount5 برمز "
-"القسيمة الخاص بك."
+msgid ". Replace www.mysite.com with your own site URL and replace discount5 with the your coupon code."
+msgstr ". استبدل www.mysite.com بعنوان URL الخاص بموقعك واستبدل discount5 برمز القسيمة الخاص بك."
 
 #: includes/class-wc-sc-coupon-fields.php:1109
 msgid "0.00"
@@ -474,97 +422,83 @@ msgstr "10"
 
 #. Description of the plugin
 #: woocommerce-smart-coupons.php
-msgid ""
-"<strong>WooCommerce Smart Coupons</strong> lets customers buy gift "
-"certificates, store credits or coupons easily. They can use purchased "
-"credits themselves or gift to someone else."
-msgstr ""
-"تتيح <strong>كوبونات WooCommerce الذكية</strong> للعملاء شراء شهادات الهدايا "
-"أو أرصدة المتجر أو القسائم بسهولة. يمكنهم استخدام الأرصدة المشتراة بأنفسهم "
-"أو إهداؤها لشخص آخر."
+msgid "<strong>WooCommerce Smart Coupons</strong> lets customers buy gift certificates, store credits or coupons easily. They can use purchased credits themselves or gift to someone else."
+msgstr "تتيح <strong>كوبونات WooCommerce الذكية</strong> للعملاء شراء شهادات الهدايا أو أرصدة المتجر أو القسائم بسهولة. يمكنهم استخدام الأرصدة المشتراة بأنفسهم أو إهداؤها لشخص آخر."
 
 #. translators: 1: Singular name for post type 2: Email
 #: includes/class-wc-sc-admin-pages.php:1661
 msgid "[%1$s restricted with email: %2$s]"
 msgstr "[%1$s مقيد بالبريد الإلكتروني: %2$s]"
 
-#: includes/class-wc-smart-coupons.php:3699
+#: includes/class-wc-smart-coupons.php:3708
 msgctxt "[Admin] WooCommerce > Status > Tools"
 msgid "Delete Smart Coupons Custom Table"
 msgstr "حذف جدول القسائم الذكية المخصصة"
 
-#: includes/class-wc-smart-coupons.php:3702
+#: includes/class-wc-smart-coupons.php:3711
 msgctxt "[Admin] WooCommerce > Status > Tools"
 msgid "Note:"
 msgstr "ملاحظة:"
 
 #. translators: Label for discount type Store Credit
-#: includes/class-wc-smart-coupons.php:3688
+#: includes/class-wc-smart-coupons.php:3697
 msgctxt "[Admin] WooCommerce > Status > Tools"
 msgid "Set \"%s\" Meta"
 msgstr "تعيين \"%s\" التعريف \"%s"
 
 #. translators: Table name
-#: includes/class-wc-smart-coupons.php:3704
+#: includes/class-wc-smart-coupons.php:3713
 msgctxt "[Admin] WooCommerce > Status > Tools"
-msgid ""
-"Smart Coupons creates a custom table & fills it with existing coupon data in "
-"such a way that it can query coupons faster. This greatly improves some of "
-"the features of Smart Coupons. This tool will delete the Smart Coupons "
-"custom table - %s. But it will not affect any existing coupon's data. After "
-"deleting the custom table, you'll be shown a notice to update Smart Coupons "
-"database. This will help you regenerate Smart Coupons custom table. Please "
-"ensure the Smart Coupons database update process is completed before "
-"creating/updating/deleting any coupons"
-msgstr ""
-"تقوم الكوبونات الذكية بإنشاء جدول مخصص وتعبئته ببيانات الكوبونات الموجودة "
-"بطريقة تمكنها من الاستعلام عن الكوبونات بشكل أسرع. هذا يحسن بشكل كبير بعض "
-"ميزات القسائم الذكية. ستقوم هذه الأداة بحذف جدول الكوبونات الذكية المخصص - "
-"%s. لكنها لن تؤثر على أي بيانات قسيمة موجودة. بعد حذف الجدول المخصص، سيظهر "
-"لك إشعار لتحديث قاعدة بيانات الكوبونات الذكية. سيساعدك هذا على إعادة إنشاء "
-"جدول الكوبونات الذكية المخصص. يرجى التأكد من اكتمال عملية تحديث قاعدة بيانات "
-"القسائم الذكية قبل إنشاء/تحديث/حذف أي كوبونات"
+msgid "Smart Coupons creates a custom table & fills it with existing coupon data in such a way that it can query coupons faster. This greatly improves some of the features of Smart Coupons. This tool will delete the Smart Coupons custom table - %s. But it will not affect any existing coupon's data. After deleting the custom table, you'll be shown a notice to update Smart Coupons database. This will help you regenerate Smart Coupons custom table. Please ensure the Smart Coupons database update process is completed before creating/updating/deleting any coupons"
+msgstr "تقوم الكوبونات الذكية بإنشاء جدول مخصص وتعبئته ببيانات الكوبونات الموجودة بطريقة تمكنها من الاستعلام عن الكوبونات بشكل أسرع. هذا يحسن بشكل كبير بعض ميزات القسائم الذكية. ستقوم هذه الأداة بحذف جدول الكوبونات الذكية المخصص - %s. لكنها لن تؤثر على أي بيانات قسيمة موجودة. بعد حذف الجدول المخصص، سيظهر لك إشعار لتحديث قاعدة بيانات الكوبونات الذكية. سيساعدك هذا على إعادة إنشاء جدول الكوبونات الذكية المخصص. يرجى التأكد من اكتمال عملية تحديث قاعدة بيانات القسائم الذكية قبل إنشاء/تحديث/حذف أي كوبونات"
 
 #. translators: Label for discount type Store Credit
-#: includes/class-wc-smart-coupons.php:3686
-#: includes/class-wc-smart-coupons.php:3688
-#: includes/class-wc-smart-coupons.php:3690
+#: includes/class-wc-smart-coupons.php:3695
+#: includes/class-wc-smart-coupons.php:3697
+#: includes/class-wc-smart-coupons.php:3699
 msgctxt "[Admin] WooCommerce > Status > Tools"
 msgid "Store Credit"
 msgstr "ائتمان المتجر"
 
 #. translators: Label for discount type Store Credit
-#: includes/class-wc-smart-coupons.php:3690
+#: includes/class-wc-smart-coupons.php:3699
 msgctxt "[Admin] WooCommerce > Status > Tools"
 msgid "This tool will set required meta for discount type \"%s\" (if needed)."
-msgstr ""
-"ستقوم هذه الأداة بتعيين التعريف المطلوب لنوع الخصم \"%s\" (إذا لزم الأمر)."
+msgstr "ستقوم هذه الأداة بتعيين التعريف المطلوب لنوع الخصم \"%s\" (إذا لزم الأمر)."
 
 #. translators: Label for discount type Store Credit
-#: includes/class-wc-smart-coupons.php:3686
+#: includes/class-wc-smart-coupons.php:3695
 msgctxt "[Admin] WooCommerce > Status > Tools"
 msgid "WooCommerce Smart Coupons &minus; \"%s\" meta"
 msgstr "كوبونات WooCommerce الذكية - التعريف \"%s\""
 
-#: includes/class-wc-smart-coupons.php:3698
+#: includes/class-wc-smart-coupons.php:3707
 msgctxt "[Admin] WooCommerce > Status > Tools"
 msgid "WooCommerce Smart Coupons &minus; Custom table"
 msgstr "كوبونات WooCommerce الذكية - جدول مخصص"
 
 #. translators: %s: Preview link
 #. translators: %s: Label for store credit
-#: includes/class-wc-sc-settings.php:680 includes/class-wc-sc-settings.php:689
-#: includes/class-wc-sc-settings.php:698 includes/class-wc-sc-settings.php:707
-#: includes/class-wc-sc-settings.php:716 includes/class-wc-sc-settings.php:823
-#: includes/class-wc-sc-settings.php:835 includes/class-wc-sc-settings.php:845
-#: includes/class-wc-sc-settings.php:855 includes/class-wc-sc-settings.php:865
-#: includes/class-wc-sc-settings.php:891 includes/class-wc-sc-settings.php:900
-#: includes/class-wc-sc-settings.php:910 includes/class-wc-sc-settings.php:919
+#: includes/class-wc-sc-settings.php:680
+#: includes/class-wc-sc-settings.php:689
+#: includes/class-wc-sc-settings.php:698
+#: includes/class-wc-sc-settings.php:707
+#: includes/class-wc-sc-settings.php:716
+#: includes/class-wc-sc-settings.php:823
+#: includes/class-wc-sc-settings.php:835
+#: includes/class-wc-sc-settings.php:845
+#: includes/class-wc-sc-settings.php:855
+#: includes/class-wc-sc-settings.php:865
+#: includes/class-wc-sc-settings.php:891
+#: includes/class-wc-sc-settings.php:900
+#: includes/class-wc-sc-settings.php:910
+#: includes/class-wc-sc-settings.php:919
 msgid "[Preview]"
 msgstr "[معاينة]"
 
 #. translators: %s: Label for store credit, 1: : Label for store credit, 2: Label for store credit, 3: Label for store credit
-#: includes/class-wc-sc-settings.php:499 includes/class-wc-sc-settings.php:510
+#: includes/class-wc-sc-settings.php:499
+#: includes/class-wc-sc-settings.php:510
 msgid "[Read More]"
 msgstr "[اقرأ المزيد]"
 
@@ -572,15 +506,15 @@ msgstr "[اقرأ المزيد]"
 msgid "About Smart Coupons"
 msgstr "نبذة عن الكوبونات الذكية"
 
-#: includes/class-wc-smart-coupons.php:6620
+#: includes/class-wc-smart-coupons.php:6623
 msgid "Account endpoints > Coupons"
 msgstr "نقاط نهاية الحساب &gt; الكوبونات"
 
-#: includes/class-wc-smart-coupons.php:6608
+#: includes/class-wc-smart-coupons.php:6611
 msgid "Acknowledgement email"
 msgstr "رسالة شكر وتقدير"
 
-#: includes/class-wc-smart-coupons.php:1971
+#: includes/class-wc-smart-coupons.php:1980
 msgid "Act before the offer expires."
 msgstr "تصرف قبل انتهاء صلاحية العرض."
 
@@ -655,28 +589,18 @@ msgstr "الفئات"
 
 #: includes/class-wc-sc-admin-notifications.php:762
 msgctxt "Admin notice for available coupons section settings"
-msgid ""
-"⚙️ <strong>New Settings:</strong> Manage visibility of coupons in "
-"Cart/Checkout pages. <br>Configure under <strong>WooCommerce → Settings → "
-"Smart Coupons → Display coupons</strong>."
+msgid "⚙️ <strong>New Settings:</strong> Manage visibility of coupons in Cart/Checkout pages. <br>Configure under <strong>WooCommerce → Settings → Smart Coupons → Display coupons</strong>."
 msgstr ""
 
 #: includes/class-wc-sc-coupon-expiry-reminder.php:246
-msgctxt ""
-"Admin notice message displayed after scheduling a coupon expiry reminder"
+msgctxt "Admin notice message displayed after scheduling a coupon expiry reminder"
 msgid "Expiry reminder scheduled for this coupon."
 msgstr "تذكير بانتهاء الصلاحية المقرر لهذه القسيمة."
 
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:90
 msgctxt "admin setting description"
-msgid ""
-"Specify the number of days before the coupon expiry date when the reminder "
-"email should be sent to the customer. Leave blank for a reminder on the same "
-"expiry day."
-msgstr ""
-"حدد عدد الأيام التي تسبق تاريخ انتهاء صلاحية القسيمة عندما يجب إرسال رسالة "
-"التذكير بالبريد الإلكتروني إلى العميل. اتركها فارغة للتذكير في نفس يوم "
-"انتهاء الصلاحية."
+msgid "Specify the number of days before the coupon expiry date when the reminder email should be sent to the customer. Leave blank for a reminder on the same expiry day."
+msgstr "حدد عدد الأيام التي تسبق تاريخ انتهاء صلاحية القسيمة عندما يجب إرسال رسالة التذكير بالبريد الإلكتروني إلى العميل. اتركها فارغة للتذكير في نفس يوم انتهاء الصلاحية."
 
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:97
 msgctxt "admin setting title"
@@ -684,9 +608,7 @@ msgid "Send reminder X days before expiry"
 msgstr "إرسال تذكير قبل انتهاء الصلاحية بـ X يوماً"
 
 #: includes/class-wc-sc-admin-welcome.php:400
-msgid ""
-"Advanced restrictions - payment, shipping, location, user roles, product "
-"attributes"
+msgid "Advanced restrictions - payment, shipping, location, user roles, product attributes"
 msgstr "قيود متقدمة - الدفع، والشحن، والموقع، وأدوار المستخدم، وسمات المنتج"
 
 #. translators: Link for the plugin 'Aelia Currency Switcher for WooCommerce'
@@ -699,18 +621,12 @@ msgid "After applying the coupon, do these also..."
 msgstr "بعد تطبيق القسيمة، قم بهذه أيضاً..."
 
 #: includes/class-wc-sc-coupon-fields.php:551
-msgid ""
-"after issuance - instead of a fixed expiry date, and at \"Expiry time\" if "
-"set. (Only used for auto-generated coupons)"
-msgstr ""
-"بعد الإصدار - بدلاً من تاريخ انتهاء الصلاحية الثابت، وفي \"وقت انتهاء "
-"الصلاحية\" إذا تم تعيينه. (يُستخدم فقط للقسائم التي يتم إنشاؤها تلقائيًا)"
+msgid "after issuance - instead of a fixed expiry date, and at \"Expiry time\" if set. (Only used for auto-generated coupons)"
+msgstr "بعد الإصدار - بدلاً من تاريخ انتهاء الصلاحية الثابت، وفي \"وقت انتهاء الصلاحية\" إذا تم تعيينه. (يُستخدم فقط للقسائم التي يتم إنشاؤها تلقائيًا)"
 
 #: includes/class-wc-sc-display-coupons.php:2348
 msgctxt "AJAX error fallback message"
-msgid ""
-"Oops! Something went wrong while fetching your coupons. Please try again in "
-"a moment."
+msgid "Oops! Something went wrong while fetching your coupons. Please try again in a moment."
 msgstr ""
 
 #: includes/class-wc-sc-coupon-categories.php:92
@@ -736,7 +652,7 @@ msgid "All set, Begin import?"
 msgstr "كل شيء جاهز، ابدأ الاستيراد؟"
 
 #: includes/class-wc-sc-settings.php:918
-#: includes/class-wc-smart-coupons.php:6604
+#: includes/class-wc-smart-coupons.php:6607
 msgid "Allow schedule sending of coupons?"
 msgstr "السماح بجدولة إرسال القسائم؟"
 
@@ -746,7 +662,7 @@ msgid "Allow selling %s at discounted price"
 msgstr "السماح ببيع % بالسعر المخفض"
 
 #: includes/class-wc-sc-settings.php:890
-#: includes/class-wc-smart-coupons.php:6603
+#: includes/class-wc-smart-coupons.php:6606
 msgid "Allow sending of coupons to others"
 msgstr "السماح بإرسال القسائم إلى الآخرين"
 
@@ -786,21 +702,17 @@ msgstr "قطيفة حمراء"
 msgid "Amount"
 msgstr "المبلغ"
 
-#: includes/class-wc-smart-coupons.php:1245
+#: includes/class-wc-smart-coupons.php:1254
 msgid "An error has occurred. Please try again later."
 msgstr "حدث خطأ. يرجى المحاولة مرة أخرى لاحقاً."
 
-#: includes/class-wc-smart-coupons.php:1286
+#: includes/class-wc-smart-coupons.php:1295
 msgid "An error occurred while checking scheduled actions."
 msgstr ""
 
 #: includes/class-wc-sc-coupons-by-payment-method.php:430
 msgid "An error occurred:"
 msgstr "حدث خطأ:"
-
-#: includes/class-wc-sc-url-coupon.php:718
-msgid "An unexpected error occurred."
-msgstr ""
 
 #: includes/class-wc-sc-admin-welcome.php:403
 msgid "and a lot more…"
@@ -833,14 +745,8 @@ msgid "Apply multiple coupons via URL"
 msgstr "تطبيق قسائم متعددة عبر عنوان URL"
 
 #: includes/class-wc-sc-admin-pages.php:215
-msgid ""
-"Are you sure you want to remove the selected items? If you have previously "
-"reduced this item's stock, or this order was submitted by a customer, you "
-"will need to manually restore the item's stock."
-msgstr ""
-"هل أنت متأكد أنك تريد إزالة العناصر المحددة؟ إذا كنت قد قمت بتخفيض مخزون هذا "
-"الصنف سابقاً، أو تم تقديم هذا الطلب من قبل عميل، فستحتاج إلى استعادة مخزون "
-"الصنف يدوياً."
+msgid "Are you sure you want to remove the selected items? If you have previously reduced this item's stock, or this order was submitted by a customer, you will need to manually restore the item's stock."
+msgstr "هل أنت متأكد أنك تريد إزالة العناصر المحددة؟ إذا كنت قد قمت بتخفيض مخزون هذا الصنف سابقاً، أو تم تقديم هذا الطلب من قبل عميل، فستحتاج إلى استعادة مخزون الصنف يدوياً."
 
 #: includes/class-wc-sc-admin-pages.php:272
 msgid "Are you sure you want to revoke access to this download?"
@@ -848,50 +754,31 @@ msgstr "هل أنت متأكد من أنك تريد إلغاء الوصول إل
 
 #. translators: 1. The bulk process
 #: includes/class-wc-sc-background-coupon-importer.php:556
-msgid ""
-"Are you sure you want to stop the coupon bulk %s process? Click OK to stop."
-msgstr ""
-"هل تريد بالتأكيد إيقاف عملية %s الكوبونات المجمعة؟ انقر فوق موافق للإيقاف."
+msgid "Are you sure you want to stop the coupon bulk %s process? Click OK to stop."
+msgstr "هل تريد بالتأكيد إيقاف عملية %s الكوبونات المجمعة؟ انقر فوق موافق للإيقاف."
 
 #: includes/class-wc-sc-admin-pages.php:218
 #: includes/class-wc-sc-coupon-refund-process.php:576
-msgid ""
-"Are you sure you wish to delete this refund? This action cannot be undone."
-msgstr ""
-"هل أنت متأكد من رغبتك في حذف هذا الاسترداد؟ لا يمكن التراجع عن هذا الإجراء."
+msgid "Are you sure you wish to delete this refund? This action cannot be undone."
+msgstr "هل أنت متأكد من رغبتك في حذف هذا الاسترداد؟ لا يمكن التراجع عن هذا الإجراء."
 
 #: includes/class-wc-sc-admin-pages.php:219
-msgid ""
-"Are you sure you wish to delete this tax column? This action cannot be "
-"undone."
-msgstr ""
-"هل أنت متأكد من رغبتك في حذف عمود الضريبة هذا؟ لا يمكن التراجع عن هذا "
-"الإجراء."
+msgid "Are you sure you wish to delete this tax column? This action cannot be undone."
+msgstr "هل أنت متأكد من رغبتك في حذف عمود الضريبة هذا؟ لا يمكن التراجع عن هذا الإجراء."
 
 #: includes/class-wc-sc-coupon-refund-process.php:216
-msgid ""
-"Are you sure you wish to process store credit refund? This action cannot be "
-"undone."
-msgstr ""
-"هل أنت متأكد من رغبتك في معالجة استرداد رصيد المتجر؟ لا يمكن التراجع عن هذا "
-"الإجراء."
+msgid "Are you sure you wish to process store credit refund? This action cannot be undone."
+msgstr "هل أنت متأكد من رغبتك في معالجة استرداد رصيد المتجر؟ لا يمكن التراجع عن هذا الإجراء."
 
 #: includes/class-wc-sc-admin-pages.php:217
-msgid ""
-"Are you sure you wish to process this refund? This action cannot be undone."
-msgstr ""
-"هل أنت متأكد من رغبتك في معالجة هذا الاسترداد؟ لا يمكن التراجع عن هذا "
-"الإجراء."
+msgid "Are you sure you wish to process this refund? This action cannot be undone."
+msgstr "هل أنت متأكد من رغبتك في معالجة هذا الاسترداد؟ لا يمكن التراجع عن هذا الإجراء."
 
 #: includes/class-wc-sc-admin-welcome.php:436
-msgid ""
-"Attach a gift of any value (free or paid product) to a particular coupon. "
-"Here, instead of a discount, a product is redeemed for the coupon code."
-msgstr ""
-"إرفاق هدية بأي قيمة (منتج مجاني أو مدفوع) بقسيمة معينة. هنا، بدلاً من الخصم، "
-"يتم استبدال المنتج برمز القسيمة بدلاً من الخصم."
+msgid "Attach a gift of any value (free or paid product) to a particular coupon. Here, instead of a discount, a product is redeemed for the coupon code."
+msgstr "إرفاق هدية بأي قيمة (منتج مجاني أو مدفوع) بقسيمة معينة. هنا، بدلاً من الخصم، يتم استبدال المنتج برمز القسيمة بدلاً من الخصم."
 
-#: includes/class-wc-smart-coupons.php:1968
+#: includes/class-wc-smart-coupons.php:1977
 msgid "Attention!"
 msgstr "انتباه!"
 
@@ -904,7 +791,7 @@ msgstr "تطبيق القسائم تلقائياً"
 msgid "Auto apply?"
 msgstr "تطبيق تلقائي؟"
 
-#: includes/class-wc-smart-coupons.php:5227
+#: includes/class-wc-smart-coupons.php:5228
 msgid "Auto Generate Coupon"
 msgstr "الإنشاء التلقائي للكوبون"
 
@@ -916,12 +803,12 @@ msgstr "توليد تلقائي؟"
 msgid "auto generated"
 msgstr "تم إنشاؤه تلقائيًا"
 
-#: includes/class-wc-smart-coupons.php:6606
+#: includes/class-wc-smart-coupons.php:6609
 msgid "Auto generated coupon email"
 msgstr "البريد الإلكتروني للقسيمة التي يتم إنشاؤها تلقائياً"
 
 #: includes/class-wc-sc-settings.php:479
-#: includes/class-wc-smart-coupons.php:6598
+#: includes/class-wc-smart-coupons.php:6601
 msgid "Automatic deletion"
 msgstr "الحذف التلقائي"
 
@@ -962,9 +849,7 @@ msgid "Available placeholders: %s"
 msgstr "العناصر النائبة المتاحة: %s"
 
 #: includes/class-wc-sc-admin-notifications.php:247
-msgid ""
-"Awesome, you successfully auto-generated a coupon! Are you having a great "
-"experience with"
+msgid "Awesome, you successfully auto-generated a coupon! Are you having a great experience with"
 msgstr "رائع، لقد نجحت في إنشاء قسيمة تلقائيًا! هل تحظى بتجربة رائعة مع"
 
 #: includes/class-wc-sc-settings.php:668
@@ -987,11 +872,8 @@ msgid "Batch stopped due to health status in task."
 msgstr "توقفت الدفعة بسبب الحالة الصحية في المهمة."
 
 #: includes/class-wc-sc-coupon-import.php:1150
-msgid ""
-"Before you can upload your import file, you will need to fix the following "
-"error:"
-msgstr ""
-"قبل أن تتمكن من تحميل ملف الاستيراد الخاص بك، ستحتاج إلى إصلاح الخطأ التالي:"
+msgid "Before you can upload your import file, you will need to fix the following error:"
+msgstr "قبل أن تتمكن من تحميل ملف الاستيراد الخاص بك، ستحتاج إلى إصلاح الخطأ التالي:"
 
 #: includes/class-wc-sc-coupons-by-location.php:218
 msgid "Billing"
@@ -1014,66 +896,80 @@ msgid "Black Friday"
 msgstr "الجمعة السوداء"
 
 #: blocks/build/js/available-coupons/block.json
+#: blocks/src/js/available-coupons/block.json
 msgctxt "block description"
 msgid "Displays available coupons."
 msgstr "يعرض القسائم المتاحة."
 
 #: blocks/build/js/send-coupon-form/block.json
+#: blocks/src/js/send-coupon-form/block.json
 msgctxt "block description"
 msgid "Displays Send coupon form."
 msgstr "يعرض نموذج إرسال القسيمة."
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:59
+#: blocks/src/js/send-coupon-form/edit.js:63
 msgctxt "Block editor"
 msgid "Deliver coupon"
 msgstr "تسليم القسيمة"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:84
 msgctxt "Block editor"
 msgid "Enter recipient e-mail address"
 msgstr "أدخل عنوان البريد الإلكتروني للمستلم"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:39
 msgctxt "Block editor"
 msgid "Gift to someone else"
 msgstr "هدية لشخص آخر"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:71
 msgctxt "Block editor"
 msgid "later"
 msgstr "فيما بعد"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:88
 msgctxt "Block editor"
 msgid "Message for receiver"
 msgstr "رسالة للمستقبل"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:67
 msgctxt "Block editor"
 msgid "now"
 msgstr "الآن"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:80
 msgctxt "Block editor"
 msgid "Receiver email address"
 msgstr "عنوان البريد الإلكتروني للمستلم"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:30
 msgctxt "Block editor"
 msgid "Send coupons to..."
 msgstr "إرسال القسائم إلى..."
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:53
 msgctxt "Block editor"
 msgid "Send to different people"
 msgstr "الإرسال إلى أشخاص مختلفين"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:35
 msgctxt "Block editor"
 msgid "Send to me"
 msgstr "أرسل لي"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:49
 msgctxt "Block editor"
 msgid "Send to one person"
 msgstr "الإرسال إلى شخص واحد"
@@ -1084,11 +980,13 @@ msgid "WooCommerce Smart Coupons"
 msgstr "كوبونات WooCommerce الذكية"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:92
 msgctxt "Block editor"
 msgid "Write a message"
 msgstr "اكتب رسالة"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:31
 msgctxt "Block editor"
 msgid "Your order contains coupons. What would you like to do?"
 msgstr "طلبك يحتوي على كوبونات. ماذا تريد أن تفعل؟"
@@ -1165,11 +1063,13 @@ msgid "Your order contains coupons. What would you like to do?"
 msgstr "طلبك يحتوي على كوبونات. ماذا تريد أن تفعل؟"
 
 #: blocks/build/js/available-coupons/block.json
+#: blocks/src/js/available-coupons/block.json
 msgctxt "block title"
 msgid "Available coupons"
 msgstr "القسائم المتاحة"
 
 #: blocks/build/js/send-coupon-form/block.json
+#: blocks/src/js/send-coupon-form/block.json
 msgctxt "block title"
 msgid "Send coupon form"
 msgstr "إرسال نموذج القسيمة"
@@ -1191,12 +1091,8 @@ msgid "Bulk generate coupons"
 msgstr "إنشاء القسائم بالجملة"
 
 #: includes/class-wc-sc-background-coupon-importer.php:343
-msgid ""
-"Bulk generation is disabled since uploads directory is not writable. Please "
-"ensure uploads directory is writable before starting bulk generate process."
-msgstr ""
-"تم تعطيل الإنشاء المجمع لأن دليل التحميلات غير قابل للكتابة. يُرجى التأكد من "
-"أن دليل التحميلات قابل للكتابة قبل بدء عملية الإنشاء المجمّع."
+msgid "Bulk generation is disabled since uploads directory is not writable. Please ensure uploads directory is writable before starting bulk generate process."
+msgstr "تم تعطيل الإنشاء المجمع لأن دليل التحميلات غير قابل للكتابة. يُرجى التأكد من أن دليل التحميلات قابل للكتابة قبل بدء عملية الإنشاء المجمّع."
 
 #: includes/batches/class-wc-sc-coupons-expiry-reminder-scheduler.php:181
 msgctxt "button text"
@@ -1224,52 +1120,33 @@ msgid "Create a Combo Coupon"
 msgstr "إنشاء قسيمة كومبو"
 
 #. translators: 1. The discount text
-#: includes/class-wc-smart-coupons.php:1983
+#: includes/class-wc-smart-coupons.php:1992
 msgid "Buy as much as you want. Flat %s off everything."
 msgstr "اشتر قدر ما تريد. خصم ثابت % على كل شيء."
 
 #: includes/class-wc-sc-settings.php:886
-msgid ""
-"Buyers can send purchased coupons to anyone – right while they're checking "
-"out."
-msgstr ""
-"يمكن للمشترين إرسال القسائم التي تم شراؤها إلى أي شخص - مباشرةً أثناء قيامهم "
-"بتسجيل المغادرة."
+msgid "Buyers can send purchased coupons to anyone – right while they're checking out."
+msgstr "يمكن للمشترين إرسال القسائم التي تم شراؤها إلى أي شخص - مباشرةً أثناء قيامهم بتسجيل المغادرة."
 
-#: includes/class-wc-smart-coupons.php:6619
+#: includes/class-wc-smart-coupons.php:6622
 msgid "Calculate coupon discounts sequentially"
 msgstr "حساب خصومات القسيمة بالتتابع"
 
 #: includes/class-wc-sc-admin-pages.php:231
-msgid ""
-"Calculate line taxes? This will calculate taxes based on the customers "
-"country. If no billing/shipping is set it will use the store base country."
-msgstr ""
-"حساب ضرائب الخط؟ سيحسب هذا الضرائب بناءً على بلد العميل. إذا لم يتم تعيين "
-"الفوترة/الشحن، سيستخدم بلد المتجر الأساسي."
+msgid "Calculate line taxes? This will calculate taxes based on the customers country. If no billing/shipping is set it will use the store base country."
+msgstr "حساب ضرائب الخط؟ سيحسب هذا الضرائب بناءً على بلد العميل. إذا لم يتم تعيين الفوترة/الشحن، سيستخدم بلد المتجر الأساسي."
 
 #: includes/class-wc-sc-admin-pages.php:230
 msgid "Calculate totals based on order items, discounts, and shipping?"
 msgstr "حساب المجاميع بناءً على عناصر الطلب والخصومات والشحن؟"
 
 #: includes/class-wc-sc-settings.php:797
-msgid ""
-"Call it something else! Use these to quickly change text labels through your "
-"store. <a href=\"https://woocommerce.com/document/smart-coupons/how-to-"
-"translate-smart-coupons/\" target=\"_blank\">Use translations</a> for "
-"complete control."
-msgstr ""
-"أطلق عليها اسمًا آخر! استخدمها لتغيير التسميات النصية بسرعة من خلال متجرك. "
-"<a href=\"https://woocommerce.com/document/smart-coupons/how-to-translate-"
-"smart-coupons/\" target=\"_blank\">استخدم الترجمات</a> للتحكم الكامل."
+msgid "Call it something else! Use these to quickly change text labels through your store. <a href=\"https://woocommerce.com/document/smart-coupons/how-to-translate-smart-coupons/\" target=\"_blank\">Use translations</a> for complete control."
+msgstr "أطلق عليها اسمًا آخر! استخدمها لتغيير التسميات النصية بسرعة من خلال متجرك. <a href=\"https://woocommerce.com/document/smart-coupons/how-to-translate-smart-coupons/\" target=\"_blank\">استخدم الترجمات</a> للتحكم الكامل."
 
 #: includes/class-wc-sc-admin-welcome.php:574
-msgid ""
-"Can coupon code have any spaces in the name? / My Store Credit/Gift "
-"Certificate is not working (not generating new coupon code)."
-msgstr ""
-"هل يمكن أن يحتوي رمز القسيمة على أي مسافات في الاسم؟ / رصيد متجري/شهادة "
-"الهدية لا يعمل (لا يتم إنشاء رمز قسيمة جديد)."
+msgid "Can coupon code have any spaces in the name? / My Store Credit/Gift Certificate is not working (not generating new coupon code)."
+msgstr "هل يمكن أن يحتوي رمز القسيمة على أي مسافات في الاسم؟ / رصيد متجري/شهادة الهدية لا يعمل (لا يتم إنشاء رمز قسيمة جديد)."
 
 #: includes/class-wc-sc-shortcode.php:930
 msgid "Cancel"
@@ -1283,9 +1160,10 @@ msgstr "كارولينا بلو"
 msgid "Cart"
 msgstr "عربة التسوق"
 
-#: includes/class-wc-sc-ajax.php:343 includes/class-wc-sc-ajax.php:358
-#: includes/class-wc-smart-coupons.php:1454
-#: includes/class-wc-smart-coupons.php:1469
+#: includes/class-wc-sc-ajax.php:343
+#: includes/class-wc-sc-ajax.php:358
+#: includes/class-wc-smart-coupons.php:1463
+#: includes/class-wc-smart-coupons.php:1478
 msgid "Cart Discount"
 msgstr "خصم عربة التسوق"
 
@@ -1325,8 +1203,7 @@ msgstr "غشاش، أليس كذلك؟"
 
 #: includes/class-wc-sc-coupon-message.php:134
 msgid "Check this box to include this message in order confirmation email."
-msgstr ""
-"حدد هذا المربع لتضمين هذه الرسالة في رسالة تأكيد الطلب بالبريد الإلكتروني."
+msgstr "حدد هذا المربع لتضمين هذه الرسالة في رسالة تأكيد الطلب بالبريد الإلكتروني."
 
 #: includes/class-wc-sc-product-fields.php:129
 #: includes/class-wc-sc-product-fields.php:185
@@ -1360,17 +1237,12 @@ msgid "Choose a style for store notice on the website."
 msgstr "اختر نمطاً لإشعار المتجر على الموقع الإلكتروني."
 
 #: includes/class-wc-sc-settings.php:455
-msgid ""
-"Choose order status which will trigger the auto-generation of coupon, if the "
-"order contains product which will generate the coupon."
-msgstr ""
-"اختر حالة الطلب التي ستؤدي إلى الإنشاء التلقائي للقسيمة، إذا كان الطلب يحتوي "
-"على منتج سيؤدي إلى إنشاء القسيمة."
+msgid "Choose order status which will trigger the auto-generation of coupon, if the order contains product which will generate the coupon."
+msgstr "اختر حالة الطلب التي ستؤدي إلى الإنشاء التلقائي للقسيمة، إذا كان الطلب يحتوي على منتج سيؤدي إلى إنشاء القسيمة."
 
 #: includes/class-wc-sc-coupons-by-product-quantity.php:127
 msgid "Choose whether to validate the quantity, cart-wise or product-wise"
-msgstr ""
-"اختر ما إذا كنت تريد التحقق من صحة الكمية، من حيث الكمية أو من حيث المنتج"
+msgstr "اختر ما إذا كنت تريد التحقق من صحة الكمية، من حيث الكمية أو من حيث المنتج"
 
 #: includes/emails/class-wc-sc-email.php:109
 msgid "Choose which format of email to send."
@@ -1384,7 +1256,7 @@ msgstr "تم اختياره"
 msgid "Christmas"
 msgstr "عيد الميلاد"
 
-#: includes/class-wc-smart-coupons.php:3676
+#: includes/class-wc-smart-coupons.php:3685
 msgid "Clear Smart Coupons Cache"
 msgstr "مسح ذاكرة التخزين المؤقت للقسائم الذكية"
 
@@ -1407,7 +1279,8 @@ msgstr "انقر للتبديل"
 
 #: includes/class-wc-sc-shortcode.php:607
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:470
-#: templates/combined-email.php:199 templates/email.php:179
+#: templates/combined-email.php:199
+#: templates/email.php:179
 msgid "Click to visit store. This coupon will be applied automatically."
 msgstr "انقر لزيارة المتجر. سيتم تطبيق هذه القسيمة تلقائياً."
 
@@ -1424,11 +1297,11 @@ msgid "Colors"
 msgstr "الألوان"
 
 #: includes/class-wc-sc-settings.php:928
-#: includes/class-wc-smart-coupons.php:6605
+#: includes/class-wc-smart-coupons.php:6608
 msgid "Combine emails"
 msgstr "دمج رسائل البريد الإلكتروني"
 
-#: includes/class-wc-smart-coupons.php:6607
+#: includes/class-wc-smart-coupons.php:6610
 msgid "Combined auto generated coupons email"
 msgstr "البريد الإلكتروني المدمج للقسائم التي يتم إنشاؤها تلقائياً"
 
@@ -1454,12 +1327,8 @@ msgid "Copy"
 msgstr "نسخ"
 
 #: includes/class-wc-sc-admin-pages.php:232
-msgid ""
-"Copy billing information to shipping information? This will remove any "
-"currently entered shipping information."
-msgstr ""
-"نسخ معلومات الفوترة إلى معلومات الشحن؟ سيؤدي ذلك إلى إزالة أي معلومات شحن تم "
-"إدخالها حالياً."
+msgid "Copy billing information to shipping information? This will remove any currently entered shipping information."
+msgstr "نسخ معلومات الفوترة إلى معلومات الشحن؟ سيؤدي ذلك إلى إزالة أي معلومات شحن تم إدخالها حالياً."
 
 #: includes/class-wc-sc-coupon-fields.php:1544
 #: includes/class-wc-sc-coupon-fields.php:1554
@@ -1479,14 +1348,8 @@ msgid "Copy this coupon code"
 msgstr "انسخ رمز القسيمة"
 
 #: includes/class-wc-sc-admin-pages.php:271
-msgid ""
-"Could not grant access - the user may already have permission for this file "
-"or billing email is not set. Ensure the billing email is set, and the order "
-"has been saved."
-msgstr ""
-"تعذر منح حق الوصول - قد يكون لدى المستخدم صلاحية لهذا الملف بالفعل أو لم يتم "
-"تعيين البريد الإلكتروني للفوترة. تأكد من تعيين البريد الإلكتروني الخاص "
-"بالفوترة وحفظ الطلب."
+msgid "Could not grant access - the user may already have permission for this file or billing email is not set. Ensure the billing email is set, and the order has been saved."
+msgstr "تعذر منح حق الوصول - قد يكون لدى المستخدم صلاحية لهذا الملف بالفعل أو لم يتم تعيين البريد الإلكتروني للفوترة. تأكد من تعيين البريد الإلكتروني الخاص بالفوترة وحفظ الطلب."
 
 #: includes/class-wc-sc-coupon-fields.php:1417
 msgid "Could not locate WooCommerce"
@@ -1505,11 +1368,15 @@ msgstr "قسيمة"
 
 #: includes/class-wc-sc-privacy.php:371
 #: includes/emails/class-wc-sc-acknowledgement-email.php:346
-#: templates/acknowledgement-email.php:66 templates/coupon-design/basic.php:49
-#: templates/coupon-design/clipper.php:48 templates/coupon-design/cutout.php:65
-#: templates/coupon-design/deal.php:39 templates/coupon-design/deliver.php:44
+#: templates/acknowledgement-email.php:66
+#: templates/coupon-design/basic.php:49
+#: templates/coupon-design/clipper.php:48
+#: templates/coupon-design/cutout.php:65
+#: templates/coupon-design/deal.php:39
+#: templates/coupon-design/deliver.php:44
 #: templates/coupon-design/shipment.php:43
-#: templates/coupon-design/special.php:68 templates/coupon-design/ticket.php:40
+#: templates/coupon-design/special.php:68
+#: templates/coupon-design/ticket.php:40
 #: templates/plain/acknowledgement-email.php:56
 msgid "Coupon"
 msgid_plural "Coupons"
@@ -1521,12 +1388,12 @@ msgstr[4] ""
 msgstr[5] ""
 
 #. translators: The coupon code
-#: includes/class-wc-smart-coupons.php:3801
+#: includes/class-wc-smart-coupons.php:3810
 msgid "Coupon %s is valid for a new user only, hence removed."
 msgstr "الكوبون %s صالح لمستخدم جديد فقط، وبالتالي تمت إزالته."
 
 #: includes/class-wc-sc-privacy.php:589
-#: includes/class-wc-smart-coupons.php:5629
+#: includes/class-wc-smart-coupons.php:5633
 msgid "Coupon Amount"
 msgstr "مبلغ الكوبون"
 
@@ -1550,12 +1417,12 @@ msgstr "توليد الكوبونات بالجملة"
 msgid "Coupon categories"
 msgstr "فئات الكوبونات"
 
-#: includes/class-wc-smart-coupons.php:5651
+#: includes/class-wc-smart-coupons.php:5655
 msgid "Coupon Category"
 msgstr "فئة الكوبون"
 
 #: includes/class-wc-sc-privacy.php:586
-#: includes/class-wc-smart-coupons.php:5617
+#: includes/class-wc-smart-coupons.php:5621
 msgid "Coupon Code"
 msgstr "كوبون الكوبون"
 
@@ -1565,21 +1432,13 @@ msgstr "رمز القسيمة"
 
 #. translators: 1. The coupon code 2. The text 'payment method/s' 3. List of payment method names 4. Link to the checkout page
 #: includes/class-wc-sc-coupons-by-payment-method.php:210
-msgid ""
-"Coupon code %1$s has been removed. It is valid only for %2$s: %3$s. You can "
-"change the payment method from the %4$s page."
-msgstr ""
-"تمت إزالة رمز القسيمة %1$s. وهو صالح فقط لـ %2$s: %3$s. يمكنك تغيير طريقة "
-"الدفع من صفحة %4$s."
+msgid "Coupon code %1$s has been removed. It is valid only for %2$s: %3$s. You can change the payment method from the %4$s page."
+msgstr "تمت إزالة رمز القسيمة %1$s. وهو صالح فقط لـ %2$s: %3$s. يمكنك تغيير طريقة الدفع من صفحة %4$s."
 
 #. translators: 1. The coupon code 2. The text 'payment method/s' 3. List of payment method names 4. Link to the checkout page
 #: includes/class-wc-sc-coupons-by-payment-method.php:214
-msgid ""
-"Coupon code %1$s is valid only for %2$s: %3$s. You can change payment method "
-"from the %4$s page."
-msgstr ""
-"رمز القسيمة %1$s صالح فقط لـ %2$s: %3$s. يمكنك تغيير طريقة الدفع من صفحة "
-"%4$s."
+msgid "Coupon code %1$s is valid only for %2$s: %3$s. You can change payment method from the %4$s page."
+msgstr "رمز القسيمة %1$s صالح فقط لـ %2$s: %3$s. يمكنك تغيير طريقة الدفع من صفحة %4$s."
 
 #: includes/class-wc-sc-privacy.php:107
 msgid "Coupon code generated for you"
@@ -1589,7 +1448,8 @@ msgstr "رمز القسيمة الذي تم إنشاؤه لك"
 msgid "Coupon code passed via URL"
 msgstr "تم تمرير رمز القسيمة عبر عنوان URL"
 
-#: templates/plain/combined-email.php:97 templates/plain/email.php:92
+#: templates/plain/combined-email.php:97
+#: templates/plain/email.php:92
 #: templates/plain/expiry-reminder-email.php:73
 msgid "Coupon Code:"
 msgstr "رمز القسيمة:"
@@ -1622,17 +1482,17 @@ msgstr "هذه قسيمة كوبونات ذكية وهمية لمعاينة ال
 msgid "Coupon Description "
 msgstr "وصف الكوبون "
 
-#: includes/class-wc-smart-coupons.php:1613
+#: includes/class-wc-smart-coupons.php:1622
 msgid "Coupon details unavailable at the moment."
 msgstr ""
 
 #: includes/class-wc-sc-settings.php:489
-#: includes/class-wc-smart-coupons.php:6599
+#: includes/class-wc-smart-coupons.php:6602
 msgid "Coupon emails"
 msgstr "رسائل البريد الإلكتروني الخاصة بالقسائم"
 
 #: includes/class-wc-sc-coupon-fields.php:412
-#: includes/class-wc-smart-coupons.php:5238
+#: includes/class-wc-smart-coupons.php:5239
 msgid "Coupon expiry time"
 msgstr "وقت انتهاء صلاحية القسيمة"
 
@@ -1718,9 +1578,7 @@ msgid "Coupon For"
 msgstr "قسيمة شراء"
 
 #: includes/class-wc-sc-coupon-import.php:833
-msgid ""
-"Coupon generation is already in progress. You’ll be able to generate again "
-"only after it is completed."
+msgid "Coupon generation is already in progress. You’ll be able to generate again only after it is completed."
 msgstr ""
 
 #: includes/class-wc-sc-background-coupon-importer.php:582
@@ -1736,7 +1594,7 @@ msgstr "خطأ في استيراد الكوبون"
 msgid "Coupon is not valid for the"
 msgstr "القسيمة غير صالحة لـ"
 
-#: includes/class-wc-smart-coupons.php:5232
+#: includes/class-wc-smart-coupons.php:5233
 msgid "Coupon Is Visible Storewide"
 msgstr "الكوبون مرئي في جميع أنحاء المتجر"
 
@@ -1759,7 +1617,7 @@ msgid "Coupon Received"
 msgstr "الكوبون المستلم"
 
 #. translators: The coupon code
-#: includes/class-wc-smart-coupons.php:3864
+#: includes/class-wc-smart-coupons.php:3873
 msgid "Coupon removed. There is no credit remaining in %s."
 msgstr "تمت إزالة الكوبون. لا يوجد رصيد متبقي في %s."
 
@@ -1767,11 +1625,11 @@ msgstr "تمت إزالة الكوبون. لا يوجد رصيد متبقي في
 msgid "Coupon shareable link"
 msgstr "رابط الكوبون القابل للمشاركة"
 
-#: includes/class-wc-smart-coupons.php:5228
+#: includes/class-wc-smart-coupons.php:5229
 msgid "Coupon Title Prefix"
 msgstr "بادئة عنوان الكوبون"
 
-#: includes/class-wc-smart-coupons.php:5229
+#: includes/class-wc-smart-coupons.php:5230
 msgid "Coupon Title Suffix"
 msgstr "لاحقة عنوان الكوبون"
 
@@ -1779,7 +1637,7 @@ msgstr "لاحقة عنوان الكوبون"
 msgid "Coupon usage limit has been reached."
 msgstr "تم الوصول إلى حد استخدام الكوبون."
 
-#: includes/class-wc-smart-coupons.php:5225
+#: includes/class-wc-smart-coupons.php:5226
 msgid "Coupon Validity"
 msgstr "صلاحية الكوبون"
 
@@ -1788,18 +1646,12 @@ msgid "Coupon value same as product's price?"
 msgstr "قيمة الكوبون نفس سعر المنتج؟"
 
 #: includes/class-wc-sc-coupons-by-payment-method.php:119
-msgid ""
-"Coupon will apply only if any of the selected payment methods are used "
-"during checkout."
-msgstr ""
-"لن يطبق الكوبون إلا في حالة استخدام أي من طرق الدفع المحددة أثناء الدفع."
+msgid "Coupon will apply only if any of the selected payment methods are used during checkout."
+msgstr "لن يطبق الكوبون إلا في حالة استخدام أي من طرق الدفع المحددة أثناء الدفع."
 
 #: includes/class-wc-sc-coupons-by-shipping-method.php:118
-msgid ""
-"Coupon will apply only if any of the selected shipping methods are used "
-"during checkout."
-msgstr ""
-"لن يطبق الكوبون إلا في حالة استخدام أي من طرق الشحن المحددة أثناء الدفع."
+msgid "Coupon will apply only if any of the selected shipping methods are used during checkout."
+msgstr "لن يطبق الكوبون إلا في حالة استخدام أي من طرق الشحن المحددة أثناء الدفع."
 
 #: includes/class-wc-sc-admin-pages.php:123
 #: includes/class-wc-sc-admin-pages.php:550
@@ -1836,50 +1688,24 @@ msgstr "تم إنشاء ملف CSV. يمكنك تنزيله من "
 
 #. translators: Link for the plugin 'Aelia Currency Switcher for WooCommerce'
 #: includes/class-wc-sc-admin-welcome.php:647
-msgid ""
-"Currently, Smart Coupons is compatible with %s. But it is not compatible "
-"with any other multi-currency plugin or with WPML."
-msgstr ""
-"في الوقت الحالي، تتوافق القسائم الذكية مع %s. لكنها غير متوافقة مع أي إضافة "
-"أخرى متعددة العملات أو مع WPML."
+msgid "Currently, Smart Coupons is compatible with %s. But it is not compatible with any other multi-currency plugin or with WPML."
+msgstr "في الوقت الحالي، تتوافق القسائم الذكية مع %s. لكنها غير متوافقة مع أي إضافة أخرى متعددة العملات أو مع WPML."
 
 #: includes/class-wc-sc-settings.php:577
 msgid "Custom colors"
 msgstr "ألوان مخصصة"
 
-#: includes/class-wc-smart-coupons.php:5937
+#: includes/class-wc-smart-coupons.php:5941
 msgid "Custom Style"
 msgstr "نمط مخصص"
 
-#: includes/class-wc-smart-coupons.php:5640
+#: includes/class-wc-smart-coupons.php:5644
 msgid "Customer Email"
 msgstr "البريد الإلكتروني للعميل"
 
 #: includes/class-wc-sc-admin-welcome.php:634
-msgid ""
-"Customers can apply store credit on a subscription during purchase of "
-"subscription. If the same store credit has sufficient balance, it'll keep "
-"applying it to renewals till the remainder in store credit is higher than "
-"renewal price. Customers will be able to apply store credit only during "
-"signup. They will not get an option to apply store credit in renewals. But "
-"if the store credit will not have sufficient balance to pay for the renewals,"
-" then the order will go into pending mode. Now when the customer will go to "
-"pay for this renewal order, they'll get an option to apply store credit "
-"again. To activate the subscription again, the customer will have to pay for "
-"the renewals. When the customer is paying for the renewals from their "
-"account, then in that process they can use the same store credit which "
-"didn't have the sufficient balance, again & pay for the remaining amount."
-msgstr ""
-"يمكن للعملاء تطبيق رصيد المتجر على الاشتراك أثناء شراء الاشتراك. إذا كان "
-"رصيد المتجر نفسه يحتوي على رصيد كافٍ، فسيستمر تطبيقه على التجديدات حتى يصبح "
-"الرصيد المتبقي في رصيد المتجر أعلى من سعر التجديد. سيتمكن العملاء من تطبيق "
-"رصيد المتجر فقط أثناء الاشتراك. لن يحصلوا على خيار تطبيق رصيد المتجر في "
-"التجديدات. ولكن إذا لم يكن في رصيد المتجر رصيد كافٍ لدفع ثمن التجديدات، "
-"فسيتحول الطلب إلى الوضع المعلق. الآن عندما يذهب العميل لدفع ثمن طلب التجديد، "
-"سيحصل على خيار تطبيق رصيد المتجر مرة أخرى. لتفعيل الاشتراك مرة أخرى، سيتعين "
-"على العميل دفع ثمن التجديدات. عندما يقوم العميل بالدفع للتجديدات من حسابه، "
-"فيمكنه في هذه العملية استخدام نفس رصيد المتجر الذي لم يكن لديه رصيد كافٍ، "
-"مرة أخرى ودفع المبلغ المتبقي."
+msgid "Customers can apply store credit on a subscription during purchase of subscription. If the same store credit has sufficient balance, it'll keep applying it to renewals till the remainder in store credit is higher than renewal price. Customers will be able to apply store credit only during signup. They will not get an option to apply store credit in renewals. But if the store credit will not have sufficient balance to pay for the renewals, then the order will go into pending mode. Now when the customer will go to pay for this renewal order, they'll get an option to apply store credit again. To activate the subscription again, the customer will have to pay for the renewals. When the customer is paying for the renewals from their account, then in that process they can use the same store credit which didn't have the sufficient balance, again & pay for the remaining amount."
+msgstr "يمكن للعملاء تطبيق رصيد المتجر على الاشتراك أثناء شراء الاشتراك. إذا كان رصيد المتجر نفسه يحتوي على رصيد كافٍ، فسيستمر تطبيقه على التجديدات حتى يصبح الرصيد المتبقي في رصيد المتجر أعلى من سعر التجديد. سيتمكن العملاء من تطبيق رصيد المتجر فقط أثناء الاشتراك. لن يحصلوا على خيار تطبيق رصيد المتجر في التجديدات. ولكن إذا لم يكن في رصيد المتجر رصيد كافٍ لدفع ثمن التجديدات، فسيتحول الطلب إلى الوضع المعلق. الآن عندما يذهب العميل لدفع ثمن طلب التجديد، سيحصل على خيار تطبيق رصيد المتجر مرة أخرى. لتفعيل الاشتراك مرة أخرى، سيتعين على العميل دفع ثمن التجديدات. عندما يقوم العميل بالدفع للتجديدات من حسابه، فيمكنه في هذه العملية استخدام نفس رصيد المتجر الذي لم يكن لديه رصيد كافٍ، مرة أخرى ودفع المبلغ المتبقي."
 
 #: includes/class-wc-sc-settings.php:572
 msgid "Customize color scheme for coupons."
@@ -1910,7 +1736,7 @@ msgid "Deal"
 msgstr "صفقة"
 
 #: includes/class-wc-sc-settings.php:947
-#: includes/class-wc-smart-coupons.php:6610
+#: includes/class-wc-smart-coupons.php:6613
 msgid "Deduct credit/gift before doing tax calculations"
 msgstr "خصم الرصيد/الهدية قبل إجراء حسابات الضرائب"
 
@@ -1936,12 +1762,13 @@ msgstr "تسليم القسيمة"
 msgid "Description"
 msgstr "الوصف"
 
-#: templates/plain/combined-email.php:103 templates/plain/email.php:98
+#: templates/plain/combined-email.php:103
+#: templates/plain/email.php:98
 #: templates/plain/expiry-reminder-email.php:79
 msgid "Description:"
 msgstr "الوصف:"
 
-#: includes/class-wc-smart-coupons.php:5231
+#: includes/class-wc-smart-coupons.php:5232
 msgid "Disable Email Restriction"
 msgstr "تعطيل تقييد البريد الإلكتروني"
 
@@ -1951,15 +1778,12 @@ msgstr "تعطيل تقييد البريد الإلكتروني؟"
 
 #. translators: %s: Explanation of the setting
 #: includes/class-wc-sc-settings.php:471
-msgid ""
-"Disabling this, no coupons will be auto-applied - even if any coupon has "
-"\"Auto apply?\" enabled."
-msgstr ""
-"عند تعطيل ذلك، لن يتم تطبيق أي كوبونات تلقائيًا - حتى إذا تم تمكين \"تطبيق "
-"تلقائي؟"
+msgid "Disabling this, no coupons will be auto-applied - even if any coupon has \"Auto apply?\" enabled."
+msgstr "عند تعطيل ذلك، لن يتم تطبيق أي كوبونات تلقائيًا - حتى إذا تم تمكين \"تطبيق تلقائي؟"
 
-#: includes/class-wc-sc-ajax.php:358 includes/class-wc-sc-settings.php:1279
-#: includes/class-wc-smart-coupons.php:1469
+#: includes/class-wc-sc-ajax.php:358
+#: includes/class-wc-sc-settings.php:1279
+#: includes/class-wc-smart-coupons.php:1478
 msgid "Discount"
 msgstr "خصم"
 
@@ -1967,11 +1791,12 @@ msgstr "خصم"
 msgid "Discount Coupons"
 msgstr "كوبونات الخصم"
 
-#: includes/class-wc-smart-coupons.php:5628
+#: includes/class-wc-smart-coupons.php:5632
 msgid "Discount Type"
 msgstr "نوع الخصم"
 
-#: templates/plain/combined-email.php:83 templates/plain/email.php:78
+#: templates/plain/combined-email.php:83
+#: templates/plain/email.php:78
 #: templates/plain/expiry-reminder-email.php:59
 msgid "Discount:"
 msgstr "خصم:"
@@ -1986,12 +1811,8 @@ msgstr "عرض رسالة للمستخدم"
 
 #. translators: %s: Preview link
 #: includes/class-wc-sc-settings.php:716
-msgid ""
-"Display coupon description along with coupon code (on site as well as in "
-"emails) %s"
-msgstr ""
-"عرض وصف القسيمة مع رمز القسيمة (على الموقع وكذلك في رسائل البريد الإلكتروني) "
-"%s"
+msgid "Display coupon description along with coupon code (on site as well as in emails) %s"
+msgstr "عرض وصف القسيمة مع رمز القسيمة (على الموقع وكذلك في رسائل البريد الإلكتروني) %s"
 
 #: includes/class-wc-sc-settings.php:635
 msgid "Display Coupons"
@@ -2001,15 +1822,15 @@ msgstr "عرض الكوبونات"
 msgid "Display coupons"
 msgstr "عرض القسائم"
 
-#: includes/class-wc-smart-coupons.php:6615
+#: includes/class-wc-smart-coupons.php:6618
 msgid "Display prices during cart and checkout"
 msgstr "عرض الأسعار أثناء عربة التسوق والدفع"
 
-#: includes/class-wc-smart-coupons.php:6614
+#: includes/class-wc-smart-coupons.php:6617
 msgid "Display prices in the shop"
 msgstr "عرض الأسعار في المتجر"
 
-#: includes/class-wc-smart-coupons.php:6617
+#: includes/class-wc-smart-coupons.php:6620
 msgid "Display tax totals"
 msgstr "عرض إجماليات الضرائب"
 
@@ -2022,20 +1843,12 @@ msgid "DIY Tour"
 msgstr "جولة اصنعها بنفسك"
 
 #: includes/class-wc-sc-coupon-fields.php:591
-msgid ""
-"Do not restrict auto-generated coupons to buyer / receiver email, anyone "
-"with the coupon code can use it."
-msgstr ""
-"لا تقصر الكوبونات التي يتم إنشاؤها تلقائيًا على البريد الإلكتروني "
-"للمشتري/المستلم، يمكن لأي شخص لديه رمز القسيمة استخدامه."
+msgid "Do not restrict auto-generated coupons to buyer / receiver email, anyone with the coupon code can use it."
+msgstr "لا تقصر الكوبونات التي يتم إنشاؤها تلقائيًا على البريد الإلكتروني للمشتري/المستلم، يمكن لأي شخص لديه رمز القسيمة استخدامه."
 
 #: includes/class-wc-sc-admin-welcome.php:583
-msgid ""
-"Do not want to tie store credit to be used by only one customer? / Can a "
-"customer send a gift certificate to themselves to pass on to someone else?"
-msgstr ""
-"لا تريد ربط رصيد المتجر لاستخدامه من قبل عميل واحد فقط؟ / هل يمكن للعميل "
-"إرسال شهادة هدية لنفسه لتمريرها إلى شخص آخر؟"
+msgid "Do not want to tie store credit to be used by only one customer? / Can a customer send a gift certificate to themselves to pass on to someone else?"
+msgstr "لا تريد ربط رصيد المتجر لاستخدامه من قبل عميل واحد فقط؟ / هل يمكن للعميل إرسال شهادة هدية لنفسه لتمريرها إلى شخص آخر؟"
 
 #: includes/class-wc-sc-admin-notifications.php:107
 #: includes/class-wc-sc-admin-welcome.php:323
@@ -2046,7 +1859,7 @@ msgstr "المستندات"
 msgid "Does Smart Coupons allow printing of coupon as Gift Card?"
 msgstr "هل تسمح القسائم الذكية بطباعة الكوبونات الذكية كبطاقة هدايا؟"
 
-#: includes/class-wc-smart-coupons.php:1972
+#: includes/class-wc-smart-coupons.php:1981
 msgid "Don&#39;t Miss Out."
 msgstr "لا تفوّت الفرصة."
 
@@ -2067,14 +1880,8 @@ msgid "Edit coupon category"
 msgstr "تحرير فئة القسيمة"
 
 #: includes/class-wc-sc-admin-welcome.php:584
-msgid ""
-"Edit the main coupon which is entered in \"Coupons\" field of the product "
-"edit page, then go to \"Usage Restrictions\" > \"Disable Email Restriction\" "
-"and disable this setting and save the coupon."
-msgstr ""
-"قم بتحرير القسيمة الرئيسية التي تم إدخالها في حقل \"القسائم\" في صفحة تحرير "
-"المنتج، ثم انتقل إلى \"قيود الاستخدام\"&gt; \"تعطيل تقييد البريد "
-"الإلكتروني\" وقم بتعطيل هذا الإعداد واحفظ القسيمة."
+msgid "Edit the main coupon which is entered in \"Coupons\" field of the product edit page, then go to \"Usage Restrictions\" > \"Disable Email Restriction\" and disable this setting and save the coupon."
+msgstr "قم بتحرير القسيمة الرئيسية التي تم إدخالها في حقل \"القسائم\" في صفحة تحرير المنتج، ثم انتقل إلى \"قيود الاستخدام\"&gt; \"تعطيل تقييد البريد الإلكتروني\" وقم بتعطيل هذا الإعداد واحفظ القسيمة."
 
 #: includes/class-wc-sc-coupon-process.php:340
 msgid "Email address"
@@ -2082,14 +1889,11 @@ msgstr "عنوان البريد الإلكتروني"
 
 #: includes/emails/class-wc-sc-email-coupon.php:35
 msgid "Email auto generated coupon to recipients. One email per coupon."
-msgstr ""
-"إرسال قسيمة يتم إنشاؤها تلقائياً عبر البريد الإلكتروني إلى المستلمين. بريد "
-"إلكتروني واحد لكل قسيمة."
+msgstr "إرسال قسيمة يتم إنشاؤها تلقائياً عبر البريد الإلكتروني إلى المستلمين. بريد إلكتروني واحد لكل قسيمة."
 
 #: includes/class-wc-sc-settings.php:490
 msgid "Email auto generated coupons to recipients"
-msgstr ""
-"إرسال القسائم التي يتم إنشاؤها تلقائيًا عبر البريد الإلكتروني إلى المستلمين"
+msgstr "إرسال القسائم التي يتم إنشاؤها تلقائيًا عبر البريد الإلكتروني إلى المستلمين"
 
 #: includes/class-wc-sc-settings.php:619
 msgid "Email coupon"
@@ -2102,9 +1906,7 @@ msgstr "إرسال القسيمة بالبريد الإلكتروني إلى ا�
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:43
 msgctxt "email description"
 msgid "Send a reminder email for coupons approaching expiry."
-msgstr ""
-"أرسل رسالة تذكيرية بالبريد الإلكتروني للقسائم التي قاربت صلاحيتها على "
-"الانتهاء."
+msgstr "أرسل رسالة تذكيرية بالبريد الإلكتروني للقسائم التي قاربت صلاحيتها على الانتهاء."
 
 #: includes/emails/class-wc-sc-email.php:124
 msgid "Email heading"
@@ -2115,14 +1917,13 @@ msgctxt "email heading"
 msgid "Reminder: Your Coupon Are Expiring Soon"
 msgstr "تذكير: قسيمة الشراء الخاصة بك ستنتهي صلاحيتها قريباً"
 
-#: includes/class-wc-sc-url-coupon.php:715
+#: includes/class-wc-sc-url-coupon.php:655
 msgid "Email set in session successfully."
 msgstr "تم تعيين البريد الإلكتروني في الجلسة بنجاح."
 
 #. translators: 1: site title
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:73
 #, fuzzy
-#| msgid "{site_title}: Your Coupon Are About to Expire!"
 msgctxt "email subject"
 msgid "%s: Your Coupon Are About to Expire!"
 msgstr "{Site_title}: الكوبون الخاص بك على وشك الانتهاء!"
@@ -2164,11 +1965,11 @@ msgstr "تمكين الميزة للسماح بطباعة القسائم"
 msgid "Enable store notice for the coupon"
 msgstr "تمكين إشعار المتجر بالقسيمة"
 
-#: includes/class-wc-smart-coupons.php:6612
+#: includes/class-wc-smart-coupons.php:6615
 msgid "Enable taxes"
 msgstr "تمكين الضرائب"
 
-#: includes/class-wc-smart-coupons.php:6618
+#: includes/class-wc-smart-coupons.php:6621
 msgid "Enable the use of coupon codes"
 msgstr "تمكين استخدام أكواد القسائم"
 
@@ -2177,17 +1978,12 @@ msgid "Enable this email notification"
 msgstr "تمكين إشعار البريد الإلكتروني هذا"
 
 #: includes/class-wc-sc-settings.php:919
-msgid ""
-"Enable this to allow buyers to select date & time for delivering the coupon."
+msgid "Enable this to allow buyers to select date & time for delivering the coupon."
 msgstr "قم بتمكين هذا للسماح للمشترين بتحديد تاريخ ووقت تسليم القسيمة."
 
 #: includes/class-wc-sc-coupon-import.php:1040
-msgid ""
-"Enable this to send coupon to recipient's email addresses, provided in "
-"imported file."
-msgstr ""
-"قم بتمكين هذا لإرسال القسيمة إلى عناوين البريد الإلكتروني للمستلمين، "
-"المتوفرة في الملف المستورد."
+msgid "Enable this to send coupon to recipient's email addresses, provided in imported file."
+msgstr "قم بتمكين هذا لإرسال القسيمة إلى عناوين البريد الإلكتروني للمستلمين، المتوفرة في الملف المستورد."
 
 #: includes/class-wc-sc-settings.php:728
 msgid "Enable to show coupons on Cart page."
@@ -2201,7 +1997,7 @@ msgstr ""
 msgid "Enable/Disable"
 msgstr "تمكين/تعطيل"
 
-#: includes/class-wc-smart-coupons.php:1965
+#: includes/class-wc-smart-coupons.php:1974
 msgid "Ending Soon!"
 msgstr "تنتهي قريباً!"
 
@@ -2210,73 +2006,73 @@ msgid "Endpoint for the My Account &rarr; Coupons page"
 msgstr "نقطة النهاية لصفحة حسابي &rarr; صفحة القسائم"
 
 #: includes/class-wc-sc-coupon-fields.php:1150
-#: includes/class-wc-smart-coupons.php:5775
+#: includes/class-wc-smart-coupons.php:5779
 msgctxt "enhanced select"
 msgid "%qty% results are available, use up and down arrow keys to navigate."
 msgstr "%تتوفر نتائج %Qty٪، استخدم مفاتيح الأسهم لأعلى ولأسفل للتنقل."
 
-#: includes/class-wc-smart-coupons.php:5777
+#: includes/class-wc-smart-coupons.php:5781
 msgctxt "enhanced select"
 msgid "Loading failed"
 msgstr "فشل التحميل"
 
 #: includes/class-wc-sc-coupon-fields.php:1159
-#: includes/class-wc-smart-coupons.php:5784
+#: includes/class-wc-smart-coupons.php:5788
 msgctxt "enhanced select"
 msgid "Loading more results&hellip;"
 msgstr "تحميل المزيد من النتائج..."
 
 #: includes/class-wc-sc-coupon-fields.php:1151
-#: includes/class-wc-smart-coupons.php:5776
+#: includes/class-wc-smart-coupons.php:5780
 msgctxt "enhanced select"
 msgid "No matches found"
 msgstr "لم يتم العثور على أي تطابق"
 
 #: includes/class-wc-sc-coupon-fields.php:1149
-#: includes/class-wc-smart-coupons.php:5774
+#: includes/class-wc-smart-coupons.php:5778
 msgctxt "enhanced select"
 msgid "One result is available, press enter to select it."
 msgstr "تتوفر نتيجة واحدة، اضغط على Enter لتحديدها."
 
 #: includes/class-wc-sc-coupon-fields.php:1156
-#: includes/class-wc-smart-coupons.php:5781
+#: includes/class-wc-smart-coupons.php:5785
 msgctxt "enhanced select"
 msgid "Please delete %qty% characters"
 msgstr "يُرجى حذف % كمي % من الأحرف"
 
 #: includes/class-wc-sc-coupon-fields.php:1155
-#: includes/class-wc-smart-coupons.php:5780
+#: includes/class-wc-smart-coupons.php:5784
 msgctxt "enhanced select"
 msgid "Please delete 1 character"
 msgstr "يرجى حذف حرف واحد"
 
 #: includes/class-wc-sc-coupon-fields.php:1154
-#: includes/class-wc-smart-coupons.php:5779
+#: includes/class-wc-smart-coupons.php:5783
 msgctxt "enhanced select"
 msgid "Please enter %qty% or more characters"
 msgstr "الرجاء إدخال % كمي % أو أكثر من الأحرف"
 
 #: includes/class-wc-sc-coupon-fields.php:1153
-#: includes/class-wc-smart-coupons.php:5778
+#: includes/class-wc-smart-coupons.php:5782
 msgctxt "enhanced select"
 msgid "Please enter 1 or more characters"
 msgstr "يرجى إدخال 1 أو أكثر من الأحرف"
 
 #: includes/class-wc-sc-coupon-fields.php:1152
 #: includes/class-wc-sc-coupon-fields.php:1160
-#: includes/class-wc-smart-coupons.php:5785
+#: includes/class-wc-smart-coupons.php:5789
 msgctxt "enhanced select"
 msgid "Searching&hellip;"
 msgstr "البحث..."
 
 #: includes/class-wc-sc-coupon-fields.php:1158
-#: includes/class-wc-smart-coupons.php:5783
+#: includes/class-wc-smart-coupons.php:5787
 msgctxt "enhanced select"
 msgid "You can only select %qty% items"
 msgstr "يمكنك فقط تحديد %كمية % من العناصر"
 
 #: includes/class-wc-sc-coupon-fields.php:1157
-#: includes/class-wc-smart-coupons.php:5782
+#: includes/class-wc-smart-coupons.php:5786
 msgctxt "enhanced select"
 msgid "You can only select 1 item"
 msgstr "يمكنك تحديد عنصر واحد فقط"
@@ -2308,12 +2104,8 @@ msgstr "أدخل بعض النصوص، أو بعض السمات بواسطة أ�
 
 #. translators: 1: Path to setting 2: Setting to set email address 3: Setting for number of coupons to generate
 #: includes/class-wc-sc-admin-pages.php:1291
-msgid ""
-"Enter the email addresses of the recipients separated by comma under %1$1s. "
-"Make sure to match the count of email addresses in %2$2s to %3$3s"
-msgstr ""
-"أدخل عناوين البريد الإلكتروني للمستلمين مفصولة بفاصلة تحت %1$1s. تأكد من "
-"مطابقة عدد عناوين البريد الإلكتروني في %2$2s إلى %3$3s"
+msgid "Enter the email addresses of the recipients separated by comma under %1$1s. Make sure to match the count of email addresses in %2$2s to %3$3s"
+msgstr "أدخل عناوين البريد الإلكتروني للمستلمين مفصولة بفاصلة تحت %1$1s. تأكد من مطابقة عدد عناوين البريد الإلكتروني في %2$2s إلى %3$3s"
 
 #. translators: 1. Error title 2. The bulk process
 #: includes/class-wc-sc-background-coupon-importer.php:390
@@ -2519,7 +2311,7 @@ msgctxt "Error processing request"
 msgid "Error processing request."
 msgstr "خطأ في معالجة الطلب."
 
-#: includes/class-wc-sc-url-coupon.php:772
+#: includes/class-wc-sc-url-coupon.php:707
 msgid "Error updating checkout:"
 msgstr "خطأ في تحديث عملية الدفع:"
 
@@ -2555,15 +2347,15 @@ msgstr "استبعاد السمات"
 msgid "Exclude Product attributes"
 msgstr ""
 
-#: includes/class-wc-smart-coupons.php:5639
+#: includes/class-wc-smart-coupons.php:5643
 msgid "Exclude Product categories"
 msgstr "استبعاد فئات المنتجات المستثناة"
 
-#: includes/class-wc-smart-coupons.php:5637
+#: includes/class-wc-smart-coupons.php:5641
 msgid "Exclude product IDs"
 msgstr "استبعاد معرّفات المنتجات"
 
-#: includes/class-wc-smart-coupons.php:5635
+#: includes/class-wc-smart-coupons.php:5639
 msgid "Exclude Sale Items"
 msgstr "استبعاد عناصر التخفيضات"
 
@@ -2582,7 +2374,7 @@ msgid "Excluded emails"
 msgstr "رسائل البريد الإلكتروني المستبعدة"
 
 #. translators: Discount amount applied on tax
-#: includes/class-wc-smart-coupons.php:3142
+#: includes/class-wc-smart-coupons.php:3151
 msgid "excludes -%s on tax"
 msgstr "باستثناء -% على الضرائب"
 
@@ -2594,7 +2386,8 @@ msgstr ""
 msgid "Expire"
 msgstr "انتهاء الصلاحية"
 
-#: templates/plain/combined-email.php:108 templates/plain/email.php:103
+#: templates/plain/combined-email.php:108
+#: templates/plain/email.php:103
 #: templates/plain/expiry-reminder-email.php:84
 msgid "Expires on:"
 msgstr "تنتهي صلاحيتها على:"
@@ -2603,7 +2396,7 @@ msgstr "تنتهي صلاحيتها على:"
 msgid "Expiry Date"
 msgstr "تاريخ انتهاء الصلاحية"
 
-#: includes/class-wc-smart-coupons.php:5631
+#: includes/class-wc-smart-coupons.php:5635
 msgid "Expiry date"
 msgstr "تاريخ انتهاء الصلاحية"
 
@@ -2615,20 +2408,16 @@ msgstr "قسيمة الطباعة"
 #. translators: %s: Plugin name
 #: includes/batches/class-wc-sc-coupons-expiry-reminder-scheduler.php:191
 msgctxt "Expiry reminder background processing complete info message"
-msgid ""
-"%s Expiry Reminder background processing complete. This message will "
-"automatically disappear but after few seconds upon refresh."
-msgstr ""
-"اكتملت معالجة تذكير انتهاء الصلاحية في الخلفية %s. ستختفي هذه الرسالة "
-"تلقائياً ولكن بعد بضع ثوانٍ عند التحديث."
+msgid "%s Expiry Reminder background processing complete. This message will automatically disappear but after few seconds upon refresh."
+msgstr "اكتملت معالجة تذكير انتهاء الصلاحية في الخلفية %s. ستختفي هذه الرسالة تلقائياً ولكن بعد بضع ثوانٍ عند التحديث."
 
 #. translators: 1: The expiry date
-#: includes/class-wc-smart-coupons.php:1591
+#: includes/class-wc-smart-coupons.php:1600
 msgid "Expiry: %s"
 msgstr "انتهاء الصلاحية: %s"
 
 #: includes/class-wc-sc-admin-pages.php:206
-#: includes/class-wc-smart-coupons.php:4796
+#: includes/class-wc-smart-coupons.php:4797
 msgid "Export"
 msgstr "التصدير"
 
@@ -2641,19 +2430,15 @@ msgstr "التصدير إلى CSV"
 msgid "Failed to create export file."
 msgstr "فشل إنشاء ملف التصدير."
 
-#: includes/class-wc-smart-coupons.php:5165
+#: includes/class-wc-smart-coupons.php:5166
 msgid "Failed to generate export CSV due to internal error."
 msgstr ""
 
 #. translators: 1. Receiver email 2. Coupon code 3. Order id
 #: includes/class-wc-sc-coupon-process.php:1163
-#: includes/class-wc-smart-coupons.php:963
-msgid ""
-"Failed to schedule email to \"%1$s\" for coupon \"%2$s\" received from order "
-"#%3$s."
-msgstr ""
-"فشل في جدولة البريد الإلكتروني إلى \"%1$s\" للقسيمة \"%2$s\" المستلمة من "
-"الطلب #%3$s."
+#: includes/class-wc-smart-coupons.php:974
+msgid "Failed to schedule email to \"%1$s\" for coupon \"%2$s\" received from order #%3$s."
+msgstr "فشل في جدولة البريد الإلكتروني إلى \"%1$s\" للقسيمة \"%2$s\" المستلمة من الطلب #%3$s."
 
 #. translators: 1. Receiver email 2. Coupon code
 #: includes/class-wc-sc-coupon-import.php:733
@@ -2691,7 +2476,7 @@ msgstr "الميزات."
 msgid "Festive"
 msgstr "احتفالية"
 
-#: includes/class-wc-sc-url-coupon.php:778
+#: includes/class-wc-sc-url-coupon.php:713
 msgid "Fetch error:"
 msgstr "خطأ في الإحضار:"
 
@@ -2700,29 +2485,25 @@ msgid "File format seems OK"
 msgstr "يبدو تنسيق الملف على ما يرام"
 
 #. translators: File path
-#: includes/class-wc-smart-coupons.php:5972
-#: includes/class-wc-smart-coupons.php:5980
+#: includes/class-wc-smart-coupons.php:5976
+#: includes/class-wc-smart-coupons.php:5984
 msgid "File not found %s"
 msgstr "لم يتم العثور على الملف %s"
 
 #: includes/class-wc-sc-coupon-import.php:287
-msgid ""
-"File not found. Make sure the file has required permission to read and/or "
-"the file is accessible: "
-msgstr ""
-"لم يتم العثور على الملف. تأكد من أن الملف لديه الإذن المطلوب للقراءة و/أو أن "
-"الملف يمكن الوصول إليه: "
+msgid "File not found. Make sure the file has required permission to read and/or the file is accessible: "
+msgstr "لم يتم العثور على الملف. تأكد من أن الملف لديه الإذن المطلوب للقراءة و/أو أن الملف يمكن الوصول إليه: "
 
 #: includes/class-wc-sc-coupon-import.php:1029
 msgid "File uploaded OK"
 msgstr "تم تحميل الملف موافق"
 
-#: includes/class-wc-smart-coupons.php:4763
+#: includes/class-wc-smart-coupons.php:4764
 msgid "Filter by category"
 msgstr "تصفية حسب الفئة"
 
 #. translators: Email address of users
-#: includes/class-wc-smart-coupons.php:7969
+#: includes/class-wc-smart-coupons.php:7971
 msgid "Find coupons restricted to %s"
 msgstr "البحث عن قسائم مقصورة على %s"
 
@@ -2731,7 +2512,7 @@ msgid "Flat"
 msgstr "مسطحة"
 
 #. translators: 1. The discount text
-#: includes/class-wc-smart-coupons.php:1985
+#: includes/class-wc-smart-coupons.php:1994
 msgid "Flat %s discount on everything today."
 msgstr "خصم ثابت % على كل شيء اليوم."
 
@@ -2753,8 +2534,8 @@ msgstr "لمزيد من التفاصيل يمكنك الرجوع إلى هذه �
 msgid "For new customers?"
 msgstr "للعملاء الجدد؟"
 
-#: includes/class-wc-smart-coupons.php:5233
-#: includes/class-wc-smart-coupons.php:5646
+#: includes/class-wc-smart-coupons.php:5234
+#: includes/class-wc-smart-coupons.php:5650
 msgid "For new user only?"
 msgstr "للمستخدم الجديد فقط؟"
 
@@ -2768,16 +2549,18 @@ msgstr "لبعض المنتجات"
 #: includes/class-wc-sc-display-coupons.php:1081
 #: includes/class-wc-sc-display-coupons.php:2965
 #: includes/class-wc-sc-shortcode.php:542
-#: includes/class-wc-smart-coupons.php:5505
+#: includes/class-wc-smart-coupons.php:5508
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:375
-#: templates/combined-email.php:131 templates/email.php:128
-#: templates/plain/combined-email.php:93 templates/plain/email.php:88
+#: templates/combined-email.php:131
+#: templates/email.php:128
+#: templates/plain/combined-email.php:93
+#: templates/plain/email.php:88
 #: templates/plain/expiry-reminder-email.php:69
 #: templates/print-coupons-default.php:148
 msgid "Free Shipping"
 msgstr "شحن مجاني"
 
-#: includes/class-wc-smart-coupons.php:5630
+#: includes/class-wc-smart-coupons.php:5634
 msgid "Free shipping"
 msgstr "شحن مجاني"
 
@@ -2793,69 +2576,82 @@ msgid "from"
 msgstr "من"
 
 #: includes/class-wc-sc-admin-welcome.php:622
-msgid ""
-"From version 4.11.0, you can add/link coupons to product variations as well. "
-"This feature is not available in a version lower than 4.11.0."
-msgstr ""
-"بدءًا من الإصدار 4.11.0، يمكنك إضافة/ربط القسائم بأشكال المنتجات المختلفة "
-"أيضًا. هذه الميزة غير متوفرة في إصدار أقل من 4.11.0."
+msgid "From version 4.11.0, you can add/link coupons to product variations as well. This feature is not available in a version lower than 4.11.0."
+msgstr "بدءًا من الإصدار 4.11.0، يمكنك إضافة/ربط القسائم بأشكال المنتجات المختلفة أيضًا. هذه الميزة غير متوفرة في إصدار أقل من 4.11.0."
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:235
+#: blocks/src/js/send-coupon-form/block.js:239
 msgctxt "Frontend"
 msgid "Deliver coupon"
 msgstr "تسليم القسيمة"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:262
+#: blocks/src/js/send-coupon-form/block.js:287
 msgctxt "Frontend"
 msgid "Enter recipient e-mail address"
 msgstr "أدخل عنوان البريد الإلكتروني للمستلم"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:207
 msgctxt "Frontend"
 msgid "Gift to someone else"
 msgstr "هدية لشخص آخر"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:267
+#: blocks/src/js/send-coupon-form/block.js:294
 msgctxt "Frontend"
 msgid "Message for receiver"
 msgstr "رسالة للمستقبل"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:259
+#: blocks/src/js/send-coupon-form/block.js:284
 msgctxt "Frontend"
 msgid "Receiver email address"
 msgstr "عنوان البريد الإلكتروني للمستلم"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:195
 msgctxt "Frontend"
 msgid "Send coupons to..."
 msgstr "إرسال القسائم إلى..."
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:225
 msgctxt "Frontend"
 msgid "Send to different people"
 msgstr "الإرسال إلى أشخاص مختلفين"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:202
 msgctxt "Frontend"
 msgid "Send to me"
 msgstr "أرسل لي"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:220
 msgctxt "Frontend"
 msgid "Send to one person"
 msgstr "الإرسال إلى شخص واحد"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:271
+#: blocks/src/js/send-coupon-form/block.js:298
 msgctxt "Frontend"
 msgid "Write a message"
 msgstr "اكتب رسالة"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:197
 msgctxt "Frontend"
 msgid "Your order contains coupons. What would you like to do?"
 msgstr "طلبك يحتوي على كوبونات. ماذا تريد أن تفعل؟"
 
-#: includes/class-wc-sc-settings.php:421 includes/class-wc-sc-settings.php:424
+#: includes/class-wc-sc-settings.php:421
+#: includes/class-wc-sc-settings.php:424
 msgid "General"
 msgstr "جنرال لواء"
 
@@ -2903,13 +2699,8 @@ msgstr "سهم"
 #. translators: 1. Link to jump to 'Order actions' metabox 2. Text 'Order actions' 3. Text 'arrow'
 #: includes/class-wc-sc-display-coupons.php:2646
 msgctxt "Generated coupons metabox - Order edit admin page"
-msgid ""
-"Coupons are not generated for this order. You can regenerate it from %1$s. "
-"Select an appropriate action from the %2$s dropdown menu and hit the %3$s "
-"button next to it."
-msgstr ""
-"لم يتم إنشاء القسائم لهذا الطلب. يمكنك إعادة إنشائها من %1$s. حدد إجراءً "
-"مناسبًا من القائمة المنسدلة %2$s واضغط على الزر %3$s المجاور له."
+msgid "Coupons are not generated for this order. You can regenerate it from %1$s. Select an appropriate action from the %2$s dropdown menu and hit the %3$s button next to it."
+msgstr "لم يتم إنشاء القسائم لهذا الطلب. يمكنك إعادة إنشائها من %1$s. حدد إجراءً مناسبًا من القائمة المنسدلة %2$s واضغط على الزر %3$s المجاور له."
 
 #. translators: 1. Link to jump to 'Order actions' metabox 2. Text 'Order actions' 3. Text 'arrow'
 #: includes/class-wc-sc-display-coupons.php:2646
@@ -2921,18 +2712,13 @@ msgstr "إجراءات الطلب"
 #: includes/class-wc-sc-display-coupons.php:2659
 msgctxt "Generated coupons metabox - Order edit admin page"
 msgid "Select %s to only regenerate coupons. No email will be sent for this."
-msgstr ""
-"حدد %s لإعادة إنشاء القسائم فقط. لن يتم إرسال بريد إلكتروني لهذا الغرض."
+msgstr "حدد %s لإعادة إنشاء القسائم فقط. لن يتم إرسال بريد إلكتروني لهذا الغرض."
 
 #. translators: 1. Label for Order action for regenerating & resending coupons
 #: includes/class-wc-sc-display-coupons.php:2669
 msgctxt "Generated coupons metabox - Order edit admin page"
-msgid ""
-"Select %s to regenerate as well as resend coupons to the recipients via "
-"email."
-msgstr ""
-"حدد %s لإعادة إنشاء القسائم وإعادة إرسالها إلى المستلمين عبر البريد "
-"الإلكتروني."
+msgid "Select %s to regenerate as well as resend coupons to the recipients via email."
+msgstr "حدد %s لإعادة إنشاء القسائم وإعادة إرسالها إلى المستلمين عبر البريد الإلكتروني."
 
 #: includes/class-wc-sc-admin-coupons-dashboard-actions.php:118
 msgid "Get shareable link"
@@ -2943,12 +2729,8 @@ msgid "get this & several other products at a huge discount"
 msgstr "احصل على هذا المنتج والعديد من المنتجات الأخرى بخصم كبير"
 
 #: includes/class-wc-sc-admin-welcome.php:587
-msgid ""
-"Getting 'Page Not Found Error' when accessing Coupons tab from My Account "
-"Page?"
-msgstr ""
-"الحصول على \"خطأ لم يتم العثور على الصفحة\" عند الوصول إلى علامة تبويب "
-"القسائم من صفحة حسابي؟"
+msgid "Getting 'Page Not Found Error' when accessing Coupons tab from My Account Page?"
+msgstr "الحصول على \"خطأ لم يتم العثور على الصفحة\" عند الوصول إلى علامة تبويب القسائم من صفحة حسابي؟"
 
 #: includes/class-wc-sc-admin-welcome.php:434
 msgid "Gift a product via coupon"
@@ -2970,7 +2752,7 @@ msgstr "بطاقة الهدايا"
 msgid "Gift card"
 msgstr "بطاقة الهدايا"
 
-#: includes/class-wc-smart-coupons.php:6611
+#: includes/class-wc-smart-coupons.php:6614
 msgid "Gift Card discount is inclusive of tax"
 msgstr "خصم بطاقة الهدايا شامل الضريبة"
 
@@ -2996,38 +2778,16 @@ msgid "Gift to someone else"
 msgstr "هدية لشخص آخر"
 
 #: includes/class-wc-sc-settings.php:802
-msgid ""
-"Give alternate singular name to Store Credit / Gift Certificate. This label "
-"will only rename Store Credit / Gift Certificate used in the Smart Coupons "
-"plugin. <a href=\"https://woocommerce.com/document/smart-coupons/how-to-"
-"rename-store-credit/\" target=\"_blank\"><small> [Read More] </small></a>"
-msgstr ""
-"إعطاء اسم مفرد بديل لرصيد المتجر/شهادة الهدايا. ستعمل هذه التسمية على إعادة "
-"تسمية رصيد المتجر/شهادة الهدايا المستخدمة في ملحق القسائم الذكية فقط. <a "
-"href=\"https://woocommerce.com/document/smart-coupons/how-to-rename-store-"
-"credit/\" target=\"_blank\"><small> [اقرأ المزيد] </small></a>"
+msgid "Give alternate singular name to Store Credit / Gift Certificate. This label will only rename Store Credit / Gift Certificate used in the Smart Coupons plugin. <a href=\"https://woocommerce.com/document/smart-coupons/how-to-rename-store-credit/\" target=\"_blank\"><small> [Read More] </small></a>"
+msgstr "إعطاء اسم مفرد بديل لرصيد المتجر/شهادة الهدايا. ستعمل هذه التسمية على إعادة تسمية رصيد المتجر/شهادة الهدايا المستخدمة في ملحق القسائم الذكية فقط. <a href=\"https://woocommerce.com/document/smart-coupons/how-to-rename-store-credit/\" target=\"_blank\"><small> [اقرأ المزيد] </small></a>"
 
 #: includes/class-wc-sc-admin-welcome.php:630
-msgid ""
-"Give away a discount or credit on signing up a subscription, give away "
-"recurring discount or credits, apply credit during sign up, automatic "
-"payment for renewals from credit (Note: When using PayPal Standard Gateway, "
-"store credit can be applied only during sign up. Automatic payment for "
-"renewals by credit will not work for PayPal Standard Gateway)."
-msgstr ""
-"منح خصم أو رصيد عند تسجيل الاشتراك، أو منح خصم أو أرصدة متكررة، أو تطبيق "
-"رصيد أثناء التسجيل، أو الدفع التلقائي للتجديدات من الرصيد (ملاحظة: عند "
-"استخدام PayPal Standard Gateway، يمكن تطبيق رصيد المتجر فقط أثناء التسجيل. "
-"لن يعمل الدفع التلقائي للتجديدات عن طريق الائتمان مع PayPal Standard Gateway)"
-"."
+msgid "Give away a discount or credit on signing up a subscription, give away recurring discount or credits, apply credit during sign up, automatic payment for renewals from credit (Note: When using PayPal Standard Gateway, store credit can be applied only during sign up. Automatic payment for renewals by credit will not work for PayPal Standard Gateway)."
+msgstr "منح خصم أو رصيد عند تسجيل الاشتراك، أو منح خصم أو أرصدة متكررة، أو تطبيق رصيد أثناء التسجيل، أو الدفع التلقائي للتجديدات من الرصيد (ملاحظة: عند استخدام PayPal Standard Gateway، يمكن تطبيق رصيد المتجر فقط أثناء التسجيل. لن يعمل الدفع التلقائي للتجديدات عن طريق الائتمان مع PayPal Standard Gateway)."
 
 #: includes/class-wc-sc-admin-welcome.php:450
-msgid ""
-"Give bigger discounts without hurting your profits. Offer a percentage off "
-"coupon upto a particular value. Example -  Flat 50% off upto $100."
-msgstr ""
-"قدم خصومات أكبر دون الإضرار بأرباحك. قدم خصمًا بنسبة مئوية على القسيمة حتى "
-"قيمة معينة. مثال - خصم ثابت 50% حتى 100 دولار."
+msgid "Give bigger discounts without hurting your profits. Offer a percentage off coupon upto a particular value. Example -  Flat 50% off upto $100."
+msgstr "قدم خصومات أكبر دون الإضرار بأرباحك. قدم خصمًا بنسبة مئوية على القسيمة حتى قيمة معينة. مثال - خصم ثابت 50% حتى 100 دولار."
 
 #: includes/class-wc-sc-admin-welcome.php:442
 msgid "Give discounts to customers for next purchase"
@@ -3038,12 +2798,8 @@ msgid "Give plural name for the above singular name."
 msgstr "اذكر اسم الجمع للاسم المفرد أعلاه."
 
 #: includes/class-wc-sc-admin-welcome.php:300
-msgid ""
-"Glad to have you onboard. We hope WooCommerce Smart Coupons adds to your "
-"desired success 🏆"
-msgstr ""
-"يسعدنا انضمامك إلينا. نأمل أن يضيف WooCommerce Smart Coupons إلى نجاحك "
-"المنشود 🏆"
+msgid "Glad to have you onboard. We hope WooCommerce Smart Coupons adds to your desired success 🏆"
+msgstr "يسعدنا انضمامك إلينا. نأمل أن يضيف WooCommerce Smart Coupons إلى نجاحك المنشود 🏆"
 
 #. translators: HTML entity for Right-arrow
 #: includes/class-wc-sc-admin-welcome.php:308
@@ -3051,17 +2807,14 @@ msgid "Go to Coupons dashboard %s"
 msgstr "الانتقال إلى لوحة معلومات الكوبونات %s"
 
 #: includes/class-wc-sc-admin-welcome.php:588
-msgid ""
-"Go to WordPress -> Settings -> Permalinks and click on Save Settings once."
-msgstr ""
-"انتقل إلى ووردبريس -&gt; الإعدادات -&gt; الروابط الثابتة وانقر على حفظ "
-"الإعدادات مرة واحدة."
+msgid "Go to WordPress -> Settings -> Permalinks and click on Save Settings once."
+msgstr "انتقل إلى ووردبريس -&gt; الإعدادات -&gt; الروابط الثابتة وانقر على حفظ الإعدادات مرة واحدة."
 
 #: includes/class-wc-sc-settings.php:548
 msgid "Gold"
 msgstr "الذهب"
 
-#: includes/class-wc-smart-coupons.php:1963
+#: includes/class-wc-smart-coupons.php:1972
 msgid "Great News!"
 msgstr "أخبار رائعة!"
 
@@ -3086,9 +2839,7 @@ msgid "HH:MM"
 msgstr "س.ح: م.م"
 
 #: includes/class-wc-sc-coupon-import.php:1125
-msgid ""
-"Hi there! Upload a CSV file with coupons details to import them into your "
-"shop."
+msgid "Hi there! Upload a CSV file with coupons details to import them into your shop."
 msgstr "مرحباً بكم! قم بتحميل ملف CSV بتفاصيل القسائم لاستيرادها إلى متجرك."
 
 #. translators: 1: plugin name 2: page based text 3: Label for store credit 4: Hide notice text
@@ -3110,14 +2861,8 @@ msgid "How does automatic payment by store credit work with Subscriptions?"
 msgstr "كيف يعمل الدفع التلقائي عن طريق رصيد المتجر مع الاشتراكات؟"
 
 #: includes/class-wc-sc-settings.php:431
-msgid ""
-"How many coupons (at max) should be shown on cart, checkout & my account "
-"page? If set to 0 (zero) then coupons will not be displayed at all on the "
-"website."
-msgstr ""
-"كم عدد القسائم (كحد أقصى) التي يجب أن تظهر على عربة التسوق والدفع وصفحة "
-"حسابي؟ إذا تم الضبط على 0 (صفر) فلن يتم عرض القسائم على الإطلاق على الموقع "
-"الإلكتروني."
+msgid "How many coupons (at max) should be shown on cart, checkout & my account page? If set to 0 (zero) then coupons will not be displayed at all on the website."
+msgstr "كم عدد القسائم (كحد أقصى) التي يجب أن تظهر على عربة التسوق والدفع وصفحة حسابي؟ إذا تم الضبط على 0 (صفر) فلن يتم عرض القسائم على الإطلاق على الموقع الإلكتروني."
 
 #. translators: Documentation link for 'How to Apply Single or Multiple Coupons on Click of a Link'
 #: includes/class-wc-sc-admin-welcome.php:580
@@ -3164,14 +2909,8 @@ msgid "Hurry. Going fast! On the entire range of products."
 msgstr "اسرع تتسارع! على مجموعة كاملة من المنتجات."
 
 #: includes/class-wc-sc-admin-welcome.php:645
-msgid ""
-"I'm using WPML & WPML provides support for multi-currency, but Smart Coupons "
-"only changes currency symbol & the price value remains same. Can Smart "
-"Coupons change the currency symbol and the price value associated with it?"
-msgstr ""
-"أنا أستخدم WPML ويوفر WPML دعمًا للعملات المتعددة، ولكن الكوبونات الذكية "
-"تقوم بتغيير رمز العملة فقط وتظل قيمة السعر كما هي. هل يمكن للقسائم الذكية "
-"تغيير رمز العملة وقيمة السعر المرتبط بها؟"
+msgid "I'm using WPML & WPML provides support for multi-currency, but Smart Coupons only changes currency symbol & the price value remains same. Can Smart Coupons change the currency symbol and the price value associated with it?"
+msgstr "أنا أستخدم WPML ويوفر WPML دعمًا للعملات المتعددة، ولكن الكوبونات الذكية تقوم بتغيير رمز العملة فقط وتظل قيمة السعر كما هي. هل يمكن للقسائم الذكية تغيير رمز العملة وقيمة السعر المرتبط بها؟"
 
 #. translators: 1: ID who refunded
 #: includes/class-wc-sc-coupon-refund-process.php:685
@@ -3179,20 +2918,12 @@ msgid "ID: %d"
 msgstr "المعرف: %د"
 
 #: includes/class-wc-sc-coupon-import.php:1034
-msgid ""
-"If enabled, existing coupons that match by coupon code will be updated. "
-"Coupons that do not exist will be skipped."
-msgstr ""
-"في حالة التمكين، سيتم تحديث القسائم الموجودة التي تتطابق مع رمز القسيمة. "
-"سيتم تخطي القسائم غير الموجودة."
+msgid "If enabled, existing coupons that match by coupon code will be updated. Coupons that do not exist will be skipped."
+msgstr "في حالة التمكين، سيتم تحديث القسائم الموجودة التي تتطابق مع رمز القسيمة. سيتم تخطي القسائم غير الموجودة."
 
 #: includes/class-wc-sc-privacy.php:103
-msgid ""
-"If you are a visitor: We access your billing email address entered during "
-"purchase"
-msgstr ""
-"إذا كنت زائراً نصل إلى عنوان بريدك الإلكتروني الخاص بالفواتير الذي تم إدخاله "
-"أثناء الشراء"
+msgid "If you are a visitor: We access your billing email address entered during purchase"
+msgstr "إذا كنت زائراً نصل إلى عنوان بريدك الإلكتروني الخاص بالفواتير الذي تم إدخاله أثناء الشراء"
 
 #. translators: WooCommerce My Account support link
 #: includes/class-wc-sc-admin-welcome.php:674
@@ -3200,12 +2931,8 @@ msgid "If you are facing any issues, please %s from your WooCommerce account."
 msgstr "إذا كنت تواجه أي مشاكل، يُرجى استخدام %s من حساب WooCommerce الخاص بك."
 
 #: includes/class-wc-sc-privacy.php:102
-msgid ""
-"If you are logged in: We access your billing email address saved in your "
-"account & billing email address entered during purchase"
-msgstr ""
-"إذا قمت بتسجيل الدخول نصل إلى عنوان بريدك الإلكتروني الخاص بالفواتير المحفوظ "
-"في حسابك وعنوان البريد الإلكتروني الخاص بالفواتير الذي تم إدخاله أثناء الشراء"
+msgid "If you are logged in: We access your billing email address saved in your account & billing email address entered during purchase"
+msgstr "إذا قمت بتسجيل الدخول نصل إلى عنوان بريدك الإلكتروني الخاص بالفواتير المحفوظ في حسابك وعنوان البريد الإلكتروني الخاص بالفواتير الذي تم إدخاله أثناء الشراء"
 
 #. translators: 1. File name 2. File download link
 #: includes/class-wc-sc-admin-welcome.php:593
@@ -3213,25 +2940,13 @@ msgid "If you want to import coupon through file, the file should be like"
 msgstr "إذا كنت تريد استيراد قسيمة من خلال ملف، يجب أن يكون الملف مثل"
 
 #: includes/class-wc-sc-coupons-by-location.php:211
-msgid ""
-"If you want to restrict the coupon to certain locations, enter allowed "
-"locations here. Country and state names will be auto-completed. Enter city "
-"names by typing them fully. Partial names are fine too."
-msgstr ""
-"إذا كنت تريد تقييد القسيمة على مواقع معينة، أدخل المواقع المسموح بها هنا. "
-"سيتم إكمال أسماء الدول والولايات تلقائياً. أدخل أسماء المدن عن طريق كتابتها "
-"بالكامل. لا بأس بالأسماء الجزئية أيضاً."
+msgid "If you want to restrict the coupon to certain locations, enter allowed locations here. Country and state names will be auto-completed. Enter city names by typing them fully. Partial names are fine too."
+msgstr "إذا كنت تريد تقييد القسيمة على مواقع معينة، أدخل المواقع المسموح بها هنا. سيتم إكمال أسماء الدول والولايات تلقائياً. أدخل أسماء المدن عن طريق كتابتها بالكامل. لا بأس بالأسماء الجزئية أيضاً."
 
 #. translators: WooCommerce Subscriptions product link
 #: includes/class-wc-sc-admin-welcome.php:411
-msgid ""
-"If your store is using %s and your customer has purchased a subscription "
-"using a Store Credit. If that store credit has balance left in it, store "
-"will automatically use it for renewing that subscription."
-msgstr ""
-"إذا كان متجرك يستخدم %s وقام عميلك بشراء اشتراك باستخدام رصيد المتجر. إذا "
-"كان رصيد المتجر هذا به رصيد متبقي فيه، فسيستخدمه المتجر تلقائيًا لتجديد هذا "
-"الاشتراك."
+msgid "If your store is using %s and your customer has purchased a subscription using a Store Credit. If that store credit has balance left in it, store will automatically use it for renewing that subscription."
+msgstr "إذا كان متجرك يستخدم %s وقام عميلك بشراء اشتراك باستخدام رصيد المتجر. إذا كان رصيد المتجر هذا به رصيد متبقي فيه، فسيستخدمه المتجر تلقائيًا لتجديد هذا الاشتراك."
 
 #: includes/class-wc-sc-admin-pages.php:205
 #: includes/class-wc-sc-coupon-import.php:1044
@@ -3248,12 +2963,8 @@ msgid "Import <strong>coupons</strong> to your store via a csv file."
 msgstr "استورد <strong>القسائم</strong> إلى متجرك عبر ملف csv."
 
 #: includes/class-wc-sc-admin-welcome.php:430
-msgid ""
-"Import and export unique coupons in bulk via CSV. Share coupon codes to deal "
-"sites or email them to your customers."
-msgstr ""
-"استيراد القسائم الفريدة وتصديرها بكميات كبيرة عبر CSV. شارك رموز القسائم على "
-"مواقع الصفقات أو أرسلها بالبريد الإلكتروني إلى عملائك."
+msgid "Import and export unique coupons in bulk via CSV. Share coupon codes to deal sites or email them to your customers."
+msgstr "استيراد القسائم الفريدة وتصديرها بكميات كبيرة عبر CSV. شارك رموز القسائم على مواقع الصفقات أو أرسلها بالبريد الإلكتروني إلى عملائك."
 
 #: includes/class-wc-sc-admin-pages.php:320
 msgid "Import complete - imported"
@@ -3266,9 +2977,7 @@ msgid "Import Coupons"
 msgstr "كوبونات الاستيراد"
 
 #: includes/class-wc-sc-coupon-import.php:828
-msgid ""
-"Import process is already in progress. You’ll be able to import again only "
-"after it is completed."
+msgid "Import process is already in progress. You’ll be able to import again only after it is completed."
 msgstr ""
 
 #. translators: 1. Message type 2. Functionality name "Bulk Generate" 3. Functionality name "Import-Export"
@@ -3283,7 +2992,7 @@ msgstr "الاستيراد والتصدير"
 #: includes/class-wc-sc-admin-notifications.php:292
 #: includes/class-wc-sc-background-coupon-importer.php:338
 #: includes/class-wc-sc-background-coupon-importer.php:405
-#: includes/class-wc-smart-coupons.php:6084
+#: includes/class-wc-smart-coupons.php:6088
 msgid "Important"
 msgstr "مهم"
 
@@ -3307,17 +3016,13 @@ msgstr "تضمين"
 
 #. translators: %s: Preview link
 #: includes/class-wc-sc-settings.php:680
-msgid ""
-"Include coupon details on product's page, for products that issue coupons %s"
-msgstr ""
-"تضمين تفاصيل الكوبونات في صفحة المنتج، بالنسبة للمنتجات التي تصدر كوبونات %s"
+msgid "Include coupon details on product's page, for products that issue coupons %s"
+msgstr "تضمين تفاصيل الكوبونات في صفحة المنتج، بالنسبة للمنتجات التي تصدر كوبونات %s"
 
 #. translators: %s: Preview link
 #: includes/class-wc-sc-settings.php:698
-msgid ""
-"Include coupons received from other people on My Account > Coupons page %s"
-msgstr ""
-"قم بتضمين القسائم المستلمة من أشخاص آخرين في حسابي &gt; صفحة القسائم %s"
+msgid "Include coupons received from other people on My Account > Coupons page %s"
+msgstr "قم بتضمين القسائم المستلمة من أشخاص آخرين في حسابي &gt; صفحة القسائم %s"
 
 #: includes/class-wc-sc-coupon-message.php:133
 msgid "Include in email?"
@@ -3328,25 +3033,21 @@ msgstr "تضمين في البريد الإلكتروني؟"
 msgid "Include tax in the amount of the generated %s"
 msgstr "قم بتضمين الضريبة في مبلغ النسبة المئوية المتولدة"
 
-#: includes/class-wc-smart-coupons.php:6609
+#: includes/class-wc-smart-coupons.php:6612
 msgid "Include tax in the amount of the generated gift card"
 msgstr "قم بتضمين الضريبة في مبلغ بطاقة الهدايا التي تم إنشاؤها"
 
 #. translators: Discount amount applied on tax
-#: includes/class-wc-smart-coupons.php:3145
+#: includes/class-wc-smart-coupons.php:3154
 msgid "includes -%s on tax"
 msgstr "تشمل -% على الضريبة"
 
 #. translators: 1. Coupon code 2. Expiry date
 #: includes/class-wc-sc-coupon-parser.php:420
-msgid ""
-"Incorrect format for expiry date of coupon \"%1$s\". Entered date is %2$s. "
-"Expected date format: YYYY-MM-DD"
-msgstr ""
-"التنسيق غير صحيح لتاريخ انتهاء صلاحية القسيمة \"%1$s\". التاريخ المدخل هو "
-"%2$s. تنسيق التاريخ المتوقع: YYYYY-MMM-DD"
+msgid "Incorrect format for expiry date of coupon \"%1$s\". Entered date is %2$s. Expected date format: YYYY-MM-DD"
+msgstr "التنسيق غير صحيح لتاريخ انتهاء صلاحية القسيمة \"%1$s\". التاريخ المدخل هو %2$s. تنسيق التاريخ المتوقع: YYYYY-MMM-DD"
 
-#: includes/class-wc-smart-coupons.php:5634
+#: includes/class-wc-smart-coupons.php:5638
 msgid "Individual USe"
 msgstr "الاستخدام الفردي"
 
@@ -3373,18 +3074,14 @@ msgid "Invalid amount."
 msgstr "مبلغ غير صالح."
 
 #: includes/class-wc-sc-coupon-import.php:946
-msgid ""
-"Invalid CSV file. Make sure your CSV file contains all columns, header row, "
-"and data in correct format."
-msgstr ""
-"ملف CSV غير صالح. تأكد من احتواء ملف CSV على جميع الأعمدة وصف الرأس "
-"والبيانات بالتنسيق الصحيح."
+msgid "Invalid CSV file. Make sure your CSV file contains all columns, header row, and data in correct format."
+msgstr "ملف CSV غير صالح. تأكد من احتواء ملف CSV على جميع الأعمدة وصف الرأس والبيانات بالتنسيق الصحيح."
 
 #: includes/class-wc-sc-admin-pages.php:828
 msgid "Invalid email address."
 msgstr "عنوان البريد الإلكتروني غير صالح."
 
-#: includes/class-wc-sc-url-coupon.php:708
+#: includes/class-wc-sc-url-coupon.php:648
 msgid "Invalid email format."
 msgstr "تنسيق البريد الإلكتروني غير صالح."
 
@@ -3399,7 +3096,7 @@ msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
 
-#: includes/class-wc-smart-coupons.php:6084
+#: includes/class-wc-smart-coupons.php:6088
 msgid "is active but it will only work with WooCommerce 3.0.0+."
 msgstr "نشط ولكنه لن يعمل إلا مع WooCommerce 3.0.0+."
 
@@ -3408,19 +3105,14 @@ msgid "Is Email Coupon Message"
 msgstr "هي رسالة قسيمة البريد الإلكتروني"
 
 #: includes/class-wc-sc-admin-welcome.php:621
-msgid ""
-"Is it possible to have a coupon for each variation of the variable product?"
+msgid "Is it possible to have a coupon for each variation of the variable product?"
 msgstr "هل من الممكن الحصول على قسيمة لكل شكل من أشكال المنتج المتغير؟"
 
 #: includes/class-wc-sc-admin-welcome.php:637
-msgid ""
-"Is it possible to partially pay for a subscription with store credit and the "
-"remainder by another method?"
-msgstr ""
-"هل من الممكن دفع جزء من قيمة الاشتراك باستخدام رصيد المتجر والباقي بطريقة "
-"أخرى؟"
+msgid "Is it possible to partially pay for a subscription with store credit and the remainder by another method?"
+msgstr "هل من الممكن دفع جزء من قيمة الاشتراك باستخدام رصيد المتجر والباقي بطريقة أخرى؟"
 
-#: includes/class-wc-smart-coupons.php:5230
+#: includes/class-wc-smart-coupons.php:5231
 msgid "Is Pick Price of Product"
 msgstr "هل اختيار سعر المنتج"
 
@@ -3435,24 +3127,16 @@ msgstr "هل الكوبونات الذكية متوافقة مع WPML؟"
 #: includes/class-wc-sc-coupons-by-location.php:239
 #: includes/class-wc-sc-coupons-by-location.php:301
 #, fuzzy
-msgid ""
-"Is that a city name or partial name or ZIP code, you want to match? If so, "
-"press \\\"Enter\\\" to save it as: "
-msgstr ""
-"هل هذا اسم مدينة أو اسم جزئي أو رمز بريدي تريد مطابقته؟ إذا كان الأمر كذلك، "
-"فاضغط على \"Enter\" لحفظه بصيغة: "
+msgid "Is that a city name or partial name or ZIP code, you want to match? If so, press \\\"Enter\\\" to save it as: "
+msgstr "هل هذا اسم مدينة أو اسم جزئي أو رمز بريدي تريد مطابقته؟ إذا كان الأمر كذلك، فاضغط على \"Enter\" لحفظه بصيغة: "
 
 #: includes/class-wc-sc-admin-welcome.php:591
 msgid "Is there any reference file for creating an import file for coupons?"
 msgstr "هل يوجد أي ملف مرجعي لإنشاء ملف استيراد للقسائم؟"
 
 #: includes/class-wc-sc-coupon-import.php:283
-msgid ""
-"It seems PHP extension \"fileinfo\" is either not installed, not configured "
-"or it's not accessible."
-msgstr ""
-"يبدو أن ملحق PHP \"fileinfo\" إما أنه غير مثبت أو غير مهيأ أو لا يمكن الوصول "
-"إليه."
+msgid "It seems PHP extension \"fileinfo\" is either not installed, not configured or it's not accessible."
+msgstr "يبدو أن ملحق PHP \"fileinfo\" إما أنه غير مثبت أو غير مهيأ أو لا يمكن الوصول إليه."
 
 #: includes/class-wc-sc-admin-notifications.php:181
 msgid "it to use"
@@ -3482,7 +3166,8 @@ msgstr "كيبل"
 msgid "Know Smart Coupons"
 msgstr "تعرف على القسائم الذكية"
 
-#: includes/class-wc-sc-settings.php:792 includes/class-wc-sc-settings.php:795
+#: includes/class-wc-sc-settings.php:792
+#: includes/class-wc-sc-settings.php:795
 msgid "Labels"
 msgstr "الملصقات"
 
@@ -3503,12 +3188,8 @@ msgid "Learn how to configure the sale of store credit in any amount"
 msgstr "تعرف على كيفية تهيئة بيع رصيد المتجر بأي مبلغ"
 
 #: includes/class-wc-sc-admin-welcome.php:491
-msgid ""
-"Learn how to create a Buy One, Get One (BOGO) offer to boost sales and "
-"attract customers"
-msgstr ""
-"تعلم كيفية إنشاء عرض اشترِ واحد واحصل على واحد (BOGO) لزيادة المبيعات وجذب "
-"العملاء"
+msgid "Learn how to create a Buy One, Get One (BOGO) offer to boost sales and attract customers"
+msgstr "تعلم كيفية إنشاء عرض اشترِ واحد واحصل على واحد (BOGO) لزيادة المبيعات وجذب العملاء"
 
 #: includes/class-wc-sc-admin-welcome.php:518
 msgid "Learn how to offer Gift Card worth $100 for just $90"
@@ -3525,28 +3206,19 @@ msgstr "تفاصيل أقل"
 
 #. translators: 1: Affiliate For WooCommerce 2: Smart Manager 3: Smart Offers
 #: includes/class-wc-sc-admin-welcome.php:423
-msgid ""
-"Let customers purchase gift cards from you or you issue store credit that "
-"your users can redeem on the current or next purchase. See how: %1$s or %2$s"
-msgstr ""
-"اسمح للعملاء بشراء بطاقات الهدايا منك أو يمكنك إصدار رصيد في المتجر يمكن "
-"للمستخدمين استرداده على عملية الشراء الحالية أو التالية. انظر كيف: %1$s أو "
-"%2$s"
+msgid "Let customers purchase gift cards from you or you issue store credit that your users can redeem on the current or next purchase. See how: %1$s or %2$s"
+msgstr "اسمح للعملاء بشراء بطاقات الهدايا منك أو يمكنك إصدار رصيد في المتجر يمكن للمستخدمين استرداده على عملية الشراء الحالية أو التالية. انظر كيف: %1$s أو %2$s"
 
 #. translators: %s: link to review WooCommerce Smart Coupons
 #: includes/class-wc-sc-admin-notifications.php:333
-msgid ""
-"Liked WooCommerce Smart Coupons? Leave us a %s. A huge thank you from "
-"WooCommerce & StoreApps in advance!"
-msgstr ""
-"هل أعجبتك كوبونات WooCommerce الذكية؟ اترك لنا %s. شكرًا جزيلًا من "
-"WooCommerce و StoreApps مقدمًا!"
+msgid "Liked WooCommerce Smart Coupons? Leave us a %s. A huge thank you from WooCommerce & StoreApps in advance!"
+msgstr "هل أعجبتك كوبونات WooCommerce الذكية؟ اترك لنا %s. شكرًا جزيلًا من WooCommerce و StoreApps مقدمًا!"
 
-#: includes/class-wc-smart-coupons.php:5643
+#: includes/class-wc-smart-coupons.php:5647
 msgid "Limit Usage to X Items"
 msgstr "قصر الاستخدام على عناصر X"
 
-#: includes/class-wc-smart-coupons.php:1966
+#: includes/class-wc-smart-coupons.php:1975
 msgid "Limited Time Offer!"
 msgstr "عرض لفترة محدودة!"
 
@@ -3561,57 +3233,28 @@ msgid "View scheduled action"
 msgstr "عرض الإجراء المقرر"
 
 #: includes/class-wc-sc-display-coupons.php:2715
-msgid ""
-"List of coupons & their details which you have received from the store. "
-"Click on the coupon to see the details."
-msgstr ""
-"قائمة القسائم وتفاصيلها التي استلمتها من المتجر. انقر على القسيمة للاطلاع "
-"على التفاصيل."
+msgid "List of coupons & their details which you have received from the store. Click on the coupon to see the details."
+msgstr "قائمة القسائم وتفاصيلها التي استلمتها من المتجر. انقر على القسيمة للاطلاع على التفاصيل."
 
 #: includes/class-wc-sc-display-coupons.php:1188
-msgid ""
-"List of coupons which are valid & available for use. Click on the coupon to "
-"use it. The coupon discount will be visible only when at least one product "
-"is present in the cart."
-msgstr ""
-"قائمة القسائم الصالحة والمتاحة للاستخدام. انقر على القسيمة لاستخدامها. لن "
-"يظهر خصم القسيمة إلا عند وجود منتج واحد على الأقل في عربة التسوق."
+msgid "List of coupons which are valid & available for use. Click on the coupon to use it. The coupon discount will be visible only when at least one product is present in the cart."
+msgstr "قائمة القسائم الصالحة والمتاحة للاستخدام. انقر على القسيمة لاستخدامها. لن يظهر خصم القسيمة إلا عند وجود منتج واحد على الأقل في عربة التسوق."
 
 #: includes/class-wc-sc-display-coupons.php:1466
-msgid ""
-"List of coupons which can not be used. The reason can be based on its usage "
-"restrictions, usage limits, expiry date."
-msgstr ""
-"قائمة القسائم التي لا يمكن استخدامها. يمكن أن يستند السبب إلى قيود "
-"الاستخدام، وحدود الاستخدام، وتاريخ انتهاء الصلاحية."
+msgid "List of coupons which can not be used. The reason can be based on its usage restrictions, usage limits, expiry date."
+msgstr "قائمة القسائم التي لا يمكن استخدامها. يمكن أن يستند السبب إلى قيود الاستخدام، وحدود الاستخدام، وتاريخ انتهاء الصلاحية."
 
 #: includes/class-wc-sc-coupons-by-excluded-email.php:109
-msgid ""
-"List of excluded billing emails to check against when an order is placed. "
-"Separate email addresses with commas. You can also use an asterisk (*) to "
-"match parts of an email. For example \"*@gmail.com\" would match all gmail "
-"addresses."
-msgstr ""
-"قائمة بعناوين البريد الإلكتروني المستبعدة للفوترة للتحقق منها عند تقديم "
-"الطلب. افصل عناوين البريد الإلكتروني بفاصلات. يمكنك أيضًا استخدام علامة "
-"النجمة (*) لمطابقة أجزاء من البريد الإلكتروني. على سبيل المثال \"*@@gmail."
-"com\" لمطابقة جميع عناوين gmail."
+msgid "List of excluded billing emails to check against when an order is placed. Separate email addresses with commas. You can also use an asterisk (*) to match parts of an email. For example \"*@gmail.com\" would match all gmail addresses."
+msgstr "قائمة بعناوين البريد الإلكتروني المستبعدة للفوترة للتحقق منها عند تقديم الطلب. افصل عناوين البريد الإلكتروني بفاصلات. يمكنك أيضًا استخدام علامة النجمة (*) لمطابقة أجزاء من البريد الإلكتروني. على سبيل المثال \"*@@gmail.com\" لمطابقة جميع عناوين gmail."
 
 #: includes/class-wc-sc-admin-pages.php:233
-msgid ""
-"Load the customer's billing information? This will remove any currently "
-"entered billing information."
-msgstr ""
-"تحميل معلومات الفوترة الخاصة بالعميل؟ سيؤدي ذلك إلى إزالة أي معلومات فوترة "
-"تم إدخالها حالياً."
+msgid "Load the customer's billing information? This will remove any currently entered billing information."
+msgstr "تحميل معلومات الفوترة الخاصة بالعميل؟ سيؤدي ذلك إلى إزالة أي معلومات فوترة تم إدخالها حالياً."
 
 #: includes/class-wc-sc-admin-pages.php:234
-msgid ""
-"Load the customer's shipping information? This will remove any currently "
-"entered shipping information."
-msgstr ""
-"تحميل معلومات الشحن الخاصة بالعميل؟ سيؤدي ذلك إلى إزالة أي معلومات شحن تم "
-"إدخالها حالياً."
+msgid "Load the customer's shipping information? This will remove any currently entered shipping information."
+msgstr "تحميل معلومات الشحن الخاصة بالعميل؟ سيؤدي ذلك إلى إزالة أي معلومات شحن تم إدخالها حالياً."
 
 #: includes/class-wc-sc-coupons-by-location.php:618
 msgid "Locations lookup in"
@@ -3641,8 +3284,7 @@ msgid "Make customer's coupon usage, easy & simple"
 msgstr "اجعل استخدام العميل للقسيمة سهلاً وبسيطاً"
 
 #: includes/class-wc-sc-admin-welcome.php:553
-msgid ""
-"Make sure use of coupon is enabled in your store. You can find this setting"
+msgid "Make sure use of coupon is enabled in your store. You can find this setting"
 msgstr "تأكد من تمكين استخدام القسيمة في متجرك. يمكنك العثور على هذا الإعداد"
 
 #: includes/class-wc-sc-admin-welcome.php:563
@@ -3652,7 +3294,7 @@ msgstr "تأكد من استخدامك لـ "
 #: includes/class-wc-sc-admin-pages.php:1393
 #: includes/class-wc-sc-coupon-categories.php:106
 #: includes/class-wc-sc-coupon-categories.php:166
-#: includes/class-wc-smart-coupons.php:4800
+#: includes/class-wc-smart-coupons.php:4801
 msgid "Manage coupon categories"
 msgstr "إدارة فئات القسائم"
 
@@ -3668,7 +3310,7 @@ msgstr "التسويق"
 msgid "Match for location in"
 msgstr "تطابق الموقع في"
 
-#: includes/class-wc-smart-coupons.php:5234
+#: includes/class-wc-smart-coupons.php:5235
 msgid "Max discount"
 msgstr "الحد الأقصى للخصم"
 
@@ -3685,7 +3327,7 @@ msgstr "الحد الأقصى لحجم الملف"
 msgid "Maximum quantity"
 msgstr "الكمية القصوى"
 
-#: includes/class-wc-smart-coupons.php:5633
+#: includes/class-wc-smart-coupons.php:5637
 msgid "Maximum Spend"
 msgstr "الحد الأقصى للإنفاق"
 
@@ -3693,7 +3335,7 @@ msgstr "الحد الأقصى للإنفاق"
 msgid "McDonald"
 msgstr "ماكدونالد"
 
-#: includes/class-wc-smart-coupons.php:5621
+#: includes/class-wc-smart-coupons.php:5625
 msgid "Menu Order"
 msgstr "طلب القائمة"
 
@@ -3708,44 +3350,23 @@ msgstr "الرسالة"
 #. translators: %s: Plugin name
 #: includes/class-wc-sc-admin-notifications.php:555
 msgctxt "Message displayed when the database update process fails"
-msgid ""
-"%1$s database update failed. This may be due to server issues or "
-"configuration problems. Please click the \"Restart Update\" button to try "
-"again. If the issue persists, %2$s for assistance."
-msgstr ""
-"فشل تحديث قاعدة البيانات %1$s. قد يكون هذا بسبب مشاكل في الخادم أو مشاكل في "
-"التكوين. الرجاء النقر فوق الزر \"إعادة تشغيل التحديث\" للمحاولة مرة أخرى. "
-"إذا استمرت المشكلة، يرجى الاتصال ب %2$s للحصول على المساعدة."
+msgid "%1$s database update failed. This may be due to server issues or configuration problems. Please click the \"Restart Update\" button to try again. If the issue persists, %2$s for assistance."
+msgstr "فشل تحديث قاعدة البيانات %1$s. قد يكون هذا بسبب مشاكل في الخادم أو مشاكل في التكوين. الرجاء النقر فوق الزر \"إعادة تشغيل التحديث\" للمحاولة مرة أخرى. إذا استمرت المشكلة، يرجى الاتصال ب %2$s للحصول على المساعدة."
 
 #. translators: %s: Plugin name, e.g., WooCommerce Smart Coupons
 #: includes/class-wc-sc-admin-notifications.php:738
 msgctxt "Message for the combo coupons feature admin notice"
-msgid ""
-"Now control which coupons can or can’t be used together. With Combo Coupons, "
-"create smarter discount rules to stack or restrict coupon usage based on "
-"your strategy — right from the coupon settings."
-msgstr ""
-"يمكنك الآن التحكم في استخدام القسائم معًا. مع قسائم كومبو، أنشئ قواعد خصم "
-"أكثر ذكاءً لتكديس أو تقييد استخدام القسائم بناءً على استراتيجيتك - مباشرةً "
-"من إعدادات القسائم."
+msgid "Now control which coupons can or can’t be used together. With Combo Coupons, create smarter discount rules to stack or restrict coupon usage based on your strategy — right from the coupon settings."
+msgstr "يمكنك الآن التحكم في استخدام القسائم معًا. مع قسائم كومبو، أنشئ قواعد خصم أكثر ذكاءً لتكديس أو تقييد استخدام القسائم بناءً على استراتيجيتك - مباشرةً من إعدادات القسائم."
 
 #. translators: %s: Plugin name, e.g., WooCommerce Smart Coupons
 #: includes/class-wc-sc-admin-notifications.php:719
-msgctxt ""
-"Message for the new feature admin notice, introducing the coupon expiry "
-"reminder"
-msgid ""
-"%s is excited to introduce the new Coupon Expiry Reminders! Now, you can "
-"automatically send reminder emails to your customers before their coupons "
-"expire. Ensure they never miss out on a discount by setting up reminders in "
-"the Smart Coupons - Expiry Reminder section."
-msgstr ""
-"%s متحمس لتقديم تذكيرات انتهاء صلاحية الكوبونات الجديدة! يمكنك الآن إرسال "
-"رسائل تذكير تلقائيًا إلى عملائك عبر البريد الإلكتروني قبل انتهاء صلاحية "
-"كوبوناتهم. تأكد من عدم تفويتهم أي خصم من خلال إعداد تذكيرات في قسم تذكير "
-"انتهاء صلاحية القسائم الذكية - تذكير انتهاء الصلاحية."
+msgctxt "Message for the new feature admin notice, introducing the coupon expiry reminder"
+msgid "%s is excited to introduce the new Coupon Expiry Reminders! Now, you can automatically send reminder emails to your customers before their coupons expire. Ensure they never miss out on a discount by setting up reminders in the Smart Coupons - Expiry Reminder section."
+msgstr "%s متحمس لتقديم تذكيرات انتهاء صلاحية الكوبونات الجديدة! يمكنك الآن إرسال رسائل تذكير تلقائيًا إلى عملائك عبر البريد الإلكتروني قبل انتهاء صلاحية كوبوناتهم. تأكد من عدم تفويتهم أي خصم من خلال إعداد تذكيرات في قسم تذكير انتهاء صلاحية القسائم الذكية - تذكير انتهاء الصلاحية."
 
-#: templates/plain/combined-email.php:75 templates/plain/email.php:26
+#: templates/plain/combined-email.php:75
+#: templates/plain/email.php:26
 msgid "Message:"
 msgstr "الرسالة:"
 
@@ -3753,7 +3374,7 @@ msgstr "الرسالة:"
 msgid "Minimum quantity"
 msgstr "الحد الأدنى للكمية"
 
-#: includes/class-wc-smart-coupons.php:5632
+#: includes/class-wc-smart-coupons.php:5636
 msgid "Minimum Spend"
 msgstr "الحد الأدنى للإنفاق"
 
@@ -3790,10 +3411,9 @@ msgstr "الاسم"
 
 #: includes/class-wc-sc-admin-pages.php:1200
 msgid "Need a lot of coupons? You can easily do that with Smart Coupons."
-msgstr ""
-"هل تحتاج إلى الكثير من القسائم؟ يمكنك القيام بذلك بسهولة مع الكوبونات الذكية."
+msgstr "هل تحتاج إلى الكثير من القسائم؟ يمكنك القيام بذلك بسهولة مع الكوبونات الذكية."
 
-#: includes/class-wc-sc-url-coupon.php:775
+#: includes/class-wc-sc-url-coupon.php:710
 msgid "Network error:"
 msgstr "خطأ في الشبكة:"
 
@@ -3801,11 +3421,13 @@ msgstr "خطأ في الشبكة:"
 #: includes/class-wc-sc-display-coupons.php:1095
 #: includes/class-wc-sc-display-coupons.php:2995
 #: includes/class-wc-sc-shortcode.php:572
-#: includes/class-wc-smart-coupons.php:5532
+#: includes/class-wc-smart-coupons.php:5535
 #: includes/emails/class-wc-sc-email-coupon.php:180
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:234
-#: templates/combined-email.php:162 templates/email.php:153
-#: templates/plain/combined-email.php:125 templates/plain/email.php:120
+#: templates/combined-email.php:162
+#: templates/email.php:153
+#: templates/plain/combined-email.php:125
+#: templates/plain/email.php:120
 #: templates/plain/expiry-reminder-email.php:101
 #: templates/print-coupons-default.php:180
 msgid "Never expires"
@@ -3826,9 +3448,7 @@ msgstr "ميزة جديدة"
 
 #: includes/class-wc-sc-display-coupons.php:339
 msgctxt "No available coupons message"
-msgid ""
-"No coupons available for your current cart. But we’re still watching for "
-"future deals!"
+msgid "No coupons available for your current cart. But we’re still watching for future deals!"
 msgstr ""
 
 #: includes/class-wc-sc-coupon-categories.php:99
@@ -3852,7 +3472,7 @@ msgstr "لم يتم توفير أي قسيمة لنسخها!"
 msgid "No customer selected"
 msgstr "لم يتم اختيار أي عميل"
 
-#: includes/class-wc-sc-url-coupon.php:702
+#: includes/class-wc-sc-url-coupon.php:642
 msgid "No email provided."
 msgstr "لم يتم توفير بريد إلكتروني."
 
@@ -3900,40 +3520,28 @@ msgid "No user roles"
 msgstr "لا توجد أدوار مستخدمين"
 
 #: includes/class-wc-sc-admin-welcome.php:638
-msgid ""
-"No, this is possible only in those cases where subscription amount is more "
-"than store credit's balance. If store credit's balance is more than "
-"subscription's total then your bank account or credit card will not be "
-"charged."
-msgstr ""
-"لا، هذا ممكن فقط في الحالات التي يكون فيها مبلغ الاشتراك أكثر من رصيد رصيد "
-"رصيد المتجر. إذا كان رصيد رصيد المتجر أكثر من إجمالي الاشتراك، فلن يتم الخصم "
-"من حسابك المصرفي أو بطاقتك الائتمانية."
+msgid "No, this is possible only in those cases where subscription amount is more than store credit's balance. If store credit's balance is more than subscription's total then your bank account or credit card will not be charged."
+msgstr "لا، هذا ممكن فقط في الحالات التي يكون فيها مبلغ الاشتراك أكثر من رصيد رصيد رصيد المتجر. إذا كان رصيد رصيد المتجر أكثر من إجمالي الاشتراك، فلن يتم الخصم من حسابك المصرفي أو بطاقتك الائتمانية."
 
 #: includes/class-wc-sc-admin-welcome.php:575
-msgid ""
-"No. Coupon code should not have any spaces in the name, Eg, Coupon code "
-"should be “gift-certificate” & not “gift certificate”."
-msgstr ""
-"لا، يجب ألا يحتوي رمز الكوبون على أي مسافات في الاسم، على سبيل المثال، يجب "
-"أن يكون رمز الكوبون \"شهادة هدية\" وليس \"شهادة هدية\"."
+msgid "No. Coupon code should not have any spaces in the name, Eg, Coupon code should be “gift-certificate” & not “gift certificate”."
+msgstr "لا، يجب ألا يحتوي رمز الكوبون على أي مسافات في الاسم، على سبيل المثال، يجب أن يكون رمز الكوبون \"شهادة هدية\" وليس \"شهادة هدية\"."
 
 #: includes/class-wc-sc-coupon-refund-process.php:523
 msgid "Nonce verification failed for action \"wc_sc_refund_store_credit\"."
-msgstr ""
-"فشل التحقق من رمز عدم التحقق من الإجراء \"wc_sc_refund_store_store_credit\"."
+msgstr "فشل التحقق من رمز عدم التحقق من الإجراء \"wc_sc_refund_store_store_credit\"."
 
-#: includes/class-wc-sc-url-coupon.php:697
+#: includes/class-wc-sc-url-coupon.php:637
 msgid "Nonce verification failed."
 msgstr "فشل التحقق من النونce."
 
 #. translators: Excluded product names
-#: includes/class-wc-smart-coupons.php:1564
+#: includes/class-wc-smart-coupons.php:1573
 msgid "Not valid for %s"
 msgstr "غير صالح لـ %s"
 
 #. translators: 1: The category names excluded
-#: includes/class-wc-smart-coupons.php:1578
+#: includes/class-wc-smart-coupons.php:1587
 msgid "Not valid for category %s"
 msgid_plural "Not valid for categories %s"
 msgstr[0] "غير صالح للفئة %s"
@@ -3944,31 +3552,21 @@ msgstr[4] ""
 msgstr[5] ""
 
 #. translators: Formatted maximum amount
-#: includes/class-wc-smart-coupons.php:1552
+#: includes/class-wc-smart-coupons.php:1561
 msgid "Not valid for sale items"
 msgstr "غير صالحة للبيع"
 
 #: includes/class-wc-sc-admin-welcome.php:642
-msgid ""
-"Not yet, but this is being worked on. You will find this in later versions."
+msgid "Not yet, but this is being worked on. You will find this in later versions."
 msgstr "ليس بعد، ولكن يجري العمل على ذلك. ستجد هذا في الإصدارات اللاحقة."
 
 #: includes/class-wc-sc-coupon-import.php:1127
-msgid ""
-"Note: If any coupon from the CSV file already exists in the store, it will "
-"not update the existing coupon, instead a new coupon will be imported & the "
-"previous coupon with the same code will become inactive."
-msgstr ""
-"ملاحظة: إذا كانت أي قسيمة من ملف CSV موجودة بالفعل في المتجر، فلن يتم تحديث "
-"القسيمة الحالية، وبدلاً من ذلك سيتم استيراد قسيمة جديدة وستصبح القسيمة "
-"السابقة بنفس الرمز غير نشطة."
+msgid "Note: If any coupon from the CSV file already exists in the store, it will not update the existing coupon, instead a new coupon will be imported & the previous coupon with the same code will become inactive."
+msgstr "ملاحظة: إذا كانت أي قسيمة من ملف CSV موجودة بالفعل في المتجر، فلن يتم تحديث القسيمة الحالية، وبدلاً من ذلك سيتم استيراد قسيمة جديدة وستصبح القسيمة السابقة بنفس الرمز غير نشطة."
 
 #: includes/class-wc-sc-admin-notifications.php:522
-msgid ""
-"Note: WP CRON has been disabled on your install which may prevent this "
-"update from completing."
-msgstr ""
-"ملاحظة: تم تعطيل WP CRON على التثبيت الخاص بك مما قد يمنع اكتمال هذا التحديث."
+msgid "Note: WP CRON has been disabled on your install which may prevent this update from completing."
+msgstr "ملاحظة: تم تعطيل WP CRON على التثبيت الخاص بك مما قد يمنع اكتمال هذا التحديث."
 
 #: includes/class-wc-sc-display-coupons.php:2058
 msgctxt "Notice when coupon code is empty"
@@ -3984,20 +3582,13 @@ msgid "Now"
 msgstr "الآن"
 
 #: includes/class-wc-sc-settings.php:439
-#: includes/class-wc-smart-coupons.php:6596
+#: includes/class-wc-smart-coupons.php:6599
 msgid "Number of characters in auto-generated coupon code"
 msgstr "عدد الأحرف في رمز القسيمة الذي يتم إنشاؤه تلقائياً"
 
 #: includes/class-wc-sc-settings.php:440
-msgid ""
-"Number of characters in auto-generated coupon code will be restricted to "
-"this number excluding prefix and/or suffix. The default length will be 13. "
-"It is recommended to keep this number between 10 to 15 to avoid coupon code "
-"duplication."
-msgstr ""
-"سيقتصر عدد الأحرف في رمز القسيمة الذي يتم إنشاؤه تلقائيًا على هذا العدد "
-"باستثناء البادئة و/أو اللاحقة. الطول الافتراضي سيكون 13. يوصى بإبقاء هذا "
-"الرقم بين 10 إلى 15 لتجنب تكرار رمز القسيمة."
+msgid "Number of characters in auto-generated coupon code will be restricted to this number excluding prefix and/or suffix. The default length will be 13. It is recommended to keep this number between 10 to 15 to avoid coupon code duplication."
+msgstr "سيقتصر عدد الأحرف في رمز القسيمة الذي يتم إنشاؤه تلقائيًا على هذا العدد باستثناء البادئة و/أو اللاحقة. الطول الافتراضي سيكون 13. يوصى بإبقاء هذا الرقم بين 10 إلى 15 لتجنب تكرار رمز القسيمة."
 
 #. translators: 1: Path to setting 2: Setting to set email address 3: Setting for number of coupons to generate
 #: includes/class-wc-sc-admin-pages.php:1250
@@ -4006,7 +3597,7 @@ msgid "Number of coupons to generate"
 msgstr "عدد القسائم المطلوب إنشاؤها"
 
 #: includes/class-wc-sc-settings.php:430
-#: includes/class-wc-smart-coupons.php:6595
+#: includes/class-wc-smart-coupons.php:6598
 msgid "Number of coupons to show"
 msgstr "عدد القسائم المراد عرضها"
 
@@ -4132,11 +3723,8 @@ msgstr "طرق الدفع"
 
 #. translators: The PHP extension name
 #: includes/class-wc-sc-admin-notifications.php:285
-msgid ""
-"PHP extension %s is missing or not accessible. It is required for secure "
-"coupon imports."
-msgstr ""
-"امتداد PHP %s مفقود أو لا يمكن الوصول إليه. وهو مطلوب لواردات القسيمة الآمنة."
+msgid "PHP extension %s is missing or not accessible. It is required for secure coupon imports."
+msgstr "امتداد PHP %s مفقود أو لا يمكن الوصول إليه. وهو مطلوب لواردات القسيمة الآمنة."
 
 #: includes/class-wc-sc-purchase-credit.php:873
 #: includes/class-wc-sc-purchase-credit.php:985
@@ -4144,7 +3732,7 @@ msgid "Pick a delivery date & time"
 msgstr "اختر تاريخ ووقت التسليم"
 
 #. translators: 1. The discount text
-#: includes/class-wc-smart-coupons.php:1981
+#: includes/class-wc-smart-coupons.php:1990
 msgid "Pick any item today for %s off."
 msgstr "اختر أي سلعة اليوم بخصم %"
 
@@ -4171,13 +3759,10 @@ msgstr "الرجاء الإدخال بالتنسيق العشري (%s) بدون 
 
 #. translators: Decimal point
 #: includes/class-wc-sc-admin-pages.php:199
-msgid ""
-"Please enter in monetary decimal (%s) format without thousand separators and "
-"currency symbols."
-msgstr ""
-"الرجاء الإدخال بالصيغة العشرية النقدية (%s) بدون فواصل الألف ورموز العملات."
+msgid "Please enter in monetary decimal (%s) format without thousand separators and currency symbols."
+msgstr "الرجاء الإدخال بالصيغة العشرية النقدية (%s) بدون فواصل الألف ورموز العملات."
 
-#: includes/class-wc-smart-coupons.php:4783
+#: includes/class-wc-smart-coupons.php:4784
 msgid "Please select at least one coupon to print."
 msgstr "يُرجى اختيار قسيمة واحدة على الأقل لطباعتها."
 
@@ -4186,8 +3771,7 @@ msgid "Please select some categories"
 msgstr "يرجى تحديد بعض الفئات"
 
 #: includes/class-wc-sc-coupons-by-product-quantity.php:210
-msgid ""
-"Please select some categories in \"Product categories\" restrictions above..."
+msgid "Please select some categories in \"Product categories\" restrictions above..."
 msgstr "يُرجى تحديد بعض الفئات في قيود \"فئات المنتجات\" أعلاه..."
 
 #: includes/class-wc-sc-admin-pages.php:216
@@ -4206,7 +3790,7 @@ msgstr "يُرجى تحديد بعض المنتجات في قيود \"المنت
 msgid "Please try again later."
 msgstr "يرجى المحاولة مرة أخرى لاحقاً."
 
-#: includes/class-wc-smart-coupons.php:6084
+#: includes/class-wc-smart-coupons.php:6088
 msgid "Please update WooCommerce to the latest version"
 msgstr "يُرجى تحديث WooCommerce إلى أحدث إصدار"
 
@@ -4226,9 +3810,7 @@ msgstr "المكون الإضافي Polylang مطلوب لهذه الوظيفة.
 #: includes/class-wc-sc-coupon-actions.php:1147
 #, fuzzy
 msgctxt "Popup description"
-msgid ""
-"Redeem Your \"%1$s\" and choose 1 product from %2$d options with %3$s %4$s "
-"%5$s off."
+msgid "Redeem Your \"%1$s\" and choose 1 product from %2$d options with %3$s %4$s %5$s off."
 msgstr "قم باسترداد \"%1$s\" واختر منتجًا واحدًا من %2$d بخصم %3$s %4$s %5$s "
 
 #: includes/class-wc-sc-coupon-actions.php:1145
@@ -4236,19 +3818,19 @@ msgctxt "Popup title"
 msgid "Choose an option."
 msgstr "اختر خياراً."
 
-#: includes/class-wc-smart-coupons.php:5622
+#: includes/class-wc-smart-coupons.php:5626
 msgid "Post Date"
 msgstr "تاريخ النشر"
 
-#: includes/class-wc-smart-coupons.php:5618
+#: includes/class-wc-smart-coupons.php:5622
 msgid "Post Excerpt"
 msgstr "مقتطفات من المنشور"
 
-#: includes/class-wc-smart-coupons.php:5620
+#: includes/class-wc-smart-coupons.php:5624
 msgid "Post Parent"
 msgstr "مشاركة الوالدين"
 
-#: includes/class-wc-smart-coupons.php:5619
+#: includes/class-wc-smart-coupons.php:5623
 msgid "Post Status"
 msgstr "حالة الوظيفة"
 
@@ -4261,7 +3843,8 @@ msgctxt "Prefix for successful coupon notice"
 msgid "Coupon code"
 msgstr "رمز القسيمة"
 
-#: includes/class-wc-sc-settings.php:209 includes/class-wc-sc-shortcode.php:878
+#: includes/class-wc-sc-settings.php:209
+#: includes/class-wc-sc-shortcode.php:878
 msgid "Preview"
 msgstr "معاينة"
 
@@ -4270,16 +3853,17 @@ msgstr "معاينة"
 msgid "Preview Email"
 msgstr "معاينة البريد الإلكتروني"
 
-#: includes/class-wc-smart-coupons.php:6613
+#: includes/class-wc-smart-coupons.php:6616
 msgid "Prices entered with tax"
 msgstr "الأسعار المدخلة مع الضريبة"
 
-#: includes/class-wc-smart-coupons.php:4798
+#: includes/class-wc-smart-coupons.php:4799
 msgid "Print"
 msgstr "الطباعة"
 
 #: includes/class-wc-sc-display-coupons.php:1326
-#: templates/combined-email.php:232 templates/email.php:206
+#: templates/combined-email.php:232
+#: templates/email.php:206
 msgid "Print coupon"
 msgid_plural "Print coupons"
 msgstr[0] "قسيمة الطباعة"
@@ -4289,12 +3873,12 @@ msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
 
-#: includes/class-wc-smart-coupons.php:4798
+#: includes/class-wc-smart-coupons.php:4799
 msgid "Print selected coupons"
 msgstr "طباعة كوبونات مختارة"
 
 #: includes/class-wc-sc-settings.php:498
-#: includes/class-wc-smart-coupons.php:6600
+#: includes/class-wc-smart-coupons.php:6603
 msgid "Printing coupons"
 msgstr "كوبونات الطباعة"
 
@@ -4332,33 +3916,26 @@ msgstr "سمات المنتج"
 
 #. translators: %s: List of non-product coupon types.
 #: includes/class-wc-sc-coupons-by-product-attribute.php:181
-msgid ""
-"Product attributes that the coupon will be applied to, or that need to be in "
-"the cart in order for the %s to be applied."
-msgstr ""
-"سمات المنتج التي سيتم تطبيق القسيمة عليها، أو التي يجب أن تكون في عربة "
-"التسوق حتى يتم تطبيق النسبة المئوية."
+msgid "Product attributes that the coupon will be applied to, or that need to be in the cart in order for the %s to be applied."
+msgstr "سمات المنتج التي سيتم تطبيق القسيمة عليها، أو التي يجب أن تكون في عربة التسوق حتى يتم تطبيق النسبة المئوية."
 
 #. translators: %s: List of non-product coupon types.
 #: includes/class-wc-sc-coupons-by-product-attribute.php:207
-msgid ""
-"Product attributes that the coupon will not be applied to, or that cannot be "
-"in the cart in order for the %s to be applied."
-msgstr ""
-"سمات المنتج التي لن تطبق عليها القسيمة، أو التي لا يمكن أن تكون في عربة "
-"التسوق حتى يتم تطبيق النسبة المئوية."
+msgid "Product attributes that the coupon will not be applied to, or that cannot be in the cart in order for the %s to be applied."
+msgstr "سمات المنتج التي لن تطبق عليها القسيمة، أو التي لا يمكن أن تكون في عربة التسوق حتى يتم تطبيق النسبة المئوية."
 
-#: includes/class-wc-smart-coupons.php:5638
+#: includes/class-wc-smart-coupons.php:5642
 msgid "Product categories"
 msgstr "فئات المنتجات"
 
-#: includes/class-wc-sc-ajax.php:348 includes/class-wc-sc-ajax.php:353
-#: includes/class-wc-smart-coupons.php:1459
-#: includes/class-wc-smart-coupons.php:1464
+#: includes/class-wc-sc-ajax.php:348
+#: includes/class-wc-sc-ajax.php:353
+#: includes/class-wc-smart-coupons.php:1468
+#: includes/class-wc-smart-coupons.php:1473
 msgid "Product Discount"
 msgstr "خصم المنتج"
 
-#: includes/class-wc-smart-coupons.php:5636
+#: includes/class-wc-smart-coupons.php:5640
 msgid "Product IDs"
 msgstr "معرّفات المنتجات"
 
@@ -4368,26 +3945,12 @@ msgid "Product quantity based restrictions"
 msgstr "القيود القائمة على كمية المنتج"
 
 #: includes/class-wc-sc-coupons-by-taxonomy.php:181
-msgid ""
-"Product taxonomies that the coupon will be applicable for, or its "
-"availability in the cart in order for the \"Fixed cart discount\" to be "
-"applied, based on whether the taxonomies are included or excluded."
-msgstr ""
-"تصنيفات المنتجات التي ستكون القسيمة قابلة للتطبيق عليها، أو توافرها في عربة "
-"التسوق حتى يتم تطبيق \"خصم عربة التسوق الثابت\"، بناءً على ما إذا كانت "
-"التصنيفات مشمولة أو مستبعدة."
+msgid "Product taxonomies that the coupon will be applicable for, or its availability in the cart in order for the \"Fixed cart discount\" to be applied, based on whether the taxonomies are included or excluded."
+msgstr "تصنيفات المنتجات التي ستكون القسيمة قابلة للتطبيق عليها، أو توافرها في عربة التسوق حتى يتم تطبيق \"خصم عربة التسوق الثابت\"، بناءً على ما إذا كانت التصنيفات مشمولة أو مستبعدة."
 
 #: includes/class-wc-sc-coupons-by-taxonomy.php:140
-msgid ""
-"Product taxonomies that the coupon will be applicable for, or its "
-"availability in the cart in order for the \"Fixed cart discount\" to be "
-"applied, based on whether the taxonomies are included or excluded. All the "
-"taxonomies selected here, should be valid, for this coupon to be valid."
-msgstr ""
-"تصنيفات المنتجات التي ستكون القسيمة قابلة للتطبيق عليها، أو توافرها في عربة "
-"التسوق حتى يتم تطبيق \"خصم عربة التسوق الثابت\"، بناءً على ما إذا كانت "
-"التصنيفات مشمولة أو مستبعدة. يجب أن تكون جميع التصنيفات المحددة هنا صالحة، "
-"لكي تكون هذه القسيمة صالحة."
+msgid "Product taxonomies that the coupon will be applicable for, or its availability in the cart in order for the \"Fixed cart discount\" to be applied, based on whether the taxonomies are included or excluded. All the taxonomies selected here, should be valid, for this coupon to be valid."
+msgstr "تصنيفات المنتجات التي ستكون القسيمة قابلة للتطبيق عليها، أو توافرها في عربة التسوق حتى يتم تطبيق \"خصم عربة التسوق الثابت\"، بناءً على ما إذا كانت التصنيفات مشمولة أو مستبعدة. يجب أن تكون جميع التصنيفات المحددة هنا صالحة، لكي تكون هذه القسيمة صالحة."
 
 #: includes/class-wc-sc-coupons-by-product-quantity.php:153
 #: includes/class-wc-sc-coupons-by-product-quantity.php:169
@@ -4421,11 +3984,8 @@ msgid "Quickly create and email %s to one or more people."
 msgstr "إنشاء %s وإرسالها بالبريد الإلكتروني بسرعة إلى شخص واحد أو أكثر."
 
 #: includes/class-wc-sc-admin-pages.php:784
-msgid ""
-"Quickly create and email Store Credit or Gift Card to one or more people."
-msgstr ""
-"يمكنك إنشاء رصيد المتجر أو بطاقة الهدايا وإرسالها بالبريد الإلكتروني بسرعة "
-"إلى شخص واحد أو أكثر."
+msgid "Quickly create and email Store Credit or Gift Card to one or more people."
+msgstr "يمكنك إنشاء رصيد المتجر أو بطاقة الهدايا وإرسالها بالبريد الإلكتروني بسرعة إلى شخص واحد أو أكثر."
 
 #: includes/class-wc-sc-coupon-import.php:1128
 msgid "Ready to import? Choose a .csv file, then click \"Upload file\"."
@@ -4442,9 +4002,7 @@ msgstr "الاشتراكات المتكررة"
 
 #. translators: %1$s: coupon code, %2$d: number of options, %3$s: discount amount, %4$s: currency symbol, %5$s: discount type.
 #: blocks/class-sc-actiontab-extend-store-endpoint.php:181
-msgid ""
-"Redeem Your \"%1$s\" and choose 1 product from %2$d options with %3$s %4$s "
-"%5$s off "
+msgid "Redeem Your \"%1$s\" and choose 1 product from %2$d options with %3$s %4$s %5$s off "
 msgstr "قم باسترداد \"%1$s\" واختر منتجًا واحدًا من %2$d بخصم %3$s %4$s %5$s "
 
 #. translators: 1: refund id 2: refund date
@@ -4491,9 +4049,7 @@ msgstr "البيانات الشخصية للمستخدم التي تمت إزا�
 
 #: includes/compat/class-wcs-sc-compatibility.php:942
 #: includes/compat/class-wcs-sc-compatibility.php:1366
-msgid ""
-"Renewal orders should not generate coupons even when they include a product "
-"that issues coupons"
+msgid "Renewal orders should not generate coupons even when they include a product that issues coupons"
 msgstr "يجب ألا تصدر أوامر التجديد كوبونات حتى عندما تتضمن منتجًا يصدر كوبونات"
 
 #: includes/class-wc-sc-admin-pages.php:1250
@@ -4539,26 +4095,18 @@ msgid "Review"
 msgstr "المراجعة"
 
 #: includes/class-wc-sc-coupons-by-user-role.php:147
-msgid ""
-"Role of the users for whom this coupon is not valid. Keep empty if you want "
-"this coupon to be valid for users with any role."
-msgstr ""
-"دور المستخدمين الذين لا تكون هذه القسيمة صالحة لهم. اتركها فارغة إذا كنت "
-"تريد أن تكون هذه القسيمة صالحة للمستخدمين الذين لهم أي دور."
+msgid "Role of the users for whom this coupon is not valid. Keep empty if you want this coupon to be valid for users with any role."
+msgstr "دور المستخدمين الذين لا تكون هذه القسيمة صالحة لهم. اتركها فارغة إذا كنت تريد أن تكون هذه القسيمة صالحة للمستخدمين الذين لهم أي دور."
 
 #: includes/class-wc-sc-coupons-by-user-role.php:128
-msgid ""
-"Role of the users for whom this coupon is valid. Keep empty if you want this "
-"coupon to be valid for users with any role."
-msgstr ""
-"دور المستخدمين الذين تكون هذه القسيمة صالحة لهم. اتركها فارغة إذا كنت تريد "
-"أن تكون هذه القسيمة صالحة للمستخدمين الذين لهم أي دور."
+msgid "Role of the users for whom this coupon is valid. Keep empty if you want this coupon to be valid for users with any role."
+msgstr "دور المستخدمين الذين تكون هذه القسيمة صالحة لهم. اتركها فارغة إذا كنت تريد أن تكون هذه القسيمة صالحة للمستخدمين الذين لهم أي دور."
 
 #: includes/class-wc-sc-settings.php:550
 msgid "Rose Pink"
 msgstr "وردي وردي"
 
-#: includes/class-wc-smart-coupons.php:6616
+#: includes/class-wc-smart-coupons.php:6619
 msgid "Rounding"
 msgstr "التقريب"
 
@@ -4573,23 +4121,12 @@ msgstr "موضوع البريد الإلكتروني المجدول"
 #. translators: %s: Plugin name
 #: includes/batches/class-wc-sc-coupons-expiry-reminder-scheduler.php:177
 msgctxt "scheduling coupon expiry info message"
-msgid ""
-"%s is scheduling coupon expiry reminders in the background. This may take a "
-"few moments, so please be patient."
-msgstr ""
-"يقوم %s بجدولة تذكيرات انتهاء صلاحية القسيمة في الخلفية. قد يستغرق ذلك بضع "
-"لحظات، لذا يرجى التحلي بالصبر."
+msgid "%s is scheduling coupon expiry reminders in the background. This may take a few moments, so please be patient."
+msgstr "يقوم %s بجدولة تذكيرات انتهاء صلاحية القسيمة في الخلفية. قد يستغرق ذلك بضع لحظات، لذا يرجى التحلي بالصبر."
 
 #: includes/class-wc-sc-settings.php:645
-msgid ""
-"Search & select a coupon which you want to display as store notice. The "
-"selected coupon's description will be displayed along with the coupon code "
-"(if it is set) otherwise, a description will be generated automatically. To "
-"disable the feature, keep this field empty."
-msgstr ""
-"ابحث وحدد القسيمة التي تريد عرضها كإشعار المتجر. سيتم عرض وصف القسيمة "
-"المختارة مع رمز القسيمة (إذا تم تعيينه) وإلا سيتم إنشاء الوصف تلقائياً. "
-"لتعطيل الميزة، اترك هذا الحقل فارغاً."
+msgid "Search & select a coupon which you want to display as store notice. The selected coupon's description will be displayed along with the coupon code (if it is set) otherwise, a description will be generated automatically. To disable the feature, keep this field empty."
+msgstr "ابحث وحدد القسيمة التي تريد عرضها كإشعار المتجر. سيتم عرض وصف القسيمة المختارة مع رمز القسيمة (إذا تم تعيينه) وإلا سيتم إنشاء الوصف تلقائياً. لتعطيل الميزة، اترك هذا الحقل فارغاً."
 
 #: includes/class-wc-sc-coupon-categories.php:91
 msgid "Search coupon categories"
@@ -4652,7 +4189,7 @@ msgstr "حدد سمات المنتج..."
 msgid "Sell %s at less price?"
 msgstr "بيع النسب المئوية بسعر أقل؟"
 
-#: includes/class-wc-smart-coupons.php:6601
+#: includes/class-wc-smart-coupons.php:6604
 msgid "Sell gift cards at less price?"
 msgstr "بيع بطاقات الهدايا بسعر أقل؟"
 
@@ -4676,9 +4213,7 @@ msgstr "إرسال %s"
 
 #: includes/emails/class-wc-sc-acknowledgement-email.php:42
 msgid "Send an acknowledgement email to the purchaser. One email per customer."
-msgstr ""
-"إرسال رسالة إقرار بالبريد الإلكتروني إلى المشتري. بريد إلكتروني واحد لكل "
-"عميل."
+msgstr "إرسال رسالة إقرار بالبريد الإلكتروني إلى المشتري. بريد إلكتروني واحد لكل عميل."
 
 #: includes/class-wc-sc-settings.php:884
 msgid "Send Coupon Form"
@@ -4699,20 +4234,12 @@ msgid "Send Coupons to..."
 msgstr "إرسال القسائم إلى..."
 
 #: includes/class-wc-sc-settings.php:929
-msgid ""
-"Send only one email instead of multiple emails when multiple coupons are "
-"generated for same recipient"
-msgstr ""
-"إرسال بريد إلكتروني واحد فقط بدلاً من عدة رسائل بريد إلكتروني عند إنشاء عدة "
-"قسائم لنفس المستلم"
+msgid "Send only one email instead of multiple emails when multiple coupons are generated for same recipient"
+msgstr "إرسال بريد إلكتروني واحد فقط بدلاً من عدة رسائل بريد إلكتروني عند إنشاء عدة قسائم لنفس المستلم"
 
 #: includes/emails/class-wc-sc-combined-email-coupon.php:35
-msgid ""
-"Send only one email instead of multiple emails when multiple coupons are "
-"generated per recipient."
-msgstr ""
-"إرسال بريد إلكتروني واحد فقط بدلاً من عدة رسائل بريد إلكتروني عند إنشاء عدة "
-"قسائم لكل مستلم."
+msgid "Send only one email instead of multiple emails when multiple coupons are generated per recipient."
+msgstr "إرسال بريد إلكتروني واحد فقط بدلاً من عدة رسائل بريد إلكتروني عند إنشاء عدة قسائم لكل مستلم."
 
 #. translators: %s: singular name for store credit
 #: includes/class-wc-sc-admin-pages.php:143
@@ -4794,8 +4321,7 @@ msgstr "تسوق الآن!"
 
 #. translators: %s: Preview link
 #: includes/class-wc-sc-settings.php:689
-msgid ""
-"Show coupons available to customers on their My Account > Coupons page %s"
+msgid "Show coupons available to customers on their My Account > Coupons page %s"
 msgstr "اعرض القسائم المتاحة للعملاء على حسابي &gt; صفحة القسائم %s"
 
 #: includes/class-wc-sc-settings.php:724
@@ -4812,14 +4338,8 @@ msgid "Show invalid or used coupons in My Account > Coupons %s"
 msgstr "إظهار الكوبونات غير الصالحة أو المستخدمة في حسابي &gt; القسائم %s"
 
 #: includes/class-wc-sc-admin-welcome.php:456
-msgid ""
-"Show only valid coupons to your customer (if logged in) on cart, checkout & "
-"My Account page. Coupons can be applied with single click. So, no need to "
-"remember the coupon code or copy-pasting."
-msgstr ""
-"اعرض الكوبونات الصالحة فقط لعميلك (في حالة تسجيل الدخول) في عربة التسوق "
-"والدفع وصفحة حسابي. يمكن تطبيق القسائم بنقرة واحدة. لذا، لا داعي لتذكر رمز "
-"القسيمة أو نسخ ولصق الكوبونات."
+msgid "Show only valid coupons to your customer (if logged in) on cart, checkout & My Account page. Coupons can be applied with single click. So, no need to remember the coupon code or copy-pasting."
+msgstr "اعرض الكوبونات الصالحة فقط لعميلك (في حالة تسجيل الدخول) في عربة التسوق والدفع وصفحة حسابي. يمكن تطبيق القسائم بنقرة واحدة. لذا، لا داعي لتذكر رمز القسيمة أو نسخ ولصق الكوبونات."
 
 #: includes/class-wc-sc-settings.php:750
 msgid "Show section open by default"
@@ -4869,49 +4389,31 @@ msgstr "القسائم الذكية - البريد الإلكتروني للقس
 
 #: includes/emails/class-wc-sc-combined-email-coupon.php:34
 msgid "Smart Coupons - Combined auto generated coupons email"
-msgstr ""
-"الكوبونات الذكية - بريد إلكتروني مدمج للقسائم التي يتم إنشاؤها تلقائيًا"
+msgstr "الكوبونات الذكية - بريد إلكتروني مدمج للقسائم التي يتم إنشاؤها تلقائيًا"
 
 #: includes/class-wc-sc-admin-welcome.php:391
 msgid "Smart Coupons enable coupons to become an automatic/interactive system."
 msgstr "تمكّن القسائم الذكية القسائم من أن تصبح نظاماً تلقائياً/تفاعلياً."
 
 #: includes/class-wc-sc-print-coupon.php:278
-msgid ""
-"Smart Coupons has created a coupon's terms page (used during coupon printing)"
-" for you. Please edit it as required from"
-msgstr ""
-"قامت الكوبونات الذكية بإنشاء صفحة شروط القسيمة (المستخدمة أثناء طباعة "
-"القسيمة) من أجلك. يرجى تعديلها كما هو مطلوب من"
+msgid "Smart Coupons has created a coupon's terms page (used during coupon printing) for you. Please edit it as required from"
+msgstr "قامت الكوبونات الذكية بإنشاء صفحة شروط القسيمة (المستخدمة أثناء طباعة القسيمة) من أجلك. يرجى تعديلها كما هو مطلوب من"
 
 #: includes/class-wc-sc-admin-welcome.php:390
-msgid ""
-"Smart Coupons is a powerful extension, built on top of WooCommerce coupons. "
-"It adds a new discount type - Store Credit - and advanced functionality to "
-"the default coupons."
-msgstr ""
-"القسائم الذكية هي امتداد قوي، مبني على كوبونات WooCommerce. يضيف نوع خصم "
-"جديد - رصيد المتجر - ووظائف متقدمة إلى القسائم الافتراضية."
+msgid "Smart Coupons is a powerful extension, built on top of WooCommerce coupons. It adds a new discount type - Store Credit - and advanced functionality to the default coupons."
+msgstr "القسائم الذكية هي امتداد قوي، مبني على كوبونات WooCommerce. يضيف نوع خصم جديد - رصيد المتجر - ووظائف متقدمة إلى القسائم الافتراضية."
 
 #: includes/class-wc-sc-admin-welcome.php:608
 msgid "Smart Coupons is not sending emails."
 msgstr "الكوبونات الذكية لا ترسل رسائل البريد الإلكتروني."
 
-#: includes/class-wc-smart-coupons.php:6630
+#: includes/class-wc-smart-coupons.php:6633
 msgid "Smart Coupons related settings"
 msgstr "الإعدادات المتعلقة بالقسائم الذكية"
 
 #: includes/class-wc-sc-admin-welcome.php:609
-msgid ""
-"Smart Coupons sends email only after order completion. So make sure that "
-"order complete email is enabled and sending. If enabled, then make sure all "
-"settings of coupons, products are in place. Also check by switching your "
-"theme."
-msgstr ""
-"لا ترسل القسائم الذكية البريد الإلكتروني إلا بعد اكتمال الطلب. لذا تأكد من "
-"تمكين البريد الإلكتروني الخاص بإكمال الطلب وإرساله. إذا تم تمكينه، فتأكد من "
-"أن جميع إعدادات القسائم والمنتجات في مكانها الصحيح. تحقق أيضًا عن طريق تبديل "
-"القالب الخاص بك."
+msgid "Smart Coupons sends email only after order completion. So make sure that order complete email is enabled and sending. If enabled, then make sure all settings of coupons, products are in place. Also check by switching your theme."
+msgstr "لا ترسل القسائم الذكية البريد الإلكتروني إلا بعد اكتمال الطلب. لذا تأكد من تمكين البريد الإلكتروني الخاص بإكمال الطلب وإرساله. إذا تم تمكينه، فتأكد من أن جميع إعدادات القسائم والمنتجات في مكانها الصحيح. تحقق أيضًا عن طريق تبديل القالب الخاص بك."
 
 #: includes/class-wc-sc-admin-pages.php:152
 #: includes/class-wc-sc-admin-pages.php:609
@@ -4923,14 +4425,8 @@ msgid "Smart Coupons settings"
 msgstr "إعدادات القسائم الذكية"
 
 #: includes/class-wc-sc-admin-welcome.php:597
-msgid ""
-"Smart Coupons uses hooks of Cart, Checkout & My Account page to display "
-"available coupons. If your theme is not using those hooks in cart, checkout "
-"& my-account template, coupons will not be displayed."
-msgstr ""
-"تستخدم القسائم الذكية خطافات عربة التسوق والدفع وصفحة حسابي لعرض القسائم "
-"المتاحة. إذا كان قالبك لا يستخدم تلك الخطافات في قالب عربة التسوق والدفع "
-"وحسابي، فلن يتم عرض القسائم."
+msgid "Smart Coupons uses hooks of Cart, Checkout & My Account page to display available coupons. If your theme is not using those hooks in cart, checkout & my-account template, coupons will not be displayed."
+msgstr "تستخدم القسائم الذكية خطافات عربة التسوق والدفع وصفحة حسابي لعرض القسائم المتاحة. إذا كان قالبك لا يستخدم تلك الخطافات في قالب عربة التسوق والدفع وحسابي، فلن يتم عرض القسائم."
 
 #: includes/class-wc-sc-coupons-by-product-attribute.php:108
 msgid "Smart Coupons: Restrictions"
@@ -4946,16 +4442,16 @@ msgstr "حتى الآن؟"
 msgid "some products"
 msgstr "بعض المنتجات"
 
-#: includes/class-wc-smart-coupons.php:7314
-#: includes/class-wc-smart-coupons.php:7373
-#: includes/class-wc-smart-coupons.php:7407
-#: includes/class-wc-smart-coupons.php:7436
+#: includes/class-wc-smart-coupons.php:7317
+#: includes/class-wc-smart-coupons.php:7376
+#: includes/class-wc-smart-coupons.php:7410
+#: includes/class-wc-smart-coupons.php:7439
 msgid "Some values required for $item_id & $item_key"
 msgstr "بعض القيم المطلوبة لـ $item_id و $item_key"
 
-#: includes/class-wc-smart-coupons.php:6906
-#: includes/class-wc-smart-coupons.php:7026
-#: includes/class-wc-smart-coupons.php:7145
+#: includes/class-wc-smart-coupons.php:6909
+#: includes/class-wc-smart-coupons.php:7029
+#: includes/class-wc-smart-coupons.php:7148
 msgid "Some values required for $post_id & $meta_key"
 msgstr "بعض القيم المطلوبة ل $post_id و $meta_key"
 
@@ -4990,12 +4486,12 @@ msgid "Special"
 msgstr "خاص"
 
 #. translators: Formatted minimum amount
-#: includes/class-wc-smart-coupons.php:1544
+#: includes/class-wc-smart-coupons.php:1553
 msgid "Spend at least %s"
 msgstr "أنفق % على الأقل"
 
 #. translators: Formatted maximum amount
-#: includes/class-wc-smart-coupons.php:1548
+#: includes/class-wc-smart-coupons.php:1557
 msgid "Spend up to %s"
 msgstr "أنفق ما يصل إلى %s"
 
@@ -5015,11 +4511,12 @@ msgstr "توقف"
 #: includes/class-wc-sc-act-deact.php:286
 #: includes/class-wc-sc-admin-pages.php:1536
 #: includes/class-wc-sc-admin-pages.php:1546
-#: includes/class-wc-sc-admin-pages.php:1701 includes/class-wc-sc-ajax.php:338
+#: includes/class-wc-sc-admin-pages.php:1701
+#: includes/class-wc-sc-ajax.php:338
 #: includes/class-wc-sc-coupon-refund-process.php:91
 #: includes/class-wc-sc-coupon-refund-process.php:680
 #: includes/class-wc-sc-coupon-refund-process.php:693
-#: includes/class-wc-smart-coupons.php:1449
+#: includes/class-wc-smart-coupons.php:1458
 #: includes/emails/class-wc-sc-email-coupon.php:364
 #: includes/emails/class-wc-sc-email-coupon.php:488
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:197
@@ -5070,17 +4567,13 @@ msgid "Store Credit Used:"
 msgstr "رصيد المتجر المستخدم:"
 
 #: includes/class-wc-sc-admin-welcome.php:605
-msgid ""
-"Store Credit's default behavior is auto-generate because, when using a store "
-"credit, it's balance keeps reducing. Therefore it should be uniquely created "
-"for every user automatically."
-msgstr ""
-"يكون السلوك الافتراضي لرصيد المتجر هو الإنشاء التلقائي لأنه عند استخدام رصيد "
-"المتجر يستمر الرصيد في التناقص. لذلك يجب أن يتم إنشاؤه بشكل فريد لكل مستخدم "
-"بشكل تلقائي."
+msgid "Store Credit's default behavior is auto-generate because, when using a store credit, it's balance keeps reducing. Therefore it should be uniquely created for every user automatically."
+msgstr "يكون السلوك الافتراضي لرصيد المتجر هو الإنشاء التلقائي لأنه عند استخدام رصيد المتجر يستمر الرصيد في التناقص. لذلك يجب أن يتم إنشاؤه بشكل فريد لكل مستخدم بشكل تلقائي."
 
-#: includes/class-wc-sc-privacy.php:99 includes/class-wc-sc-privacy.php:311
-#: includes/class-wc-sc-privacy.php:430 includes/class-wc-sc-privacy.php:721
+#: includes/class-wc-sc-privacy.php:99
+#: includes/class-wc-sc-privacy.php:311
+#: includes/class-wc-sc-privacy.php:430
+#: includes/class-wc-sc-privacy.php:721
 msgid "Store Credit/Gift Certificate"
 msgstr "رصيد في المتجر/شهادة هدية/شهادة متجر"
 
@@ -5093,12 +4586,8 @@ msgid "Store Credit/Gift Certificate - Order Data"
 msgstr "ائتمان المتجر/شهادة الهدية - بيانات الطلب"
 
 #: includes/class-wc-sc-privacy.php:804
-msgid ""
-"Store Credit/Gift Certificate that are stored for customers via coupons. If "
-"erased, the customer will not be able to use the coupons."
-msgstr ""
-"رصيد المتجر/شهادة الهدية التي يتم تخزينها للعملاء عن طريق القسائم. إذا تم "
-"مسحها، لن يتمكن العميل من استخدام القسائم."
+msgid "Store Credit/Gift Certificate that are stored for customers via coupons. If erased, the customer will not be able to use the coupons."
+msgstr "رصيد المتجر/شهادة الهدية التي يتم تخزينها للعملاء عن طريق القسائم. إذا تم مسحها، لن يتمكن العميل من استخدام القسائم."
 
 #: includes/class-wc-sc-order-fields.php:295
 msgid "Store Credit:"
@@ -5108,7 +4597,8 @@ msgstr "ائتمان المتجر"
 msgid "Store Credits"
 msgstr "أرصدة المتجر"
 
-#: includes/class-wc-sc-settings.php:374 includes/class-wc-sc-settings.php:1121
+#: includes/class-wc-sc-settings.php:374
+#: includes/class-wc-sc-settings.php:1121
 msgid "store credits"
 msgstr "أرصدة المتجر"
 
@@ -5125,27 +4615,27 @@ msgstr "أرصدة المتجر / بطاقات الهدايا"
 msgid "StoreApps"
 msgstr "تطبيقات المتجر"
 
-#: includes/class-wc-smart-coupons.php:5931
+#: includes/class-wc-smart-coupons.php:5935
 msgid "Style 1"
 msgstr "النمط 1"
 
-#: includes/class-wc-smart-coupons.php:5932
+#: includes/class-wc-smart-coupons.php:5936
 msgid "Style 2"
 msgstr "النمط 2"
 
-#: includes/class-wc-smart-coupons.php:5933
+#: includes/class-wc-smart-coupons.php:5937
 msgid "Style 3"
 msgstr "النمط 3"
 
-#: includes/class-wc-smart-coupons.php:5934
+#: includes/class-wc-smart-coupons.php:5938
 msgid "Style 4"
 msgstr "النمط 4"
 
-#: includes/class-wc-smart-coupons.php:5935
+#: includes/class-wc-smart-coupons.php:5939
 msgid "Style 5"
 msgstr "النمط 5"
 
-#: includes/class-wc-smart-coupons.php:5936
+#: includes/class-wc-smart-coupons.php:5940
 msgid "Style 6"
 msgstr "النمط 6"
 
@@ -5206,7 +4696,7 @@ msgctxt "Suffix for successful coupon notice"
 msgid "has been applied to your cart."
 msgstr "تم تطبيقه على عربة التسوق الخاصة بك."
 
-#: includes/class-wc-smart-coupons.php:1964
+#: includes/class-wc-smart-coupons.php:1973
 msgid "Super Savings!"
 msgstr "توفير كبير!"
 
@@ -5226,11 +4716,13 @@ msgstr "تم حذف الجدول %s بنجاح."
 
 #: includes/class-wc-sc-admin-pages.php:595
 #: includes/class-wc-sc-admin-welcome.php:305
-#: includes/class-wc-sc-tours.php:207 includes/class-wc-sc-tours.php:209
+#: includes/class-wc-sc-tours.php:207
+#: includes/class-wc-sc-tours.php:209
 msgid "Take a tour"
 msgstr "قم بجولة"
 
-#: includes/class-wc-sc-settings.php:766 includes/class-wc-sc-settings.php:769
+#: includes/class-wc-sc-settings.php:766
+#: includes/class-wc-sc-settings.php:769
 msgid "Tax"
 msgstr "الضريبة"
 
@@ -5252,25 +4744,16 @@ msgid "The coupon code already exists"
 msgstr "رمز القسيمة موجود بالفعل"
 
 #: includes/class-wc-sc-settings.php:925
-msgid ""
-"The coupons will be sent to the recipients via email on the selected date & "
-"time"
-msgstr ""
-"سيتم إرسال القسائم إلى المستلمين عبر البريد الإلكتروني في التاريخ والوقت "
-"المحددين"
+msgid "The coupons will be sent to the recipients via email on the selected date & time"
+msgstr "سيتم إرسال القسائم إلى المستلمين عبر البريد الإلكتروني في التاريخ والوقت المحددين"
 
 #: includes/class-wc-sc-coupon-import.php:1126
 msgid "The CSV must adhere to a specific format and include a header row."
 msgstr "يجب أن يلتزم ملف CSV بتنسيق محدد ويتضمن صف رأس الصفحة."
 
 #: includes/class-wc-sc-admin-notifications.php:483
-msgid ""
-"The database update runs in the background and may take some time. It's only "
-"for WooCommerce Smart Coupons plugin data and won't affect your existing "
-"data."
-msgstr ""
-"يعمل تحديث قاعدة البيانات في الخلفية وقد يستغرق بعض الوقت. إنه فقط لبيانات "
-"إضافة WooCommerce Smart Coupons ولن يؤثر على بياناتك الحالية."
+msgid "The database update runs in the background and may take some time. It's only for WooCommerce Smart Coupons plugin data and won't affect your existing data."
+msgstr "يعمل تحديث قاعدة البيانات في الخلفية وقد يستغرق بعض الوقت. إنه فقط لبيانات إضافة WooCommerce Smart Coupons ولن يؤثر على بياناتك الحالية."
 
 #: includes/class-wc-sc-coupon-import.php:767
 msgid "The file does not exist, please try again."
@@ -5308,31 +4791,21 @@ msgstr "حدث خطأ في إرسال رصيد المتجر/شهادة الهد�
 
 #. translators: 1. File name 2. File download link
 #: includes/class-wc-sc-admin-welcome.php:593
-msgid ""
-"There is one file which is located inside the plugin. You can download the "
-"%1$s file from %2$s."
+msgid "There is one file which is located inside the plugin. You can download the %1$s file from %2$s."
 msgstr "يوجد ملف واحد موجود داخل المكون الإضافي. يمكنك تنزيل ملف %1$s من %2$s."
 
 #: includes/class-wc-sc-product-fields.php:123
 #: includes/class-wc-sc-product-fields.php:160
-msgid ""
-"These coupon/s will be given to customers who buy this product. The coupon "
-"code will be automatically sent to their email address on purchase."
-msgstr ""
-"سيتم منح هذه القسيمة/القسائم للعملاء الذين يشترون هذا المنتج. سيتم إرسال رمز "
-"القسيمة تلقائيًا إلى عنوان بريدهم الإلكتروني عند الشراء."
+msgid "These coupon/s will be given to customers who buy this product. The coupon code will be automatically sent to their email address on purchase."
+msgstr "سيتم منح هذه القسيمة/القسائم للعملاء الذين يشترون هذا المنتج. سيتم إرسال رمز القسيمة تلقائيًا إلى عنوان بريدهم الإلكتروني عند الشراء."
 
 #: includes/class-wc-sc-coupon-refund-process.php:126
 msgid "This action will also refund all store credit applied to the order."
 msgstr "سيؤدي هذا الإجراء أيضًا إلى استرداد جميع رصيد المتجر المطبق على الطلب."
 
-#: includes/class-wc-smart-coupons.php:1236
-msgid ""
-"This coupon has pending emails to be sent. Deleting it will delete those "
-"emails also. Are you sure to delete this coupon?"
-msgstr ""
-"تحتوي هذه القسيمة على رسائل بريد إلكتروني معلقة سيتم إرسالها. سيؤدي حذفها "
-"إلى حذف رسائل البريد الإلكتروني هذه أيضاً. هل أنت متأكد من حذف هذه القسيمة؟"
+#: includes/class-wc-smart-coupons.php:1245
+msgid "This coupon has pending emails to be sent. Deleting it will delete those emails also. Are you sure to delete this coupon?"
+msgstr "تحتوي هذه القسيمة على رسائل بريد إلكتروني معلقة سيتم إرسالها. سيؤدي حذفها إلى حذف رسائل البريد الإلكتروني هذه أيضاً. هل أنت متأكد من حذف هذه القسيمة؟"
 
 #: includes/class-wc-sc-coupons-by-shipping-method.php:216
 #: includes/class-wc-sc-coupons-by-shipping-method.php:221
@@ -5346,63 +4819,36 @@ msgstr "هذه القسيمة غير صالحة لطريقة الشحن المخ
 msgid "This coupon is not valid for you."
 msgstr "هذه القسيمة غير صالحة لك."
 
-#: includes/class-wc-smart-coupons.php:3907
+#: includes/class-wc-smart-coupons.php:3913
 msgid "This coupon is valid for the first order only."
 msgstr "هذه القسيمة صالحة للطلب الأول فقط."
 
 #: includes/class-wc-sc-admin-welcome.php:613
-msgid ""
-"This form is displayed using a hook which is available in My Account "
-"template. Make sure your theme's my-account template contains all hooks "
-"required for that template. Update your theme if it is not updated."
-msgstr ""
-"يتم عرض هذا النموذج باستخدام خطاف متاح في قالب حسابي. تأكد من احتواء قالب "
-"حسابي الخاص بقالبك على جميع الخطافات المطلوبة لهذا القالب. حدِّث قالبك إذا "
-"لم يتم تحديثه."
+msgid "This form is displayed using a hook which is available in My Account template. Make sure your theme's my-account template contains all hooks required for that template. Update your theme if it is not updated."
+msgstr "يتم عرض هذا النموذج باستخدام خطاف متاح في قالب حسابي. تأكد من احتواء قالب حسابي الخاص بقالبك على جميع الخطافات المطلوبة لهذا القالب. حدِّث قالبك إذا لم يتم تحديثه."
 
 #: includes/class-wc-sc-admin-welcome.php:501
-msgid ""
-"This guide will help you create gift cards, making it easy for your "
-"customers to purchase and redeem them, driving more sales and enhancing "
-"customer loyalty."
-msgstr ""
-"سيساعدك هذا الدليل على إنشاء بطاقات الهدايا، مما يسهّل على عملائك شراءها "
-"واسترداد قيمتها، مما يزيد من المبيعات ويعزز ولاء العملاء."
+msgid "This guide will help you create gift cards, making it easy for your customers to purchase and redeem them, driving more sales and enhancing customer loyalty."
+msgstr "سيساعدك هذا الدليل على إنشاء بطاقات الهدايا، مما يسهّل على عملائك شراءها واسترداد قيمتها، مما يزيد من المبيعات ويعزز ولاء العملاء."
 
 #: includes/class-wc-sc-admin-welcome.php:519
-msgid ""
-"This guide will show you how to create a compelling offer that encourages "
-"customers to buy Gift Cards at a significant discount, boosting your sales "
-"and customer engagement."
-msgstr ""
-"سيوضح لك هذا الدليل كيفية إنشاء عرض مقنع يشجع العملاء على شراء بطاقات "
-"الهدايا بخصم كبير، مما يزيد من مبيعاتك ومشاركة العملاء."
+msgid "This guide will show you how to create a compelling offer that encourages customers to buy Gift Cards at a significant discount, boosting your sales and customer engagement."
+msgstr "سيوضح لك هذا الدليل كيفية إنشاء عرض مقنع يشجع العملاء على شراء بطاقات الهدايا بخصم كبير، مما يزيد من مبيعاتك ومشاركة العملاء."
 
 #: includes/class-wc-sc-admin-welcome.php:510
-msgid ""
-"This guide will show you how to set up flexible store credit options, "
-"allowing your customers to purchase credit in any custom denominations to "
-"use in your store."
-msgstr ""
-"سيوضح لك هذا الدليل كيفية إعداد خيارات ائتمان مرنة للمتجر، مما يسمح لعملائك "
-"بشراء رصيد بأي فئات مخصصة لاستخدامها في متجرك."
+msgid "This guide will show you how to set up flexible store credit options, allowing your customers to purchase credit in any custom denominations to use in your store."
+msgstr "سيوضح لك هذا الدليل كيفية إعداد خيارات ائتمان مرنة للمتجر، مما يسمح لعملائك بشراء رصيد بأي فئات مخصصة لاستخدامها في متجرك."
 
 #: includes/class-wc-sc-admin-pages.php:961
 msgid "This is a sample coupon"
 msgstr "هذه عينة من القسيمة"
 
 #: includes/class-wc-sc-settings.php:845
-msgid ""
-"This is the heading above coupon details displayed on products that issue "
-"coupons. "
-msgstr ""
-"هذا هو العنوان الموجود أعلى تفاصيل القسيمة المعروضة على المنتجات التي تصدر "
-"كوبونات. "
+msgid "This is the heading above coupon details displayed on products that issue coupons. "
+msgstr "هذا هو العنوان الموجود أعلى تفاصيل القسيمة المعروضة على المنتجات التي تصدر كوبونات. "
 
 #: includes/class-wc-sc-settings.php:855
-msgid ""
-"This is the title for the list of available coupons, shown on Cart and "
-"Checkout pages."
+msgid "This is the title for the list of available coupons, shown on Cart and Checkout pages."
 msgstr ""
 
 #: includes/class-wc-sc-order-fields.php:123
@@ -5411,110 +4857,66 @@ msgstr "هذا هو إجمالي الرصيد المستخدم."
 
 #. translators: %s: Label for store credit
 #: includes/class-wc-sc-settings.php:823
-msgid ""
-"This is what will be shown instead of \"Add to Cart\" for products that sell "
-"%s. "
-msgstr ""
-"هذا هو ما سيظهر بدلاً من \"إضافة إلى عربة التسوق\" للمنتجات التي تبيع %s. "
+msgid "This is what will be shown instead of \"Add to Cart\" for products that sell %s. "
+msgstr "هذا هو ما سيظهر بدلاً من \"إضافة إلى عربة التسوق\" للمنتجات التي تبيع %s. "
 
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:114
-msgctxt ""
-"This message is shown when the WooCommerce Smart Coupons database is not "
-"updated"
-msgid ""
-"This feature is unavailable until the WooCommerce Smart Coupons database "
-"update is complete. Please update the WooCommerce Smart Coupons database to "
-"enable coupon expiry reminders."
-msgstr ""
-"هذه الميزة غير متاحة حتى يكتمل تحديث قاعدة بيانات كوبونات WooCommerce الذكية."
-" يُرجى تحديث قاعدة بيانات كوبونات WooCommerce الذكية لتمكين تذكيرات انتهاء "
-"صلاحية الكوبونات."
+msgctxt "This message is shown when the WooCommerce Smart Coupons database is not updated"
+msgid "This feature is unavailable until the WooCommerce Smart Coupons database update is complete. Please update the WooCommerce Smart Coupons database to enable coupon expiry reminders."
+msgstr "هذه الميزة غير متاحة حتى يكتمل تحديث قاعدة بيانات كوبونات WooCommerce الذكية. يُرجى تحديث قاعدة بيانات كوبونات WooCommerce الذكية لتمكين تذكيرات انتهاء صلاحية الكوبونات."
 
 #: includes/class-wc-sc-coupon-fields.php:1095
-msgid ""
-"This much quantity of each product, selected above, will be added to cart."
-msgstr ""
-"ستتم إضافة هذه الكمية الكبيرة من كل منتج، المحدد أعلاه، إلى سلة التسوق."
+msgid "This much quantity of each product, selected above, will be added to cart."
+msgstr "ستتم إضافة هذه الكمية الكبيرة من كل منتج، المحدد أعلاه، إلى سلة التسوق."
 
 #. translators: %s: $coupon_code coupon code
-#: includes/class-wc-sc-url-coupon.php:371
-msgctxt ""
-"This notice will be shown on the cart or the checkout page if the coupon is "
-"already applied."
-msgid ""
-"Coupon code \"%s\" already applied! Please add some products to the cart to "
-"see the discount."
-msgstr ""
-"رمز القسيمة \"%s\" مطبق بالفعل! يرجى إضافة بعض المنتجات إلى عربة التسوق "
-"لمعرفة الخصم."
+#: includes/class-wc-sc-url-coupon.php:355
+msgctxt "This notice will be shown on the cart or the checkout page if the coupon is already applied."
+msgid "Coupon code \"%s\" already applied! Please add some products to the cart to see the discount."
+msgstr "رمز القسيمة \"%s\" مطبق بالفعل! يرجى إضافة بعض المنتجات إلى عربة التسوق لمعرفة الخصم."
 
 #. translators: %s: $coupon_code coupon code
-#: includes/class-wc-sc-url-coupon.php:367
-msgctxt ""
-"This notice will be shown on the cart or the checkout page if the coupon "
-"will be applied successfully."
-msgid ""
-"Coupon code \"%s\" applied successfully. Please add some products to the "
-"cart to see the discount."
-msgstr ""
-"تم تطبيق رمز القسيمة \"%s\" بنجاح. يرجى إضافة بعض المنتجات إلى عربة التسوق "
-"لمعرفة الخصم."
+#: includes/class-wc-sc-url-coupon.php:351
+msgctxt "This notice will be shown on the cart or the checkout page if the coupon will be applied successfully."
+msgid "Coupon code \"%s\" applied successfully. Please add some products to the cart to see the discount."
+msgstr "تم تطبيق رمز القسيمة \"%s\" بنجاح. يرجى إضافة بعض المنتجات إلى عربة التسوق لمعرفة الخصم."
 
-#: includes/class-wc-smart-coupons.php:6630
-msgid ""
-"This section shows settings that affects Smart Coupons' functionalities."
+#: includes/class-wc-smart-coupons.php:6633
+msgid "This section shows settings that affects Smart Coupons' functionalities."
 msgstr "يعرض هذا القسم الإعدادات التي تؤثر على وظائف القسائم الذكية."
 
 #: includes/class-wc-sc-settings.php:741
-msgid ""
-"This section will always be visible, even if no coupons are currently "
-"available."
+msgid "This section will always be visible, even if no coupons are currently available."
 msgstr ""
 
 #: includes/class-wc-sc-admin-welcome.php:492
-msgid ""
-"This step-by-step guide will walk you through the process of setting up a "
-"BOGO deal, ensuring that your customers enjoy great value and keep coming "
-"back for more."
-msgstr ""
-"سيوجهك هذا الدليل التفصيلي خطوة بخطوة خلال عملية إعداد صفقة BOGO، مما يضمن "
-"استمتاع عملائك بقيمة كبيرة واستمرارهم في العودة للحصول على المزيد."
+msgid "This step-by-step guide will walk you through the process of setting up a BOGO deal, ensuring that your customers enjoy great value and keep coming back for more."
+msgstr "سيوجهك هذا الدليل التفصيلي خطوة بخطوة خلال عملية إعداد صفقة BOGO، مما يضمن استمتاع عملائك بقيمة كبيرة واستمرارهم في العودة للحصول على المزيد."
 
-#: includes/class-wc-smart-coupons.php:3677
+#: includes/class-wc-smart-coupons.php:3686
 msgid "This tool will clear the cache created by WooCommerce Smart Coupons."
-msgstr ""
-"ستقوم هذه الأداة بمسح ذاكرة التخزين المؤقت التي أنشأتها كوبونات WooCommerce "
-"الذكية."
+msgstr "ستقوم هذه الأداة بمسح ذاكرة التخزين المؤقت التي أنشأتها كوبونات WooCommerce الذكية."
 
-#: includes/class-wc-smart-coupons.php:1967
+#: includes/class-wc-smart-coupons.php:1976
 msgid "This Week Only!"
 msgstr "هذا الأسبوع فقط!"
 
-#: includes/class-wc-smart-coupons.php:1970
+#: includes/class-wc-smart-coupons.php:1979
 msgid "This will be over soon! Hurry."
 msgstr "سينتهي هذا الأمر قريباً! أسرعوا"
 
 #. translators: %s: list of placeholders
 #: includes/emails/class-wc-sc-acknowledgement-email.php:108
-msgid ""
-"This will be used when the setting \"WooCommerce > Settings > Smart Coupons >"
-" Allow schedule sending of coupons?\" is enabled. Available placeholders: %s."
-msgstr ""
-"سيُستخدم هذا عندما يتم تمكين الإعداد \"WooCommerce &gt; الإعدادات &gt; "
-"القسائم الذكية &gt; السماح بإرسال القسائم في الموعد المحدد؟ العناصر النائبة "
-"المتاحة: %s."
+msgid "This will be used when the setting \"WooCommerce > Settings > Smart Coupons > Allow schedule sending of coupons?\" is enabled. Available placeholders: %s."
+msgstr "سيُستخدم هذا عندما يتم تمكين الإعداد \"WooCommerce &gt; الإعدادات &gt; القسائم الذكية &gt; السماح بإرسال القسائم في الموعد المحدد؟ العناصر النائبة المتاحة: %s."
 
 #: includes/class-wc-sc-settings.php:595
 msgid "Ticket"
 msgstr "التذكرة"
 
 #: includes/class-wc-sc-coupon-fields.php:414
-msgid ""
-"Time after which coupon will be expired. This will work in conjunction with "
-"Coupon expiry date."
-msgstr ""
-"الوقت الذي ستنتهي صلاحية القسيمة بعده. سيعمل هذا بالتزامن مع تاريخ انتهاء "
-"صلاحية القسيمة."
+msgid "Time after which coupon will be expired. This will work in conjunction with Coupon expiry date."
+msgstr "الوقت الذي ستنتهي صلاحية القسيمة بعده. سيعمل هذا بالتزامن مع تاريخ انتهاء صلاحية القسيمة."
 
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:106
 msgctxt "time unit"
@@ -5642,14 +5044,8 @@ msgstr "✨ ميزة جديدة: 🤝 كوبونات كومبو!"
 
 #: includes/class-wc-sc-admin-notifications.php:753
 msgctxt "Title for the combo coupons feature admin notice"
-msgid ""
-"📢 <strong>Update:</strong> We've enhanced the layout and controls under "
-"<strong>Coupon data → Usage restrictions → Smart Coupons: Restrictions "
-"</strong> to make editing smoother and more user-friendly."
-msgstr ""
-"📢 <strong>تحديث:</strong> لقد قمنا بتحسين التخطيط وعناصر التحكم ضمن <strong>"
-"بيانات الكوبونات ← قيود الاستخدام ← قيود الكوبونات الذكية: قيود </strong> "
-"لجعل التحرير أكثر سلاسة وسهولة في الاستخدام."
+msgid "📢 <strong>Update:</strong> We've enhanced the layout and controls under <strong>Coupon data → Usage restrictions → Smart Coupons: Restrictions </strong> to make editing smoother and more user-friendly."
+msgstr "📢 <strong>تحديث:</strong> لقد قمنا بتحسين التخطيط وعناصر التحكم ضمن <strong>بيانات الكوبونات ← قيود الاستخدام ← قيود الكوبونات الذكية: قيود </strong> لجعل التحرير أكثر سلاسة وسهولة في الاستخدام."
 
 #: includes/class-wc-sc-admin-notifications.php:716
 msgctxt "Title for the new feature admin notice"
@@ -5669,38 +5065,23 @@ msgid "To redeem your discount click on the following coupon(s):"
 msgstr "لاسترداد قيمة الخصم الخاص بك انقر على القسيمة (القسائم) التالية:"
 
 #: templates/plain/expiry-reminder-email.php:20
-msgid ""
-"To redeem your discount use below coupon codes during checkout or copy and "
-"paste the below URL and hit enter in your browser"
-msgstr ""
-"لاسترداد قيمة الخصم الخاص بك، استخدم رموز القسيمة أدناه أثناء الدفع أو انسخ "
-"والصق عنوان URL أدناه واضغط على إدخال في متصفحك"
+msgid "To redeem your discount use below coupon codes during checkout or copy and paste the below URL and hit enter in your browser"
+msgstr "لاسترداد قيمة الخصم الخاص بك، استخدم رموز القسيمة أدناه أثناء الدفع أو انسخ والصق عنوان URL أدناه واضغط على إدخال في متصفحك"
 
 #: templates/plain/combined-email.php:22
-msgid ""
-"To redeem your discount use below coupon codes during checkout or copy and "
-"paste the below URLs and hit enter in your browser"
-msgstr ""
-"لاسترداد قيمة الخصم الخاص بك، استخدم رموز القسيمة أدناه أثناء الدفع أو انسخ "
-"والصق عناوين URL أدناه واضغط على زر الإدخال في متصفحك"
+msgid "To redeem your discount use below coupon codes during checkout or copy and paste the below URLs and hit enter in your browser"
+msgstr "لاسترداد قيمة الخصم الخاص بك، استخدم رموز القسيمة أدناه أثناء الدفع أو انسخ والصق عناوين URL أدناه واضغط على زر الإدخال في متصفحك"
 
 #. translators: %s: Coupon code
-#: templates/email.php:85 templates/expiry-reminder-email.php:24
-msgid ""
-"To redeem your discount use coupon code %s during checkout or click on the "
-"following coupon:"
-msgstr ""
-"لاسترداد قيمة الخصم الخاص بك استخدم رمز القسيمة %s أثناء الدفع أو انقر على "
-"القسيمة التالية:"
+#: templates/email.php:85
+#: templates/expiry-reminder-email.php:24
+msgid "To redeem your discount use coupon code %s during checkout or click on the following coupon:"
+msgstr "لاسترداد قيمة الخصم الخاص بك استخدم رمز القسيمة %s أثناء الدفع أو انقر على القسيمة التالية:"
 
 #. translators: %s: Coupon code
 #: templates/plain/email.php:23
-msgid ""
-"To redeem your discount use coupon code %s during checkout or copy and paste "
-"the below URL and hit enter in your browser:"
-msgstr ""
-"لاسترداد قيمة الخصم الخاص بك استخدم رمز القسيمة %s أثناء الدفع أو انسخ والصق "
-"عنوان URL أدناه واضغط على زر الإدخال في متصفحك:"
+msgid "To redeem your discount use coupon code %s during checkout or copy and paste the below URL and hit enter in your browser:"
+msgstr "لاسترداد قيمة الخصم الخاص بك استخدم رمز القسيمة %s أثناء الدفع أو انسخ والصق عنوان URL أدناه واضغط على زر الإدخال في متصفحك:"
 
 #: includes/class-wc-sc-admin-welcome.php:395
 msgid "Top Smart Coupons features"
@@ -5731,12 +5112,8 @@ msgid "Uncheck"
 msgstr "إلغاء التحديد"
 
 #: includes/class-wc-sc-admin-welcome.php:604
-msgid ""
-"Uncheck \"Auto-generate\" option in Store Credit is not saving? Is it always "
-"checked?"
-msgstr ""
-"هل إلغاء تحديد خيار \"الإنشاء التلقائي\" في رصيد المتجر لا يحفظ؟ هل يتم "
-"تحديده دائماً؟"
+msgid "Uncheck \"Auto-generate\" option in Store Credit is not saving? Is it always checked?"
+msgstr "هل إلغاء تحديد خيار \"الإنشاء التلقائي\" في رصيد المتجر لا يحفظ؟ هل يتم تحديده دائماً؟"
 
 #: includes/class-wc-sc-coupon-fields.php:430
 msgid "Unlimited discount"
@@ -5776,33 +5153,29 @@ msgstr "حتى %s"
 msgid "URL of coupon should be like this:"
 msgstr "يجب أن يكون عنوان الكوبون هكذا:"
 
-#: includes/class-wc-smart-coupons.php:5644
+#: includes/class-wc-smart-coupons.php:5648
 msgid "Usage Count"
 msgstr "عدد الاستخدام"
 
-#: includes/class-wc-smart-coupons.php:5641
+#: includes/class-wc-smart-coupons.php:5645
 msgid "Usage Limit"
 msgstr "حد الاستخدام"
 
-#: includes/class-wc-smart-coupons.php:5642
+#: includes/class-wc-smart-coupons.php:5646
 msgid "Usage Limit Per User"
 msgstr "حد الاستخدام لكل مستخدم"
 
 #. translators: %s: Label for store credit
 #: includes/compat/class-wcs-sc-compatibility.php:934
-msgid ""
-"Use %s applied in first subscription order for subsequent renewals until "
-"credit reaches zero"
-msgstr ""
-"استخدم النسبة المئوية المطبقة في أمر الاشتراك الأول للتجديدات اللاحقة حتى "
-"يصل الرصيد إلى الصفر"
+msgid "Use %s applied in first subscription order for subsequent renewals until credit reaches zero"
+msgstr "استخدم النسبة المئوية المطبقة في أمر الاشتراك الأول للتجديدات اللاحقة حتى يصل الرصيد إلى الصفر"
 
-#: includes/class-wc-smart-coupons.php:1997
+#: includes/class-wc-smart-coupons.php:2006
 msgid "Use code"
 msgstr "استخدم الرمز"
 
 #. translators: 1. The coupon code
-#: includes/class-wc-smart-coupons.php:2014
+#: includes/class-wc-smart-coupons.php:2023
 msgid "Use code: %s"
 msgstr "استخدم الرمز: %s"
 
@@ -5811,15 +5184,11 @@ msgstr "استخدم الرمز: %s"
 msgid "Use comma \",\" to separate multiple email addresses"
 msgstr "استخدم الفاصلة \"،\" للفصل بين عناوين البريد الإلكتروني المتعددة"
 
-#: includes/class-wc-smart-coupons.php:6602
-msgid ""
-"Use gift card applied in first subscription order for subsequent renewals "
-"until credit reaches zero"
-msgstr ""
-"استخدم بطاقة الهدايا المطبقة في طلب الاشتراك الأول للتجديدات اللاحقة حتى يصل "
-"الرصيد إلى الصفر"
+#: includes/class-wc-smart-coupons.php:6605
+msgid "Use gift card applied in first subscription order for subsequent renewals until credit reaches zero"
+msgstr "استخدم بطاقة الهدايا المطبقة في طلب الاشتراك الأول للتجديدات اللاحقة حتى يصل الرصيد إلى الصفر"
 
-#: includes/class-wc-smart-coupons.php:5645
+#: includes/class-wc-smart-coupons.php:5649
 msgid "Used By"
 msgstr "مستعمل من قبل"
 
@@ -5844,12 +5213,12 @@ msgid "users can choose only one"
 msgstr "يمكن للمستخدمين اختيار واحد فقط"
 
 #. translators: Product names
-#: includes/class-wc-smart-coupons.php:1558
+#: includes/class-wc-smart-coupons.php:1567
 msgid "Valid for %s"
 msgstr "صالح لـ %s"
 
 #. translators: 1: The category names
-#: includes/class-wc-smart-coupons.php:1571
+#: includes/class-wc-smart-coupons.php:1580
 msgid "Valid for category %s"
 msgid_plural "Valid for categories %s"
 msgstr[0] "صالح للفئة %s"
@@ -5859,12 +5228,12 @@ msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
 
-#: includes/class-wc-smart-coupons.php:1600
+#: includes/class-wc-smart-coupons.php:1609
 msgid "Valid on entire range of products. Buy anything in the store."
 msgstr "يسري على مجموعة كاملة من المنتجات. اشترِ أي شيء في المتجر."
 
 #: includes/class-wc-sc-settings.php:454
-#: includes/class-wc-smart-coupons.php:6597
+#: includes/class-wc-smart-coupons.php:6600
 msgid "Valid order status for auto-generating coupon"
 msgstr "حالة الطلب الصالحة للقسيمة التي يتم إنشاؤها تلقائياً"
 
@@ -5872,7 +5241,7 @@ msgstr "حالة الطلب الصالحة للقسيمة التي يتم إنش
 msgid "Validate quantity of"
 msgstr "التحقق من صحة كمية"
 
-#: includes/class-wc-smart-coupons.php:5226
+#: includes/class-wc-smart-coupons.php:5227
 msgid "Validity Suffix"
 msgstr "لاحقة الصلاحية"
 
@@ -5901,9 +5270,11 @@ msgstr "عتيق"
 msgid "Visible on the product page"
 msgstr "مرئي على صفحة المنتج"
 
-#: templates/combined-email.php:213 templates/email.php:191
+#: templates/combined-email.php:213
+#: templates/email.php:191
 #: templates/expiry-reminder-email.php:54
-#: templates/plain/combined-email.php:131 templates/plain/email.php:124
+#: templates/plain/combined-email.php:131
+#: templates/plain/email.php:124
 msgid "Visit store"
 msgstr "زيارة المتجر"
 
@@ -5912,15 +5283,11 @@ msgid "Visit store:"
 msgstr "قم بزيارة المتجر:"
 
 #: includes/class-wc-sc-background-coupon-importer.php:492
-msgid ""
-"We are processing coupons in background. Please wait before starting new "
-"process."
-msgstr ""
-"نحن نقوم بمعالجة القسائم في الخلفية. يرجى الانتظار قبل بدء عملية جديدة."
+msgid "We are processing coupons in background. Please wait before starting new process."
+msgstr "نحن نقوم بمعالجة القسائم في الخلفية. يرجى الانتظار قبل بدء عملية جديدة."
 
 #: includes/class-wc-sc-privacy.php:111
-msgid ""
-"We store these data so that we can process it for you whenever required."
+msgid "We store these data so that we can process it for you whenever required."
 msgstr "نحن نقوم بتخزين هذه البيانات حتى نتمكن من معالجتها لك عند الحاجة."
 
 #: includes/class-wc-sc-coupon-fields.php:547
@@ -5944,98 +5311,51 @@ msgid "What we store & why?"
 msgstr "ما الذي نخزنه ولماذا؟"
 
 #: includes/class-wc-sc-admin-welcome.php:578
-msgid ""
-"What's the URL to a coupon, so it's automatically inserted when visiting?"
+msgid "What's the URL to a coupon, so it's automatically inserted when visiting?"
 msgstr "ما هو عنوان URL للقسيمة، بحيث يتم إدراجها تلقائياً عند الزيارة؟"
 
 #: includes/class-wc-sc-coupon-fields.php:462
-msgid ""
-"When checked, and applicable, this discount will apply automatically to the "
-"cart / order - without customer needing to know / use the coupon. Auto Apply "
-"is an excellent way to setup discount rules using Smart Coupons. Keep in "
-"mind that, at most 5 coupons / discounts will be auto applied on a cart / "
-"order."
-msgstr ""
-"عند تحديده وقابليته للتطبيق، سيتم تطبيق هذا الخصم تلقائيًا على عربة التسوق / "
-"الطلب - دون أن يحتاج العميل إلى معرفة / استخدام القسيمة. التطبيق التلقائي هو "
-"طريقة ممتازة لإعداد قواعد الخصم باستخدام القسائم الذكية. ضع في اعتبارك أنه "
-"سيتم تطبيق 5 كوبونات / خصومات على الأكثر تلقائيًا على عربة التسوق / الطلب."
+msgid "When checked, and applicable, this discount will apply automatically to the cart / order - without customer needing to know / use the coupon. Auto Apply is an excellent way to setup discount rules using Smart Coupons. Keep in mind that, at most 5 coupons / discounts will be auto applied on a cart / order."
+msgstr "عند تحديده وقابليته للتطبيق، سيتم تطبيق هذا الخصم تلقائيًا على عربة التسوق / الطلب - دون أن يحتاج العميل إلى معرفة / استخدام القسيمة. التطبيق التلقائي هو طريقة ممتازة لإعداد قواعد الخصم باستخدام القسائم الذكية. ضع في اعتبارك أنه سيتم تطبيق 5 كوبونات / خصومات على الأكثر تلقائيًا على عربة التسوق / الطلب."
 
 #: includes/class-wc-sc-coupon-fields.php:511
-msgid ""
-"When checked, and when this coupon is linked to a product, and when someone "
-"places an order containing such product: generates a copy of this coupon "
-"with all the settings, assigns a new coupon code and issues that newly "
-"generated coupon to the customer, to use in future order/s."
-msgstr ""
-"عند التحقق، وعندما تكون هذه القسيمة مرتبطة بمنتج، وعندما يقوم شخص ما بتقديم "
-"طلب يحتوي على هذا المنتج: يُنشئ نسخة من هذه القسيمة مع جميع الإعدادات، ويخصص "
-"رمز قسيمة جديد ويصدر تلك القسيمة التي تم إنشاؤها حديثًا للعميل، لاستخدامها "
-"في الطلب/طلبات الشراء المستقبلية."
+msgid "When checked, and when this coupon is linked to a product, and when someone places an order containing such product: generates a copy of this coupon with all the settings, assigns a new coupon code and issues that newly generated coupon to the customer, to use in future order/s."
+msgstr "عند التحقق، وعندما تكون هذه القسيمة مرتبطة بمنتج، وعندما يقوم شخص ما بتقديم طلب يحتوي على هذا المنتج: يُنشئ نسخة من هذه القسيمة مع جميع الإعدادات، ويخصص رمز قسيمة جديد ويصدر تلك القسيمة التي تم إنشاؤها حديثًا للعميل، لاستخدامها في الطلب/طلبات الشراء المستقبلية."
 
 #: includes/class-wc-sc-coupon-fields.php:504
 msgid "When checked, generated coupon's value will be same as product's price"
-msgstr ""
-"عند التحقق من ذلك، ستكون قيمة القسيمة التي تم إنشاؤها هي نفس سعر المنتج"
+msgstr "عند التحقق من ذلك، ستكون قيمة القسيمة التي تم إنشاؤها هي نفس سعر المنتج"
 
 #: includes/class-wc-sc-coupon-fields.php:471
-msgid ""
-"When checked, this coupon can be used only in a customer's very first order."
+msgid "When checked, this coupon can be used only in a customer's very first order."
 msgstr "عند التحقق، يمكن استخدام هذه القسيمة فقط في أول طلب للعميل."
 
 #: includes/class-wc-sc-coupon-fields.php:483
-msgid ""
-"When checked, this coupon will be included for display on  cart / checkout / "
-"My Account pages - for all eligible customers."
-msgstr ""
-"عند التحقق، سيتم تضمين هذه القسيمة للعرض على صفحات عربة التسوق / الخروج / "
-"حسابي - لجميع العملاء المؤهلين."
+msgid "When checked, this coupon will be included for display on  cart / checkout / My Account pages - for all eligible customers."
+msgstr "عند التحقق، سيتم تضمين هذه القسيمة للعرض على صفحات عربة التسوق / الخروج / حسابي - لجميع العملاء المؤهلين."
 
 #. translators: %s: Explanation of the setting
 #: includes/class-wc-sc-settings.php:471
-msgid ""
-"When enabled, each coupon will have the option to enable auto-apply for that "
-"coupon %s"
-msgstr ""
-"عند التمكين، سيكون لكل قسيمة خيار تمكين التطبيق التلقائي لتلك القسيمة %s"
+msgid "When enabled, each coupon will have the option to enable auto-apply for that coupon %s"
+msgstr "عند التمكين، سيكون لكل قسيمة خيار تمكين التطبيق التلقائي لتلك القسيمة %s"
 
 #. translators: %s: Label for store credit, 1: : Label for store credit, 2: Label for store credit, 3: Label for store credit
 #: includes/class-wc-sc-settings.php:517
-msgid ""
-"When selling %1$s, if Regular and Sale price is found for the product, then "
-"coupon will be created with product's Regular Price but customer will pay "
-"product's Sale price. This setting will also make sure if any discount "
-"coupon is applied on the %2$s while purchasing, then customer will get %3$s "
-"in their picked price"
-msgstr ""
-"عند البيع بـ %1$s، إذا تم العثور على سعر عادي وسعر البيع للمنتج، فسيتم إنشاء "
-"قسيمة بسعر المنتج العادي ولكن سيدفع العميل سعر البيع للمنتج. سيتأكد هذا "
-"الإعداد أيضًا من أنه إذا تم تطبيق أي قسيمة خصم على %2$s أثناء الشراء، فسيحصل "
-"العميل على %3$s بالسعر الذي اختاره"
+msgid "When selling %1$s, if Regular and Sale price is found for the product, then coupon will be created with product's Regular Price but customer will pay product's Sale price. This setting will also make sure if any discount coupon is applied on the %2$s while purchasing, then customer will get %3$s in their picked price"
+msgstr "عند البيع بـ %1$s، إذا تم العثور على سعر عادي وسعر البيع للمنتج، فسيتم إنشاء قسيمة بسعر المنتج العادي ولكن سيدفع العميل سعر البيع للمنتج. سيتأكد هذا الإعداد أيضًا من أنه إذا تم تطبيق أي قسيمة خصم على %2$s أثناء الشراء، فسيحصل العميل على %3$s بالسعر الذي اختاره"
 
 #: includes/class-wc-sc-coupon-fields.php:1114
-msgid ""
-"When this coupon will be applied, selected products will be added to cart "
-"with set discount. If discount is not set, this coupon's discount will be "
-"applied to these products."
-msgstr ""
-"عندما يتم تطبيق هذه القسيمة، ستتم إضافة المنتجات المختارة إلى سلة التسوق "
-"بالخصم المحدد. إذا لم يتم تعيين الخصم، سيتم تطبيق خصم هذه القسيمة على هذه "
-"المنتجات."
+msgid "When this coupon will be applied, selected products will be added to cart with set discount. If discount is not set, this coupon's discount will be applied to these products."
+msgstr "عندما يتم تطبيق هذه القسيمة، ستتم إضافة المنتجات المختارة إلى سلة التسوق بالخصم المحدد. إذا لم يتم تعيين الخصم، سيتم تطبيق خصم هذه القسيمة على هذه المنتجات."
 
 #: includes/class-wc-sc-admin-welcome.php:552
-msgid ""
-"When trying to add coupon/Smart Coupon, I get \"Invalid post type\" message."
-msgstr ""
-"عند محاولة إضافة قسيمة/كوبون ذكي، تظهر لي رسالة \"نوع المنشور غير صالح\"."
+msgid "When trying to add coupon/Smart Coupon, I get \"Invalid post type\" message."
+msgstr "عند محاولة إضافة قسيمة/كوبون ذكي، تظهر لي رسالة \"نوع المنشور غير صالح\"."
 
 #. translators: %s: Label for store credit
 #: includes/class-wc-sc-settings.php:835
-msgid ""
-"When you opt to allow people to buy %s of any amount, this label will be "
-"used. "
-msgstr ""
-"عندما تختار السماح للأشخاص بشراء % من أي مبلغ، سيتم استخدام هذه التسمية. "
+msgid "When you opt to allow people to buy %s of any amount, this label will be used. "
+msgstr "عندما تختار السماح للأشخاص بشراء % من أي مبلغ، سيتم استخدام هذه التسمية. "
 
 #: includes/class-wc-sc-admin-welcome.php:629
 msgid "Which features of Smart Coupons work with Subscriptions?"
@@ -6054,7 +5374,7 @@ msgstr "مع خصم بقيمة"
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
-#: includes/class-wc-smart-coupons.php:6621
+#: includes/class-wc-smart-coupons.php:6624
 msgid "WooCommerce Account Connected"
 msgstr "حساب WooCommerce متصل بحساب WooCommerce"
 
@@ -6073,7 +5393,7 @@ msgstr "كوبونات WooCommerce (CSV)"
 msgid "WooCommerce Smart Coupons"
 msgstr "كوبونات WooCommerce الذكية"
 
-#: includes/class-wc-smart-coupons.php:3675
+#: includes/class-wc-smart-coupons.php:3684
 msgid "WooCommerce Smart Coupons Cache"
 msgstr "ذاكرة التخزين المؤقت لكوبونات WooCommerce الذكية"
 
@@ -6094,7 +5414,6 @@ msgstr "بقيمة %1$1 (%2$2) "
 #. translators: 1: coupon amount 2: max discount text 3: discount for text
 #: includes/emails/class-wc-sc-email-coupon.php:450
 #, fuzzy
-#| msgid "worth %1$s%% %2$s (%3$s) "
 msgid "worth %1$s%%  %2$s (%3$s) "
 msgstr "بقيمة %1$1$s%%%2$s (%3$s) "
 
@@ -6115,11 +5434,8 @@ msgstr "القيمة٪ (لكامل عملية الشراء) "
 
 #: includes/batches/class-wc-sc-coupons-expiry-reminder-scheduler.php:179
 msgctxt "WP CRON has been disabled warning message"
-msgid ""
-"Note: WP CRON has been disabled on your install which may prevent this "
-"update from completing."
-msgstr ""
-"ملاحظة: تم تعطيل WP CRON على التثبيت الخاص بك مما قد يمنع اكتمال هذا التحديث."
+msgid "Note: WP CRON has been disabled on your install which may prevent this update from completing."
+msgstr "ملاحظة: تم تعطيل WP CRON على التثبيت الخاص بك مما قد يمنع اكتمال هذا التحديث."
 
 #: includes/class-wc-sc-purchase-credit.php:876
 #: includes/class-wc-sc-purchase-credit.php:990
@@ -6132,12 +5448,8 @@ msgstr "السنوات"
 
 #. translators: Documentation link for 'How to Print Coupons'
 #: includes/class-wc-sc-admin-welcome.php:618
-msgid ""
-"Yes, Smart Coupons does provide a feature for printing coupons. For more "
-"details, check this article: %s"
-msgstr ""
-"نعم، يوفر Smart Coupons خاصية لطباعة القسائم. لمزيد من التفاصيل، راجع هذه "
-"المقالة: %s"
+msgid "Yes, Smart Coupons does provide a feature for printing coupons. For more details, check this article: %s"
+msgstr "نعم، يوفر Smart Coupons خاصية لطباعة القسائم. لمزيد من التفاصيل، راجع هذه المقالة: %s"
 
 #: includes/class-wc-sc-admin-welcome.php:626
 msgid "Yes, Smart Coupons does work with WooCommerce Subscriptions."
@@ -6148,40 +5460,30 @@ msgid "You can also apply multiple coupon codes via a single URL. For example:"
 msgstr "يمكنك أيضاً تطبيق عدة أكواد قسيمة عبر عنوان URL واحد. على سبيل المثال:"
 
 #: includes/class-wc-sc-background-coupon-importer.php:416
-msgid ""
-"You can continue with other work. But for bulk generating or importing new "
-"coupons, wait for the current process to complete."
-msgstr ""
-"يمكنك متابعة الأعمال الأخرى. ولكن لإنشاء أو استيراد كوبونات جديدة بشكل مجمّع "
-"انتظر حتى تكتمل العملية الحالية."
+msgid "You can continue with other work. But for bulk generating or importing new coupons, wait for the current process to complete."
+msgstr "يمكنك متابعة الأعمال الأخرى. ولكن لإنشاء أو استيراد كوبونات جديدة بشكل مجمّع انتظر حتى تكتمل العملية الحالية."
 
 #: includes/class-wc-sc-admin-welcome.php:571
 msgid "You can do this by overriding the email template."
 msgstr "يمكنك القيام بذلك عن طريق تجاوز قالب البريد الإلكتروني."
 
 #: includes/class-wc-sc-admin-welcome.php:444
-msgid ""
-"You can give a coupon to your customer after every purchase, which can "
-"encourage them to purchase again from you."
-msgstr ""
-"يمكنك إعطاء قسيمة لعميلك بعد كل عملية شراء، مما قد يشجعه على الشراء منك مرة "
-"أخرى."
+msgid "You can give a coupon to your customer after every purchase, which can encourage them to purchase again from you."
+msgstr "يمكنك إعطاء قسيمة لعميلك بعد كل عملية شراء، مما قد يشجعه على الشراء منك مرة أخرى."
 
 #: includes/class-wc-sc-admin-welcome.php:601
 msgid "You can resend them from order admin edit page."
 msgstr "يمكنك إعادة إرسالها من صفحة تعديل مسؤول الطلبات."
 
 #: includes/class-wc-sc-settings.php:855
-msgid ""
-"You can use <code>{{coupons_count}}</code> as a placeholder to show the "
-"number of available coupons dynamically."
+msgid "You can use <code>{{coupons_count}}</code> as a placeholder to show the number of available coupons dynamically."
 msgstr ""
 
 #: includes/class-wc-sc-admin-pages.php:273
 msgid "You cannot add the same tax rate twice!"
 msgstr "لا يمكنك إضافة نفس معدل الضريبة مرتين!"
 
-#: includes/class-wc-smart-coupons.php:1969
+#: includes/class-wc-smart-coupons.php:1978
 msgid "You don't want to miss this..."
 msgstr "لا تريد أن يفوتك هذا..."
 
@@ -6190,14 +5492,18 @@ msgid "You got these coupons "
 msgstr "حصلت على هذه القسائم "
 
 #. translators: %s: singular name for store credit
-#: templates/email.php:216 templates/plain/combined-email.php:137
-#: templates/plain/email.php:130 templates/plain/expiry-reminder-email.php:113
+#: templates/email.php:216
+#: templates/plain/combined-email.php:137
+#: templates/plain/email.php:130
+#: templates/plain/expiry-reminder-email.php:113
 msgid "You got this %s"
 msgstr "لقد حصلت على هذا %s"
 
 #. translators: %s: singular name for store credit
-#: templates/email.php:216 templates/plain/combined-email.php:137
-#: templates/plain/email.php:130 templates/plain/expiry-reminder-email.php:113
+#: templates/email.php:216
+#: templates/plain/combined-email.php:137
+#: templates/plain/email.php:130
+#: templates/plain/expiry-reminder-email.php:113
 msgid "You got this gift card"
 msgstr "حصلت على بطاقة الهدايا هذه"
 
@@ -6226,12 +5532,8 @@ msgid "You have scheduled to send %1$d %2$s to %3$s (%4$s)"
 msgstr "لقد قمت بجدولة إرسال %1$d %2$s إلى %3$s (%4$s)"
 
 #: includes/class-wc-sc-coupon-refund-process.php:123
-msgid ""
-"You have selected all items for refund. This action will also refund all "
-"applied store credit."
-msgstr ""
-"لقد قمت بتحديد جميع العناصر لاسترداد قيمتها. سيؤدي هذا الإجراء أيضًا إلى "
-"استرداد جميع أرصدة المتجر المطبقة."
+msgid "You have selected all items for refund. This action will also refund all applied store credit."
+msgstr "لقد قمت بتحديد جميع العناصر لاسترداد قيمتها. سيؤدي هذا الإجراء أيضًا إلى استرداد جميع أرصدة المتجر المطبقة."
 
 #. translators: 1. Receiver's count 2. Singular/Plural label for store credit(s) 3. Receiver name 4. Receiver details
 #: templates/acknowledgement-email.php:34
@@ -6280,15 +5582,9 @@ msgid "Your order contains coupons. What would you like to do?"
 msgstr "طلبك يحتوي على كوبونات. ماذا تريد أن تفعل؟"
 
 #: includes/class-wc-sc-purchase-credit.php:815
-msgid ""
-"Your order contains coupons. You will receive them after completion of this "
-"order."
+msgid "Your order contains coupons. You will receive them after completion of this order."
 msgstr "يحتوي طلبك على كوبونات. سوف تستلمها بعد إتمام هذا الطلب."
 
 #: includes/class-wc-sc-admin-pages.php:274
-msgid ""
-"Your product has variations! Before changing the product type, it is a good "
-"idea to delete the variations to avoid errors in the stock reports."
-msgstr ""
-"منتجك لديه اختلافات! قبل تغيير نوع المنتج، من الجيد حذف الأشكال المختلفة "
-"لتجنب الأخطاء في تقارير المخزون."
+msgid "Your product has variations! Before changing the product type, it is a good idea to delete the variations to avoid errors in the stock reports."
+msgstr "منتجك لديه اختلافات! قبل تغيير نوع المنتج، من الجيد حذف الأشكال المختلفة لتجنب الأخطاء في تقارير المخزون."

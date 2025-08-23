@@ -5,7 +5,7 @@
  * @author      StoreApps
  * @category    Admin
  * @package     wocommerce-smart-coupons/includes
- * @version     1.12.0
+ * @version     1.13.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -204,7 +204,7 @@ if ( ! class_exists( 'WC_SC_Coupons_By_Payment_Method' ) ) {
 				}
 				if ( ! in_array( $chosen_payment_method, $payment_method_ids, true ) ) {
 					$applied_coupons = ( WC()->cart instanceof WC_Cart && is_callable( array( WC()->cart, 'get_applied_coupons' ) ) ) ? WC()->cart->get_applied_coupons() : array();
-					if ( ! empty( $applied_coupons ) && in_array( $coupon_code, $applied_coupons, true ) ) {
+					if ( ! empty( $applied_coupons ) && $this->sc_coupon_code_exists( $coupon_code, $applied_coupons ) ) {
 						WC()->cart->remove_coupon( $coupon_code );
 						/* translators: 1. The coupon code 2. The text 'payment method/s' 3. List of payment method names 4. Link to the checkout page */
 						wc_add_notice( sprintf( __( 'Coupon code %1$s has been removed. It is valid only for %2$s: %3$s. You can change the payment method from the %4$s page.', 'woocommerce-smart-coupons' ), '<code>' . $coupon_code . '</code>', _n( 'payment method', 'payment methods', count( $payment_titles ), 'woocommerce-smart-coupons' ), '<strong>"' . implode( '", "', $payment_titles ) . '"</strong>', '<a href="' . esc_url( wc_get_checkout_url() ) . '"><strong>' . __( 'Checkout', 'woocommerce-smart-coupons' ) . '</strong></a>' ), 'error' );

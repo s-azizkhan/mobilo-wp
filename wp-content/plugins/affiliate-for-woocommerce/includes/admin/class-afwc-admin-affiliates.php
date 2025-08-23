@@ -3,7 +3,7 @@
  * Main class for Affiliates Admin
  *
  * @package     affiliate-for-woocommerce/includes/admin/
- * @version     1.14.2
+ * @version     1.14.3
  */
 
 // Exit if accessed directly.
@@ -2294,14 +2294,15 @@ if ( ! class_exists( 'AFWC_Admin_Affiliates' ) ) {
 			$args['from']          = $this->from;
 			$args['to']            = $this->to;
 			$args['start_limit']   = $this->start_limit;
-			$args['batch_limit']   = intval( $this->batch_limit ) + 1;
+			$args['limit']         = intval( $this->batch_limit ) + 1;
 
-			$affiliates_payout_history = is_callable( array( 'Affiliate_For_WooCommerce', 'get_affiliates_payout_history' ) ) ? Affiliate_For_WooCommerce::get_affiliates_payout_history( $args ) : array();
+			$payouts_history_obj       = new AFWC_Payout_History( $args );
+			$affiliates_payout_history = is_callable( array( $payouts_history_obj, 'get_reports' ) ) ? $payouts_history_obj->get_reports() : array();
 
 			$load_more = false;
 
 			if ( ! empty( $affiliates_payout_history ) && is_array( $affiliates_payout_history ) ) {
-				if ( count( $affiliates_payout_history ) === $args['batch_limit'] ) {
+				if ( count( $affiliates_payout_history ) === $args['limit'] ) {
 					array_pop( $affiliates_payout_history );
 					$load_more = true;
 				}
@@ -2410,16 +2411,17 @@ if ( ! class_exists( 'AFWC_Admin_Affiliates' ) ) {
 				'from'         => $this->from,
 				'to'           => $this->to,
 				'start_limit'  => ! empty( $this->start_limit ) ? intval( $this->start_limit ) : 0,
-				'batch_limit'  => ! empty( $this->batch_limit ) ? ( intval( $this->batch_limit ) + 1 ) : 0,
+				'limit'        => ! empty( $this->batch_limit ) ? ( intval( $this->batch_limit ) + 1 ) : 0,
 			);
 
-			$products = is_callable( array( 'Affiliate_For_WooCommerce', 'get_products_data' ) ) ? Affiliate_For_WooCommerce::get_products_data( $args ) : array();
+			$products_obj = new AFWC_Referred_Products( $args );
+			$products     = is_callable( array( $products_obj, 'get_reports' ) ) ? $products_obj->get_reports() : array();
 
 			$load_more = false;
 
 			if ( ! empty( $products ) && is_array( $products ) ) {
 
-				if ( count( $products ) === $args['batch_limit'] ) {
+				if ( count( $products ) === $args['limit'] ) {
 					// Remove the extra data.
 					array_pop( $products );
 					// Enable the load more if extra data found.

@@ -3,7 +3,7 @@
  * Main class for Affiliates Dashboard
  *
  * @package     affiliate-for-woocommerce/includes/admin/
- * @version     1.23.0
+ * @version     1.23.1
  */
 
 // Exit if accessed directly.
@@ -158,9 +158,9 @@ if ( ! class_exists( 'AFWC_Admin_Dashboard' ) ) {
 					wp_register_script( 'accounting', WC()->plugin_url() . '/assets/js/accounting/accounting' . $suffix . '.js', array( 'jquery' ), WC_VERSION, true );
 				}
 
-				wp_register_script( 'afwc-country-flag', AFWC_PLUGIN_URL . '/assets/js/common/afwc-country-flag.js', array(), $plugin_data['Version'], true );
+				wp_register_script( 'afwc-country-flag', AFWC_PLUGIN_URL . '/assets/js/lib/afwc-country-flag.js', array(), $plugin_data['Version'], true );
 
-				wp_register_script( 'afwc-admin-dashboard', AFWC_PLUGIN_URL . '/assets/js/admin.js', array( 'afwc-admin-dashboard-styles', 'accounting', 'wp-i18n', 'afwc-date-functions', 'afwc-country-flag' ), $plugin_data['Version'], true );
+				wp_register_script( 'afwc-admin-dashboard', AFWC_PLUGIN_URL . '/assets/js/admin/admin.js', array( 'afwc-admin-dashboard-styles', 'accounting', 'wp-i18n', 'afwc-date-functions', 'afwc-country-flag' ), $plugin_data['Version'], true );
 				if ( function_exists( 'wp_set_script_translations' ) ) {
 					wp_set_script_translations( 'afwc-admin-dashboard', 'affiliate-for-woocommerce', AFWC_PLUGIN_DIR_PATH . 'languages' );
 				}
@@ -179,9 +179,8 @@ if ( ! class_exists( 'AFWC_Admin_Dashboard' ) ) {
 		public function register_admin_dashboard_styles() {
 			$plugin_data = Affiliate_For_WooCommerce::get_plugin_data();
 			$suffix      = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-			wp_register_style( 'tailwind', AFWC_PLUGIN_URL . '/assets/css/admin.css', array(), $plugin_data['Version'] );
+			wp_register_style( 'tailwind', AFWC_PLUGIN_URL . '/assets/css/admin/admin.css', array(), $plugin_data['Version'] );
 			wp_register_style( 'afwc-common-tailwind', AFWC_PLUGIN_URL . '/assets/css/common.css', array(), $plugin_data['Version'] );
-			wp_register_style( 'afwc-admin-dashboard-css', AFWC_PLUGIN_URL . '/assets/css/afwc-admin-dashboard.css', array(), $plugin_data['Version'] );
 			wp_enqueue_style( 'select2', WC()->plugin_url() . '/assets/css/select2.css', array(), WC_VERSION );
 		}
 
@@ -200,10 +199,6 @@ if ( ! class_exists( 'AFWC_Admin_Dashboard' ) ) {
 
 			if ( ! wp_style_is( 'afwc-common-tailwind' ) ) {
 				wp_enqueue_style( 'afwc-common-tailwind' );
-			}
-
-			if ( ! wp_style_is( 'afwc-admin-dashboard-css' ) ) {
-				wp_enqueue_style( 'afwc-admin-dashboard-css' );
 			}
 
 			if ( ! wp_script_is( 'select2' ) ) {

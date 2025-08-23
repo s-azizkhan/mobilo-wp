@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       3.3.0
- * @version     2.7.0
+ * @version     2.8.0
  * @package     WooCommerce Smart Coupons
  */
 
@@ -722,7 +722,7 @@ if ( ! class_exists( 'WCS_SC_Compatibility' ) ) {
 					$coupon_amount = $this->get_amount( $coupon, true, $renewal_order );
 
 					if ( ! empty( $discount_type ) && 'smart_coupon' === $discount_type && ! empty( $coupon_amount ) ) {
-						if ( 'yes' !== $pay_from_credit_of_original_order && in_array( $coupon_code, $coupon_used_in_original_order, true ) ) {
+						if ( 'yes' !== $pay_from_credit_of_original_order && $this->sc_coupon_code_exists( $coupon_code, $coupon_used_in_original_order ) ) {
 							continue;
 						}
 						if ( $this->is_wc_gte_30() && 'yes' === $apply_before_tax ) {
@@ -1299,7 +1299,7 @@ if ( ! class_exists( 'WCS_SC_Compatibility' ) ) {
 							continue;
 						}
 						$product_ids_added_by_coupon = array_map( 'absint', $product_ids_added_by_coupon );
-						if ( $coupon_code === $wc_sc_product_coupon && in_array( absint( $item_product_id ), $product_ids_added_by_coupon, true ) ) {
+						if ( $this->sc_is_same_coupon_code( $coupon_code, $wc_sc_product_coupon ) && in_array( absint( $item_product_id ), $product_ids_added_by_coupon, true ) ) {
 							$order->remove_item( $item_id );
 							$is_order_updated = true;
 						}

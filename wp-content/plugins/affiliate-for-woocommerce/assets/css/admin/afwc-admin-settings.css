@@ -90,11 +90,12 @@ table.afwc_registration_form_table td.status span input[type="radio"] {
 	pointer-events: none;
 }
 /** registration form CSS End */
-.wc-settings-row-afwc-hide, .afwc-hide{
+.wc-settings-row-afwc-hide,
+.afwc-hide {
 	display: none !important;
 }
 /** Media uploader CSS Start */
-.afwc-media-uploader{
+.afwc-media-uploader {
 	width: 100%;
 	cursor: pointer;
 	text-align: center;
@@ -105,10 +106,10 @@ table.afwc_registration_form_table td.status span input[type="radio"] {
 	max-width: 20em;
 }
 .afwc-media-uploader:hover,
-.afwc-media-uploader:focus{
+.afwc-media-uploader:focus {
 	background: #fff;
 }
-.afwc-media-upload-section button.afwc-media-remove{
+.afwc-media-upload-section button.afwc-media-remove {
 	color: #b32d2e;
 	text-decoration: none;
 	border-color: transparent;
@@ -117,12 +118,12 @@ table.afwc_registration_form_table td.status span input[type="radio"] {
 	line-height: 1.6;
 }
 .afwc-media-upload-section button.afwc-media-remove:focus,
-.afwc-media-upload-section button.afwc-media-remove:hover{
+.afwc-media-upload-section button.afwc-media-remove:hover {
 	background: #b32d2e;
 	color: #fff;
 	border-color: #b32d2e;
 }
-.afwc-media-upload-section .afwc-action-buttons{
+.afwc-media-upload-section .afwc-action-buttons {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1em;

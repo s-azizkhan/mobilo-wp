@@ -9,6 +9,7 @@ class Turnstile extends FeaturesAbstract {
 
 	private $verify_url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 
+
 	protected function run_if_cfw_is_enabled() {
 		// Check for plugin conflicts
 		if ( self::has_conflict() ) {
@@ -108,7 +109,7 @@ class Turnstile extends FeaturesAbstract {
 
 	public function output_order_pay_widget() {
 		if ( $this->settings_getter->get_setting( 'turnstile_order_pay_enabled' ) !== 'yes' ||
-			 ! $this->should_show_widget() ) {
+			! $this->should_show_widget() ) {
 			return;
 		}
 
@@ -137,7 +138,7 @@ class Turnstile extends FeaturesAbstract {
 			function scaleTurnstileToFit() {
 				const container = document.querySelector('.cf-turnstile-scalable-container');
 				const turnstile = document.querySelector('.cf-turnstile-scalable-container .cf-turnstile');
-				
+
 				if (!container || !turnstile) return;
 
 				const containerWidth = container.offsetWidth;
@@ -209,7 +210,7 @@ class Turnstile extends FeaturesAbstract {
 		wp_enqueue_script( 'cfw-turnstile' );
 
 		// Enqueue CheckoutWC Turnstile styles
-		AssetManager::enqueue_style( 'turnstile' );
+		AssetManager::enqueue_style( 'turnstile-styles' );
 	}
 
 	public function enqueue_login_assets() {
@@ -259,28 +260,48 @@ class Turnstile extends FeaturesAbstract {
 
 	public function validate_checkout() {
 		if ( ! $this->should_validate() ) {
+			cfw_debug_log( 'Turnstile: validate_checkout() skipped - should_validate() returned false' );
 			return;
 		}
 
-		$result = $this->verify_token( $_POST['cf-turnstile-response'] ?? '' );
+		$token = sanitize_text_field( wp_unslash( $_POST['cf-turnstile-response'] ?? '' ) );
+		if ( empty( $token ) ) {
+			cfw_debug_log( 'Turnstile: validate_checkout() - no token received' );
+		}
+
+		$result = $this->verify_token( $token );
 
 		if ( ! $result['success'] ) {
+			cfw_debug_log( 'Turnstile: validate_checkout() failed - ' . $result['message'] );
 			wc_add_notice( $result['message'], 'error' );
+
+			return;
 		}
+
+		cfw_debug_log( 'Turnstile: validate_checkout() succeeded' );
 	}
 
 	public function validate_order_pay( $order_id ) {
 		if ( ! $this->should_validate() ) {
+			cfw_debug_log( 'Turnstile: validate_order_pay() skipped - should_validate() returned false' );
 			return;
 		}
 
-		$result = $this->verify_token( $_POST['cf-turnstile-response'] ?? '' );
+		$token = sanitize_text_field( wp_unslash( $_POST['cf-turnstile-response'] ?? '' ) );
+		if ( empty( $token ) ) {
+			cfw_debug_log( 'Turnstile: validate_order_pay() - no token received' );
+		}
+
+		$result = $this->verify_token( $token );
 
 		if ( ! $result['success'] ) {
+			cfw_debug_log( 'Turnstile: validate_order_pay() failed - ' . $result['message'] );
 			wc_add_notice( $result['message'], 'error' );
 			wp_redirect( wc_get_checkout_url() );
 			exit;
 		}
+
+		cfw_debug_log( 'Turnstile: validate_order_pay() succeeded' );
 	}
 
 	public function validate_login( $user, $username, $password ) {
@@ -288,25 +309,50 @@ class Turnstile extends FeaturesAbstract {
 			return $user;
 		}
 
-		$result = $this->verify_token( $_POST['cf-turnstile-response'] ?? '' );
+		$token = sanitize_text_field( wp_unslash( $_POST['cf-turnstile-response'] ?? '' ) );
+
+		if ( empty( $token ) ) {
+			cfw_debug_log( 'Turnstile: validate_login() - no token received for user: ' . $username );
+		}
+
+		$result = $this->verify_token( $token );
 
 		if ( ! $result['success'] ) {
+			cfw_debug_log( 'Turnstile: validate_login() failed for user: ' . $username . ' - ' . $result['message'] );
 			return new \WP_Error( 'turnstile_failed', $result['message'] );
 		}
+
+		cfw_debug_log( 'Turnstile: validate_login() succeeded for user: ' . $username );
 
 		return $user;
 	}
 
 	public function validate_registration( $username, $email, $validation_errors ) {
-		if ( ! $this->should_validate() ) {
+		// Skip registration validation during checkout - checkout validation handles it
+		if ( is_checkout() ) {
+			cfw_debug_log( 'Turnstile: validate_registration() skipped during checkout for user: ' . $username );
 			return;
 		}
 
-		$result = $this->verify_token( $_POST['cf-turnstile-response'] ?? '' );
+		if ( ! $this->should_validate() ) {
+			cfw_debug_log( 'Turnstile: validate_registration() skipped - should_validate() returned false' );
+			return;
+		}
+
+		$token = sanitize_text_field( wp_unslash( $_POST['cf-turnstile-response'] ?? '' ) );
+		if ( empty( $token ) ) {
+			cfw_debug_log( 'Turnstile: validate_registration() - no token received for user: ' . $username );
+		}
+
+		$result = $this->verify_token( $token );
 
 		if ( ! $result['success'] ) {
+			cfw_debug_log( 'Turnstile: validate_registration() failed for user: ' . $username . ' - ' . $result['message'] );
 			$validation_errors->add( 'turnstile_failed', $result['message'] );
+			return;
 		}
+
+		cfw_debug_log( 'Turnstile: validate_registration() succeeded for user: ' . $username );
 	}
 
 	private function verify_token( string $token ): array {
@@ -330,6 +376,7 @@ class Turnstile extends FeaturesAbstract {
 		);
 
 		if ( is_wp_error( $response ) ) {
+			cfw_debug_log( 'Turnstile API request failed: ' . $response->get_error_message() );
 			return array(
 				'success' => false,
 				'message' => __( 'Verification service unavailable. Please try again.', 'checkout-wc' ),
@@ -339,7 +386,22 @@ class Turnstile extends FeaturesAbstract {
 		$body   = wp_remote_retrieve_body( $response );
 		$result = json_decode( $body, true );
 
-		if ( ! empty( $result['success'] ) ) {
+		// Check for JSON decode errors
+		if ( json_last_error() !== JSON_ERROR_NONE ) {
+			cfw_debug_log( 'Turnstile API returned invalid JSON: ' . $body );
+			return array(
+				'success' => false,
+				'message' => __( 'Verification failed. Please try again.', 'checkout-wc' ),
+			);
+		}
+
+		// Log the API response for debugging (but only the essential parts)
+		$success     = $result['success'] ?? false;
+		$error_codes = $result['error-codes'] ?? array();
+		cfw_debug_log( 'Turnstile API response - success: ' . ( $success ? 'true' : 'false' ) . ', error_codes: ' . implode( ', ', $error_codes ) );
+
+		// Explicitly check for boolean true
+		if ( isset( $result['success'] ) && $result['success'] === true ) {
 			return array(
 				'success' => true,
 				'message' => 'Verification successful',
@@ -359,13 +421,21 @@ class Turnstile extends FeaturesAbstract {
 		foreach ( $headers as $header ) {
 			if ( ! empty( $_SERVER[ $header ] ) ) {
 				$ip = sanitize_text_field( $_SERVER[ $header ] );
-				if ( filter_var( $ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE ) ) {
+
+				// Handle comma-separated IPs (e.g., from X-Forwarded-For)
+				if ( strpos( $ip, ',' ) !== false ) {
+					$ip_list = explode( ',', $ip );
+					$ip      = trim( $ip_list[0] ); // Use the first IP
+				}
+
+				// Validate IP format (allow private ranges for development/proxy environments)
+				if ( filter_var( $ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_RES_RANGE ) ) {
 					return $ip;
 				}
 			}
 		}
 
-		return $_SERVER['REMOTE_ADDR'] ?? '';
+		return sanitize_text_field( $_SERVER['REMOTE_ADDR'] ?? '' );
 	}
 
 	/**

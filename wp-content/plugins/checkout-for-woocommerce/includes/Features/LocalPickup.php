@@ -353,7 +353,7 @@ class LocalPickup extends FeaturesAbstract {
 		parent::init();
 
 		add_action( 'cfw_do_plugin_activation', array( $this, 'run_on_plugin_activation' ) );
-		$this->register_post_type();
+		add_action( 'init', array( $this, 'register_post_type' ) );
 	}
 
 	public function run_on_plugin_activation() {
@@ -916,7 +916,7 @@ class LocalPickup extends FeaturesAbstract {
 
 	public function add_local_pickup_to_zones( $methods, $raw_methods, $allowed_classes, $zone ) {
 		// Don't break the Woo admin screen
-		if ( ! defined( 'WOOCOMMERCE_CHECKOUT' ) && ! wp_doing_ajax() ) {
+		if ( ! defined( 'WOOCOMMERCE_CHECKOUT' ) ) {
 			return $methods;
 		}
 

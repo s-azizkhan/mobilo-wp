@@ -42,7 +42,7 @@ class CartEditingAtCheckout extends FeaturesAbstract {
 			 * @param bool $supress_notice Whether to suppress the message
 			 */
 			if ( false === apply_filters( 'cfw_cart_edit_redirect_suppress_notice', false ) ) {
-				wc_add_notice( __( 'Checkout is not available whilst your cart is empty.', 'woocommerce' ), 'notice' );
+				wc_add_notice( __( 'Checkout is not available whilst your cart is empty.', 'checkout-wc' ), 'notice' );
 			}
 
 			// Allow shortcodes to be used in empty cart redirect URL field

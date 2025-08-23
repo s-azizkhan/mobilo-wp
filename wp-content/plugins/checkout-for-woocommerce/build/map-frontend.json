@@ -12,22 +12,13 @@
     "build/fontawesome-rtl.css"
   ],
   "sources/scss/frontend/turnstile.scss": [
-    "build/css/turnstile.css",
-    "build/js/turnstile.js",
-    "build/turnstile-rtl.css",
-    "build/css/turnstile-rtl.css"
+    "build/js/turnstile.js"
   ],
   "sources/ts/frontend/Services/TurnstileService.ts": [
-    "build/css/turnstile.css",
-    "build/js/turnstile.js",
-    "build/turnstile-rtl.css",
-    "build/css/turnstile-rtl.css"
+    "build/js/turnstile.js"
   ],
   "sources/ts/turnstile.ts": [
-    "build/css/turnstile.css",
-    "build/js/turnstile.js",
-    "build/turnstile-rtl.css",
-    "build/css/turnstile-rtl.css"
+    "build/js/turnstile.js"
   ],
   "sources/scss/frontend/checkout.scss": [
     "build/js/checkout.js"

@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       3.5.0
- * @version     1.21.0
+ * @version     1.22.0
  *
  * @package     woocommerce-smart-coupons/includes/
  */
@@ -514,7 +514,7 @@ if ( ! class_exists( 'WC_SC_Coupon_Actions' ) ) {
 
 			if ( ! empty( $coupon_code ) ) {
 				foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-					if ( isset( $cart_item['wc_sc_product_source'] ) && $cart_item['wc_sc_product_source'] === $coupon_code ) {
+					if ( isset( $cart_item['wc_sc_product_source'] ) && $this->sc_is_same_coupon_code( $cart_item['wc_sc_product_source'], $coupon_code ) ) {
 						// Action 'woocommerce_before_calculate_totals' is hooked by WooCommerce Subscription while removing coupons in local WooCommerce Cart variable in which we don't need to remove added cart item.
 						if ( ! doing_action( 'woocommerce_before_calculate_totals' ) ) {
 							WC()->cart->set_quantity( $cart_item_key, 0 );
@@ -544,7 +544,7 @@ if ( ! class_exists( 'WC_SC_Coupon_Actions' ) ) {
 			}
 
 			foreach ( $order->get_items() as $item_id => $item ) {
-				if ( $item->get_meta( '_wc_sc_product_source', true ) === $coupon_code ) {
+				if ( $this->sc_is_same_coupon_code( $item->get_meta( '_wc_sc_product_source', true ), $coupon_code ) ) {
 					$order->remove_item( $item_id );
 				}
 			}
@@ -563,7 +563,7 @@ if ( ! class_exists( 'WC_SC_Coupon_Actions' ) ) {
 			$products = array();
 			if ( $cart instanceof WC_Cart && is_callable( array( $cart, 'get_cart' ) ) ) {
 				foreach ( $cart->get_cart() as $cart_item_key => $cart_item ) {
-					if ( ! empty( $cart_item['wc_sc_product_source'] ) && ! in_array( $cart_item['wc_sc_product_source'], $applied_coupons, true ) ) {
+					if ( ! empty( $cart_item['wc_sc_product_source'] ) && ! $this->sc_coupon_code_exists( $cart_item['wc_sc_product_source'], $applied_coupons ) ) {
 						$cart->set_quantity( $cart_item_key, 0 );
 						$coupon_code = $cart_item['wc_sc_product_source'];
 						if ( empty( $products[ $coupon_code ] ) || ! is_array( $products[ $coupon_code ] ) ) {
@@ -929,7 +929,7 @@ if ( ! class_exists( 'WC_SC_Coupon_Actions' ) ) {
 
 			$applied_coupons = is_callable( array( $cart, 'get_applied_coupons' ) ) ? $cart->get_applied_coupons() : array();
 
-			if ( ! empty( $cart_item['wc_sc_product_source'] ) && in_array( $cart_item['wc_sc_product_source'], $applied_coupons, true ) ) {
+			if ( ! empty( $cart_item['wc_sc_product_source'] ) && $this->sc_coupon_code_exists( $cart_item['wc_sc_product_source'], $applied_coupons ) ) {
 				$cart->cart_contents[ $cart_item_key ]['quantity'] = $old_quantity;
 			}
 
@@ -947,14 +947,14 @@ if ( ! class_exists( 'WC_SC_Coupon_Actions' ) ) {
 
 			$cart            = WC()->cart;
 			$applied_coupons = is_callable( array( $cart, 'get_applied_coupons' ) ) ? $cart->get_applied_coupons() : array();
-			return ! empty( $cart_item['wc_sc_product_source'] ) && in_array( $cart_item['wc_sc_product_source'], $applied_coupons, true ) ? false : $value;
+			return ! empty( $cart_item['wc_sc_product_source'] ) && $this->sc_coupon_code_exists( $cart_item['wc_sc_product_source'], $applied_coupons ) ? false : $value;
 		}
 
 		/**
 		 * Remove item removal link from cart item.
 		 *
-		 * @param mixed      $link The link for the cart item.
-		 * @param array|null $cart_item_key The cart item key.
+		 * @param mixed $link The link for the cart item.
+		 * @param mixed $cart_item_key The cart item key.
 		 * @return mixed
 		 */
 		public function remove_action_product_link_for_classic_cart( $link, $cart_item_key ) {
@@ -962,7 +962,7 @@ if ( ! class_exists( 'WC_SC_Coupon_Actions' ) ) {
 			if ( ! isset( WC()->cart->cart_contents[ $cart_item_key ]['wc_sc_product_source'] ) ) {
 				return $link;
 			}
-			return in_array( WC()->cart->cart_contents[ $cart_item_key ]['wc_sc_product_source'], WC()->cart->get_applied_coupons(), true ) ? '' : $link;
+			return $this->sc_coupon_code_exists( WC()->cart->cart_contents[ $cart_item_key ]['wc_sc_product_source'], WC()->cart->get_applied_coupons() ) ? '' : $link;
 
 		}
 
@@ -1105,7 +1105,7 @@ if ( ! class_exists( 'WC_SC_Coupon_Actions' ) ) {
 						// Check if product is already in the cart with meta wc_sc_product_source.
 						$is_product_in_cart = false;
 						foreach ( WC()->cart->get_cart() as $cart_item ) {
-							if ( isset( $cart_item['wc_sc_product_source'] ) && $cart_item['wc_sc_product_source'] === $coupon_code && absint( $cart_item['product_id'] ) === $product_id ) {
+							if ( isset( $cart_item['wc_sc_product_source'] ) && $this->sc_is_same_coupon_code( $cart_item['wc_sc_product_source'], $coupon_code ) && absint( $cart_item['product_id'] ) === $product_id ) {
 								$is_product_in_cart = true;
 								break;
 							}
@@ -1231,7 +1231,7 @@ if ( ! class_exists( 'WC_SC_Coupon_Actions' ) ) {
 				// If only one product should be selectable, check cart for existing coupon products.
 				if ( 'yes' === $no_of_selectable_product ) {
 					foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-						if ( isset( $cart_item['wc_sc_product_source'] ) && $cart_item['wc_sc_product_source'] === $coupon_code ) {
+						if ( isset( $cart_item['wc_sc_product_source'] ) && $this->sc_is_same_coupon_code( $cart_item['wc_sc_product_source'], $coupon_code ) ) {
 							if ( absint( $cart_item['product_id'] ) === $product_id ) {
 								throw new Exception(
 									sprintf(

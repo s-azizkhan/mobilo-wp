@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       4.6.0
- * @version     3.19.0
+ * @version     3.20.0
  *
  * @package     woocommerce-smart-coupons/includes/
  */
@@ -154,7 +154,7 @@ if ( ! class_exists( 'WC_SC_Auto_Apply_Coupon' ) ) {
 					$auto_apply_coupon_ids = ( empty( $auto_apply_coupon_ids ) || ! is_array( $auto_apply_coupon_ids ) ) ? array() : $auto_apply_coupon_ids;
 					$auto_apply_coupon_ids = array_map( 'absint', $auto_apply_coupon_ids );
 					$coupon_id             = ( isset( $args['post']['post_id'] ) ) ? absint( $args['post']['post_id'] ) : 0;
-					if ( ! empty( $coupon_id ) && ! in_array( $coupon_id, $auto_apply_coupon_ids, true ) ) {
+					if ( ! empty( $coupon_id ) && ! $this->sc_coupon_code_exists( $coupon_id, $auto_apply_coupon_ids ) ) {
 						$auto_apply_coupon_ids[] = $coupon_id;
 						update_option( 'wc_sc_auto_apply_coupon_ids', $auto_apply_coupon_ids, 'no' );
 					}
@@ -225,7 +225,7 @@ if ( ! class_exists( 'WC_SC_Auto_Apply_Coupon' ) ) {
 				$update  = false;
 				$coupons = $this->get_auto_applied_coupons();
 				// Check if auto applied coupons are not empty.
-				if ( ! empty( $coupons ) && in_array( $coupon_code, $coupons, true ) ) {
+				if ( ! empty( $coupons ) && $this->sc_coupon_code_exists( $coupon_code, $coupons ) ) {
 					$coupons = array_diff( $coupons, array( $coupon_code ) );
 					$update  = true;
 				}
@@ -330,7 +330,7 @@ if ( ! class_exists( 'WC_SC_Auto_Apply_Coupon' ) ) {
 		public function is_coupon_applied_by_auto_apply( $coupon_code = '' ) {
 			if ( ! empty( $coupon_code ) ) {
 				$applied_coupons = $this->get_auto_applied_coupons();
-				if ( ! empty( $applied_coupons ) && is_array( $applied_coupons ) && in_array( $coupon_code, $applied_coupons, true ) ) {
+				if ( ! empty( $applied_coupons ) && is_array( $applied_coupons ) && $this->sc_coupon_code_exists( $coupon_code, $applied_coupons ) ) {
 					return true;
 				}
 			}
@@ -1009,7 +1009,7 @@ if ( ! class_exists( 'WC_SC_Auto_Apply_Coupon' ) ) {
 			if ( ! empty( $applied_coupons ) ) {
 				foreach ( $applied_coupons as $coupon_code ) {
 					// Check if the coupon is not in the coupon discount totals (indicating a zero discount).
-					if ( in_array( $coupon_code, $auto_applied_coupons, true ) && ! array_key_exists( $coupon_code, $cart->get_coupon_discount_totals() ) ) {
+					if ( $this->sc_coupon_code_exists( $coupon_code, $auto_applied_coupons ) && ! array_key_exists( $coupon_code, $cart->get_coupon_discount_totals() ) ) {
 						// Remove the coupon from the applied coupons array.
 						$updated_coupons = array_diff( $applied_coupons, array( $coupon_code ) );
 						$cart->set_applied_coupons( $updated_coupons );
@@ -1029,7 +1029,7 @@ if ( ! class_exists( 'WC_SC_Auto_Apply_Coupon' ) ) {
 						$this->unset_auto_applied_coupon( $coupon_code ); // Usage limit reached.
 
 						foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-							if ( isset( $cart_item['wc_sc_product_source'] ) && $cart_item['wc_sc_product_source'] === $coupon_code ) {
+							if ( isset( $cart_item['wc_sc_product_source'] ) && $this->sc_is_same_coupon_code( $cart_item['wc_sc_product_source'], $coupon_code ) ) {
 								if ( ! doing_action( 'woocommerce_before_calculate_totals' ) ) {
 									WC()->cart->set_quantity( $cart_item_key, 0 );
 								}

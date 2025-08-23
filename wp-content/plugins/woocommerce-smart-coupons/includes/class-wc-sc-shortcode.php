@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       3.3.0
- * @version     3.3.0
+ * @version     3.4.0
  *
  * @package     woocommerce-smart-coupons/includes/
  */
@@ -735,7 +735,7 @@ if ( ! class_exists( 'WC_SC_Shortcode' ) ) {
 			if ( empty( $session_shortcode_coupons[ $code ] ) ) {
 				$session_shortcode_coupons[ $code ] = array();
 			}
-			if ( ! in_array( $new_code, $session_shortcode_coupons[ $code ], true ) ) {
+			if ( ! $this->sc_coupon_code_exists( $new_code, $session_shortcode_coupons[ $code ] ) ) {
 				$session_shortcode_coupons[ $code ][] = $new_code;
 				if ( is_object( WC()->session ) && is_callable( array( WC()->session, 'set' ) ) ) {
 					WC()->session->set( '_sc_session_shortcode_generated_coupons', $session_shortcode_coupons );
@@ -750,7 +750,7 @@ if ( ! class_exists( 'WC_SC_Shortcode' ) ) {
 				if ( empty( $generated_coupons[ $code ] ) ) {
 					$generated_coupons[ $code ] = array();
 				}
-				if ( ! in_array( $new_code, $generated_coupons[ $code ], true ) ) {
+				if ( ! $this->sc_coupon_code_exists( $new_code, $generated_coupons[ $code ] ) ) {
 					$generated_coupons[ $code ][] = $new_code;
 					update_user_meta( $current_user->ID, '_sc_shortcode_generated_coupons', $generated_coupons );
 				}

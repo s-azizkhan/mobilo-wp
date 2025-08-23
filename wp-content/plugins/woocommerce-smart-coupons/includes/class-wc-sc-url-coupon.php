@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       3.3.0
- * @version     2.6.0
+ * @version     2.7.0
  *
  * @package     woocommerce-smart-coupons/includes/
  */
@@ -384,7 +384,7 @@ if ( ! class_exists( 'WC_SC_URL_Coupon' ) ) {
 
 			foreach ( $coupons_args as $coupon_args ) {
 				$coupon_code = isset( $coupon_args['coupon-code'] ) ? $coupon_args['coupon-code'] : '';
-				if ( is_array( $applied_coupons ) && in_array( $coupon_code, $applied_coupons, true ) ) {
+				if ( is_array( $applied_coupons ) && $this->sc_coupon_code_exists( $coupon_code, $applied_coupons ) ) {
 					$saved_status[ $coupon_code ] = 'already_saved';
 				} else {
 					$applied_coupons[]            = $coupon_code;
@@ -420,7 +420,7 @@ if ( ! class_exists( 'WC_SC_URL_Coupon' ) ) {
 
 				foreach ( $coupons_args as $coupon_args ) {
 					$coupon_code = $coupon_args['coupon-code'];
-					if ( ! in_array( $coupon_code, $applied_coupons, true ) ) {
+					if ( ! $this->sc_coupon_code_exists( $coupon_code, $applied_coupons ) ) {
 						$applied_coupons[]            = $coupon_args['coupon-code'];
 						$saved_status[ $coupon_code ] = 'saved';
 					} else {
@@ -749,11 +749,11 @@ if ( ! class_exists( 'WC_SC_URL_Coupon' ) ) {
 
 			if ( empty( $applied_coupon_from_url ) || ! is_array( $applied_coupon_from_url ) ) {
 				if ( isset( $_REQUEST['coupon-code'] ) ) { // phpcs:ignore
-					return in_array( $coupon_code, WC()->cart->get_applied_coupons(), true );
+					return $this->sc_coupon_code_exists( $coupon_code, WC()->cart->get_applied_coupons() );
 				}
 				return false;
 			}
-			return in_array( $coupon_code, $applied_coupon_from_url, true );
+			return $this->sc_coupon_code_exists( $coupon_code, $applied_coupon_from_url );
 
 		}
 

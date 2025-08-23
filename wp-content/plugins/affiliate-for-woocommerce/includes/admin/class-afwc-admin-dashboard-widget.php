@@ -4,7 +4,7 @@
  *
  * @package     affiliate-for-woocommerce/includes/admin/
  * @since       6.36.0
- * @version     1.0.9
+ * @version     1.0.10
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -76,7 +76,7 @@ if ( ! class_exists( 'AFWC_Admin_Dashboard_Widget' ) ) {
 
 			wp_enqueue_style(
 				'afwc-dashboard-widget',
-				AFWC_PLUGIN_URL . '/assets/css/afwc-admin-dashboard-widget.css',
+				AFWC_PLUGIN_URL . '/assets/css/admin/afwc-admin-dashboard-widget.css',
 				array(),
 				$plugin_data['Version']
 			);
@@ -87,7 +87,7 @@ if ( ! class_exists( 'AFWC_Admin_Dashboard_Widget' ) ) {
 
 			wp_register_script(
 				'afwc-dashboard-widget',
-				AFWC_PLUGIN_URL . '/assets/js/afwc-dashboard-widget.js',
+				AFWC_PLUGIN_URL . '/assets/js/admin/afwc-dashboard-widget.js',
 				array( 'jquery', 'accounting' ),
 				$plugin_data['Version'],
 				true

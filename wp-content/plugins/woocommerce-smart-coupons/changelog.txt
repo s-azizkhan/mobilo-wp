@@ -1,5 +1,15 @@
 *** WooCommerce Smart Coupons Changelog ***
 
+2025.08.22 - version 9.50.0
+* New: Tested up to WooCommerce 10.1.1
+* Fix: Coupon code case sensitivity issue causing compatibility problems with other plugins
+* Update: Translations
+
+2025.08.18 - version 9.49.0
+* Fix: Gift product not added to the cart when 'FunnelKit Cart for WooCommerce' plugin is enabled
+* Fix: Improved plugin reliability with better exception handling
+* Update: Translations
+
 2025.08.07 - version 9.48.0
 * Fix: Auto-generated coupon details were not displaying in the order confirmation email
 * Fix: Translation issue in the email header when the customer receives the email from the plugin

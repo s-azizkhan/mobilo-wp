@@ -68,7 +68,6 @@ abstract class LoaderAbstract {
 		// When on the checkout with an empty cart, redirect to cart page
 		// Check cart has contents.
 		if ( WC()->cart->is_empty() && ! is_customize_preview() && cfw_apply_filters( 'woocommerce_checkout_redirect_empty_cart', true ) ) {
-			wc_add_notice( __( 'Checkout is not available whilst your cart is empty.', 'woocommerce' ), 'notice' );
 			wp_safe_redirect( wc_get_cart_url() );
 			exit;
 		}

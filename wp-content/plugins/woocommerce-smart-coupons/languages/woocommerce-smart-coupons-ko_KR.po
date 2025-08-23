@@ -24,14 +24,16 @@ msgstr " &amp;"
 #: includes/class-wc-sc-display-coupons.php:1079
 #: includes/class-wc-sc-display-coupons.php:2963
 #: includes/class-wc-sc-shortcode.php:540
-#: includes/class-wc-smart-coupons.php:5503
+#: includes/class-wc-smart-coupons.php:5506
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:373
-#: templates/combined-email.php:129 templates/email.php:126
+#: templates/combined-email.php:129
+#: templates/email.php:126
 #: templates/print-coupons-default.php:146
 msgid " & "
 msgstr " &amp; "
 
-#: templates/plain/combined-email.php:88 templates/plain/email.php:83
+#: templates/plain/combined-email.php:88
+#: templates/plain/email.php:83
 #: templates/plain/expiry-reminder-email.php:64
 msgid " &amp; "
 msgstr " &amp; "
@@ -66,15 +68,13 @@ msgstr " on "
 
 #. translators: %s: Maximum coupon discount amount
 #: includes/class-wc-sc-display-coupons.php:794
-#: includes/class-wc-smart-coupons.php:1474
+#: includes/class-wc-smart-coupons.php:1483
 #: includes/emails/class-wc-sc-email-coupon.php:446
 msgid " upto %s"
 msgstr " 최대 %s까지"
 
 #: includes/class-wc-sc-admin-notifications.php:247
-msgid ""
-"! If things aren't going quite as expected, we're happy to help -- please "
-"reach out to"
+msgid "! If things aren't going quite as expected, we're happy to help -- please reach out to"
 msgstr "! 예상대로 일이 진행되지 않는다면 기꺼이 도와드리겠습니다 - 다음 연락처로 문의해 주세요."
 
 #: includes/class-wc-sc-settings.php:844
@@ -85,62 +85,62 @@ msgstr "\"제품 포함 쿠폰\" 설명"
 msgid "\"Store Credit Receiver detail\" form not appearing on checkout page?"
 msgstr "결제 페이지에 \"스토어 크레딧 수령자 세부 정보\" 양식이 표시되지 않나요?"
 
-#: includes/class-wc-smart-coupons.php:6791
+#: includes/class-wc-smart-coupons.php:6794
 msgid "$coupon is not an object of WC_Coupon"
 msgstr "쿠폰은 WC_Coupon의 객체가 아닙니다."
 
-#: includes/class-wc-smart-coupons.php:6793
+#: includes/class-wc-smart-coupons.php:6796
 msgid "$coupon is: "
 msgstr "쿠폰입니다: "
 
-#: includes/class-wc-smart-coupons.php:7469
-#: includes/class-wc-smart-coupons.php:7522
+#: includes/class-wc-smart-coupons.php:7472
+#: includes/class-wc-smart-coupons.php:7525
 msgid "$item is not an object of WC_Order_Item"
 msgstr "항목이 WC_Order_Item의 객체가 아닙니다."
 
-#: includes/class-wc-smart-coupons.php:7471
-#: includes/class-wc-smart-coupons.php:7524
+#: includes/class-wc-smart-coupons.php:7474
+#: includes/class-wc-smart-coupons.php:7527
 msgid "$item is: "
 msgstr "item입니다: "
 
-#: includes/class-wc-smart-coupons.php:7614
+#: includes/class-wc-smart-coupons.php:7617
 msgid "$item_id is required"
 msgstr "item_id는 필수입니다."
 
-#: includes/class-wc-smart-coupons.php:7316
-#: includes/class-wc-smart-coupons.php:7375
-#: includes/class-wc-smart-coupons.php:7409
-#: includes/class-wc-smart-coupons.php:7438
-#: includes/class-wc-smart-coupons.php:7616
+#: includes/class-wc-smart-coupons.php:7319
+#: includes/class-wc-smart-coupons.php:7378
+#: includes/class-wc-smart-coupons.php:7412
+#: includes/class-wc-smart-coupons.php:7441
+#: includes/class-wc-smart-coupons.php:7619
 msgid "$item_id is: "
 msgstr "item_id는 "
 
-#: includes/class-wc-smart-coupons.php:7317
-#: includes/class-wc-smart-coupons.php:7376
-#: includes/class-wc-smart-coupons.php:7410
-#: includes/class-wc-smart-coupons.php:7439
+#: includes/class-wc-smart-coupons.php:7320
+#: includes/class-wc-smart-coupons.php:7379
+#: includes/class-wc-smart-coupons.php:7413
+#: includes/class-wc-smart-coupons.php:7442
 msgid "$item_key is: "
 msgstr "item_key입니다: "
 
-#: includes/class-wc-smart-coupons.php:7193
-#: includes/class-wc-smart-coupons.php:7253
+#: includes/class-wc-smart-coupons.php:7196
+#: includes/class-wc-smart-coupons.php:7256
 msgid "$key is required"
 msgstr "키가 필요합니다."
 
-#: includes/class-wc-smart-coupons.php:7195
-#: includes/class-wc-smart-coupons.php:7255
+#: includes/class-wc-smart-coupons.php:7198
+#: includes/class-wc-smart-coupons.php:7258
 msgid "$key is: "
 msgstr "key입니다: "
 
-#: includes/class-wc-smart-coupons.php:6909
-#: includes/class-wc-smart-coupons.php:7029
-#: includes/class-wc-smart-coupons.php:7148
+#: includes/class-wc-smart-coupons.php:6912
+#: includes/class-wc-smart-coupons.php:7032
+#: includes/class-wc-smart-coupons.php:7151
 msgid "$meta_key is: "
 msgstr "메타키입니다: "
 
-#: includes/class-wc-smart-coupons.php:6908
-#: includes/class-wc-smart-coupons.php:7028
-#: includes/class-wc-smart-coupons.php:7147
+#: includes/class-wc-smart-coupons.php:6911
+#: includes/class-wc-smart-coupons.php:7031
+#: includes/class-wc-smart-coupons.php:7150
 msgid "$post_id is: "
 msgstr "post_id는 "
 
@@ -154,7 +154,8 @@ msgid "%1$s %2$s %3$s removed because coupon %4$s is removed."
 msgstr "쿠폰 %4$s가 제거되었으므로 %1$s %2$s %3$s가 제거되었습니다."
 
 #. translators: 1. The coupon code, 2. The discount type
-#: includes/class-wc-sc-ajax.php:258 includes/class-wc-sc-settings.php:404
+#: includes/class-wc-sc-ajax.php:258
+#: includes/class-wc-sc-settings.php:404
 msgid "%1$s (Type: %2$s)"
 msgstr "1$s (유형: %2$s)"
 
@@ -182,9 +183,7 @@ msgstr "1$ 상당의 스토어 크레딧이 쿠폰 %2$로 복원되었습니다.
 
 #. translators: 1: HTML small tag start 2: HTML small tag end
 #: includes/class-wc-sc-admin-pages.php:1359
-msgid ""
-"%1$s(This will add the same coupon description in all the bulk generated "
-"coupons)%2$s"
+msgid "%1$s(This will add the same coupon description in all the bulk generated coupons)%2$s"
 msgstr "1$s(이렇게 하면 대량으로 생성된 모든 쿠폰에 동일한 쿠폰 설명이 추가됩니다)%2$s"
 
 #. translators: 1: site title, 2: coupon type (e.g. Store Credit)
@@ -215,48 +214,28 @@ msgstr ""
 
 #. translators: 1. Error title 2. The bulk process
 #: includes/class-wc-sc-background-coupon-importer.php:390
-msgid ""
-"%1$s: The coupon bulk %2$s process stopped. Please review the coupons list "
-"to check the status."
+msgid "%1$s: The coupon bulk %2$s process stopped. Please review the coupons list to check the status."
 msgstr "%1$s: 쿠폰 대량 %2$s 프로세스가 중지되었습니다. 쿠폰 목록을 검토하여 상태를 확인하세요."
 
 #. translators: 1. Important 2. Upload path
 #: includes/class-wc-sc-background-coupon-importer.php:338
-msgid ""
-"%1$s: To allow bulk generation of coupons, please make sure %2$s directory "
-"is writable."
+msgid "%1$s: To allow bulk generation of coupons, please make sure %2$s directory is writable."
 msgstr "%1$s: 쿠폰을 대량으로 생성하려면 %2$s 디렉터리에 쓰기 가능한 권한이 있는지 확인하세요."
 
 #. translators: 1. Message type 2. Functionality name "Bulk Generate" 3. Functionality name "Import-Export"
 #: includes/class-wc-sc-admin-notifications.php:292
-msgid ""
-"%1$s: To ensure %2$s and %3$s work correctly, contact your system "
-"administrator or host provider to resolve below:"
-msgstr ""
-"%1$s: 2$s 및 %3$s가 올바르게 작동하도록 하려면 시스템 관리자 또는 호스트 공급업체에 문의하여 아래 문제를 해결하세요:"
+msgid "%1$s: To ensure %2$s and %3$s work correctly, contact your system administrator or host provider to resolve below:"
+msgstr "%1$s: 2$s 및 %3$s가 올바르게 작동하도록 하려면 시스템 관리자 또는 호스트 공급업체에 문의하여 아래 문제를 해결하세요:"
 
 #. translators: 1: WooCommerce Smart Coupons 2: Link for the Smart Coupons settings
 #: includes/class-wc-sc-admin-notifications.php:260
-msgid ""
-"%1$s: You are using a custom coupon style which is planned to be removed "
-"from the plugin in upcoming versions. New, improved styles & colors are "
-"added in the version 4.9.0. We would request you to choose a color scheme & "
-"a style for coupon from the newly added colors & styles. You can do this "
-"from %2$s."
-msgstr ""
-"%1$s: 다음 버전에서 플러그인에서 제거될 예정인 사용자 지정 쿠폰 스타일을 사용하고 있습니다. 4.9.0 버전에는 새롭고 개선된 "
-"스타일 및 색상이 추가되었습니다. 새로 추가된 색상 및 스타일 중에서 쿠폰의 색 구성표 및 스타일을 선택해 주시기 바랍니다. 2$s에서 "
-"이 작업을 수행할 수 있습니다."
+msgid "%1$s: You are using a custom coupon style which is planned to be removed from the plugin in upcoming versions. New, improved styles & colors are added in the version 4.9.0. We would request you to choose a color scheme & a style for coupon from the newly added colors & styles. You can do this from %2$s."
+msgstr "%1$s: 다음 버전에서 플러그인에서 제거될 예정인 사용자 지정 쿠폰 스타일을 사용하고 있습니다. 4.9.0 버전에는 새롭고 개선된 스타일 및 색상이 추가되었습니다. 새로 추가된 색상 및 스타일 중에서 쿠폰의 색 구성표 및 스타일을 선택해 주시기 바랍니다. 2$s에서 이 작업을 수행할 수 있습니다."
 
 #. translators: 1$-2$: opening and closing <strong> tags, 3$-4$: link tags, takes to woocommerce plugin on wp.org, 5$-6$: opening and closing link tags, leads to plugins.php in admin.
 #: woocommerce-smart-coupons.php:61
-msgid ""
-"%1$sWooCommerce Smart Coupons is inactive.%2$s The %3$sWooCommerce "
-"plugin%4$s must be active for the Smart Coupons to work. Please %5$sinstall "
-"& activate WooCommerce &raquo;%6$s"
-msgstr ""
-"1$sWooCommerce 스마트 쿠폰이 비활성 상태입니다.%2$s 스마트 쿠폰을 사용하려면 %3$sWooCommerce "
-"플러그인%4$이(가) 활성화되어 있어야 합니다. WooCommerce \"%5$s를 %6$s설치 및 활성화하세요."
+msgid "%1$sWooCommerce Smart Coupons is inactive.%2$s The %3$sWooCommerce plugin%4$s must be active for the Smart Coupons to work. Please %5$sinstall & activate WooCommerce &raquo;%6$s"
+msgstr "1$sWooCommerce 스마트 쿠폰이 비활성 상태입니다.%2$s 스마트 쿠폰을 사용하려면 %3$sWooCommerce 플러그인%4$이(가) 활성화되어 있어야 합니다. WooCommerce \"%5$s를 %6$s설치 및 활성화하세요."
 
 #. translators: %s: Plugin name
 #: includes/class-wc-sc-admin-notifications.php:482
@@ -310,8 +289,7 @@ msgstr "PayPal은 배송비 및 세금 할인을 허용하지 않기 때문입�
 
 #. translators: %s: Plugin name
 #: includes/class-wc-sc-admin-notifications.php:533
-msgid ""
-"%s database update completed. Thank you for updating to the latest version!"
+msgid "%s database update completed. Thank you for updating to the latest version!"
 msgstr "s 데이터베이스 업데이트가 완료되었습니다. 최신 버전으로 업데이트해 주셔서 감사합니다!"
 
 #. translators: %s: Label for store credit
@@ -320,12 +298,12 @@ msgid "%s discount is inclusive of tax"
 msgstr "할인 금액에는 세금이 포함되어 있습니다."
 
 #. translators: 1. The discount text
-#: includes/class-wc-smart-coupons.php:1977
+#: includes/class-wc-smart-coupons.php:1986
 msgid "%s discount on anything you want."
 msgstr "원하는 모든 항목에 대해 %s 할인을 제공합니다."
 
 #. translators: 1. The discount text
-#: includes/class-wc-smart-coupons.php:1979
+#: includes/class-wc-smart-coupons.php:1988
 msgid "%s discount on entire store."
 msgstr "전체 스토어에서 %s 할인."
 
@@ -353,12 +331,8 @@ msgstr "세금 포함?"
 
 #. translators: %s: Plugin name
 #: includes/class-wc-sc-admin-notifications.php:520
-msgid ""
-"%s is updating the database in the background. The database update process "
-"may take a little while, so please be patient."
-msgstr ""
-"s가 백그라운드에서 데이터베이스를 업데이트하고 있습니다. 데이터베이스 업데이트 프로세스에 시간이 조금 걸릴 수 있으므로 잠시만 기다려 "
-"주세요."
+msgid "%s is updating the database in the background. The database update process may take a little while, so please be patient."
+msgstr "s가 백그라운드에서 데이터베이스를 업데이트하고 있습니다. 데이터베이스 업데이트 프로세스에 시간이 조금 걸릴 수 있으므로 잠시만 기다려 주세요."
 
 #. translators: %s: singular name for store credit
 #: includes/class-wc-sc-display-coupons.php:753
@@ -426,22 +400,12 @@ msgid "--:--:--"
 msgstr "--:--:--"
 
 #: includes/class-wc-sc-admin-welcome.php:563
-msgid ""
-". If still the issue persist, temporarily de-activate all plugins except "
-"WooCommerce & Smart Coupons. Re-check the issue, if the issue still persists,"
-" contact us (from the link at the end of this page). If the issue goes away, "
-"re-activate other plugins one-by-one & re-checking the fields, to find out "
-"which plugin is conflicting."
-msgstr ""
-". 그래도 문제가 지속되면 WooCommerce 및 스마트 쿠폰을 제외한 모든 플러그인을 일시적으로 비활성화하세요. 문제를 다시 확인하고 "
-"그래도 문제가 지속되면 이 페이지 끝에 있는 링크를 통해 문의하세요. 문제가 해결되면 다른 플러그인을 하나씩 다시 활성화하고 필드를 다시 "
-"확인하여 충돌하는 플러그인을 찾아보세요."
+msgid ". If still the issue persist, temporarily de-activate all plugins except WooCommerce & Smart Coupons. Re-check the issue, if the issue still persists, contact us (from the link at the end of this page). If the issue goes away, re-activate other plugins one-by-one & re-checking the fields, to find out which plugin is conflicting."
+msgstr ". 그래도 문제가 지속되면 WooCommerce 및 스마트 쿠폰을 제외한 모든 플러그인을 일시적으로 비활성화하세요. 문제를 다시 확인하고 그래도 문제가 지속되면 이 페이지 끝에 있는 링크를 통해 문의하세요. 문제가 해결되면 다른 플러그인을 하나씩 다시 활성화하고 필드를 다시 확인하여 충돌하는 플러그인을 찾아보세요."
 
 #. translators: Documentation link for 'How to Apply Single or Multiple Coupons on Click of a Link'
 #: includes/class-wc-sc-admin-welcome.php:580
-msgid ""
-". Replace www.mysite.com with your own site URL and replace discount5 with "
-"the your coupon code."
+msgid ". Replace www.mysite.com with your own site URL and replace discount5 with the your coupon code."
 msgstr ". www.mysite.com 를 회원님의 사이트 URL로 바꾸고 할인5를 회원님의 쿠폰 코드로 바꿉니다."
 
 #: includes/class-wc-sc-coupon-fields.php:1109
@@ -458,93 +422,83 @@ msgstr "10"
 
 #. Description of the plugin
 #: woocommerce-smart-coupons.php
-msgid ""
-"<strong>WooCommerce Smart Coupons</strong> lets customers buy gift "
-"certificates, store credits or coupons easily. They can use purchased "
-"credits themselves or gift to someone else."
-msgstr ""
-"<strong>WooCommerce 스마트 쿠폰을</strong> 사용하면 고객이 상품권, 스토어 크레딧 또는 쿠폰을 쉽게 구매할 수 "
-"있습니다. 구매한 크레딧을 직접 사용하거나 다른 사람에게 선물할 수 있습니다."
+msgid "<strong>WooCommerce Smart Coupons</strong> lets customers buy gift certificates, store credits or coupons easily. They can use purchased credits themselves or gift to someone else."
+msgstr "<strong>WooCommerce 스마트 쿠폰을</strong> 사용하면 고객이 상품권, 스토어 크레딧 또는 쿠폰을 쉽게 구매할 수 있습니다. 구매한 크레딧을 직접 사용하거나 다른 사람에게 선물할 수 있습니다."
 
 #. translators: 1: Singular name for post type 2: Email
 #: includes/class-wc-sc-admin-pages.php:1661
 msgid "[%1$s restricted with email: %2$s]"
 msgstr "이메일 제한됨: %1$s] [%2$s]"
 
-#: includes/class-wc-smart-coupons.php:3699
+#: includes/class-wc-smart-coupons.php:3708
 msgctxt "[Admin] WooCommerce > Status > Tools"
 msgid "Delete Smart Coupons Custom Table"
 msgstr "스마트 쿠폰 사용자 지정 테이블 삭제"
 
-#: includes/class-wc-smart-coupons.php:3702
+#: includes/class-wc-smart-coupons.php:3711
 msgctxt "[Admin] WooCommerce > Status > Tools"
 msgid "Note:"
 msgstr "참고:"
 
 #. translators: Label for discount type Store Credit
-#: includes/class-wc-smart-coupons.php:3688
+#: includes/class-wc-smart-coupons.php:3697
 msgctxt "[Admin] WooCommerce > Status > Tools"
 msgid "Set \"%s\" Meta"
 msgstr "\"%s\" 메타 설정"
 
 #. translators: Table name
-#: includes/class-wc-smart-coupons.php:3704
+#: includes/class-wc-smart-coupons.php:3713
 msgctxt "[Admin] WooCommerce > Status > Tools"
-msgid ""
-"Smart Coupons creates a custom table & fills it with existing coupon data in "
-"such a way that it can query coupons faster. This greatly improves some of "
-"the features of Smart Coupons. This tool will delete the Smart Coupons "
-"custom table - %s. But it will not affect any existing coupon's data. After "
-"deleting the custom table, you'll be shown a notice to update Smart Coupons "
-"database. This will help you regenerate Smart Coupons custom table. Please "
-"ensure the Smart Coupons database update process is completed before "
-"creating/updating/deleting any coupons"
-msgstr ""
-"스마트 쿠폰은 사용자 지정 테이블을 생성하고 기존 쿠폰 데이터로 채워서 쿠폰을 더 빠르게 쿼리할 수 있도록 합니다. 이렇게 하면 스마트 "
-"쿠폰의 일부 기능이 크게 향상됩니다. 이 도구는 스마트 쿠폰 사용자 지정 테이블 - %s를 삭제합니다. 그러나 기존 쿠폰의 데이터에는 "
-"영향을 미치지 않습니다. 사용자 지정 테이블을 삭제하면 스마트 쿠폰 데이터베이스를 업데이트하라는 알림이 표시됩니다. 이렇게 하면 스마트 "
-"쿠폰 사용자 지정 테이블을 다시 생성하는 데 도움이 됩니다. 쿠폰을 생성/업데이트/삭제하기 전에 스마트 쿠폰 데이터베이스 업데이트 "
-"프로세스가 완료되었는지 확인하세요."
+msgid "Smart Coupons creates a custom table & fills it with existing coupon data in such a way that it can query coupons faster. This greatly improves some of the features of Smart Coupons. This tool will delete the Smart Coupons custom table - %s. But it will not affect any existing coupon's data. After deleting the custom table, you'll be shown a notice to update Smart Coupons database. This will help you regenerate Smart Coupons custom table. Please ensure the Smart Coupons database update process is completed before creating/updating/deleting any coupons"
+msgstr "스마트 쿠폰은 사용자 지정 테이블을 생성하고 기존 쿠폰 데이터로 채워서 쿠폰을 더 빠르게 쿼리할 수 있도록 합니다. 이렇게 하면 스마트 쿠폰의 일부 기능이 크게 향상됩니다. 이 도구는 스마트 쿠폰 사용자 지정 테이블 - %s를 삭제합니다. 그러나 기존 쿠폰의 데이터에는 영향을 미치지 않습니다. 사용자 지정 테이블을 삭제하면 스마트 쿠폰 데이터베이스를 업데이트하라는 알림이 표시됩니다. 이렇게 하면 스마트 쿠폰 사용자 지정 테이블을 다시 생성하는 데 도움이 됩니다. 쿠폰을 생성/업데이트/삭제하기 전에 스마트 쿠폰 데이터베이스 업데이트 프로세스가 완료되었는지 확인하세요."
 
 #. translators: Label for discount type Store Credit
-#: includes/class-wc-smart-coupons.php:3686
-#: includes/class-wc-smart-coupons.php:3688
-#: includes/class-wc-smart-coupons.php:3690
+#: includes/class-wc-smart-coupons.php:3695
+#: includes/class-wc-smart-coupons.php:3697
+#: includes/class-wc-smart-coupons.php:3699
 msgctxt "[Admin] WooCommerce > Status > Tools"
 msgid "Store Credit"
 msgstr "스토어 크레딧"
 
 #. translators: Label for discount type Store Credit
-#: includes/class-wc-smart-coupons.php:3690
+#: includes/class-wc-smart-coupons.php:3699
 msgctxt "[Admin] WooCommerce > Status > Tools"
 msgid "This tool will set required meta for discount type \"%s\" (if needed)."
 msgstr "이 도구는 할인 유형 \"%s\"(필요한 경우)에 필요한 메타를 설정합니다."
 
 #. translators: Label for discount type Store Credit
-#: includes/class-wc-smart-coupons.php:3686
+#: includes/class-wc-smart-coupons.php:3695
 msgctxt "[Admin] WooCommerce > Status > Tools"
 msgid "WooCommerce Smart Coupons &minus; \"%s\" meta"
 msgstr "WooCommerce 스마트 쿠폰 - \"%s\" 메타"
 
-#: includes/class-wc-smart-coupons.php:3698
+#: includes/class-wc-smart-coupons.php:3707
 msgctxt "[Admin] WooCommerce > Status > Tools"
 msgid "WooCommerce Smart Coupons &minus; Custom table"
 msgstr "WooCommerce 스마트 쿠폰 - 사용자 지정 테이블"
 
 #. translators: %s: Preview link
 #. translators: %s: Label for store credit
-#: includes/class-wc-sc-settings.php:680 includes/class-wc-sc-settings.php:689
-#: includes/class-wc-sc-settings.php:698 includes/class-wc-sc-settings.php:707
-#: includes/class-wc-sc-settings.php:716 includes/class-wc-sc-settings.php:823
-#: includes/class-wc-sc-settings.php:835 includes/class-wc-sc-settings.php:845
-#: includes/class-wc-sc-settings.php:855 includes/class-wc-sc-settings.php:865
-#: includes/class-wc-sc-settings.php:891 includes/class-wc-sc-settings.php:900
-#: includes/class-wc-sc-settings.php:910 includes/class-wc-sc-settings.php:919
+#: includes/class-wc-sc-settings.php:680
+#: includes/class-wc-sc-settings.php:689
+#: includes/class-wc-sc-settings.php:698
+#: includes/class-wc-sc-settings.php:707
+#: includes/class-wc-sc-settings.php:716
+#: includes/class-wc-sc-settings.php:823
+#: includes/class-wc-sc-settings.php:835
+#: includes/class-wc-sc-settings.php:845
+#: includes/class-wc-sc-settings.php:855
+#: includes/class-wc-sc-settings.php:865
+#: includes/class-wc-sc-settings.php:891
+#: includes/class-wc-sc-settings.php:900
+#: includes/class-wc-sc-settings.php:910
+#: includes/class-wc-sc-settings.php:919
 msgid "[Preview]"
 msgstr "[미리 보기]"
 
 #. translators: %s: Label for store credit, 1: : Label for store credit, 2: Label for store credit, 3: Label for store credit
-#: includes/class-wc-sc-settings.php:499 includes/class-wc-sc-settings.php:510
+#: includes/class-wc-sc-settings.php:499
+#: includes/class-wc-sc-settings.php:510
 msgid "[Read More]"
 msgstr "[자세히 보기]"
 
@@ -552,15 +506,15 @@ msgstr "[자세히 보기]"
 msgid "About Smart Coupons"
 msgstr "스마트 쿠폰 정보"
 
-#: includes/class-wc-smart-coupons.php:6620
+#: includes/class-wc-smart-coupons.php:6623
 msgid "Account endpoints > Coupons"
 msgstr "계정 엔드포인트 &gt; 쿠폰"
 
-#: includes/class-wc-smart-coupons.php:6608
+#: includes/class-wc-smart-coupons.php:6611
 msgid "Acknowledgement email"
 msgstr "확인 이메일"
 
-#: includes/class-wc-smart-coupons.php:1971
+#: includes/class-wc-smart-coupons.php:1980
 msgid "Act before the offer expires."
 msgstr "혜택이 만료되기 전에 행동하세요."
 
@@ -635,24 +589,17 @@ msgstr "카테고리"
 
 #: includes/class-wc-sc-admin-notifications.php:762
 msgctxt "Admin notice for available coupons section settings"
-msgid ""
-"⚙️ <strong>New Settings:</strong> Manage visibility of coupons in "
-"Cart/Checkout pages. <br>Configure under <strong>WooCommerce → Settings → "
-"Smart Coupons → Display coupons</strong>."
+msgid "⚙️ <strong>New Settings:</strong> Manage visibility of coupons in Cart/Checkout pages. <br>Configure under <strong>WooCommerce → Settings → Smart Coupons → Display coupons</strong>."
 msgstr ""
 
 #: includes/class-wc-sc-coupon-expiry-reminder.php:246
-msgctxt ""
-"Admin notice message displayed after scheduling a coupon expiry reminder"
+msgctxt "Admin notice message displayed after scheduling a coupon expiry reminder"
 msgid "Expiry reminder scheduled for this coupon."
 msgstr "이 쿠폰에 대한 만료 알림이 예약되었습니다."
 
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:90
 msgctxt "admin setting description"
-msgid ""
-"Specify the number of days before the coupon expiry date when the reminder "
-"email should be sent to the customer. Leave blank for a reminder on the same "
-"expiry day."
+msgid "Specify the number of days before the coupon expiry date when the reminder email should be sent to the customer. Leave blank for a reminder on the same expiry day."
 msgstr "고객에게 알림 이메일을 보낼 쿠폰 만료일 전 일수를 지정합니다. 같은 만료일에 알림을 보내려면 비워둡니다."
 
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:97
@@ -661,9 +608,7 @@ msgid "Send reminder X days before expiry"
 msgstr "만료 X일 전에 미리 알림 보내기"
 
 #: includes/class-wc-sc-admin-welcome.php:400
-msgid ""
-"Advanced restrictions - payment, shipping, location, user roles, product "
-"attributes"
+msgid "Advanced restrictions - payment, shipping, location, user roles, product attributes"
 msgstr "고급 제한 - 결제, 배송, 위치, 사용자 역할, 제품 속성"
 
 #. translators: Link for the plugin 'Aelia Currency Switcher for WooCommerce'
@@ -676,16 +621,12 @@ msgid "After applying the coupon, do these also..."
 msgstr "쿠폰을 적용한 후 다음 작업도 수행하세요..."
 
 #: includes/class-wc-sc-coupon-fields.php:551
-msgid ""
-"after issuance - instead of a fixed expiry date, and at \"Expiry time\" if "
-"set. (Only used for auto-generated coupons)"
+msgid "after issuance - instead of a fixed expiry date, and at \"Expiry time\" if set. (Only used for auto-generated coupons)"
 msgstr "발행 후 - 고정된 만료일 대신 '만료 시간'을 설정한 경우 '만료 시간'에 만료됩니다. (자동 생성된 쿠폰에만 사용됨)"
 
 #: includes/class-wc-sc-display-coupons.php:2348
 msgctxt "AJAX error fallback message"
-msgid ""
-"Oops! Something went wrong while fetching your coupons. Please try again in "
-"a moment."
+msgid "Oops! Something went wrong while fetching your coupons. Please try again in a moment."
 msgstr ""
 
 #: includes/class-wc-sc-coupon-categories.php:92
@@ -711,7 +652,7 @@ msgid "All set, Begin import?"
 msgstr "준비 완료, 가져오기 시작?"
 
 #: includes/class-wc-sc-settings.php:918
-#: includes/class-wc-smart-coupons.php:6604
+#: includes/class-wc-smart-coupons.php:6607
 msgid "Allow schedule sending of coupons?"
 msgstr "쿠폰의 예약 전송을 허용하나요?"
 
@@ -721,7 +662,7 @@ msgid "Allow selling %s at discounted price"
 msgstr "할인된 가격으로 %s 판매 허용"
 
 #: includes/class-wc-sc-settings.php:890
-#: includes/class-wc-smart-coupons.php:6603
+#: includes/class-wc-smart-coupons.php:6606
 msgid "Allow sending of coupons to others"
 msgstr "다른 사람에게 쿠폰 보내기 허용"
 
@@ -761,21 +702,17 @@ msgstr "아마란스 레드"
 msgid "Amount"
 msgstr "금액"
 
-#: includes/class-wc-smart-coupons.php:1245
+#: includes/class-wc-smart-coupons.php:1254
 msgid "An error has occurred. Please try again later."
 msgstr "오류가 발생했습니다. 나중에 다시 시도해 주세요."
 
-#: includes/class-wc-smart-coupons.php:1286
+#: includes/class-wc-smart-coupons.php:1295
 msgid "An error occurred while checking scheduled actions."
 msgstr ""
 
 #: includes/class-wc-sc-coupons-by-payment-method.php:430
 msgid "An error occurred:"
 msgstr "오류가 발생했습니다:"
-
-#: includes/class-wc-sc-url-coupon.php:718
-msgid "An unexpected error occurred."
-msgstr ""
 
 #: includes/class-wc-sc-admin-welcome.php:403
 msgid "and a lot more…"
@@ -808,13 +745,8 @@ msgid "Apply multiple coupons via URL"
 msgstr "URL을 통해 여러 쿠폰 적용"
 
 #: includes/class-wc-sc-admin-pages.php:215
-msgid ""
-"Are you sure you want to remove the selected items? If you have previously "
-"reduced this item's stock, or this order was submitted by a customer, you "
-"will need to manually restore the item's stock."
-msgstr ""
-"선택한 품목을 제거하시겠습니까? 이전에 이 품목의 재고를 줄였거나 고객이 이 주문을 제출한 경우에는 품목의 재고를 수동으로 복원해야 "
-"합니다."
+msgid "Are you sure you want to remove the selected items? If you have previously reduced this item's stock, or this order was submitted by a customer, you will need to manually restore the item's stock."
+msgstr "선택한 품목을 제거하시겠습니까? 이전에 이 품목의 재고를 줄였거나 고객이 이 주문을 제출한 경우에는 품목의 재고를 수동으로 복원해야 합니다."
 
 #: includes/class-wc-sc-admin-pages.php:272
 msgid "Are you sure you want to revoke access to this download?"
@@ -822,41 +754,31 @@ msgstr "이 다운로드에 대한 액세스 권한을 취소하시겠습니까?
 
 #. translators: 1. The bulk process
 #: includes/class-wc-sc-background-coupon-importer.php:556
-msgid ""
-"Are you sure you want to stop the coupon bulk %s process? Click OK to stop."
+msgid "Are you sure you want to stop the coupon bulk %s process? Click OK to stop."
 msgstr "쿠폰 대량 %s 프로세스를 중지하시겠습니까? 확인을 클릭하여 중지합니다."
 
 #: includes/class-wc-sc-admin-pages.php:218
 #: includes/class-wc-sc-coupon-refund-process.php:576
-msgid ""
-"Are you sure you wish to delete this refund? This action cannot be undone."
+msgid "Are you sure you wish to delete this refund? This action cannot be undone."
 msgstr "이 환불을 삭제하시겠습니까? 이 작업은 취소할 수 없습니다."
 
 #: includes/class-wc-sc-admin-pages.php:219
-msgid ""
-"Are you sure you wish to delete this tax column? This action cannot be "
-"undone."
+msgid "Are you sure you wish to delete this tax column? This action cannot be undone."
 msgstr "이 세금 열을 삭제하시겠습니까? 이 작업은 취소할 수 없습니다."
 
 #: includes/class-wc-sc-coupon-refund-process.php:216
-msgid ""
-"Are you sure you wish to process store credit refund? This action cannot be "
-"undone."
+msgid "Are you sure you wish to process store credit refund? This action cannot be undone."
 msgstr "스토어 크레딧 환불을 처리하시겠습니까? 이 작업은 취소할 수 없습니다."
 
 #: includes/class-wc-sc-admin-pages.php:217
-msgid ""
-"Are you sure you wish to process this refund? This action cannot be undone."
+msgid "Are you sure you wish to process this refund? This action cannot be undone."
 msgstr "이 환불을 처리하시겠습니까? 이 작업은 취소할 수 없습니다."
 
 #: includes/class-wc-sc-admin-welcome.php:436
-msgid ""
-"Attach a gift of any value (free or paid product) to a particular coupon. "
-"Here, instead of a discount, a product is redeemed for the coupon code."
-msgstr ""
-"특정 쿠폰에 가치 있는 선물(무료 또는 유료 제품)을 첨부합니다. 여기서는 할인 대신 쿠폰 코드와 교환할 수 있는 제품이 제공됩니다."
+msgid "Attach a gift of any value (free or paid product) to a particular coupon. Here, instead of a discount, a product is redeemed for the coupon code."
+msgstr "특정 쿠폰에 가치 있는 선물(무료 또는 유료 제품)을 첨부합니다. 여기서는 할인 대신 쿠폰 코드와 교환할 수 있는 제품이 제공됩니다."
 
-#: includes/class-wc-smart-coupons.php:1968
+#: includes/class-wc-smart-coupons.php:1977
 msgid "Attention!"
 msgstr "주목!"
 
@@ -869,7 +791,7 @@ msgstr "쿠폰 자동 적용"
 msgid "Auto apply?"
 msgstr "자동 신청?"
 
-#: includes/class-wc-smart-coupons.php:5227
+#: includes/class-wc-smart-coupons.php:5228
 msgid "Auto Generate Coupon"
 msgstr "쿠폰 자동 생성"
 
@@ -881,12 +803,12 @@ msgstr "자동 생성?"
 msgid "auto generated"
 msgstr "자동 생성"
 
-#: includes/class-wc-smart-coupons.php:6606
+#: includes/class-wc-smart-coupons.php:6609
 msgid "Auto generated coupon email"
 msgstr "자동 생성된 쿠폰 이메일"
 
 #: includes/class-wc-sc-settings.php:479
-#: includes/class-wc-smart-coupons.php:6598
+#: includes/class-wc-smart-coupons.php:6601
 msgid "Automatic deletion"
 msgstr "자동 삭제"
 
@@ -927,9 +849,7 @@ msgid "Available placeholders: %s"
 msgstr "사용 가능한 자리 표시자: %s"
 
 #: includes/class-wc-sc-admin-notifications.php:247
-msgid ""
-"Awesome, you successfully auto-generated a coupon! Are you having a great "
-"experience with"
+msgid "Awesome, you successfully auto-generated a coupon! Are you having a great experience with"
 msgstr "쿠폰이 성공적으로 자동 생성되었습니다! 다음에 대해 만족스러운 경험을 하고 계신가요?"
 
 #: includes/class-wc-sc-settings.php:668
@@ -952,9 +872,7 @@ msgid "Batch stopped due to health status in task."
 msgstr "작업의 건강 상태로 인해 배치가 중지되었습니다."
 
 #: includes/class-wc-sc-coupon-import.php:1150
-msgid ""
-"Before you can upload your import file, you will need to fix the following "
-"error:"
+msgid "Before you can upload your import file, you will need to fix the following error:"
 msgstr "가져오기 파일을 업로드하려면 먼저 다음 오류를 해결해야 합니다:"
 
 #: includes/class-wc-sc-coupons-by-location.php:218
@@ -978,66 +896,80 @@ msgid "Black Friday"
 msgstr "블랙 프라이데이"
 
 #: blocks/build/js/available-coupons/block.json
+#: blocks/src/js/available-coupons/block.json
 msgctxt "block description"
 msgid "Displays available coupons."
 msgstr "사용 가능한 쿠폰을 표시합니다."
 
 #: blocks/build/js/send-coupon-form/block.json
+#: blocks/src/js/send-coupon-form/block.json
 msgctxt "block description"
 msgid "Displays Send coupon form."
 msgstr "쿠폰 보내기 양식을 표시합니다."
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:59
+#: blocks/src/js/send-coupon-form/edit.js:63
 msgctxt "Block editor"
 msgid "Deliver coupon"
 msgstr "쿠폰 전달"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:84
 msgctxt "Block editor"
 msgid "Enter recipient e-mail address"
 msgstr "수신자 이메일 주소 입력"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:39
 msgctxt "Block editor"
 msgid "Gift to someone else"
 msgstr "다른 사람에게 선물하기"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:71
 msgctxt "Block editor"
 msgid "later"
 msgstr "나중에"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:88
 msgctxt "Block editor"
 msgid "Message for receiver"
 msgstr "수신자를 위한 메시지"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:67
 msgctxt "Block editor"
 msgid "now"
 msgstr "지금"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:80
 msgctxt "Block editor"
 msgid "Receiver email address"
 msgstr "수신자 이메일 주소"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:30
 msgctxt "Block editor"
 msgid "Send coupons to..."
 msgstr "쿠폰 보내기 대상..."
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:53
 msgctxt "Block editor"
 msgid "Send to different people"
 msgstr "여러 사람에게 보내기"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:35
 msgctxt "Block editor"
 msgid "Send to me"
 msgstr "나에게 보내기"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:49
 msgctxt "Block editor"
 msgid "Send to one person"
 msgstr "한 사람에게 보내기"
@@ -1048,11 +980,13 @@ msgid "WooCommerce Smart Coupons"
 msgstr "WooCommerce 스마트 쿠폰"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:92
 msgctxt "Block editor"
 msgid "Write a message"
 msgstr "메시지 작성"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block.js:1
+#: blocks/src/js/send-coupon-form/edit.js:31
 msgctxt "Block editor"
 msgid "Your order contains coupons. What would you like to do?"
 msgstr "주문에 쿠폰이 포함되어 있습니다. 어떻게 하시겠습니까?"
@@ -1129,11 +1063,13 @@ msgid "Your order contains coupons. What would you like to do?"
 msgstr "주문에 쿠폰이 포함되어 있습니다. 어떻게 하시겠습니까?"
 
 #: blocks/build/js/available-coupons/block.json
+#: blocks/src/js/available-coupons/block.json
 msgctxt "block title"
 msgid "Available coupons"
 msgstr "사용 가능한 쿠폰"
 
 #: blocks/build/js/send-coupon-form/block.json
+#: blocks/src/js/send-coupon-form/block.json
 msgctxt "block title"
 msgid "Send coupon form"
 msgstr "쿠폰 양식 보내기"
@@ -1155,12 +1091,8 @@ msgid "Bulk generate coupons"
 msgstr "쿠폰 대량 생성"
 
 #: includes/class-wc-sc-background-coupon-importer.php:343
-msgid ""
-"Bulk generation is disabled since uploads directory is not writable. Please "
-"ensure uploads directory is writable before starting bulk generate process."
-msgstr ""
-"업로드 디렉터리에 쓰기 가능하지 않으므로 대량 생성이 비활성화됩니다. 대량 생성 프로세스를 시작하기 전에 업로드 디렉터리에 쓰기 가능한지 "
-"확인하세요."
+msgid "Bulk generation is disabled since uploads directory is not writable. Please ensure uploads directory is writable before starting bulk generate process."
+msgstr "업로드 디렉터리에 쓰기 가능하지 않으므로 대량 생성이 비활성화됩니다. 대량 생성 프로세스를 시작하기 전에 업로드 디렉터리에 쓰기 가능한지 확인하세요."
 
 #: includes/batches/class-wc-sc-coupons-expiry-reminder-scheduler.php:181
 msgctxt "button text"
@@ -1188,47 +1120,32 @@ msgid "Create a Combo Coupon"
 msgstr "콤보 쿠폰 만들기"
 
 #. translators: 1. The discount text
-#: includes/class-wc-smart-coupons.php:1983
+#: includes/class-wc-smart-coupons.php:1992
 msgid "Buy as much as you want. Flat %s off everything."
 msgstr "원하는 만큼 구매하세요. 모든 품목에서 고정 %s 할인."
 
 #: includes/class-wc-sc-settings.php:886
-msgid ""
-"Buyers can send purchased coupons to anyone – right while they're checking "
-"out."
+msgid "Buyers can send purchased coupons to anyone – right while they're checking out."
 msgstr "구매자는 결제하는 동안 구매한 쿠폰을 누구에게나 보낼 수 있습니다."
 
-#: includes/class-wc-smart-coupons.php:6619
+#: includes/class-wc-smart-coupons.php:6622
 msgid "Calculate coupon discounts sequentially"
 msgstr "쿠폰 할인을 순차적으로 계산하기"
 
 #: includes/class-wc-sc-admin-pages.php:231
-msgid ""
-"Calculate line taxes? This will calculate taxes based on the customers "
-"country. If no billing/shipping is set it will use the store base country."
-msgstr ""
-"라인 세금을 계산하고 싶으신가요? 고객 국가를 기준으로 세금을 계산합니다. 청구/배송이 설정되어 있지 않으면 스토어 기준 국가를 "
-"사용합니다."
+msgid "Calculate line taxes? This will calculate taxes based on the customers country. If no billing/shipping is set it will use the store base country."
+msgstr "라인 세금을 계산하고 싶으신가요? 고객 국가를 기준으로 세금을 계산합니다. 청구/배송이 설정되어 있지 않으면 스토어 기준 국가를 사용합니다."
 
 #: includes/class-wc-sc-admin-pages.php:230
 msgid "Calculate totals based on order items, discounts, and shipping?"
 msgstr "주문 품목, 할인, 배송을 기준으로 총액을 계산하고 싶으신가요?"
 
 #: includes/class-wc-sc-settings.php:797
-msgid ""
-"Call it something else! Use these to quickly change text labels through your "
-"store. <a href=\"https://woocommerce.com/document/smart-coupons/how-to-"
-"translate-smart-coupons/\" target=\"_blank\">Use translations</a> for "
-"complete control."
-msgstr ""
-"다른 이름으로 불러보세요! 이를 사용하여 스토어에서 텍스트 레이블을 빠르게 변경할 수 있습니다. <a href=\"https:"
-"//woocommerce.com/document/smart-coupons/how-to-translate-smart-coupons/\" "
-"target=\"_blank\">번역을 사용하여</a> 완벽하게 제어할 수 있습니다."
+msgid "Call it something else! Use these to quickly change text labels through your store. <a href=\"https://woocommerce.com/document/smart-coupons/how-to-translate-smart-coupons/\" target=\"_blank\">Use translations</a> for complete control."
+msgstr "다른 이름으로 불러보세요! 이를 사용하여 스토어에서 텍스트 레이블을 빠르게 변경할 수 있습니다. <a href=\"https://woocommerce.com/document/smart-coupons/how-to-translate-smart-coupons/\" target=\"_blank\">번역을 사용하여</a> 완벽하게 제어할 수 있습니다."
 
 #: includes/class-wc-sc-admin-welcome.php:574
-msgid ""
-"Can coupon code have any spaces in the name? / My Store Credit/Gift "
-"Certificate is not working (not generating new coupon code)."
+msgid "Can coupon code have any spaces in the name? / My Store Credit/Gift Certificate is not working (not generating new coupon code)."
 msgstr "쿠폰 코드 이름에 공백을 넣을 수 있나요? / 내 스토어 크레딧/상품권이 작동하지 않습니다(새 쿠폰 코드가 생성되지 않음)."
 
 #: includes/class-wc-sc-shortcode.php:930
@@ -1243,9 +1160,10 @@ msgstr "캐롤라이나 블루"
 msgid "Cart"
 msgstr "장바구니"
 
-#: includes/class-wc-sc-ajax.php:343 includes/class-wc-sc-ajax.php:358
-#: includes/class-wc-smart-coupons.php:1454
-#: includes/class-wc-smart-coupons.php:1469
+#: includes/class-wc-sc-ajax.php:343
+#: includes/class-wc-sc-ajax.php:358
+#: includes/class-wc-smart-coupons.php:1463
+#: includes/class-wc-smart-coupons.php:1478
 msgid "Cart Discount"
 msgstr "장바구니 할인"
 
@@ -1319,9 +1237,7 @@ msgid "Choose a style for store notice on the website."
 msgstr "웹사이트에서 스토어 공지 스타일을 선택합니다."
 
 #: includes/class-wc-sc-settings.php:455
-msgid ""
-"Choose order status which will trigger the auto-generation of coupon, if the "
-"order contains product which will generate the coupon."
+msgid "Choose order status which will trigger the auto-generation of coupon, if the order contains product which will generate the coupon."
 msgstr "주문에 쿠폰을 생성할 제품이 포함된 경우 쿠폰 자동 생성을 트리거할 주문 상태를 선택합니다."
 
 #: includes/class-wc-sc-coupons-by-product-quantity.php:127
@@ -1340,7 +1256,7 @@ msgstr "선택"
 msgid "Christmas"
 msgstr "크리스마스"
 
-#: includes/class-wc-smart-coupons.php:3676
+#: includes/class-wc-smart-coupons.php:3685
 msgid "Clear Smart Coupons Cache"
 msgstr "스마트 쿠폰 캐시 지우기"
 
@@ -1363,7 +1279,8 @@ msgstr "토글하려면 클릭"
 
 #: includes/class-wc-sc-shortcode.php:607
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:470
-#: templates/combined-email.php:199 templates/email.php:179
+#: templates/combined-email.php:199
+#: templates/email.php:179
 msgid "Click to visit store. This coupon will be applied automatically."
 msgstr "클릭하여 스토어 방문하기. 이 쿠폰은 자동으로 적용됩니다."
 
@@ -1380,11 +1297,11 @@ msgid "Colors"
 msgstr "색상"
 
 #: includes/class-wc-sc-settings.php:928
-#: includes/class-wc-smart-coupons.php:6605
+#: includes/class-wc-smart-coupons.php:6608
 msgid "Combine emails"
 msgstr "이메일 결합"
 
-#: includes/class-wc-smart-coupons.php:6607
+#: includes/class-wc-smart-coupons.php:6610
 msgid "Combined auto generated coupons email"
 msgstr "자동 생성된 쿠폰 이메일 결합"
 
@@ -1410,9 +1327,7 @@ msgid "Copy"
 msgstr "복사"
 
 #: includes/class-wc-sc-admin-pages.php:232
-msgid ""
-"Copy billing information to shipping information? This will remove any "
-"currently entered shipping information."
+msgid "Copy billing information to shipping information? This will remove any currently entered shipping information."
 msgstr "청구 정보를 배송 정보로 복사하시겠습니까? 이렇게 하면 현재 입력한 배송 정보가 모두 제거됩니다."
 
 #: includes/class-wc-sc-coupon-fields.php:1544
@@ -1433,13 +1348,8 @@ msgid "Copy this coupon code"
 msgstr "이 쿠폰 코드를 복사하세요."
 
 #: includes/class-wc-sc-admin-pages.php:271
-msgid ""
-"Could not grant access - the user may already have permission for this file "
-"or billing email is not set. Ensure the billing email is set, and the order "
-"has been saved."
-msgstr ""
-"액세스 권한을 부여할 수 없습니다 - 사용자에게 이미 이 파일에 대한 권한이 있거나 청구 이메일이 설정되어 있지 않을 수 있습니다. 청구 "
-"이메일이 설정되어 있고 주문이 저장되었는지 확인하세요."
+msgid "Could not grant access - the user may already have permission for this file or billing email is not set. Ensure the billing email is set, and the order has been saved."
+msgstr "액세스 권한을 부여할 수 없습니다 - 사용자에게 이미 이 파일에 대한 권한이 있거나 청구 이메일이 설정되어 있지 않을 수 있습니다. 청구 이메일이 설정되어 있고 주문이 저장되었는지 확인하세요."
 
 #: includes/class-wc-sc-coupon-fields.php:1417
 msgid "Could not locate WooCommerce"
@@ -1458,23 +1368,27 @@ msgstr "쿠폰"
 
 #: includes/class-wc-sc-privacy.php:371
 #: includes/emails/class-wc-sc-acknowledgement-email.php:346
-#: templates/acknowledgement-email.php:66 templates/coupon-design/basic.php:49
-#: templates/coupon-design/clipper.php:48 templates/coupon-design/cutout.php:65
-#: templates/coupon-design/deal.php:39 templates/coupon-design/deliver.php:44
+#: templates/acknowledgement-email.php:66
+#: templates/coupon-design/basic.php:49
+#: templates/coupon-design/clipper.php:48
+#: templates/coupon-design/cutout.php:65
+#: templates/coupon-design/deal.php:39
+#: templates/coupon-design/deliver.php:44
 #: templates/coupon-design/shipment.php:43
-#: templates/coupon-design/special.php:68 templates/coupon-design/ticket.php:40
+#: templates/coupon-design/special.php:68
+#: templates/coupon-design/ticket.php:40
 #: templates/plain/acknowledgement-email.php:56
 msgid "Coupon"
 msgid_plural "Coupons"
 msgstr[0] "쿠폰"
 
 #. translators: The coupon code
-#: includes/class-wc-smart-coupons.php:3801
+#: includes/class-wc-smart-coupons.php:3810
 msgid "Coupon %s is valid for a new user only, hence removed."
 msgstr "쿠폰 %s는 새 사용자에게만 유효하므로 제거되었습니다."
 
 #: includes/class-wc-sc-privacy.php:589
-#: includes/class-wc-smart-coupons.php:5629
+#: includes/class-wc-smart-coupons.php:5633
 msgid "Coupon Amount"
 msgstr "쿠폰 금액"
 
@@ -1498,12 +1412,12 @@ msgstr "쿠폰 대량 생성"
 msgid "Coupon categories"
 msgstr "쿠폰 카테고리"
 
-#: includes/class-wc-smart-coupons.php:5651
+#: includes/class-wc-smart-coupons.php:5655
 msgid "Coupon Category"
 msgstr "쿠폰 카테고리"
 
 #: includes/class-wc-sc-privacy.php:586
-#: includes/class-wc-smart-coupons.php:5617
+#: includes/class-wc-smart-coupons.php:5621
 msgid "Coupon Code"
 msgstr "쿠폰 코드"
 
@@ -1513,17 +1427,12 @@ msgstr "쿠폰 코드"
 
 #. translators: 1. The coupon code 2. The text 'payment method/s' 3. List of payment method names 4. Link to the checkout page
 #: includes/class-wc-sc-coupons-by-payment-method.php:210
-msgid ""
-"Coupon code %1$s has been removed. It is valid only for %2$s: %3$s. You can "
-"change the payment method from the %4$s page."
-msgstr ""
-"쿠폰 코드 %1$s가 제거되었습니다. 2$s: %3$s에 대해서만 유효합니다. 4$s 페이지에서 결제 방법을 변경할 수 있습니다."
+msgid "Coupon code %1$s has been removed. It is valid only for %2$s: %3$s. You can change the payment method from the %4$s page."
+msgstr "쿠폰 코드 %1$s가 제거되었습니다. 2$s: %3$s에 대해서만 유효합니다. 4$s 페이지에서 결제 방법을 변경할 수 있습니다."
 
 #. translators: 1. The coupon code 2. The text 'payment method/s' 3. List of payment method names 4. Link to the checkout page
 #: includes/class-wc-sc-coupons-by-payment-method.php:214
-msgid ""
-"Coupon code %1$s is valid only for %2$s: %3$s. You can change payment method "
-"from the %4$s page."
+msgid "Coupon code %1$s is valid only for %2$s: %3$s. You can change payment method from the %4$s page."
 msgstr "쿠폰 코드 %1$s는 %2$s: %3$s에 대해서만 유효합니다. 4$s 페이지에서 결제 방법을 변경할 수 있습니다."
 
 #: includes/class-wc-sc-privacy.php:107
@@ -1534,7 +1443,8 @@ msgstr "쿠폰 코드 생성"
 msgid "Coupon code passed via URL"
 msgstr "URL을 통해 전달된 쿠폰 코드"
 
-#: templates/plain/combined-email.php:97 templates/plain/email.php:92
+#: templates/plain/combined-email.php:97
+#: templates/plain/email.php:92
 #: templates/plain/expiry-reminder-email.php:73
 msgid "Coupon Code:"
 msgstr "쿠폰 코드:"
@@ -1567,17 +1477,17 @@ msgstr "이메일 미리 보기용 더미 스마트 쿠폰입니다."
 msgid "Coupon Description "
 msgstr "쿠폰 설명 "
 
-#: includes/class-wc-smart-coupons.php:1613
+#: includes/class-wc-smart-coupons.php:1622
 msgid "Coupon details unavailable at the moment."
 msgstr ""
 
 #: includes/class-wc-sc-settings.php:489
-#: includes/class-wc-smart-coupons.php:6599
+#: includes/class-wc-smart-coupons.php:6602
 msgid "Coupon emails"
 msgstr "쿠폰 이메일"
 
 #: includes/class-wc-sc-coupon-fields.php:412
-#: includes/class-wc-smart-coupons.php:5238
+#: includes/class-wc-smart-coupons.php:5239
 msgid "Coupon expiry time"
 msgstr "쿠폰 만료 시간"
 
@@ -1663,9 +1573,7 @@ msgid "Coupon For"
 msgstr "쿠폰 대상"
 
 #: includes/class-wc-sc-coupon-import.php:833
-msgid ""
-"Coupon generation is already in progress. You’ll be able to generate again "
-"only after it is completed."
+msgid "Coupon generation is already in progress. You’ll be able to generate again only after it is completed."
 msgstr ""
 
 #: includes/class-wc-sc-background-coupon-importer.php:582
@@ -1681,7 +1589,7 @@ msgstr "쿠폰 가져오기 오류"
 msgid "Coupon is not valid for the"
 msgstr "쿠폰은 다음에는 사용할 수 없습니다."
 
-#: includes/class-wc-smart-coupons.php:5232
+#: includes/class-wc-smart-coupons.php:5233
 msgid "Coupon Is Visible Storewide"
 msgstr "쿠폰이 스토어 전체에 표시됨"
 
@@ -1704,7 +1612,7 @@ msgid "Coupon Received"
 msgstr "쿠폰 수령"
 
 #. translators: The coupon code
-#: includes/class-wc-smart-coupons.php:3864
+#: includes/class-wc-smart-coupons.php:3873
 msgid "Coupon removed. There is no credit remaining in %s."
 msgstr "쿠폰이 제거되었습니다. 에 남은 크레딧이 없습니다."
 
@@ -1712,11 +1620,11 @@ msgstr "쿠폰이 제거되었습니다. 에 남은 크레딧이 없습니다."
 msgid "Coupon shareable link"
 msgstr "쿠폰 공유 가능 링크"
 
-#: includes/class-wc-smart-coupons.php:5228
+#: includes/class-wc-smart-coupons.php:5229
 msgid "Coupon Title Prefix"
 msgstr "쿠폰 제목 접두사"
 
-#: includes/class-wc-smart-coupons.php:5229
+#: includes/class-wc-smart-coupons.php:5230
 msgid "Coupon Title Suffix"
 msgstr "쿠폰 제목 접미사"
 
@@ -1724,7 +1632,7 @@ msgstr "쿠폰 제목 접미사"
 msgid "Coupon usage limit has been reached."
 msgstr "쿠폰 사용 한도에 도달했습니다."
 
-#: includes/class-wc-smart-coupons.php:5225
+#: includes/class-wc-smart-coupons.php:5226
 msgid "Coupon Validity"
 msgstr "쿠폰 유효 기간"
 
@@ -1733,15 +1641,11 @@ msgid "Coupon value same as product's price?"
 msgstr "쿠폰 금액이 제품 가격과 동일합니까?"
 
 #: includes/class-wc-sc-coupons-by-payment-method.php:119
-msgid ""
-"Coupon will apply only if any of the selected payment methods are used "
-"during checkout."
+msgid "Coupon will apply only if any of the selected payment methods are used during checkout."
 msgstr "쿠폰은 결제 시 선택한 결제 방법 중 하나를 사용한 경우에만 적용됩니다."
 
 #: includes/class-wc-sc-coupons-by-shipping-method.php:118
-msgid ""
-"Coupon will apply only if any of the selected shipping methods are used "
-"during checkout."
+msgid "Coupon will apply only if any of the selected shipping methods are used during checkout."
 msgstr "쿠폰은 결제 시 선택한 배송 방법 중 하나를 사용하는 경우에만 적용됩니다."
 
 #: includes/class-wc-sc-admin-pages.php:123
@@ -1779,44 +1683,24 @@ msgstr "CSV 파일이 생성되었습니다. 다음에서 다운로드할 수 �
 
 #. translators: Link for the plugin 'Aelia Currency Switcher for WooCommerce'
 #: includes/class-wc-sc-admin-welcome.php:647
-msgid ""
-"Currently, Smart Coupons is compatible with %s. But it is not compatible "
-"with any other multi-currency plugin or with WPML."
+msgid "Currently, Smart Coupons is compatible with %s. But it is not compatible with any other multi-currency plugin or with WPML."
 msgstr "현재 스마트 쿠폰은 %s와 호환됩니다. 그러나 다른 다중 통화 플러그인이나 WPML과는 호환되지 않습니다."
 
 #: includes/class-wc-sc-settings.php:577
 msgid "Custom colors"
 msgstr "사용자 지정 색상"
 
-#: includes/class-wc-smart-coupons.php:5937
+#: includes/class-wc-smart-coupons.php:5941
 msgid "Custom Style"
 msgstr "사용자 지정 스타일"
 
-#: includes/class-wc-smart-coupons.php:5640
+#: includes/class-wc-smart-coupons.php:5644
 msgid "Customer Email"
 msgstr "고객 이메일"
 
 #: includes/class-wc-sc-admin-welcome.php:634
-msgid ""
-"Customers can apply store credit on a subscription during purchase of "
-"subscription. If the same store credit has sufficient balance, it'll keep "
-"applying it to renewals till the remainder in store credit is higher than "
-"renewal price. Customers will be able to apply store credit only during "
-"signup. They will not get an option to apply store credit in renewals. But "
-"if the store credit will not have sufficient balance to pay for the renewals,"
-" then the order will go into pending mode. Now when the customer will go to "
-"pay for this renewal order, they'll get an option to apply store credit "
-"again. To activate the subscription again, the customer will have to pay for "
-"the renewals. When the customer is paying for the renewals from their "
-"account, then in that process they can use the same store credit which "
-"didn't have the sufficient balance, again & pay for the remaining amount."
-msgstr ""
-"고객은 정기구독을 구매하는 동안 정기구독에 스토어 크레딧을 적용할 수 있습니다. 동일한 스토어 크레딧에 충분한 잔액이 있는 경우 스토어 "
-"크레딧의 잔액이 갱신 가격보다 높을 때까지 계속 갱신에 적용됩니다. 고객은 가입 중에만 스토어 크레딧을 적용할 수 있습니다. 갱신 시에는 "
-"스토어 크레딧을 적용할 수 있는 옵션이 제공되지 않습니다. 그러나 스토어 크레딧에 갱신 비용을 결제할 수 있는 잔액이 충분하지 않으면 "
-"주문이 보류 모드로 전환됩니다. 이제 고객이 이 갱신 주문에 대해 결제할 때 스토어 크레딧을 다시 적용할 수 있는 옵션이 표시됩니다. "
-"가입을 다시 활성화하려면 고객이 갱신 비용을 결제해야 합니다. 고객이 계정에서 갱신 비용을 결제할 때 잔액이 충분하지 않은 동일한 스토어 "
-"크레딧을 다시 사용하여 남은 금액을 결제할 수 있습니다."
+msgid "Customers can apply store credit on a subscription during purchase of subscription. If the same store credit has sufficient balance, it'll keep applying it to renewals till the remainder in store credit is higher than renewal price. Customers will be able to apply store credit only during signup. They will not get an option to apply store credit in renewals. But if the store credit will not have sufficient balance to pay for the renewals, then the order will go into pending mode. Now when the customer will go to pay for this renewal order, they'll get an option to apply store credit again. To activate the subscription again, the customer will have to pay for the renewals. When the customer is paying for the renewals from their account, then in that process they can use the same store credit which didn't have the sufficient balance, again & pay for the remaining amount."
+msgstr "고객은 정기구독을 구매하는 동안 정기구독에 스토어 크레딧을 적용할 수 있습니다. 동일한 스토어 크레딧에 충분한 잔액이 있는 경우 스토어 크레딧의 잔액이 갱신 가격보다 높을 때까지 계속 갱신에 적용됩니다. 고객은 가입 중에만 스토어 크레딧을 적용할 수 있습니다. 갱신 시에는 스토어 크레딧을 적용할 수 있는 옵션이 제공되지 않습니다. 그러나 스토어 크레딧에 갱신 비용을 결제할 수 있는 잔액이 충분하지 않으면 주문이 보류 모드로 전환됩니다. 이제 고객이 이 갱신 주문에 대해 결제할 때 스토어 크레딧을 다시 적용할 수 있는 옵션이 표시됩니다. 가입을 다시 활성화하려면 고객이 갱신 비용을 결제해야 합니다. 고객이 계정에서 갱신 비용을 결제할 때 잔액이 충분하지 않은 동일한 스토어 크레딧을 다시 사용하여 남은 금액을 결제할 수 있습니다."
 
 #: includes/class-wc-sc-settings.php:572
 msgid "Customize color scheme for coupons."
@@ -1847,7 +1731,7 @@ msgid "Deal"
 msgstr "거래"
 
 #: includes/class-wc-sc-settings.php:947
-#: includes/class-wc-smart-coupons.php:6610
+#: includes/class-wc-smart-coupons.php:6613
 msgid "Deduct credit/gift before doing tax calculations"
 msgstr "세금 계산 전에 공제/증여 공제하기"
 
@@ -1873,12 +1757,13 @@ msgstr "쿠폰 전달"
 msgid "Description"
 msgstr "설명"
 
-#: templates/plain/combined-email.php:103 templates/plain/email.php:98
+#: templates/plain/combined-email.php:103
+#: templates/plain/email.php:98
 #: templates/plain/expiry-reminder-email.php:79
 msgid "Description:"
 msgstr "설명:"
 
-#: includes/class-wc-smart-coupons.php:5231
+#: includes/class-wc-smart-coupons.php:5232
 msgid "Disable Email Restriction"
 msgstr "이메일 제한 비활성화"
 
@@ -1888,13 +1773,12 @@ msgstr "이메일 제한을 비활성화하시겠습니까?"
 
 #. translators: %s: Explanation of the setting
 #: includes/class-wc-sc-settings.php:471
-msgid ""
-"Disabling this, no coupons will be auto-applied - even if any coupon has "
-"\"Auto apply?\" enabled."
+msgid "Disabling this, no coupons will be auto-applied - even if any coupon has \"Auto apply?\" enabled."
 msgstr "이 기능을 비활성화하면 \"자동 적용?\"이 활성화된 쿠폰이 있더라도 쿠폰이 자동으로 적용되지 않습니다."
 
-#: includes/class-wc-sc-ajax.php:358 includes/class-wc-sc-settings.php:1279
-#: includes/class-wc-smart-coupons.php:1469
+#: includes/class-wc-sc-ajax.php:358
+#: includes/class-wc-sc-settings.php:1279
+#: includes/class-wc-smart-coupons.php:1478
 msgid "Discount"
 msgstr "할인"
 
@@ -1902,11 +1786,12 @@ msgstr "할인"
 msgid "Discount Coupons"
 msgstr "할인 쿠폰"
 
-#: includes/class-wc-smart-coupons.php:5628
+#: includes/class-wc-smart-coupons.php:5632
 msgid "Discount Type"
 msgstr "할인 유형"
 
-#: templates/plain/combined-email.php:83 templates/plain/email.php:78
+#: templates/plain/combined-email.php:83
+#: templates/plain/email.php:78
 #: templates/plain/expiry-reminder-email.php:59
 msgid "Discount:"
 msgstr "할인:"
@@ -1921,9 +1806,7 @@ msgstr "사용자에게 메시지 표시"
 
 #. translators: %s: Preview link
 #: includes/class-wc-sc-settings.php:716
-msgid ""
-"Display coupon description along with coupon code (on site as well as in "
-"emails) %s"
+msgid "Display coupon description along with coupon code (on site as well as in emails) %s"
 msgstr "쿠폰 코드와 함께 쿠폰 설명 표시(사이트 및 이메일에) %s"
 
 #: includes/class-wc-sc-settings.php:635
@@ -1934,15 +1817,15 @@ msgstr "쿠폰 표시"
 msgid "Display coupons"
 msgstr "쿠폰 표시"
 
-#: includes/class-wc-smart-coupons.php:6615
+#: includes/class-wc-smart-coupons.php:6618
 msgid "Display prices during cart and checkout"
 msgstr "장바구니 및 결제 시 가격 표시"
 
-#: includes/class-wc-smart-coupons.php:6614
+#: includes/class-wc-smart-coupons.php:6617
 msgid "Display prices in the shop"
 msgstr "스토어에 가격 표시"
 
-#: includes/class-wc-smart-coupons.php:6617
+#: includes/class-wc-smart-coupons.php:6620
 msgid "Display tax totals"
 msgstr "세금 총액 표시"
 
@@ -1955,17 +1838,12 @@ msgid "DIY Tour"
 msgstr "DIY 투어"
 
 #: includes/class-wc-sc-coupon-fields.php:591
-msgid ""
-"Do not restrict auto-generated coupons to buyer / receiver email, anyone "
-"with the coupon code can use it."
+msgid "Do not restrict auto-generated coupons to buyer / receiver email, anyone with the coupon code can use it."
 msgstr "자동 생성된 쿠폰을 구매자/수신자 이메일로 제한하지 말고 쿠폰 코드만 있으면 누구나 사용할 수 있습니다."
 
 #: includes/class-wc-sc-admin-welcome.php:583
-msgid ""
-"Do not want to tie store credit to be used by only one customer? / Can a "
-"customer send a gift certificate to themselves to pass on to someone else?"
-msgstr ""
-"스토어 크레딧을 한 고객만 사용하도록 묶고 싶지 않으신가요? / 고객이 상품권을 자신에게 보내 다른 사람에게 전달할 수 있나요?"
+msgid "Do not want to tie store credit to be used by only one customer? / Can a customer send a gift certificate to themselves to pass on to someone else?"
+msgstr "스토어 크레딧을 한 고객만 사용하도록 묶고 싶지 않으신가요? / 고객이 상품권을 자신에게 보내 다른 사람에게 전달할 수 있나요?"
 
 #: includes/class-wc-sc-admin-notifications.php:107
 #: includes/class-wc-sc-admin-welcome.php:323
@@ -1976,7 +1854,7 @@ msgstr "문서"
 msgid "Does Smart Coupons allow printing of coupon as Gift Card?"
 msgstr "스마트 쿠폰을 기프트 카드로 인쇄할 수 있나요?"
 
-#: includes/class-wc-smart-coupons.php:1972
+#: includes/class-wc-smart-coupons.php:1981
 msgid "Don&#39;t Miss Out."
 msgstr "놓치지 마세요."
 
@@ -1997,13 +1875,8 @@ msgid "Edit coupon category"
 msgstr "쿠폰 카테고리 편집"
 
 #: includes/class-wc-sc-admin-welcome.php:584
-msgid ""
-"Edit the main coupon which is entered in \"Coupons\" field of the product "
-"edit page, then go to \"Usage Restrictions\" > \"Disable Email Restriction\" "
-"and disable this setting and save the coupon."
-msgstr ""
-"제품 편집 페이지의 \"쿠폰\" 필드에 입력한 기본 쿠폰을 편집한 다음 \"사용 제한\" &gt; \"이메일 제한 사용 안 함\"으로 "
-"이동하여 이 설정을 비활성화하고 쿠폰을 저장합니다."
+msgid "Edit the main coupon which is entered in \"Coupons\" field of the product edit page, then go to \"Usage Restrictions\" > \"Disable Email Restriction\" and disable this setting and save the coupon."
+msgstr "제품 편집 페이지의 \"쿠폰\" 필드에 입력한 기본 쿠폰을 편집한 다음 \"사용 제한\" &gt; \"이메일 제한 사용 안 함\"으로 이동하여 이 설정을 비활성화하고 쿠폰을 저장합니다."
 
 #: includes/class-wc-sc-coupon-process.php:340
 msgid "Email address"
@@ -2039,14 +1912,13 @@ msgctxt "email heading"
 msgid "Reminder: Your Coupon Are Expiring Soon"
 msgstr "알림: 쿠폰이 곧 만료됩니다"
 
-#: includes/class-wc-sc-url-coupon.php:715
+#: includes/class-wc-sc-url-coupon.php:655
 msgid "Email set in session successfully."
 msgstr "세션에 이메일이 성공적으로 설정되었습니다."
 
 #. translators: 1: site title
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:73
 #, fuzzy
-#| msgid "{site_title}: Your Coupon Are About to Expire!"
 msgctxt "email subject"
 msgid "%s: Your Coupon Are About to Expire!"
 msgstr "{site_title}: 쿠폰이 곧 만료됩니다!"
@@ -2088,11 +1960,11 @@ msgstr "쿠폰 인쇄를 허용하는 기능 활성화"
 msgid "Enable store notice for the coupon"
 msgstr "쿠폰에 대한 스토어 알림 사용 설정"
 
-#: includes/class-wc-smart-coupons.php:6612
+#: includes/class-wc-smart-coupons.php:6615
 msgid "Enable taxes"
 msgstr "세금 사용"
 
-#: includes/class-wc-smart-coupons.php:6618
+#: includes/class-wc-smart-coupons.php:6621
 msgid "Enable the use of coupon codes"
 msgstr "쿠폰 코드 사용 활성화"
 
@@ -2101,14 +1973,11 @@ msgid "Enable this email notification"
 msgstr "이 이메일 알림 사용 설정"
 
 #: includes/class-wc-sc-settings.php:919
-msgid ""
-"Enable this to allow buyers to select date & time for delivering the coupon."
+msgid "Enable this to allow buyers to select date & time for delivering the coupon."
 msgstr "구매자가 쿠폰을 배송할 날짜와 시간을 선택할 수 있도록 하려면 이 옵션을 활성화합니다."
 
 #: includes/class-wc-sc-coupon-import.php:1040
-msgid ""
-"Enable this to send coupon to recipient's email addresses, provided in "
-"imported file."
+msgid "Enable this to send coupon to recipient's email addresses, provided in imported file."
 msgstr "이 옵션을 활성화하면 가져온 파일에 제공된 수신자의 이메일 주소로 쿠폰을 전송할 수 있습니다."
 
 #: includes/class-wc-sc-settings.php:728
@@ -2123,7 +1992,7 @@ msgstr ""
 msgid "Enable/Disable"
 msgstr "활성화/비활성화"
 
-#: includes/class-wc-smart-coupons.php:1965
+#: includes/class-wc-smart-coupons.php:1974
 msgid "Ending Soon!"
 msgstr "곧 종료됩니다!"
 
@@ -2132,73 +2001,73 @@ msgid "Endpoint for the My Account &rarr; Coupons page"
 msgstr "내 계정 &rarr; 쿠폰 페이지의 엔드포인트"
 
 #: includes/class-wc-sc-coupon-fields.php:1150
-#: includes/class-wc-smart-coupons.php:5775
+#: includes/class-wc-smart-coupons.php:5779
 msgctxt "enhanced select"
 msgid "%qty% results are available, use up and down arrow keys to navigate."
 msgstr "수량% 결과를 사용할 수 있으며 위쪽 및 아래쪽 화살표 키를 사용하여 탐색합니다."
 
-#: includes/class-wc-smart-coupons.php:5777
+#: includes/class-wc-smart-coupons.php:5781
 msgctxt "enhanced select"
 msgid "Loading failed"
 msgstr "로드 실패"
 
 #: includes/class-wc-sc-coupon-fields.php:1159
-#: includes/class-wc-smart-coupons.php:5784
+#: includes/class-wc-smart-coupons.php:5788
 msgctxt "enhanced select"
 msgid "Loading more results&hellip;"
 msgstr "더 많은 결과 로드 중..."
 
 #: includes/class-wc-sc-coupon-fields.php:1151
-#: includes/class-wc-smart-coupons.php:5776
+#: includes/class-wc-smart-coupons.php:5780
 msgctxt "enhanced select"
 msgid "No matches found"
 msgstr "일치하는 항목이 없습니다."
 
 #: includes/class-wc-sc-coupon-fields.php:1149
-#: includes/class-wc-smart-coupons.php:5774
+#: includes/class-wc-smart-coupons.php:5778
 msgctxt "enhanced select"
 msgid "One result is available, press enter to select it."
 msgstr "하나의 결과가 표시되면 Enter 키를 눌러 선택합니다."
 
 #: includes/class-wc-sc-coupon-fields.php:1156
-#: includes/class-wc-smart-coupons.php:5781
+#: includes/class-wc-smart-coupons.php:5785
 msgctxt "enhanced select"
 msgid "Please delete %qty% characters"
 msgstr "수량 %% 문자를 삭제해 주세요."
 
 #: includes/class-wc-sc-coupon-fields.php:1155
-#: includes/class-wc-smart-coupons.php:5780
+#: includes/class-wc-smart-coupons.php:5784
 msgctxt "enhanced select"
 msgid "Please delete 1 character"
 msgstr "문자 1개를 삭제해 주세요."
 
 #: includes/class-wc-sc-coupon-fields.php:1154
-#: includes/class-wc-smart-coupons.php:5779
+#: includes/class-wc-smart-coupons.php:5783
 msgctxt "enhanced select"
 msgid "Please enter %qty% or more characters"
 msgstr "수량 %% 이상을 입력하세요."
 
 #: includes/class-wc-sc-coupon-fields.php:1153
-#: includes/class-wc-smart-coupons.php:5778
+#: includes/class-wc-smart-coupons.php:5782
 msgctxt "enhanced select"
 msgid "Please enter 1 or more characters"
 msgstr "1자 이상 입력하세요."
 
 #: includes/class-wc-sc-coupon-fields.php:1152
 #: includes/class-wc-sc-coupon-fields.php:1160
-#: includes/class-wc-smart-coupons.php:5785
+#: includes/class-wc-smart-coupons.php:5789
 msgctxt "enhanced select"
 msgid "Searching&hellip;"
 msgstr "검색 중..."
 
 #: includes/class-wc-sc-coupon-fields.php:1158
-#: includes/class-wc-smart-coupons.php:5783
+#: includes/class-wc-smart-coupons.php:5787
 msgctxt "enhanced select"
 msgid "You can only select %qty% items"
 msgstr "수량 %% 항목만 선택할 수 있습니다."
 
 #: includes/class-wc-sc-coupon-fields.php:1157
-#: includes/class-wc-smart-coupons.php:5782
+#: includes/class-wc-smart-coupons.php:5786
 msgctxt "enhanced select"
 msgid "You can only select 1 item"
 msgstr "하나의 항목만 선택할 수 있습니다."
@@ -2230,11 +2099,8 @@ msgstr "일부 텍스트 또는 일부 속성을 파이프(|)로 값을 구분�
 
 #. translators: 1: Path to setting 2: Setting to set email address 3: Setting for number of coupons to generate
 #: includes/class-wc-sc-admin-pages.php:1291
-msgid ""
-"Enter the email addresses of the recipients separated by comma under %1$1s. "
-"Make sure to match the count of email addresses in %2$2s to %3$3s"
-msgstr ""
-"받는 사람의 전자 메일 주소를 %1$1초에 쉼표로 구분하여 입력합니다. 2$2초에서 %3$3초의 이메일 주소 수와 일치하는지 확인하세요."
+msgid "Enter the email addresses of the recipients separated by comma under %1$1s. Make sure to match the count of email addresses in %2$2s to %3$3s"
+msgstr "받는 사람의 전자 메일 주소를 %1$1초에 쉼표로 구분하여 입력합니다. 2$2초에서 %3$3초의 이메일 주소 수와 일치하는지 확인하세요."
 
 #. translators: 1. Error title 2. The bulk process
 #: includes/class-wc-sc-background-coupon-importer.php:390
@@ -2440,7 +2306,7 @@ msgctxt "Error processing request"
 msgid "Error processing request."
 msgstr "오류 처리 요청."
 
-#: includes/class-wc-sc-url-coupon.php:772
+#: includes/class-wc-sc-url-coupon.php:707
 msgid "Error updating checkout:"
 msgstr "결제 업데이트 중 오류가 발생했습니다:"
 
@@ -2476,15 +2342,15 @@ msgstr "속성 제외"
 msgid "Exclude Product attributes"
 msgstr ""
 
-#: includes/class-wc-smart-coupons.php:5639
+#: includes/class-wc-smart-coupons.php:5643
 msgid "Exclude Product categories"
 msgstr "제품 카테고리 제외"
 
-#: includes/class-wc-smart-coupons.php:5637
+#: includes/class-wc-smart-coupons.php:5641
 msgid "Exclude product IDs"
 msgstr "제품 ID 제외"
 
-#: includes/class-wc-smart-coupons.php:5635
+#: includes/class-wc-smart-coupons.php:5639
 msgid "Exclude Sale Items"
 msgstr "판매 품목 제외"
 
@@ -2503,7 +2369,7 @@ msgid "Excluded emails"
 msgstr "제외된 이메일"
 
 #. translators: Discount amount applied on tax
-#: includes/class-wc-smart-coupons.php:3142
+#: includes/class-wc-smart-coupons.php:3151
 msgid "excludes -%s on tax"
 msgstr "세금 -%s 제외"
 
@@ -2515,7 +2381,8 @@ msgstr ""
 msgid "Expire"
 msgstr "만료"
 
-#: templates/plain/combined-email.php:108 templates/plain/email.php:103
+#: templates/plain/combined-email.php:108
+#: templates/plain/email.php:103
 #: templates/plain/expiry-reminder-email.php:84
 msgid "Expires on:"
 msgstr "만료일:"
@@ -2524,7 +2391,7 @@ msgstr "만료일:"
 msgid "Expiry Date"
 msgstr "만료 날짜"
 
-#: includes/class-wc-smart-coupons.php:5631
+#: includes/class-wc-smart-coupons.php:5635
 msgid "Expiry date"
 msgstr "만료 날짜"
 
@@ -2536,18 +2403,16 @@ msgstr "쿠폰 인쇄"
 #. translators: %s: Plugin name
 #: includes/batches/class-wc-sc-coupons-expiry-reminder-scheduler.php:191
 msgctxt "Expiry reminder background processing complete info message"
-msgid ""
-"%s Expiry Reminder background processing complete. This message will "
-"automatically disappear but after few seconds upon refresh."
+msgid "%s Expiry Reminder background processing complete. This message will automatically disappear but after few seconds upon refresh."
 msgstr "만료 알림 백그라운드 처리가 완료되었습니다. 이 메시지는 새로 고침 시 몇 초 후에 자동으로 사라집니다."
 
 #. translators: 1: The expiry date
-#: includes/class-wc-smart-coupons.php:1591
+#: includes/class-wc-smart-coupons.php:1600
 msgid "Expiry: %s"
 msgstr "만료: %s"
 
 #: includes/class-wc-sc-admin-pages.php:206
-#: includes/class-wc-smart-coupons.php:4796
+#: includes/class-wc-smart-coupons.php:4797
 msgid "Export"
 msgstr "내보내기"
 
@@ -2560,16 +2425,14 @@ msgstr "CSV로 내보내기"
 msgid "Failed to create export file."
 msgstr "내보내기 파일을 만들지 못했습니다."
 
-#: includes/class-wc-smart-coupons.php:5165
+#: includes/class-wc-smart-coupons.php:5166
 msgid "Failed to generate export CSV due to internal error."
 msgstr ""
 
 #. translators: 1. Receiver email 2. Coupon code 3. Order id
 #: includes/class-wc-sc-coupon-process.php:1163
-#: includes/class-wc-smart-coupons.php:963
-msgid ""
-"Failed to schedule email to \"%1$s\" for coupon \"%2$s\" received from order "
-"#%3$s."
+#: includes/class-wc-smart-coupons.php:974
+msgid "Failed to schedule email to \"%1$s\" for coupon \"%2$s\" received from order #%3$s."
 msgstr "주문 #%3$s에서 받은 쿠폰 \"%2$s\"에 대한 이메일을 \"%1$s\"로 예약하지 못했습니다."
 
 #. translators: 1. Receiver email 2. Coupon code
@@ -2608,7 +2471,7 @@ msgstr "기능."
 msgid "Festive"
 msgstr "축제"
 
-#: includes/class-wc-sc-url-coupon.php:778
+#: includes/class-wc-sc-url-coupon.php:713
 msgid "Fetch error:"
 msgstr "가져오기 오류입니다:"
 
@@ -2617,27 +2480,25 @@ msgid "File format seems OK"
 msgstr "파일 형식이 정상으로 보입니다."
 
 #. translators: File path
-#: includes/class-wc-smart-coupons.php:5972
-#: includes/class-wc-smart-coupons.php:5980
+#: includes/class-wc-smart-coupons.php:5976
+#: includes/class-wc-smart-coupons.php:5984
 msgid "File not found %s"
 msgstr "파일을 찾을 수 없음 %s"
 
 #: includes/class-wc-sc-coupon-import.php:287
-msgid ""
-"File not found. Make sure the file has required permission to read and/or "
-"the file is accessible: "
+msgid "File not found. Make sure the file has required permission to read and/or the file is accessible: "
 msgstr "파일을 찾을 수 없습니다. 파일에 필요한 읽기 권한이 있거나 파일에 액세스할 수 있는지 확인하세요: "
 
 #: includes/class-wc-sc-coupon-import.php:1029
 msgid "File uploaded OK"
 msgstr "파일 업로드 완료"
 
-#: includes/class-wc-smart-coupons.php:4763
+#: includes/class-wc-smart-coupons.php:4764
 msgid "Filter by category"
 msgstr "카테고리별 필터링"
 
 #. translators: Email address of users
-#: includes/class-wc-smart-coupons.php:7969
+#: includes/class-wc-smart-coupons.php:7971
 msgid "Find coupons restricted to %s"
 msgstr "S로 제한된 쿠폰 찾기"
 
@@ -2646,7 +2507,7 @@ msgid "Flat"
 msgstr "플랫"
 
 #. translators: 1. The discount text
-#: includes/class-wc-smart-coupons.php:1985
+#: includes/class-wc-smart-coupons.php:1994
 msgid "Flat %s discount on everything today."
 msgstr "오늘 모든 상품에 대해 정액 %s 할인."
 
@@ -2668,8 +2529,8 @@ msgstr "자세한 내용은 이 문서를 참조하세요: %s"
 msgid "For new customers?"
 msgstr "신규 고객의 경우?"
 
-#: includes/class-wc-smart-coupons.php:5233
-#: includes/class-wc-smart-coupons.php:5646
+#: includes/class-wc-smart-coupons.php:5234
+#: includes/class-wc-smart-coupons.php:5650
 msgid "For new user only?"
 msgstr "신규 사용자만 사용하시나요?"
 
@@ -2683,16 +2544,18 @@ msgstr "일부 제품의 경우"
 #: includes/class-wc-sc-display-coupons.php:1081
 #: includes/class-wc-sc-display-coupons.php:2965
 #: includes/class-wc-sc-shortcode.php:542
-#: includes/class-wc-smart-coupons.php:5505
+#: includes/class-wc-smart-coupons.php:5508
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:375
-#: templates/combined-email.php:131 templates/email.php:128
-#: templates/plain/combined-email.php:93 templates/plain/email.php:88
+#: templates/combined-email.php:131
+#: templates/email.php:128
+#: templates/plain/combined-email.php:93
+#: templates/plain/email.php:88
 #: templates/plain/expiry-reminder-email.php:69
 #: templates/print-coupons-default.php:148
 msgid "Free Shipping"
 msgstr "무료 배송"
 
-#: includes/class-wc-smart-coupons.php:5630
+#: includes/class-wc-smart-coupons.php:5634
 msgid "Free shipping"
 msgstr "무료 배송"
 
@@ -2708,68 +2571,82 @@ msgid "from"
 msgstr "에서"
 
 #: includes/class-wc-sc-admin-welcome.php:622
-msgid ""
-"From version 4.11.0, you can add/link coupons to product variations as well. "
-"This feature is not available in a version lower than 4.11.0."
-msgstr ""
-"4.11.0 버전부터는 제품 이형 상품에도 쿠폰을 추가/연결할 수 있습니다. 이 기능은 4.11.0 미만 버전에서는 사용할 수 없습니다."
+msgid "From version 4.11.0, you can add/link coupons to product variations as well. This feature is not available in a version lower than 4.11.0."
+msgstr "4.11.0 버전부터는 제품 이형 상품에도 쿠폰을 추가/연결할 수 있습니다. 이 기능은 4.11.0 미만 버전에서는 사용할 수 없습니다."
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:235
+#: blocks/src/js/send-coupon-form/block.js:239
 msgctxt "Frontend"
 msgid "Deliver coupon"
 msgstr "쿠폰 전달"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:262
+#: blocks/src/js/send-coupon-form/block.js:287
 msgctxt "Frontend"
 msgid "Enter recipient e-mail address"
 msgstr "수신자 이메일 주소 입력"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:207
 msgctxt "Frontend"
 msgid "Gift to someone else"
 msgstr "다른 사람에게 선물하기"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:267
+#: blocks/src/js/send-coupon-form/block.js:294
 msgctxt "Frontend"
 msgid "Message for receiver"
 msgstr "수신자를 위한 메시지"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:259
+#: blocks/src/js/send-coupon-form/block.js:284
 msgctxt "Frontend"
 msgid "Receiver email address"
 msgstr "수신자 이메일 주소"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:195
 msgctxt "Frontend"
 msgid "Send coupons to..."
 msgstr "쿠폰 보내기 대상..."
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:225
 msgctxt "Frontend"
 msgid "Send to different people"
 msgstr "여러 사람에게 보내기"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:202
 msgctxt "Frontend"
 msgid "Send to me"
 msgstr "나에게 보내기"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:220
 msgctxt "Frontend"
 msgid "Send to one person"
 msgstr "한 사람에게 보내기"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:271
+#: blocks/src/js/send-coupon-form/block.js:298
 msgctxt "Frontend"
 msgid "Write a message"
 msgstr "메시지 작성"
 
 #: blocks/build/woocommerce-smart-coupons-send-coupon-form-block-frontend.js:1
+#: blocks/src/js/send-coupon-form/block.js:197
 msgctxt "Frontend"
 msgid "Your order contains coupons. What would you like to do?"
 msgstr "주문에 쿠폰이 포함되어 있습니다. 어떻게 하시겠습니까?"
 
-#: includes/class-wc-sc-settings.php:421 includes/class-wc-sc-settings.php:424
+#: includes/class-wc-sc-settings.php:421
+#: includes/class-wc-sc-settings.php:424
 msgid "General"
 msgstr "일반"
 
@@ -2817,13 +2694,8 @@ msgstr "화살표"
 #. translators: 1. Link to jump to 'Order actions' metabox 2. Text 'Order actions' 3. Text 'arrow'
 #: includes/class-wc-sc-display-coupons.php:2646
 msgctxt "Generated coupons metabox - Order edit admin page"
-msgid ""
-"Coupons are not generated for this order. You can regenerate it from %1$s. "
-"Select an appropriate action from the %2$s dropdown menu and hit the %3$s "
-"button next to it."
-msgstr ""
-"이 주문에 대한 쿠폰이 생성되지 않았습니다. 1$s에서 다시 생성할 수 있습니다. 2$s 드롭다운 메뉴에서 적절한 작업을 선택하고 그 "
-"옆에 있는 %3$s 버튼을 누르세요."
+msgid "Coupons are not generated for this order. You can regenerate it from %1$s. Select an appropriate action from the %2$s dropdown menu and hit the %3$s button next to it."
+msgstr "이 주문에 대한 쿠폰이 생성되지 않았습니다. 1$s에서 다시 생성할 수 있습니다. 2$s 드롭다운 메뉴에서 적절한 작업을 선택하고 그 옆에 있는 %3$s 버튼을 누르세요."
 
 #. translators: 1. Link to jump to 'Order actions' metabox 2. Text 'Order actions' 3. Text 'arrow'
 #: includes/class-wc-sc-display-coupons.php:2646
@@ -2840,9 +2712,7 @@ msgstr "쿠폰만 재생성하려면 %s를 선택하세요. 이 경우 이메일
 #. translators: 1. Label for Order action for regenerating & resending coupons
 #: includes/class-wc-sc-display-coupons.php:2669
 msgctxt "Generated coupons metabox - Order edit admin page"
-msgid ""
-"Select %s to regenerate as well as resend coupons to the recipients via "
-"email."
+msgid "Select %s to regenerate as well as resend coupons to the recipients via email."
 msgstr "를 선택하여 이메일을 통해 수신자에게 쿠폰을 다시 보내고 재생성할 수 있습니다."
 
 #: includes/class-wc-sc-admin-coupons-dashboard-actions.php:118
@@ -2854,9 +2724,7 @@ msgid "get this & several other products at a huge discount"
 msgstr "이 제품 및 기타 여러 제품을 대폭 할인된 가격으로 만나보세요."
 
 #: includes/class-wc-sc-admin-welcome.php:587
-msgid ""
-"Getting 'Page Not Found Error' when accessing Coupons tab from My Account "
-"Page?"
+msgid "Getting 'Page Not Found Error' when accessing Coupons tab from My Account Page?"
 msgstr "내 계정 페이지에서 쿠폰 탭에 액세스할 때 '페이지를 찾을 수 없음 오류'가 표시되나요?"
 
 #: includes/class-wc-sc-admin-welcome.php:434
@@ -2879,7 +2747,7 @@ msgstr "기프트 카드"
 msgid "Gift card"
 msgstr "기프트 카드"
 
-#: includes/class-wc-smart-coupons.php:6611
+#: includes/class-wc-smart-coupons.php:6614
 msgid "Gift Card discount is inclusive of tax"
 msgstr "기프트 카드 할인에는 세금이 포함되어 있습니다."
 
@@ -2905,35 +2773,16 @@ msgid "Gift to someone else"
 msgstr "다른 사람에게 선물하기"
 
 #: includes/class-wc-sc-settings.php:802
-msgid ""
-"Give alternate singular name to Store Credit / Gift Certificate. This label "
-"will only rename Store Credit / Gift Certificate used in the Smart Coupons "
-"plugin. <a href=\"https://woocommerce.com/document/smart-coupons/how-to-"
-"rename-store-credit/\" target=\"_blank\"><small> [Read More] </small></a>"
-msgstr ""
-"스토어 크레딧/기프트 카드에 다른 단수 이름을 지정합니다. 이 레이블은 스마트 쿠폰 플러그인에서 사용되는 스토어 크레딧/상품권의 이름만 "
-"변경합니다. <a href=\"https://woocommerce.com/document/smart-coupons/how-to-"
-"rename-store-credit/\" target=\"_blank\"><small> [자세히 보기] </small></a>"
+msgid "Give alternate singular name to Store Credit / Gift Certificate. This label will only rename Store Credit / Gift Certificate used in the Smart Coupons plugin. <a href=\"https://woocommerce.com/document/smart-coupons/how-to-rename-store-credit/\" target=\"_blank\"><small> [Read More] </small></a>"
+msgstr "스토어 크레딧/기프트 카드에 다른 단수 이름을 지정합니다. 이 레이블은 스마트 쿠폰 플러그인에서 사용되는 스토어 크레딧/상품권의 이름만 변경합니다. <a href=\"https://woocommerce.com/document/smart-coupons/how-to-rename-store-credit/\" target=\"_blank\"><small> [자세히 보기] </small></a>"
 
 #: includes/class-wc-sc-admin-welcome.php:630
-msgid ""
-"Give away a discount or credit on signing up a subscription, give away "
-"recurring discount or credits, apply credit during sign up, automatic "
-"payment for renewals from credit (Note: When using PayPal Standard Gateway, "
-"store credit can be applied only during sign up. Automatic payment for "
-"renewals by credit will not work for PayPal Standard Gateway)."
-msgstr ""
-"정기결제 가입 시 할인 또는 크레딧 제공, 정기결제 할인 또는 크레딧 제공, 가입 시 크레딧 적용, 크레딧으로 갱신 자동 결제(참고: "
-"PayPal 표준 게이트웨이를 사용하는 경우 스토어 크레딧은 가입 시에만 적용할 수 있습니다. 크레딧을 통한 갱신 자동 결제는 "
-"PayPal 표준 게이트웨이에서는 작동하지 않습니다.)"
+msgid "Give away a discount or credit on signing up a subscription, give away recurring discount or credits, apply credit during sign up, automatic payment for renewals from credit (Note: When using PayPal Standard Gateway, store credit can be applied only during sign up. Automatic payment for renewals by credit will not work for PayPal Standard Gateway)."
+msgstr "정기결제 가입 시 할인 또는 크레딧 제공, 정기결제 할인 또는 크레딧 제공, 가입 시 크레딧 적용, 크레딧으로 갱신 자동 결제(참고: PayPal 표준 게이트웨이를 사용하는 경우 스토어 크레딧은 가입 시에만 적용할 수 있습니다. 크레딧을 통한 갱신 자동 결제는 PayPal 표준 게이트웨이에서는 작동하지 않습니다.)"
 
 #: includes/class-wc-sc-admin-welcome.php:450
-msgid ""
-"Give bigger discounts without hurting your profits. Offer a percentage off "
-"coupon upto a particular value. Example -  Flat 50% off upto $100."
-msgstr ""
-"수익에 영향을 주지 않으면서 더 큰 할인 혜택을 제공하세요. 특정 금액까지 백분율 할인 쿠폰을 제공하세요. 예 - 최대 $100까지 정액 "
-"50% 할인."
+msgid "Give bigger discounts without hurting your profits. Offer a percentage off coupon upto a particular value. Example -  Flat 50% off upto $100."
+msgstr "수익에 영향을 주지 않으면서 더 큰 할인 혜택을 제공하세요. 특정 금액까지 백분율 할인 쿠폰을 제공하세요. 예 - 최대 $100까지 정액 50% 할인."
 
 #: includes/class-wc-sc-admin-welcome.php:442
 msgid "Give discounts to customers for next purchase"
@@ -2944,9 +2793,7 @@ msgid "Give plural name for the above singular name."
 msgstr "위의 단수 이름에 복수 이름을 입력합니다."
 
 #: includes/class-wc-sc-admin-welcome.php:300
-msgid ""
-"Glad to have you onboard. We hope WooCommerce Smart Coupons adds to your "
-"desired success 🏆"
+msgid "Glad to have you onboard. We hope WooCommerce Smart Coupons adds to your desired success 🏆"
 msgstr "함께하게 되어 기쁩니다. WooCommerce 스마트 쿠폰이 여러분의 성공에 도움이 되길 바랍니다 🏆."
 
 #. translators: HTML entity for Right-arrow
@@ -2955,15 +2802,14 @@ msgid "Go to Coupons dashboard %s"
 msgstr "쿠폰 대시보드 %s로 이동"
 
 #: includes/class-wc-sc-admin-welcome.php:588
-msgid ""
-"Go to WordPress -> Settings -> Permalinks and click on Save Settings once."
+msgid "Go to WordPress -> Settings -> Permalinks and click on Save Settings once."
 msgstr "워드프레스 -&gt; 설정 -&gt; 퍼머링글로 이동하여 설정 저장을 한 번 클릭합니다."
 
 #: includes/class-wc-sc-settings.php:548
 msgid "Gold"
 msgstr "골드"
 
-#: includes/class-wc-smart-coupons.php:1963
+#: includes/class-wc-smart-coupons.php:1972
 msgid "Great News!"
 msgstr "좋은 소식입니다!"
 
@@ -2988,9 +2834,7 @@ msgid "HH:MM"
 msgstr "HH:MM"
 
 #: includes/class-wc-sc-coupon-import.php:1125
-msgid ""
-"Hi there! Upload a CSV file with coupons details to import them into your "
-"shop."
+msgid "Hi there! Upload a CSV file with coupons details to import them into your shop."
 msgstr "안녕하세요! 쿠폰 세부 정보가 포함된 CSV 파일을 업로드하여 상점으로 가져올 수 있습니다."
 
 #. translators: 1: plugin name 2: page based text 3: Label for store credit 4: Hide notice text
@@ -3012,13 +2856,8 @@ msgid "How does automatic payment by store credit work with Subscriptions?"
 msgstr "스토어 크레딧을 통한 자동 결제는 구독에서 어떻게 작동하나요?"
 
 #: includes/class-wc-sc-settings.php:431
-msgid ""
-"How many coupons (at max) should be shown on cart, checkout & my account "
-"page? If set to 0 (zero) then coupons will not be displayed at all on the "
-"website."
-msgstr ""
-"장바구니, 결제 및 내 계정 페이지에 몇 개의 쿠폰(최대)을 표시해야 하나요? 0(0)으로 설정하면 웹사이트에 쿠폰이 전혀 표시되지 "
-"않습니다."
+msgid "How many coupons (at max) should be shown on cart, checkout & my account page? If set to 0 (zero) then coupons will not be displayed at all on the website."
+msgstr "장바구니, 결제 및 내 계정 페이지에 몇 개의 쿠폰(최대)을 표시해야 하나요? 0(0)으로 설정하면 웹사이트에 쿠폰이 전혀 표시되지 않습니다."
 
 #. translators: Documentation link for 'How to Apply Single or Multiple Coupons on Click of a Link'
 #: includes/class-wc-sc-admin-welcome.php:580
@@ -3065,13 +2904,8 @@ msgid "Hurry. Going fast! On the entire range of products."
 msgstr "서둘러요. 빠르게 진행 중입니다! 모든 제품군에 적용됩니다."
 
 #: includes/class-wc-sc-admin-welcome.php:645
-msgid ""
-"I'm using WPML & WPML provides support for multi-currency, but Smart Coupons "
-"only changes currency symbol & the price value remains same. Can Smart "
-"Coupons change the currency symbol and the price value associated with it?"
-msgstr ""
-"WPML을 사용 중이고 WPML은 다중 통화를 지원하지만 스마트 쿠폰은 통화 기호만 변경되고 가격 값은 동일하게 유지됩니다. 스마트 "
-"쿠폰에서 통화 기호와 관련된 가격 값을 변경할 수 있나요?"
+msgid "I'm using WPML & WPML provides support for multi-currency, but Smart Coupons only changes currency symbol & the price value remains same. Can Smart Coupons change the currency symbol and the price value associated with it?"
+msgstr "WPML을 사용 중이고 WPML은 다중 통화를 지원하지만 스마트 쿠폰은 통화 기호만 변경되고 가격 값은 동일하게 유지됩니다. 스마트 쿠폰에서 통화 기호와 관련된 가격 값을 변경할 수 있나요?"
 
 #. translators: 1: ID who refunded
 #: includes/class-wc-sc-coupon-refund-process.php:685
@@ -3079,15 +2913,11 @@ msgid "ID: %d"
 msgstr "ID: %d"
 
 #: includes/class-wc-sc-coupon-import.php:1034
-msgid ""
-"If enabled, existing coupons that match by coupon code will be updated. "
-"Coupons that do not exist will be skipped."
+msgid "If enabled, existing coupons that match by coupon code will be updated. Coupons that do not exist will be skipped."
 msgstr "활성화하면 쿠폰 코드와 일치하는 기존 쿠폰이 업데이트됩니다. 존재하지 않는 쿠폰은 건너뜁니다."
 
 #: includes/class-wc-sc-privacy.php:103
-msgid ""
-"If you are a visitor: We access your billing email address entered during "
-"purchase"
+msgid "If you are a visitor: We access your billing email address entered during purchase"
 msgstr "방문자인 경우 구매 시 입력한 청구 이메일 주소에 액세스합니다."
 
 #. translators: WooCommerce My Account support link
@@ -3096,9 +2926,7 @@ msgid "If you are facing any issues, please %s from your WooCommerce account."
 msgstr "문제가 발생하면 WooCommerce 계정에서 %s로 문의하세요."
 
 #: includes/class-wc-sc-privacy.php:102
-msgid ""
-"If you are logged in: We access your billing email address saved in your "
-"account & billing email address entered during purchase"
+msgid "If you are logged in: We access your billing email address saved in your account & billing email address entered during purchase"
 msgstr "로그인한 경우: 계정에 저장된 청구 이메일 주소 및 구매 시 입력한 청구 이메일 주소에 액세스합니다."
 
 #. translators: 1. File name 2. File download link
@@ -3107,23 +2935,13 @@ msgid "If you want to import coupon through file, the file should be like"
 msgstr "파일을 통해 쿠폰을 가져오려면 파일 형식은 다음과 같아야 합니다."
 
 #: includes/class-wc-sc-coupons-by-location.php:211
-msgid ""
-"If you want to restrict the coupon to certain locations, enter allowed "
-"locations here. Country and state names will be auto-completed. Enter city "
-"names by typing them fully. Partial names are fine too."
-msgstr ""
-"쿠폰을 특정 위치로 제한하려면 여기에 허용되는 위치를 입력하세요. 국가 및 주 이름은 자동으로 완성됩니다. 도시 이름을 완전히 입력하여 "
-"입력합니다. 부분 이름도 괜찮습니다."
+msgid "If you want to restrict the coupon to certain locations, enter allowed locations here. Country and state names will be auto-completed. Enter city names by typing them fully. Partial names are fine too."
+msgstr "쿠폰을 특정 위치로 제한하려면 여기에 허용되는 위치를 입력하세요. 국가 및 주 이름은 자동으로 완성됩니다. 도시 이름을 완전히 입력하여 입력합니다. 부분 이름도 괜찮습니다."
 
 #. translators: WooCommerce Subscriptions product link
 #: includes/class-wc-sc-admin-welcome.php:411
-msgid ""
-"If your store is using %s and your customer has purchased a subscription "
-"using a Store Credit. If that store credit has balance left in it, store "
-"will automatically use it for renewing that subscription."
-msgstr ""
-"스토어에서 %s를 사용 중이고 고객이 스토어 크레딧을 사용하여 가입을 구매한 경우. 스토어 크레딧에 잔액이 남아 있는 경우 스토어는 해당 "
-"구독을 갱신하는 데 자동으로 크레딧을 사용합니다."
+msgid "If your store is using %s and your customer has purchased a subscription using a Store Credit. If that store credit has balance left in it, store will automatically use it for renewing that subscription."
+msgstr "스토어에서 %s를 사용 중이고 고객이 스토어 크레딧을 사용하여 가입을 구매한 경우. 스토어 크레딧에 잔액이 남아 있는 경우 스토어는 해당 구독을 갱신하는 데 자동으로 크레딧을 사용합니다."
 
 #: includes/class-wc-sc-admin-pages.php:205
 #: includes/class-wc-sc-coupon-import.php:1044
@@ -3140,11 +2958,8 @@ msgid "Import <strong>coupons</strong> to your store via a csv file."
 msgstr "CSV 파일을 통해 <strong>쿠폰을</strong> 스토어로 가져옵니다."
 
 #: includes/class-wc-sc-admin-welcome.php:430
-msgid ""
-"Import and export unique coupons in bulk via CSV. Share coupon codes to deal "
-"sites or email them to your customers."
-msgstr ""
-"CSV를 통해 고유 쿠폰을 대량으로 가져오고 내보낼 수 있습니다. 쿠폰 코드를 거래 사이트에 공유하거나 고객에게 이메일로 전송하세요."
+msgid "Import and export unique coupons in bulk via CSV. Share coupon codes to deal sites or email them to your customers."
+msgstr "CSV를 통해 고유 쿠폰을 대량으로 가져오고 내보낼 수 있습니다. 쿠폰 코드를 거래 사이트에 공유하거나 고객에게 이메일로 전송하세요."
 
 #: includes/class-wc-sc-admin-pages.php:320
 msgid "Import complete - imported"
@@ -3157,9 +2972,7 @@ msgid "Import Coupons"
 msgstr "쿠폰 가져오기"
 
 #: includes/class-wc-sc-coupon-import.php:828
-msgid ""
-"Import process is already in progress. You’ll be able to import again only "
-"after it is completed."
+msgid "Import process is already in progress. You’ll be able to import again only after it is completed."
 msgstr ""
 
 #. translators: 1. Message type 2. Functionality name "Bulk Generate" 3. Functionality name "Import-Export"
@@ -3174,7 +2987,7 @@ msgstr "가져오기-내보내기"
 #: includes/class-wc-sc-admin-notifications.php:292
 #: includes/class-wc-sc-background-coupon-importer.php:338
 #: includes/class-wc-sc-background-coupon-importer.php:405
-#: includes/class-wc-smart-coupons.php:6084
+#: includes/class-wc-smart-coupons.php:6088
 msgid "Important"
 msgstr "중요"
 
@@ -3198,14 +3011,12 @@ msgstr "포함"
 
 #. translators: %s: Preview link
 #: includes/class-wc-sc-settings.php:680
-msgid ""
-"Include coupon details on product's page, for products that issue coupons %s"
+msgid "Include coupon details on product's page, for products that issue coupons %s"
 msgstr "쿠폰을 발행하는 제품의 경우 제품 페이지에 쿠폰 세부 정보 포함 %s"
 
 #. translators: %s: Preview link
 #: includes/class-wc-sc-settings.php:698
-msgid ""
-"Include coupons received from other people on My Account > Coupons page %s"
+msgid "Include coupons received from other people on My Account > Coupons page %s"
 msgstr "내 계정 &gt; 쿠폰 페이지 %s에 다른 사람으로부터 받은 쿠폰 포함하기"
 
 #: includes/class-wc-sc-coupon-message.php:133
@@ -3217,24 +3028,21 @@ msgstr "이메일에 포함할까요?"
 msgid "Include tax in the amount of the generated %s"
 msgstr "생성된 %s 금액에 세금 포함"
 
-#: includes/class-wc-smart-coupons.php:6609
+#: includes/class-wc-smart-coupons.php:6612
 msgid "Include tax in the amount of the generated gift card"
 msgstr "생성된 기프트 카드 금액에 세금 포함"
 
 #. translators: Discount amount applied on tax
-#: includes/class-wc-smart-coupons.php:3145
+#: includes/class-wc-smart-coupons.php:3154
 msgid "includes -%s on tax"
 msgstr "세금에 -%s 포함"
 
 #. translators: 1. Coupon code 2. Expiry date
 #: includes/class-wc-sc-coupon-parser.php:420
-msgid ""
-"Incorrect format for expiry date of coupon \"%1$s\". Entered date is %2$s. "
-"Expected date format: YYYY-MM-DD"
-msgstr ""
-"쿠폰 \"%1$s\"의 만료 날짜 형식이 잘못되었습니다. 입력한 날짜는 %2$s입니다. 예상 날짜 형식입니다: YYYY-MM-DD"
+msgid "Incorrect format for expiry date of coupon \"%1$s\". Entered date is %2$s. Expected date format: YYYY-MM-DD"
+msgstr "쿠폰 \"%1$s\"의 만료 날짜 형식이 잘못되었습니다. 입력한 날짜는 %2$s입니다. 예상 날짜 형식입니다: YYYY-MM-DD"
 
-#: includes/class-wc-smart-coupons.php:5634
+#: includes/class-wc-smart-coupons.php:5638
 msgid "Individual USe"
 msgstr "개인 사용"
 
@@ -3261,16 +3069,14 @@ msgid "Invalid amount."
 msgstr "잘못된 금액입니다."
 
 #: includes/class-wc-sc-coupon-import.php:946
-msgid ""
-"Invalid CSV file. Make sure your CSV file contains all columns, header row, "
-"and data in correct format."
+msgid "Invalid CSV file. Make sure your CSV file contains all columns, header row, and data in correct format."
 msgstr "잘못된 CSV 파일입니다. CSV 파일에 모든 열, 머리글 행 및 데이터가 올바른 형식으로 포함되어 있는지 확인하세요."
 
 #: includes/class-wc-sc-admin-pages.php:828
 msgid "Invalid email address."
 msgstr "이메일 주소가 잘못되었습니다."
 
-#: includes/class-wc-sc-url-coupon.php:708
+#: includes/class-wc-sc-url-coupon.php:648
 msgid "Invalid email format."
 msgstr "이메일 형식이 잘못되었습니다."
 
@@ -3280,7 +3086,7 @@ msgid "is"
 msgid_plural "are"
 msgstr[0] "는"
 
-#: includes/class-wc-smart-coupons.php:6084
+#: includes/class-wc-smart-coupons.php:6088
 msgid "is active but it will only work with WooCommerce 3.0.0+."
 msgstr "가 활성화되어 있지만 WooCommerce 3.0.0 이상에서만 작동합니다."
 
@@ -3289,17 +3095,14 @@ msgid "Is Email Coupon Message"
 msgstr "이메일 쿠폰 메시지인가"
 
 #: includes/class-wc-sc-admin-welcome.php:621
-msgid ""
-"Is it possible to have a coupon for each variation of the variable product?"
+msgid "Is it possible to have a coupon for each variation of the variable product?"
 msgstr "가변 상품의 각 변형에 대한 쿠폰을 가질 수 있나요?"
 
 #: includes/class-wc-sc-admin-welcome.php:637
-msgid ""
-"Is it possible to partially pay for a subscription with store credit and the "
-"remainder by another method?"
+msgid "Is it possible to partially pay for a subscription with store credit and the remainder by another method?"
 msgstr "스토어 크레딧으로 구독료를 일부 결제하고 나머지는 다른 방법으로 결제할 수 있나요?"
 
-#: includes/class-wc-smart-coupons.php:5230
+#: includes/class-wc-smart-coupons.php:5231
 msgid "Is Pick Price of Product"
 msgstr "제품 가격 선택"
 
@@ -3314,9 +3117,7 @@ msgstr "스마트 쿠폰은 WPML과 호환되나요?"
 #: includes/class-wc-sc-coupons-by-location.php:239
 #: includes/class-wc-sc-coupons-by-location.php:301
 #, fuzzy
-msgid ""
-"Is that a city name or partial name or ZIP code, you want to match? If so, "
-"press \\\"Enter\\\" to save it as: "
+msgid "Is that a city name or partial name or ZIP code, you want to match? If so, press \\\"Enter\\\" to save it as: "
 msgstr "일치시키려는 도시 이름이나 일부 이름 또는 우편번호인가요? 그렇다면 'Enter'를 눌러 다른 이름으로 저장하세요: "
 
 #: includes/class-wc-sc-admin-welcome.php:591
@@ -3324,9 +3125,7 @@ msgid "Is there any reference file for creating an import file for coupons?"
 msgstr "쿠폰 가져오기 파일 생성을 위한 참조 파일이 있나요?"
 
 #: includes/class-wc-sc-coupon-import.php:283
-msgid ""
-"It seems PHP extension \"fileinfo\" is either not installed, not configured "
-"or it's not accessible."
+msgid "It seems PHP extension \"fileinfo\" is either not installed, not configured or it's not accessible."
 msgstr "PHP 확장자 \"fileinfo\"가 설치되지 않았거나 구성되지 않았거나 액세스할 수 없는 것 같습니다."
 
 #: includes/class-wc-sc-admin-notifications.php:181
@@ -3357,7 +3156,8 @@ msgstr "케펠"
 msgid "Know Smart Coupons"
 msgstr "스마트 쿠폰 알아보기"
 
-#: includes/class-wc-sc-settings.php:792 includes/class-wc-sc-settings.php:795
+#: includes/class-wc-sc-settings.php:792
+#: includes/class-wc-sc-settings.php:795
 msgid "Labels"
 msgstr "레이블"
 
@@ -3378,9 +3178,7 @@ msgid "Learn how to configure the sale of store credit in any amount"
 msgstr "스토어 크레딧을 원하는 금액으로 판매하도록 구성하는 방법 알아보기"
 
 #: includes/class-wc-sc-admin-welcome.php:491
-msgid ""
-"Learn how to create a Buy One, Get One (BOGO) offer to boost sales and "
-"attract customers"
+msgid "Learn how to create a Buy One, Get One (BOGO) offer to boost sales and attract customers"
 msgstr "판매를 늘리고 고객을 유치하기 위해 BOGO(Buy One, Get One) 오퍼를 생성하는 방법을 알아보세요."
 
 #: includes/class-wc-sc-admin-welcome.php:518
@@ -3398,25 +3196,19 @@ msgstr "세부 정보 줄이기"
 
 #. translators: 1: Affiliate For WooCommerce 2: Smart Manager 3: Smart Offers
 #: includes/class-wc-sc-admin-welcome.php:423
-msgid ""
-"Let customers purchase gift cards from you or you issue store credit that "
-"your users can redeem on the current or next purchase. See how: %1$s or %2$s"
-msgstr ""
-"고객이 기프트 카드를 구매하거나 사용자가 현재 또는 다음 구매 시 사용할 수 있는 스토어 크레딧을 발행할 수 있습니다. 방법 보기 1$s "
-"또는 %2$s"
+msgid "Let customers purchase gift cards from you or you issue store credit that your users can redeem on the current or next purchase. See how: %1$s or %2$s"
+msgstr "고객이 기프트 카드를 구매하거나 사용자가 현재 또는 다음 구매 시 사용할 수 있는 스토어 크레딧을 발행할 수 있습니다. 방법 보기 1$s 또는 %2$s"
 
 #. translators: %s: link to review WooCommerce Smart Coupons
 #: includes/class-wc-sc-admin-notifications.php:333
-msgid ""
-"Liked WooCommerce Smart Coupons? Leave us a %s. A huge thank you from "
-"WooCommerce & StoreApps in advance!"
+msgid "Liked WooCommerce Smart Coupons? Leave us a %s. A huge thank you from WooCommerce & StoreApps in advance!"
 msgstr "우커머스 스마트 쿠폰이 마음에 드시나요? 댓글을 남겨주세요. 우커머스 &amp; 스토어앱스에 미리 감사드립니다!"
 
-#: includes/class-wc-smart-coupons.php:5643
+#: includes/class-wc-smart-coupons.php:5647
 msgid "Limit Usage to X Items"
 msgstr "X 항목으로 사용 제한"
 
-#: includes/class-wc-smart-coupons.php:1966
+#: includes/class-wc-smart-coupons.php:1975
 msgid "Limited Time Offer!"
 msgstr "기간 한정 혜택!"
 
@@ -3431,45 +3223,27 @@ msgid "View scheduled action"
 msgstr "예약된 작업 보기"
 
 #: includes/class-wc-sc-display-coupons.php:2715
-msgid ""
-"List of coupons & their details which you have received from the store. "
-"Click on the coupon to see the details."
+msgid "List of coupons & their details which you have received from the store. Click on the coupon to see the details."
 msgstr "스토어에서 받은 쿠폰 목록 및 세부 정보입니다. 쿠폰을 클릭하면 자세한 내용을 확인할 수 있습니다."
 
 #: includes/class-wc-sc-display-coupons.php:1188
-msgid ""
-"List of coupons which are valid & available for use. Click on the coupon to "
-"use it. The coupon discount will be visible only when at least one product "
-"is present in the cart."
-msgstr ""
-"유효하고 사용 가능한 쿠폰 목록입니다. 쿠폰을 클릭하여 사용하세요. 쿠폰 할인은 장바구니에 제품이 하나 이상 있는 경우에만 표시됩니다."
+msgid "List of coupons which are valid & available for use. Click on the coupon to use it. The coupon discount will be visible only when at least one product is present in the cart."
+msgstr "유효하고 사용 가능한 쿠폰 목록입니다. 쿠폰을 클릭하여 사용하세요. 쿠폰 할인은 장바구니에 제품이 하나 이상 있는 경우에만 표시됩니다."
 
 #: includes/class-wc-sc-display-coupons.php:1466
-msgid ""
-"List of coupons which can not be used. The reason can be based on its usage "
-"restrictions, usage limits, expiry date."
+msgid "List of coupons which can not be used. The reason can be based on its usage restrictions, usage limits, expiry date."
 msgstr "사용할 수 없는 쿠폰 목록입니다. 사용 제한, 사용 한도, 만료일 등이 그 이유일 수 있습니다."
 
 #: includes/class-wc-sc-coupons-by-excluded-email.php:109
-msgid ""
-"List of excluded billing emails to check against when an order is placed. "
-"Separate email addresses with commas. You can also use an asterisk (*) to "
-"match parts of an email. For example \"*@gmail.com\" would match all gmail "
-"addresses."
-msgstr ""
-"주문이 접수될 때 확인할 제외된 청구 이메일 목록입니다. 이메일 주소를 쉼표로 구분합니다. 별표(*)를 사용하여 이메일의 일부를 일치시킬 "
-"수도 있습니다. 예를 들어 \"*@gmail.com\"은 모든 Gmail 주소와 일치합니다."
+msgid "List of excluded billing emails to check against when an order is placed. Separate email addresses with commas. You can also use an asterisk (*) to match parts of an email. For example \"*@gmail.com\" would match all gmail addresses."
+msgstr "주문이 접수될 때 확인할 제외된 청구 이메일 목록입니다. 이메일 주소를 쉼표로 구분합니다. 별표(*)를 사용하여 이메일의 일부를 일치시킬 수도 있습니다. 예를 들어 \"*@gmail.com\"은 모든 Gmail 주소와 일치합니다."
 
 #: includes/class-wc-sc-admin-pages.php:233
-msgid ""
-"Load the customer's billing information? This will remove any currently "
-"entered billing information."
+msgid "Load the customer's billing information? This will remove any currently entered billing information."
 msgstr "고객의 청구 정보를 로드하시겠습니까? 현재 입력된 청구 정보가 모두 제거됩니다."
 
 #: includes/class-wc-sc-admin-pages.php:234
-msgid ""
-"Load the customer's shipping information? This will remove any currently "
-"entered shipping information."
+msgid "Load the customer's shipping information? This will remove any currently entered shipping information."
 msgstr "고객의 배송 정보를 로드하시겠습니까? 현재 입력된 모든 배송 정보를 제거합니다."
 
 #: includes/class-wc-sc-coupons-by-location.php:618
@@ -3500,8 +3274,7 @@ msgid "Make customer's coupon usage, easy & simple"
 msgstr "고객의 쿠폰 사용, 쉽고 간편하게 만들기"
 
 #: includes/class-wc-sc-admin-welcome.php:553
-msgid ""
-"Make sure use of coupon is enabled in your store. You can find this setting"
+msgid "Make sure use of coupon is enabled in your store. You can find this setting"
 msgstr "스토어에서 쿠폰 사용이 사용하도록 설정되어 있는지 확인합니다. 이 설정은 다음에서 찾을 수 있습니다."
 
 #: includes/class-wc-sc-admin-welcome.php:563
@@ -3511,7 +3284,7 @@ msgstr "사용하고 있는지 확인합니다. "
 #: includes/class-wc-sc-admin-pages.php:1393
 #: includes/class-wc-sc-coupon-categories.php:106
 #: includes/class-wc-sc-coupon-categories.php:166
-#: includes/class-wc-smart-coupons.php:4800
+#: includes/class-wc-smart-coupons.php:4801
 msgid "Manage coupon categories"
 msgstr "쿠폰 카테고리 관리"
 
@@ -3527,7 +3300,7 @@ msgstr "마케팅"
 msgid "Match for location in"
 msgstr "다음 위치에서 일치하는 위치"
 
-#: includes/class-wc-smart-coupons.php:5234
+#: includes/class-wc-smart-coupons.php:5235
 msgid "Max discount"
 msgstr "최대 할인"
 
@@ -3544,7 +3317,7 @@ msgstr "최대 파일 크기"
 msgid "Maximum quantity"
 msgstr "최대 수량"
 
-#: includes/class-wc-smart-coupons.php:5633
+#: includes/class-wc-smart-coupons.php:5637
 msgid "Maximum Spend"
 msgstr "최대 지출"
 
@@ -3552,7 +3325,7 @@ msgstr "최대 지출"
 msgid "McDonald"
 msgstr "맥도날드"
 
-#: includes/class-wc-smart-coupons.php:5621
+#: includes/class-wc-smart-coupons.php:5625
 msgid "Menu Order"
 msgstr "메뉴 순서"
 
@@ -3567,40 +3340,23 @@ msgstr "메시지"
 #. translators: %s: Plugin name
 #: includes/class-wc-sc-admin-notifications.php:555
 msgctxt "Message displayed when the database update process fails"
-msgid ""
-"%1$s database update failed. This may be due to server issues or "
-"configuration problems. Please click the \"Restart Update\" button to try "
-"again. If the issue persists, %2$s for assistance."
-msgstr ""
-"1$s 데이터베이스 업데이트에 실패했습니다. 서버 문제 또는 구성 문제 때문일 수 있습니다. \"업데이트 다시 시작\" 단추를 클릭하여 "
-"다시 시도하세요. 문제가 지속되면 %2$s에 도움을 요청하세요."
+msgid "%1$s database update failed. This may be due to server issues or configuration problems. Please click the \"Restart Update\" button to try again. If the issue persists, %2$s for assistance."
+msgstr "1$s 데이터베이스 업데이트에 실패했습니다. 서버 문제 또는 구성 문제 때문일 수 있습니다. \"업데이트 다시 시작\" 단추를 클릭하여 다시 시도하세요. 문제가 지속되면 %2$s에 도움을 요청하세요."
 
 #. translators: %s: Plugin name, e.g., WooCommerce Smart Coupons
 #: includes/class-wc-sc-admin-notifications.php:738
 msgctxt "Message for the combo coupons feature admin notice"
-msgid ""
-"Now control which coupons can or can’t be used together. With Combo Coupons, "
-"create smarter discount rules to stack or restrict coupon usage based on "
-"your strategy — right from the coupon settings."
-msgstr ""
-"이제 함께 사용할 수 있는 쿠폰과 사용할 수 없는 쿠폰을 제어할 수 있습니다. 콤보 쿠폰을 사용하면 쿠폰 설정에서 바로 전략에 따라 쿠폰 "
-"사용을 중첩하거나 제한하는 더 스마트한 할인 규칙을 만들 수 있습니다."
+msgid "Now control which coupons can or can’t be used together. With Combo Coupons, create smarter discount rules to stack or restrict coupon usage based on your strategy — right from the coupon settings."
+msgstr "이제 함께 사용할 수 있는 쿠폰과 사용할 수 없는 쿠폰을 제어할 수 있습니다. 콤보 쿠폰을 사용하면 쿠폰 설정에서 바로 전략에 따라 쿠폰 사용을 중첩하거나 제한하는 더 스마트한 할인 규칙을 만들 수 있습니다."
 
 #. translators: %s: Plugin name, e.g., WooCommerce Smart Coupons
 #: includes/class-wc-sc-admin-notifications.php:719
-msgctxt ""
-"Message for the new feature admin notice, introducing the coupon expiry "
-"reminder"
-msgid ""
-"%s is excited to introduce the new Coupon Expiry Reminders! Now, you can "
-"automatically send reminder emails to your customers before their coupons "
-"expire. Ensure they never miss out on a discount by setting up reminders in "
-"the Smart Coupons - Expiry Reminder section."
-msgstr ""
-"에서 새로운 쿠폰 만료 알림 기능을 소개합니다! 이제 쿠폰이 만료되기 전에 고객에게 자동으로 알림 이메일을 보낼 수 있습니다. 스마트 "
-"쿠폰 - 만료 알림 섹션에서 알림을 설정하여 고객이 할인 혜택을 놓치지 않도록 하세요."
+msgctxt "Message for the new feature admin notice, introducing the coupon expiry reminder"
+msgid "%s is excited to introduce the new Coupon Expiry Reminders! Now, you can automatically send reminder emails to your customers before their coupons expire. Ensure they never miss out on a discount by setting up reminders in the Smart Coupons - Expiry Reminder section."
+msgstr "에서 새로운 쿠폰 만료 알림 기능을 소개합니다! 이제 쿠폰이 만료되기 전에 고객에게 자동으로 알림 이메일을 보낼 수 있습니다. 스마트 쿠폰 - 만료 알림 섹션에서 알림을 설정하여 고객이 할인 혜택을 놓치지 않도록 하세요."
 
-#: templates/plain/combined-email.php:75 templates/plain/email.php:26
+#: templates/plain/combined-email.php:75
+#: templates/plain/email.php:26
 msgid "Message:"
 msgstr "메시지:"
 
@@ -3608,7 +3364,7 @@ msgstr "메시지:"
 msgid "Minimum quantity"
 msgstr "최소 수량"
 
-#: includes/class-wc-smart-coupons.php:5632
+#: includes/class-wc-smart-coupons.php:5636
 msgid "Minimum Spend"
 msgstr "최소 지출"
 
@@ -3647,7 +3403,7 @@ msgstr "이름"
 msgid "Need a lot of coupons? You can easily do that with Smart Coupons."
 msgstr "쿠폰이 많이 필요하신가요? 스마트 쿠폰으로 쉽게 할 수 있습니다."
 
-#: includes/class-wc-sc-url-coupon.php:775
+#: includes/class-wc-sc-url-coupon.php:710
 msgid "Network error:"
 msgstr "네트워크 오류:"
 
@@ -3655,11 +3411,13 @@ msgstr "네트워크 오류:"
 #: includes/class-wc-sc-display-coupons.php:1095
 #: includes/class-wc-sc-display-coupons.php:2995
 #: includes/class-wc-sc-shortcode.php:572
-#: includes/class-wc-smart-coupons.php:5532
+#: includes/class-wc-smart-coupons.php:5535
 #: includes/emails/class-wc-sc-email-coupon.php:180
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:234
-#: templates/combined-email.php:162 templates/email.php:153
-#: templates/plain/combined-email.php:125 templates/plain/email.php:120
+#: templates/combined-email.php:162
+#: templates/email.php:153
+#: templates/plain/combined-email.php:125
+#: templates/plain/email.php:120
 #: templates/plain/expiry-reminder-email.php:101
 #: templates/print-coupons-default.php:180
 msgid "Never expires"
@@ -3680,9 +3438,7 @@ msgstr "새로운 기능"
 
 #: includes/class-wc-sc-display-coupons.php:339
 msgctxt "No available coupons message"
-msgid ""
-"No coupons available for your current cart. But we’re still watching for "
-"future deals!"
+msgid "No coupons available for your current cart. But we’re still watching for future deals!"
 msgstr ""
 
 #: includes/class-wc-sc-coupon-categories.php:99
@@ -3706,7 +3462,7 @@ msgstr "복제할 쿠폰이 제공되지 않았습니다!"
 msgid "No customer selected"
 msgstr "고객이 선택하지 않음"
 
-#: includes/class-wc-sc-url-coupon.php:702
+#: includes/class-wc-sc-url-coupon.php:642
 msgid "No email provided."
 msgstr "제공된 이메일이 없습니다."
 
@@ -3754,63 +3510,47 @@ msgid "No user roles"
 msgstr "사용자 역할 없음"
 
 #: includes/class-wc-sc-admin-welcome.php:638
-msgid ""
-"No, this is possible only in those cases where subscription amount is more "
-"than store credit's balance. If store credit's balance is more than "
-"subscription's total then your bank account or credit card will not be "
-"charged."
-msgstr ""
-"아니요, 구독 금액이 스토어 크레딧 잔액보다 많은 경우에만 가능합니다. 스토어 크레딧 잔액이 구독 총액보다 많은 경우 은행 계좌 또는 "
-"신용 카드로 청구되지 않습니다."
+msgid "No, this is possible only in those cases where subscription amount is more than store credit's balance. If store credit's balance is more than subscription's total then your bank account or credit card will not be charged."
+msgstr "아니요, 구독 금액이 스토어 크레딧 잔액보다 많은 경우에만 가능합니다. 스토어 크레딧 잔액이 구독 총액보다 많은 경우 은행 계좌 또는 신용 카드로 청구되지 않습니다."
 
 #: includes/class-wc-sc-admin-welcome.php:575
-msgid ""
-"No. Coupon code should not have any spaces in the name, Eg, Coupon code "
-"should be “gift-certificate” & not “gift certificate”."
+msgid "No. Coupon code should not have any spaces in the name, Eg, Coupon code should be “gift-certificate” & not “gift certificate”."
 msgstr "쿠폰 코드 이름에 공백이 없어야 합니다(예: 쿠폰 코드는 \"상품권\"이 아닌 \"기프트 인증서\"여야 합니다)."
 
 #: includes/class-wc-sc-coupon-refund-process.php:523
 msgid "Nonce verification failed for action \"wc_sc_refund_store_credit\"."
 msgstr "\"wc_sc_refund_store_credit\" 작업에 대한 논스 인증에 실패했습니다."
 
-#: includes/class-wc-sc-url-coupon.php:697
+#: includes/class-wc-sc-url-coupon.php:637
 msgid "Nonce verification failed."
 msgstr "논스 인증에 실패했습니다."
 
 #. translators: Excluded product names
-#: includes/class-wc-smart-coupons.php:1564
+#: includes/class-wc-smart-coupons.php:1573
 msgid "Not valid for %s"
 msgstr "에 유효하지 않습니다."
 
 #. translators: 1: The category names excluded
-#: includes/class-wc-smart-coupons.php:1578
+#: includes/class-wc-smart-coupons.php:1587
 msgid "Not valid for category %s"
 msgid_plural "Not valid for categories %s"
 msgstr[0] "범주 %s에 유효하지 않습니다."
 
 #. translators: Formatted maximum amount
-#: includes/class-wc-smart-coupons.php:1552
+#: includes/class-wc-smart-coupons.php:1561
 msgid "Not valid for sale items"
 msgstr "판매 품목에는 유효하지 않습니다."
 
 #: includes/class-wc-sc-admin-welcome.php:642
-msgid ""
-"Not yet, but this is being worked on. You will find this in later versions."
+msgid "Not yet, but this is being worked on. You will find this in later versions."
 msgstr "아직은 아니지만 작업 중입니다. 이후 버전에서 이 기능을 확인할 수 있습니다."
 
 #: includes/class-wc-sc-coupon-import.php:1127
-msgid ""
-"Note: If any coupon from the CSV file already exists in the store, it will "
-"not update the existing coupon, instead a new coupon will be imported & the "
-"previous coupon with the same code will become inactive."
-msgstr ""
-"참고: CSV 파일의 쿠폰이 스토어에 이미 존재하는 경우 기존 쿠폰은 업데이트되지 않고 새 쿠폰이 가져오고 동일한 코드를 가진 이전 "
-"쿠폰은 비활성화됩니다."
+msgid "Note: If any coupon from the CSV file already exists in the store, it will not update the existing coupon, instead a new coupon will be imported & the previous coupon with the same code will become inactive."
+msgstr "참고: CSV 파일의 쿠폰이 스토어에 이미 존재하는 경우 기존 쿠폰은 업데이트되지 않고 새 쿠폰이 가져오고 동일한 코드를 가진 이전 쿠폰은 비활성화됩니다."
 
 #: includes/class-wc-sc-admin-notifications.php:522
-msgid ""
-"Note: WP CRON has been disabled on your install which may prevent this "
-"update from completing."
+msgid "Note: WP CRON has been disabled on your install which may prevent this update from completing."
 msgstr "참고: 설치 시 WP CRON이 비활성화되어 있어 이 업데이트가 완료되지 않을 수 있습니다."
 
 #: includes/class-wc-sc-display-coupons.php:2058
@@ -3827,19 +3567,13 @@ msgid "Now"
 msgstr "지금"
 
 #: includes/class-wc-sc-settings.php:439
-#: includes/class-wc-smart-coupons.php:6596
+#: includes/class-wc-smart-coupons.php:6599
 msgid "Number of characters in auto-generated coupon code"
 msgstr "자동 생성된 쿠폰 코드의 글자 수"
 
 #: includes/class-wc-sc-settings.php:440
-msgid ""
-"Number of characters in auto-generated coupon code will be restricted to "
-"this number excluding prefix and/or suffix. The default length will be 13. "
-"It is recommended to keep this number between 10 to 15 to avoid coupon code "
-"duplication."
-msgstr ""
-"자동 생성된 쿠폰 코드의 글자 수는 접두사 및/또는 접미사를 제외한 이 숫자로 제한됩니다. 기본 길이는 13자입니다. 쿠폰 코드 중복을 "
-"방지하려면 이 숫자를 10~15자로 유지하는 것이 좋습니다."
+msgid "Number of characters in auto-generated coupon code will be restricted to this number excluding prefix and/or suffix. The default length will be 13. It is recommended to keep this number between 10 to 15 to avoid coupon code duplication."
+msgstr "자동 생성된 쿠폰 코드의 글자 수는 접두사 및/또는 접미사를 제외한 이 숫자로 제한됩니다. 기본 길이는 13자입니다. 쿠폰 코드 중복을 방지하려면 이 숫자를 10~15자로 유지하는 것이 좋습니다."
 
 #. translators: 1: Path to setting 2: Setting to set email address 3: Setting for number of coupons to generate
 #: includes/class-wc-sc-admin-pages.php:1250
@@ -3848,7 +3582,7 @@ msgid "Number of coupons to generate"
 msgstr "생성할 쿠폰 수"
 
 #: includes/class-wc-sc-settings.php:430
-#: includes/class-wc-smart-coupons.php:6595
+#: includes/class-wc-smart-coupons.php:6598
 msgid "Number of coupons to show"
 msgstr "표시할 쿠폰 수"
 
@@ -3969,9 +3703,7 @@ msgstr "결제 방법"
 
 #. translators: The PHP extension name
 #: includes/class-wc-sc-admin-notifications.php:285
-msgid ""
-"PHP extension %s is missing or not accessible. It is required for secure "
-"coupon imports."
+msgid "PHP extension %s is missing or not accessible. It is required for secure coupon imports."
 msgstr "PHP 확장자 %s가 없거나 액세스할 수 없습니다. 보안 쿠폰 가져오기에 필요합니다."
 
 #: includes/class-wc-sc-purchase-credit.php:873
@@ -3980,7 +3712,7 @@ msgid "Pick a delivery date & time"
 msgstr "배송 날짜 및 시간 선택"
 
 #. translators: 1. The discount text
-#: includes/class-wc-smart-coupons.php:1981
+#: includes/class-wc-smart-coupons.php:1990
 msgid "Pick any item today for %s off."
 msgstr "오늘 아무 품목이나 선택해 %s 할인을 받으세요."
 
@@ -4007,12 +3739,10 @@ msgstr "천 단위 구분 기호 없이 소수점(%s) 형식으로 입력하세�
 
 #. translators: Decimal point
 #: includes/class-wc-sc-admin-pages.php:199
-msgid ""
-"Please enter in monetary decimal (%s) format without thousand separators and "
-"currency symbols."
+msgid "Please enter in monetary decimal (%s) format without thousand separators and currency symbols."
 msgstr "천 단위 구분 기호 및 통화 기호 없이 화폐 십진수(%s) 형식으로 입력하세요."
 
-#: includes/class-wc-smart-coupons.php:4783
+#: includes/class-wc-smart-coupons.php:4784
 msgid "Please select at least one coupon to print."
 msgstr "인쇄할 쿠폰을 하나 이상 선택해 주세요."
 
@@ -4021,8 +3751,7 @@ msgid "Please select some categories"
 msgstr "몇 가지 카테고리를 선택하세요."
 
 #: includes/class-wc-sc-coupons-by-product-quantity.php:210
-msgid ""
-"Please select some categories in \"Product categories\" restrictions above..."
+msgid "Please select some categories in \"Product categories\" restrictions above..."
 msgstr "위의 '제품 카테고리' 제한 사항에서 일부 카테고리를 선택해 주세요..."
 
 #: includes/class-wc-sc-admin-pages.php:216
@@ -4041,7 +3770,7 @@ msgstr "위의 '제품' 제한 사항에서 일부 제품을 선택해 주세요
 msgid "Please try again later."
 msgstr "나중에 다시 시도하세요."
 
-#: includes/class-wc-smart-coupons.php:6084
+#: includes/class-wc-smart-coupons.php:6088
 msgid "Please update WooCommerce to the latest version"
 msgstr "WooCommerce를 최신 버전으로 업데이트하세요."
 
@@ -4060,9 +3789,7 @@ msgstr "이 기능을 사용하려면 폴리랑 플러그인이 필요합니다.
 #. translators: %1$s: coupon code as unique id, %2$d: number of options, %3$s: discount amount, %4$s: currency symbol, %5$s: discount type, %6$s: coupon code.
 #: includes/class-wc-sc-coupon-actions.php:1147
 msgctxt "Popup description"
-msgid ""
-"Redeem Your \"%1$s\" and choose 1 product from %2$d options with %3$s %4$s "
-"%5$s off."
+msgid "Redeem Your \"%1$s\" and choose 1 product from %2$d options with %3$s %4$s %5$s off."
 msgstr "\"%1$s\"를 사용하고 %2$d 옵션에서 %3$s %4$s %5$s 할인이 적용되는 제품 1개를 선택하세요."
 
 #: includes/class-wc-sc-coupon-actions.php:1145
@@ -4070,19 +3797,19 @@ msgctxt "Popup title"
 msgid "Choose an option."
 msgstr "옵션을 선택합니다."
 
-#: includes/class-wc-smart-coupons.php:5622
+#: includes/class-wc-smart-coupons.php:5626
 msgid "Post Date"
 msgstr "게시 날짜"
 
-#: includes/class-wc-smart-coupons.php:5618
+#: includes/class-wc-smart-coupons.php:5622
 msgid "Post Excerpt"
 msgstr "게시물 발췌"
 
-#: includes/class-wc-smart-coupons.php:5620
+#: includes/class-wc-smart-coupons.php:5624
 msgid "Post Parent"
 msgstr "포스트 부모"
 
-#: includes/class-wc-smart-coupons.php:5619
+#: includes/class-wc-smart-coupons.php:5623
 msgid "Post Status"
 msgstr "게시물 상태"
 
@@ -4095,7 +3822,8 @@ msgctxt "Prefix for successful coupon notice"
 msgid "Coupon code"
 msgstr "쿠폰 코드"
 
-#: includes/class-wc-sc-settings.php:209 includes/class-wc-sc-shortcode.php:878
+#: includes/class-wc-sc-settings.php:209
+#: includes/class-wc-sc-shortcode.php:878
 msgid "Preview"
 msgstr "미리 보기"
 
@@ -4104,26 +3832,27 @@ msgstr "미리 보기"
 msgid "Preview Email"
 msgstr "이메일 미리보기"
 
-#: includes/class-wc-smart-coupons.php:6613
+#: includes/class-wc-smart-coupons.php:6616
 msgid "Prices entered with tax"
 msgstr "세금 포함 가격 입력"
 
-#: includes/class-wc-smart-coupons.php:4798
+#: includes/class-wc-smart-coupons.php:4799
 msgid "Print"
 msgstr "인쇄"
 
 #: includes/class-wc-sc-display-coupons.php:1326
-#: templates/combined-email.php:232 templates/email.php:206
+#: templates/combined-email.php:232
+#: templates/email.php:206
 msgid "Print coupon"
 msgid_plural "Print coupons"
 msgstr[0] "쿠폰 인쇄"
 
-#: includes/class-wc-smart-coupons.php:4798
+#: includes/class-wc-smart-coupons.php:4799
 msgid "Print selected coupons"
 msgstr "선택한 쿠폰 인쇄"
 
 #: includes/class-wc-sc-settings.php:498
-#: includes/class-wc-smart-coupons.php:6600
+#: includes/class-wc-smart-coupons.php:6603
 msgid "Printing coupons"
 msgstr "쿠폰 인쇄"
 
@@ -4151,29 +3880,26 @@ msgstr "제품 속성"
 
 #. translators: %s: List of non-product coupon types.
 #: includes/class-wc-sc-coupons-by-product-attribute.php:181
-msgid ""
-"Product attributes that the coupon will be applied to, or that need to be in "
-"the cart in order for the %s to be applied."
+msgid "Product attributes that the coupon will be applied to, or that need to be in the cart in order for the %s to be applied."
 msgstr "쿠폰이 적용될 제품 속성 또는 %s가 적용되기 위해 카트에 있어야 하는 제품 속성입니다."
 
 #. translators: %s: List of non-product coupon types.
 #: includes/class-wc-sc-coupons-by-product-attribute.php:207
-msgid ""
-"Product attributes that the coupon will not be applied to, or that cannot be "
-"in the cart in order for the %s to be applied."
+msgid "Product attributes that the coupon will not be applied to, or that cannot be in the cart in order for the %s to be applied."
 msgstr "쿠폰이 적용되지 않거나 %s가 적용되기 위해 카트에 있을 수 없는 제품 속성입니다."
 
-#: includes/class-wc-smart-coupons.php:5638
+#: includes/class-wc-smart-coupons.php:5642
 msgid "Product categories"
 msgstr "제품 카테고리"
 
-#: includes/class-wc-sc-ajax.php:348 includes/class-wc-sc-ajax.php:353
-#: includes/class-wc-smart-coupons.php:1459
-#: includes/class-wc-smart-coupons.php:1464
+#: includes/class-wc-sc-ajax.php:348
+#: includes/class-wc-sc-ajax.php:353
+#: includes/class-wc-smart-coupons.php:1468
+#: includes/class-wc-smart-coupons.php:1473
 msgid "Product Discount"
 msgstr "제품 할인"
 
-#: includes/class-wc-smart-coupons.php:5636
+#: includes/class-wc-smart-coupons.php:5640
 msgid "Product IDs"
 msgstr "제품 ID"
 
@@ -4183,22 +3909,12 @@ msgid "Product quantity based restrictions"
 msgstr "제품 수량 기반 제한 사항"
 
 #: includes/class-wc-sc-coupons-by-taxonomy.php:181
-msgid ""
-"Product taxonomies that the coupon will be applicable for, or its "
-"availability in the cart in order for the \"Fixed cart discount\" to be "
-"applied, based on whether the taxonomies are included or excluded."
-msgstr ""
-"쿠폰이 적용될 제품 분류 또는 '고정 장바구니 할인'이 적용되기 위한 장바구니의 사용 가능성(분류 포함 또는 제외 여부에 따라 달라짐)."
+msgid "Product taxonomies that the coupon will be applicable for, or its availability in the cart in order for the \"Fixed cart discount\" to be applied, based on whether the taxonomies are included or excluded."
+msgstr "쿠폰이 적용될 제품 분류 또는 '고정 장바구니 할인'이 적용되기 위한 장바구니의 사용 가능성(분류 포함 또는 제외 여부에 따라 달라짐)."
 
 #: includes/class-wc-sc-coupons-by-taxonomy.php:140
-msgid ""
-"Product taxonomies that the coupon will be applicable for, or its "
-"availability in the cart in order for the \"Fixed cart discount\" to be "
-"applied, based on whether the taxonomies are included or excluded. All the "
-"taxonomies selected here, should be valid, for this coupon to be valid."
-msgstr ""
-"쿠폰이 적용될 제품 분류 또는 '고정 장바구니 할인'이 적용되기 위한 장바구니의 가용성(분류 포함 또는 제외 여부에 따라 달라짐)입니다. "
-"이 쿠폰이 유효하려면 여기에서 선택한 모든 분류가 유효해야 합니다."
+msgid "Product taxonomies that the coupon will be applicable for, or its availability in the cart in order for the \"Fixed cart discount\" to be applied, based on whether the taxonomies are included or excluded. All the taxonomies selected here, should be valid, for this coupon to be valid."
+msgstr "쿠폰이 적용될 제품 분류 또는 '고정 장바구니 할인'이 적용되기 위한 장바구니의 가용성(분류 포함 또는 제외 여부에 따라 달라짐)입니다. 이 쿠폰이 유효하려면 여기에서 선택한 모든 분류가 유효해야 합니다."
 
 #: includes/class-wc-sc-coupons-by-product-quantity.php:153
 #: includes/class-wc-sc-coupons-by-product-quantity.php:169
@@ -4232,8 +3948,7 @@ msgid "Quickly create and email %s to one or more people."
 msgstr "를 빠르게 만들어 한 명 이상의 사람에게 이메일로 보내세요."
 
 #: includes/class-wc-sc-admin-pages.php:784
-msgid ""
-"Quickly create and email Store Credit or Gift Card to one or more people."
+msgid "Quickly create and email Store Credit or Gift Card to one or more people."
 msgstr "스토어 크레딧 또는 기프트 카드를 빠르게 생성하여 한 명 이상의 사람에게 이메일로 전송할 수 있습니다."
 
 #: includes/class-wc-sc-coupon-import.php:1128
@@ -4251,9 +3966,7 @@ msgstr "정기 구독"
 
 #. translators: %1$s: coupon code, %2$d: number of options, %3$s: discount amount, %4$s: currency symbol, %5$s: discount type.
 #: blocks/class-sc-actiontab-extend-store-endpoint.php:181
-msgid ""
-"Redeem Your \"%1$s\" and choose 1 product from %2$d options with %3$s %4$s "
-"%5$s off "
+msgid "Redeem Your \"%1$s\" and choose 1 product from %2$d options with %3$s %4$s %5$s off "
 msgstr "\"%1$s\"를 사용하고 %2$d 옵션에서 %3$s %4$s %5$s 할인이 적용된 제품 1개를 선택하세요. "
 
 #. translators: 1: refund id 2: refund date
@@ -4300,9 +4013,7 @@ msgstr "제거된 사용자 개인 데이터"
 
 #: includes/compat/class-wcs-sc-compatibility.php:942
 #: includes/compat/class-wcs-sc-compatibility.php:1366
-msgid ""
-"Renewal orders should not generate coupons even when they include a product "
-"that issues coupons"
+msgid "Renewal orders should not generate coupons even when they include a product that issues coupons"
 msgstr "갱신 주문에는 쿠폰을 발행하는 제품이 포함되어 있어도 쿠폰이 생성되지 않아야 합니다."
 
 #: includes/class-wc-sc-admin-pages.php:1250
@@ -4348,22 +4059,18 @@ msgid "Review"
 msgstr "검토"
 
 #: includes/class-wc-sc-coupons-by-user-role.php:147
-msgid ""
-"Role of the users for whom this coupon is not valid. Keep empty if you want "
-"this coupon to be valid for users with any role."
+msgid "Role of the users for whom this coupon is not valid. Keep empty if you want this coupon to be valid for users with any role."
 msgstr "이 쿠폰이 유효하지 않은 사용자의 역할입니다. 이 쿠폰을 모든 역할의 사용자에게 유효하게 하려면 비워 두세요."
 
 #: includes/class-wc-sc-coupons-by-user-role.php:128
-msgid ""
-"Role of the users for whom this coupon is valid. Keep empty if you want this "
-"coupon to be valid for users with any role."
+msgid "Role of the users for whom this coupon is valid. Keep empty if you want this coupon to be valid for users with any role."
 msgstr "이 쿠폰이 유효한 사용자의 역할입니다. 이 쿠폰을 모든 역할의 사용자에게 유효하게 하려면 비워 두세요."
 
 #: includes/class-wc-sc-settings.php:550
 msgid "Rose Pink"
 msgstr "로즈 핑크"
 
-#: includes/class-wc-smart-coupons.php:6616
+#: includes/class-wc-smart-coupons.php:6619
 msgid "Rounding"
 msgstr "반올림"
 
@@ -4378,20 +4085,12 @@ msgstr "예약된 이메일 제목"
 #. translators: %s: Plugin name
 #: includes/batches/class-wc-sc-coupons-expiry-reminder-scheduler.php:177
 msgctxt "scheduling coupon expiry info message"
-msgid ""
-"%s is scheduling coupon expiry reminders in the background. This may take a "
-"few moments, so please be patient."
+msgid "%s is scheduling coupon expiry reminders in the background. This may take a few moments, so please be patient."
 msgstr "s가 백그라운드에서 쿠폰 만료 알림을 예약하고 있습니다. 잠시 시간이 걸릴 수 있으니 잠시만 기다려 주세요."
 
 #: includes/class-wc-sc-settings.php:645
-msgid ""
-"Search & select a coupon which you want to display as store notice. The "
-"selected coupon's description will be displayed along with the coupon code "
-"(if it is set) otherwise, a description will be generated automatically. To "
-"disable the feature, keep this field empty."
-msgstr ""
-"스토어 공지사항으로 표시할 쿠폰을 검색하고 선택합니다. 선택한 쿠폰의 설명이 쿠폰 코드(설정된 경우)와 함께 표시되며, 그렇지 않으면 "
-"설명이 자동으로 생성됩니다. 기능을 사용하지 않으려면 이 필드를 비워둡니다."
+msgid "Search & select a coupon which you want to display as store notice. The selected coupon's description will be displayed along with the coupon code (if it is set) otherwise, a description will be generated automatically. To disable the feature, keep this field empty."
+msgstr "스토어 공지사항으로 표시할 쿠폰을 검색하고 선택합니다. 선택한 쿠폰의 설명이 쿠폰 코드(설정된 경우)와 함께 표시되며, 그렇지 않으면 설명이 자동으로 생성됩니다. 기능을 사용하지 않으려면 이 필드를 비워둡니다."
 
 #: includes/class-wc-sc-coupon-categories.php:91
 msgid "Search coupon categories"
@@ -4454,7 +4153,7 @@ msgstr "제품 속성 선택..."
 msgid "Sell %s at less price?"
 msgstr "를 더 낮은 가격에 판매하시겠습니까?"
 
-#: includes/class-wc-smart-coupons.php:6601
+#: includes/class-wc-smart-coupons.php:6604
 msgid "Sell gift cards at less price?"
 msgstr "기프트 카드를 더 저렴한 가격에 판매하고 싶으신가요?"
 
@@ -4499,15 +4198,11 @@ msgid "Send Coupons to..."
 msgstr "쿠폰 보내기 대상..."
 
 #: includes/class-wc-sc-settings.php:929
-msgid ""
-"Send only one email instead of multiple emails when multiple coupons are "
-"generated for same recipient"
+msgid "Send only one email instead of multiple emails when multiple coupons are generated for same recipient"
 msgstr "동일한 수신자에 대해 여러 개의 쿠폰이 생성된 경우 여러 개의 이메일 대신 하나의 이메일만 보내기"
 
 #: includes/emails/class-wc-sc-combined-email-coupon.php:35
-msgid ""
-"Send only one email instead of multiple emails when multiple coupons are "
-"generated per recipient."
+msgid "Send only one email instead of multiple emails when multiple coupons are generated per recipient."
 msgstr "수신자당 여러 개의 쿠폰이 생성된 경우 여러 개의 이메일 대신 하나의 이메일만 전송합니다."
 
 #. translators: %s: singular name for store credit
@@ -4590,8 +4285,7 @@ msgstr "지금 쇼핑하세요!"
 
 #. translators: %s: Preview link
 #: includes/class-wc-sc-settings.php:689
-msgid ""
-"Show coupons available to customers on their My Account > Coupons page %s"
+msgid "Show coupons available to customers on their My Account > Coupons page %s"
 msgstr "내 계정 &gt; 쿠폰 페이지 %s에서 고객이 사용할 수 있는 쿠폰 표시"
 
 #: includes/class-wc-sc-settings.php:724
@@ -4608,13 +4302,8 @@ msgid "Show invalid or used coupons in My Account > Coupons %s"
 msgstr "내 계정 &gt; 쿠폰 %s에 유효하지 않거나 사용한 쿠폰 표시"
 
 #: includes/class-wc-sc-admin-welcome.php:456
-msgid ""
-"Show only valid coupons to your customer (if logged in) on cart, checkout & "
-"My Account page. Coupons can be applied with single click. So, no need to "
-"remember the coupon code or copy-pasting."
-msgstr ""
-"장바구니, 결제 및 내 계정 페이지에서 고객(로그인한 경우)에게 유효한 쿠폰만 표시합니다. 클릭 한 번으로 쿠폰을 적용할 수 있습니다. "
-"따라서 쿠폰 코드를 기억하거나 복사하여 붙여넣을 필요가 없습니다."
+msgid "Show only valid coupons to your customer (if logged in) on cart, checkout & My Account page. Coupons can be applied with single click. So, no need to remember the coupon code or copy-pasting."
+msgstr "장바구니, 결제 및 내 계정 페이지에서 고객(로그인한 경우)에게 유효한 쿠폰만 표시합니다. 클릭 한 번으로 쿠폰을 적용할 수 있습니다. 따라서 쿠폰 코드를 기억하거나 복사하여 붙여넣을 필요가 없습니다."
 
 #: includes/class-wc-sc-settings.php:750
 msgid "Show section open by default"
@@ -4671,37 +4360,24 @@ msgid "Smart Coupons enable coupons to become an automatic/interactive system."
 msgstr "스마트 쿠폰을 사용하면 쿠폰을 자동/대화형 시스템으로 전환할 수 있습니다."
 
 #: includes/class-wc-sc-print-coupon.php:278
-msgid ""
-"Smart Coupons has created a coupon's terms page (used during coupon printing)"
-" for you. Please edit it as required from"
+msgid "Smart Coupons has created a coupon's terms page (used during coupon printing) for you. Please edit it as required from"
 msgstr "스마트 쿠폰에서 쿠폰 약관 페이지(쿠폰 인쇄 시 사용)를 생성했습니다. 다음에서 필요에 따라 수정하세요."
 
 #: includes/class-wc-sc-admin-welcome.php:390
-msgid ""
-"Smart Coupons is a powerful extension, built on top of WooCommerce coupons. "
-"It adds a new discount type - Store Credit - and advanced functionality to "
-"the default coupons."
-msgstr ""
-"스마트 쿠폰은 WooCommerce 쿠폰을 기반으로 구축된 강력한 확장 기능입니다. 새로운 할인 유형인 스토어 크레딧과 기본 쿠폰에 고급 "
-"기능을 추가합니다."
+msgid "Smart Coupons is a powerful extension, built on top of WooCommerce coupons. It adds a new discount type - Store Credit - and advanced functionality to the default coupons."
+msgstr "스마트 쿠폰은 WooCommerce 쿠폰을 기반으로 구축된 강력한 확장 기능입니다. 새로운 할인 유형인 스토어 크레딧과 기본 쿠폰에 고급 기능을 추가합니다."
 
 #: includes/class-wc-sc-admin-welcome.php:608
 msgid "Smart Coupons is not sending emails."
 msgstr "스마트 쿠폰이 이메일을 보내지 않습니다."
 
-#: includes/class-wc-smart-coupons.php:6630
+#: includes/class-wc-smart-coupons.php:6633
 msgid "Smart Coupons related settings"
 msgstr "스마트 쿠폰 관련 설정"
 
 #: includes/class-wc-sc-admin-welcome.php:609
-msgid ""
-"Smart Coupons sends email only after order completion. So make sure that "
-"order complete email is enabled and sending. If enabled, then make sure all "
-"settings of coupons, products are in place. Also check by switching your "
-"theme."
-msgstr ""
-"스마트 쿠폰은 주문이 완료된 후에만 이메일을 전송합니다. 따라서 주문 완료 이메일이 활성화되어 전송되는지 확인하세요. 활성화된 경우 쿠폰,"
-" 제품의 모든 설정이 올바른지 확인하세요. 또한 테마를 전환하여 확인합니다."
+msgid "Smart Coupons sends email only after order completion. So make sure that order complete email is enabled and sending. If enabled, then make sure all settings of coupons, products are in place. Also check by switching your theme."
+msgstr "스마트 쿠폰은 주문이 완료된 후에만 이메일을 전송합니다. 따라서 주문 완료 이메일이 활성화되어 전송되는지 확인하세요. 활성화된 경우 쿠폰, 제품의 모든 설정이 올바른지 확인하세요. 또한 테마를 전환하여 확인합니다."
 
 #: includes/class-wc-sc-admin-pages.php:152
 #: includes/class-wc-sc-admin-pages.php:609
@@ -4713,13 +4389,8 @@ msgid "Smart Coupons settings"
 msgstr "스마트 쿠폰 설정"
 
 #: includes/class-wc-sc-admin-welcome.php:597
-msgid ""
-"Smart Coupons uses hooks of Cart, Checkout & My Account page to display "
-"available coupons. If your theme is not using those hooks in cart, checkout "
-"& my-account template, coupons will not be displayed."
-msgstr ""
-"스마트 쿠폰은 카트, 결제 및 내 계정 페이지의 후크를 사용하여 사용 가능한 쿠폰을 표시합니다. 테마에서 장바구니, 결제 및 내 계정 "
-"템플릿에서 이러한 후크를 사용하지 않는 경우 쿠폰이 표시되지 않습니다."
+msgid "Smart Coupons uses hooks of Cart, Checkout & My Account page to display available coupons. If your theme is not using those hooks in cart, checkout & my-account template, coupons will not be displayed."
+msgstr "스마트 쿠폰은 카트, 결제 및 내 계정 페이지의 후크를 사용하여 사용 가능한 쿠폰을 표시합니다. 테마에서 장바구니, 결제 및 내 계정 템플릿에서 이러한 후크를 사용하지 않는 경우 쿠폰이 표시되지 않습니다."
 
 #: includes/class-wc-sc-coupons-by-product-attribute.php:108
 msgid "Smart Coupons: Restrictions"
@@ -4735,16 +4406,16 @@ msgstr "지금까지?"
 msgid "some products"
 msgstr "일부 제품"
 
-#: includes/class-wc-smart-coupons.php:7314
-#: includes/class-wc-smart-coupons.php:7373
-#: includes/class-wc-smart-coupons.php:7407
-#: includes/class-wc-smart-coupons.php:7436
+#: includes/class-wc-smart-coupons.php:7317
+#: includes/class-wc-smart-coupons.php:7376
+#: includes/class-wc-smart-coupons.php:7410
+#: includes/class-wc-smart-coupons.php:7439
 msgid "Some values required for $item_id & $item_key"
 msgstr "item_id 및 $item_key에 필요한 일부 값"
 
-#: includes/class-wc-smart-coupons.php:6906
-#: includes/class-wc-smart-coupons.php:7026
-#: includes/class-wc-smart-coupons.php:7145
+#: includes/class-wc-smart-coupons.php:6909
+#: includes/class-wc-smart-coupons.php:7029
+#: includes/class-wc-smart-coupons.php:7148
 msgid "Some values required for $post_id & $meta_key"
 msgstr "post_id 및 $meta_key에 필요한 일부 값"
 
@@ -4779,12 +4450,12 @@ msgid "Special"
 msgstr "스페셜"
 
 #. translators: Formatted minimum amount
-#: includes/class-wc-smart-coupons.php:1544
+#: includes/class-wc-smart-coupons.php:1553
 msgid "Spend at least %s"
 msgstr "최소 %s를 지출하십시오."
 
 #. translators: Formatted maximum amount
-#: includes/class-wc-smart-coupons.php:1548
+#: includes/class-wc-smart-coupons.php:1557
 msgid "Spend up to %s"
 msgstr "최대 %s까지 지출"
 
@@ -4804,11 +4475,12 @@ msgstr "중지"
 #: includes/class-wc-sc-act-deact.php:286
 #: includes/class-wc-sc-admin-pages.php:1536
 #: includes/class-wc-sc-admin-pages.php:1546
-#: includes/class-wc-sc-admin-pages.php:1701 includes/class-wc-sc-ajax.php:338
+#: includes/class-wc-sc-admin-pages.php:1701
+#: includes/class-wc-sc-ajax.php:338
 #: includes/class-wc-sc-coupon-refund-process.php:91
 #: includes/class-wc-sc-coupon-refund-process.php:680
 #: includes/class-wc-sc-coupon-refund-process.php:693
-#: includes/class-wc-smart-coupons.php:1449
+#: includes/class-wc-smart-coupons.php:1458
 #: includes/emails/class-wc-sc-email-coupon.php:364
 #: includes/emails/class-wc-sc-email-coupon.php:488
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:197
@@ -4859,16 +4531,13 @@ msgid "Store Credit Used:"
 msgstr "사용한 스토어 크레딧:"
 
 #: includes/class-wc-sc-admin-welcome.php:605
-msgid ""
-"Store Credit's default behavior is auto-generate because, when using a store "
-"credit, it's balance keeps reducing. Therefore it should be uniquely created "
-"for every user automatically."
-msgstr ""
-"스토어 크레딧의 기본 동작은 자동 생성으로, 스토어 크레딧을 사용할 때 잔액이 계속 줄어들기 때문입니다. 따라서 모든 사용자에 대해 "
-"자동으로 고유하게 생성되어야 합니다."
+msgid "Store Credit's default behavior is auto-generate because, when using a store credit, it's balance keeps reducing. Therefore it should be uniquely created for every user automatically."
+msgstr "스토어 크레딧의 기본 동작은 자동 생성으로, 스토어 크레딧을 사용할 때 잔액이 계속 줄어들기 때문입니다. 따라서 모든 사용자에 대해 자동으로 고유하게 생성되어야 합니다."
 
-#: includes/class-wc-sc-privacy.php:99 includes/class-wc-sc-privacy.php:311
-#: includes/class-wc-sc-privacy.php:430 includes/class-wc-sc-privacy.php:721
+#: includes/class-wc-sc-privacy.php:99
+#: includes/class-wc-sc-privacy.php:311
+#: includes/class-wc-sc-privacy.php:430
+#: includes/class-wc-sc-privacy.php:721
 msgid "Store Credit/Gift Certificate"
 msgstr "스토어 크레딧/상품권"
 
@@ -4881,9 +4550,7 @@ msgid "Store Credit/Gift Certificate - Order Data"
 msgstr "스토어 크레딧/상품권 - 주문 데이터"
 
 #: includes/class-wc-sc-privacy.php:804
-msgid ""
-"Store Credit/Gift Certificate that are stored for customers via coupons. If "
-"erased, the customer will not be able to use the coupons."
+msgid "Store Credit/Gift Certificate that are stored for customers via coupons. If erased, the customer will not be able to use the coupons."
 msgstr "쿠폰을 통해 고객을 위해 저장된 스토어 크레딧/상품권. 지우면 고객은 쿠폰을 사용할 수 없게 됩니다."
 
 #: includes/class-wc-sc-order-fields.php:295
@@ -4894,7 +4561,8 @@ msgstr "스토어 크레딧:"
 msgid "Store Credits"
 msgstr "스토어 크레딧"
 
-#: includes/class-wc-sc-settings.php:374 includes/class-wc-sc-settings.php:1121
+#: includes/class-wc-sc-settings.php:374
+#: includes/class-wc-sc-settings.php:1121
 msgid "store credits"
 msgstr "스토어 크레딧"
 
@@ -4911,27 +4579,27 @@ msgstr "스토어 크레딧 / 기프트 카드"
 msgid "StoreApps"
 msgstr "스토어앱"
 
-#: includes/class-wc-smart-coupons.php:5931
+#: includes/class-wc-smart-coupons.php:5935
 msgid "Style 1"
 msgstr "스타일 1"
 
-#: includes/class-wc-smart-coupons.php:5932
+#: includes/class-wc-smart-coupons.php:5936
 msgid "Style 2"
 msgstr "스타일 2"
 
-#: includes/class-wc-smart-coupons.php:5933
+#: includes/class-wc-smart-coupons.php:5937
 msgid "Style 3"
 msgstr "스타일 3"
 
-#: includes/class-wc-smart-coupons.php:5934
+#: includes/class-wc-smart-coupons.php:5938
 msgid "Style 4"
 msgstr "스타일 4"
 
-#: includes/class-wc-smart-coupons.php:5935
+#: includes/class-wc-smart-coupons.php:5939
 msgid "Style 5"
 msgstr "스타일 5"
 
-#: includes/class-wc-smart-coupons.php:5936
+#: includes/class-wc-smart-coupons.php:5940
 msgid "Style 6"
 msgstr "스타일 6"
 
@@ -4992,7 +4660,7 @@ msgctxt "Suffix for successful coupon notice"
 msgid "has been applied to your cart."
 msgstr "가 장바구니에 적용되었습니다."
 
-#: includes/class-wc-smart-coupons.php:1964
+#: includes/class-wc-smart-coupons.php:1973
 msgid "Super Savings!"
 msgstr "슈퍼 세이브!"
 
@@ -5012,11 +4680,13 @@ msgstr "테이블 %s을(를) 삭제했습니다."
 
 #: includes/class-wc-sc-admin-pages.php:595
 #: includes/class-wc-sc-admin-welcome.php:305
-#: includes/class-wc-sc-tours.php:207 includes/class-wc-sc-tours.php:209
+#: includes/class-wc-sc-tours.php:207
+#: includes/class-wc-sc-tours.php:209
 msgid "Take a tour"
 msgstr "둘러보기"
 
-#: includes/class-wc-sc-settings.php:766 includes/class-wc-sc-settings.php:769
+#: includes/class-wc-sc-settings.php:766
+#: includes/class-wc-sc-settings.php:769
 msgid "Tax"
 msgstr "세금"
 
@@ -5038,9 +4708,7 @@ msgid "The coupon code already exists"
 msgstr "쿠폰 코드가 이미 존재합니다."
 
 #: includes/class-wc-sc-settings.php:925
-msgid ""
-"The coupons will be sent to the recipients via email on the selected date & "
-"time"
+msgid "The coupons will be sent to the recipients via email on the selected date & time"
 msgstr "쿠폰은 선택한 날짜 및 시간에 이메일을 통해 수신자에게 전송됩니다."
 
 #: includes/class-wc-sc-coupon-import.php:1126
@@ -5048,13 +4716,8 @@ msgid "The CSV must adhere to a specific format and include a header row."
 msgstr "CSV는 특정 형식을 준수하고 헤더 행을 포함해야 합니다."
 
 #: includes/class-wc-sc-admin-notifications.php:483
-msgid ""
-"The database update runs in the background and may take some time. It's only "
-"for WooCommerce Smart Coupons plugin data and won't affect your existing "
-"data."
-msgstr ""
-"데이터베이스 업데이트는 백그라운드에서 실행되며 다소 시간이 걸릴 수 있습니다. WooCommerce 스마트 쿠폰 플러그인 데이터에만 "
-"적용되며 기존 데이터에는 영향을 미치지 않습니다."
+msgid "The database update runs in the background and may take some time. It's only for WooCommerce Smart Coupons plugin data and won't affect your existing data."
+msgstr "데이터베이스 업데이트는 백그라운드에서 실행되며 다소 시간이 걸릴 수 있습니다. WooCommerce 스마트 쿠폰 플러그인 데이터에만 적용되며 기존 데이터에는 영향을 미치지 않습니다."
 
 #: includes/class-wc-sc-coupon-import.php:767
 msgid "The file does not exist, please try again."
@@ -5092,26 +4755,20 @@ msgstr "스토어 크레딧/상품권 전송에 오류가 발생했습니다."
 
 #. translators: 1. File name 2. File download link
 #: includes/class-wc-sc-admin-welcome.php:593
-msgid ""
-"There is one file which is located inside the plugin. You can download the "
-"%1$s file from %2$s."
+msgid "There is one file which is located inside the plugin. You can download the %1$s file from %2$s."
 msgstr "플러그인 내부에 파일이 하나 있습니다. 2$s에서 %1$s 파일을 다운로드할 수 있습니다."
 
 #: includes/class-wc-sc-product-fields.php:123
 #: includes/class-wc-sc-product-fields.php:160
-msgid ""
-"These coupon/s will be given to customers who buy this product. The coupon "
-"code will be automatically sent to their email address on purchase."
+msgid "These coupon/s will be given to customers who buy this product. The coupon code will be automatically sent to their email address on purchase."
 msgstr "이 쿠폰은 이 제품을 구매하는 고객에게 제공됩니다. 쿠폰 코드는 구매 시 고객의 이메일 주소로 자동 전송됩니다."
 
 #: includes/class-wc-sc-coupon-refund-process.php:126
 msgid "This action will also refund all store credit applied to the order."
 msgstr "이 작업을 수행하면 주문에 적용된 모든 스토어 크레딧도 환불됩니다."
 
-#: includes/class-wc-smart-coupons.php:1236
-msgid ""
-"This coupon has pending emails to be sent. Deleting it will delete those "
-"emails also. Are you sure to delete this coupon?"
+#: includes/class-wc-smart-coupons.php:1245
+msgid "This coupon has pending emails to be sent. Deleting it will delete those emails also. Are you sure to delete this coupon?"
 msgstr "이 쿠폰에는 전송 대기 중인 이메일이 있습니다. 이 쿠폰을 삭제하면 해당 이메일도 삭제됩니다. 이 쿠폰을 삭제하시겠습니까?"
 
 #: includes/class-wc-sc-coupons-by-shipping-method.php:216
@@ -5126,58 +4783,36 @@ msgstr "이 쿠폰은 선택한 배송 방법에는 사용할 수 없습니다."
 msgid "This coupon is not valid for you."
 msgstr "이 쿠폰은 유효하지 않습니다."
 
-#: includes/class-wc-smart-coupons.php:3907
+#: includes/class-wc-smart-coupons.php:3913
 msgid "This coupon is valid for the first order only."
 msgstr "이 쿠폰은 첫 주문에만 유효합니다."
 
 #: includes/class-wc-sc-admin-welcome.php:613
-msgid ""
-"This form is displayed using a hook which is available in My Account "
-"template. Make sure your theme's my-account template contains all hooks "
-"required for that template. Update your theme if it is not updated."
-msgstr ""
-"이 양식은 내 계정 템플릿에서 사용할 수 있는 훅을 사용하여 표시됩니다. 테마의 내 계정 템플릿에 해당 템플릿에 필요한 모든 후크가 "
-"포함되어 있는지 확인하세요. 테마가 업데이트되지 않은 경우 업데이트하세요."
+msgid "This form is displayed using a hook which is available in My Account template. Make sure your theme's my-account template contains all hooks required for that template. Update your theme if it is not updated."
+msgstr "이 양식은 내 계정 템플릿에서 사용할 수 있는 훅을 사용하여 표시됩니다. 테마의 내 계정 템플릿에 해당 템플릿에 필요한 모든 후크가 포함되어 있는지 확인하세요. 테마가 업데이트되지 않은 경우 업데이트하세요."
 
 #: includes/class-wc-sc-admin-welcome.php:501
-msgid ""
-"This guide will help you create gift cards, making it easy for your "
-"customers to purchase and redeem them, driving more sales and enhancing "
-"customer loyalty."
+msgid "This guide will help you create gift cards, making it easy for your customers to purchase and redeem them, driving more sales and enhancing customer loyalty."
 msgstr "이 가이드는 고객이 기프트 카드를 쉽게 구매하고 사용할 수 있도록 하여 매출을 늘리고 고객 충성도를 높이는 데 도움이 됩니다."
 
 #: includes/class-wc-sc-admin-welcome.php:519
-msgid ""
-"This guide will show you how to create a compelling offer that encourages "
-"customers to buy Gift Cards at a significant discount, boosting your sales "
-"and customer engagement."
-msgstr ""
-"이 가이드에서는 고객이 기프트 카드를 대폭 할인된 가격에 구매하도록 유도하여 매출과 고객 참여를 높일 수 있는 매력적인 오퍼를 만드는 "
-"방법을 알려드립니다."
+msgid "This guide will show you how to create a compelling offer that encourages customers to buy Gift Cards at a significant discount, boosting your sales and customer engagement."
+msgstr "이 가이드에서는 고객이 기프트 카드를 대폭 할인된 가격에 구매하도록 유도하여 매출과 고객 참여를 높일 수 있는 매력적인 오퍼를 만드는 방법을 알려드립니다."
 
 #: includes/class-wc-sc-admin-welcome.php:510
-msgid ""
-"This guide will show you how to set up flexible store credit options, "
-"allowing your customers to purchase credit in any custom denominations to "
-"use in your store."
-msgstr ""
-"이 가이드에서는 유연한 스토어 크레딧 옵션을 설정하여 고객이 원하는 사용자 지정 단위로 크레딧을 구매하여 스토어에서 사용할 수 있도록 "
-"하는 방법을 설명합니다."
+msgid "This guide will show you how to set up flexible store credit options, allowing your customers to purchase credit in any custom denominations to use in your store."
+msgstr "이 가이드에서는 유연한 스토어 크레딧 옵션을 설정하여 고객이 원하는 사용자 지정 단위로 크레딧을 구매하여 스토어에서 사용할 수 있도록 하는 방법을 설명합니다."
 
 #: includes/class-wc-sc-admin-pages.php:961
 msgid "This is a sample coupon"
 msgstr "샘플 쿠폰입니다."
 
 #: includes/class-wc-sc-settings.php:845
-msgid ""
-"This is the heading above coupon details displayed on products that issue "
-"coupons. "
+msgid "This is the heading above coupon details displayed on products that issue coupons. "
 msgstr "쿠폰을 발행하는 제품에 표시되는 쿠폰 세부 정보 위의 제목입니다. "
 
 #: includes/class-wc-sc-settings.php:855
-msgid ""
-"This is the title for the list of available coupons, shown on Cart and "
-"Checkout pages."
+msgid "This is the title for the list of available coupons, shown on Cart and Checkout pages."
 msgstr ""
 
 #: includes/class-wc-sc-order-fields.php:123
@@ -5186,95 +4821,65 @@ msgstr "사용된 총 크레딧입니다."
 
 #. translators: %s: Label for store credit
 #: includes/class-wc-sc-settings.php:823
-msgid ""
-"This is what will be shown instead of \"Add to Cart\" for products that sell "
-"%s. "
+msgid "This is what will be shown instead of \"Add to Cart\" for products that sell %s. "
 msgstr "판매량이 %s인 제품의 경우 '장바구니에 추가' 대신 표시되는 내용입니다. "
 
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:114
-msgctxt ""
-"This message is shown when the WooCommerce Smart Coupons database is not "
-"updated"
-msgid ""
-"This feature is unavailable until the WooCommerce Smart Coupons database "
-"update is complete. Please update the WooCommerce Smart Coupons database to "
-"enable coupon expiry reminders."
-msgstr ""
-"이 기능은 WooCommerce 스마트 쿠폰 데이터베이스 업데이트가 완료될 때까지 사용할 수 없습니다. 쿠폰 만료 알림을 사용하려면 "
-"WooCommerce 스마트 쿠폰 데이터베이스를 업데이트하세요."
+msgctxt "This message is shown when the WooCommerce Smart Coupons database is not updated"
+msgid "This feature is unavailable until the WooCommerce Smart Coupons database update is complete. Please update the WooCommerce Smart Coupons database to enable coupon expiry reminders."
+msgstr "이 기능은 WooCommerce 스마트 쿠폰 데이터베이스 업데이트가 완료될 때까지 사용할 수 없습니다. 쿠폰 만료 알림을 사용하려면 WooCommerce 스마트 쿠폰 데이터베이스를 업데이트하세요."
 
 #: includes/class-wc-sc-coupon-fields.php:1095
-msgid ""
-"This much quantity of each product, selected above, will be added to cart."
+msgid "This much quantity of each product, selected above, will be added to cart."
 msgstr "위에서 선택한 각 제품의 이만큼의 수량이 장바구니에 추가됩니다."
 
 #. translators: %s: $coupon_code coupon code
-#: includes/class-wc-sc-url-coupon.php:371
-msgctxt ""
-"This notice will be shown on the cart or the checkout page if the coupon is "
-"already applied."
-msgid ""
-"Coupon code \"%s\" already applied! Please add some products to the cart to "
-"see the discount."
+#: includes/class-wc-sc-url-coupon.php:355
+msgctxt "This notice will be shown on the cart or the checkout page if the coupon is already applied."
+msgid "Coupon code \"%s\" already applied! Please add some products to the cart to see the discount."
 msgstr "쿠폰 코드 \"%s\"가 이미 적용되었습니다! 할인을 확인하려면 장바구니에 일부 제품을 추가하세요."
 
 #. translators: %s: $coupon_code coupon code
-#: includes/class-wc-sc-url-coupon.php:367
-msgctxt ""
-"This notice will be shown on the cart or the checkout page if the coupon "
-"will be applied successfully."
-msgid ""
-"Coupon code \"%s\" applied successfully. Please add some products to the "
-"cart to see the discount."
+#: includes/class-wc-sc-url-coupon.php:351
+msgctxt "This notice will be shown on the cart or the checkout page if the coupon will be applied successfully."
+msgid "Coupon code \"%s\" applied successfully. Please add some products to the cart to see the discount."
 msgstr "쿠폰 코드 \"%s\"가 성공적으로 적용되었습니다. 할인을 확인하려면 장바구니에 일부 제품을 추가하세요."
 
-#: includes/class-wc-smart-coupons.php:6630
-msgid ""
-"This section shows settings that affects Smart Coupons' functionalities."
+#: includes/class-wc-smart-coupons.php:6633
+msgid "This section shows settings that affects Smart Coupons' functionalities."
 msgstr "이 섹션에서는 스마트 쿠폰의 기능에 영향을 미치는 설정을 보여줍니다."
 
 #: includes/class-wc-sc-settings.php:741
-msgid ""
-"This section will always be visible, even if no coupons are currently "
-"available."
+msgid "This section will always be visible, even if no coupons are currently available."
 msgstr ""
 
 #: includes/class-wc-sc-admin-welcome.php:492
-msgid ""
-"This step-by-step guide will walk you through the process of setting up a "
-"BOGO deal, ensuring that your customers enjoy great value and keep coming "
-"back for more."
+msgid "This step-by-step guide will walk you through the process of setting up a BOGO deal, ensuring that your customers enjoy great value and keep coming back for more."
 msgstr "이 단계별 가이드는 고객이 큰 혜택을 누리고 계속 재방문할 수 있도록 BOGO 거래를 설정하는 과정을 안내합니다."
 
-#: includes/class-wc-smart-coupons.php:3677
+#: includes/class-wc-smart-coupons.php:3686
 msgid "This tool will clear the cache created by WooCommerce Smart Coupons."
 msgstr "이 도구는 WooCommerce 스마트 쿠폰에서 생성한 캐시를 지웁니다."
 
-#: includes/class-wc-smart-coupons.php:1967
+#: includes/class-wc-smart-coupons.php:1976
 msgid "This Week Only!"
 msgstr "이번 주 한정!"
 
-#: includes/class-wc-smart-coupons.php:1970
+#: includes/class-wc-smart-coupons.php:1979
 msgid "This will be over soon! Hurry."
 msgstr "곧 끝날 거예요! 서둘러요."
 
 #. translators: %s: list of placeholders
 #: includes/emails/class-wc-sc-acknowledgement-email.php:108
-msgid ""
-"This will be used when the setting \"WooCommerce > Settings > Smart Coupons >"
-" Allow schedule sending of coupons?\" is enabled. Available placeholders: %s."
-msgstr ""
-"\"WooCommerce &gt; 설정 &gt; 스마트 쿠폰 &gt; 쿠폰 예약 전송 허용?\" 설정이 활성화된 경우에 사용됩니다. 사용 "
-"가능한 자리 표시자: %s."
+msgid "This will be used when the setting \"WooCommerce > Settings > Smart Coupons > Allow schedule sending of coupons?\" is enabled. Available placeholders: %s."
+msgstr "\"WooCommerce &gt; 설정 &gt; 스마트 쿠폰 &gt; 쿠폰 예약 전송 허용?\" 설정이 활성화된 경우에 사용됩니다. 사용 가능한 자리 표시자: %s."
 
 #: includes/class-wc-sc-settings.php:595
 msgid "Ticket"
 msgstr "티켓"
 
 #: includes/class-wc-sc-coupon-fields.php:414
-msgid ""
-"Time after which coupon will be expired. This will work in conjunction with "
-"Coupon expiry date."
+msgid "Time after which coupon will be expired. This will work in conjunction with Coupon expiry date."
 msgstr "쿠폰이 만료되는 시간입니다. 이는 쿠폰 만료 날짜와 함께 작동합니다."
 
 #: includes/emails/class-wc-sc-expiry-reminder-email.php:106
@@ -5403,13 +5008,8 @@ msgstr "새로운 기능: 🤝 콤보 쿠폰!"
 
 #: includes/class-wc-sc-admin-notifications.php:753
 msgctxt "Title for the combo coupons feature admin notice"
-msgid ""
-"📢 <strong>Update:</strong> We've enhanced the layout and controls under "
-"<strong>Coupon data → Usage restrictions → Smart Coupons: Restrictions "
-"</strong> to make editing smoother and more user-friendly."
-msgstr ""
-"<strong>업데이트:</strong> <strong>쿠폰 데이터 → 사용 제한 → 스마트 쿠폰의 </strong> 레이아웃과 컨트롤이 "
-"개선되었습니다: <strong>제한을 </strong> 보다 원활하고 사용자 친화적으로 편집할 수 있도록 개선했습니다."
+msgid "📢 <strong>Update:</strong> We've enhanced the layout and controls under <strong>Coupon data → Usage restrictions → Smart Coupons: Restrictions </strong> to make editing smoother and more user-friendly."
+msgstr "<strong>업데이트:</strong> <strong>쿠폰 데이터 → 사용 제한 → 스마트 쿠폰의 </strong> 레이아웃과 컨트롤이 개선되었습니다: <strong>제한을 </strong> 보다 원활하고 사용자 친화적으로 편집할 수 있도록 개선했습니다."
 
 #: includes/class-wc-sc-admin-notifications.php:716
 msgctxt "Title for the new feature admin notice"
@@ -5429,29 +5029,22 @@ msgid "To redeem your discount click on the following coupon(s):"
 msgstr "할인을 받으려면 다음 쿠폰을 클릭하세요:"
 
 #: templates/plain/expiry-reminder-email.php:20
-msgid ""
-"To redeem your discount use below coupon codes during checkout or copy and "
-"paste the below URL and hit enter in your browser"
+msgid "To redeem your discount use below coupon codes during checkout or copy and paste the below URL and hit enter in your browser"
 msgstr "할인을 받으려면 결제 시 아래 쿠폰 코드를 사용하거나 아래 URL을 복사하여 브라우저에 붙여넣고 Enter 키를 누르세요."
 
 #: templates/plain/combined-email.php:22
-msgid ""
-"To redeem your discount use below coupon codes during checkout or copy and "
-"paste the below URLs and hit enter in your browser"
+msgid "To redeem your discount use below coupon codes during checkout or copy and paste the below URLs and hit enter in your browser"
 msgstr "할인을 받으려면 결제 시 아래 쿠폰 코드를 사용하거나 아래 URL을 복사하여 브라우저에 붙여넣고 엔터 키를 누르세요."
 
 #. translators: %s: Coupon code
-#: templates/email.php:85 templates/expiry-reminder-email.php:24
-msgid ""
-"To redeem your discount use coupon code %s during checkout or click on the "
-"following coupon:"
+#: templates/email.php:85
+#: templates/expiry-reminder-email.php:24
+msgid "To redeem your discount use coupon code %s during checkout or click on the following coupon:"
 msgstr "할인을 받으려면 결제 시 쿠폰 코드 %s를 사용하거나 다음 쿠폰을 클릭하세요:"
 
 #. translators: %s: Coupon code
 #: templates/plain/email.php:23
-msgid ""
-"To redeem your discount use coupon code %s during checkout or copy and paste "
-"the below URL and hit enter in your browser:"
+msgid "To redeem your discount use coupon code %s during checkout or copy and paste the below URL and hit enter in your browser:"
 msgstr "할인을 받으려면 결제 시 쿠폰 코드 %s를 사용하거나 아래 URL을 복사하여 붙여넣고 브라우저에서 Enter 키를 누르세요:"
 
 #: includes/class-wc-sc-admin-welcome.php:395
@@ -5483,9 +5076,7 @@ msgid "Uncheck"
 msgstr "선택 취소"
 
 #: includes/class-wc-sc-admin-welcome.php:604
-msgid ""
-"Uncheck \"Auto-generate\" option in Store Credit is not saving? Is it always "
-"checked?"
+msgid "Uncheck \"Auto-generate\" option in Store Credit is not saving? Is it always checked?"
 msgstr "스토어 크레딧에서 \"자동 생성\" 옵션을 선택 취소하면 저장되지 않나요? 항상 체크되어 있나요?"
 
 #: includes/class-wc-sc-coupon-fields.php:430
@@ -5526,31 +5117,29 @@ msgstr "최대 %s까지"
 msgid "URL of coupon should be like this:"
 msgstr "쿠폰의 URL은 다음과 같아야 합니다:"
 
-#: includes/class-wc-smart-coupons.php:5644
+#: includes/class-wc-smart-coupons.php:5648
 msgid "Usage Count"
 msgstr "사용 횟수"
 
-#: includes/class-wc-smart-coupons.php:5641
+#: includes/class-wc-smart-coupons.php:5645
 msgid "Usage Limit"
 msgstr "사용 제한"
 
-#: includes/class-wc-smart-coupons.php:5642
+#: includes/class-wc-smart-coupons.php:5646
 msgid "Usage Limit Per User"
 msgstr "사용자당 사용 한도"
 
 #. translators: %s: Label for store credit
 #: includes/compat/class-wcs-sc-compatibility.php:934
-msgid ""
-"Use %s applied in first subscription order for subsequent renewals until "
-"credit reaches zero"
+msgid "Use %s applied in first subscription order for subsequent renewals until credit reaches zero"
 msgstr "크레딧이 0이 될 때까지 후속 갱신 시 첫 번째 구독 주문에 적용된 %s를 사용합니다."
 
-#: includes/class-wc-smart-coupons.php:1997
+#: includes/class-wc-smart-coupons.php:2006
 msgid "Use code"
 msgstr "코드 사용"
 
 #. translators: 1. The coupon code
-#: includes/class-wc-smart-coupons.php:2014
+#: includes/class-wc-smart-coupons.php:2023
 msgid "Use code: %s"
 msgstr "코드를 사용합니다: %s"
 
@@ -5559,13 +5148,11 @@ msgstr "코드를 사용합니다: %s"
 msgid "Use comma \",\" to separate multiple email addresses"
 msgstr "여러 이메일 주소를 구분하려면 쉼표 \",\"를 사용합니다."
 
-#: includes/class-wc-smart-coupons.php:6602
-msgid ""
-"Use gift card applied in first subscription order for subsequent renewals "
-"until credit reaches zero"
+#: includes/class-wc-smart-coupons.php:6605
+msgid "Use gift card applied in first subscription order for subsequent renewals until credit reaches zero"
 msgstr "크레딧이 0이 될 때까지 후속 갱신 시 첫 번째 구독 주문에 적용된 기프트 카드를 사용합니다."
 
-#: includes/class-wc-smart-coupons.php:5645
+#: includes/class-wc-smart-coupons.php:5649
 msgid "Used By"
 msgstr "사용 대상"
 
@@ -5590,22 +5177,22 @@ msgid "users can choose only one"
 msgstr "사용자는 하나만 선택할 수 있습니다."
 
 #. translators: Product names
-#: includes/class-wc-smart-coupons.php:1558
+#: includes/class-wc-smart-coupons.php:1567
 msgid "Valid for %s"
 msgstr "에 유효합니다."
 
 #. translators: 1: The category names
-#: includes/class-wc-smart-coupons.php:1571
+#: includes/class-wc-smart-coupons.php:1580
 msgid "Valid for category %s"
 msgid_plural "Valid for categories %s"
 msgstr[0] "범주 %s에 유효합니다."
 
-#: includes/class-wc-smart-coupons.php:1600
+#: includes/class-wc-smart-coupons.php:1609
 msgid "Valid on entire range of products. Buy anything in the store."
 msgstr "전체 제품군에 유효합니다. 스토어에서 무엇이든 구매하세요."
 
 #: includes/class-wc-sc-settings.php:454
-#: includes/class-wc-smart-coupons.php:6597
+#: includes/class-wc-smart-coupons.php:6600
 msgid "Valid order status for auto-generating coupon"
 msgstr "쿠폰 자동 생성을 위한 유효한 주문 상태"
 
@@ -5613,7 +5200,7 @@ msgstr "쿠폰 자동 생성을 위한 유효한 주문 상태"
 msgid "Validate quantity of"
 msgstr "수량 확인"
 
-#: includes/class-wc-smart-coupons.php:5226
+#: includes/class-wc-smart-coupons.php:5227
 msgid "Validity Suffix"
 msgstr "유효성 접미사"
 
@@ -5642,9 +5229,11 @@ msgstr "빈티지"
 msgid "Visible on the product page"
 msgstr "제품 페이지에 표시"
 
-#: templates/combined-email.php:213 templates/email.php:191
+#: templates/combined-email.php:213
+#: templates/email.php:191
 #: templates/expiry-reminder-email.php:54
-#: templates/plain/combined-email.php:131 templates/plain/email.php:124
+#: templates/plain/combined-email.php:131
+#: templates/plain/email.php:124
 msgid "Visit store"
 msgstr "스토어 방문하기"
 
@@ -5653,14 +5242,11 @@ msgid "Visit store:"
 msgstr "스토어 방문하기:"
 
 #: includes/class-wc-sc-background-coupon-importer.php:492
-msgid ""
-"We are processing coupons in background. Please wait before starting new "
-"process."
+msgid "We are processing coupons in background. Please wait before starting new process."
 msgstr "쿠폰을 백그라운드에서 처리 중입니다. 새 프로세스를 시작하기 전에 잠시 기다려주세요."
 
 #: includes/class-wc-sc-privacy.php:111
-msgid ""
-"We store these data so that we can process it for you whenever required."
+msgid "We store these data so that we can process it for you whenever required."
 msgstr "당사는 이러한 데이터를 저장하여 필요할 때마다 귀하를 위해 처리할 수 있도록 합니다."
 
 #: includes/class-wc-sc-coupon-fields.php:547
@@ -5684,85 +5270,50 @@ msgid "What we store & why?"
 msgstr "무엇을 저장하고 왜 저장하나요?"
 
 #: includes/class-wc-sc-admin-welcome.php:578
-msgid ""
-"What's the URL to a coupon, so it's automatically inserted when visiting?"
+msgid "What's the URL to a coupon, so it's automatically inserted when visiting?"
 msgstr "방문 시 쿠폰이 자동으로 삽입되도록 쿠폰의 URL은 무엇인가요?"
 
 #: includes/class-wc-sc-coupon-fields.php:462
-msgid ""
-"When checked, and applicable, this discount will apply automatically to the "
-"cart / order - without customer needing to know / use the coupon. Auto Apply "
-"is an excellent way to setup discount rules using Smart Coupons. Keep in "
-"mind that, at most 5 coupons / discounts will be auto applied on a cart / "
-"order."
-msgstr ""
-"이 옵션을 선택하고 적용하면 고객이 쿠폰을 알거나 사용할 필요 없이 장바구니/주문에 자동으로 할인이 적용됩니다. 자동 적용은 스마트 "
-"쿠폰을 사용하여 할인 규칙을 설정하는 훌륭한 방법입니다. 한 카트/주문에 최대 5개의 쿠폰/할인 혜택이 자동으로 적용된다는 점에 "
-"유의하세요."
+msgid "When checked, and applicable, this discount will apply automatically to the cart / order - without customer needing to know / use the coupon. Auto Apply is an excellent way to setup discount rules using Smart Coupons. Keep in mind that, at most 5 coupons / discounts will be auto applied on a cart / order."
+msgstr "이 옵션을 선택하고 적용하면 고객이 쿠폰을 알거나 사용할 필요 없이 장바구니/주문에 자동으로 할인이 적용됩니다. 자동 적용은 스마트 쿠폰을 사용하여 할인 규칙을 설정하는 훌륭한 방법입니다. 한 카트/주문에 최대 5개의 쿠폰/할인 혜택이 자동으로 적용된다는 점에 유의하세요."
 
 #: includes/class-wc-sc-coupon-fields.php:511
-msgid ""
-"When checked, and when this coupon is linked to a product, and when someone "
-"places an order containing such product: generates a copy of this coupon "
-"with all the settings, assigns a new coupon code and issues that newly "
-"generated coupon to the customer, to use in future order/s."
-msgstr ""
-"이 쿠폰이 제품에 연결되어 있고 해당 제품이 포함된 주문을 하는 경우: 모든 설정이 포함된 이 쿠폰의 사본을 생성하고 새 쿠폰 코드를 "
-"할당하고 고객에게 새로 생성된 쿠폰을 발급하여 향후 주문에 사용할 수 있도록 합니다."
+msgid "When checked, and when this coupon is linked to a product, and when someone places an order containing such product: generates a copy of this coupon with all the settings, assigns a new coupon code and issues that newly generated coupon to the customer, to use in future order/s."
+msgstr "이 쿠폰이 제품에 연결되어 있고 해당 제품이 포함된 주문을 하는 경우: 모든 설정이 포함된 이 쿠폰의 사본을 생성하고 새 쿠폰 코드를 할당하고 고객에게 새로 생성된 쿠폰을 발급하여 향후 주문에 사용할 수 있도록 합니다."
 
 #: includes/class-wc-sc-coupon-fields.php:504
 msgid "When checked, generated coupon's value will be same as product's price"
 msgstr "체크하면 생성된 쿠폰의 금액은 제품 가격과 동일합니다."
 
 #: includes/class-wc-sc-coupon-fields.php:471
-msgid ""
-"When checked, this coupon can be used only in a customer's very first order."
+msgid "When checked, this coupon can be used only in a customer's very first order."
 msgstr "이 쿠폰을 선택하면 고객의 첫 주문에만 사용할 수 있습니다."
 
 #: includes/class-wc-sc-coupon-fields.php:483
-msgid ""
-"When checked, this coupon will be included for display on  cart / checkout / "
-"My Account pages - for all eligible customers."
+msgid "When checked, this coupon will be included for display on  cart / checkout / My Account pages - for all eligible customers."
 msgstr "이 쿠폰을 선택하면 모든 적격 고객에게 장바구니/결제/내 계정 페이지에 표시할 수 있는 쿠폰이 포함됩니다."
 
 #. translators: %s: Explanation of the setting
 #: includes/class-wc-sc-settings.php:471
-msgid ""
-"When enabled, each coupon will have the option to enable auto-apply for that "
-"coupon %s"
+msgid "When enabled, each coupon will have the option to enable auto-apply for that coupon %s"
 msgstr "활성화하면 각 쿠폰에 해당 쿠폰 %s에 대한 자동 적용을 활성화하는 옵션이 있습니다."
 
 #. translators: %s: Label for store credit, 1: : Label for store credit, 2: Label for store credit, 3: Label for store credit
 #: includes/class-wc-sc-settings.php:517
-msgid ""
-"When selling %1$s, if Regular and Sale price is found for the product, then "
-"coupon will be created with product's Regular Price but customer will pay "
-"product's Sale price. This setting will also make sure if any discount "
-"coupon is applied on the %2$s while purchasing, then customer will get %3$s "
-"in their picked price"
-msgstr ""
-"1$를 판매할 때 제품에 대해 정상 가격과 세일 가격이 발견되면 제품의 정상 가격으로 쿠폰이 생성되지만 고객은 제품의 세일 가격으로 "
-"지불합니다. 이 설정은 또한 구매 시 %2$에 할인 쿠폰이 적용되면 고객이 선택한 가격으로 %3$를 받도록 합니다."
+msgid "When selling %1$s, if Regular and Sale price is found for the product, then coupon will be created with product's Regular Price but customer will pay product's Sale price. This setting will also make sure if any discount coupon is applied on the %2$s while purchasing, then customer will get %3$s in their picked price"
+msgstr "1$를 판매할 때 제품에 대해 정상 가격과 세일 가격이 발견되면 제품의 정상 가격으로 쿠폰이 생성되지만 고객은 제품의 세일 가격으로 지불합니다. 이 설정은 또한 구매 시 %2$에 할인 쿠폰이 적용되면 고객이 선택한 가격으로 %3$를 받도록 합니다."
 
 #: includes/class-wc-sc-coupon-fields.php:1114
-msgid ""
-"When this coupon will be applied, selected products will be added to cart "
-"with set discount. If discount is not set, this coupon's discount will be "
-"applied to these products."
-msgstr ""
-"이 쿠폰이 적용되면 선택한 상품에 할인이 설정된 상태로 장바구니에 추가됩니다. 할인이 설정되어 있지 않으면 이 쿠폰의 할인이 해당 상품에 "
-"적용됩니다."
+msgid "When this coupon will be applied, selected products will be added to cart with set discount. If discount is not set, this coupon's discount will be applied to these products."
+msgstr "이 쿠폰이 적용되면 선택한 상품에 할인이 설정된 상태로 장바구니에 추가됩니다. 할인이 설정되어 있지 않으면 이 쿠폰의 할인이 해당 상품에 적용됩니다."
 
 #: includes/class-wc-sc-admin-welcome.php:552
-msgid ""
-"When trying to add coupon/Smart Coupon, I get \"Invalid post type\" message."
+msgid "When trying to add coupon/Smart Coupon, I get \"Invalid post type\" message."
 msgstr "쿠폰/스마트 쿠폰을 추가하려고 할 때 \"잘못된 게시물 유형\" 메시지가 표시됩니다."
 
 #. translators: %s: Label for store credit
 #: includes/class-wc-sc-settings.php:835
-msgid ""
-"When you opt to allow people to buy %s of any amount, this label will be "
-"used. "
+msgid "When you opt to allow people to buy %s of any amount, this label will be used. "
 msgstr "사람들이 금액에 상관없이 %s를 구매할 수 있도록 허용하면 이 레이블이 사용됩니다. "
 
 #: includes/class-wc-sc-admin-welcome.php:629
@@ -5782,7 +5333,7 @@ msgstr "할인 적용"
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
-#: includes/class-wc-smart-coupons.php:6621
+#: includes/class-wc-smart-coupons.php:6624
 msgid "WooCommerce Account Connected"
 msgstr "WooCommerce 계정 연결"
 
@@ -5801,7 +5352,7 @@ msgstr "WooCommerce 쿠폰(CSV)"
 msgid "WooCommerce Smart Coupons"
 msgstr "WooCommerce 스마트 쿠폰"
 
-#: includes/class-wc-smart-coupons.php:3675
+#: includes/class-wc-smart-coupons.php:3684
 msgid "WooCommerce Smart Coupons Cache"
 msgstr "WooCommerce 스마트 쿠폰 캐시"
 
@@ -5822,7 +5373,6 @@ msgstr "가치 %1$s (%2$s) "
 #. translators: 1: coupon amount 2: max discount text 3: discount for text
 #: includes/emails/class-wc-sc-email-coupon.php:450
 #, fuzzy
-#| msgid "worth %1$s%% %2$s (%3$s) "
 msgid "worth %1$s%%  %2$s (%3$s) "
 msgstr "가치 %1$s%% %2$s (%3$s) "
 
@@ -5843,9 +5393,7 @@ msgstr "가치 %s (전체 구매 금액) "
 
 #: includes/batches/class-wc-sc-coupons-expiry-reminder-scheduler.php:179
 msgctxt "WP CRON has been disabled warning message"
-msgid ""
-"Note: WP CRON has been disabled on your install which may prevent this "
-"update from completing."
+msgid "Note: WP CRON has been disabled on your install which may prevent this update from completing."
 msgstr "참고: 설치 시 WP CRON이 비활성화되어 있어 이 업데이트가 완료되지 않을 수 있습니다."
 
 #: includes/class-wc-sc-purchase-credit.php:876
@@ -5859,9 +5407,7 @@ msgstr "년"
 
 #. translators: Documentation link for 'How to Print Coupons'
 #: includes/class-wc-sc-admin-welcome.php:618
-msgid ""
-"Yes, Smart Coupons does provide a feature for printing coupons. For more "
-"details, check this article: %s"
+msgid "Yes, Smart Coupons does provide a feature for printing coupons. For more details, check this article: %s"
 msgstr "예, 스마트 쿠폰은 쿠폰을 인쇄할 수 있는 기능을 제공합니다. 자세한 내용은 이 문서를 참조하세요: %s"
 
 #: includes/class-wc-sc-admin-welcome.php:626
@@ -5873,9 +5419,7 @@ msgid "You can also apply multiple coupon codes via a single URL. For example:"
 msgstr "단일 URL을 통해 여러 쿠폰 코드를 적용할 수도 있습니다. 예를 들어"
 
 #: includes/class-wc-sc-background-coupon-importer.php:416
-msgid ""
-"You can continue with other work. But for bulk generating or importing new "
-"coupons, wait for the current process to complete."
+msgid "You can continue with other work. But for bulk generating or importing new coupons, wait for the current process to complete."
 msgstr "다른 작업을 계속할 수 있습니다. 하지만 새 쿠폰을 대량으로 생성하거나 가져오려면 현재 프로세스가 완료될 때까지 기다리세요."
 
 #: includes/class-wc-sc-admin-welcome.php:571
@@ -5883,9 +5427,7 @@ msgid "You can do this by overriding the email template."
 msgstr "이메일 템플릿을 재정의하여 이 작업을 수행할 수 있습니다."
 
 #: includes/class-wc-sc-admin-welcome.php:444
-msgid ""
-"You can give a coupon to your customer after every purchase, which can "
-"encourage them to purchase again from you."
+msgid "You can give a coupon to your customer after every purchase, which can encourage them to purchase again from you."
 msgstr "모든 구매 후 고객에게 쿠폰을 제공하면 고객이 다시 구매하도록 유도할 수 있습니다."
 
 #: includes/class-wc-sc-admin-welcome.php:601
@@ -5893,16 +5435,14 @@ msgid "You can resend them from order admin edit page."
 msgstr "주문 관리자 편집 페이지에서 다시 보낼 수 있습니다."
 
 #: includes/class-wc-sc-settings.php:855
-msgid ""
-"You can use <code>{{coupons_count}}</code> as a placeholder to show the "
-"number of available coupons dynamically."
+msgid "You can use <code>{{coupons_count}}</code> as a placeholder to show the number of available coupons dynamically."
 msgstr ""
 
 #: includes/class-wc-sc-admin-pages.php:273
 msgid "You cannot add the same tax rate twice!"
 msgstr "동일한 세율을 두 번 추가할 수 없습니다!"
 
-#: includes/class-wc-smart-coupons.php:1969
+#: includes/class-wc-smart-coupons.php:1978
 msgid "You don't want to miss this..."
 msgstr "이걸 놓치고 싶지 않으시다면..."
 
@@ -5911,14 +5451,18 @@ msgid "You got these coupons "
 msgstr "다음 쿠폰이 있습니다. "
 
 #. translators: %s: singular name for store credit
-#: templates/email.php:216 templates/plain/combined-email.php:137
-#: templates/plain/email.php:130 templates/plain/expiry-reminder-email.php:113
+#: templates/email.php:216
+#: templates/plain/combined-email.php:137
+#: templates/plain/email.php:130
+#: templates/plain/expiry-reminder-email.php:113
 msgid "You got this %s"
 msgstr "이 %s"
 
 #. translators: %s: singular name for store credit
-#: templates/email.php:216 templates/plain/combined-email.php:137
-#: templates/plain/email.php:130 templates/plain/expiry-reminder-email.php:113
+#: templates/email.php:216
+#: templates/plain/combined-email.php:137
+#: templates/plain/email.php:130
+#: templates/plain/expiry-reminder-email.php:113
 msgid "You got this gift card"
 msgstr "이 기프트 카드를 받았습니다."
 
@@ -5947,9 +5491,7 @@ msgid "You have scheduled to send %1$d %2$s to %3$s (%4$s)"
 msgstr "1$d %2$s를 %3$s(%4$s)로 보내도록 예약했습니다."
 
 #: includes/class-wc-sc-coupon-refund-process.php:123
-msgid ""
-"You have selected all items for refund. This action will also refund all "
-"applied store credit."
+msgid "You have selected all items for refund. This action will also refund all applied store credit."
 msgstr "환불할 모든 품목을 선택했습니다. 이 작업을 수행하면 적용된 모든 스토어 크레딧도 환불됩니다."
 
 #. translators: 1. Receiver's count 2. Singular/Plural label for store credit(s) 3. Receiver name 4. Receiver details
@@ -5999,14 +5541,9 @@ msgid "Your order contains coupons. What would you like to do?"
 msgstr "주문에 쿠폰이 포함되어 있습니다. 어떻게 하시겠습니까?"
 
 #: includes/class-wc-sc-purchase-credit.php:815
-msgid ""
-"Your order contains coupons. You will receive them after completion of this "
-"order."
+msgid "Your order contains coupons. You will receive them after completion of this order."
 msgstr "주문에 쿠폰이 포함되어 있습니다. 이 주문이 완료된 후 쿠폰을 받게 됩니다."
 
 #: includes/class-wc-sc-admin-pages.php:274
-msgid ""
-"Your product has variations! Before changing the product type, it is a good "
-"idea to delete the variations to avoid errors in the stock reports."
-msgstr ""
-"제품에 이형 상품이 있습니다! 제품 유형을 변경하기 전에 재고 보고서의 오류를 방지하기 위해 이형 상품을 삭제하는 것이 좋습니다."
+msgid "Your product has variations! Before changing the product type, it is a good idea to delete the variations to avoid errors in the stock reports."
+msgstr "제품에 이형 상품이 있습니다! 제품 유형을 변경하기 전에 재고 보고서의 오류를 방지하기 위해 이형 상품을 삭제하는 것이 좋습니다."
