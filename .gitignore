@@ -15,6 +15,7 @@ wp-content/uploads/wpo_wcpdf*
 wp-content/updraft/*.gz
 wp-content/updraft/*.txt
 wp-content/vendor
+wp-content/backups-dup-lite/
 # FREE THEMES
 wp-content/themes/twentytwentyfive/
 wp-content/themes/mobilo/
