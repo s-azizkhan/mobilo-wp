@@ -4,7 +4,7 @@
  *
  * @package     affiliate-for-woocommerce/includes/
  * @since       1.0.0
- * @version     1.25.2
+ * @version     1.25.3
  */
 
 // Exit if accessed directly.
@@ -122,10 +122,11 @@ function afwc_get_tablename( $name ) {
  * Get referrer id
  *
  * @param string|int $customer The customer email address or customer's user ID.
+ * @param WC_Order   $order The order object.
  *
  * @return integer Return the affiliate ID, either from customer's lifetime affiliate or cookie.
  */
-function afwc_get_referrer_id( $customer = '' ) {
+function afwc_get_referrer_id( $customer = '', $order = null ) {
 	// If the lifetime commission is enabled, check for a lifetime affiliate for the customer.
 	if ( ! empty( $customer ) && 'yes' === get_option( 'afwc_enable_lifetime_commissions', 'no' ) ) {
 		$ltc_affiliate = afwc_get_ltc_affiliate_by_customer( $customer );
@@ -133,6 +134,33 @@ function afwc_get_referrer_id( $customer = '' ) {
 
 		if ( is_object( $affiliate_obj ) && is_callable( array( $affiliate_obj, 'is_ltc_enabled' ) ) && $affiliate_obj->is_ltc_enabled() ) {
 			return intval( $ltc_affiliate );
+		}
+	}
+
+	// if affiliate ID is not found from lifetime commission, check for the referral coupon.
+	if ( $order instanceof WC_Order && is_callable( array( $order, 'get_coupon_codes' ) ) ) {
+		$used_coupons = $order->get_coupon_codes();
+
+		if ( ! empty( $used_coupons ) && is_array( $used_coupons ) ) {
+
+			$credit_policy = get_option( 'afwc_credit_affiliate', 'last' );
+			$afwc_coupon   = ( is_callable( array( 'AFWC_Coupon', 'get_instance' ) ) ) ? AFWC_Coupon::get_instance() : null;
+
+			if ( ! empty( $afwc_coupon ) && is_callable( array( $afwc_coupon, 'get_affiliate' ) ) ) {
+				$affiliate_id = 0;
+
+				foreach ( $used_coupons as $coupon_code ) {
+					// If the credit policy is set to 'first', we only need the first affiliate ID.
+					if ( 'first' === $credit_policy && ! empty( $affiliate_id ) ) {
+						return intval( $affiliate_id );
+					}
+					$affiliate_id = $afwc_coupon->get_affiliate( $coupon_code );
+				}
+				// If the affiliate ID is found, return it.
+				if ( ! empty( $affiliate_id ) ) {
+					return intval( $affiliate_id );
+				}
+			}
 		}
 	}
 
@@ -496,7 +524,7 @@ function afwc_get_reject_order_status() {
  * Function to prefix order status if not present.
  *
  * @param string $order_status The order status.
- * @return string The prefixed orer status.
+ * @return string The prefixed order status.
  */
 function afwc_prefix_wc_to_order_status( $order_status = '' ) {
 	if ( empty( $order_status ) ) {

@@ -314,8 +314,8 @@ tbody tr {
 	display: inline-block;
 	width: 24px;
 	height: 24px;
-	-webkit-mask: url('../images/afwc-kpi-placeholder.svg') no-repeat center;
-	mask: url('../images/afwc-kpi-placeholder.svg') no-repeat center;
+	-webkit-mask: url('../../../images/afwc-kpi-placeholder.svg') no-repeat center;
+	mask: url('../../../images/afwc-kpi-placeholder.svg') no-repeat center;
 	background-color: currentColor;
 }
 #afwc_commission {

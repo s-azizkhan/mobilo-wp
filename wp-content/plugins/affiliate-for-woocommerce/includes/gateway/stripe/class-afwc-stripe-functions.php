@@ -4,7 +4,7 @@
  *
  * @package   affiliate-for-woocommerce/includes/gateway/stripe/
  * @since     8.9.0
- * @version   1.1.0
+ * @version   1.1.1
  */
 
 // Exit if accessed directly.
@@ -59,14 +59,14 @@ if ( ! class_exists( 'AFWC_Stripe_Functions' ) ) {
 		 */
 		public function __call( $function_name = '', $arguments = array() ) {
 
-			if ( empty( $function_name ) || ! is_callable( 'SA_WC_Compatibility', $function_name ) ) {
+			if ( empty( $function_name ) || ! is_callable( 'SA_WC_AFW_Compatibility', $function_name ) ) {
 				return;
 			}
 
 			if ( ! empty( $arguments ) ) {
-				return call_user_func_array( 'SA_WC_Compatibility::' . $function_name, $arguments );
+				return call_user_func_array( 'SA_WC_AFW_Compatibility::' . $function_name, $arguments );
 			} else {
-				return call_user_func( 'SA_WC_Compatibility::' . $function_name );
+				return call_user_func( 'SA_WC_AFW_Compatibility::' . $function_name );
 			}
 		}
 

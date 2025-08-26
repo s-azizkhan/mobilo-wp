@@ -4,7 +4,7 @@
  *
  * @package     affiliate-for-woocommerce/includes/emails/
  * @since       2.4.0
- * @version     1.6.0
+ * @version     1.6.1
  */
 
 // Exit if accessed directly.
@@ -87,7 +87,9 @@ if ( ! class_exists( 'AFWC_Email_New_Registration_Received' ) ) {
 			$admin = get_user_by( 'email', $this->recipient );
 
 			$this->email_args['admin_name']                   = ! empty( $admin->user_login ) ? $admin->user_login : _x( 'there', 'Greeting for admin', 'affiliate-for-woocommerce' );
-			$this->email_args['manage_url']                   = ! empty( $this->email_args['user_id'] ) ? add_query_arg( array( 'page' => 'affiliate-for-woocommerce' ), admin_url( 'admin.php' ) ) . '#!/dashboard/' . $this->email_args['user_id'] : add_query_arg( array( 'page' => 'affiliate-for-woocommerce' ), admin_url( 'admin.php' ) );
+			$this->email_args['manage_url']                   = is_callable( array( 'AFWC_URL_Handler', 'get_admin_dashboard_clean_url' ) )
+																? AFWC_URL_Handler::get_admin_dashboard_clean_url( 'dashboard' . ( ! empty( $this->email_args['user_id'] ) ? ( '/' . $this->email_args['user_id'] ) : '' ) )
+																: '';
 			$this->email_args['user_name']                    = ! empty( $this->email_args['userdata']['afwc_first_name'] ) ? $this->email_args['userdata']['afwc_first_name'] . ' ' . ( ! empty( $this->email_args['userdata']['afwc_last_name'] ) ? $this->email_args['userdata']['afwc_last_name'] : '' ) : ( ! empty( $this->email_args['userdata']['user_login'] ) ? $this->email_args['userdata']['user_login'] : '' );
 			$this->email_args['user_email']                   = ! empty( $this->email_args['userdata']['afwc_email'] ) ? $this->email_args['userdata']['afwc_email'] : '';
 			$this->email_args['additional_information']       = ! empty( $this->email_args['userdata']['afwc_additional_fields'] ) ? $this->email_args['userdata']['afwc_additional_fields'] : '';

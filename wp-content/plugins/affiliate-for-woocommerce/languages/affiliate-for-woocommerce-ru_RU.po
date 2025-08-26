@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Affiliate For WooCommerce 8.42.0\n"
+"Project-Id-Version: Affiliate For WooCommerce 8.43.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
@@ -25,8 +25,7 @@ msgid " to "
 msgstr "к"
 
 #. translators: 1: user display name 2: user ID 3: user email
-#: includes/class-affiliate-for-woocommerce.php:956
-#: includes/tracking/class-afwc-coupon.php:99
+#: includes/class-affiliate-for-woocommerce.php:972
 msgid "%1$s (#%2$s &ndash; %3$s)"
 msgstr "%1$s (#%2$s &ndash; %3$s)"
 
@@ -92,7 +91,7 @@ msgstr "Добавить новый партнерский тег"
 
 #: includes/emails/class-afwc-email-commission-paid.php:239
 #: includes/emails/class-afwc-email-new-conversion-received.php:232
-#: includes/emails/class-afwc-email-new-registration-received.php:229
+#: includes/emails/class-afwc-email-new-registration-received.php:231
 #: includes/emails/class-afwc-email-welcome-affiliate.php:231
 msgid "Additional content"
 msgstr "Дополнительный контент"
@@ -624,9 +623,7 @@ msgctxt "affiliate registration validation error message"
 msgid "Something went wrong"
 msgstr "Что-то пошло не так"
 
-#: includes/admin/class-afwc-admin-order-affiliate-details.php:164
-#: includes/class-affiliate-for-woocommerce.php:966
-#: includes/tracking/class-afwc-coupon.php:111
+#: includes/class-affiliate-for-woocommerce.php:982
 msgctxt "affiliate search placeholder"
 msgid "Search by email, username or name"
 msgstr "Поиск по адресу электронной почты, логину или имени"
@@ -671,13 +668,13 @@ msgctxt "Affiliate's account setting section title"
 msgid "Affiliate's Account"
 msgstr "Кабинет патнера"
 
-#: includes/admin/class-afwc-admin-order-affiliate-details.php:127
+#: includes/admin/class-afwc-admin-order-affiliate-details.php:111
 msgctxt "Affiliate's order meta box title"
 msgid "Affiliate details"
 msgstr "Детали партнера"
 
 #. translators: A small arrow
-#: includes/class-affiliate-for-woocommerce.php:435
+#: includes/class-affiliate-for-woocommerce.php:437
 #: assets/js/admin/admin.js:1
 msgid "Affiliates"
 msgstr "Партнёры"
@@ -687,7 +684,7 @@ msgid "affiliates"
 msgstr "партнёры"
 
 #. translators: A small arrow
-#: includes/class-affiliate-for-woocommerce.php:435
+#: includes/class-affiliate-for-woocommerce.php:437
 msgid "Affiliates Dashboard"
 msgstr "Панель инструментов"
 
@@ -774,7 +771,7 @@ msgstr "Одобрить / отклонить / управлять этим па
 msgid "Are you sure you want to remove this user as an affiliate? Doing this will remove this affiliate and its entire chain from part of the parent-chain relationship of any other affiliate in a multi-tier commission distribution. This change is irreversible."
 msgstr "Вы уверены, что хотите удалить этого пользователя из партнеров? Это действие удалит данного партнера и всю его цепочку из родительской цепочки любого другого партнера в многослойном распределении комиссий. Это изменение нельзя будет отменить."
 
-#: includes/tracking/class-afwc-coupon.php:110
+#: includes/tracking/class-afwc-coupon.php:84
 msgid "Assign to affiliate"
 msgstr "Назначить партнёру"
 
@@ -782,14 +779,14 @@ msgstr "Назначить партнёру"
 msgid "at least one"
 msgstr "по крайней мере один"
 
-#: includes/admin/class-afwc-campaign-dashboard.php:591
+#: includes/admin/class-afwc-campaign-dashboard.php:588
 msgctxt "authorization failure message"
 msgid "You are not allowed to re-generate sample campaigns."
 msgstr "Вам не разрешается повторно создавать образцы кампаний."
 
 #: includes/admin/class-afwc-admin-dashboard.php:508
 #: includes/admin/class-afwc-admin-dashboard.php:1702
-#: includes/admin/class-afwc-admin-dashboard.php:1738
+#: includes/admin/class-afwc-admin-dashboard.php:1737
 #: includes/admin/class-afwc-campaign-dashboard.php:84
 #: includes/admin/class-afwc-campaign-dashboard.php:102
 #: includes/admin/class-afwc-campaign-dashboard.php:165
@@ -981,7 +978,7 @@ msgstr "Отмена"
 
 #: includes/emails/class-afwc-email-commission-paid.php:249
 #: includes/emails/class-afwc-email-new-conversion-received.php:242
-#: includes/emails/class-afwc-email-new-registration-received.php:239
+#: includes/emails/class-afwc-email-new-registration-received.php:241
 #: includes/emails/class-afwc-email-welcome-affiliate.php:241
 msgid "Choose which format of email to send."
 msgstr "Выберите формат электронного письма для отправки."
@@ -1014,7 +1011,7 @@ msgctxt "click to copy label for referral url"
 msgid "Click to copy"
 msgstr "Нажмите, чтобы скопировать"
 
-#: includes/affiliate-for-woocommerce-functions.php:1062
+#: includes/affiliate-for-woocommerce-functions.php:1090
 msgctxt "click to copy title"
 msgid "Click to copy"
 msgstr "Нажмите, чтобы скопировать"
@@ -1255,7 +1252,7 @@ msgid "Are you sure you want to leave? Unsaved changes will be lost."
 msgstr "Вы уверены, что хотите выйти? Несохраненные изменения будут потеряны."
 
 #. translators: Email address
-#: includes/admin/class-afwc-admin-affiliates.php:2551
+#: includes/admin/class-afwc-admin-affiliates.php:2546
 msgctxt "Confirmation message for adding the new customer as lifetime commission customer"
 msgid "%s - Would you like to link this customer?"
 msgstr "%s - Хотите связать этого клиента?"
@@ -1513,7 +1510,7 @@ msgctxt "description for PayPal email field"
 msgid "This affiliate will receive their commission on the above PayPal email address."
 msgstr "Этот партнер будет получать свою комиссию на указанный выше адрес электронной почты PayPal."
 
-#: includes/admin/class-afwc-admin-order-affiliate-details.php:163
+#: includes/admin/class-afwc-admin-order-affiliate-details.php:148
 msgctxt "Description for search and assign affiliate in order metabox"
 msgid "Search affiliate by email, username, name or user ID to assign this order to them."
 msgstr "Найдите партнера по адресу электронной почты, имени пользователя, имени или идентификатору пользователя, чтобы назначить ему этот заказ."
@@ -1559,7 +1556,7 @@ msgid "This controls the email subject line. Leave blank to use the default subj
 msgstr "Эта настройка управляет строкой темы письма. Оставьте поле пустым, чтобы использовать тему по умолчанию: <code>%s</code>."
 
 #. translators: %s Email subject.
-#: includes/emails/class-afwc-email-new-registration-received.php:216
+#: includes/emails/class-afwc-email-new-registration-received.php:218
 msgctxt "Description for the email subject for the new registration received email"
 msgid "This controls the email subject line. Leave blank to use the default subject: <code>%s</code>."
 msgstr "Эта настройка управляет строкой темы письма. Оставьте поле пустым, чтобы использовать тему по умолчанию: <code>%s</code>."
@@ -1591,7 +1588,7 @@ msgctxt "Description for the parent affiliate field in affiliate profile"
 msgid "The commission will be distributed to this parent affiliate on a multi-tier commission plan."
 msgstr "Комиссия будет распределена между этим родительским партнёром по многоуровневому плану комиссий."
 
-#: includes/admin/class-afwc-admin-order-affiliate-details.php:178
+#: includes/admin/class-afwc-admin-order-affiliate-details.php:173
 msgctxt "Description for total commission when multi-tier setting is enable"
 msgid "(including multi-tier commissions)"
 msgstr "(включая многоуровневые комиссии)"
@@ -1773,7 +1770,7 @@ msgstr "Отправьте письмо %s и обсудите больше де
 
 #: includes/emails/class-afwc-email-commission-paid.php:231
 #: includes/emails/class-afwc-email-new-conversion-received.php:224
-#: includes/emails/class-afwc-email-new-registration-received.php:221
+#: includes/emails/class-afwc-email-new-registration-received.php:223
 #: includes/emails/class-afwc-email-welcome-affiliate.php:223
 msgid "Email Heading"
 msgstr "Заголовок письма"
@@ -1795,7 +1792,7 @@ msgstr "Менеджер по работе с партнёрами (по эле�
 
 #: includes/emails/class-afwc-email-commission-paid.php:247
 #: includes/emails/class-afwc-email-new-conversion-received.php:240
-#: includes/emails/class-afwc-email-new-registration-received.php:237
+#: includes/emails/class-afwc-email-new-registration-received.php:239
 #: includes/emails/class-afwc-email-welcome-affiliate.php:239
 msgid "Email type"
 msgstr "Тип письма"
@@ -1843,14 +1840,14 @@ msgstr "Теги не назначены"
 
 #: includes/emails/class-afwc-email-commission-paid.php:219
 #: includes/emails/class-afwc-email-new-conversion-received.php:212
-#: includes/emails/class-afwc-email-new-registration-received.php:209
+#: includes/emails/class-afwc-email-new-registration-received.php:211
 #: includes/emails/class-afwc-email-welcome-affiliate.php:211
 msgid "Enable this email notification"
 msgstr "Включить это уведомление по электронной почте"
 
 #: includes/emails/class-afwc-email-commission-paid.php:217
 #: includes/emails/class-afwc-email-new-conversion-received.php:210
-#: includes/emails/class-afwc-email-new-registration-received.php:207
+#: includes/emails/class-afwc-email-new-registration-received.php:209
 #: includes/emails/class-afwc-email-welcome-affiliate.php:209
 msgid "Enable/Disable"
 msgstr "Включить/Выключить"
@@ -1874,7 +1871,7 @@ msgid "is"
 msgstr "является"
 
 #. translators: 1: Callable name 2: Error message
-#: includes/class-affiliate-for-woocommerce.php:1147
+#: includes/class-affiliate-for-woocommerce.php:1153
 msgctxt "Error message details"
 msgid "Error in %1$s. Details: %2$s"
 msgstr "Ошибка в %1$s. Подробности: %2$s"
@@ -2390,7 +2387,7 @@ msgctxt "heading tool-tip info at registration form setting"
 msgid "Name of the field in the registration form."
 msgstr "Название поля в регистрационной форме."
 
-#: includes/tracking/class-afwc-coupon.php:120
+#: includes/tracking/class-afwc-coupon.php:95
 msgctxt "help tip for search and assign affiliate"
 msgid "Search affiliate by email, username, name or user id to assign this coupon to them. Affiliates will see this coupon in their My account > Affiliates > Profile."
 msgstr "Найдите партнера по электронной почте, имени пользователя, имени или идентификатору пользователя, чтобы назначить ему этот купон. Партнеры увидят этот купон в своей учетной записи > Партнеры > Профиль."
@@ -2549,11 +2546,11 @@ msgctxt "Invoice ID in payout invoice template"
 msgid "Invoice #%s"
 msgstr "Счет №%s"
 
-#: includes/affiliate-for-woocommerce-functions.php:374
+#: includes/affiliate-for-woocommerce-functions.php:402
 msgid "Join our affiliate program"
 msgstr "Присоединяйтесь к нашей партнерской программе"
 
-#: includes/emails/class-afwc-email-new-registration-received.php:94
+#: includes/emails/class-afwc-email-new-registration-received.php:96
 msgctxt "Label for additional information"
 msgid "Additional information"
 msgstr "Дополнительная информация"
@@ -2583,7 +2580,7 @@ msgctxt "label for affiliate status checkbox at user edit page"
 msgid "Is affiliate?"
 msgstr "Является партнёром?"
 
-#: includes/emails/class-afwc-email-new-registration-received.php:189
+#: includes/emails/class-afwc-email-new-registration-received.php:191
 msgctxt "Label for affiliate user website link"
 msgid "Website"
 msgstr "Сайт"
@@ -2986,12 +2983,6 @@ msgctxt "Link to snooze the scheduled payout date"
 msgid "Snooze"
 msgstr "**Отложить**"
 
-#. translators: 1: user display name 2: user ID 3: user email
-#: includes/admin/class-afwc-admin-order-affiliate-details.php:206
-msgctxt "linked affiliate info. in order metabox select2"
-msgid "%1$s (#%2$s &ndash; %3$s)"
-msgstr "%1$s (#%2$s &ndash; %3$s)"
-
 #: assets/js/admin/admin.js:1
 msgid "Load More"
 msgstr "Загрузить больше"
@@ -3191,7 +3182,7 @@ msgctxt "Media uploader title"
 msgid "Select image"
 msgstr "Выберите изображение"
 
-#: includes/class-affiliate-for-woocommerce.php:444
+#: includes/class-affiliate-for-woocommerce.php:446
 msgctxt "Menu name for setup guide page"
 msgid "Getting Started"
 msgstr "Введение в работу"
@@ -3304,7 +3295,7 @@ msgstr "Нажмите, чтобы скопировать"
 
 #: includes/emails/class-afwc-email-commission-paid.php:242
 #: includes/emails/class-afwc-email-new-conversion-received.php:235
-#: includes/emails/class-afwc-email-new-registration-received.php:232
+#: includes/emails/class-afwc-email-new-registration-received.php:234
 #: includes/emails/class-afwc-email-welcome-affiliate.php:234
 msgid "N/A"
 msgstr "Не применимо"
@@ -3545,7 +3536,7 @@ msgstr "Наши продукты"
 msgid "Our products"
 msgstr "Наши продукты"
 
-#: includes/class-affiliate-for-woocommerce.php:444
+#: includes/class-affiliate-for-woocommerce.php:446
 msgctxt "Page title for setup guide page"
 msgid "Getting Started"
 msgstr "Введение в работу"
@@ -3781,7 +3772,7 @@ msgctxt "PayPal payout failed message"
 msgid "Something went wrong"
 msgstr "Что-то пошло не так"
 
-#: includes/affiliate-for-woocommerce-functions.php:1155
+#: includes/affiliate-for-woocommerce-functions.php:1183
 msgctxt "PayPal payout method title"
 msgid "PayPal"
 msgstr "PayPal"
@@ -4112,7 +4103,7 @@ msgctxt "referral details section title on my-account profile page"
 msgid "Referral details"
 msgstr "Детали реферала"
 
-#: includes/class-affiliate-for-woocommerce.php:1254
+#: includes/class-affiliate-for-woocommerce.php:1260
 msgctxt "referral identifier pattern validation error message"
 msgid "Invalid affiliate URL identifier. It should be a combination of alphabets and numbers, but the number should not be in the first position."
 msgstr "Неверный идентификатор URL-адреса партнера. Он должен быть комбинацией букв и цифр, но цифра не должна быть на первой позиции."
@@ -4157,7 +4148,7 @@ msgctxt "referral url identifier updated message"
 msgid "Identifier saved successfully."
 msgstr "Идентификатор успешно сохранен."
 
-#: includes/class-affiliate-for-woocommerce.php:1226
+#: includes/class-affiliate-for-woocommerce.php:1232
 msgctxt "referral url identifier updating error message"
 msgid "Affiliate ID missing for updating affiliate URL identifier."
 msgstr "Отсутствует ID партнера для обновления идентификатора партнерской ссылки."
@@ -4172,12 +4163,12 @@ msgctxt "referral url identifier updating error message"
 msgid "Missing data"
 msgstr "Отсутствующие данные"
 
-#: includes/class-affiliate-for-woocommerce.php:1245
+#: includes/class-affiliate-for-woocommerce.php:1251
 msgctxt "referral url identifier updating error message"
 msgid "Numeric values are not allowed for affiliate URL identifier."
 msgstr "Числовые значения не допускаются для идентификатора URL-адреса партнера."
 
-#: includes/class-affiliate-for-woocommerce.php:1269
+#: includes/class-affiliate-for-woocommerce.php:1275
 msgctxt "referral url identifier updating error message"
 msgid "Old and new affiliate URL identifier are same. Please choose a different identifier."
 msgstr "Старый и новый идентификатор URL-адреса партнера одинаковы. Пожалуйста, выберите другой идентификатор."
@@ -4188,12 +4179,12 @@ msgctxt "referral url identifier updating error message"
 msgid "Something went wrong"
 msgstr "Что-то пошло не так"
 
-#: includes/class-affiliate-for-woocommerce.php:1236
+#: includes/class-affiliate-for-woocommerce.php:1242
 msgctxt "referral url identifier updating error message"
 msgid "The affiliate URL identifier can not be empty."
 msgstr "Идентификатор URL-адреса партнерской программы не может быть пустым."
 
-#: includes/class-affiliate-for-woocommerce.php:1277
+#: includes/class-affiliate-for-woocommerce.php:1283
 msgctxt "referral url identifier updating error message"
 msgid "The URL identifier already exists. Please choose a different identifier."
 msgstr "Идентификатор URL уже существует. Пожалуйста, выберите другой идентификатор."
@@ -4805,67 +4796,67 @@ msgctxt "skype id label at in affiliate profile tab"
 msgid "Skype ID"
 msgstr "Skype ID"
 
-#: includes/affiliate-for-woocommerce-functions.php:986
+#: includes/affiliate-for-woocommerce-functions.php:1014
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for 3 months"
 msgid "3 Months"
 msgstr "3 месяца"
 
-#: includes/affiliate-for-woocommerce-functions.php:987
+#: includes/affiliate-for-woocommerce-functions.php:1015
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for 6 months"
 msgid "6 Months"
 msgstr "6 месяцев"
 
-#: includes/affiliate-for-woocommerce-functions.php:981
+#: includes/affiliate-for-woocommerce-functions.php:1009
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last 4 weeks"
 msgid "Last 4 Weeks"
 msgstr "Последние 4 недели"
 
-#: includes/affiliate-for-woocommerce-functions.php:985
+#: includes/affiliate-for-woocommerce-functions.php:1013
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last month"
 msgid "Last Month"
 msgstr "Прошлый месяц"
 
-#: includes/affiliate-for-woocommerce-functions.php:980
+#: includes/affiliate-for-woocommerce-functions.php:1008
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last week"
 msgid "Last Week"
 msgstr "На прошлой неделе"
 
-#: includes/affiliate-for-woocommerce-functions.php:991
+#: includes/affiliate-for-woocommerce-functions.php:1019
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last year"
 msgid "Last Year"
 msgstr "В прошлом году"
 
-#: includes/affiliate-for-woocommerce-functions.php:984
+#: includes/affiliate-for-woocommerce-functions.php:1012
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for this month"
 msgid "This Month"
 msgstr "В этом месяце"
 
-#: includes/affiliate-for-woocommerce-functions.php:979
+#: includes/affiliate-for-woocommerce-functions.php:1007
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for this week"
 msgid "This Week"
 msgstr "На этой неделе"
 
-#: includes/affiliate-for-woocommerce-functions.php:990
+#: includes/affiliate-for-woocommerce-functions.php:1018
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for this year"
 msgid "This Year"
 msgstr "В этом году"
 
-#: includes/affiliate-for-woocommerce-functions.php:975
+#: includes/affiliate-for-woocommerce-functions.php:1003
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for today"
 msgid "Today"
 msgstr "Сегодня"
 
-#: includes/affiliate-for-woocommerce-functions.php:976
+#: includes/affiliate-for-woocommerce-functions.php:1004
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for yesterday"
 msgid "Yesterday"
@@ -4975,7 +4966,7 @@ msgid "Something went wrong"
 msgstr "Что-то пошло не так"
 
 #: includes/affiliate-for-woocommerce-functions.php:85
-#: includes/affiliate-for-woocommerce-functions.php:1168
+#: includes/affiliate-for-woocommerce-functions.php:1196
 msgctxt "Stripe payout method title"
 msgid "Stripe"
 msgstr "Полоска"
@@ -4993,7 +4984,7 @@ msgstr "Валюта не предоставляется"
 
 #: includes/emails/class-afwc-email-commission-paid.php:223
 #: includes/emails/class-afwc-email-new-conversion-received.php:216
-#: includes/emails/class-afwc-email-new-registration-received.php:213
+#: includes/emails/class-afwc-email-new-registration-received.php:215
 #: includes/emails/class-afwc-email-welcome-affiliate.php:215
 msgid "Subject"
 msgstr "Тема"
@@ -5100,12 +5091,12 @@ msgstr "от общего дохода"
 
 #: includes/emails/class-afwc-email-commission-paid.php:240
 #: includes/emails/class-afwc-email-new-conversion-received.php:233
-#: includes/emails/class-afwc-email-new-registration-received.php:230
+#: includes/emails/class-afwc-email-new-registration-received.php:232
 #: includes/emails/class-afwc-email-welcome-affiliate.php:232
 msgid "Text to appear below the main email content."
 msgstr "Текст, который будет отображаться под основным содержимым письма."
 
-#: includes/class-affiliate-for-woocommerce.php:1075
+#: includes/class-affiliate-for-woocommerce.php:1081
 msgctxt "text to copy the affiliate's product-specific referral link"
 msgid "Click to copy referral link"
 msgstr "Нажмите, чтобы скопировать реферальную ссылку"
@@ -5151,13 +5142,13 @@ msgid "Affiliates"
 msgstr "Партнёры"
 
 #: includes/admin/settings/class-afwc-commissions-admin-settings.php:156
-#: includes/admin/settings/class-afwc-commissions-admin-settings.php:310
+#: includes/admin/settings/class-afwc-commissions-admin-settings.php:306
 msgctxt "The group name for lifetime commission affiliate tags excluded list"
 msgid "Affiliate Tags"
 msgstr "Партнерские теги"
 
 #: includes/admin/settings/class-afwc-commissions-admin-settings.php:154
-#: includes/admin/settings/class-afwc-commissions-admin-settings.php:302
+#: includes/admin/settings/class-afwc-commissions-admin-settings.php:298
 msgctxt "The group name for lifetime commission affiliates excluded list"
 msgid "Affiliates"
 msgstr "Партнёры"
@@ -5170,7 +5161,7 @@ msgstr "Самое важное, что я усвоил, работая с на�
 #. translators: %s Email heading.
 #: includes/emails/class-afwc-email-commission-paid.php:234
 #: includes/emails/class-afwc-email-new-conversion-received.php:227
-#: includes/emails/class-afwc-email-new-registration-received.php:224
+#: includes/emails/class-afwc-email-new-registration-received.php:226
 #: includes/emails/class-afwc-email-welcome-affiliate.php:226
 msgid "This controls the main heading contained within the email notification. Leave blank to use the default heading: <code>%s</code>."
 msgstr "Эта настройка управляет основным заголовком, содержащимся в уведомлении по электронной почте. Оставьте поле пустым, чтобы использовать заголовок по умолчанию: <code>%s</code>."
@@ -5494,12 +5485,12 @@ msgctxt "title of integration section at registration form setting"
 msgid "Add custom fields to the registration form"
 msgstr "Добавить пользовательские поля в форму регистрации"
 
-#: includes/admin/class-afwc-admin-order-affiliate-details.php:162
+#: includes/admin/class-afwc-admin-order-affiliate-details.php:147
 msgctxt "Title of link/unlink affiliate in order metabox"
 msgid "Assigned to affiliate"
 msgstr "Назначить партнёру"
 
-#: includes/admin/class-afwc-admin-order-affiliate-details.php:174
+#: includes/admin/class-afwc-admin-order-affiliate-details.php:169
 msgctxt "Title of total commission in order metabox"
 msgid "Total commissions:"
 msgstr "Всего комиссий:"

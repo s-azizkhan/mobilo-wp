@@ -4,19 +4,19 @@
  *
  * @package     WC-compat
  * @since       7.0.0
- * @version     1.0.1
+ * @version     1.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'SA_WC_Compatibility' ) ) {
+if ( ! class_exists( 'SA_WC_AFW_Compatibility' ) ) {
 
 	/**
 	 * Class to check WooCommerce compatibility.
 	 */
-	class SA_WC_Compatibility {
+	class SA_WC_AFW_Compatibility {
 
 		/**
 		 * Method to check if WooCommerce is Greater Than And Equal To 6.4.0

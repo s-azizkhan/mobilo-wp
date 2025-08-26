@@ -3,7 +3,7 @@
  * Main class for Affiliates Dashboard
  *
  * @package     affiliate-for-woocommerce/includes/admin/
- * @version     1.23.1
+ * @version     1.23.2
  */
 
 // Exit if accessed directly.
@@ -1726,7 +1726,6 @@ if ( ! class_exists( 'AFWC_Admin_Dashboard' ) ) {
 
 		/**
 		 * Search for affiliate parent and return
-		 * Can use `afwc-affiliate-search` class instead of this.
 		 *
 		 * @return void
 		 */
@@ -1746,10 +1745,11 @@ if ( ! class_exists( 'AFWC_Admin_Dashboard' ) ) {
 				wp_die();
 			}
 			$excludes = apply_filters( 'afwc_exclude_parent_for_affiliate', array( $user_id ), $user_id );
-			$args     = array(
-				'search'         => '*' . $term . '*',
-				'search_columns' => array( 'ID', 'user_nicename', 'user_login', 'user_email', 'display_name' ),
-				'exclude'        => $excludes,
+			$args     = array_merge(
+				afwc_get_default_user_search_args( $term ),
+				array(
+					'exclude' => $excludes,
+				)
 			);
 			$users    = is_callable( array( $affiliate_for_woocommerce, 'get_affiliates' ) ) ? $affiliate_for_woocommerce->get_affiliates( $args ) : array();
 			$users    = ! empty( $users ) ? $users : array();

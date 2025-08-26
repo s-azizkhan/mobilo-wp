@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Affiliate For WooCommerce 8.42.0\n"
+"Project-Id-Version: Affiliate For WooCommerce 8.43.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
@@ -410,7 +410,7 @@ msgid "Guest"
 msgstr "Gast"
 
 #. translators: Email address
-#: includes/admin/class-afwc-admin-affiliates.php:2551
+#: includes/admin/class-afwc-admin-affiliates.php:2546
 msgctxt "Confirmation message for adding the new customer as lifetime commission customer"
 msgid "%s - Would you like to link this customer?"
 msgstr "%s - Wilt u deze klant koppelen?"
@@ -527,7 +527,7 @@ msgstr "nulcommissie toepassen"
 
 #: includes/admin/class-afwc-admin-dashboard.php:508
 #: includes/admin/class-afwc-admin-dashboard.php:1702
-#: includes/admin/class-afwc-admin-dashboard.php:1738
+#: includes/admin/class-afwc-admin-dashboard.php:1737
 #: includes/admin/class-afwc-campaign-dashboard.php:84
 #: includes/admin/class-afwc-campaign-dashboard.php:102
 #: includes/admin/class-afwc-campaign-dashboard.php:165
@@ -758,43 +758,35 @@ msgctxt "Link to open plan dashboard"
 msgid "Review plans"
 msgstr "Plannen beoordelen"
 
-#: includes/admin/class-afwc-admin-order-affiliate-details.php:127
+#: includes/admin/class-afwc-admin-order-affiliate-details.php:111
 msgctxt "Affiliate's order meta box title"
 msgid "Affiliate details"
 msgstr "Affiliate gegevens"
 
-#: includes/admin/class-afwc-admin-order-affiliate-details.php:162
+#: includes/admin/class-afwc-admin-order-affiliate-details.php:147
 msgctxt "Title of link/unlink affiliate in order metabox"
 msgid "Assigned to affiliate"
 msgstr "Toegewezen aan filiaal"
 
-#: includes/admin/class-afwc-admin-order-affiliate-details.php:163
+#: includes/admin/class-afwc-admin-order-affiliate-details.php:148
 msgctxt "Description for search and assign affiliate in order metabox"
 msgid "Search affiliate by email, username, name or user ID to assign this order to them."
 msgstr "Zoek partners op e-mail, gebruikersnaam, naam of gebruikers-ID om deze bestelling aan hen toe te wijzen."
 
-#: includes/admin/class-afwc-admin-order-affiliate-details.php:164
-#: includes/class-affiliate-for-woocommerce.php:966
-#: includes/tracking/class-afwc-coupon.php:111
+#: includes/class-affiliate-for-woocommerce.php:982
 msgctxt "affiliate search placeholder"
 msgid "Search by email, username or name"
 msgstr "Zoeken op e-mail, gebruikersnaam of naam"
 
-#: includes/admin/class-afwc-admin-order-affiliate-details.php:174
+#: includes/admin/class-afwc-admin-order-affiliate-details.php:169
 msgctxt "Title of total commission in order metabox"
 msgid "Total commissions:"
 msgstr "Totale commissies:"
 
-#: includes/admin/class-afwc-admin-order-affiliate-details.php:178
+#: includes/admin/class-afwc-admin-order-affiliate-details.php:173
 msgctxt "Description for total commission when multi-tier setting is enable"
 msgid "(including multi-tier commissions)"
 msgstr "(inclusief commissies op meerdere niveaus)"
-
-#. translators: 1: user display name 2: user ID 3: user email
-#: includes/admin/class-afwc-admin-order-affiliate-details.php:206
-msgctxt "linked affiliate info. in order metabox select2"
-msgid "%1$s (#%2$s &ndash; %3$s)"
-msgstr "%1$s (#%2$s &ndash; %3$s)"
 
 #: includes/admin/class-afwc-admin-settings.php:69
 msgctxt "affiliate setting tab name"
@@ -1016,7 +1008,7 @@ msgctxt "The group name affiliate tags list"
 msgid "Affiliate Tags"
 msgstr "Affiliate tags"
 
-#: includes/admin/class-afwc-campaign-dashboard.php:591
+#: includes/admin/class-afwc-campaign-dashboard.php:588
 msgctxt "authorization failure message"
 msgid "You are not allowed to re-generate sample campaigns."
 msgstr "Je mag geen voorbeeldcampagnes opnieuw genereren."
@@ -1329,13 +1321,13 @@ msgid "Search by affiliates or affiliate tags"
 msgstr "Zoeken op filialen of affiliate tags"
 
 #: includes/admin/settings/class-afwc-commissions-admin-settings.php:154
-#: includes/admin/settings/class-afwc-commissions-admin-settings.php:302
+#: includes/admin/settings/class-afwc-commissions-admin-settings.php:298
 msgctxt "The group name for lifetime commission affiliates excluded list"
 msgid "Affiliates"
 msgstr "Filialen"
 
 #: includes/admin/settings/class-afwc-commissions-admin-settings.php:156
-#: includes/admin/settings/class-afwc-commissions-admin-settings.php:310
+#: includes/admin/settings/class-afwc-commissions-admin-settings.php:306
 msgctxt "The group name for lifetime commission affiliate tags excluded list"
 msgid "Affiliate Tags"
 msgstr "Affiliate tags"
@@ -1976,7 +1968,7 @@ msgid "PayPal Manual"
 msgstr "PayPal-handleiding"
 
 #: includes/affiliate-for-woocommerce-functions.php:85
-#: includes/affiliate-for-woocommerce-functions.php:1168
+#: includes/affiliate-for-woocommerce-functions.php:1196
 msgctxt "Stripe payout method title"
 msgid "Stripe"
 msgstr "Streep"
@@ -1997,82 +1989,82 @@ msgctxt "Coupon: Store Credit payout method title"
 msgid "Coupon: Store Credit"
 msgstr "Coupon: Tegoed"
 
-#: includes/affiliate-for-woocommerce-functions.php:374
+#: includes/affiliate-for-woocommerce-functions.php:402
 msgid "Join our affiliate program"
 msgstr "Word lid van ons partnerprogramma"
 
-#: includes/affiliate-for-woocommerce-functions.php:975
+#: includes/affiliate-for-woocommerce-functions.php:1003
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for today"
 msgid "Today"
 msgstr "Vandaag"
 
-#: includes/affiliate-for-woocommerce-functions.php:976
+#: includes/affiliate-for-woocommerce-functions.php:1004
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for yesterday"
 msgid "Yesterday"
 msgstr "Gisteren"
 
-#: includes/affiliate-for-woocommerce-functions.php:979
+#: includes/affiliate-for-woocommerce-functions.php:1007
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for this week"
 msgid "This Week"
 msgstr "Deze week"
 
-#: includes/affiliate-for-woocommerce-functions.php:980
+#: includes/affiliate-for-woocommerce-functions.php:1008
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last week"
 msgid "Last Week"
 msgstr "Vorige week"
 
-#: includes/affiliate-for-woocommerce-functions.php:981
+#: includes/affiliate-for-woocommerce-functions.php:1009
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last 4 weeks"
 msgid "Last 4 Weeks"
 msgstr "Laatste 4 weken"
 
-#: includes/affiliate-for-woocommerce-functions.php:984
+#: includes/affiliate-for-woocommerce-functions.php:1012
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for this month"
 msgid "This Month"
 msgstr "Deze maand"
 
-#: includes/affiliate-for-woocommerce-functions.php:985
+#: includes/affiliate-for-woocommerce-functions.php:1013
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last month"
 msgid "Last Month"
 msgstr "Laatste maand"
 
-#: includes/affiliate-for-woocommerce-functions.php:986
+#: includes/affiliate-for-woocommerce-functions.php:1014
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for 3 months"
 msgid "3 Months"
 msgstr "3 maanden"
 
-#: includes/affiliate-for-woocommerce-functions.php:987
+#: includes/affiliate-for-woocommerce-functions.php:1015
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for 6 months"
 msgid "6 Months"
 msgstr "6 maanden"
 
-#: includes/affiliate-for-woocommerce-functions.php:990
+#: includes/affiliate-for-woocommerce-functions.php:1018
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for this year"
 msgid "This Year"
 msgstr "Dit jaar"
 
-#: includes/affiliate-for-woocommerce-functions.php:991
+#: includes/affiliate-for-woocommerce-functions.php:1019
 #: assets/js/admin/admin.js:1
 msgctxt "smart dates option for last year"
 msgid "Last Year"
 msgstr "Vorig jaar"
 
-#: includes/affiliate-for-woocommerce-functions.php:1062
+#: includes/affiliate-for-woocommerce-functions.php:1090
 msgctxt "click to copy title"
 msgid "Click to copy"
 msgstr "Klik om te kopiëren"
 
-#: includes/affiliate-for-woocommerce-functions.php:1155
+#: includes/affiliate-for-woocommerce-functions.php:1183
 msgctxt "PayPal payout method title"
 msgid "PayPal"
 msgstr "PayPal"
@@ -2119,69 +2111,68 @@ msgid "No Affiliate Tags found"
 msgstr "Geen Affiliate Tags gevonden"
 
 #. translators: A small arrow
-#: includes/class-affiliate-for-woocommerce.php:435
+#: includes/class-affiliate-for-woocommerce.php:437
 msgid "Affiliates Dashboard"
 msgstr "Affiliates Dashboard"
 
 #. translators: A small arrow
-#: includes/class-affiliate-for-woocommerce.php:435
+#: includes/class-affiliate-for-woocommerce.php:437
 #: assets/js/admin/admin.js:1
 msgid "Affiliates"
 msgstr "Filialen"
 
-#: includes/class-affiliate-for-woocommerce.php:444
+#: includes/class-affiliate-for-woocommerce.php:446
 msgctxt "Page title for setup guide page"
 msgid "Getting Started"
 msgstr "Aan de slag"
 
-#: includes/class-affiliate-for-woocommerce.php:444
+#: includes/class-affiliate-for-woocommerce.php:446
 msgctxt "Menu name for setup guide page"
 msgid "Getting Started"
 msgstr "Aan de slag"
 
 #. translators: 1: user display name 2: user ID 3: user email
-#: includes/class-affiliate-for-woocommerce.php:956
-#: includes/tracking/class-afwc-coupon.php:99
+#: includes/class-affiliate-for-woocommerce.php:972
 msgid "%1$s (#%2$s &ndash; %3$s)"
 msgstr "%1$s (#%2$s &ndash; %3$s)"
 
-#: includes/class-affiliate-for-woocommerce.php:1075
+#: includes/class-affiliate-for-woocommerce.php:1081
 msgctxt "text to copy the affiliate's product-specific referral link"
 msgid "Click to copy referral link"
 msgstr "Klik om doorverwijslink te kopiëren"
 
 #. translators: 1: Callable name 2: Error message
-#: includes/class-affiliate-for-woocommerce.php:1147
+#: includes/class-affiliate-for-woocommerce.php:1153
 msgctxt "Error message details"
 msgid "Error in %1$s. Details: %2$s"
 msgstr "Fout in %1$s. Details: %2$s"
 
-#: includes/class-affiliate-for-woocommerce.php:1226
+#: includes/class-affiliate-for-woocommerce.php:1232
 msgctxt "referral url identifier updating error message"
 msgid "Affiliate ID missing for updating affiliate URL identifier."
 msgstr "Affiliate ID ontbreekt voor het bijwerken van affiliate URL-identifier."
 
-#: includes/class-affiliate-for-woocommerce.php:1236
+#: includes/class-affiliate-for-woocommerce.php:1242
 msgctxt "referral url identifier updating error message"
 msgid "The affiliate URL identifier can not be empty."
 msgstr "De URL-identifier van het filiaal kan niet leeg zijn."
 
-#: includes/class-affiliate-for-woocommerce.php:1245
+#: includes/class-affiliate-for-woocommerce.php:1251
 msgctxt "referral url identifier updating error message"
 msgid "Numeric values are not allowed for affiliate URL identifier."
 msgstr "Numerieke waarden zijn niet toegestaan voor affiliate URL identifier."
 
-#: includes/class-affiliate-for-woocommerce.php:1254
+#: includes/class-affiliate-for-woocommerce.php:1260
 msgctxt "referral identifier pattern validation error message"
 msgid "Invalid affiliate URL identifier. It should be a combination of alphabets and numbers, but the number should not be in the first position."
 msgstr "Ongeldige URL-identificatiecode. Het moet een combinatie van letters en cijfers zijn, maar het cijfer mag niet op de eerste positie staan."
 
-#: includes/class-affiliate-for-woocommerce.php:1269
+#: includes/class-affiliate-for-woocommerce.php:1275
 msgctxt "referral url identifier updating error message"
 msgid "Old and new affiliate URL identifier are same. Please choose a different identifier."
 msgstr "De oude en nieuwe URL-identificatie zijn hetzelfde. Kies een andere identifier."
 
-#: includes/class-affiliate-for-woocommerce.php:1277
+#: includes/class-affiliate-for-woocommerce.php:1283
 msgctxt "referral url identifier updating error message"
 msgid "The URL identifier already exists. Please choose a different identifier."
 msgstr "De URL-identifier bestaat al. Kies een andere identifier."
@@ -2672,11 +2663,11 @@ msgctxt "Error message for referral order count rule"
 msgid "Unable to fetch the total count for valid referral orders"
 msgstr "Kan het totale aantal geldige verwijzingsopdrachten niet ophalen"
 
-#: includes/tracking/class-afwc-coupon.php:110
+#: includes/tracking/class-afwc-coupon.php:84
 msgid "Assign to affiliate"
 msgstr "Toewijzen aan filiaal"
 
-#: includes/tracking/class-afwc-coupon.php:120
+#: includes/tracking/class-afwc-coupon.php:95
 msgctxt "help tip for search and assign affiliate"
 msgid "Search affiliate by email, username, name or user id to assign this coupon to them. Affiliates will see this coupon in their My account > Affiliates > Profile."
 msgstr "Zoek affiliates op e-mail, gebruikersnaam, naam of gebruikers-id om deze coupon aan hen toe te wijzen. Affiliates zien deze coupon in hun Mijn account > Affiliates > Profiel."
@@ -3067,21 +3058,21 @@ msgstr "daar"
 
 #: includes/emails/class-afwc-email-commission-paid.php:217
 #: includes/emails/class-afwc-email-new-conversion-received.php:210
-#: includes/emails/class-afwc-email-new-registration-received.php:207
+#: includes/emails/class-afwc-email-new-registration-received.php:209
 #: includes/emails/class-afwc-email-welcome-affiliate.php:209
 msgid "Enable/Disable"
 msgstr "Inschakelen/uitschakelen"
 
 #: includes/emails/class-afwc-email-commission-paid.php:219
 #: includes/emails/class-afwc-email-new-conversion-received.php:212
-#: includes/emails/class-afwc-email-new-registration-received.php:209
+#: includes/emails/class-afwc-email-new-registration-received.php:211
 #: includes/emails/class-afwc-email-welcome-affiliate.php:211
 msgid "Enable this email notification"
 msgstr "Deze e-mailmelding inschakelen"
 
 #: includes/emails/class-afwc-email-commission-paid.php:223
 #: includes/emails/class-afwc-email-new-conversion-received.php:216
-#: includes/emails/class-afwc-email-new-registration-received.php:213
+#: includes/emails/class-afwc-email-new-registration-received.php:215
 #: includes/emails/class-afwc-email-welcome-affiliate.php:215
 msgid "Subject"
 msgstr "Onderwerp"
@@ -3094,7 +3085,7 @@ msgstr "Dit bepaalt de onderwerpregel van de e-mail. Laat leeg om het standaard 
 
 #: includes/emails/class-afwc-email-commission-paid.php:231
 #: includes/emails/class-afwc-email-new-conversion-received.php:224
-#: includes/emails/class-afwc-email-new-registration-received.php:221
+#: includes/emails/class-afwc-email-new-registration-received.php:223
 #: includes/emails/class-afwc-email-welcome-affiliate.php:223
 msgid "Email Heading"
 msgstr "E-mail koptekst"
@@ -3102,42 +3093,42 @@ msgstr "E-mail koptekst"
 #. translators: %s Email heading.
 #: includes/emails/class-afwc-email-commission-paid.php:234
 #: includes/emails/class-afwc-email-new-conversion-received.php:227
-#: includes/emails/class-afwc-email-new-registration-received.php:224
+#: includes/emails/class-afwc-email-new-registration-received.php:226
 #: includes/emails/class-afwc-email-welcome-affiliate.php:226
 msgid "This controls the main heading contained within the email notification. Leave blank to use the default heading: <code>%s</code>."
 msgstr "Dit bepaalt de hoofdtitel in de e-mailmelding. Laat leeg om de standaardkop te gebruiken: <code>%s</code>."
 
 #: includes/emails/class-afwc-email-commission-paid.php:239
 #: includes/emails/class-afwc-email-new-conversion-received.php:232
-#: includes/emails/class-afwc-email-new-registration-received.php:229
+#: includes/emails/class-afwc-email-new-registration-received.php:231
 #: includes/emails/class-afwc-email-welcome-affiliate.php:231
 msgid "Additional content"
 msgstr "Extra inhoud"
 
 #: includes/emails/class-afwc-email-commission-paid.php:240
 #: includes/emails/class-afwc-email-new-conversion-received.php:233
-#: includes/emails/class-afwc-email-new-registration-received.php:230
+#: includes/emails/class-afwc-email-new-registration-received.php:232
 #: includes/emails/class-afwc-email-welcome-affiliate.php:232
 msgid "Text to appear below the main email content."
 msgstr "Tekst die onder de hoofdinhoud van de e-mail moet worden weergegeven."
 
 #: includes/emails/class-afwc-email-commission-paid.php:242
 #: includes/emails/class-afwc-email-new-conversion-received.php:235
-#: includes/emails/class-afwc-email-new-registration-received.php:232
+#: includes/emails/class-afwc-email-new-registration-received.php:234
 #: includes/emails/class-afwc-email-welcome-affiliate.php:234
 msgid "N/A"
 msgstr "N.V.T."
 
 #: includes/emails/class-afwc-email-commission-paid.php:247
 #: includes/emails/class-afwc-email-new-conversion-received.php:240
-#: includes/emails/class-afwc-email-new-registration-received.php:237
+#: includes/emails/class-afwc-email-new-registration-received.php:239
 #: includes/emails/class-afwc-email-welcome-affiliate.php:239
 msgid "Email type"
 msgstr "Type e-mail"
 
 #: includes/emails/class-afwc-email-commission-paid.php:249
 #: includes/emails/class-afwc-email-new-conversion-received.php:242
-#: includes/emails/class-afwc-email-new-registration-received.php:239
+#: includes/emails/class-afwc-email-new-registration-received.php:241
 #: includes/emails/class-afwc-email-welcome-affiliate.php:241
 msgid "Choose which format of email to send."
 msgstr "Kies welk formaat e-mail u wilt verzenden."
@@ -3193,18 +3184,18 @@ msgctxt "heading for Affiliate Manager - New Registration Received"
 msgid "New affiliate registration"
 msgstr "Registratie nieuwe leden"
 
-#: includes/emails/class-afwc-email-new-registration-received.php:94
+#: includes/emails/class-afwc-email-new-registration-received.php:96
 msgctxt "Label for additional information"
 msgid "Additional information"
 msgstr "Aanvullende informatie"
 
-#: includes/emails/class-afwc-email-new-registration-received.php:189
+#: includes/emails/class-afwc-email-new-registration-received.php:191
 msgctxt "Label for affiliate user website link"
 msgid "Website"
 msgstr "Website"
 
 #. translators: %s Email subject.
-#: includes/emails/class-afwc-email-new-registration-received.php:216
+#: includes/emails/class-afwc-email-new-registration-received.php:218
 msgctxt "Description for the email subject for the new registration received email"
 msgid "This controls the email subject line. Leave blank to use the default subject: <code>%s</code>."
 msgstr "Dit bepaalt de onderwerpregel van de e-mail. Laat leeg om het standaard onderwerp te gebruiken: <code>%s</code>."

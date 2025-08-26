@@ -4,7 +4,7 @@
  *
  * @package  affiliate-for-woocommerce/includes/
  * @since    1.10.0
- * @version  1.12.0
+ * @version  1.12.1
  */
 
 // Exit if accessed directly.
@@ -90,14 +90,14 @@ if ( ! class_exists( 'AFWC_API' ) ) {
 		 */
 		public function __call( $function_name = '', $arguments = array() ) {
 
-			if ( empty( $function_name ) || ! is_callable( 'SA_WC_Compatibility', $function_name ) ) {
+			if ( empty( $function_name ) || ! is_callable( 'SA_WC_AFW_Compatibility', $function_name ) ) {
 				return;
 			}
 
 			if ( ! empty( $arguments ) ) {
-				return call_user_func_array( 'SA_WC_Compatibility::' . $function_name, $arguments );
+				return call_user_func_array( 'SA_WC_AFW_Compatibility::' . $function_name, $arguments );
 			} else {
-				return call_user_func( 'SA_WC_Compatibility::' . $function_name );
+				return call_user_func( 'SA_WC_AFW_Compatibility::' . $function_name );
 			}
 		}
 
@@ -190,7 +190,7 @@ if ( ! class_exists( 'AFWC_API' ) ) {
 
 				$conversion_data['affiliate_id'] = apply_filters(
 					'afwc_id_for_order',
-					! empty( $affiliate_id ) ? $affiliate_id : afwc_get_referrer_id( $customer ),
+					! empty( $affiliate_id ) ? $affiliate_id : afwc_get_referrer_id( $customer, $order ),
 					array(
 						'order_id' => $oid,
 						'source'   => $this,

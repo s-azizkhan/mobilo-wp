@@ -4,7 +4,7 @@
  *
  * @package     affiliate-for-woocommerce/includes/admin/settings/
  * @since       7.18.0
- * @version     1.4.1
+ * @version     1.4.2
  */
 
 // Exit if accessed directly.
@@ -322,38 +322,39 @@ if ( ! class_exists( 'AFWC_Payouts_Admin_Settings' ) ) {
 			$values = array();
 
 			if ( true === $for_search ) {
-				$affiliate_search = array(
-					'search'         => '*' . $term . '*',
-					'search_columns' => array( 'ID', 'user_nicename', 'user_login', 'user_email', 'display_name' ),
-					'number'         => 10, // We are fetching only 10 affiliates in the search - to start off.
-					'meta_query'     => array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
-						// Check affiliate has either PayPal or Stripe details or payout method as coupons in their meta.
-						'relation' => 'OR',
-						array(
-							'key'     => 'afwc_paypal_email',
-							'value'   => '',
-							'compare' => '!=',
-						),
-						array(
-							'relation' => 'AND',
+				$affiliate_search = array_merge(
+					afwc_get_default_user_search_args( $term ),
+					array(
+						'number'     => 10, // We are fetching only 10 affiliates in the search - to start off.
+						'meta_query' => array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+							// Check affiliate has either PayPal or Stripe details or payout method as coupons in their meta.
+							'relation' => 'OR',
 							array(
-								'key'     => 'afwc_stripe_user_id',
+								'key'     => 'afwc_paypal_email',
 								'value'   => '',
 								'compare' => '!=',
 							),
 							array(
-								'key'     => 'afwc_stripe_access_token',
-								'value'   => '',
-								'compare' => '!=',
+								'relation' => 'AND',
+								array(
+									'key'     => 'afwc_stripe_user_id',
+									'value'   => '',
+									'compare' => '!=',
+								),
+								array(
+									'key'     => 'afwc_stripe_access_token',
+									'value'   => '',
+									'compare' => '!=',
+								),
+							),
+							// Coupons will not have additional meta, so fallback on the affiliate's payout meta.
+							array(
+								'key'     => 'afwc_payout_method',
+								'value'   => array( 'coupon-fixed-cart', 'wsc-store-credit' ),
+								'compare' => 'IN',
 							),
 						),
-						// Coupons will not have additional meta, so fallback on the affiliate's payout meta.
-						array(
-							'key'     => 'afwc_payout_method',
-							'value'   => array( 'coupon-fixed-cart', 'wsc-store-credit' ),
-							'compare' => 'IN',
-						),
-					),
+					)
 				);
 			} else {
 				$affiliate_search = array(

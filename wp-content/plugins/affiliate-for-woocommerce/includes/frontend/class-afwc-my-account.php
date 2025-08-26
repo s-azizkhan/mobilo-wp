@@ -4,7 +4,7 @@
  *
  * @package   affiliate-for-woocommerce/includes/frontend/
  * @since     1.0.0
- * @version   1.16.2
+ * @version   1.16.3
  */
 
 // Exit if accessed directly.
@@ -104,14 +104,14 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 		 */
 		public function __call( $function_name = '', $arguments = array() ) {
 
-			if ( empty( $function_name ) || ! is_callable( 'SA_WC_Compatibility', $function_name ) ) {
+			if ( empty( $function_name ) || ! is_callable( 'SA_WC_AFW_Compatibility', $function_name ) ) {
 				return;
 			}
 
 			if ( ! empty( $arguments ) ) {
-				return call_user_func_array( 'SA_WC_Compatibility::' . $function_name, $arguments );
+				return call_user_func_array( 'SA_WC_AFW_Compatibility::' . $function_name, $arguments );
 			} else {
-				return call_user_func( 'SA_WC_Compatibility::' . $function_name );
+				return call_user_func( 'SA_WC_AFW_Compatibility::' . $function_name );
 			}
 		}
 
@@ -2347,7 +2347,7 @@ if ( ! class_exists( 'AFWC_My_Account' ) ) {
 		 *
 		 * @return array An array containing formatted data with optional pagination info.
 		 */
-		protected function get_table_data( $args = array(), callable $data_callback = null, $data_name = '', $output_key = 'rows' ) {
+		protected function get_table_data( $args = array(), $data_callback = null, $data_name = '', $output_key = 'rows' ) {
 			$args = is_array( $args ) ? $args : array();
 
 			if ( ! afwc_is_valid_date_range( $args ) ) {

@@ -4,7 +4,7 @@
  *
  * @package     affiliate-for-woocommerce/includes/admin/settings/
  * @since       7.18.0
- * @version     1.0.3
+ * @version     1.0.4
  */
 
 // Exit if accessed directly.
@@ -205,11 +205,7 @@ if ( ! class_exists( 'AFWC_Commissions_Admin_Settings' ) ) {
 
 			if ( true === in_array( 'affiliates', $group, true ) ) {
 				if ( true === $for_search ) {
-					// Can use `afwc-affiliate-search` class instead of this.
-					$affiliate_search = array(
-						'search'         => '*' . $term . '*',
-						'search_columns' => array( 'ID', 'user_nicename', 'user_login', 'user_email', 'display_name' ),
-					);
+					$affiliate_search = afwc_get_default_user_search_args( $term );
 				} else {
 					$affiliate_search = array(
 						'include' => ! is_array( $term ) ? (array) $term : $term,

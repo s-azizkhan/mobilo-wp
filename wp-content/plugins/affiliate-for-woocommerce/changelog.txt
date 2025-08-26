@@ -1,5 +1,16 @@
 *** Affiliate For WooCommerce Changelog ***
 
+2025-08-25 - version 8.43.0
+* New: WooCommerce 10.1.1 compatible
+* Fix: Affiliates not getting commission if the customer applies a coupon in one browser and completes the order from another browser
+* Fix: Manage affiliate link in the Affiliate - New Conversion Received email not taking the store admin to the specific affiliate in the affiliates dashboard
+* Fix: A few icons are not visible in some cases on My Account > Affiliate [User]
+* Fix: PHP Deprecated: Implicitly marking parameter as nullable is deprecated, the explicit nullable type must be used instead [PHP 8.4]
+* Update: Rename WooCommerce compatibility file to prevent PHP fatal errors on plugin activation in some cases
+* Update: Code improvements
+* Update: Translations synced
+* Update: POT file
+
 2025-08-18 - version 8.42.0
 * Fix: PHP fatal error: Call to undefined function WC() during WooCommerce plugin update or if folder renamed
 * Update: Restructure plugin files and folders for better maintainability

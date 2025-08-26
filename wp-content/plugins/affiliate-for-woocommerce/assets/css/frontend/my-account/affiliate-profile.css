@@ -6,18 +6,18 @@
 	background-color: currentColor;
 }
 #afwc_referral_url_container .fa.fa-pencil-alt {
-	-webkit-mask: url('../../images/afwc-edit-icon.svg') no-repeat center;
-	mask: url('../../images/afwc-edit-icon.svg') no-repeat center;
+	-webkit-mask: url('../../../images/afwc-edit-icon.svg') no-repeat center;
+	mask: url('../../../images/afwc-edit-icon.svg') no-repeat center;
 }
 #afwc_referral_url_container .fa.fa-save {
-	-webkit-mask: url('../../images/afwc-save-icon.svg') no-repeat center;
-	mask: url('../../images/afwc-save-icon.svg') no-repeat center;
+	-webkit-mask: url('../../../images/afwc-save-icon.svg') no-repeat center;
+	mask: url('../../../images/afwc-save-icon.svg') no-repeat center;
 	height: 1.625em;
 	width: 1.625em;
 }
 #afwc_referral_url_container .fa.fa-light.fa-ban {
-	-webkit-mask: url('../../images/afwc-cancel-icon.svg') no-repeat center;
-	mask: url('../../images/afwc-cancel-icon.svg') no-repeat center;
+	-webkit-mask: url('../../../images/afwc-cancel-icon.svg') no-repeat center;
+	mask: url('../../../images/afwc-cancel-icon.svg') no-repeat center;
 }
 #afwc_save_identifier svg:hover {
 	stroke-width: 2;
@@ -37,13 +37,13 @@
 	background-size: 2em;
 }
 .afwc_status_spinner {
-	background: url(../../../../../../wp-admin/images/spinner.gif) no-repeat center;
+	background: url(../../../../../../../wp-admin/images/spinner.gif) no-repeat center;
 }
 .afwc_status_yes {
-	background: url(../../../../../../wp-admin/images/yes.png) no-repeat center;
+	background: url(../../../../../../../wp-admin/images/yes.png) no-repeat center;
 }
 .afwc_status_no {
-	background: url(../../../../../../wp-admin/images/no.png) no-repeat center;
+	background: url(../../../../../../../wp-admin/images/no.png) no-repeat center;
 }
 #afwc_id_msg.afwc_success {
 	color: green;

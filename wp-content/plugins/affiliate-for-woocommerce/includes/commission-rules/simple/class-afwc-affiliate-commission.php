@@ -4,7 +4,7 @@
  *
  * @package     affiliate-for-woocommerce/includes/commission-rules/simple/
  * @since       2.5.0
- * @version     2.0.1
+ * @version     2.0.2
  */
 
 // Exit if accessed directly.
@@ -67,10 +67,7 @@ if ( ! class_exists( 'AFWC_Affiliate_Commission' ) && class_exists( Number_Rule:
 			global $affiliate_for_woocommerce;
 
 			if ( true === $for_ajax ) {
-				$search = array(
-					'search'         => '*' . $term . '*',
-					'search_columns' => array( 'ID', 'user_nicename', 'user_login', 'user_email', 'display_name' ),
-				);
+				$search = afwc_get_default_user_search_args( $term );
 			} else {
 				// Fetch affiliates by user ids.
 				if ( ! is_array( $term ) ) {

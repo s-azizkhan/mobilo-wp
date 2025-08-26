@@ -4,7 +4,7 @@
  *
  * @package     affiliate-for-woocommerce/includes/
  * @since       1.0.0
- * @version     1.27.0
+ * @version     1.27.1
  */
 
 // Exit if accessed directly.
@@ -83,14 +83,14 @@ if ( ! class_exists( 'Affiliate_For_WooCommerce' ) ) {
 		 */
 		public function __call( $function_name = '', $arguments = array() ) {
 
-			if ( empty( $function_name ) || ! is_callable( 'SA_WC_Compatibility', $function_name ) ) {
+			if ( empty( $function_name ) || ! is_callable( 'SA_WC_AFW_Compatibility', $function_name ) ) {
 				return;
 			}
 
 			if ( ! empty( $arguments ) ) {
-				return call_user_func_array( 'SA_WC_Compatibility::' . $function_name, $arguments );
+				return call_user_func_array( 'SA_WC_AFW_Compatibility::' . $function_name, $arguments );
 			} else {
-				return call_user_func( 'SA_WC_Compatibility::' . $function_name );
+				return call_user_func( 'SA_WC_AFW_Compatibility::' . $function_name );
 			}
 		}
 
@@ -267,7 +267,7 @@ if ( ! class_exists( 'Affiliate_For_WooCommerce' ) ) {
 		 * Includes
 		 */
 		public function includes() {
-			include_once 'integration/woocommerce/compat/class-sa-wc-compatibility.php';
+			include_once 'integration/woocommerce/compat/class-sa-wc-afw-compatibility.php';
 			include_once 'affiliate-for-woocommerce-functions.php';
 			include_once 'afw-wp-compatibility-functions.php';
 			include_once 'lib/class-afwc-user-agent-parser.php';
@@ -381,6 +381,8 @@ if ( ! class_exists( 'Affiliate_For_WooCommerce' ) ) {
 			include_once 'class-afwc-registration-submissions.php';
 			include_once 'class-afwc-rewrite-rules.php';
 			include_once 'class-afwc-merge-tags.php';
+
+			include_once 'handlers/class-afwc-url-handler.php';
 
 			include_once 'reports/class-afwc-payout-history.php';
 			include_once 'reports/class-afwc-referred-products.php';
@@ -915,7 +917,7 @@ if ( ! class_exists( 'Affiliate_For_WooCommerce' ) ) {
 		}
 
 		/**
-		 * Method to render the affiliate search.
+		 * Method to render the single select affiliate search select2.
 		 *
 		 * @param string $id The ID of the field.
 		 * @param array  $args The arguments.
@@ -923,29 +925,43 @@ if ( ! class_exists( 'Affiliate_For_WooCommerce' ) ) {
 		 * @return void
 		 */
 		public function render_affiliate_search( $id = '', $args = array() ) {
-
-			if ( empty( $id ) ) {
+			if ( empty( $id ) || ! is_array( $args ) ) {
 				return;
 			}
 
-			$affiliate_id = ! empty( $args['affiliate_id'] ) ? intval( $args['affiliate_id'] ) : 0;
+			$default_localize_data = array(
+				'ajaxurl'  => admin_url( 'admin-ajax.php' ),
+				'security' => wp_create_nonce( 'afwc-search-affiliate-users' ),
+			);
+			$args['localize_data'] = ( ! empty( $args['localize_data'] ) && is_array( $args['localize_data'] ) )
+				? array_merge( $default_localize_data, $args['localize_data'] )
+				: $default_localize_data;
+
+			$default_args = array(
+				'affiliate_id' => 0,
+				'style'        => 'width: 100%;',
+				'allow_clear'  => 'true',
+				'disabled'     => false,
+			);
+			$args         = wp_parse_args( $args, $default_args );
+
+			$affiliate_id = intval( $args['affiliate_id'] );
 			$class        = 'afwc-affiliate-search';
 
-			$plugin_data = self::get_plugin_data();
-			wp_register_script( 'affiliate-user-search', AFWC_PLUGIN_URL . '/assets/js/lib/affiliate-search.js', array( 'jquery', 'wp-i18n', 'select2', 'wc-enhanced-select' ), $plugin_data['Version'], true );
-			wp_enqueue_script( 'affiliate-user-search' );
+			if ( ! wp_script_is( 'affiliate-user-search' ) ) {
+				$plugin_data = self::get_plugin_data();
+				wp_register_script( 'affiliate-user-search', AFWC_PLUGIN_URL . '/assets/js/lib/affiliate-search.js', array( 'jquery', 'wp-i18n', 'select2', 'wc-enhanced-select' ), $plugin_data['Version'], true );
 
-			wp_localize_script(
-				'affiliate-user-search',
-				'affiliateParams',
-				array(
-					'ajaxurl'  => admin_url( 'admin-ajax.php' ),
-					'security' => wp_create_nonce( 'afwc-search-affiliate-users' ),
-				)
-			);
+				if ( function_exists( 'wp_set_script_translations' ) ) {
+					wp_set_script_translations( 'affiliate-user-search', 'affiliate-for-woocommerce' );
+				}
+
+				wp_enqueue_script( 'affiliate-user-search' );
+
+				wp_localize_script( 'affiliate-user-search', 'affiliateParams', $args['localize_data'] );
+			}
 
 			$user_string = '';
-
 			if ( ! empty( $affiliate_id ) ) {
 				$user_id = afwc_get_user_id_based_on_affiliate_id( $affiliate_id );
 				if ( ! empty( $user_id ) ) {
@@ -963,16 +979,11 @@ if ( ! class_exists( 'Affiliate_For_WooCommerce' ) ) {
 			}
 
 			?>
-			<select id="<?php echo esc_attr( $id ); ?>" name="<?php echo esc_attr( $id ); ?>" style="width: 100%;" class="<?php echo esc_attr( $class ); ?>" data-placeholder="<?php echo esc_attr_x( 'Search by email, username or name', 'affiliate search placeholder', 'affiliate-for-woocommerce' ); ?>" data-allow-clear="true" data-action="afwc_json_search_affiliates">
-				<?php
-				if ( ! empty( $affiliate_id ) ) {
-					?>
-					<option value="<?php echo esc_attr( $affiliate_id ); ?>" selected="selected"><?php echo esc_html( wp_kses_post( $user_string ) ); ?><option>
-					<?php
-				}
-				?>
+			<select id="<?php echo esc_attr( $id ); ?>" name="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $class ); ?>" style="<?php echo esc_attr( $args['style'] ); ?>" data-placeholder="<?php echo esc_attr_x( 'Search by email, username or name', 'affiliate search placeholder', 'affiliate-for-woocommerce' ); ?>" data-allow-clear="<?php echo esc_attr( $args['allow_clear'] ); ?>" data-action="afwc_json_search_affiliates" <?php disabled( (bool) $args['disabled'] ); ?> >
+				<?php if ( ! empty( $affiliate_id ) ) { ?>
+					<option value="<?php echo esc_attr( $affiliate_id ); ?>" selected="selected"><?php echo esc_html( wp_kses_post( $user_string ) ); ?></option>
+				<?php } ?>
 			</select>
-
 			<?php
 		}
 
@@ -990,12 +1001,7 @@ if ( ! class_exists( 'Affiliate_For_WooCommerce' ) ) {
 				wp_die();
 			}
 
-			$users = $this->get_affiliates(
-				array(
-					'search'         => '*' . $term . '*',
-					'search_columns' => array( 'ID', 'user_nicename', 'user_login', 'user_email', 'display_name' ),
-				)
-			);
+			$users = $this->get_affiliates( afwc_get_default_user_search_args( $term ) );
 
 			echo wp_json_encode( ! empty( $users ) ? $users : array() );
 			wp_die();

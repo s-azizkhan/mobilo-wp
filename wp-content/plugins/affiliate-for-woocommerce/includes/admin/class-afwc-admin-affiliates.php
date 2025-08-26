@@ -3,7 +3,7 @@
  * Main class for Affiliates Admin
  *
  * @package     affiliate-for-woocommerce/includes/admin/
- * @version     1.14.3
+ * @version     1.14.4
  */
 
 // Exit if accessed directly.
@@ -2512,12 +2512,7 @@ if ( ! class_exists( 'AFWC_Admin_Affiliates' ) ) {
 			if ( empty( $term ) ) {
 				return array();
 			}
-			$users = get_users(
-				array(
-					'search'         => '*' . $term . '*',
-					'search_columns' => array( 'ID', 'user_nicename', 'user_login', 'user_email', 'display_name' ),
-				)
-			);
+			$users = get_users( afwc_get_default_user_search_args( $term ) );
 
 			$customers = array();
 			if ( ! empty( $users ) && is_array( $users ) ) {

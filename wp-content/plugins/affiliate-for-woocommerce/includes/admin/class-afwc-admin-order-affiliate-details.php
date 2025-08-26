@@ -4,7 +4,7 @@
  *
  * @package  affiliate-for-woocommerce/includes/admin/
  * @since    8.0.0
- * @version  1.0.4
+ * @version  1.0.5
  */
 
 // Exit if accessed directly.
@@ -81,22 +81,6 @@ if ( ! class_exists( 'AFWC_Admin_Order_Affiliate_Details' ) ) {
 
 			wp_enqueue_script( 'afwc-setting-js', AFWC_PLUGIN_URL . '/assets/js/admin/afwc-admin-order-metabox.js', array( 'jquery' ), $plugin_data['Version'], true );
 			wp_enqueue_style( 'afwc-setting-css', AFWC_PLUGIN_URL . '/assets/css/admin/afwc-admin-order-metabox.css', array(), $plugin_data['Version'] );
-
-			wp_register_script( 'affiliate-user-search', AFWC_PLUGIN_URL . '/assets/js/lib/affiliate-search.js', array( 'jquery', 'wp-i18n', 'select2' ), $plugin_data['Version'], true );
-			if ( function_exists( 'wp_set_script_translations' ) ) {
-				wp_set_script_translations( 'affiliate-user-search', 'affiliate-for-woocommerce' );
-			}
-			wp_enqueue_script( 'affiliate-user-search' );
-
-			wp_localize_script(
-				'affiliate-user-search',
-				'affiliateParams',
-				array(
-					'ajaxurl'        => admin_url( 'admin-ajax.php' ),
-					'security'       => wp_create_nonce( 'afwc-search-affiliate-users' ),
-					'allowSelfRefer' => afwc_allow_self_refer(),
-				)
-			);
 		}
 
 		/**
@@ -145,13 +129,14 @@ if ( ! class_exists( 'AFWC_Admin_Order_Affiliate_Details' ) ) {
 				return;
 			}
 
+			global $affiliate_for_woocommerce;
+
 			$is_commission_recorded = $order->get_meta( 'is_commission_recorded', true );
 
 			$linked_affiliate_data = $this->get_linked_affiliate_data( $order_id, $is_commission_recorded );
 			$user_id               = is_array( $linked_affiliate_data ) && ! empty( $linked_affiliate_data['user_id'] ) ? $linked_affiliate_data['user_id'] : '';
-			$user_string           = is_array( $linked_affiliate_data ) && ! empty( $linked_affiliate_data['user_string'] ) ? $linked_affiliate_data['user_string'] : '';
 			$allow_clear           = is_array( $linked_affiliate_data ) && ! empty( $linked_affiliate_data['allow_clear'] ) ? $linked_affiliate_data['allow_clear'] : 'true';
-			$disabled              = is_array( $linked_affiliate_data ) && ! empty( $linked_affiliate_data['disabled'] ) ? $linked_affiliate_data['disabled'] : '';
+			$disabled              = is_array( $linked_affiliate_data ) && ! empty( $linked_affiliate_data['disabled'] ) ? $linked_affiliate_data['disabled'] : false;
 
 			$order_commission_data     = $this->get_order_commission_data( $order );
 			$total_commission          = is_array( $order_commission_data ) && ! empty( $order_commission_data['total_commission'] ) ? $order_commission_data['total_commission'] : 0;
@@ -161,11 +146,21 @@ if ( ! class_exists( 'AFWC_Admin_Order_Affiliate_Details' ) ) {
 				<div class="afwc-link-unlink-affiliate-section">
 					<h4 class="afwc-link-unlink-affiliate-title"><label for="afwc_referral_order_of"><?php echo esc_html_x( 'Assigned to affiliate', 'Title of link/unlink affiliate in order metabox', 'affiliate-for-woocommerce' ); ?></label></h4>
 					<p class="afwc-field-description"><?php echo esc_html_x( 'Search affiliate by email, username, name or user ID to assign this order to them.', 'Description for search and assign affiliate in order metabox', 'affiliate-for-woocommerce' ); ?></p>
-					<select id="afwc_referral_order_of" name="afwc_referral_order_of" class="afwc-affiliate-search" data-placeholder="<?php echo esc_attr_x( 'Search by email, username or name', 'affiliate search placeholder', 'affiliate-for-woocommerce' ); ?>" data-allow-clear="<?php echo esc_attr( $allow_clear ); ?>" data-action="afwc_json_search_affiliates" <?php echo esc_attr( $disabled ); ?>>
-						<?php if ( ! empty( $user_id ) ) { ?>
-							<option value="<?php echo esc_attr( $user_id ); ?>" selected="selected"><?php echo esc_html( wp_kses_post( $user_string ) ); ?><option>
-						<?php } ?>
-					</select>
+					<?php
+					is_callable( array( $affiliate_for_woocommerce, 'render_affiliate_search' ) )
+						? $affiliate_for_woocommerce->render_affiliate_search(
+							'afwc_referral_order_of',
+							array(
+								'affiliate_id'  => $user_id,
+								'localize_data' => array(
+									'allowSelfRefer' => afwc_allow_self_refer(),
+								),
+								'allow_clear'   => $allow_clear,
+								'disabled'      => $disabled,
+							)
+						)
+						: '';
+					?>
 				</div>
 				<?php if ( 'yes' === $is_commission_recorded ) { ?>
 					<hr>
@@ -198,25 +193,13 @@ if ( ! class_exists( 'AFWC_Admin_Order_Affiliate_Details' ) ) {
 			$user_id     = '';
 			if ( 'yes' === $is_commission_recorded && ! empty( $affiliate_data ) ) {
 				$user_id = afwc_get_user_id_based_on_affiliate_id( $affiliate_data['affiliate_id'] );
-				if ( ! empty( $user_id ) ) {
-					$user = get_user_by( 'id', $user_id );
-					if ( is_object( $user ) && $user instanceof WP_User ) {
-						$user_string = sprintf(
-							/* translators: 1: user display name 2: user ID 3: user email */
-							esc_html_x( '%1$s (#%2$s &ndash; %3$s)', 'linked affiliate info. in order metabox select2', 'affiliate-for-woocommerce' ),
-							$user->display_name,
-							absint( $user_id ),
-							$user->user_email
-						);
-					}
-				}
 			}
 
 			return array(
 				'user_id'     => $user_id,
 				'user_string' => $user_string,
 				'allow_clear' => ! empty( $affiliate_data['status'] ) && 'paid' === $affiliate_data['status'] ? 'false' : 'true',
-				'disabled'    => ! empty( $affiliate_data['status'] ) && 'paid' === $affiliate_data['status'] ? 'disabled' : '',
+				'disabled'    => ! empty( $affiliate_data['status'] ) && 'paid' === $affiliate_data['status'] ? true : false,
 			);
 		}
 

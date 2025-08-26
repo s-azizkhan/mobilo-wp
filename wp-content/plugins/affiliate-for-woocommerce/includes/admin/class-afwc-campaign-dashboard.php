@@ -3,7 +3,7 @@
  * Main class for Campaigns Dashboard
  *
  * @package     affiliate-for-woocommerce/includes/admin/
- * @version     1.3.7
+ * @version     1.3.8
  */
 
 // Exit if accessed directly.
@@ -542,10 +542,7 @@ if ( ! class_exists( 'AFWC_Campaign_Dashboard' ) ) {
 			// Check the rule details for affiliate group.
 			if ( true === in_array( 'affiliates', $group, true ) ) {
 				if ( true === $for_search && is_scalar( $term ) ) {
-					$affiliate_search = array(
-						'search'         => '*' . $term . '*',
-						'search_columns' => array( 'ID', 'user_nicename', 'user_login', 'user_email', 'display_name' ),
-					);
+					$affiliate_search = afwc_get_default_user_search_args( $term );
 				} elseif ( ! empty( $term['affiliates'] ) ) {
 					$affiliate_search = array(
 						'include' => ! is_array( $term['affiliates'] ) ? (array) $term['affiliates'] : $term['affiliates'],
