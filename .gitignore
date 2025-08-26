@@ -18,6 +18,7 @@ wp-content/vendor
 # FREE THEMES
 wp-content/themes/twentytwentyfive/
 wp-content/themes/mobilo/
+wp-content/themes/blocksy/
 
 
 # FREE PLUGINS
@@ -28,6 +29,7 @@ wp-content/plugins/advanced-media-offloader/
 wp-content/plugins/all-in-one-wp-migration/
 wp-content/plugins/aryo-activity-log/
 wp-content/plugins/bnfw/
+wp-content/plugins/blocksy-companion/
 wp-content/plugins/cf-images/
 wp-content/plugins/classic-editor/
 wp-content/plugins/cloudflare/
