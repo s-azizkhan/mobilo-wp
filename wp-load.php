@@ -35,6 +35,13 @@ if ( function_exists( 'error_reporting' ) ) {
 	 */
 	error_reporting( E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_ERROR | E_WARNING | E_PARSE | E_USER_ERROR | E_USER_WARNING | E_RECOVERABLE_ERROR );
 }
+/** Load environment variables */
+if ( file_exists( ABSPATH . 'env-loader.php' ) ) {
+	require_once ABSPATH . 'env-loader.php';
+} else {
+	error_log("FATAL-ERROR: env-loader.php file not found in " . ABSPATH);
+}
+
 
 /*
  * If wp-config.php exists in the WordPress root, or if it exists in the root and wp-settings.php

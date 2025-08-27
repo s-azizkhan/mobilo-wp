@@ -14,8 +14,5 @@
  */
 define('WP_USE_THEMES', true);
 
-// Load environment variables
-require_once __DIR__ . '/env-loader.php';
-
 /** Loads the WordPress Environment and Template */
 require __DIR__ . '/wp-blog-header.php';

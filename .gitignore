@@ -3,6 +3,7 @@
 *.backup
 *.backup
 *.log
+.env
 composer.lock
 wp-config.php
 *.az
