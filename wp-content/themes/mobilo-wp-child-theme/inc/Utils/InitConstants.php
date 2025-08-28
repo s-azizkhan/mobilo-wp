@@ -27,26 +27,26 @@ class InitConstants
         // TODO: change this based on env
         // Define apk api gateway address
         if (!defined('MOBILO_APK_GATEWAY')) {
-            define('MOBILO_APK_GATEWAY', 'https://apk-gtw-dev.mobilocard.com');
+            define('MOBILO_APK_GATEWAY', env('MOBILO_APK_GATEWAY'));
         }
 
         // TODO: change this based on env
         // Define api gateway address
         if (!defined('MOBILO_API_GATEWAY')) {
-            define('MOBILO_API_GATEWAY', 'https://api-gtw-dev.mobilocard.com');
+            define('MOBILO_API_GATEWAY', env('MOBILO_API_GATEWAY'));
         }
 
         // TODO: change this based on env
         // Define api key to access api gateway
         if (!defined('MOBILO_X_API_KEY')) {
-            define('MOBILO_X_API_KEY', "AIzaSyAiPOPN07KhNxIBVeH2JvYNxKaWV8u7rXA");
+            define('MOBILO_X_API_KEY', env('MOBILO_X_API_KEY'));
         }
 
         // TODO: change this based on env
         // Define secret key
         if (!defined('MOBILO_WP_SECRET_KEY')) {
             // Replace the version number of the theme on each release
-            define('MOBILO_WP_SECRET_KEY', 'VC2hnfJbkEddEkbJfnh2CV');
+            define('MOBILO_WP_SECRET_KEY', env('MOBILO_WP_SECRET_KEY'));
         }
     }
 }
