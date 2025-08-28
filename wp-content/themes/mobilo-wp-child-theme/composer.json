@@ -1,0 +1,32 @@
+{
+    "name": "mobilocard/mobilo-child-theme",
+    "require": {
+        "php": ">=8.3"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "classmap-authoritative": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Mobilo\\WpTheme\\": "inc/"
+        },
+        "files": [
+            "inc/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "HyperticsAI",
+            "email": "hi@hypertics.ai",
+            "homepage": "https://hypertics.ai"
+        },
+        {
+            "name": "S.Aziz Khan",
+            "email": "hi@justaziz.com",
+            "homepage": "https://justaziz.com",
+            "role": "Developer"
+        }
+    ],
+    "prefer-stable": true
+}

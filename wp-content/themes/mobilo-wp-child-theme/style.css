@@ -1,0 +1,17 @@
+/*
+Theme Name:   Mobilo Child Theme
+Template:     blocksy
+Theme URI:    https://hypertics.ai/wp-themes/mobilo-child
+Author:       HyperticsAI
+Author URI:   https://hypertics.ai/
+Description:  A custom child theme with Composer, modular files, WooCommerce, and page-specific assets.
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  mobilo
+*/
+
+/* Import the parent theme’s styles if necessary */
+@import url("../blocksy/style.css");
+
+/* Custom styles go below */

@@ -1,0 +1,238 @@
+/**
+ * Mobilo Cart Styles
+ * Additional styles for cart functionality
+ */
+
+/* Active states for material and color selection */
+.mobilo-material-btn.active {
+    background-color: #1f2937 !important;
+    color: white !important;
+    border-color: #1f2937 !important;
+}
+
+.mobilo-card-color.active {
+    border-color: #3b82f6 !important;
+    border-width: 3px !important;
+}
+
+/* Loading states */
+.mobilo-add-to-cart:disabled,
+.mobilo-add-upsell-all:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Cart item hover effects */
+.mobilo-cart-item:hover {
+    background-color: #f9fafb;
+}
+
+/* Quantity button states */
+.mobilo-quantity-btn:hover {
+    background-color: #f3f4f6;
+}
+
+.mobilo-quantity-btn:active {
+    background-color: #e5e7eb;
+}
+
+/* Remove button hover */
+.mobilo-remove-item:hover {
+    color: #dc2626 !important;
+}
+
+/* Message notifications */
+.mobilo-message {
+    transition: all 0.3s ease;
+    max-width: 400px;
+    word-wrap: break-word;
+}
+
+.mobilo-message.bg-green-500 {
+    color: white;
+}
+
+.mobilo-message.bg-red-500 {
+    color: white;
+}
+
+.mobilo-message.bg-blue-500 {
+    color: white;
+}
+
+/* Product card hover effects */
+.mobilo-product-card {
+    transition: all 0.2s ease;
+}
+
+.mobilo-product-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Cart sidebar sticky positioning */
+@media (min-width: 1024px) {
+    .lg\:col-span-1>div:first-child {
+        position: sticky;
+        top: 2rem;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mobilo-product-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mobilo-product-card .flex-grow {
+        width: 100%;
+    }
+
+    .mobilo-product-card>div:last-child {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+/* Animation for cart updates */
+.mobilo-cart-items {
+    transition: all 0.3s ease;
+}
+
+/* Focus states for accessibility */
+.mobilo-add-to-cart:focus,
+.mobilo-quantity-btn:focus,
+.mobilo-remove-item:focus,
+.mobilo-material-btn:focus,
+.mobilo-card-color:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Disabled state styling */
+.mobilo-add-to-cart.bg-gray-500 {
+    cursor: not-allowed;
+}
+
+.mobilo-add-to-cart.bg-gray-500:hover {
+    background-color: #6b7280 !important;
+}
+
+/* Cart count badge */
+.mobilo-cart-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    border-radius: 10px;
+    background-color: #ef4444;
+    color: white;
+}
+
+/* Loading spinner */
+.mobilo-loading {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: mobilo-spin 1s ease-in-out infinite;
+}
+
+@keyframes mobilo-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Error state styling */
+.mobilo-error {
+    border-color: #ef4444 !important;
+    background-color: #fef2f2 !important;
+}
+
+/* Success state styling */
+.mobilo-success {
+    border-color: #10b981 !important;
+    background-color: #f0fdf4 !important;
+}
+
+/* Cart empty state */
+.mobilo-cart-empty {
+    text-align: center;
+    padding: 2rem;
+    color: #6b7280;
+}
+
+.mobilo-cart-empty .material-icons {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+/* Product variation price updates */
+.mobilo-product-price {
+    transition: color 0.2s ease;
+}
+
+.mobilo-product-price.updating {
+    color: #6b7280;
+}
+
+/* Checkout button states */
+.mobilo-checkout-btn:disabled {
+    background-color: #9ca3af !important;
+    cursor: not-allowed;
+}
+
+.mobilo-checkout-btn:disabled:hover {
+    background-color: #9ca3af !important;
+}
+
+/* Plan information styling */
+.mobilo-plan-info {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Feature list styling */
+.mobilo-features-list li {
+    transition: all 0.2s ease;
+}
+
+.mobilo-features-list li:hover {
+    transform: translateX(4px);
+}
+
+/* Material icons sizing */
+.material-icons.mobilo-icon-sm {
+    font-size: 16px;
+}
+
+.material-icons.mobilo-icon-md {
+    font-size: 24px;
+}
+
+.material-icons.mobilo-icon-lg {
+    font-size: 32px;
+}
+
+/* Print styles */
+@media print {
+
+    .mobilo-add-to-cart,
+    .mobilo-quantity-btn,
+    .mobilo-remove-item,
+    .mobilo-checkout-btn {
+        display: none !important;
+    }
+}
