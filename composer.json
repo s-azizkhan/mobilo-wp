@@ -66,7 +66,6 @@
         "wpackagist-plugin/mollie-payments-for-woocommerce": "*",
         "wpackagist-plugin/plugin-load-filter": "*",
         "wpackagist-plugin/plugin-organizer": "*",
-        "wpackagist-plugin/quick-pagepost-redirect-plugin": "*",
         "wpackagist-plugin/redis-cache": "*",
         "wpackagist-plugin/taxjar-simplified-taxes-for-woocommerce": "*",
         "wpackagist-plugin/updraftplus": "*",

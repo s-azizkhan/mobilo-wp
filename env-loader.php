@@ -29,6 +29,20 @@ class DotEnv
 if (!function_exists('env')) {
     function env($key, $default = null)
     {
-        return $_ENV[$key] ?? $default;
+        if (!isset($_ENV[$key])) {
+            return $default;
+        }
+        $value = $_ENV[$key];
+        if (is_null($value) || empty($value)) {
+            return $default;
+        }
+        // handle boolean values
+        if ($value === 'true') {
+            return true;
+        }
+        if ($value === 'false') {
+            return false;
+        }
+        return $value;
     }
 }
