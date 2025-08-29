@@ -60,7 +60,7 @@ if (!function_exists('to_ssl')) {
  *
  * @return float The price including VAT.
  */
-function get_include_vat_price($price, $vatRate = 0.21)
+function mc_get_include_vat_price($price, $vatRate = 0.21)
 {
     return $price * (1 + $vatRate);
 }
@@ -84,7 +84,7 @@ function debugg()
     echo "</pre>";
     wp_die("Ok");
 }
-function format_price($price)
+function mc_format_price($price)
 {
     return number_format((float) $price, 2, '.', '');
 }
@@ -95,7 +95,7 @@ function format_price($price)
  * @param int $product_id The ID of the product.
  * @return string|bool
  */
-function is_product_in_cart($product_id, $variation_id = 0)
+function mc_is_product_in_cart($product_id, $variation_id = 0)
 {
     try {
         $variation = wc_get_product($product_id);
@@ -140,7 +140,7 @@ function is_product_in_cart($product_id, $variation_id = 0)
  * @param int $variation_id The ID of the variation (optional).
  * @return array|false Cart item data or false if not found.
  */
-function get_cart_item_by_product($product_id, $variation_id = 0)
+function mc_get_cart_item_by_product($product_id, $variation_id = 0)
 {
     try {
         $cart = WC()->cart;
@@ -170,7 +170,7 @@ function get_cart_item_by_product($product_id, $variation_id = 0)
  * @param int $quantity The new quantity.
  * @return bool Success status.
  */
-function update_cart_item_quantity($cart_item_key, $quantity)
+function mc_update_cart_item_quantity($cart_item_key, $quantity)
 {
     try {
         if ($quantity <= 0) {
@@ -195,7 +195,7 @@ function update_cart_item_quantity($cart_item_key, $quantity)
  * @param array $cart_item_data Custom cart item data (optional).
  * @return string|false Cart item key or false on failure.
  */
-function add_product_to_cart($product_id, $quantity = 1, $variation_id = 0, $variation_data = [], $cart_item_data = [])
+function mc_add_product_to_cart($product_id, $quantity = 1, $variation_id = 0, $variation_data = [], $cart_item_data = [])
 {
     try {
         $cart_item_key = WC()->cart->add_to_cart($product_id, $quantity, $variation_id, $variation_data, $cart_item_data);

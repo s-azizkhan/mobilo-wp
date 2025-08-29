@@ -25,8 +25,7 @@ class Enqueue
                 (new CartPageTemplate())->load();
             }
             // Page specific ajax actions (load specific ajax actions on specific page)
-            $ajax_request_referer = $_SERVER['HTTP_REFERER'];
-            if (strpos($ajax_request_referer, "cart")) {
+            if (isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], "cart")) {
                 // if ajax request then load ajax actions
                 (new CartAjaxActions())->init();
             }

@@ -2,6 +2,7 @@
 
 namespace Mobilo\WpTheme\Models;
 
+use Mobilo\WpTheme\Feature\PlanFeature;
 use WC_Cart;
 
 /**
@@ -126,7 +127,7 @@ class CartModel extends WC_Cart
         $cart_items = $this->data;
 
         $subscription_types = ['variable-subscription', 'subscription'];
-        $accessories_sku = [];
+        $accessories_sku = PlanFeature::$accessoriesSku;
         $products = [];
         // filter products & subscriptions
         foreach ($cart_items as $key => $cart_item) {
@@ -178,15 +179,15 @@ class CartModel extends WC_Cart
         $onetime_price = (float) $this->onetime_price;
 
         // Default sub_total display
-        $sub_total_display = format_price($sub_total);
+        $sub_total_display = mc_format_price($sub_total);
         $currency = get_woocommerce_currency();
         $data = WC()->session->get('checkout_data');
         $billing_country = $data['billing_country'] ?? null;
         $billing_state = $data['billing_state'] ?? null;
         if ($currency == 'EUR' && $billing_country !== 'GB') {
-            $yearly_price = get_include_vat_price($yearly_price);
-            $onetime_price = get_include_vat_price($onetime_price);
-            $sub_total_display = format_price($sub_total) . ' (incl.tax)';
+            $yearly_price = mc_get_include_vat_price($yearly_price);
+            $onetime_price = mc_get_include_vat_price($onetime_price);
+            $sub_total_display = mc_format_price($sub_total) . ' (incl.tax)';
         } elseif ($currency == 'USD' && $billing_country === 'US' && $billing_state === 'NY') {
             // Get the tax rates for the given billing country code and billing state code.
             $tax_rates = \WC_Tax::find_rates([
@@ -202,14 +203,14 @@ class CartModel extends WC_Cart
 
                 $vat_rate = $ny_tax_rate_percentage / 100;
             }
-            $onetime_price = get_include_vat_price($onetime_price, $vat_rate);
+            $onetime_price = mc_get_include_vat_price($onetime_price, $vat_rate);
             $sub_total_display .= ' (incl.tax)';
         }
 
         $r = [
             'sub_total' => $sub_total_display,
-            'yearly' => format_price($yearly_price),
-            'onetime' => format_price($onetime_price),
+            'yearly' => mc_format_price($yearly_price),
+            'onetime' => mc_format_price($onetime_price),
         ];
         return $r;
     }
@@ -240,7 +241,7 @@ class CartModel extends WC_Cart
         $currency_symbol = get_woocommerce_currency_symbol();
 
         $subscription_types = ['variable-subscription', 'subscription'];
-        $accessories_sku = ['NFC-SB', 'NFC-KF'];
+        $accessories_sku = PlanFeature::$accessoriesSku;
 
         $cart_cards = [];
         $cart_cards['title'] = __('Products', 'mobilo');
@@ -255,7 +256,7 @@ class CartModel extends WC_Cart
         // filter products & subscriptions
         foreach ($cart_items as $key => $cart_item) {
 
-            if ($cart_item['sku'] == 'MC_DIGITAL') {
+            if ($cart_item['sku'] == PlanFeature::$digitalCardSku) {
                 $digital_card += $cart_item['quantity'];
             }
 
@@ -263,7 +264,7 @@ class CartModel extends WC_Cart
 
             if (!empty($cart_item['raw_item']['line_subtotal']) && !empty($cart_item['raw_item']['line_subtotal_tax'])) {
                 $rawPrice = $cart_item['raw_item']['line_subtotal'] + $cart_item['raw_item']['line_subtotal_tax'];
-                $itemSubtotal = $rawPrice ? ($include_currency ? $currency_symbol . ' ' : '') . format_price($rawPrice) : 0;
+                $itemSubtotal = $rawPrice ? ($include_currency ? $currency_symbol . ' ' : '') . mc_format_price($rawPrice) : 0;
             }
             if (in_array($cart_item['type'], $subscription_types)) {
 
@@ -318,12 +319,12 @@ class CartModel extends WC_Cart
             'card' => [
                 'title' => __('Cards', 'mobilo'),
                 'count' => $total_card,
-                'sub_total' => $include_currency ? $currency_symbol . ' ' . format_price($subtotal_card_price) : format_price($subtotal_card_price),
+                'sub_total' => $include_currency ? $currency_symbol . ' ' . mc_format_price($subtotal_card_price) : mc_format_price($subtotal_card_price),
             ],
             'cart_notes' => $this->get_notes_v2(),
-            'total' => $include_currency ? $currency_symbol . ' ' . format_price($subtotal_accessories_price + $subtotal_card_price + $subtotal_license_price) : format_price($subtotal_accessories_price + $subtotal_card_price + $subtotal_license_price),
-            'one_time' => $include_currency ? $currency_symbol . ' ' . format_price($this->onetime_price) : format_price($this->onetime_price),
-            'per_year' => $include_currency ? $currency_symbol . ' ' . format_price($subtotal_license_price) : format_price($subtotal_license_price),
+            'total' => $include_currency ? $currency_symbol . ' ' . mc_format_price($subtotal_accessories_price + $subtotal_card_price + $subtotal_license_price) : mc_format_price($subtotal_accessories_price + $subtotal_card_price + $subtotal_license_price),
+            'one_time' => $include_currency ? $currency_symbol . ' ' . mc_format_price($this->onetime_price) : mc_format_price($this->onetime_price),
+            'per_year' => $include_currency ? $currency_symbol . ' ' . mc_format_price($subtotal_license_price) : mc_format_price($subtotal_license_price),
         ];
         return $res;
     }

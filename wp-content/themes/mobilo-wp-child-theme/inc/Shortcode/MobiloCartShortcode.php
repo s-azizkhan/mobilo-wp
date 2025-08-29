@@ -2,6 +2,7 @@
 
 namespace Mobilo\WpTheme\Shortcode;
 
+use Mobilo\WpTheme\Feature\PlanFeature;
 use Mobilo\WpTheme\Models\CartItemModel;
 use Mobilo\WpTheme\Models\CartModel;
 
@@ -11,11 +12,13 @@ class MobiloCartShortcode
 {
     private $currency;
     private $currency_symbol;
+    private $plan;
 
-    public function init()
+    public function init($plan)
     {
         $this->currency = get_woocommerce_currency();
         $this->currency_symbol = get_woocommerce_currency_symbol($this->currency);
+        $this->plan = $plan;
         add_shortcode('mobilo_cart', [$this, 'render']);
         add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts']);
     }
@@ -81,14 +84,14 @@ class MobiloCartShortcode
         $cart_model = new CartModel();
         $cart_data = $cart_model->get_new_plan_cart();
 
-
         return [
             'products' => $products['products'],
             'upsell_products' => $products['upsell_products'],
             'cart_data' => $cart_data,
             'cart_count' => WC()->cart->get_cart_contents_count(),
             'currency' => $this->currency,
-            'currency_symbol' => $this->currency_symbol
+            'currency_symbol' => $this->currency_symbol,
+            'plan' => $this->plan
         ];
     }
 
@@ -133,8 +136,8 @@ class MobiloCartShortcode
             $salePrice = $wc_product->get_sale_price();
 
             if ($this->currency == 'EUR' && $billing_country !== 'GB') {
-                $regularPrice = get_include_vat_price($regularPrice);
-                $salePrice = get_include_vat_price($salePrice);
+                $regularPrice = mc_get_include_vat_price($regularPrice);
+                $salePrice = mc_get_include_vat_price($salePrice);
             }
 
             $desc = $wc_product->get_description();
@@ -145,8 +148,8 @@ class MobiloCartShortcode
             $product = [
                 'id' => $wc_product->get_id(),
                 'name' => $wc_product->get_title(),
-                'base_price' => format_price($regularPrice),
-                'price' => format_price($salePrice),
+                'base_price' => mc_format_price($regularPrice),
+                'price' => mc_format_price($salePrice),
                 'sku' => $wc_product->get_sku(),
                 'features' => CartItemModel::parse_product_description($desc, true),
                 'short_description' => $short_desc,
@@ -166,7 +169,7 @@ class MobiloCartShortcode
             }
 
 
-            $product['in_cart'] = is_product_in_cart($wc_product->get_id());
+            $product['in_cart'] = mc_is_product_in_cart($wc_product->get_id());
 
             // Get product thumbnail
             if (has_post_thumbnail($product_id)) {
@@ -207,18 +210,18 @@ class MobiloCartShortcode
             $salePrice = $wc_product->get_sale_price();
 
             if ($this->currency == 'EUR' && $billing_country !== 'GB') {
-                $regularPrice = get_include_vat_price($regularPrice);
-                $salePrice = get_include_vat_price($salePrice);
+                $regularPrice = mc_get_include_vat_price($regularPrice);
+                $salePrice = mc_get_include_vat_price($salePrice);
             }
 
             $product = [
                 'id' => $wc_product->get_id(),
                 'name' => $wc_product->get_title(),
-                'base_price' => format_price($regularPrice),
-                'price' => format_price($salePrice),
+                'base_price' => mc_format_price($regularPrice),
+                'price' => mc_format_price($salePrice),
                 'sku' => $wc_product->get_sku(),
                 'type' => $wc_product->get_type(),
-                'in_cart' => is_product_in_cart($wc_product->get_id()),
+                'in_cart' => mc_is_product_in_cart($wc_product->get_id()),
             ];
 
             // Get product thumbnail

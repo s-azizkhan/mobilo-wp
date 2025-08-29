@@ -11,6 +11,7 @@ $cart_data = $cartData['cart_data'] ?? [];
 $cart_count = $cartData['cart_count'] ?? 0;
 $currency = $cartData['currency'] ?? 'USD';
 $currency_symbol = $cartData['currency_symbol'] ?? '$';
+$plan = $cartData['plan'] ?? [];
 ?>
 
 <!-- add tailwind css -->
@@ -164,7 +165,7 @@ $currency_symbol = $cartData['currency_symbol'] ?? '$';
                                     <?php endif; ?>
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <p class="font-bold text-gray-800"><?php echo $currency_symbol; ?><?php echo esc_html($item['subtotal']); ?></p>
+                                    <p class="font-bold text-gray-800"><?= $currency_symbol; ?><?= $item['subtotal']; ?></p>
                                     <div class="flex items-center border rounded-md">
                                         <button class="mobilo-quantity-btn mobilo-decrease px-2 py-1 text-gray-500">-</button>
                                         <span class="mobilo-quantity px-2 py-1"><?php echo esc_html($item['quantity']); ?></span>
@@ -201,20 +202,21 @@ $currency_symbol = $cartData['currency_symbol'] ?? '$';
                 </div>
                 
                 <!-- Plan Information -->
-                <?php if (isset($cart_data['plan'])): ?>
+                <?php if (isset($plan) && !empty($plan)): ?>
                     <div class="flex justify-between items-center">
                         <div class="flex items-center gap-2">
                             <span class="material-icons text-gray-600">person</span>
                             <div>
-                                <p class="font-medium text-gray-700"><?php echo esc_html($cart_data['plan']['title']); ?></p>
+                                <p class="font-medium text-gray-700"><?php echo esc_html($plan['title']); ?></p>
                                 <p class="text-sm text-gray-500">
-                                    <?php echo esc_html($cart_data['plan']['count_prefix']); ?>
-                                    <?php echo esc_html($cart_data['plan']['count']); ?>
-                                    <?php echo esc_html($cart_data['plan']['count_suffix']); ?>
+                                    <?php echo esc_html($plan['short_description']); ?>
                                 </p>
                             </div>
                         </div>
-                        <p class="font-bold text-gray-800"><?php echo $currency_symbol; ?><?php echo esc_html($cart_data['plan']['sub_total']); ?></p>
+                        <div class="text-right">
+                            <p class="font-bold text-gray-800"><?php echo $currency_symbol; ?><?php echo esc_html($plan['sale_price']); ?></p>
+                            <p class="text-sm text-gray-500"><?php echo esc_html($plan['billing_cycle']); ?></p>
+                        </div>
                     </div>
                 <?php endif; ?>
             </div>
@@ -258,50 +260,39 @@ $currency_symbol = $cartData['currency_symbol'] ?? '$';
         </div>
         
         <!-- Plan Details -->
-        <?php if (isset($cart_data['plan'])): ?>
+        <?php if (isset($plan) && !empty($plan)): ?>
             <div class="bg-white p-6 rounded-lg shadow-sm mt-8">
                 <p class="text-sm text-gray-500 mb-2"><?php _e('Chosen plan', 'mobilo'); ?></p>
-                <p class="font-bold text-gray-800 mb-2"><?php echo esc_html($cart_data['plan']['title']); ?></p>
-                <h2 class="text-4xl font-bold text-gray-800 mb-4"><?php echo $currency_symbol; ?><?php echo esc_html($cart_data['plan']['price']); ?></h2>
+                <p class="font-bold text-gray-800 mb-2"><?php echo esc_html($plan['title']); ?></p>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4"><?php echo $currency_symbol; ?><?php echo esc_html($plan['sale_price']); ?></h2>
                 <button class="w-full border border-gray-300 text-gray-700 py-2 rounded-lg font-medium hover:bg-gray-100 mb-4">
-                    <?php _e('All Mobilo features', 'mobilo'); ?>
+                    <?php echo esc_html($plan['feature_tagline']); ?>
                 </button>
                 <div class="text-center text-sm text-gray-500 mb-6 flex items-center justify-center gap-2">
-                    <span class="material-icons">group</span>
-                    <span><?php echo esc_html($cart_data['plan']['count']); ?> <?php _e('members', 'mobilo'); ?></span>
+                    <span class="material-icons">schedule</span>
+                    <span><?php echo esc_html($plan['billing_interval']); ?> <?php echo esc_html($plan['billing_period']); ?>(s)</span>
                 </div>
                 
                 <!-- Plan Features -->
-                <div class="space-y-4 text-sm">
-                    <div>
-                        <h4 class="font-bold text-gray-800 mb-2"><?php _e('Contact Sharing', 'mobilo'); ?></h4>
-                        <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-center"><span class="material-icons text-green-500 mr-2">check</span><?php _e('Unlimited taps/card shares', 'mobilo'); ?></li>
-                            <li class="flex items-center"><span class="material-icons text-green-500 mr-2">check</span><?php _e('Personalized business card templates', 'mobilo'); ?></li>
-                            <li class="flex items-center"><span class="material-icons text-green-500 mr-2">check</span><?php _e('Apple/Google QR Code Widget', 'mobilo'); ?></li>
-                            <li class="flex items-center"><span class="material-icons text-green-500 mr-2">check</span><?php _e('Digital Wallet Card', 'mobilo'); ?></li>
-                        </ul>
+                <?php if (isset($plan['features']) && is_array($plan['features'])): ?>
+                    <div class="space-y-4 text-sm">
+                        <?php foreach ($plan['features'] as $feature): ?>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2"><?php echo esc_html($feature['heading']); ?></h4>
+                                <?php if (isset($feature['contents']) && is_array($feature['contents'])): ?>
+                                    <ul class="space-y-2 text-gray-600">
+                                        <?php foreach ($feature['contents'] as $content): ?>
+                                            <li class="flex items-center">
+                                                <span class="material-icons text-green-500 mr-2">check</span>
+                                                <?php echo esc_html($content); ?>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                <?php endif; ?>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-gray-800 mb-2"><?php _e('Lead management', 'mobilo'); ?></h4>
-                        <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-center"><span class="material-icons text-green-500 mr-2">check</span><?php _e('Unlimited lead capture', 'mobilo'); ?></li>
-                            <li class="flex items-center"><span class="material-icons text-green-500 mr-2">check</span><?php _e('4,000+ CRM integrations with Zapier', 'mobilo'); ?></li>
-                            <li class="flex items-center"><span class="material-icons text-green-500 mr-2">check</span><?php _e('Native integrations', 'mobilo'); ?></li>
-                            <li class="flex items-center"><span class="material-icons text-green-500 mr-2">check</span><?php _e('Mobilo AI: Lead Scoring & more', 'mobilo'); ?></li>
-                            <li class="flex items-center"><span class="material-icons text-green-500 mr-2">check</span><?php _e('Business Card Scanner', 'mobilo'); ?></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-800 mb-2"><?php _e('Team management and reporting', 'mobilo'); ?></h4>
-                        <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-center"><span class="material-icons text-green-500 mr-2">check</span><?php _e('Brand governance: control employee profiles', 'mobilo'); ?></li>
-                            <li class="flex items-center"><span class="material-icons text-green-500 mr-2">check</span><?php _e('Create Departments, Groups, Office Locations', 'mobilo'); ?></li>
-                            <li class="flex items-center"><span class="material-icons text-green-500 mr-2">check</span><?php _e('Team insights & analytics', 'mobilo'); ?></li>
-                            <li class="flex items-center"><span class="material-icons text-green-500 mr-2">check</span><?php _e('Malware link checker', 'mobilo'); ?></li>
-                        </ul>
-                    </div>
-                </div>
+                <?php endif; ?>
             </div>
         <?php endif; ?>
     </div>

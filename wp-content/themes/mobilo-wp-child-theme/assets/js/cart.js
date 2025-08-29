@@ -12,7 +12,8 @@
 
         init() {
             this.bindEvents();
-            this.initializeCart();
+            // as default cart data coming from server, we don't need to initialize cart
+            // this.initializeCart();
         }
 
         bindEvents() {
@@ -324,7 +325,7 @@
                         ${item.card_color ? `<p class="text-sm text-gray-500">${item.card_color}</p>` : ''}
                     </div>
                     <div class="flex items-center gap-2">
-                        <p class="font-bold text-gray-800">${mobiloCart.currency_symbol} ${item.subtotal}</p>
+                        <p class="font-bold text-gray-800">${mobiloCart.currency_symbol}${item.subtotal}</p>
                         <div class="flex items-center border rounded-md">
                             <button class="mobilo-quantity-btn mobilo-decrease px-2 py-1 text-gray-500">-</button>
                             <span class="mobilo-quantity px-2 py-1">${item.quantity}</span>
@@ -392,11 +393,13 @@
                     .addClass('bg-gray-500')
                     .removeClass('bg-blue-600 hover:bg-blue-700')
                     .data('original-text', 'In Cart');
+                $button.prop('disabled', true);
             } else {
                 $button.text('Add')
                     .removeClass('bg-gray-500')
                     .addClass('bg-blue-600 hover:bg-blue-700')
                     .data('original-text', 'Add');
+                $button.prop('disabled', false);
             }
         }
 

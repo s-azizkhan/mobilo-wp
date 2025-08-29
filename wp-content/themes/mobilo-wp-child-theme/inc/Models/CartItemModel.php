@@ -152,7 +152,7 @@ class CartItemModel implements CartItemInterface
         $billing_state = $data['billing_state'] ?? null;
         $per_pro_price = $this->subtotal / $this->quantity;
         if ($currency == 'EUR' && $billing_country !== 'GB') {
-            $per_pro_price = get_include_vat_price($per_pro_price);
+            $per_pro_price = mc_get_include_vat_price($per_pro_price);
         } elseif ($currency == 'USD' && $billing_country === 'US' && $billing_state === 'NY') {
             // Get the tax rates for the given billing country code and billing state code.
             $tax_rates = \WC_Tax::find_rates([
@@ -168,7 +168,7 @@ class CartItemModel implements CartItemInterface
 
                 $vat_rate = $ny_tax_rate_percentage / 100;
             }
-            $per_pro_price = get_include_vat_price($per_pro_price, $vat_rate);
+            $per_pro_price = mc_get_include_vat_price($per_pro_price, $vat_rate);
         }
         $this->subtotal = $per_pro_price * $this->quantity;
         return floatval($this->subtotal);
@@ -208,7 +208,7 @@ class CartItemModel implements CartItemInterface
                 'quantity' => $this->get_quantity(),
                 'sku' => $product->get_sku(),
                 'type' => $product->get_type(),
-                'subtotal' => format_price($this->get_subtotal()),
+                'subtotal' => mc_format_price($this->get_subtotal()),
                 'item_key' => $this->get_item_key(),
                 'thumbnail' => $this->get_thumbnail(),
                 'card_color' => $this->card_color,
@@ -306,8 +306,8 @@ class CartItemModel implements CartItemInterface
             $variation = [
                 'id' => $var['variation_id'],
                 'name' => $product->get_title(),
-                'base_price' => format_price($base_price),
-                'price' => format_price($sale_price) <= 0 ? format_price($base_price) : format_price($sale_price),
+                'base_price' => mc_format_price($base_price),
+                'price' => mc_format_price($sale_price) <= 0 ? mc_format_price($base_price) : mc_format_price($sale_price),
                 'sku' => $var['sku'],
                 'attribute' => $var['attributes'],
                 'image' => $var['image'],
@@ -363,10 +363,10 @@ class CartItemModel implements CartItemInterface
                 'quantity' => $this->get_quantity(),
                 'sku' => $product->get_sku(),
                 'type' => $product->get_type(),
-                'regular_price' => format_price($product->get_price()),
-                'sale_price' => format_price($product->get_sale_price()),
+                'regular_price' => mc_format_price($product->get_price()),
+                'sale_price' => mc_format_price($product->get_sale_price()),
                 'item_key' => $this->get_item_key(),
-                'subtotal' => format_price($this->get_subtotal()),
+                'subtotal' => mc_format_price($this->get_subtotal()),
 
             );
             if ($this->card_color) {
@@ -382,8 +382,8 @@ class CartItemModel implements CartItemInterface
             } else {
                 $base_price = $product->get_regular_price();
                 $sale_price = $product->get_sale_price();
-                $data['base_price'] = format_price($base_price);
-                $data['price'] = format_price($sale_price <= 0 ? $base_price : $sale_price);
+                $data['base_price'] = mc_format_price($base_price);
+                $data['price'] = mc_format_price($sale_price <= 0 ? $base_price : $sale_price);
             }
         }
 
