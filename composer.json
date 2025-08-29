@@ -33,7 +33,7 @@
         }
     ],
     "require": {
-        "php": ">=7.2.24",
+        "php": ">=8.4",
         "ext-json": "*",
         "wpackagist-theme/twentytwentyfive": "*",
         "wpackagist-theme/blocksy": "*",
