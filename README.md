@@ -96,12 +96,12 @@ cd mobilo
 
 2. **Run the deployment script:**
 ```bash
-./deploy.sh DB_NAME DB_USER DB_PASSWORD DB_HOST WP_ENV COOKIE_DOMAIN
+./deploy.sh
 ```
 
 **Example:**
 ```bash
-./deploy.sh wordpress_db dbuser dbpass localhost production example.com
+./deploy.sh .env.production
 ```
 
 ### Manual Installation

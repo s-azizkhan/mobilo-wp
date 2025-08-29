@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # WordPress Deployment Script
-# Usage: ./deploy.sh DB_NAME DB_USER DB_PASSWORD DB_HOST WP_ENV COOKIE_DOMAIN
+# Usage: ./deploy.sh [ENV_FILE]
 # Run this script after git pull to configure WordPress
+# If no ENV_FILE is provided, it will use .env
 
 set -e  # Exit on any error
 
@@ -28,20 +29,62 @@ print_error() {
     echo -e "${RED}[ERROR]${NC} $1"
 }
 
-# Check if correct number of arguments provided
-if [ "$#" -ne 6 ]; then
-    print_error "Usage: $0 DB_NAME DB_USER DB_PASSWORD DB_HOST WP_ENV COOKIE_DOMAIN"
-    print_error "Example: $0 wordpress_db dbuser dbpass localhost production example.com"
-    exit 1
-fi
+# Function to load environment variables from .env file
+load_env() {
+    local env_file="$1"
+    
+    if [ ! -f "$env_file" ]; then
+        print_error "Environment file not found: $env_file"
+        exit 1
+    fi
+    
+    print_status "Loading environment variables from $env_file..."
+    
+    # Read .env file and export variables
+    while IFS= read -r line || [ -n "$line" ]; do
+        # Skip comments and empty lines
+        if [[ $line =~ ^[[:space:]]*# ]] || [[ -z "${line// }" ]]; then
+            continue
+        fi
+        
+        # Export the variable
+        export "$line"
+    done < "$env_file"
+    
+    print_status "Environment variables loaded successfully"
+}
 
-# Assign arguments to variables
-DB_NAME="$1"
-DB_USER="$2"
-DB_PASSWORD="$3"
-DB_HOST="$4"
-WP_ENV="$5"
-COOKIE_DOMAIN="$6"
+# Function to validate required environment variables
+validate_env_vars() {
+    local required_vars=("DB_NAME" "DB_USER" "DB_HOST" "WP_ENV" "COOKIE_DOMAIN")
+    local missing_vars=()
+    
+    for var in "${required_vars[@]}"; do
+        if [ -z "${!var}" ]; then
+            missing_vars+=("$var")
+        fi
+    done
+    
+    # DB_PASSWORD can be empty for some database configurations
+    if [ -z "$DB_PASSWORD" ]; then
+        print_warning "DB_PASSWORD is empty - this is acceptable for some database configurations"
+    fi
+    
+    if [ ${#missing_vars[@]} -gt 0 ]; then
+        print_error "Missing required environment variables: ${missing_vars[*]}"
+        print_error "Please check your .env file and ensure all required variables are set"
+        exit 1
+    fi
+}
+
+# Determine which environment file to use
+ENV_FILE="${1:-.env}"
+
+# Load environment variables
+load_env "$ENV_FILE"
+
+# Validate required environment variables
+validate_env_vars
 
 print_status "Starting WordPress deployment..."
 print_status "Database Name: $DB_NAME"
@@ -54,65 +97,60 @@ print_status "Cookie Domain: $COOKIE_DOMAIN"
 CURRENT_DIR=$(pwd)
 print_status "Working directory: $CURRENT_DIR"
 
-# Step 1: Copy wp-config-sample.php to wp-config.php
-if [ -f "wp-config-sample.php" ]; then
-    print_status "Copying wp-config-sample.php to wp-config.php..."
-    cp wp-config-sample.php wp-config.php
+# Step 1: Copy wp-config-sample.php to wp-config.php if it doesn't exist
+if [ ! -f "wp-config.php" ] && [ -f "wp-config-samplex.php" ]; then
+    print_status "Copying wp-config-samplex.php to wp-config.php..."
+    cp wp-config-samplex.php wp-config.php
     print_status "wp-config.php created successfully"
+elif [ -f "wp-config.php" ]; then
+    print_status "wp-config.php already exists, skipping creation"
 else
-    print_error "wp-config-sample.php not found in current directory"
+    print_error "Neither wp-config.php nor wp-config-samplex.php found in current directory"
     exit 1
 fi
 
-# Step 2: Replace database configuration in wp-config.php
-print_status "Configuring database settings in wp-config.php..."
-
-# Replace database name
-sed -i.bak "s/database_name_here/$DB_NAME/g" wp-config.php
-
-# Replace database user
-sed -i.bak "s/username_here/$DB_USER/g" wp-config.php
-
-# Replace database password
-sed -i.bak "s/password_here/$DB_PASSWORD/g" wp-config.php
-
-# Replace database host
-sed -i.bak "s/localhost/$DB_HOST/g" wp-config.php
-
-# Remove backup file
-rm wp-config.php.bak
-
-# Step 2b: Add or update WP_ENV and COOKIE_DOMAIN
-print_status "Configuring WP_ENV and COOKIE_DOMAIN..."
-
-# Check if WP_ENV already exists, if not add it
-if grep -q "WP_ENV" wp-config.php; then
-    # Replace existing WP_ENV
-    sed -i.bak "s/define('WP_ENV',.*/define('WP_ENV', '$WP_ENV');/g" wp-config.php
-    rm wp-config.php.bak
+# Step 2: Verify env-loader.php exists
+if [ -f "env-loader.php" ]; then
+    print_status "env-loader.php found - environment loading is configured"
 else
-    # Add WP_ENV before the "That's all" comment
-    sed -i.bak "/\/\* That's all, stop editing!/i\\
-// Environment\\\ndefine('WP_ENV', '$WP_ENV');\\\n" wp-config.php
-    rm wp-config.php.bak
+    print_error "env-loader.php not found. This file is required for environment variable loading."
+    exit 1
 fi
 
-# Check if COOKIE_DOMAIN already exists, if not add it
-if grep -q "COOKIE_DOMAIN" wp-config.php; then
-    # Replace existing COOKIE_DOMAIN
-    sed -i.bak "s/define('COOKIE_DOMAIN',.*/define('COOKIE_DOMAIN', '$COOKIE_DOMAIN');/g" wp-config.php
-    rm wp-config.php.bak
-else
-    # Add COOKIE_DOMAIN before the "That's all" comment
-    sed -i.bak "/\/\* That's all, stop editing!/i\\
-// Cookie Domain\\\ndefine('COOKIE_DOMAIN', '$COOKIE_DOMAIN');\\\n" wp-config.php
-    rm wp-config.php.bak
+# Step 3: Update .env file with current values (if they don't exist)
+print_status "Updating .env file with deployment values..."
+
+# Function to update or add environment variable in .env file
+update_env_var() {
+    local var_name="$1"
+    local var_value="$2"
+    local env_file="$3"
+    
+    if grep -q "^${var_name}=" "$env_file"; then
+        # Variable exists, update it
+        sed -i.bak "s/^${var_name}=.*/${var_name}=${var_value}/" "$env_file"
+    else
+        # Variable doesn't exist, add it
+        echo "${var_name}=${var_value}" >> "$env_file"
+    fi
+}
+
+# Update .env file with current values
+update_env_var "DB_NAME" "$DB_NAME" "$ENV_FILE"
+update_env_var "DB_USER" "$DB_USER" "$ENV_FILE"
+update_env_var "DB_PASSWORD" "$DB_PASSWORD" "$ENV_FILE"
+update_env_var "DB_HOST" "$DB_HOST" "$ENV_FILE"
+update_env_var "WP_ENV" "$WP_ENV" "$ENV_FILE"
+update_env_var "COOKIE_DOMAIN" "$COOKIE_DOMAIN" "$ENV_FILE"
+
+# Remove backup file if it exists
+if [ -f "${ENV_FILE}.bak" ]; then
+    rm "${ENV_FILE}.bak"
 fi
 
-print_status "WP_ENV and COOKIE_DOMAIN configuration updated successfully"
-print_status "Database configuration updated successfully"
+print_status ".env file updated successfully"
 
-# Step 3: Check for composer and run composer update if exists
+# Step 4: Check for composer and run composer update if exists
 if [ -f "composer.json" ]; then
     print_status "composer.json found, checking for composer..."
     
@@ -134,7 +172,7 @@ else
     print_status "No composer.json found, skipping composer update"
 fi
 
-# Step 4: Change ownership to ubuntu:nogroup
+# Step 5: Change ownership to ubuntu:nogroup
 print_status "Changing ownership of $CURRENT_DIR to ubuntu:nogroup..."
 
 # Check if running on a system that supports the ubuntu user
@@ -159,3 +197,4 @@ ELAPSED_SECONDS=$((ELAPSED_TIME % 60))
 
 print_status "Deployment completed successfully! & WordPress is now configured and ready to use"
 print_status "Total deployment time: ${ELAPSED_MINUTES}m ${ELAPSED_SECONDS}s"
+print_status "Environment file used: $ENV_FILE"
