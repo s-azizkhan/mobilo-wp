@@ -15,12 +15,12 @@ $plan = $cartData['plan'] ?? [];
 
 <!-- Main Content -->
 <main id="mobilo-cart-dynamic" class="flex justify-center mx-auto">
-    <div class="flex gap-8">
+    <div class="flex gap-8 justify-center">
         <!-- Left Column - Product Selection -->
         <div class="flex" style="flex-direction: column;">
             <!-- Choose your card section -->
             <div>
-                <h2 class="text-2xl font-bold text-gray-900 mb-6 m-0"><?php _e('Choose your card', 'mobilo'); ?></h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 m-0"><?php _e('Choose your card', 'mobilo'); ?></h2>
                 <div class="space-y-5">
                     <!-- Main Products -->
                     <?php foreach ($products as $product): ?>
@@ -38,7 +38,7 @@ $plan = $cartData['plan'] ?? [];
                             </div>
                             <div class="flex-1 space-y-4">
                                 <div>
-                                    <h3 class="text-2xl font-bold text-gray-900 m-0"><?php echo esc_html($product['name']); ?></h3>
+                                    <h3 class="text-xl font-bold text-gray-900 m-0"><?php echo esc_html($product['name']); ?></h3>
                                     <!-- <?php if (!empty($product['short_description'])): ?>
                                         <div class="space-y-1 mt-1">
                                             <p class="text-base font-bold text-gray-900 m-0"><?php echo esc_html($product['short_description']); ?></p>
@@ -147,7 +147,7 @@ $plan = $cartData['plan'] ?? [];
                                 <?php endif; ?>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-bold text-gray-900 m-0"><?php echo esc_html($product['name']); ?></h3>
+                                <h3 class="text-xl font-bold text-gray-900 m-0"><?php echo esc_html($product['name']); ?></h3>
                                 <p class="text-base text-gray-600 leading-relaxed mt-5">
                                     <?php echo esc_html($product['short_description'] ?? __('Stick to the back of your phone and always be ready to connect.', 'mobilo')); ?>
                                 </p>
@@ -245,7 +245,7 @@ $plan = $cartData['plan'] ?? [];
 
                 <!-- Plan Information -->
                 <?php if (isset($plan) && !empty($plan)): ?>
-                    <div class="flex justify-between items-center m-0">
+                    <div class="flex justify-between items-center">
                         <div class="flex items-center gap-3">
                             <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center">
                                 <img src="<?= MOBILO_THEME_URL ?>/assets/images/team.svg" alt="plan">
@@ -256,7 +256,9 @@ $plan = $cartData['plan'] ?? [];
                             </div>
                         </div>
                         <div class="text-right">
-                            <span class="text-base font-bold text-gray-900 m-0"><?php echo $currency_symbol; ?><?php echo esc_html($plan['sale_price']); ?></span>
+                            <span class="text-base font-bold text-gray-900 m-0"><?php echo $currency_symbol; ?><?php echo esc_html($plan['sale_price']); ?>
+                            <span class="text-sm text-gray-600">/m/seat</span>
+                        </span>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -321,9 +323,9 @@ $plan = $cartData['plan'] ?? [];
                             <h3 class="text-lg font-bold uppercase text-gray-900"><?php echo esc_html($plan['title']); ?></h3>
                             <div class="flex items-end justify-center gap-1">
                                 <span class="text-3xl font-bold text-[#181059]"><?php echo $currency_symbol; ?><?php echo esc_html($plan['sale_price']); ?></span>
-                                <span class="text-sm text-gray-600">/ <?php echo esc_html($plan['billing_period']); ?></span>
+                                <span class="text-sm text-gray-600">/ <?php echo esc_html($plan['billing_cycle']); ?></span>
                             </div>
-                            <p class="text-sm text-gray-600 m-0"><?php echo esc_html($plan['billing_interval']); ?> <?php _e('Per member, billed annually.', 'mobilo'); ?></p>
+                            <p class="text-sm text-gray-600 m-0">1 <?php _e('Per member, billed annually.', 'mobilo'); ?></p>
                         </div>
                         <div class="mt-4 flex items-center justify-center gap-2">
                             <span class="text-sm text-gray-900 m-0"><?php echo $plan['feature_tagline'] ?? 'All Mobilo features'; ?></span>

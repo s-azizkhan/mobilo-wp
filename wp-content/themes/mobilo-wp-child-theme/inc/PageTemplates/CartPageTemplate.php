@@ -28,7 +28,7 @@ class CartPageTemplate extends PageTemplateLoader
                 if (in_array(strtoupper($_GET['product_sku']), PlanFeature::$cardsSku)) {
                     $product_id = wc_get_product_id_by_sku(strtoupper($_GET['product_sku']));
                     if ($product_id) {
-                        WC()->cart->empty_cart();
+                        mc_empty_cart();
                         WC()->cart->add_to_cart($product_id);
                         // return to clean cart page (without query params)
                         $cart_page_url = wc_get_cart_url();

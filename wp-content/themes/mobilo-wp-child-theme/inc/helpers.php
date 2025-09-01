@@ -163,6 +163,27 @@ function mc_get_cart_item_by_product($product_id, $variation_id = 0)
     }
 }
 
+function mc_get_cart_item_by_product_sku($product_sku)
+{
+    try {
+        $cart = mc_get_cart();
+        if (!$cart) {
+            return false;
+        }
+
+        foreach ($cart->get_cart() as $cart_item_key => $cart_item) {
+            if ($cart_item['data']->get_sku() == $product_sku) {
+                return $cart_item;
+            }
+        }
+
+        return false;
+    } catch (\Throwable $th) {
+        mobilo_log(__METHOD__, $th->getMessage());
+        return false;
+    }
+}
+
 /**
  * Update cart item quantity
  *

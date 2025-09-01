@@ -272,6 +272,7 @@ class CartModel extends WC_Cart
                 $total_license += $cart_item['quantity'];
                 $subtotal_license_price += $itemSubtotal ?: $cart_item['subtotal'];
 
+                unset($cart_item['raw_item']);
                 $cart_license[] = $cart_item;
             } else if (in_array($cart_item['sku'], $accessories_sku)) {
 
@@ -316,6 +317,9 @@ class CartModel extends WC_Cart
 
         $res = [
             'items' => $cart_cards,
+            'total_license' => $total_license,
+            'subtotal_license_price' => $subtotal_license_price,
+            'cart_license' => $cart_license,
             'card' => [
                 'title' => __('Cards', 'mobilo'),
                 'count' => $total_card,

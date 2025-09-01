@@ -10,6 +10,7 @@ var mainContent = document.querySelector('#mobilo-cart-dynamic');
 class MobiloToaster {
     constructor() {
         this.container = null;
+        this.toasts = new Map(); // Track active toasts by message+type
         this.init();
     }
 
@@ -32,7 +33,36 @@ class MobiloToaster {
         }
     }
 
+    _getToastKey(message, type) {
+        // Use both message and type to distinguish toasts
+        return `${type}::${message}`;
+    }
+
     show(message, type = 'info', duration = 3000) {
+        const key = this._getToastKey(message, type);
+
+        // If a toast with the same message and type exists, reset its timer
+        if (this.toasts.has(key)) {
+            const { toast, timeoutId } = this.toasts.get(key);
+            // Reset timer
+            clearTimeout(timeoutId);
+            // Set new timeout
+            const newTimeoutId = setTimeout(() => {
+                this.remove(toast, key);
+            }, duration);
+            this.toasts.set(key, { toast, timeoutId: newTimeoutId });
+            // Optionally, animate again to indicate activity
+            toast.style.transition = 'none';
+            toast.style.transform = 'translateY(-20px)';
+            toast.style.opacity = '0.7';
+            // Force reflow
+            void toast.offsetWidth;
+            toast.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            toast.style.transform = 'translateY(0)';
+            toast.style.opacity = '1';
+            return toast;
+        }
+
         const toast = document.createElement('div');
         toast.className = `mobilo-toast mobilo-toast-${type}`;
 
@@ -64,7 +94,7 @@ class MobiloToaster {
             info: 'border-left-color: #3b82f6; color: #1e40af;'
         };
 
-        toast.style.cssText = baseStyles + typeStyles[type] || typeStyles.info;
+        toast.style.cssText = baseStyles + (typeStyles[type] || typeStyles.info);
         toast.textContent = message;
 
         // Add icon based on type
@@ -92,19 +122,23 @@ class MobiloToaster {
         });
 
         // Auto remove
-        setTimeout(() => {
-            this.remove(toast);
+        const timeoutId = setTimeout(() => {
+            this.remove(toast, key);
         }, duration);
+
+        // Track this toast
+        this.toasts.set(key, { toast, timeoutId });
 
         // Click to dismiss
         toast.addEventListener('click', () => {
-            this.remove(toast);
+            this.remove(toast, key);
         });
 
         return toast;
     }
 
-    remove(toast) {
+    remove(toast, key = null) {
+        // Remove from DOM and clear timer
         if (toast && toast.parentNode) {
             toast.style.transform = 'translateY(-100px)';
             toast.style.opacity = '0';
@@ -113,6 +147,21 @@ class MobiloToaster {
                     toast.parentNode.removeChild(toast);
                 }
             }, 300);
+        }
+        // Remove from map and clear timeout
+        if (!key) {
+            // Try to find the key by value
+            for (let [k, v] of this.toasts.entries()) {
+                if (v.toast === toast) {
+                    key = k;
+                    break;
+                }
+            }
+        }
+        if (key && this.toasts.has(key)) {
+            const { timeoutId } = this.toasts.get(key);
+            clearTimeout(timeoutId);
+            this.toasts.delete(key);
         }
     }
 

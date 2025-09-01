@@ -167,7 +167,7 @@ class PlanFeature extends BaseFeature
             }
 
             // Get the plan
-            $plan_sku = $plan_upgrade_sku ?? self::getCartPlan(true);
+            $plan_sku = $plan_upgrade_sku ? $plan_upgrade_sku : self::getCartPlan(true);
             // Get the product ID associated with the plan SKU.
             $plan_product_id = wc_get_product_id_by_sku($plan_sku);
             $plan = wc_get_product($plan_product_id);
@@ -183,7 +183,7 @@ class PlanFeature extends BaseFeature
             // Include the additional allowed product IDs
             $extra_allowed_skus = ['CSB_TEAM'];
 
-            $allowed_skus = array_merge($products_sku, $accessories_sku, [$plan_product_id], $extra_allowed_skus);
+            $allowed_skus = array_merge($products_sku, $accessories_sku, [self::$digitalCardSku], $extra_allowed_skus);
 
             // Combine all allowed product IDs
             $allowed_ids = [];
@@ -195,18 +195,20 @@ class PlanFeature extends BaseFeature
             }
             // add current plan product id & sku to allowed ids
             $allowed_ids[] = $plan_product_id;
-            $allowed_ids[] = $plan_sku;
+            $allowed_skus[] = $plan_sku;
 
             // Retrieve the current cart contents.
             $cart_items = $cart->get_cart_contents();
             $card_count = 0;
             $accessories_count = 0;
-
-            // Iterate through each item in the cart.
+            $plan_quantity = 0;
             foreach ($cart_items as $key => $cart_item) {
                 $cart_product_sku = $cart_item['data']->get_sku();
                 if (in_array($cart_product_sku, $products_sku)) {
                     $card_count += $cart_item['quantity'];
+                }
+                if ($cart_product_sku === self::$digitalCardSku) {
+                    $plan_quantity += $cart_item['quantity'];
                 }
                 if (in_array($cart_product_sku, $accessories_sku)) {
                     $accessories_count += $cart_item['quantity'];
@@ -226,8 +228,24 @@ class PlanFeature extends BaseFeature
                     mobilo_log(__METHOD__, $log_msg, 'info');
                 }
             }
+            // add the card quantity to the plan quantity
+            $plan_quantity += $card_count;
             if ($cart->is_empty()) {
                 return;
+            }
+
+            // plan quantity
+            $plan_cart_item = mc_get_cart_item_by_product_sku($plan_sku);
+            if ($plan_cart_item) {
+                WC()->cart->set_quantity($plan_cart_item['key'], $plan_quantity);
+            } else {
+                $result = WC()->cart->add_to_cart($plan_product_id, $plan_quantity);
+                if (!$result) {
+                    mobilo_log(__METHOD__, "Failed to add plan to cart", 'error', [
+                        'plan_product_id' => $plan_product_id,
+                        'plan_quantity' => $plan_quantity,
+                    ]);
+                }
             }
 
             if ($accessories_count > 0) {
