@@ -3,6 +3,7 @@
 namespace Mobilo\WpTheme;
 
 use Mobilo\WpTheme\Actions\Cart\CartAjaxActions;
+use Mobilo\WpTheme\PageTemplates\CartAjaxOnlyPageTemplate;
 
 defined('ABSPATH') || exit;
 
@@ -26,6 +27,8 @@ class Enqueue
             }
             // Page specific ajax actions (load specific ajax actions on specific page)
             if (isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], "cart")) {
+                // ini cart page template
+                new CartAjaxOnlyPageTemplate();
                 // if ajax request then load ajax actions
                 (new CartAjaxActions())->init();
             }

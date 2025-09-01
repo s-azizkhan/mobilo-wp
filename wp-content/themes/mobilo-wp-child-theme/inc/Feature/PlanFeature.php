@@ -84,7 +84,7 @@ class PlanFeature extends BaseFeature
         $planSku = NewPlansUserMeta::getPlanSku();
 
         // 2. If not valid, try to get from URL query param 'sku'
-        if (!self::is_valid_lan_sku($planSku)) {
+        if (!self::is_valid_plan_sku($planSku)) {
             $urlPlanSku = isset($_GET['sku']) ? trim(sanitize_text_field($_GET['sku'])) : '';
             if (!empty($urlPlanSku)) {
                 $planSku = strtoupper($urlPlanSku);
@@ -92,12 +92,12 @@ class PlanFeature extends BaseFeature
         }
 
         // 3. If still not valid, try to get from cookie
-        if (!self::is_valid_lan_sku($planSku)) {
+        if (!self::is_valid_plan_sku($planSku)) {
             $planSku = self::get_plan_sku_from_cookie();
         }
 
         // 4. Fallback to default plan if still not valid
-        if (!self::is_valid_lan_sku($planSku)) {
+        if (!self::is_valid_plan_sku($planSku)) {
             $planSku = self::$skuPrefix . 'PRO';
         }
 
@@ -127,22 +127,18 @@ class PlanFeature extends BaseFeature
      */
     public static function set_accessories_quantity($card_quantity)
     {
-        $cart_items = WC()->cart->get_cart();
+        $cart = mc_get_cart();
+        if (!$cart) {
+            return;
+        }
+        $cart_items = $cart->get_cart();
+        $accessories_sku = self::$accessoriesSku;
 
         // loop the cart items
         foreach ($cart_items as $key => $cart_item) {
-            // get the product categories
-            $categories = get_the_terms($cart_item['product_id'], 'product_cat');
-            $categories_name = array_column($categories, 'name'); // Take only name from the categories
-
-            // Update the accessories category products quantity to $card_quantity
-            if (in_array('accessories', $categories_name)) {
-
-                if ($card_quantity > 0) {
-                    WC()->cart->set_quantity($key, $card_quantity);
-                } else {
-                    WC()->cart->remove_cart_item($key);
-                }
+            $cart_product_sku = $cart_item['data']->get_sku();
+            if (in_array($cart_product_sku, $accessories_sku)) {
+                $cart->set_quantity($key, $card_quantity);
             }
         }
     }
@@ -160,14 +156,13 @@ class PlanFeature extends BaseFeature
     public static function checkProductsInCart(): void
     {
         try {
-            if (WC()->cart->is_empty()) {
+            $cart = mc_get_cart();
+            if (!$cart) {
                 return;
             }
 
-            $extra_allowed_skus = ['CSB_TEAM'];
-
             $plan_upgrade_sku = PlanUpgradeFeature::isPlanUpgradeModeEnabled();
-            if ($plan_upgrade_sku && !self::is_valid_lan_sku($plan_upgrade_sku)) {
+            if ($plan_upgrade_sku && !self::is_valid_plan_sku($plan_upgrade_sku)) {
                 mobilo_log(__METHOD__, "Invalid plan upgrade found on cookie, sku: {$plan_upgrade_sku}");
             }
 
@@ -183,74 +178,71 @@ class PlanFeature extends BaseFeature
             $plan_sku = $plan->get_sku();
 
             // Get upsells and cross-sells.
-            $product_ids = self::$cardsSku;
-            $accessories_ids = self::$accessoriesSku;
-
+            $products_sku = self::$cardsSku;
+            $accessories_sku = self::$accessoriesSku;
             // Include the additional allowed product IDs
-            $extra_allowed_ids = [];
-            foreach ($extra_allowed_skus as $sku) {
-                $extra_id = wc_get_product_id_by_sku($sku);
-                if ($extra_id) {
-                    $extra_allowed_ids[] = $extra_id;
-                }
-            }
+            $extra_allowed_skus = ['CSB_TEAM'];
+
+            $allowed_skus = array_merge($products_sku, $accessories_sku, [$plan_product_id], $extra_allowed_skus);
 
             // Combine all allowed product IDs
-            $allowed_ids = array_merge($product_ids, $accessories_ids, [$plan_product_id], $extra_allowed_ids);
+            $allowed_ids = [];
+            foreach ($allowed_skus as $sku) {
+                $product_id = wc_get_product_id_by_sku($sku);
+                if ($product_id) {
+                    $allowed_ids[] = $product_id;
+                }
+            }
+            // add current plan product id & sku to allowed ids
+            $allowed_ids[] = $plan_product_id;
+            $allowed_ids[] = $plan_sku;
 
             // Retrieve the current cart contents.
-            $cart_items = WC()->cart->get_cart_contents();
+            $cart_items = $cart->get_cart_contents();
+            $card_count = 0;
+            $accessories_count = 0;
 
             // Iterate through each item in the cart.
             foreach ($cart_items as $key => $cart_item) {
                 $cart_product_sku = $cart_item['data']->get_sku();
+                if (in_array($cart_product_sku, $products_sku)) {
+                    $card_count += $cart_item['quantity'];
+                }
+                if (in_array($cart_product_sku, $accessories_sku)) {
+                    $accessories_count += $cart_item['quantity'];
+                }
 
                 // If the current cart's plan SKU is not the current plan SKU and not in extra allowed list, empty cart.
-                if (self::is_valid_lan_sku($cart_product_sku) && $cart_product_sku !== $plan_sku && !in_array($cart_product_sku, $extra_allowed_skus)) {
-                    foreach ($cart_items as $c_key => $c_item) {
-                        WC()->cart->remove_cart_item($c_key);
-                    }
+                if (self::is_valid_plan_sku($cart_product_sku) && $cart_product_sku !== $plan_sku && !in_array($cart_product_sku, $extra_allowed_skus)) {
+                    mc_empty_cart();
                     mobilo_log(__METHOD__, "Cart emptied, due to plan SKU mismatch: {$plan_sku} !== {$cart_product_sku}", 'info');
                     break;
                 }
 
                 // If the product ID is not in the allowed list, remove it.
                 if (!in_array($cart_item['product_id'], $allowed_ids)) {
-                    $result = WC()->cart->remove_cart_item($key);
+                    $cart->remove_cart_item($key);
                     $log_msg = "Removed product " . $cart_item['product_id'] . " from cart, due to not being in the allowed list of planSKU: {$plan_sku}";
                     mobilo_log(__METHOD__, $log_msg, 'info');
                 }
-
-                // keeping this for future reference
-                // Add the card ID to the list of cards on the cart.
-                //if (in_array($cart_item['product_id'], $product_ids)) {
-                //    $cart_cards[] = $key;
-                //}
+            }
+            if ($cart->is_empty()) {
+                return;
             }
 
-            // keeping this for future reference
-            // if cart have more than one card then remove them & keep only one card. @deprecated 1.0.2
-            //if (count($cart_cards) > 1) {
-            //    unset($cart_cards[0]);
-            //    foreach ($cart_cards as $key) {
-            //        mobilo_log(__METHOD__, "Removed product " . $key . " from cart, due to multiple cards on cart", 'info');
-            //        WC()->cart->remove_cart_item($key);
-            //    }
-            //}
-
+            if ($accessories_count > 0) {
+                self::set_accessories_quantity($card_count);
+            }
             // If plan upgrade or custom order mode is enabled, adjust accessories and skip further processing.
-            if (PlanUpgradeFeature::isPlanUpgradeModeEnabled() || self::isCustomOrderModeEnabled()) {
-                $cartData = new CartModel();
-                $cartData->get_new_plan_cart(null, false);
-                self::set_accessories_quantity($cartData->total_card - $cartData->digital_card);
+            if (!PlanUpgradeFeature::isPlanUpgradeModeEnabled() || !self::isCustomOrderModeEnabled()) {
                 return;
             }
 
             // Prevent emptying cart if CSB_TEAM is present
             $csbTeamPresent = false;
-            foreach (WC()->cart->get_cart_contents() as $item) {
-                $sku = $item['data']->get_sku();
-                if ($sku === 'CSB_TEAM') {
+            foreach ($cart->get_cart_contents() as $item) {
+                $cart_product_sku = $item['data']->get_sku();
+                if (in_array($cart_product_sku, $extra_allowed_skus)) {
                     $csbTeamPresent = true;
                     break;
                 }
@@ -261,12 +253,12 @@ class PlanFeature extends BaseFeature
             }
 
             // If the cart no longer contains the main plan product, empty it.
-            if (!self::isCardInCart($plan, false)) {
-                WC()->cart->empty_cart();
-            }
+            // if (!self::isCardInCart($plan)) {
+            //     $cart->empty_cart();
+            // }
 
             // Update cart quantities based on main product.
-            self::update_cart_item_quantity(null, $plan); //TODO: add this function
+            // self::update_cart_item_quantity(null, $plan); //TODO: add this function
 
         } catch (Throwable $th) {
             mobilo_log(__METHOD__, $th->getMessage());
@@ -342,7 +334,7 @@ class PlanFeature extends BaseFeature
     public static function get_plan_by_sku(string $sku, $return_wc_product = false)
     {
         try {
-            if (!self::is_valid_lan_sku($sku)) {
+            if (!self::is_valid_plan_sku($sku)) {
                 return [];
             }
 
@@ -462,7 +454,7 @@ class PlanFeature extends BaseFeature
      * @param string $planSku The plan SKU to check.
      * @return bool True if the plan SKU is valid, false otherwise.
      */
-    public static function is_valid_lan_sku(string $planSku): bool
+    public static function is_valid_plan_sku(string $planSku): bool
     {
         return str_starts_with(strtoupper($planSku), self::$skuPrefix);
     }
@@ -482,8 +474,9 @@ class PlanFeature extends BaseFeature
         // Initialize the result variable
         $result = false;
 
+        $cart = mc_get_cart();
         // Check if there is a cart
-        if (!WC()->cart) {
+        if (!$cart) {
             return $result;
         }
 
@@ -492,14 +485,14 @@ class PlanFeature extends BaseFeature
 
         // Get the keys of the cart items that have IDs in the card_ids array
         $cart_item_keys = array_intersect(
-            array_column(WC()->cart->get_cart(), 'product_id'),
+            array_column($cart->get_cart(), 'product_id'),
             $card_ids
         );
 
         // Filter out the cart items that have the digital card SKU if ignoreDigitalCard is true
         if ($ignoreDigitalCard) {
             $cart_item_keys = array_filter($cart_item_keys, function ($product_id) {
-                $product_sku = mc_get_sku_from_product_id($product_id); // TODO: add this function on helper
+                $product_sku = mc_get_sku_from_product_id($product_id);
                 return $product_sku !== self::$digitalCardSku;
             });
         }
@@ -518,14 +511,13 @@ class PlanFeature extends BaseFeature
     public function maybeUpdateCart($username, WP_User $user)
     {
         try {
-            if (!WC()->cart->is_empty()) {
-                // Skip execution if the request is an AJAX request.
-                if (wp_doing_ajax()) {
-                    return;
-                }
-                mobilo_log(__METHOD__, "maybeUpdateCart called after opt", "info");
-                self::checkProductsInCart();
+            $cart = mc_get_cart();
+            // Skip execution if the request is an AJAX request or cart is empty.
+            if (!$cart || wp_doing_ajax()) {
+                return;
             }
+            mobilo_log(__METHOD__, "maybeUpdateCart called after opt", "info");
+            self::checkProductsInCart();
         } catch (Throwable $th) {
             mobilo_log(__METHOD__, $th->getMessage());
         }

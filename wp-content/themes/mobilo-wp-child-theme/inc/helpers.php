@@ -5,7 +5,7 @@ defined('ABSPATH') || exit;
 /**
  * Logs a message with the function/method name.
  */
-function mobilo_log($from, $message, $context = [], $level = 'error'): void
+function mobilo_log($from, $message, $level = 'error', $context = []): void
 {
     try {
         // If function name or message is empty, exit the function.
@@ -204,4 +204,72 @@ function mc_add_product_to_cart($product_id, $quantity = 1, $variation_id = 0, $
         mobilo_log(__METHOD__, $th->getMessage());
         return false;
     }
+}
+
+/**
+ * get the cart
+ * 
+ * @return WC_Cart|null
+ */
+function mc_get_cart()
+{
+    // check if WC is initialized
+    if (class_exists('WooCommerce')) {
+        $cart = WC()->cart;
+        if ($cart->is_empty()) {
+            return null;
+        }
+        if ($cart) {
+            return $cart;
+        }
+    }
+    return null;
+}
+
+/**
+ * Empty the cart
+ * 
+ * @return bool
+ */
+function mc_empty_cart()
+{
+    $cart = mc_get_cart();
+    if (!$cart) {
+        return true;
+    }
+    foreach ($cart->get_cart() as $cart_item_key => $cart_item) {
+        $cart->remove_cart_item($cart_item_key);
+    }
+    // empty the cart
+    $cart->empty_cart();
+    return true;
+}
+
+/**
+ * Retrieves the SKU from a product ID.
+ *
+ * @param int $product_id The ID of the
+ * @return string|false The SKU(s) associated with the product ID.
+ */
+function mc_get_sku_from_product_id(int $product_id)
+{
+    global $wpdb;
+
+    // Prepare the SQL query to retrieve the SKU based on the product ID
+    $query = "SELECT meta.meta_value
+              FROM {$wpdb->posts} wp
+              INNER JOIN {$wpdb->postmeta} as meta ON wp.ID = meta.post_id
+              WHERE wp.ID = %d AND meta.meta_key = '_sku';";
+
+    $query = $wpdb->prepare($query, $product_id);
+
+    // Execute the SQL query
+    $res = $wpdb->get_results($query);
+
+    // Extract the SKU value(s) from the result and return as an array
+    $res = array_column($res, 'meta_value');
+    if (!empty($res)) {
+        return $res[0];
+    }
+    return false;
 }

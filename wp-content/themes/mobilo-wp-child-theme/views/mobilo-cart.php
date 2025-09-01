@@ -24,14 +24,14 @@ $plan = $cartData['plan'] ?? [];
                 <div class="space-y-5">
                     <!-- Main Products -->
                     <?php foreach ($products as $product): ?>
-                        <div class="card product-card mobilo-product-card flex">
+                        <div class="card product-card mobilo-product-card flex gap-5">
                             <div class="flex gap-10">
                                 <?php if (!empty($product['thumbnail'])): ?>
                                     <img src="<?php echo esc_url($product['thumbnail']); ?>" 
                                          alt="<?php echo esc_attr($product['name']); ?>" 
-                                         class="w-80 h-52 object-cover rounded">
+                                         class="w-72 h-52 object-cover rounded">
                                 <?php else: ?>
-                                    <div class="w-80 h-52 bg-gray-200 rounded flex items-center justify-center">
+                                    <div class="w-72 h-52 bg-gray-200 rounded flex items-center justify-center">
                                         <span class="text-gray-400"><?php _e('No image', 'mobilo'); ?></span>
                                     </div>
                                 <?php endif; ?>
@@ -108,6 +108,7 @@ $plan = $cartData['plan'] ?? [];
                                         <span class="text-base font-bold text-gray-900 ml-3 m-0 mobilo-product-price"><?php echo $currency_symbol; ?><?php echo esc_html($product['price']); ?></span>
                                     </div>
                                     <button class="btn-primary mobilo-add-to-cart <?php echo $product['in_cart'] ? 'bg-gray-500' : ''; ?>" 
+                                            <?php echo $product['in_cart'] ? 'disabled' : ''; ?>
                                             data-product-id="<?php echo esc_attr($product['id']); ?>"
                                             data-quantity="1"
                                             <?php if (isset($product['variations'])): ?>
@@ -130,6 +131,10 @@ $plan = $cartData['plan'] ?? [];
             <?php if (!empty($upsell_products)): ?>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 md:max-w-[702px]">
                     <?php foreach ($upsell_products as $product): ?>
+                        <?php 
+                        // Check if this upsell product is already in cart
+                        $is_in_cart = mc_is_product_in_cart($product['id']);
+                        ?>
                         <div class="bg-white p-6 rounded-lg shadow-sm">
                             <div class="flex justify-start mb-4">
                                 <?php if (!empty($product['thumbnail'])): ?>
@@ -151,10 +156,11 @@ $plan = $cartData['plan'] ?? [];
                                 <p class="text-base font-bold text-gray-800 m-0">
                                     <span class="font-light">1x</span><?php echo $currency_symbol; ?><?php echo esc_html($product['price']); ?>
                                 </p>
-                                <button class="mobilo-add-upsell-all btn-primary" 
+                                <button class="mobilo-add-upsell-all btn-primary <?php echo $is_in_cart ? 'bg-gray-500' : ''; ?>" 
                                         data-product-id="<?php echo esc_attr($product['id']); ?>" 
-                                        data-quantity="1">
-                                    <?php _e('Add for all members', 'mobilo'); ?>
+                                        data-quantity="1"
+                                        <?php echo $is_in_cart ? 'disabled' : ''; ?>>
+                                    <?php echo $is_in_cart ? __('In cart', 'mobilo') : __('Add for all members', 'mobilo'); ?>
                                 </button>
                             </div>
                         </div>
@@ -194,13 +200,13 @@ $plan = $cartData['plan'] ?? [];
                                     <div class="text-right flex flex-col gap-1">
                                         <span class="text-base font-bold text-gray-900 m-0"><?php echo $currency_symbol; ?><?php echo esc_html($item['subtotal']); ?></span>
                                         <div class="input-quantity" data-quantity-control data-item-id="<?php echo esc_attr($item['item_key']); ?>">
-                                            <button class="mobilo-quantity-btn mobilo-decrease" data-action="decrease">-</button>
+                                            <button class="mobilo-quantity-btn mobilo-decrease cursor-pointer" data-action="decrease">-</button>
                                             <span class="mobilo-quantity" data-quantity><?php echo esc_html($item['quantity']); ?></span>
-                                            <button class="mobilo-quantity-btn mobilo-increase" data-action="increase">+</button>
+                                            <button class="mobilo-quantity-btn mobilo-increase cursor-pointer" data-action="increase">+</button>
                                         </div>
                                     </div>
                                     <div class="flex items-center gap-3">
-                                        <button class="text-gray-600 hover:text-gray-900 mobilo-remove-item" 
+                                        <button class="text-gray-600 hover:text-gray-900 mobilo-remove-item cursor-pointer" 
                                                 data-action="remove"
                                                 data-cart-item-key="<?php echo esc_attr($item['item_key']); ?>">
                                             <img src="<?= MOBILO_THEME_URL ?>/assets/images/delete.svg" alt="Delete" class="w-4 h-4">
@@ -224,7 +230,7 @@ $plan = $cartData['plan'] ?? [];
                                     <div class="text-right">
                                         <span class="text-base font-bold text-gray-900"><?php echo $currency_symbol; ?><?php echo esc_html($item['subtotal']); ?></span>
                                     </div>
-                                    <button class="text-gray-600 hover:text-gray-900 mobilo-remove-item" 
+                                    <button class="text-gray-600 hover:text-gray-900 mobilo-remove-item cursor-pointer" 
                                             data-action="remove"
                                             data-cart-item-key="<?php echo esc_attr($item['item_key']); ?>">
                                         <img src="<?= MOBILO_THEME_URL ?>/assets/images/delete.svg" alt="Delete" class="w-4 h-4">
