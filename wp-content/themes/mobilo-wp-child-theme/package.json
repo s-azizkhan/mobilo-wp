@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "WordPress child theme with Tailwind CSS",
   "scripts": {
-    "build": "tailwindcss -i ./assets/css/cart.css -o ./assets/dist/cart.css",
+    "build": "rm -rf ./assets/dist && tailwindcss -i ./assets/css/cart.css -o ./assets/dist/cart.css",
     "watch": "tailwindcss -i ./assets/css/cart.css -o ./assets/dist/cart.css --watch",
     "build:cart": "tailwindcss -i ./assets/css/cart.css -o ./assets/dist/cart.css",
     "watch:cart": "tailwindcss -i ./assets/css/cart.css -o ./assets/dist/cart.css --watch"
