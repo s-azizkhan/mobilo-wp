@@ -24,30 +24,37 @@ class UpdateCartQuantityAction extends MobiloAjaxAction
         $quantity = isset($_POST['quantity']) ? intval($_POST['quantity']) : 0;
 
         if (!$cart_item_key || $quantity < 0) {
-            $this->errorResponse('invalid_params', 'Invalid parameters', [], 400);
+            return $this->errorResponse('invalid_params', 'Invalid parameters', [], 400);
         }
 
         try {
             if ($quantity === 0) {
-                WC()->cart->remove_cart_item($cart_item_key);
+                $result = WC()->cart->remove_cart_item($cart_item_key);
+                if (!$result) {
+                    return $this->errorResponse('remove_failed', 'Failed to remove item', [], 400);
+                }
                 $message = __('Item removed from cart', 'mobilo');
             } else {
-                WC()->cart->set_quantity($cart_item_key, $quantity);
+                $result = WC()->cart->set_quantity($cart_item_key, $quantity);
+                if (!$result) {
+                    return $this->errorResponse('update_failed', 'Failed to update item', [], 400);
+                }
                 $message = __('Cart updated successfully', 'mobilo');
             }
+
+            do_action('mc_update_cart_quantity_success', $cart_item_key, $quantity);
 
             $cart_model = new CartModel();
             $cart_data = $cart_model->get_new_plan_cart();
 
-            self::out([
+            return self::out([
                 'success' => true,
                 'message' => $message,
                 'cart_data' => $cart_data,
-                'cart_count' => WC()->cart->get_cart_contents_count()
             ]);
         } catch (\Exception $e) {
             mobilo_log(__METHOD__, $e->getMessage());
-            $this->errorResponse('update_error', $e->getMessage(), [], 500);
+            return $this->errorResponse('update_error', $e->getMessage(), [], 500);
         }
     }
 }

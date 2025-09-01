@@ -1,238 +1,411 @@
-/**
- * Mobilo Cart Styles
- * Additional styles for cart functionality
- */
+@import "tailwindcss";
 
-/* Active states for material and color selection */
-.mobilo-material-btn.active {
-    background-color: #1f2937 !important;
-    color: white !important;
-    border-color: #1f2937 !important;
+/* de */
+:root {
+    --color-primary: #072553;
+    --color-secondary: #0044A8;
+    --color-tertiary: #F8F8F8;
+    --color-quaternary: #F2F2F2;
+    --color-quinary: #F2F2F2;
+    --text-base: 1rem;
 }
 
-.mobilo-card-color.active {
-    border-color: #3b82f6 !important;
-    border-width: 3px !important;
+/* Custom styles for pixel-perfect implementation */
+
+/* Custom gradients matching Figma design */
+.bg-gradient-red-blue {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
 }
 
-/* Loading states */
-.mobilo-add-to-cart:disabled,
-.mobilo-add-upsell-all:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+.bg-gradient-button {
+    background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 100%);
 }
 
-/* Cart item hover effects */
-.mobilo-cart-item:hover {
-    background-color: #f9fafb;
+/* Custom shadows */
+.shadow-custom {
+    box-shadow: 0px 6px 16px 0px rgba(12, 43, 100, 0.32);
 }
 
-/* Quantity button states */
-.mobilo-quantity-btn:hover {
-    background-color: #f3f4f6;
+.plan-card {
+    box-shadow: 0px 4px 8px 2px rgba(10, 48, 108, 0.05), 0px -5px 8px 2px rgba(10, 48, 108, 0.05);
 }
 
-.mobilo-quantity-btn:active {
-    background-color: #e5e7eb;
+.shadow-mobilo-card {
+    box-shadow: 17px 70px 58px 0px rgba(0, 0, 0, 0.25);
 }
 
-/* Remove button hover */
-.mobilo-remove-item:hover {
-    color: #dc2626 !important;
+/* Custom colors */
+.text-gray-900 {
+    color: #262626;
 }
 
-/* Message notifications */
-.mobilo-message {
+.text-gray-600 {
+    color: #646D7A;
+}
+
+.bg-gray-50 {
+    background-color: #F8F8F8;
+}
+
+.bg-gray-100 {
+    background-color: #F2F2F2;
+}
+
+.border-gray-200 {
+    border-color: #EEEEEE;
+}
+
+.border-gray-100 {
+    border-color: #E7E7E7;
+}
+
+/* Custom spacing for exact Figma measurements */
+.gap-10 {
+    gap: 2.5rem;
+}
+
+.gap-38 {
+    gap: 9.5rem;
+}
+
+.gap-74 {
+    gap: 18.5rem;
+}
+
+/* Custom dimensions */
+.w-35 {
+    width: 8.75rem;
+}
+
+.h-35 {
+    height: 8.75rem;
+}
+
+.w-37 {
+    width: 9.25rem;
+}
+
+.h-37 {
+    height: 9.25rem;
+}
+
+.w-80 {
+    width: 20rem;
+}
+
+.h-52 {
+    height: 13rem;
+}
+
+/* Custom border radius */
+.rounded-2xl {
+    border-radius: 1.25rem;
+}
+
+/* Custom font weights */
+.font-bold {
+    font-weight: 700;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+/* Custom line heights */
+.leading-relaxed {
+    line-height: 1.74;
+}
+
+.leading-tight {
+    line-height: 1.302;
+}
+
+/* Custom transitions */
+.transition-shadow {
+    transition: box-shadow 0.3s ease;
+}
+
+.transition-all {
     transition: all 0.3s ease;
-    max-width: 400px;
-    word-wrap: break-word;
 }
 
-.mobilo-message.bg-green-500 {
+/* Hover effects */
+.hover-shadow-xl:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom button styles */
+.btn-primary {
     color: white;
+    font-weight: 600;
+    font-size: 14px;
+    transition: box-shadow 0.3s ease;
+    /* Button */
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.625rem 2.5rem;
+
+    gap: 6px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%), #3370C9;
+    box-shadow: 0px 6px 16px rgba(12, 43, 100, 0.32);
+    border-radius: 8px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    /* flex-grow: 1; */
+
 }
 
-.mobilo-message.bg-red-500 {
+.btn-primary:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%), #072553;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
     color: white;
+    font-weight: 700;
+    padding: 0.625rem 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
 }
 
-.mobilo-message.bg-blue-500 {
+.btn-secondary:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom card styles */
+.card {
+    background: white;
+    border: 1px solid #EEEEEE;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.product-card {
+    width: 700px;
+}
+
+.cart-card {
+    width: 428px;
+    margin-top: 55px;
+}
+
+.card-hover {
+    transition: box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom input styles */
+.input-quantity {
+    display: flex;
+    align-items: center;
+    border: 1px solid #EEEEEE;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.75rem;
+}
+
+.input-quantity button {
+    color: #646D7A;
+    padding: 0 0.5rem;
+}
+
+.input-quantity button:hover {
+    color: #262626;
+}
+
+.input-quantity span {
+    padding: 0 0.5rem;
+    color: #262626;
+}
+
+/* Custom material selection */
+.material-btn {
+    padding: 0.625rem 1rem;
+    border: 1px solid #EEEEEE;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #262626;
+    transition: all 0.3s ease;
+}
+
+.material-btn:hover {
+    background-color: #F8F8F8;
+}
+
+.material-btn.active {
+    background-color: #6B7280;
     color: white;
+    border-color: #6B7280;
 }
 
-/* Product card hover effects */
-.mobilo-product-card {
-    transition: all 0.2s ease;
+/* Custom color selection */
+.color-btn {
+    width: 2rem;
+    height: 2rem;
+    background: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
 }
 
-.mobilo-product-card:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+.color-btn.active {
+    border-color: #9CA3AF;
 }
 
-/* Cart sidebar sticky positioning */
-@media (min-width: 1024px) {
-    .lg\:col-span-1>div:first-child {
-        position: sticky;
-        top: 2rem;
-    }
+.color-btn .color-fill {
+    position: absolute;
+    top: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
+    border-radius: 50%;
+}
+
+/* Custom notification styles */
+.notification {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: #10B981;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    z-index: 50;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .mobilo-product-card {
-        flex-direction: column;
-        text-align: center;
+@media (max-width: 1024px) {
+    .lg-grid-cols-3 {
+        grid-template-columns: 1fr;
     }
 
-    .mobilo-product-card .flex-grow {
-        width: 100%;
+    .lg-col-span-2 {
+        grid-column: 1;
     }
 
-    .mobilo-product-card>div:last-child {
-        width: 100%;
-        align-items: center;
+    .lg-col-span-1 {
+        grid-column: 1;
     }
 }
 
-/* Animation for cart updates */
-.mobilo-cart-items {
-    transition: all 0.3s ease;
+@media (max-width: 768px) {
+    .md-grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .gap-10 {
+        gap: 1.5rem;
+    }
+
+    .w-80 {
+        width: 100%;
+    }
+
+    .h-52 {
+        height: auto;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
 }
 
 /* Focus states for accessibility */
-.mobilo-add-to-cart:focus,
-.mobilo-quantity-btn:focus,
-.mobilo-remove-item:focus,
-.mobilo-material-btn:focus,
-.mobilo-card-color:focus {
-    outline: 2px solid #3b82f6;
+button:focus,
+input:focus,
+select:focus {
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
 
-/* Disabled state styling */
-.mobilo-add-to-cart.bg-gray-500 {
-    cursor: not-allowed;
+/* Loading states */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
 }
 
-.mobilo-add-to-cart.bg-gray-500:hover {
-    background-color: #6b7280 !important;
-}
-
-/* Cart count badge */
-.mobilo-cart-count {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 20px;
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
     height: 20px;
-    padding: 0 6px;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1;
-    border-radius: 10px;
-    background-color: #ef4444;
-    color: white;
-}
-
-/* Loading spinner */
-.mobilo-loading {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border: 2px solid #ffffff;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid var(--color-primary);
     border-radius: 50%;
-    border-top-color: transparent;
-    animation: mobilo-spin 1s ease-in-out infinite;
+    animation: spin 1s linear infinite;
 }
 
-@keyframes mobilo-spin {
-    to {
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
         transform: rotate(360deg);
     }
 }
 
-/* Error state styling */
-.mobilo-error {
-    border-color: #ef4444 !important;
-    background-color: #fef2f2 !important;
-}
-
-/* Success state styling */
-.mobilo-success {
-    border-color: #10b981 !important;
-    background-color: #f0fdf4 !important;
-}
-
-/* Cart empty state */
-.mobilo-cart-empty {
-    text-align: center;
-    padding: 2rem;
-    color: #6b7280;
-}
-
-.mobilo-cart-empty .material-icons {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    opacity: 0.5;
-}
-
-/* Product variation price updates */
-.mobilo-product-price {
-    transition: color 0.2s ease;
-}
-
-.mobilo-product-price.updating {
-    color: #6b7280;
-}
-
-/* Checkout button states */
-.mobilo-checkout-btn:disabled {
-    background-color: #9ca3af !important;
-    cursor: not-allowed;
-}
-
-.mobilo-checkout-btn:disabled:hover {
-    background-color: #9ca3af !important;
-}
-
-/* Plan information styling */
-.mobilo-plan-info {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-/* Feature list styling */
-.mobilo-features-list li {
-    transition: all 0.2s ease;
-}
-
-.mobilo-features-list li:hover {
-    transform: translateX(4px);
-}
-
-/* Material icons sizing */
-.material-icons.mobilo-icon-sm {
-    font-size: 16px;
-}
-
-.material-icons.mobilo-icon-md {
-    font-size: 24px;
-}
-
-.material-icons.mobilo-icon-lg {
-    font-size: 32px;
-}
-
-/* Print styles */
-@media print {
-
-    .mobilo-add-to-cart,
-    .mobilo-quantity-btn,
-    .mobilo-remove-item,
-    .mobilo-checkout-btn {
-        display: none !important;
+/* Custom animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
     }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Custom gradients for color buttons */
+.color-blue {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+}
+
+.color-green {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+}
+
+.color-red {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
 }

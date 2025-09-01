@@ -23,24 +23,28 @@ class RemoveCartItemAction extends MobiloAjaxAction
         $cart_item_key = isset($_POST['cart_item_key']) ? sanitize_text_field($_POST['cart_item_key']) : '';
 
         if (!$cart_item_key) {
-            $this->errorResponse('invalid_item', 'Invalid cart item', [], 400);
+            return $this->errorResponse('invalid_item', 'Invalid cart item', [], 400);
         }
 
         try {
-            WC()->cart->remove_cart_item($cart_item_key);
+            $result = WC()->cart->remove_cart_item($cart_item_key);
+            if (!$result) {
+                mobilo_log(__METHOD__, 'Failed to remove item: ' . $cart_item_key, ['result' => $result, 'cart_item_key' => $cart_item_key]);
+                return $this->errorResponse('remove_failed', 'Failed to remove item', [], 400);
+            }
+            do_action('mc_remove_cart_item_success', $cart_item_key);
 
             $cart_model = new CartModel();
             $cart_data = $cart_model->get_new_plan_cart();
 
-            self::out([
+            return self::out([
                 'success' => true,
                 'message' => __('Item removed from cart', 'mobilo'),
                 'cart_data' => $cart_data,
-                'cart_count' => WC()->cart->get_cart_contents_count()
             ]);
         } catch (\Exception $e) {
             mobilo_log(__METHOD__, $e->getMessage());
-            $this->errorResponse('remove_error', $e->getMessage(), [], 500);
+            return $this->errorResponse('remove_error', $e->getMessage(), [], 500);
         }
     }
 }

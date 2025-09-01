@@ -26,13 +26,13 @@ class MobiloCartShortcode
     public function enqueue_scripts()
     {
         if (has_shortcode(get_the_content(), 'mobilo_cart')) {
-            // Enqueue CSS
-            wp_enqueue_style(
-                'mobilo-cart-css',
-                MOBILO_THEME_URL . '/assets/css/cart.css',
-                [],
-                '1.0.0'
-            );
+            // Enqueue CSS [we dont need this because we are using dynamic cart css from js(cart.js)]
+            // wp_enqueue_style(
+            //     'mobilo-cart-css',
+            //     MOBILO_THEME_URL . '/assets/dist/cart.css',
+            //     [],
+            //     '1.0.0'
+            // );
 
             // Enqueue JavaScript
             wp_enqueue_script(
@@ -58,6 +58,7 @@ class MobiloCartShortcode
                 'actions' => $actions,
                 'currency' => $this->currency,
                 'currency_symbol' => $this->currency_symbol,
+                'themeUrl' => MOBILO_THEME_URL,
                 'strings' => [
                     'addToCart' => __('Add to Cart', 'mobilo'),
                     'removeFromCart' => __('Remove from Cart', 'mobilo'),
@@ -74,7 +75,7 @@ class MobiloCartShortcode
     {
         $cartData = $this->build_view_data();
         ob_start();
-        include_once MOBILO_THEME_PATH . '/views/mobilo-cart-dynamic.php';
+        include_once MOBILO_THEME_PATH . '/views/mobilo-cart.php';
         return ob_get_clean();
     }
 

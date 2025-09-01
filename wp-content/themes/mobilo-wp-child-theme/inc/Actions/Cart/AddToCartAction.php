@@ -20,14 +20,14 @@ class AddToCartAction extends MobiloAjaxAction
 
     public function action()
     {
-        $product_id = isset($_POST['product_id']) ? intval($_POST['product_id']) : 0;
-        $quantity = isset($_POST['quantity']) ? intval($_POST['quantity']) : 1;
-        $variation_id = isset($_POST['variation_id']) ? intval($_POST['variation_id']) : 0;
-        $variation = isset($_POST['variation']) ? $_POST['variation'] : [];
-        $card_color = isset($_POST['card_color']) ? sanitize_text_field($_POST['card_color']) : '';
+        $product_id = $_POST['product_id'] ?? 0;
+        $quantity = $_POST['quantity'] ?? 1;
+        $variation_id = $_POST['variation_id'] ?? 0;
+        $variation = $_POST['variation'] ?? null;
+        $card_color = $_POST['card_color'] ?? '';
 
         if (!$product_id) {
-            $this->errorResponse('invalid_product', 'Invalid product ID', [], 400);
+            return $this->errorResponse('invalid_product', 'Invalid product ID', [], 400);
         }
 
         try {
@@ -38,22 +38,22 @@ class AddToCartAction extends MobiloAjaxAction
                 WC()->cart->cart_contents[$cart_item_key]['card_color'] = $card_color;
             }
 
-            if ($cart_item_key) {
-                $cart_model = new CartModel();
-                $cart_data = $cart_model->get_new_plan_cart();
+            if (!$cart_item_key) {
+                return $this->errorResponse('add_failed', 'Failed to add product to cart', [], 400);
 
-                self::out([
-                    'success' => true,
-                    'message' => __('Product added to cart successfully', 'mobilo'),
-                    'cart_data' => $cart_data,
-                    'cart_count' => WC()->cart->get_cart_contents_count()
-                ]);
-            } else {
-                $this->errorResponse('add_failed', 'Failed to add product to cart', [], 400);
             }
+            do_action('mc_add_to_cart_success', $cart_item_key);
+            $cart_model = new CartModel();
+            $cart_data = $cart_model->get_new_plan_cart();
+
+            return self::out([
+                'success' => true,
+                'message' => __('Product added to cart successfully', 'mobilo'),
+                'cart_data' => $cart_data,
+            ]);
         } catch (\Exception $e) {
             mobilo_log(__METHOD__, $e->getMessage());
-            $this->errorResponse('add_error', $e->getMessage(), [], 500);
+            return $this->errorResponse('add_error', $e->getMessage(), [], 500);
         }
     }
 }

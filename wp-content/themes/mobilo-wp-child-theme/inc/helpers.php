@@ -29,7 +29,7 @@ function mobilo_log($from, $message, $context = [], $level = 'error'): void
         if (class_exists('WooCommerce')) {
             // WooCommerce logger
             $wcLogger = wc_get_logger();
-            $context = array('source' => 'mobilo-log', 'function' => $from, 'context' => $context);
+            $context = ['source' => 'mobilo-log', 'function' => $from, 'context' => $context];
 
             // Write the log to WooCommerce log file
             $wcLogger->log($level, $message, $context);

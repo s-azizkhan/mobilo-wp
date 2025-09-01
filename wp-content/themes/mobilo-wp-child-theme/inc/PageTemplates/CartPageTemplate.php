@@ -14,6 +14,8 @@ class CartPageTemplate extends PageTemplateLoader
     public function __construct()
     {
         parent::__construct();
+        // add cart enhancement
+        // add_action('add_to_cart', [$t])
     }
 
     public function init()

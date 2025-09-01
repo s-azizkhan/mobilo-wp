@@ -76,9 +76,9 @@ class PlanFeature extends BaseFeature
     /**
      * Retrieves the current plan for the cart, checking user meta, URL, cookie, and falling back to default.
      *
-     * @return array|null The plan data array or null if not found.
+     * @return array|null|string The plan data array or null if not found.
      */
-    public static function getCartPlan()
+    public static function getCartPlan($return_only_sku = false)
     {
         // 1. Try to get plan SKU from user meta
         $planSku = NewPlansUserMeta::getPlanSku();
@@ -101,6 +101,9 @@ class PlanFeature extends BaseFeature
             $planSku = self::$skuPrefix . 'PRO';
         }
 
+        if ($return_only_sku) {
+            return $planSku;
+        }
         // 5. Retrieve plan by SKU
         $plan = self::get_plan_by_sku($planSku);
 
@@ -157,49 +160,31 @@ class PlanFeature extends BaseFeature
     public static function checkProductsInCart(): void
     {
         try {
-            // Skip execution if the request is an AJAX request.
-            if (wp_doing_ajax() || is_admin()) {
-                return;
-            }
-
             if (WC()->cart->is_empty()) {
                 return;
             }
 
-            $plan_sku = null;
             $extra_allowed_skus = ['CSB_TEAM'];
 
             $plan_upgrade_sku = PlanUpgradeFeature::isPlanUpgradeModeEnabled();
-            if ($plan_upgrade_sku) {
-                if (self::is_valid_lan_sku($plan_upgrade_sku)) {
-                    $plan_sku = $plan_upgrade_sku;
-                } else {
-                    mobilo_log(__METHOD__, "Invalid plan upgrade found on cookie, sku: {$plan_upgrade_sku}");
-                }
+            if ($plan_upgrade_sku && !self::is_valid_lan_sku($plan_upgrade_sku)) {
+                mobilo_log(__METHOD__, "Invalid plan upgrade found on cookie, sku: {$plan_upgrade_sku}");
             }
 
-            // Get the plan SKU for the logged-in user, if available.
-            if (!$plan_sku && is_user_logged_in()) {
-                $plan_sku = NewPlansUserMeta::getPlanSku();
-            }
-
-            // If no plan SKU is found, try to retrieve it from a cookie.
-            if (!$plan_sku) {
-                $plan_sku = self::get_plan_sku_from_cookie();
-            }
-
-            // If there's still no plan SKU, exit the function.
-            if (!$plan_sku) {
-                return;
-            }
-
+            // Get the plan
+            $plan_sku = $plan_upgrade_sku ?? self::getCartPlan(true);
             // Get the product ID associated with the plan SKU.
             $plan_product_id = wc_get_product_id_by_sku($plan_sku);
-            $plan_product = wc_get_product($plan_product_id);
+            $plan = wc_get_product($plan_product_id);
+            // If there's still no plan
+            if (!$plan) {
+                return;
+            }
+            $plan_sku = $plan->get_sku();
 
             // Get upsells and cross-sells.
-            $product_ids = $plan_product->get_upsell_ids();
-            $accessories_ids = $plan_product->get_cross_sell_ids();
+            $product_ids = self::$cardsSku;
+            $accessories_ids = self::$accessoriesSku;
 
             // Include the additional allowed product IDs
             $extra_allowed_ids = [];
@@ -276,12 +261,12 @@ class PlanFeature extends BaseFeature
             }
 
             // If the cart no longer contains the main plan product, empty it.
-            if (!self::isCardInCart($plan_product, false)) {
+            if (!self::isCardInCart($plan, false)) {
                 WC()->cart->empty_cart();
             }
 
             // Update cart quantities based on main product.
-            self::update_cart_item_quantity(null, $plan_product);
+            self::update_cart_item_quantity(null, $plan); //TODO: add this function
 
         } catch (Throwable $th) {
             mobilo_log(__METHOD__, $th->getMessage());
@@ -348,13 +333,13 @@ class PlanFeature extends BaseFeature
      * Retrieves a plan by its SKU.
      *
      * @param string $sku The SKU of the plan.
-     * @return array The plan details, including title, price, sale price, billing cycle,
+     * @return mixed The plan details, including title, price, sale price, billing cycle,
      *               short description, feature tagline, features (converted from HTML to JSON),
      *               billing interval, and billing period. Returns an empty array if the plan
      *               is not found or an error occurs.
      * @throws Throwable If an error occurs while retrieving the plan.
      */
-    public static function get_plan_by_sku(string $sku)
+    public static function get_plan_by_sku(string $sku, $return_wc_product = false)
     {
         try {
             if (!self::is_valid_lan_sku($sku)) {
@@ -370,6 +355,10 @@ class PlanFeature extends BaseFeature
 
             if (!$product || !WC_Subscriptions_Product::is_subscription($product)) {
                 return [];
+            }
+
+            if ($return_wc_product) {
+                return $product;
             }
 
             $currency = get_woocommerce_currency();
@@ -399,6 +388,8 @@ class PlanFeature extends BaseFeature
             $feature_tagline = '<strong style="color: #50A371;">All</strong> Mobilo features';
 
             $plan = [
+                'id' => $product->get_id(),
+                'sku' => $product->get_sku(),
                 'title' => $product->get_title(),
                 'price' => mc_format_price($regularPrice),
                 'sale_price' => mc_format_price($salePrice),
@@ -508,7 +499,7 @@ class PlanFeature extends BaseFeature
         // Filter out the cart items that have the digital card SKU if ignoreDigitalCard is true
         if ($ignoreDigitalCard) {
             $cart_item_keys = array_filter($cart_item_keys, function ($product_id) {
-                $product_sku = mc_get_sku_from_product_id($product_id);
+                $product_sku = mc_get_sku_from_product_id($product_id); // TODO: add this function on helper
                 return $product_sku !== self::$digitalCardSku;
             });
         }
@@ -528,8 +519,12 @@ class PlanFeature extends BaseFeature
     {
         try {
             if (!WC()->cart->is_empty()) {
+                // Skip execution if the request is an AJAX request.
+                if (wp_doing_ajax()) {
+                    return;
+                }
                 mobilo_log(__METHOD__, "maybeUpdateCart called after opt", "info");
-                PlanFeature::checkProductsInCart();
+                self::checkProductsInCart();
             }
         } catch (Throwable $th) {
             mobilo_log(__METHOD__, $th->getMessage());

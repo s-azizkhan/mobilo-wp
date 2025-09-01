@@ -24,7 +24,7 @@ class AddUpsellAllAction extends MobiloAjaxAction
         $quantity = isset($_POST['quantity']) ? intval($_POST['quantity']) : 1;
 
         if (!$product_id) {
-            $this->errorResponse('invalid_product', 'Invalid product ID', [], 400);
+            return $this->errorResponse('invalid_product', 'Invalid product ID', [], 400);
         }
 
         try {
@@ -38,21 +38,22 @@ class AddUpsellAllAction extends MobiloAjaxAction
 
             $cart_item_key = WC()->cart->add_to_cart($product_id, $quantity);
 
-            if ($cart_item_key) {
-                $cart_data = $cart_model->get_new_plan_cart();
+            if (!$cart_item_key) {
+                return $this->errorResponse('add_failed', 'Failed to add products to cart', [], 400);
 
-                self::out([
-                    'success' => true,
-                    'message' => sprintf(__('Added %d items for all members', 'mobilo'), $quantity),
-                    'cart_data' => $cart_data,
-                    'cart_count' => WC()->cart->get_cart_contents_count()
-                ]);
-            } else {
-                $this->errorResponse('add_failed', 'Failed to add products to cart', [], 400);
             }
+            do_action('mc_add_upsell_all_success', $cart_item_key);
+
+            $cart_data = $cart_model->get_new_plan_cart();
+
+            return self::out([
+                'success' => true,
+                'message' => sprintf(__('Added %d items for all members', 'mobilo'), $quantity),
+                'cart_data' => $cart_data,
+            ]);
         } catch (\Exception $e) {
             mobilo_log(__METHOD__, $e->getMessage());
-            $this->errorResponse('add_error', $e->getMessage(), [], 500);
+            return $this->errorResponse('add_error', $e->getMessage(), [], 500);
         }
     }
 }
