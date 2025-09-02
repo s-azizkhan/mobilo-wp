@@ -343,7 +343,7 @@ This plugin is licensed under the GPL v2 or later.
 
 - **Firebase PHP SDK**: [Kreait](https://github.com/kreait/firebase-php)
 - **WordPress**: [WordPress Foundation](https://wordpress.org/)
-- **Development**: [LogicWind](https://logicwind.com)
+- **Development**: [Hypertics AI](https://hypertics.ai)
 
 ---
 

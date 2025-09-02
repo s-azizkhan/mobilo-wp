@@ -14,13 +14,13 @@
     "homepage": "https://buy.mobilocard.com",
     "authors": [
         {
-            "name": "Aziz Khan",
-            "email": "aziz@logicwind.com",
+            "name": "S. Aziz Khan",
+            "email": "aziz@hypertics.ai",
             "role": "Developer"
         },
         {
-            "name": "LogicWind",
-            "email": "devtools@logicwind.com"
+            "name": "Hypertics AI",
+            "email": "devtools@hypertics.ai"
         }
     ],
     "require": {
