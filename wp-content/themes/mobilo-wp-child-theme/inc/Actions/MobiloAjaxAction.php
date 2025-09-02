@@ -10,10 +10,8 @@ defined('ABSPATH') || exit;
 /**
  * Class MobiloAjaxAction
  *
- * @link logicwind.com
  * @version 1.1.1
  * @since 3.6.0
- * @author Aziz Khan <aziz@logicwind.com>
  */
 abstract class MobiloAjaxAction
 {

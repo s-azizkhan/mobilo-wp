@@ -14,7 +14,6 @@ use Mobilo\WpTheme\Interfaces\InitializableInterface;
  * @package Mobilo\WpTheme\Feature
  * @version 1.0.0
  * @since 0.4.0
- * @author Aziz Khan <aziz@logicwind.com>
  */
 abstract class BaseFeature implements InitializableInterface
 {

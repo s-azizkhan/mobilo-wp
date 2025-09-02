@@ -107,7 +107,7 @@ class NewPlansUserMeta
      * @param int|null $user_id The ID of the user. Defaults to null.
      * @return string The SKU of the plan associated with the user, or an empty string if no user ID is found.
      */
-    public static function getPlanSku($user_id = null)
+    public static function get_plan_sku($user_id = null)
     {
         if (!$user_id) {
             $user_id = get_current_user_id();
@@ -137,7 +137,7 @@ class NewPlansUserMeta
             return false;
         }
 
-        $current_plan_sku = self::getPlanSku($user_id);
+        $current_plan_sku = self::get_plan_sku($user_id);
         $plan_sku = strtoupper(trim(sanitize_text_field($plan_sku)));
         // if the plan sku is same as current plan sku, then return
         if ($current_plan_sku == $plan_sku) {

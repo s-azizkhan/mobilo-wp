@@ -2,6 +2,7 @@
 
 namespace Mobilo\WpTheme\Admin;
 
+use Mobilo\WpTheme\Feature\OrderSyncFeature;
 use Mobilo\WpTheme\Feature\OrganizationIdManager;
 
 defined('ABSPATH') || exit;
@@ -20,5 +21,6 @@ class AdminPageLoader
     public function init()
     {
         (new OrganizationIdManager())->init();
+        (new OrderSyncFeature())->run();
     }
 }

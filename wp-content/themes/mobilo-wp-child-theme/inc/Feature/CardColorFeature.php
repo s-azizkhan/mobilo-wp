@@ -7,7 +7,6 @@ defined('ABSPATH') || exit;
 /**
  * Class CardColorFeature
  *
- * @link logicwind.com
  * @since 0.2.0
  * @version 1.0.0
  * @package Mobilo\WpTheme\Feature
@@ -82,13 +81,13 @@ class CardColorFeature
         // Get existing custom field value
         $custom_card_color_value = get_post_meta($post->ID, $this->card_color_meta_key, true);
         woocommerce_wp_text_input(array(
-            'id'          => $this->card_color_meta_key,
-            'label'       => __('Card Colors', 'woocommerce'),
+            'id' => $this->card_color_meta_key,
+            'label' => __('Card Colors', 'woocommerce'),
             'placeholder' => '',
-            'desc_tip'    => 'true',
+            'desc_tip' => 'true',
             'description' => __('Add card color in comma separated format.', 'woocommerce'),
-            'type'        => 'text',
-            'value'       => $custom_card_color_value,
+            'type' => 'text',
+            'value' => $custom_card_color_value,
         ));
         echo '</div>';
     }

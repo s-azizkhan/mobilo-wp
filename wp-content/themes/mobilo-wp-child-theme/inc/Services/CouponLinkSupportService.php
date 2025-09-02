@@ -15,10 +15,8 @@ defined('ABSPATH') || exit;
  * This class extends FeatureV2 and provides methods to handle various
  * WooCommerce hooks and filters related to coupons, plan features, and EDO modes.
  *
- * @link logicwind.com
  * @version 1.0.1
  * @since 0.4.5
- * @author Aziz Khan <aziz@logicwind.com>
  */
 class CouponLinkSupportService
 {

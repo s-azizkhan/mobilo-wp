@@ -13,7 +13,6 @@ defined('ABSPATH') || exit;
 /**
  * Class VerifyEdoOtpAction
  *
- * @link logicwind.com
  * @version 1.0.2
  * @since 0.1.61
  * @package Mobilo\WpTheme\Actions\Checkout;

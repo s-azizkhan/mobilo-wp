@@ -23,7 +23,9 @@ abstract class PageTemplateLoader
             $current_url = home_url(add_query_arg([], $_SERVER["REQUEST_URI"]));
             if (strpos($current_url, $this->pageId) || $force) {
                 add_action('init', [$this, 'init']);
+                return true;
             }
+            return false;
         } catch (Throwable $e) {
             mobilo_log(__METHOD__, $e->getMessage(), $e->getTrace());
         }

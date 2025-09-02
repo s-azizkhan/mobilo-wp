@@ -81,7 +81,7 @@ class PlanFeature extends BaseFeature
     public static function getCartPlan($return_only_sku = false)
     {
         // 1. Try to get plan SKU from user meta
-        $planSku = NewPlansUserMeta::getPlanSku();
+        $planSku = NewPlansUserMeta::get_plan_sku();
 
         // 2. If not valid, try to get from URL query param 'sku'
         if (!self::is_valid_plan_sku($planSku)) {
