@@ -1,0 +1,374 @@
+/**
+ * Mobilo Auth Frontend Styles
+ *
+ * @package MobiloAuth
+ * @since 1.0.0
+ */
+
+.mobilo-auth-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.mobilo-auth-form-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobilo-auth-form {
+    margin: 0;
+}
+
+.mobilo-auth-form h2 {
+    margin: 0 0 20px 0;
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.mobilo-auth-form .form-group {
+    margin-bottom: 20px;
+}
+
+.mobilo-auth-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 500;
+}
+
+.mobilo-auth-form input[type="email"],
+.mobilo-auth-form input[type="password"],
+.mobilo-auth-form input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.mobilo-auth-form input[type="email"]:focus,
+.mobilo-auth-form input[type="password"]:focus,
+.mobilo-auth-form input[type="text"]:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 3px rgba(0, 115, 170, 0.1);
+}
+
+.mobilo-auth-form input[type="email"].mobilo-auth-error-field,
+.mobilo-auth-form input[type="password"].mobilo-auth-error-field,
+.mobilo-auth-form input[type="text"].mobilo-auth-error-field {
+    border-color: #dc3232;
+}
+
+.mobilo-auth-form button[type="submit"] {
+    width: 100%;
+    padding: 12px 20px;
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mobilo-auth-form button[type="submit"]:hover {
+    background: #005a87;
+}
+
+.mobilo-auth-form button[type="submit"]:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.mobilo-auth-form .form-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.mobilo-auth-form .form-footer a {
+    color: #0073aa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.mobilo-auth-form .form-footer a:hover {
+    text-decoration: underline;
+}
+
+.mobilo-auth-toggle {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #0073aa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.mobilo-auth-toggle:hover {
+    text-decoration: underline;
+}
+
+.mobilo-auth-message {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mobilo-auth-message-success {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.mobilo-auth-message-error {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.mobilo-auth-message-warning {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+}
+
+.mobilo-auth-message-info {
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
+}
+
+.mobilo-auth-error {
+    color: #dc3232;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+.mobilo-auth-status {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+}
+
+.mobilo-auth-status .user-info {
+    margin-bottom: 15px;
+}
+
+.mobilo-auth-status .user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    background: #0073aa;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.mobilo-auth-status .user-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.mobilo-auth-status .user-email {
+    color: #666;
+    font-size: 14px;
+}
+
+.mobilo-auth-status .status-actions {
+    margin-top: 20px;
+}
+
+.mobilo-auth-status .status-actions a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 8px 16px;
+    background: #0073aa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.mobilo-auth-status .status-actions a:hover {
+    background: #005a87;
+}
+
+.mobilo-auth-status .status-actions .mobilo-auth-logout {
+    background: #dc3232;
+}
+
+.mobilo-auth-status .status-actions .mobilo-auth-logout:hover {
+    background: #c92a2a;
+}
+
+.mobilo-auth-profile-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mobilo-auth-profile-form .form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.mobilo-auth-profile-form .form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.mobilo-auth-profile-form .profile-avatar {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mobilo-auth-profile-form .profile-avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #0073aa;
+}
+
+.mobilo-auth-profile-form .profile-avatar .avatar-upload {
+    margin-top: 10px;
+}
+
+.mobilo-auth-reset-password-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.mobilo-auth-reset-password-form .instructions {
+    background: #e7f3ff;
+    border: 1px solid #b3d9ff;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #005a87;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mobilo-auth-container {
+        padding: 15px;
+    }
+    
+    .mobilo-auth-form-container {
+        padding: 20px;
+    }
+    
+    .mobilo-auth-profile-form .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .mobilo-auth-profile-form .form-row .form-group {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobilo-auth-form-container {
+        padding: 15px;
+    }
+    
+    .mobilo-auth-form h2 {
+        font-size: 20px;
+    }
+    
+    .mobilo-auth-form input[type="email"],
+    .mobilo-auth-form input[type="password"],
+    .mobilo-auth-form input[type="text"] {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .mobilo-auth-form button[type="submit"] {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Loading States */
+.mobilo-auth-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.mobilo-auth-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0073aa;
+    border-radius: 50%;
+    animation: mobilo-auth-spin 1s linear infinite;
+}
+
+@keyframes mobilo-auth-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Accessibility */
+.mobilo-auth-form input:focus,
+.mobilo-auth-form button:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+.mobilo-auth-form .screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .mobilo-auth-form-container {
+        border-width: 2px;
+    }
+    
+    .mobilo-auth-form input[type="email"],
+    .mobilo-auth-form input[type="password"],
+    .mobilo-auth-form input[type="text"] {
+        border-width: 2px;
+    }
+    
+    .mobilo-auth-form button[type="submit"] {
+        border: 2px solid #fff;
+    }
+}
