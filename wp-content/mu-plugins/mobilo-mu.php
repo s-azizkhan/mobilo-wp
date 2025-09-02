@@ -9,7 +9,7 @@ Author URI: https://hyperticsai.com
 
 defined("ABSPATH") || exit();
 
-$mobilo_helper_mu = new MobiloHelperMU();
+// $mobilo_helper_mu = new MobiloHelperMU();
 
 /**
  * Override active theme in front-end.
