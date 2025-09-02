@@ -20,6 +20,9 @@ class CartPageTemplate extends PageTemplateLoader
     public function init()
     {
         add_action('wp_enqueue_scripts', [$this, 'remove_smart_coupons_assets_on_cart'], 99999);
+        // Action to auto apply coupons when added to cart via ajax ( self API ), fix: Auto apply coupon not working on new react theme.
+        $autoApplyCouponPluginInstance = \WC_SC_Auto_Apply_Coupon::get_instance();
+        add_action('woocommerce_ajax_after_added_to_cart', [$autoApplyCouponPluginInstance, 'auto_apply_coupons']);
         // if above query params are set(?product_sku=MBC&sku=MCP_PRO), empty the cart & set the plan sku in cookie & add the product to cart
         $plan = PlanFeature::getCartPlan();
         if (isset($_GET['product_sku'])) {

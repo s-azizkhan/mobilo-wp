@@ -237,12 +237,13 @@ function mc_get_cart()
     // check if WC is initialized
     if (class_exists('WooCommerce')) {
         $cart = WC()->cart;
+        if (!$cart) {
+            return null;
+        }
         if ($cart->is_empty()) {
             return null;
         }
-        if ($cart) {
-            return $cart;
-        }
+        return $cart;
     }
     return null;
 }
@@ -293,4 +294,10 @@ function mc_get_sku_from_product_id(int $product_id)
         return $res[0];
     }
     return false;
+}
+
+function mc_get_cookie($key, $default = '')
+{
+    $data = isset($_COOKIE[$key]) ? $_COOKIE[$key] : $default;
+    return $data;
 }
