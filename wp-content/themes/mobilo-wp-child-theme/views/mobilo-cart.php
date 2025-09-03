@@ -145,7 +145,7 @@ $cart_license = $cart_data['cart_license'][0] ?? [] ;
                                         src="<?php echo esc_url($product['thumbnail']); ?>">
                                 <?php else: ?>
                                     <div class="h-28 w-28 bg-gray-200 rounded-lg flex items-center justify-center">
-                                        <img src="<?= MOBILO_THEME_URL ?>/assets/images/custom-card.png" alt="No image" class="w-12 h-12">
+                                        <img decoding="async" alt="<?php echo esc_attr($product['name']); ?>" src="<?= MOBILO_THEME_URL ?>/assets/images/custom-card.png" class="h-28 w-auto">
                                         <!-- <span class="text-gray-400"><?php _e('No image', 'mobilo'); ?></span> -->
                                     </div>
                                 <?php endif; ?>
