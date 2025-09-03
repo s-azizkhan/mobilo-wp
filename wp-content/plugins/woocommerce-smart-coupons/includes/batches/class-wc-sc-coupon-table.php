@@ -4,7 +4,7 @@
  *
  * @package     woocommerce-smart-coupons/includes/
  * @since       9.8.0
- * @version     1.3.0
+ * @version     1.3.1
  */
 
 // Exit if accessed directly.
@@ -13,8 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! class_exists( 'WC_SC_Background_Process', false ) ) {
-	if ( file_exists( trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/abstracts/class-wc-sc-background-process.php' ) ) {
-		include_once trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/abstracts/class-wc-sc-background-process.php';
+	if ( file_exists( WC_SC_PLUGIN_DIRPATH . 'includes/abstracts/class-wc-sc-background-process.php' ) ) {
+		include_once WC_SC_PLUGIN_DIRPATH . 'includes/abstracts/class-wc-sc-background-process.php';
 	}
 }
 
@@ -161,7 +161,7 @@ if ( ! class_exists( 'WC_SC_Coupon_Table' ) && class_exists( 'WC_SC_Background_P
 					if ( function_exists( 'maybe_create_table' ) && is_callable( 'maybe_create_table' ) ) {
 						$table_exists = maybe_create_table( $wpdb->prefix . 'wc_smart_coupons', $create_table_query );
 					} elseif ( function_exists( 'dbDelta' ) && is_callable( 'dbDelta' ) ) {
-						dbDelta( $create_table_query );
+						dbDelta( $create_table_query ); // phpcs:ignore
 					}
 
 					$this->remove_status_from_remaining_items( 'create' );

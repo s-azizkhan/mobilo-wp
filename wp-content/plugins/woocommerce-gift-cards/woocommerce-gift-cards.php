@@ -3,8 +3,8 @@
 * Plugin Name: WooCommerce Gift Cards
 * Plugin URI: https://woocommerce.com/products/gift-cards/
 * Description: Create and sell digital gift cards that customers can redeem at your store.
-* Version: 2.7.0
-* Author: Woo
+* Version: 2.7.1
+* Author: WooCommerce
 * Author URI: https://woocommerce.com/
 *
 * Woo: 5571998:ef39f1b1dfb2c215f40fa963c0ae971c
@@ -15,10 +15,10 @@
 * Requires PHP: 7.4
 *
 * Requires at least: 6.2
-* Tested up to: 6.8.1
+* Tested up to: 6.8
 *
 * WC requires at least: 8.2
-* WC tested up to: 10.0
+* WC tested up to: 10.2
 *
 * Requires Plugins: woocommerce
 *
@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Main plugin class.
  *
  * @class    WC_Gift_Cards
- * @version  2.7.0
+ * @version  2.7.1
  */
 class WC_Gift_Cards {
 
@@ -44,7 +44,7 @@ class WC_Gift_Cards {
 	 *
 	 * @var string
 	 */
-	public $version = '2.7.0';
+	public $version = '2.7.1';
 
 	/**
 	 * Min required WC version.

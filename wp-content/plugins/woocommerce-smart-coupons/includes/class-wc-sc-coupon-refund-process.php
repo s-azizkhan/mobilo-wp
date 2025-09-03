@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       5.2.0
- * @version     2.6.0
+ * @version     2.7.0
  *
  * @package     woocommerce-smart-coupons/includes/
  */
@@ -250,7 +250,7 @@ if ( ! class_exists( 'WC_SC_Coupon_Refund_Process' ) ) {
 			$tax_data    = ( function_exists( 'wc_tax_enabled' ) && wc_tax_enabled() && is_object( $order ) && $this->is_callable( $order, 'get_taxes' ) ) ? $order->get_taxes() : array();
 
 			if ( ! class_exists( 'WC_SC_Order_Fields' ) ) {
-				include_once 'class-wc-sc-order-fields.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-order-fields.php';
 			}
 
 			$total_credit_used_in_order = $woocommerce_smart_coupon->get_total_credit_used_in_order( $order );

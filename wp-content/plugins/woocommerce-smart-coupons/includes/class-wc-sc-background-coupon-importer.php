@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       3.8.6
- * @version     2.10.0
+ * @version     2.11.0
  *
  * @package     woocommerce-smart-coupons/includes/
  */
@@ -1057,8 +1057,8 @@ if ( ! class_exists( 'WC_SC_Background_Coupon_Importer' ) ) {
 			$is_email_imported_coupons = get_option( 'woo_sc_is_email_imported_coupons' );
 			$no_of_coupons_to_generate = $posted_data['no_of_coupons_to_generate'];
 
-			require 'class-wc-sc-coupon-import.php';
-			require 'class-wc-sc-coupon-parser.php';
+			require WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-import.php';
+			require WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-parser.php';
 
 			$wc_csv_coupon_import         = new WC_SC_Coupon_Import();
 			$wc_csv_coupon_import->parser = new WC_SC_Coupon_Parser( 'shop_coupon' );
@@ -1222,7 +1222,7 @@ if ( ! class_exists( 'WC_SC_Background_Coupon_Importer' ) ) {
 						$this->global_coupons_new = array();
 					}
 					if ( ! class_exists( $parsed_data['filter']['class'] ) ) {
-						include_once 'class-wc-sc-coupon-import.php';
+						include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-import.php';
 					}
 					$object    = $parsed_data['filter']['class']::get_instance();
 					$coupon_id = call_user_func_array( array( $object, $parsed_data['filter']['function'] ), $parsed_data['args'] );

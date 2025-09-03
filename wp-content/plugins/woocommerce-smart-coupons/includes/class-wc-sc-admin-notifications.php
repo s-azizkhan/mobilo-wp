@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       4.0.0
- * @version     1.15.0
+ * @version     1.16.0
  *
  * @package     woocommerce-smart-coupons/includes/
  */
@@ -445,7 +445,7 @@ if ( ! class_exists( 'WC_SC_Admin_Notifications' ) ) {
 		 */
 		public function admin_db_update_notices() {
 			if ( ! class_exists( 'WC_SC_Background_Upgrade' ) ) {
-				include_once 'class-wc-sc-background-upgrade.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-background-upgrade.php';
 			}
 
 			$wcsc_db       = WC_SC_Background_Upgrade::get_instance();
@@ -472,7 +472,7 @@ if ( ! class_exists( 'WC_SC_Admin_Notifications' ) ) {
 		public function db_update_pending_notice() {
 
 			if ( ! class_exists( 'WC_SC_Background_Upgrade' ) ) {
-				include_once 'class-wc-sc-background-upgrade.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-background-upgrade.php';
 			}
 
 			$wcsc_db = WC_SC_Background_Upgrade::get_instance();
@@ -533,7 +533,7 @@ if ( ! class_exists( 'WC_SC_Admin_Notifications' ) ) {
 			$message = sprintf( __( '%s database update completed. Thank you for updating to the latest version!', 'woocommerce-smart-coupons' ), 'WooCommerce Smart Coupons' );
 			$this->show_notice( 'success', '', $message, '', true );
 			if ( ! class_exists( 'WC_SC_Background_Upgrade' ) ) {
-				include_once 'class-wc-sc-background-upgrade.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-background-upgrade.php';
 			}
 			if ( class_exists( 'WC_SC_Background_Upgrade' ) ) {
 				$wcsc_db        = WC_SC_Background_Upgrade::get_instance();
@@ -566,7 +566,7 @@ if ( ! class_exists( 'WC_SC_Admin_Notifications' ) ) {
 			);
 
 			if ( ! class_exists( 'WC_SC_Background_Upgrade' ) ) {
-				include_once 'class-wc-sc-background-upgrade.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-background-upgrade.php';
 			}
 
 			$wcsc_db = WC_SC_Background_Upgrade::get_instance();
@@ -765,6 +765,26 @@ if ( ! class_exists( 'WC_SC_Admin_Notifications' ) ) {
 				'',
 				false
 			);
+
+			// Ensure WEEK_IN_SECONDS is defined to avoid fatal error.
+			if ( ! defined( 'WEEK_IN_SECONDS' ) ) {
+				define( 'WEEK_IN_SECONDS', 7 * 24 * 60 * 60 );
+			}
+			// Show the notice only for one week after the release date (Sept 1, 2025).
+			if ( ( time() - gmmktime( 0, 0, 0, 9, 1, 2025 ) ) < WEEK_IN_SECONDS ) {// Release date: Monday, Sept 1, 2025 (UTC).
+				$this->show_feature_notice(
+					'wc_sc_order_count_restriction_notice',
+					'<strong>' . _x( '📢 New Feature: Number of orders made!', 'Title for number of orders made feature admin notice', 'woocommerce-smart-coupons' ) . '</strong>',
+					_x(
+						'You can now restrict coupons based on the number of completed orders a customer has placed. Configure this under <strong>Coupon data → Usage restrictions → Smart Coupons: Number of orders made</strong> to target new customers or reward loyal ones.',
+						'Message for the number of orders made feature admin notice',
+						'woocommerce-smart-coupons'
+					),
+					admin_url( 'post-new.php?post_type=shop_coupon' ),
+					_x( 'Create Coupon with Number of orders made', 'Button text for the number of orders made feature', 'woocommerce-smart-coupons' ),
+					false
+				);
+			}
 		}
 
 		/**

@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       3.3.0
- * @version     2.14.0
+ * @version     2.15.0
  *
  * @package     woocommerce-smart-coupons/includes/
  */
@@ -437,8 +437,8 @@ if ( ! class_exists( 'WC_SC_Admin_Pages' ) ) {
 				$_POST['smart_coupons_generate_action'] = 'send_store_credit';
 
 				// includes.
-				require 'class-wc-sc-coupon-import.php';
-				require 'class-wc-sc-coupon-parser.php';
+				require WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-import.php';
+				require WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-parser.php';
 
 				$coupon_importer  = WC_SC_Coupon_Import::get_instance();
 				$action_processed = $coupon_importer->process_bulk_generate_action();
@@ -504,8 +504,8 @@ if ( ! class_exists( 'WC_SC_Admin_Pages' ) ) {
 			}
 
 			// includes.
-			require 'class-wc-sc-coupon-import.php';
-			require 'class-wc-sc-coupon-parser.php';
+			require WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-import.php';
+			require WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-parser.php';
 
 			$wc_csv_coupon_import = new WC_SC_Coupon_Import();
 
@@ -662,8 +662,8 @@ if ( ! class_exists( 'WC_SC_Admin_Pages' ) ) {
 			}
 
 			// includes.
-			require 'class-wc-sc-coupon-import.php';
-			require 'class-wc-sc-coupon-parser.php';
+			require WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-import.php';
+			require WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-parser.php';
 
 			$coupon_importer = WC_SC_Coupon_Import::get_instance();
 			$coupon_importer->dispatch();

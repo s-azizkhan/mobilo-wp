@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       8.7.0
- * @version     1.9.0
+ * @version     1.10.0
  *
  * @package     woocommerce-smart-coupons/blocks/
  */
@@ -467,26 +467,26 @@ class WC_SC_Blocks_Integration implements IntegrationInterface {
 		$auto_applied_coupons   = array();
 
 		if ( ! class_exists( 'WC_SC_Coupon_Message' ) ) {
-			if ( file_exists( trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/class-wc-sc-coupon-message.php' ) ) {
-				include_once trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/class-wc-sc-coupon-message.php';
+			if ( file_exists( WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-message.php' ) ) {
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-message.php';
 			}
 		}
 
 		if ( ! class_exists( 'WC_SC_Display_Coupons' ) ) {
-			if ( file_exists( trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/class-wc-sc-display-coupons.php' ) ) {
-				include_once trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/class-wc-sc-display-coupons.php';
+			if ( file_exists( WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-display-coupons.php' ) ) {
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-display-coupons.php';
 			}
 		}
 
 		if ( ! class_exists( 'WC_SC_Auto_Apply_Coupon' ) ) {
-			if ( file_exists( trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/class-wc-sc-auto-apply-coupon.php' ) ) {
-				include_once trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/class-wc-sc-auto-apply-coupon.php';
+			if ( file_exists( WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-auto-apply-coupon.php' ) ) {
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-auto-apply-coupon.php';
 			}
 		}
 
 		if ( ! class_exists( 'WC_SC_Settings' ) ) {
-			if ( file_exists( trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/class-wc-sc-settings.php' ) ) {
-				include_once trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/class-wc-sc-settings.php';
+			if ( file_exists( WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-settings.php' ) ) {
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-settings.php';
 			}
 		}
 

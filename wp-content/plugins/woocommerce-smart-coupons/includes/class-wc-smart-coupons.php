@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       3.3.0
- * @version     8.28.0
+ * @version     8.30.0
  *
  * @package     woocommerce-smart-coupons/includes/
  */
@@ -200,14 +200,14 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function __call( $function_name, $arguments = array() ) {
 
-			if ( ! is_callable( array( 'SA_WC_Compatibility_4_4', $function_name ) ) ) {
+			if ( ! is_callable( array( 'SA_WC_SC_Compatibility', $function_name ) ) ) {
 				return;
 			}
 
 			if ( ! empty( $arguments ) ) {
-				return call_user_func_array( 'SA_WC_Compatibility_4_4::' . $function_name, $arguments );
+				return call_user_func_array( 'SA_WC_SC_Compatibility::' . $function_name, $arguments );
 			} else {
-				return call_user_func( 'SA_WC_Compatibility_4_4::' . $function_name );
+				return call_user_func( 'SA_WC_SC_Compatibility::' . $function_name );
 			}
 
 		}
@@ -217,70 +217,71 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function includes() {
 
-			include_once 'compat/class-sa-wc-compatibility-4-4.php';
-			include_once 'compat/class-wc-sc-wpml-compatibility.php';
-			include_once 'compat/class-wcopc-sc-compatibility.php';
-			include_once 'compat/class-wcs-sc-compatibility.php';
-			include_once 'compat/class-wc-sc-wmc-compatibility.php';
-			include_once 'compat/class-wc-sc-aelia-cs-compatibility.php';
-			include_once 'compat/class-wc-sc-kco-compatibility.php';
-			include_once 'compat/class-wc-sc-pnr-compatibility.php';
-			include_once 'compat/class-wc-sc-wscp-compatibility.php';
-			include_once 'compat/class-wpbp-compatibility.php';
-			include_once 'compat/class-wc-sc-polylang-compatibility.php';
-			include_once 'compat/class-wc-sc-cfw-compatibility.php';
-			include_once 'compat/class-wc-sc-fkcart-compatibility.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/compat/class-sa-wc-sc-compatibility.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/compat/class-wc-sc-wpml-compatibility.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/compat/class-wcopc-sc-compatibility.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/compat/class-wcs-sc-compatibility.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/compat/class-wc-sc-wmc-compatibility.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/compat/class-wc-sc-aelia-cs-compatibility.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/compat/class-wc-sc-kco-compatibility.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/compat/class-wc-sc-pnr-compatibility.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/compat/class-wc-sc-wscp-compatibility.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/compat/class-wpbp-compatibility.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/compat/class-wc-sc-polylang-compatibility.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/compat/class-wc-sc-cfw-compatibility.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/compat/class-wc-sc-fkcart-compatibility.php';
 
-			include_once 'class-wc-sc-coupon-data-store.php';
-			include_once 'class-wc-sc-admin-welcome.php';
-			include_once 'class-wc-sc-background-coupon-importer.php';
-			include_once 'class-wc-sc-admin-pages.php';
-			include_once 'class-wc-sc-admin-notifications.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-data-store.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-admin-welcome.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-background-coupon-importer.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-admin-pages.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-admin-notifications.php';
 
-			include_once 'class-wc-sc-ajax.php';
-			include_once 'class-wc-sc-display-coupons.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-ajax.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-display-coupons.php';
 
-			include_once 'class-wc-sc-settings.php';
-			include_once 'class-wc-sc-shortcode.php';
-			include_once 'class-wc-sc-purchase-credit.php';
-			include_once 'class-wc-sc-url-coupon.php';
-			include_once 'class-wc-sc-print-coupon.php';
-			include_once 'class-wc-sc-coupon-fields.php';
-			include_once 'class-wc-sc-auto-apply-coupon.php';
-			include_once 'class-wc-sc-product-fields.php';
-			include_once 'class-wc-sc-order-fields.php';
-			include_once 'class-wc-sc-coupon-process.php';
-			include_once 'class-wc-sc-global-coupons.php';
-			include_once 'class-wc-sc-admin-coupons-dashboard-actions.php';
-			include_once 'class-wc-sc-privacy.php';
-			include_once 'class-wc-sc-coupon-actions.php';
-			include_once 'class-wc-sc-coupon-columns.php';
-			include_once 'class-wc-sc-product-columns.php';
-			include_once 'class-wc-sc-coupons-by-location.php';
-			include_once 'class-wc-sc-coupons-by-payment-method.php';
-			include_once 'class-wc-sc-coupons-by-shipping-method.php';
-			include_once 'class-wc-sc-coupons-by-user-role.php';
-			include_once 'class-wc-sc-coupons-by-product-attribute.php';
-			include_once 'class-wc-sc-coupons-by-taxonomy.php';
-			include_once 'class-wc-sc-coupons-by-excluded-email.php';
-			include_once 'class-wc-sc-coupon-message.php';
-			include_once 'class-wc-sc-coupon-categories.php';
-			include_once 'class-wc-sc-coupons-by-product-quantity.php';
-			include_once 'class-wc-sc-coupon-refund-process.php';
-			include_once 'class-wc-sc-background-upgrade.php';
-			include_once 'class-wc-sc-cheapest-costliest-items.php';
-			include_once 'batches/class-wc-sc-coupon-table.php';
-			include_once 'blocks/class-wc-sc-gutenberg-coupon-block.php';
-			include_once 'class-wc-sc-combo-coupons.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-settings.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-shortcode.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-purchase-credit.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-url-coupon.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-print-coupon.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-fields.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-auto-apply-coupon.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-product-fields.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-order-fields.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-process.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-global-coupons.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-admin-coupons-dashboard-actions.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-privacy.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-actions.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-columns.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-product-columns.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupons-by-location.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupons-by-payment-method.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupons-by-shipping-method.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupons-by-user-role.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupons-by-product-attribute.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupons-by-taxonomy.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupons-by-excluded-email.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-message.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-categories.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupons-by-product-quantity.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-refund-process.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-background-upgrade.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-cheapest-costliest-items.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/batches/class-wc-sc-coupon-table.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/blocks/class-wc-sc-gutenberg-coupon-block.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-combo-coupons.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupons-by-order-count.php';
 
-			include_once 'class-wc-sc-order-stats.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-order-stats.php';
 
-			include_once 'class-wc-sc-email-preview.php';
-			include_once 'class-wc-sc-coupon-expiry-reminder.php';
-			include_once 'batches/class-wc-sc-coupons-expiry-reminder-scheduler.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-email-preview.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-expiry-reminder.php';
+			include_once WC_SC_PLUGIN_DIRPATH . 'includes/batches/class-wc-sc-coupons-expiry-reminder-scheduler.php';
 
 			if ( apply_filters( 'wc_sc_load_tours', wc_string_to_bool( get_option( 'wc_sc_load_tours', 'yes' ) ), array( 'source' => $this ) ) ) {
-				include_once 'class-wc-sc-tours.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-tours.php';
 			}
 		}
 
@@ -295,7 +296,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 
 				delete_transient( '_smart_coupons_process_activation' );
 
-				include_once 'class-wc-sc-act-deact.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-act-deact.php';
 
 				WC_SC_Act_Deact::process_activation();
 			} catch ( \Throwable $e ) {
@@ -464,9 +465,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 * @return string $expires_string Formatted expiry date
 		 */
 		public function get_expiration_format( $expiry_date ) {
-
 			try {
-
 				if ( $this->is_wc_gte_30() && $expiry_date instanceof WC_DateTime ) {
 					$expiry_date = ( is_callable( array( $expiry_date, 'getTimestamp' ) ) ) ? $expiry_date->getTimestamp() : null;
 				} elseif ( ! is_int( $expiry_date ) ) {
@@ -507,7 +506,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 * @param boolean $is_gift Whether it is a gift certificate or store credit.
 		 */
 		public function sa_email_coupon( $coupon_title, $discount_type, $order_id = '', $gift_certificate_receiver_name = '', $message_from_sender = '', $gift_certificate_sender_name = '', $gift_certificate_sender_email = '', $is_gift = '' ) {
-
 			try {
 				$is_send_email  = $this->is_email_template_enabled();
 				$combine_emails = $this->is_email_template_enabled( 'combine' );
@@ -696,7 +694,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function schedule_coupon_email( $action_args = array(), $sending_timestamp = '' ) {
 			try {
-
 				if ( empty( $action_args ) || empty( $sending_timestamp ) ) {
 					return false;
 				}
@@ -925,15 +922,14 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function process_published_scheduled_coupon( $coupon_id = 0 ) {
 			try {
-
 				$post_type = $this->get_post_type( $coupon_id );
 				if ( 'shop_coupon' !== $post_type ) {
 					return false;
 				}
 
 				if ( ! class_exists( 'WC_SC_Coupon_Data_Store' ) ) {
-					if ( file_exists( trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/class-wc-sc-coupon-data-store.php' ) ) {
-						include_once trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/class-wc-sc-coupon-data-store.php';
+					if ( file_exists( WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-data-store.php' ) ) {
+						include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-data-store.php';
 					}
 				}
 
@@ -989,7 +985,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function delete_scheduled_coupon_actions( $coupon_id = 0 ) {
 			try {
-
 				global $post_type;
 
 				if ( 'shop_coupon' !== $post_type ) {
@@ -1039,7 +1034,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function sc_delete_coupon_references( $coupon_id, $coupon_code ) {
 			try {
-
 				global $wpdb;
 
 				$coupon_id   = strval( intval( $coupon_id ) );
@@ -1159,7 +1153,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function sc_clean_reference_value( $value, $search_values ) {
 			try {
-
 				if ( is_array( $value ) ) {
 					return array_filter(
 						$value,
@@ -1188,7 +1181,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function is_valid_timestamp( $timestamp = '' ) {
 			try {
-
 				if ( empty( $timestamp ) || ! is_numeric( $timestamp ) ) {
 					return false;
 				}
@@ -1211,7 +1203,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function enqueue_admin_footer_scripts() {
 			try {
-
 				global $pagenow, $typenow;
 
 				if ( empty( $pagenow ) || 'edit.php' !== $pagenow ) {
@@ -1269,7 +1260,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function check_scheduled_coupon_actions() {
 			try {
-
 				check_ajax_referer( 'wc-sc-check-coupon-scheduled-actions', 'security' );
 
 				$coupon_id = ( ! empty( $_POST['coupon_id'] ) ) ? wc_clean( wp_unslash( $_POST['coupon_id'] ) ) : ''; // phpcs:ignore
@@ -1301,7 +1291,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function sc_add_endpoints() {
 			try {
-
 				if ( empty( WC_SC_Display_Coupons::$endpoint ) ) {
 					WC_SC_Display_Coupons::$endpoint = WC_SC_Display_Coupons::get_endpoint();
 				}
@@ -1321,7 +1310,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function sc_check_if_flushed_rules() {
 			try {
-
 				$sc_check_flushed_rules = get_option( 'sc_flushed_rules', 'notfound' );
 				if ( 'notfound' === $sc_check_flushed_rules ) {
 					flush_rewrite_rules(); // phpcs:ignore
@@ -1337,7 +1325,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function register_plugin_styles() {
 			try {
-
 				global $pagenow;
 
 				if ( empty( $this->plugin_data ) ) {
@@ -1365,7 +1352,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function get_coupon_style_attributes() {
 			try {
-
 				$styles = array();
 
 				$coupon_design = get_option( 'wc_sc_setting_coupon_design', 'basic' );
@@ -1431,7 +1417,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function get_coupon_meta_data( $coupon ) {
 			try {
-
 				global $store_credit_label, $post;
 
 				$order = null;
@@ -1507,7 +1492,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function generate_coupon_description( $args = array() ) {
 			try {
-
 				$coupon            = ( ! empty( $args['coupon_object'] ) ) ? $args['coupon_object'] : null;
 				$descriptions      = array();
 				$descriptions_data = array();
@@ -1635,7 +1619,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 			$category_names = array();
 
 			try {
-
 				if ( empty( $category_ids ) || ! is_array( $category_ids ) ) {
 					return $category_names;
 				}
@@ -1683,7 +1666,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 			$product_names = array();
 
 			try {
-
 				if ( empty( $product_ids ) || ! is_array( $product_ids ) ) {
 					return $product_names;
 				}
@@ -1759,7 +1741,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 			$src = '';
 
 			try {
-
 				$coupon       = ( ! empty( $args['coupon_object'] ) ) ? $args['coupon_object'] : null;
 				$src_selected = '';
 				$placeholder  = wc_placeholder_img_src();
@@ -1918,7 +1899,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 			$is_percent = false;
 
 			try {
-
 				$coupon                 = ( ! empty( $args['coupon_object'] ) ) ? $args['coupon_object'] : null;
 				$percent_discount_types = apply_filters(
 					'wc_sc_percent_discount_types',
@@ -2107,7 +2087,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function is_coupon_amount_pick_from_product_price( $coupons ) {
 			try {
-
 				if ( empty( $coupons ) ) {
 					return false;
 				}
@@ -2286,7 +2265,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function validate_expiry_time( $expired = false, $coupon = null, $discounts = null ) {
 			try {
-
 				if ( ! $this->is_wc_gte_30() ) {
 					return $expired; // Expiry time feature is not supported for lower version of WooCommerce.
 				}
@@ -2347,7 +2325,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 * @return array              $coupons_to_keep
 		 */
 		public function smart_coupons_override_individual_use( $coupons_to_keep = array(), $the_coupon = false, $applied_coupons = array() ) {
-
 			try {
 				if ( $this->is_wc_gte_30() ) {
 					foreach ( $applied_coupons as $code ) {
@@ -2374,7 +2351,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 * @return boolean
 		 */
 		public function smart_coupons_override_with_individual_use( $is_apply = false, $the_coupon = false, $applied_coupon = false, $applied_coupons = array() ) {
-
 			try {
 				if ( $this->is_wc_gte_30() ) {
 					if ( ! $is_apply && 'smart_coupon' === $the_coupon->get_discount_type() && ! $the_coupon->get_individual_use() ) {
@@ -2415,7 +2391,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 				$apply_before_tax = get_option( 'woocommerce_smart_coupon_apply_before_tax', 'no' );
 
 				if ( $this->is_wc_gte_30() && 'yes' === $apply_before_tax ) {
-					include_once 'class-wc-sc-apply-before-tax.php';
+					include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-apply-before-tax.php';
 				} else {
 					add_action( 'wp_loaded', array( $this, 'smart_coupons_discount_total_filters' ), 20 );
 					add_action( 'woocommerce_order_after_calculate_totals', array( $this, 'order_calculate_discount_amount' ), 10, 2 );
@@ -2479,7 +2455,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function update_smart_coupon_order_create_via_admin( $and_taxes = false, $order = null ) {
 			try {
-
 				if ( ! is_object( $order ) || ! $order instanceof WC_Order ) {
 					return;
 				}
@@ -2529,7 +2504,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function calculate_order_item_total_discount( $order, $include_taxes = false ) {
 			try {
-
 				if ( ! is_a( $order, 'WC_Order' ) ) {
 					return 0;
 				}
@@ -2687,9 +2661,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 * @return float     $total_discount
 		 */
 		public function sc_order_get_discount_amount( $total = 0, $coupon = null, $order = null ) {
-
 			try {
-
 				$discount       = 0;
 				$total_discount = 0;
 
@@ -2790,9 +2762,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 * @return float   $total
 		 */
 		public function smart_coupons_discounted_totals( $total = 0, $cart = null, $cart_contains_subscription = false, $calculation_type = '' ) {
-
 			try {
-
 				if ( empty( $total ) ) {
 					return $total;
 				}
@@ -2847,9 +2817,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 * @param  WC_Cart $cart Cart object.
 		 */
 		public function smart_coupons_after_calculate_totals( $cart = null ) {
-
 			try {
-
 				if ( empty( $cart ) || ! ( $cart instanceof WC_Cart ) ) {
 					return;
 				}
@@ -3135,9 +3103,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 * @return string
 		 */
 		public function cart_totals_coupon_html( $coupon_html = '', $coupon = null, $discount_amount_html = '' ) {
-
 			try {
-
 				$cart = ( function_exists( 'WC' ) && isset( WC()->cart ) ) ? WC()->cart : null;
 				if ( is_a( $cart, 'WC_Cart' ) ) {
 					$tax_price_display_mode   = $cart->get_tax_price_display_mode();
@@ -3732,7 +3698,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		public function clear_cache() {
 			try {
 				if ( ! class_exists( 'WC_SC_Act_Deact' ) ) {
-					include_once 'class-wc-sc-act-deact.php';
+					include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-act-deact.php';
 				}
 
 				$message = ( is_callable( array( 'WC_SC_Act_Deact', 'clear_cache' ) ) ) ? WC_SC_Act_Deact::clear_cache() : '';
@@ -3752,7 +3718,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		public function maybe_set_smart_coupon_meta() {
 			try {
 				if ( ! class_exists( 'WC_SC_Act_Deact' ) ) {
-					include_once 'class-wc-sc-act-deact.php';
+					include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-act-deact.php';
 				}
 
 				$message = ( is_callable( array( 'WC_SC_Act_Deact', 'maybe_set_smart_coupon_meta' ) ) ) ? WC_SC_Act_Deact::maybe_set_smart_coupon_meta() : '';
@@ -3773,7 +3739,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		public function delete_table_wc_smart_coupons() {
 			try {
 				if ( ! class_exists( 'WC_SC_Act_Deact' ) ) {
-					include_once 'class-wc-sc-act-deact.php';
+					include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-act-deact.php';
 				}
 
 				$message = ( is_callable( array( 'WC_SC_Act_Deact', 'delete_table_wc_smart_coupons' ) ) ) ? WC_SC_Act_Deact::delete_table_wc_smart_coupons() : '';
@@ -3828,7 +3794,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function is_smart_coupon_valid( $valid, $coupon, $discounts = null ) {
 			try {
-
 				if ( $this->is_wc_gte_30() ) {
 					$discount_type = ( is_object( $coupon ) && is_callable( array( $coupon, 'get_discount_type' ) ) ) ? $coupon->get_discount_type() : '';
 					$coupon_code   = ( is_object( $coupon ) && is_callable( array( $coupon, 'get_code' ) ) ) ? $coupon->get_code() : '';
@@ -3876,6 +3841,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 			} catch ( \Throwable $e ) {
 				$this->sc_block_catch_error( $e );
 			}
+
 			return $valid;
 		}
 
@@ -4895,7 +4861,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function generate_coupons_code( $post = array(), $get = array(), $post_ids = array(), $coupon_postmeta_headers = array() ) {
 			try {
-
 				global $wpdb, $wp, $wp_query;
 
 				if ( ! empty( $post_ids ) ) {
@@ -5274,11 +5239,11 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function register_email_classes( $email_classes = array() ) {
 			try {
-				include_once 'emails/class-wc-sc-email.php';
-				include_once 'emails/class-wc-sc-email-coupon.php';
-				include_once 'emails/class-wc-sc-combined-email-coupon.php';
-				include_once 'emails/class-wc-sc-acknowledgement-email.php';
-				include_once 'emails/class-wc-sc-expiry-reminder-email.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/emails/class-wc-sc-email.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/emails/class-wc-sc-email-coupon.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/emails/class-wc-sc-combined-email-coupon.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/emails/class-wc-sc-acknowledgement-email.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/emails/class-wc-sc-expiry-reminder-email.php';
 
 				// Add the email class to the list of email classes that WooCommerce loads.
 				$email_classes['WC_SC_Email_Coupon']          = new WC_SC_Email_Coupon();
@@ -5322,7 +5287,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function generate_coupon( $args = array() ) {
 			try {
-
 				if ( ! $this->is_wc_gte_30() ) {
 					return;
 				}
@@ -5464,7 +5428,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function paint_coupon( $args = array() ) {
 			try {
-
 				if ( ! $this->is_wc_gte_30() ) {
 					return '';
 				}
@@ -5598,7 +5561,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function rest_namespace( $namespaces = array() ) {
 			try {
-				include_once 'class-wc-sc-rest-coupons-controller.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-rest-coupons-controller.php';
 				$namespaces['wc/v3/sc'] = array(
 					'coupons' => 'WC_SC_REST_Coupons_Controller',
 				);
@@ -5968,7 +5931,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 					$custom_design_css = get_option( 'wc_sc_custom_design_css', '' );
 					echo $custom_design_css;  // phpcs:ignore
 				} elseif ( 'email-coupon' === $style_name ) {
-					$file = trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'assets/css/wc-sc-style-' . $style_name . $suffix . '.css';
+					$file = WC_SC_PLUGIN_DIRPATH . 'assets/css/wc-sc-style-' . $style_name . $suffix . '.css';
 					if ( file_exists( $file ) ) {
 						include $file; // nosemgrep: audit.php.lang.security.file.inclusion-arg .
 					} else {
@@ -5976,7 +5939,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 						$this->log( 'error', sprintf( __( 'File not found %s', 'woocommerce-smart-coupons' ), '<code>' . $file . '</code>' ) . ' ' . __FILE__ . ' ' . __LINE__ );
 					}
 				} else {
-					$file = trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'assets/css/smart-coupon-designs.css';
+					$file = WC_SC_PLUGIN_DIRPATH . 'assets/css/smart-coupon-designs.css';
 					if ( file_exists( $file ) ) {
 						include $file;
 					} else {
@@ -7560,7 +7523,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 				}
 				if ( is_plugin_active( 'woocommerce-aelia-currencyswitcher/woocommerce-aelia-currencyswitcher.php' ) ) {
 					if ( ! class_exists( 'WC_SC_Aelia_CS_Compatibility' ) ) {
-						include_once 'compat/class-wc-sc-aelia-cs-compatibility.php';
+						include_once WC_SC_PLUGIN_DIRPATH . 'includes/compat/class-wc-sc-aelia-cs-compatibility.php';
 					}
 					return WC_SC_Aelia_CS_Compatibility::get_instance()->convert_price( $price, $to_currency, $from_currency );
 				}
@@ -7568,7 +7531,7 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 				if ( is_plugin_active( 'woocommerce-payments/woocommerce-payments.php' ) ) {
 
 					if ( ! class_exists( 'WC_SC_WooPayments_Compatibility' ) ) {
-						include_once 'compat/class-wc-sc-woopayments-compatibility.php';
+						include_once WC_SC_PLUGIN_DIRPATH . 'includes/compat/class-wc-sc-woopayments-compatibility.php';
 					}
 
 					return WC_SC_WooPayments_Compatibility::get_instance()->convert_price( $price, $to_currency, $from_currency );
@@ -7731,7 +7694,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function wc_timezone_offset() {
 			try {
-
 				if ( function_exists( 'wc_timezone_offset' ) ) {
 					return wc_timezone_offset();
 				}
@@ -8090,7 +8052,6 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		 */
 		public function is_old_sc_order( $order = null ) {
 			try {
-
 				if ( empty( $order ) || is_array( $order ) ) {
 					return false;
 				}
@@ -8765,8 +8726,8 @@ if ( ! class_exists( 'WC_Smart_Coupons' ) ) {
 		public function get_db_status_for( $version = '' ) {
 			try {
 				if ( ! class_exists( 'WC_SC_Background_Upgrade' ) ) {
-					if ( file_exists( trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/class-wc-sc-background-upgrade.php' ) ) {
-						include_once trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/class-wc-sc-background-upgrade.php';
+					if ( file_exists( WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-background-upgrade.php' ) ) {
+						include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-background-upgrade.php';
 					}
 				}
 				$wcsc_db       = WC_SC_Background_Upgrade::get_instance();

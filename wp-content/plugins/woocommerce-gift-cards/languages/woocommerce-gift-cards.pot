@@ -1,15 +1,15 @@
-# Copyright (C) 2025 Woo
+# Copyright (C) 2025 WooCommerce
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Gift Cards 2.7.0\n"
+"Project-Id-Version: WooCommerce Gift Cards 2.7.1\n"
 "Report-Msgid-Bugs-To: https://woocommerce.com/my-account/create-a-ticket/\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-29T10:52:32+00:00\n"
+"POT-Creation-Date: 2025-09-02T06:24:05+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "language-team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -32,7 +32,7 @@ msgstr ""
 
 #. Author of the plugin
 #: woocommerce-gift-cards.php
-msgid "Woo"
+msgid "WooCommerce"
 msgstr ""
 
 #. Author URI of the plugin

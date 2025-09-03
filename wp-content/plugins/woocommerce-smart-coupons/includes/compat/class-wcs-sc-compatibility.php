@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       3.3.0
- * @version     2.8.0
+ * @version     2.9.0
  * @package     WooCommerce Smart Coupons
  */
 
@@ -758,7 +758,7 @@ if ( ! class_exists( 'WCS_SC_Compatibility' ) ) {
 								continue;
 							}
 							if ( ! class_exists( 'WC_SC_Apply_Before_Tax' ) ) {
-								include_once '../class-wc-sc-apply-before-tax.php';
+								include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-apply-before-tax.php';
 							}
 							$sc_apply_before_tax = WC_SC_Apply_Before_Tax::get_instance();
 							foreach ( $renewal_order_items as $renewal_order_item_id => $renewal_order_item ) {
@@ -972,7 +972,7 @@ if ( ! class_exists( 'WCS_SC_Compatibility' ) ) {
 			}
 
 			if ( ! class_exists( 'WC_SC_Coupon_Actions' ) ) {
-				include_once '../class-wc-sc-coupon-actions.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-actions.php';
 			}
 
 			$wc_sc_coupon_actions = WC_SC_Coupon_Actions::get_instance();
@@ -1004,7 +1004,7 @@ if ( ! class_exists( 'WCS_SC_Compatibility' ) ) {
 			if ( ! empty( $recurring_carts ) ) {
 
 				if ( ! class_exists( 'WC_SC_Coupon_Actions' ) ) {
-					include_once '../class-wc-sc-coupon-actions.php';
+					include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-actions.php';
 				}
 
 				$wc_sc_coupon_actions = WC_SC_Coupon_Actions::get_instance();
@@ -1266,7 +1266,7 @@ if ( ! class_exists( 'WCS_SC_Compatibility' ) ) {
 				return;
 			}
 			if ( ! class_exists( 'WC_SC_Coupon_Actions' ) ) {
-				include_once '../class-wc-sc-coupon-actions.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-actions.php';
 			}
 			$wc_sc_coupon_actions = WC_SC_Coupon_Actions::get_instance();
 			$order_coupons        = ( $this->is_callable( $order, 'get_used_coupons' ) ) ? $order->get_used_coupons() : array();

@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       4.6.0
- * @version     3.20.0
+ * @version     3.21.0
  *
  * @package     woocommerce-smart-coupons/includes/
  */
@@ -413,8 +413,8 @@ if ( ! class_exists( 'WC_SC_Auto_Apply_Coupon' ) ) {
 				return;
 			}
 			if ( ! class_exists( 'WC_SC_Coupon_Data_Store' ) ) {
-				if ( file_exists( trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/class-wc-sc-coupon-data-store.php' ) ) {
-					include_once trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/class-wc-sc-coupon-data-store.php';
+				if ( file_exists( WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-data-store.php' ) ) {
+					include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-data-store.php';
 				}
 			}
 
@@ -453,7 +453,7 @@ if ( ! class_exists( 'WC_SC_Auto_Apply_Coupon' ) ) {
 
 				if ( ! empty( $cart_items ) ) {
 					if ( ! class_exists( 'WC_SC_Coupons_By_Product_Attribute' ) ) {
-						include_once 'class-wc-sc-coupons-by-product-attribute.php';
+						include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupons-by-product-attribute.php';
 					}
 					$wc_sc_product_attribute = WC_SC_Coupons_By_Product_Attribute::get_instance();
 					foreach ( $cart_items as $item ) {

@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       3.3.0
- * @version     1.8.0
+ * @version     1.9.0
  * @package     WooCommerce Smart Coupons
  */
 
@@ -295,7 +295,7 @@ if ( ! class_exists( 'WC_SC_Act_Deact' ) ) {
 			global $wpdb;
 			$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}wc_smart_coupons"  ); // phpcs:ignore
 			if ( ! class_exists( 'WC_SC_Background_Upgrade' ) ) {
-				include_once 'class-wc-sc-background-upgrade.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-background-upgrade.php';
 			}
 			$wc_sc_background_upgrade = WC_SC_Background_Upgrade::get_instance();
 			$wc_sc_background_upgrade->set_status( '9.8.0', 'pending' );

@@ -1,24 +1,24 @@
 <?php
 /**
- * Compatibility class for WooCommerce 4.4.0
+ * Compatibility class for WooCommerce
  *
  * @category    Class
- * @package     WC-compat
+ * @package     woocommerce-smart-coupons/includes/compat/
  * @author      StoreApps
  * @version     1.2.0
- * @since       WooCommerce 4.4.0
+ * @since       9.51.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'SA_WC_Compatibility_4_4' ) ) {
+if ( ! class_exists( 'SA_WC_SC_Compatibility' ) ) {
 
 	/**
 	 * Class to check WooCommerce version is greater than and equal to 4.4.0
 	 */
-	class SA_WC_Compatibility_4_4 {
+	class SA_WC_SC_Compatibility {
 
 		/**
 		 * Function to check if WooCommerce version is greater than and equal To 9.0

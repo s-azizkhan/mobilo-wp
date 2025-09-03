@@ -11,7 +11,6 @@ use WC_Cart;
 use WP_Roles;
 
 class AbandonedCartRecovery extends FeaturesAbstract {
-	protected $table_name;
 
 	protected function run_if_cfw_is_enabled() {
 		add_action( 'cfw_checkout_update_order_review', array( $this, 'maybe_track_abandoned_cart' ) );
@@ -58,7 +57,7 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 		}
 
 		$wpdb->update(
-			$this->table_name,
+			self::get_table_name(),
 			array(
 				'status' => 'unsubscribed',
 			),
@@ -89,10 +88,6 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 
 	public function init() {
 		parent::init();
-
-		global $wpdb;
-
-		$this->table_name = $wpdb->prefix . 'cfw_acr_carts';
 
 		add_action( 'cfw_do_plugin_activation', array( $this, 'run_on_plugin_activation' ) );
 		add_action( 'cfw_acr_activate', array( $this, 'run_on_plugin_activation' ) );
@@ -172,23 +167,7 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 	}
 
 	public function run_on_plugin_activation() {
-		$sql = "CREATE TABLE {$this->table_name} (
-		  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-		  `email` varchar(254) NOT NULL,
-		  `first_name` varchar(254) NOT NULL,
-		  `last_name` varchar(254) NOT NULL,
-		  `cart` longtext NOT NULL,
-		  `fields` longtext NOT NULL,
-		  `subtotal` decimal(26,8) NOT NULL,
-		  `status` varchar(254) NOT NULL,
-		  `wp_user` bigint(20) NOT NULL,
-		  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-		  `emails_sent` int(11) NOT NULL DEFAULT 0,
-		  PRIMARY KEY (`id`)
-		) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;";
-
-		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-		dbDelta( $sql );
+		self::create_or_update_table();
 
 		$this->map_capabilities();
 		$this->maybe_create_template_emails();
@@ -227,7 +206,8 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 			return;
 		}
 
-		$cart_id = WC()->session->get( 'cfw_acr_cart_id', false );
+		$cart_id   = WC()->session->get( 'cfw_acr_cart_id', false );
+		$cart_json = wp_json_encode( $cart_contents );
 
 		if ( ! empty( $meta ) ) {
 			$fields['cfw_meta_fields'] = $meta;
@@ -237,10 +217,10 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 		// Unless it's already been marked as abandoned / lost / recovered
 		if ( $cart_id ) {
 			$wpdb->update(
-				$this->table_name,
+				self::get_table_name(),
 				array(
 					'email'      => $email,
-					'cart'       => wp_json_encode( $cart_contents ),
+					'cart'       => $cart_json,
 					'subtotal'   => $subtotal,
 					'first_name' => $first_name,
 					'last_name'  => $last_name,
@@ -257,9 +237,10 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 		}
 
 		// Check for existing cart for user by email
+		$table_name = self::get_table_name();
 		$carts_matching_customer = $wpdb->get_results(
 			$wpdb->prepare(
-				"SELECT * FROM {$this->table_name} WHERE email = %s AND ( status = 'new' OR status = 'abandoned' )", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				"SELECT * FROM {$table_name} WHERE email = %s AND ( status = 'new' OR status = 'abandoned' )", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 				$email
 			)
 		);
@@ -268,12 +249,13 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 			return;
 		}
 
-		// Otherwise add the cart
+		// Otherwise, add the cart
 		$wpdb->insert(
-			$this->table_name,
+			self::get_table_name(),
 			array(
+				'cart_hash'  => self::generate_cart_hash( $email, $cart_json ),
 				'email'      => $email,
-				'cart'       => wp_json_encode( $cart_contents ),
+				'cart'       => $cart_json,
 				'subtotal'   => $subtotal,
 				'first_name' => $first_name,
 				'last_name'  => $last_name,
@@ -370,9 +352,10 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 		}
 
 		// Build query for carts that are older than abandoned time and status new
+		$table_name = self::get_table_name();
 		$newly_abandoned_carts = $wpdb->get_results(
 			$wpdb->prepare(
-				"SELECT id, email FROM `{$this->table_name}` WHERE created < DATE_SUB(NOW(), INTERVAL %d MINUTE) AND status = 'new';", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				"SELECT id, email FROM `{$table_name}` WHERE created < DATE_SUB(NOW(), INTERVAL %d MINUTE) AND status = 'new';", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 				$abandoned_time
 			)
 		);
@@ -384,7 +367,7 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 		foreach ( $newly_abandoned_carts as $cart ) {
 			if ( empty( $first_email ) ) {
 				$wpdb->update(
-					$this->table_name,
+					self::get_table_name(),
 					array(
 						'status' => 'ineligible',
 					),
@@ -397,7 +380,7 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 			}
 
 			$wpdb->update(
-				$this->table_name,
+				self::get_table_name(),
 				array(
 					'status' => 'abandoned',
 				),
@@ -424,7 +407,7 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 		global $wpdb;
 
 		$wpdb->update(
-			$this->table_name,
+			self::get_table_name(),
 			array(
 				'status' => 'lost',
 			),
@@ -505,7 +488,7 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 
 		// Update emails_sent
 		$wpdb->update(
-			$this->table_name,
+			self::get_table_name(),
 			array(
 				'emails_sent' => $cart->emails_sent + 1,
 			),
@@ -654,10 +637,13 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 	}
 
 	public function getCheckoutURL( stdClass $cart, $email_id ): string {
+		// Use cart_hash if available, otherwise fall back to numeric ID
+		$cart_identifier = ! empty( $cart->cart_hash ) ? $cart->cart_hash : ( $cart->id ?? 0 );
+
 		return esc_url(
 			add_query_arg(
 				array(
-					'cfw_acr_cart_id' => $cart->id ?? 0,
+					'cfw_acr_cart_id' => $cart_identifier,
 					'utm_source'      => 'CheckoutWC_ACR',
 					'utm_medium'      => 'email',
 					'utm_campaign'    => 'abandoned_cart',
@@ -822,14 +808,14 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 		// Unsubscribed is here because the user still got an email and subsequently purchased
 		if ( ! $cart->emails_sent || 'new' === $cart->status ) {
 			// No emails sent, remove cart - it's not abandoned
-			$wpdb->delete( $this->table_name, array( 'id' => $cart_id ) );
+			$wpdb->delete( self::get_table_name(), array( 'id' => $cart_id ) );
 
 			return;
 		}
 
 		// Ok, we must have an order that was abandoned and recovered
 		$wpdb->update(
-			$this->table_name,
+			self::get_table_name(),
 			array(
 				'status' => 'recovered',
 			),
@@ -886,14 +872,14 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 		// Unsubscribed is here because the user still got an email and subsequently purchased
 		if ( ! $cart->emails_sent || 'new' === $cart->status ) {
 			// No emails sent, remove cart - it's not abandoned
-			$wpdb->delete( $this->table_name, array( 'id' => $cart_id ) );
+			$wpdb->delete( self::get_table_name(), array( 'id' => $cart_id ) );
 
 			return;
 		}
 
 		// Ok, we must have an order that was abandoned and recovered
 		$wpdb->update(
-			$this->table_name,
+			self::get_table_name(),
 			array(
 				'status' => 'recovered',
 			),
@@ -926,16 +912,27 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 			return;
 		}
 
-		$cart_id = sanitize_text_field( wp_unslash( $_GET['cfw_acr_cart_id'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		$cart    = $this->get_tracked_cart( $cart_id );
+		$cart_identifier = sanitize_text_field( wp_unslash( $_GET['cfw_acr_cart_id'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
-		if ( ! in_array( $cart->status, array( 'abandoned', 'lost', 'unsubscribed' ), true ) ) {
-			cfw_debug_log( 'Tracked cart ' . $cart_id . ' is not abandoned, lost, or unsubscribed. Status: ' . $cart->status ); // phpcs:ignore
+		$cart = $this->get_tracked_cart( $cart_identifier );
 
+		if ( ! $cart ) {
+			cfw_debug_log( 'Tracked cart ' . $cart_identifier . ' not found.' ); // phpcs:ignore
 			return;
 		}
 
-		WC()->session->set( 'cfw_acr_cart_id', $cart_id );
+		// Security check: only allow numeric ID access for legacy carts without cart_hash
+		if ( is_numeric( $cart_identifier ) && ! empty( $cart->cart_hash ) ) {
+			cfw_debug_log( 'Tracked cart ' . $cart_identifier . ' access denied - numeric ID used for hash-secured cart.' ); // phpcs:ignore
+			return;
+		}
+
+		if ( ! in_array( $cart->status, array( 'abandoned', 'lost', 'unsubscribed' ), true ) ) {
+			cfw_debug_log( 'Tracked cart ' . $cart->id . ' is not abandoned, lost, or unsubscribed. Status: ' . $cart->status ); // phpcs:ignore
+			return;
+		}
+
+		WC()->session->set( 'cfw_acr_cart_id', $cart->id );
 
 		$cart_contents = json_decode( $cart->cart, true );
 
@@ -1060,7 +1057,8 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 	public function get_active_tracked_cart_emails(): array {
 		global $wpdb;
 
-		return $wpdb->get_col( "SELECT email FROM $this->table_name WHERE status <> 'recovered' AND status <> 'new' AND status <> 'lost'" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		$table_name = self::get_table_name();
+		return $wpdb->get_col( "SELECT email FROM $table_name WHERE status <> 'recovered' AND status <> 'new' AND status <> 'lost'" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 	}
 
 	public function get_tracked_cart_id_by_email( $email ): ?string {
@@ -1070,18 +1068,31 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 			return null;
 		}
 
+		$table_name = self::get_table_name();
 		return $wpdb->get_var(
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
-			$wpdb->prepare( "SELECT id FROM $this->table_name WHERE email = %s ORDER BY created DESC LIMIT 1", $email )
+			$wpdb->prepare( "SELECT id FROM {$table_name} WHERE email = %s ORDER BY created DESC LIMIT 1", $email )
 		);
 	}
 
-	public function get_tracked_cart( $cart_id ) {
+	public function get_tracked_cart( $cart_identifier ) {
 		global $wpdb;
 
+		if ( empty( $cart_identifier ) ) {
+			return null;
+		}
+
+		$table_name = self::get_table_name();
+
+		if ( is_numeric( $cart_identifier ) ) {
+			// Numeric ID lookup
+			return $wpdb->get_row(
+				$wpdb->prepare( "SELECT *, UNIX_TIMESTAMP(created) AS created_unix FROM {$table_name} WHERE id = %d", $cart_identifier )
+			);
+		}
+
+		// Hash lookup
 		return $wpdb->get_row(
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
-			$wpdb->prepare( "SELECT *, UNIX_TIMESTAMP(created) AS created_unix FROM $this->table_name WHERE id = %d", $cart_id )
+			$wpdb->prepare( "SELECT *, UNIX_TIMESTAMP(created) AS created_unix FROM {$table_name} WHERE cart_hash = %s", $cart_identifier )
 		);
 	}
 
@@ -1091,6 +1102,39 @@ class AbandonedCartRecovery extends FeaturesAbstract {
 
 	public function unschedule_mark_as_lost( $cart_id ) {
 		\as_unschedule_all_actions( null, null, 'checkoutwc_lost_' . $cart_id );
+	}
+
+	public static function generate_cart_hash( $email, $cart_contents_json ): string {
+		return hash( 'sha256', $email . '|' . $cart_contents_json );
+	}
+
+	public static function get_table_name(): string {
+		global $wpdb;
+		return $wpdb->prefix . 'cfw_acr_carts';
+	}
+
+	public static function create_or_update_table(): void {
+		$table_name = self::get_table_name();
+
+		$sql = "CREATE TABLE {$table_name} (
+		  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+		  `cart_hash` varchar(64) NOT NULL DEFAULT '',
+		  `email` varchar(254) NOT NULL,
+		  `first_name` varchar(254) NOT NULL,
+		  `last_name` varchar(254) NOT NULL,
+		  `cart` longtext NOT NULL,
+		  `fields` longtext NOT NULL,
+		  `subtotal` decimal(26,8) NOT NULL,
+		  `status` varchar(254) NOT NULL,
+		  `wp_user` bigint(20) NOT NULL,
+		  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+		  `emails_sent` int(11) NOT NULL DEFAULT 0,
+		  PRIMARY KEY (`id`),
+		  UNIQUE KEY `cart_hash` (`cart_hash`)
+		) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;";
+
+		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+		dbDelta( $sql );
 	}
 
 	public function maybe_create_template_emails() {

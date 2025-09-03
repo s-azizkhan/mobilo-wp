@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       9.9.0
- * @version     1.2.0
+ * @version     1.4.0
  *
  * @package     woocommerce-smart-coupons/includes/
  */
@@ -97,17 +97,27 @@ if ( ! class_exists( 'WC_SC_Tours' ) ) {
 		 * @return array
 		 */
 		public function get_tour_scripts() {
-			if ( empty( $this->tour_scripts ) ) {
-				$this->set_tour_scripts();
+			try {
+				if ( empty( $this->tour_scripts ) ) {
+					$this->set_tour_scripts();
+				}
+				return $this->tour_scripts;
+			} catch ( \Throwable $e ) {
+				$this->sc_block_catch_error( $e );
+				return array();
 			}
-			return $this->tour_scripts;
 		}
 
 		/**
 		 * Function to set tour script JS files
 		 */
 		public function set_tour_scripts() {
-			$this->tour_scripts = glob( trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'assets/js/tours/tour-*.min.js' );
+			try {
+				$this->tour_scripts = glob( WC_SC_PLUGIN_DIRPATH . 'assets/js/tours/tour-*.min.js' );
+			} catch ( \Throwable $e ) {
+				$this->sc_block_catch_error( $e );
+				$this->tour_scripts = array();
+			}
 		}
 
 		/**
@@ -116,101 +126,118 @@ if ( ! class_exists( 'WC_SC_Tours' ) ) {
 		 * @return array
 		 */
 		public function get_tour_script_tags() {
-			if ( empty( $this->tour_script_tags ) ) {
-				$this->set_tour_script_tags();
+			try {
+				if ( empty( $this->tour_script_tags ) ) {
+					$this->set_tour_script_tags();
+				}
+				return $this->tour_script_tags;
+			} catch ( \Throwable $e ) {
+				$this->sc_block_catch_error( $e );
+				return array();
 			}
-			return $this->tour_script_tags;
 		}
 
 		/**
 		 * Function to get tour script tags
 		 */
 		public function set_tour_script_tags() {
-			$files                  = $this->get_tour_scripts();
-			$file_tags              = array_map(
-				function( $file ) {
-					$file_name = basename( $file, '.js' );
-					return $file_name . '-js';
-				},
-				$files
-			);
-			$this->tour_script_tags = array_merge( $file_tags, array( 'wc-sc-admin-shepherd-js' ) );
+			try {
+				$files                  = $this->get_tour_scripts();
+				$file_tags              = array_map(
+					function( $file ) {
+						$file_name = basename( $file, '.js' );
+						return $file_name . '-js';
+					},
+					$files
+				);
+				$this->tour_script_tags = array_merge( $file_tags, array( 'wc-sc-admin-shepherd-js' ) );
+			} catch ( \Throwable $e ) {
+				$this->sc_block_catch_error( $e );
+				$this->tour_script_tags = array();
+			}
 		}
 
 		/**
 		 * Enqueue styles and scripts
 		 */
 		public function enqueue_styles_and_scripts() {
-			$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+			try {
+				$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-			if ( ! wp_style_is( 'wc-sc-admin-shepherd-css', 'registered' ) ) {
-				$style_path = '/assets/css/shepherd.css';
-				$style_url  = $this->get_plugin_directory_url( $style_path );
-				wp_register_style( 'wc-sc-admin-shepherd-css', $style_url, array(), $this->get_smart_coupons_version() );
-			}
-			if ( ! wp_style_is( 'wc-sc-admin-shepherd-css' ) ) {
-				wp_enqueue_style( 'wc-sc-admin-shepherd-css' );
-			}
+				if ( ! wp_style_is( 'wc-sc-admin-shepherd-css', 'registered' ) ) {
+					$style_path = '/assets/css/shepherd.css';
+					$style_url  = $this->get_plugin_directory_url( $style_path );
+					wp_register_style( 'wc-sc-admin-shepherd-css', $style_url, array(), $this->get_smart_coupons_version() );
+				}
+				if ( ! wp_style_is( 'wc-sc-admin-shepherd-css' ) ) {
+					wp_enqueue_style( 'wc-sc-admin-shepherd-css' );
+				}
 
-			if ( ! wp_style_is( 'wc-sc-tour-css', 'registered' ) ) {
-				$style_path = '/assets/css/wc-sc-tour' . $suffix . '.css';
-				$style_url  = $this->get_plugin_directory_url( $style_path );
-				wp_register_style( 'wc-sc-tour-css', $style_url, array( 'wc-sc-admin-shepherd-css' ), $this->get_smart_coupons_version() );
-			}
-			if ( ! wp_style_is( 'wc-sc-tour-css' ) ) {
-				wp_enqueue_style( 'wc-sc-tour-css' );
-			}
+				if ( ! wp_style_is( 'wc-sc-tour-css', 'registered' ) ) {
+					$style_path = '/assets/css/wc-sc-tour' . $suffix . '.css';
+					$style_url  = $this->get_plugin_directory_url( $style_path );
+					wp_register_style( 'wc-sc-tour-css', $style_url, array( 'wc-sc-admin-shepherd-css' ), $this->get_smart_coupons_version() );
+				}
+				if ( ! wp_style_is( 'wc-sc-tour-css' ) ) {
+					wp_enqueue_style( 'wc-sc-tour-css' );
+				}
 
-			if ( ! wp_script_is( 'wc-sc-admin-shepherd-js', 'registered' ) ) {
-				$script_path = '/assets/js/shepherd.min.js';
-				$script_url  = $this->get_plugin_directory_url( $script_path );
-				wp_register_script( 'wc-sc-admin-shepherd-js', $script_url, array(), $this->get_smart_coupons_version(), true );
-			}
-			if ( ! wp_script_is( 'wc-sc-admin-shepherd-js' ) ) {
-				wp_enqueue_script( 'wc-sc-admin-shepherd-js' );
-			}
-
-			$files = $this->get_tour_scripts();
-
-			foreach ( $files as $file ) {
-				$file_name = basename( $file, '.js' );
-				if ( ! wp_script_is( $file_name . '-js', 'registered' ) ) {
-					$script_path = '/assets/js/tours/' . $file_name . '.js';
+				if ( ! wp_script_is( 'wc-sc-admin-shepherd-js', 'registered' ) ) {
+					$script_path = '/assets/js/shepherd.min.js';
 					$script_url  = $this->get_plugin_directory_url( $script_path );
-					wp_register_script( $file_name . '-js', $script_url, array( 'wc-sc-admin-shepherd-js' ), $this->get_smart_coupons_version(), true );
+					wp_register_script( 'wc-sc-admin-shepherd-js', $script_url, array(), $this->get_smart_coupons_version(), true );
 				}
-				if ( ! wp_script_is( $file_name . '-js' ) ) {
-					wp_enqueue_script( $file_name . '-js' );
+				if ( ! wp_script_is( 'wc-sc-admin-shepherd-js' ) ) {
+					wp_enqueue_script( 'wc-sc-admin-shepherd-js' );
 				}
-			}
 
+				$files = $this->get_tour_scripts();
+
+				foreach ( $files as $file ) {
+					$file_name = basename( $file, '.js' );
+					if ( ! wp_script_is( $file_name . '-js', 'registered' ) ) {
+						$script_path = '/assets/js/tours/' . $file_name . '.js';
+						$script_url  = $this->get_plugin_directory_url( $script_path );
+						wp_register_script( $file_name . '-js', $script_url, array( 'wc-sc-admin-shepherd-js' ), $this->get_smart_coupons_version(), true );
+					}
+					if ( ! wp_script_is( $file_name . '-js' ) ) {
+						wp_enqueue_script( $file_name . '-js' );
+					}
+				}
+			} catch ( \Throwable $e ) {
+				$this->sc_block_catch_error( $e );
+			}
 		}
 
 		/**
 		 * Add 'Take a tour' button on Coupon dashboard.
 		 */
 		public function add_tour_button() {
-			$screen = get_current_screen();
+			try {
+				$screen = get_current_screen();
 
-			if ( ! in_array( $screen->id, array( 'edit-shop_coupon', 'marketing_page_wc-smart-coupons' ), true ) ) {
-				return;
+				if ( ! in_array( $screen->id, array( 'edit-shop_coupon', 'marketing_page_wc-smart-coupons' ), true ) ) {
+					return;
+				}
+				if ( ! wp_script_is( 'jquery' ) ) {
+					wp_enqueue_script( 'jquery' );
+				}
+				?>
+				<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						// Find the 'Add New' button and append a new link after it
+						var tourButton = $('.wrap .page-title-action');
+						if (tourButton.length) {
+							$('<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'sc-tour' ), admin_url( 'admin.php' ) ) ); ?>" style="margin: -.4em 1em; vertical-align: text-bottom;" class="button"><?php echo esc_html__( 'Take a tour', 'woocommerce-smart-coupons' ); ?></a>').insertAfter(tourButton);
+						} else if ($('h2 .add-new-h2').length) {
+							$('<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'sc-tour' ), admin_url( 'admin.php' ) ) ); ?>" style="margin: -.2em 1em; vertical-align: text-bottom;" class="button"><?php echo esc_html__( 'Take a tour', 'woocommerce-smart-coupons' ); ?></a>').insertAfter($('h2 .add-new-h2'));
+						}
+					});
+				</script>
+				<?php
+			} catch ( \Throwable $e ) {
+				$this->sc_block_catch_error( $e );
 			}
-			if ( ! wp_script_is( 'jquery' ) ) {
-				wp_enqueue_script( 'jquery' );
-			}
-			?>
-			<script type="text/javascript">
-				jQuery(document).ready(function($) {
-					// Find the 'Add New' button and append a new link after it
-					var tourButton = $('.wrap .page-title-action');
-					if (tourButton.length) {
-						$('<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'sc-tour' ), admin_url( 'admin.php' ) ) ); ?>" style="margin: -.4em 1em; vertical-align: text-bottom;" class="button"><?php echo esc_html__( 'Take a tour', 'woocommerce-smart-coupons' ); ?></a>').insertAfter(tourButton);
-					} else if ($('h2 .add-new-h2').length) {
-						$('<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'sc-tour' ), admin_url( 'admin.php' ) ) ); ?>" style="margin: -.2em 1em; vertical-align: text-bottom;" class="button"><?php echo esc_html__( 'Take a tour', 'woocommerce-smart-coupons' ); ?></a>').insertAfter($('h2 .add-new-h2'));
-					}
-				});
-			</script>
-			<?php
 		}
 
 	}

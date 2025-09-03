@@ -5,7 +5,7 @@
  *
  * @package     woocommerce-smart-coupons/includes/abstracts
  * @since       9.8.0
- * @version     1.2.0
+ * @version     1.3.0
  */
 
 // Exit if accessed directly.
@@ -113,7 +113,7 @@ if ( ! class_exists( 'WC_SC_Background_Process' ) ) {
 		private function start_process() {
 
 			if ( ! class_exists( 'WC_SC_Background_Upgrade' ) ) {
-				include_once '../class-wc-sc-background-upgrade.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-background-upgrade.php';
 			}
 
 			$wcsc_db = WC_SC_Background_Upgrade::get_instance();

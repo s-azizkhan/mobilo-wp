@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       3.3.0
- * @version     4.3.0
+ * @version     4.4.0
  *
  * @package     woocommerce-smart-coupons/includes/
  */
@@ -571,7 +571,9 @@ if ( ! class_exists( 'WC_SC_Coupon_Import' ) ) {
 								$meta_value = $add_product_details;
 							}
 							break;
-
+						case 'wc_sc_order_count_restriction':
+							$meta_value = maybe_unserialize( $meta_value );
+							break;
 						default:
 							$meta_value = apply_filters(
 								'wc_sc_process_coupon_meta_value_for_import',
@@ -692,7 +694,7 @@ if ( ! class_exists( 'WC_SC_Coupon_Import' ) ) {
 			$is_email_imported_coupons = get_option( 'woo_sc_is_email_imported_coupons' );
 
 			if ( ! class_exists( 'WC_SC_Coupon_Actions' ) ) {
-				include_once 'class-wc-sc-coupon-actions.php';
+				include_once WC_SC_PLUGIN_DIRPATH . 'includes/class-wc-sc-coupon-actions.php';
 			}
 
 			$wc_sc_coupon_actions = WC_SC_Coupon_Actions::get_instance();

@@ -4,7 +4,7 @@
  *
  * @package     woocommerce-smart-coupons/includes/
  * @since       9.17.0
- * @version     1.1.0
+ * @version     1.2.0
  */
 
 // Exit if accessed directly.
@@ -13,8 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! class_exists( 'WC_SC_Background_Process', false ) ) {
-	if ( file_exists( trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/abstracts/class-wc-sc-background-process.php' ) ) {
-		include_once trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/abstracts/class-wc-sc-background-process.php';
+	if ( file_exists( WC_SC_PLUGIN_DIRPATH . 'includes/abstracts/class-wc-sc-background-process.php' ) ) {
+		include_once WC_SC_PLUGIN_DIRPATH . 'includes/abstracts/class-wc-sc-background-process.php';
 	}
 }
 

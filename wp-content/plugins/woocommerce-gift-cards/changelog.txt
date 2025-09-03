@@ -1,5 +1,8 @@
 *** WooCommerce Gift Cards ***
 
+2025.09.02 - version 2.7.1
+* Tweak - Update plugin authors and contributors.
+
 2025.07.29 - version 2.7.0
 * Tweak - Important: Updated frontend templates.
 * Fix - Improved accessibility.

@@ -4,7 +4,7 @@
  *
  * @author      StoreApps
  * @since       4.28.0
- * @version     1.6.0
+ * @version     1.7.0
  * @package     woocommerce-smart-coupons/includes/
  */
 
@@ -477,8 +477,8 @@ if ( ! class_exists( 'WC_SC_Background_Upgrade' ) ) {
 			$rows = $this->get_wc_negative_order_stats_status();
 			if ( ! empty( $rows ) ) {
 				if ( ! class_exists( 'WC_SC_Order_Stats_Negative_Net_Total_Fix' ) ) {
-					if ( file_exists( trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/batches/class-wc-sc-order-stats-negative-net-total-fix.php' ) ) {
-						include_once trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/batches/class-wc-sc-order-stats-negative-net-total-fix.php';
+					if ( file_exists( WC_SC_PLUGIN_DIRPATH . 'includes/batches/class-wc-sc-order-stats-negative-net-total-fix.php' ) ) {
+						include_once WC_SC_PLUGIN_DIRPATH . 'includes/batches/class-wc-sc-order-stats-negative-net-total-fix.php';
 					}
 				}
 				if ( class_exists( 'WC_SC_Order_Stats_Negative_Net_Total_Fix' ) ) {
@@ -506,8 +506,8 @@ if ( ! class_exists( 'WC_SC_Background_Upgrade' ) ) {
 			$rows = $this->get_table_wc_smart_coupons_creation_status();
 			if ( ! empty( $rows ) ) {
 				if ( ! class_exists( 'WC_SC_Coupon_Table' ) ) {
-					if ( file_exists( trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/batches/class-wc-sc-coupon-table.php' ) ) {
-						include_once trailingslashit( WP_PLUGIN_DIR . '/' . WC_SC_PLUGIN_DIRNAME ) . 'includes/batches/class-wc-sc-coupon-table.php';
+					if ( file_exists( WC_SC_PLUGIN_DIRPATH . 'includes/batches/class-wc-sc-coupon-table.php' ) ) {
+						include_once WC_SC_PLUGIN_DIRPATH . 'includes/batches/class-wc-sc-coupon-table.php';
 					}
 				}
 				if ( class_exists( 'WC_SC_Coupon_Table' ) ) {

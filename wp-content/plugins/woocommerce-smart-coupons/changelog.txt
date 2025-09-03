@@ -1,5 +1,17 @@
 *** WooCommerce Smart Coupons Changelog ***
 
+2025.09.01 - version 9.52.0
+* New: Coupon restrictions - 'Number of orders made' to limit coupon usage based on the customer's completed orders
+* Update: Improved file inclusion method using WordPress functions
+* Update: Migrated class 'SA_WC_Compatibility_4_4' to 'SA_WC_SC_Compatibility'
+* Update: Translations
+
+2025.08.28 - version 9.51.0
+* New: Tested up to WooCommerce 10.1.2
+* Fix: Incorrect discount amount shown in admin order email
+* Fix: Improved plugin reliability by enhancing exception handling
+* Update: Translations
+
 2025.08.22 - version 9.50.0
 * New: Tested up to WooCommerce 10.1.1
 * Fix: Coupon code case sensitivity issue causing compatibility problems with other plugins

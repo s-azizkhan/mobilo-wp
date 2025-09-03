@@ -3,6 +3,7 @@
 namespace Objectiv\Plugins\Checkout;
 
 use Objectiv\Plugins\Checkout\Factories\BumpFactory;
+use Objectiv\Plugins\Checkout\Features\AbandonedCartRecovery;
 use Objectiv\Plugins\Checkout\Features\LocalPickup;
 use Objectiv\Plugins\Checkout\Managers\SettingsManager;
 use Objectiv\Plugins\Checkout\Managers\UpdatesManager;
@@ -74,6 +75,7 @@ class DatabaseUpdatesManager extends SingletonAbstract {
 			'10.1.7'  => array( $this, 'update_1017' ),
 			'10.1.8'  => array( $this, 'update_1018' ),
 			'10.2.0'  => array( $this, 'update_1020' ),
+			'10.2.6'  => array( $this, 'update_1026' ),
 			// TODO: For future updates, bifurcate pro and lite versions
 		);
 	}
@@ -1130,5 +1132,22 @@ class DatabaseUpdatesManager extends SingletonAbstract {
 		 * @since 10.2.0
 		 */
 		do_action( 'cfw_updated_to_1020' );
+	}
+
+	public function update_1026() {
+		if ( ! class_exists( '\\Objectiv\\Plugins\\Checkout\\Features\\AbandonedCartRecovery' ) ) {
+			return;
+		}
+
+		AbandonedCartRecovery::create_or_update_table();
+
+		global $wpdb;
+
+		$table_name = AbandonedCartRecovery::get_table_name();
+
+		// Use MySQL to generate hashes in bulk for better performance on large stores
+		$wpdb->query( 
+			"UPDATE {$table_name} SET cart_hash = SHA2(CONCAT(email, '|', cart), 256) WHERE status != 'abandoned' AND (cart_hash = '' OR cart_hash IS NULL)" // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		);
 	}
 }
