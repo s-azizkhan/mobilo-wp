@@ -62,6 +62,8 @@ if (!function_exists('to_ssl')) {
  */
 function mc_get_include_vat_price($price, $vatRate = 0.21)
 {
+    $price = (float) $price;
+    $vatRate = (float) $vatRate;
     return $price * (1 + $vatRate);
 }
 
