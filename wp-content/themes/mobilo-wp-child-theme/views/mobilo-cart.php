@@ -28,12 +28,13 @@ $cart_license = $cart_data['cart_license'][0] ?? [] ;
                         <div class="card product-card mobilo-product-card flex gap-5">
                             <div class="flex gap-10">
                                 <?php if (!empty($product['thumbnail'])): ?>
-                                    <img src="<?php echo esc_url($product['thumbnail']); ?>" 
+                                    <img decoding="async" src="<?php echo esc_url($product['thumbnail']); ?>" 
                                          alt="<?php echo esc_attr($product['name']); ?>" 
                                          class="w-72 h-52 object-cover rounded">
                                 <?php else: ?>
                                     <div class="w-72 h-52 bg-gray-200 rounded flex items-center justify-center">
-                                        <span class="text-gray-400"><?php _e('No image', 'mobilo'); ?></span>
+                                        <img decoding="async" alt="<?php echo esc_attr($product['name']); ?>" src="<?= MOBILO_THEME_URL ?>/assets/images/custom-card.png"  class="w-72 h-52 object-cover rounded">
+                                        <!-- <span class="text-gray-400"><?php _e('No image', 'mobilo'); ?></span> -->
                                     </div>
                                 <?php endif; ?>
                             </div>
@@ -145,8 +146,7 @@ $cart_license = $cart_data['cart_license'][0] ?? [] ;
                                         src="<?php echo esc_url($product['thumbnail']); ?>">
                                 <?php else: ?>
                                     <div class="h-28 w-28 bg-gray-200 rounded-lg flex items-center justify-center">
-                                        <img decoding="async" alt="<?php echo esc_attr($product['name']); ?>" src="<?= MOBILO_THEME_URL ?>/assets/images/custom-card.png" class="h-28 w-auto">
-                                        <!-- <span class="text-gray-400"><?php _e('No image', 'mobilo'); ?></span> -->
+                                        <span class="text-gray-400"><?php _e('No image', 'mobilo'); ?></span>
                                     </div>
                                 <?php endif; ?>
                             </div>
