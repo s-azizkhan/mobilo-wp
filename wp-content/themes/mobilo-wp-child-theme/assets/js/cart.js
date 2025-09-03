@@ -768,8 +768,48 @@ function renderCartItemsShadow(items, shadowRoot) {
 }
 
 function renderCartLicenseShadow(items, shadowRoot) {
-    const cartContainer = shadowRoot.querySelector('#mobilo-cart-license');
-    if (!cartContainer) return;
+    let cartContainer = shadowRoot.querySelector('#mobilo-cart-license');
+    if (!cartContainer) {
+        const divider = shadowRoot.querySelector('.cart-license-divider');
+        // add the lisence container after the divider
+        const html = `
+        <div class="flex justify-between items-center my-3" id="mobilo-cart-license">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center">
+                    <img src="${window.mobiloCart.themeUrl}/assets/images/team.svg" alt="plan">
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-gray-900">${items[0].name} Plan</h4>
+                    <p class="text-sm text-gray-600">${items[0].quantity} members</p>
+                    <!-- <p class="text-sm text-gray-600">Per employee, billed annually.</p> -->
+                </div>
+            </div>
+            <div class="flex items-center gap-5">
+                <div class="text-right flex flex-col gap-1">
+                    <span class="text-base font-bold text-gray-900">${window.mobiloCart.currency_symbol}${items[0].sale_price}</span>
+                    <div class="input-quantity" data-quantity-control data-item-id="plan">
+                        <button class="mobilo-quantity-btn mobilo-decrease cursor-pointer" data-action="decrease">-</button>
+                        <span class="mobilo-quantity mobilo-seat-quantity" data-quantity>${items[0].quantity}</span>
+                        <button class="mobilo-quantity-btn mobilo-increase cursor-pointer" data-action="increase">+</button>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button class="text-gray-600 hover:text-gray-900 mobilo-remove-item cursor-pointer" 
+                            data-action="remove"
+                            data-cart-item-key="${items[0].item_key}">
+                        <img src="${window.mobiloCart.themeUrl}/assets/images/delete.svg" alt="Delete" class="w-4 h-4">
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        `;
+
+        // add html after the divider
+        divider.insertAdjacentHTML('afterend', html);
+
+        return;
+    }
 
     // Check if license items exist and are not empty
     if (!items || items.length === 0) {

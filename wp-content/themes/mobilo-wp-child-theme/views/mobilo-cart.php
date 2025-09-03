@@ -255,7 +255,7 @@ $cart_license = $cart_data['cart_license'][0] ?? [] ;
                         <?php endif; ?>
                     </div>
 
-                    <hr class="border-gray-200">
+                    <hr class="border-gray-200 cart-license-divider">
 
                     <!-- Plan Information -->
                     <?php if (isset($cart_license) && !empty($cart_license)): ?>
