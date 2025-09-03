@@ -18,6 +18,8 @@ class CommonPageTemplate extends PageTemplateLoader
         add_action('woocommerce_applied_coupon', [$this, 'set_org_from_coupon'], 10);
         add_action('wp_loaded', [$this, 'empty_existing_coupon'], 18);
         add_action('wp_loaded', [$this, 'empty_cart'], 20);
+        // disable the admin bar on the frontend
+        add_filter('show_admin_bar', '__return_false');
 
     }
 
