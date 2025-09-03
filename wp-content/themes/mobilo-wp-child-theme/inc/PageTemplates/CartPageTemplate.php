@@ -20,6 +20,7 @@ class CartPageTemplate extends PageTemplateLoader
     public function init()
     {
         add_action('wp_enqueue_scripts', [$this, 'remove_smart_coupons_assets_on_cart'], 99999);
+        add_action('mc_cart_quantity_update_action', [$this, 'handle_cart_quantity_update']);
         // Action to auto apply coupons when added to cart via ajax ( self API ), fix: Auto apply coupon not working on new react theme.
         $autoApplyCouponPluginInstance = \WC_SC_Auto_Apply_Coupon::get_instance();
         add_action('woocommerce_ajax_after_added_to_cart', [$autoApplyCouponPluginInstance, 'auto_apply_coupons']);
@@ -60,5 +61,11 @@ class CartPageTemplate extends PageTemplateLoader
             wp_dequeue_script($script);
             wp_deregister_script($script);
         }
+    }
+
+    public function handle_cart_quantity_update()
+    {
+        // rearrage the cart quantity
+        PlanFeature::checkProductsInCart();
     }
 }

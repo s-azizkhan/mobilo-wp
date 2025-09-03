@@ -230,8 +230,41 @@ async function fetchCSS(url) {
 // check if mainContent is already attached to a shadow dom
 if (mainContent && !mainContent.shadowRoot) {
     var mainShadow = mainContent.attachShadow({ mode: 'open' });
-    // Apply cart CSS to dynamic cart
+
+    // Show loading state while fetching CSS
+    mainShadow.innerHTML = `
+        <style>
+            .mobilo-cart-loading {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 400px;
+                font-size: 1.25rem;
+                color: #181059;
+                background: #fff;
+            }
+            .mobilo-cart-spinner {
+                border: 4px solid #f3f3f3;
+                border-top: 4px solid #181059;
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+                animation: mobilo-spin 1s linear infinite;
+                margin-right: 12px;
+            }
+            @keyframes mobilo-spin {
+                0% { transform: rotate(0deg);}
+                100% { transform: rotate(360deg);}
+            }
+        </style>
+        <div class="mobilo-cart-loading">
+            <span class="mobilo-cart-spinner"></span>
+            <span>Loading cart...</span>
+        </div>
+    `;
+
     fetchCSS(mobiloCart.themeUrl + '/assets/dist/cart.css').then(css => {
+        // Only reveal cart after CSS is loaded
         mainShadow.innerHTML = `<style>${css}</style>${mainContent.innerHTML}`;
 
         // Initialize cart functionality inside shadow DOM
@@ -243,11 +276,15 @@ if (mainContent && !mainContent.shadowRoot) {
 function initializeShadowCart(shadowRoot) {
     // Wait for shadow DOM content to be ready
     setTimeout(() => {
-        // Re-bind all event listeners to elements inside shadow DOM
-        bindShadowEvents(shadowRoot);
 
         // Initialize cart state for shadow DOM
         initializeShadowCartState(shadowRoot);
+
+        const cartData = window.mobiloCart.cart_data;
+        // initialize cart data
+        renderCartShadow(cartData.cart_data, shadowRoot);
+        // Re-bind all event listeners to elements inside shadow DOM
+        bindShadowEvents(shadowRoot);
     }, 100);
 }
 
@@ -255,8 +292,39 @@ function initializeShadowCart(shadowRoot) {
 function bindShadowEvents(shadowRoot) {
     // Material selection
     const materialButtons = shadowRoot.querySelectorAll('[data-material]');
+
+    // Color selection
+    const colorButtons = shadowRoot.querySelectorAll('[data-color]');
+
+    // Add to cart buttons
+    const addToCartButtons = shadowRoot.querySelectorAll('.mobilo-add-to-cart');
+
+    // Quantity buttons
+    const quantityButtons = shadowRoot.querySelectorAll('.mobilo-quantity-btn');
+
+    // Remove item buttons
+    const removeButtons = shadowRoot.querySelectorAll('.mobilo-remove-item');
+
+    // Add upsell buttons
+    const upsellButtons = shadowRoot.querySelectorAll('.mobilo-add-upsell-all');
+
+    // Checkout button
+    const checkoutButtons = shadowRoot.querySelectorAll('.mobilo-checkout-btn');
+
+    // Remove all event listeners from buttons
+    [...materialButtons, ...colorButtons, ...addToCartButtons, ...quantityButtons, ...removeButtons, ...upsellButtons, ...checkoutButtons].forEach(button => {
+        // Clone the button (deep clone)
+        const clonedButton = button.cloneNode(true);
+        // Replace the original button with the clone
+        // button.replaceWith(clonedButton);
+    });
+
     materialButtons.forEach(button => {
         button.addEventListener('click', function () {
+            // check if this button has already had an event listener
+            if (button.hasAttribute('data-event-listener')) {
+                return;
+            }
             const material = this.dataset.material;
             const container = this.closest('.mobilo-product-card');
 
@@ -277,13 +345,16 @@ function bindShadowEvents(shadowRoot) {
             if (variationPrice && priceElement) {
                 priceElement.textContent = window.mobiloCart.currency_symbol + variationPrice;
             }
-        });
+            button.setAttribute('data-event-listener', 'true');
+        }, { once: true });
     });
 
-    // Color selection
-    const colorButtons = shadowRoot.querySelectorAll('[data-color]');
     colorButtons.forEach(button => {
         button.addEventListener('click', function () {
+            // check if this button has already had an event listener
+            if (button.hasAttribute('data-event-listener')) {
+                return;
+            }
             const color = this.dataset.color;
             const container = this.closest('.mobilo-product-card');
 
@@ -297,54 +368,69 @@ function bindShadowEvents(shadowRoot) {
             if (addButton) {
                 addButton.dataset.cardColor = color;
             }
-        });
+            button.setAttribute('data-event-listener', 'true');
+        }, { once: true });
     });
 
-    // Add to cart buttons
-    const addToCartButtons = shadowRoot.querySelectorAll('.mobilo-add-to-cart');
     addToCartButtons.forEach(button => {
         button.addEventListener('click', function (e) {
+            // check if this button has already had an event listener
+            if (button.hasAttribute('data-event-listener')) {
+                return;
+            }
             e.preventDefault();
             handleAddToCartShadow(e, shadowRoot);
-        });
+            button.setAttribute('data-event-listener', 'true');
+        }, { once: true });
     });
 
     // Update quantity buttons
-    const quantityButtons = shadowRoot.querySelectorAll('.mobilo-quantity-btn');
     quantityButtons.forEach(button => {
         button.addEventListener('click', function (e) {
+            // check if this button has already had an event listener
+            if (button.hasAttribute('data-event-listener')) {
+                return;
+            }
             e.preventDefault();
             handleQuantityUpdateShadow(e, shadowRoot);
-        });
+            button.setAttribute('data-event-listener', 'true');
+        }, { once: true });
     });
 
     // Remove item buttons
-    const removeButtons = shadowRoot.querySelectorAll('.mobilo-remove-item');
     removeButtons.forEach(button => {
         button.addEventListener('click', function (e) {
+            // check if this button has already had an event listener
+            if (button.hasAttribute('data-event-listener')) {
+                return;
+            }
             e.preventDefault();
             handleRemoveItemShadow(e, shadowRoot);
-        });
+            button.setAttribute('data-event-listener', 'true');
+        }, { once: true });
     });
 
     // Add upsell buttons
-    const upsellButtons = shadowRoot.querySelectorAll('.mobilo-add-upsell-all');
     upsellButtons.forEach(button => {
         button.addEventListener('click', function (e) {
+            // check if this button has already had an event listener
+            if (button.hasAttribute('data-event-listener')) {
+                return;
+            }
             e.preventDefault();
             handleAddToCartShadow(e, shadowRoot);
-        });
+            button.setAttribute('data-event-listener', 'true');
+        }, { once: true });
     });
 
     // Checkout button
-    const checkoutButtons = shadowRoot.querySelectorAll('.mobilo-checkout-btn');
-    checkoutButtons.forEach(button => {
-        button.addEventListener('click', function (e) {
-            e.preventDefault();
-            const checkoutUrl = this.dataset.checkoutUrl || '/checkout/';
-            window.location.href = checkoutUrl;
-        });
-    });
+    // checkoutButtons.forEach(button => {
+    //     button.addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         const checkoutUrl = this.dataset.checkoutUrl || '/checkout/';
+    //         window.location.href = checkoutUrl;
+    //     });
+    // });
 }
 
 // Shadow DOM specific handlers
@@ -565,8 +651,14 @@ function updateCartDisplayShadow(cartData, shadowRoot) {
 }
 
 function renderCartShadow(cartData, shadowRoot) {
+    // Check if cart is empty and update visibility
+    updateCartVisibilityShadow(cartData, shadowRoot);
+
     // Update cart items
     renderCartItemsShadow(cartData.items, shadowRoot);
+
+    // Update license
+    renderCartLicenseShadow(cartData.cart_license, shadowRoot);
 
     // Update cart totals
     renderCartTotalsShadow(cartData, shadowRoot);
@@ -576,6 +668,77 @@ function renderCartShadow(cartData, shadowRoot) {
 
     // Update cart count
     // updateCartCountShadow(cartData, shadowRoot);
+}
+
+// Add new function to handle cart visibility
+function updateCartVisibilityShadow(cartData, shadowRoot) {
+    const isEmpty = cartData.is_cart_empty ||
+        (!cartData.items ||
+            (!cartData.items.products || cartData.items.products.length === 0) &&
+            (!cartData.items.accessories || cartData.items.accessories.length === 0) &&
+            (!cartData.cart_license || cartData.cart_license.length === 0));
+
+    // Get visibility elements
+    const emptyCartSection = shadowRoot.querySelector('#mobilo-empty-cart');
+    const productsSection = shadowRoot.querySelector('#mobilo-products-section');
+    const nonEmptyCart = shadowRoot.querySelector('#mobilo-non-empty-cart');
+    const checkoutButton = shadowRoot.querySelector('.mobilo-checkout-btn');
+    // const cartNotes = shadowRoot.querySelector('.space-y-2');
+    const planCard = shadowRoot.querySelector('.plan-card');
+    const cartNotes = shadowRoot.querySelectorAll('.cart-notes');
+    if (isEmpty) {
+        // Show empty cart message
+        if (emptyCartSection) {
+            emptyCartSection.classList.remove('hidden');
+        }
+        // Hide products section and cart items
+        if (productsSection) {
+            productsSection.classList.add('hidden');
+        }
+        if (nonEmptyCart) {
+            nonEmptyCart.classList.add('hidden');
+        }
+        // Disable checkout button when cart is empty
+        if (checkoutButton) {
+            checkoutButton.disabled = true;
+            checkoutButton.classList.add('opacity-50', 'cursor-not-allowed');
+            checkoutButton.classList.remove('hover:bg-blue-700');
+        }
+        // Hide cart notes when cart is empty
+        // if (cartNotes) {
+        //     cartNotes.style.display = 'none';
+        // }
+        // Hide plan card when cart is empty
+        // if (planCard) {
+        //     planCard.style.display = 'none';
+        // }
+    } else {
+        // Hide empty cart message
+        if (emptyCartSection) {
+            emptyCartSection.classList.add('hidden');
+        }
+        // Show products section and cart items
+        if (productsSection) {
+            productsSection.classList.remove('hidden');
+        }
+        if (nonEmptyCart) {
+            nonEmptyCart.classList.remove('hidden');
+        }
+        // Enable checkout button when cart has items
+        if (checkoutButton) {
+            checkoutButton.disabled = false;
+            checkoutButton.classList.remove('opacity-50', 'cursor-not-allowed');
+            checkoutButton.classList.add('hover:bg-blue-700');
+        }
+        // Show cart notes when cart has items
+        // if (cartNotes) {
+        //     cartNotes.style.display = 'block';
+        // }
+        // Show plan card when cart has items
+        // if (planCard) {
+        //     planCard.style.display = 'block';
+        // }
+    }
 }
 
 function renderCartItemsShadow(items, shadowRoot) {
@@ -602,6 +765,55 @@ function renderCartItemsShadow(items, shadowRoot) {
 
     // Re-bind events for new items
     bindShadowEvents(shadowRoot);
+}
+
+function renderCartLicenseShadow(items, shadowRoot) {
+    const cartContainer = shadowRoot.querySelector('#mobilo-cart-license');
+    if (!cartContainer) return;
+
+    // Check if license items exist and are not empty
+    if (!items || items.length === 0) {
+        cartContainer.innerHTML = '';
+        return;
+    }
+
+    let html = '';
+    html += renderCartLicenseItemShadow(items[0]); // Assuming single license item
+    cartContainer.innerHTML = html;
+
+    // Re-bind events for new items
+    bindShadowEvents(shadowRoot);
+}
+
+function renderCartLicenseItemShadow(item) {
+    return `
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center">
+                                    <img src="${window.mobiloCart.themeUrl}/assets/images/team.svg" alt="plan">
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-900">${item.name} Plan</h4>
+                                    <p class="text-sm text-gray-600">${item.quantity} members</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-5">
+                                <div class="text-right flex flex-col gap-1">
+                                    <span class="text-base font-bold text-gray-900">${window.mobiloCart.currency_symbol}${item.sale_price}</span>
+                                    <div class="input-quantity" data-quantity-control data-item-id="plan">
+                                        <button class="mobilo-quantity-btn mobilo-decrease cursor-pointer" data-action="decrease">-</button>
+                                        <span class="mobilo-quantity mobilo-seat-quantity" data-quantity>${item.quantity}</span>
+                                        <button class="mobilo-quantity-btn mobilo-increase cursor-pointer" data-action="increase">+</button>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <button class="text-gray-600 hover:text-gray-900 mobilo-remove-item cursor-pointer" 
+                                            data-action="remove"
+                                            data-cart-item-key="${item.item_key}">
+                                        <img src="${window.mobiloCart.themeUrl}/assets/images/delete.svg" alt="Delete" class="w-4 h-4">
+                                    </button>
+                                </div>
+                            </div>
+    `;
 }
 
 function renderCartAccessoriesItemShadow(item) {
@@ -660,12 +872,23 @@ function renderCartItemShadow(item) {
 function renderCartTotalsShadow(cartData, shadowRoot) {
     const totalElement = shadowRoot.querySelector('.mobilo-cart-total');
     if (totalElement) {
-        totalElement.textContent = `${window.mobiloCart.currency_symbol}${cartData.total}`;
+        totalElement.textContent = `${window.mobiloCart.currency_symbol}${cartData.total || '0.00'}`;
     }
 
     const oneTimeElement = shadowRoot.querySelector('.mobilo-one-time');
-    if (oneTimeElement && cartData.one_time) {
+    if (oneTimeElement && cartData.one_time && cartData.one_time !== '0.00') {
         oneTimeElement.textContent = `${window.mobiloCart.currency_symbol}${cartData.one_time}`;
+        // Show the one-time pricing info
+        const oneTimeContainer = oneTimeElement.closest('.space-y-3');
+        if (oneTimeContainer) {
+            oneTimeContainer.style.display = 'block';
+        }
+    } else {
+        // Hide one-time pricing info if not applicable
+        const oneTimeContainer = shadowRoot.querySelector('.space-y-3');
+        if (oneTimeContainer && oneTimeContainer.querySelector('.mobilo-one-time')) {
+            oneTimeContainer.style.display = 'none';
+        }
     }
 
     const perYearElement = shadowRoot.querySelector('.mobilo-per-year');
@@ -677,10 +900,22 @@ function renderCartTotalsShadow(cartData, shadowRoot) {
 function updateProductStatesShadow(cartData, shadowRoot) {
     // Update add to cart buttons based on what's in cart
     const addToCartButtons = shadowRoot.querySelectorAll('.mobilo-add-to-cart');
+    const upsellButtons = shadowRoot.querySelectorAll('.mobilo-add-upsell-all');
+
+    // Check if cart has any items
+    const hasProducts = cartData.items && cartData.items.products && cartData.items.products.length > 0;
+    const hasAccessories = cartData.items && cartData.items.accessories && cartData.items.accessories.length > 0;
+    const hasLicense = cartData.cart_license && cartData.cart_license.length > 0;
+    const hasItems = hasProducts || hasAccessories || hasLicense;
+
     addToCartButtons.forEach(button => {
         const productId = button.dataset.productId;
-        const isInCart = cartData.items.products.some(item => item.id == productId) ||
-            cartData.items.accessories.some(item => item.id == productId);
+        let isInCart = false;
+
+        if (hasItems) {
+            isInCart = (cartData.items.products && cartData.items.products.some(item => item.id == productId)) ||
+                (cartData.items.accessories && cartData.items.accessories.some(item => item.id == productId));
+        }
 
         if (isInCart) {
             button.textContent = 'In Cart';
@@ -689,6 +924,29 @@ function updateProductStatesShadow(cartData, shadowRoot) {
             button.setAttribute('disabled', 'disabled');
         } else {
             button.textContent = 'Add';
+            button.classList.remove('bg-gray-500');
+            button.classList.add('bg-blue-600', 'hover:bg-blue-700');
+            button.removeAttribute('disabled');
+        }
+    });
+
+    // Update upsell buttons
+    upsellButtons.forEach(button => {
+        const productId = button.dataset.productId;
+        let isInCart = false;
+
+        if (hasItems) {
+            isInCart = (cartData.items.products && cartData.items.products.some(item => item.id == productId)) ||
+                (cartData.items.accessories && cartData.items.accessories.some(item => item.id == productId));
+        }
+
+        if (isInCart) {
+            button.textContent = 'In cart';
+            button.classList.add('bg-gray-500');
+            button.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+            button.setAttribute('disabled', 'disabled');
+        } else {
+            button.textContent = 'Add for all members';
             button.classList.remove('bg-gray-500');
             button.classList.add('bg-blue-600', 'hover:bg-blue-700');
             button.removeAttribute('disabled');

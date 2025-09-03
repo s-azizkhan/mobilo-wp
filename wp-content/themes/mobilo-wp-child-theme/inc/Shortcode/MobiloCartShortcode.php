@@ -14,11 +14,14 @@ class MobiloCartShortcode
     private $currency_symbol;
     private $plan;
 
+    private $cart_data;
+
     public function init($plan)
     {
         $this->currency = get_woocommerce_currency();
         $this->currency_symbol = get_woocommerce_currency_symbol($this->currency);
         $this->plan = $plan;
+        $this->cart_data = $this->build_view_data();
         add_shortcode('mobilo_cart', [$this, 'render']);
         add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts']);
     }
@@ -59,6 +62,7 @@ class MobiloCartShortcode
                 'currency' => $this->currency,
                 'currency_symbol' => $this->currency_symbol,
                 'themeUrl' => MOBILO_THEME_URL,
+                'cart_data' => $this->cart_data,
                 'strings' => [
                     'addToCart' => __('Add to Cart', 'mobilo'),
                     'removeFromCart' => __('Remove from Cart', 'mobilo'),
@@ -73,7 +77,7 @@ class MobiloCartShortcode
 
     public function render()
     {
-        $cartData = $this->build_view_data();
+        $cartData = $this->cart_data;
         ob_start();
         include_once MOBILO_THEME_PATH . '/views/mobilo-cart.php';
         return ob_get_clean();
@@ -82,6 +86,7 @@ class MobiloCartShortcode
     private function build_view_data()
     {
         $products = $this->get_products_by_sku();
+        do_action('mc_cart_quantity_update_action');
         $cart_model = new CartModel();
         $cart_data = $cart_model->get_new_plan_cart();
 
@@ -92,7 +97,7 @@ class MobiloCartShortcode
             'cart_count' => WC()->cart->get_cart_contents_count(),
             'currency' => $this->currency,
             'currency_symbol' => $this->currency_symbol,
-            'plan' => $this->plan
+            'plan' => $this->plan,
         ];
     }
 
@@ -170,7 +175,8 @@ class MobiloCartShortcode
             }
 
 
-            $product['in_cart'] = mc_is_product_in_cart($wc_product->get_id());
+            // $product['in_cart'] = mc_is_product_in_cart($wc_product->get_id());
+            $product['in_cart'] = false; // TODO: note: is is already handled in cart.js
 
             // Get product thumbnail
             if (has_post_thumbnail($product_id)) {
@@ -222,7 +228,8 @@ class MobiloCartShortcode
                 'price' => mc_format_price($salePrice),
                 'sku' => $wc_product->get_sku(),
                 'type' => $wc_product->get_type(),
-                'in_cart' => mc_is_product_in_cart($wc_product->get_id()),
+                // 'in_cart' => mc_is_product_in_cart($wc_product->get_id()),
+                'in_cart' => false, // TODO: note: is is already handled in cart.js
             ];
 
             // Get product thumbnail

@@ -52,7 +52,7 @@ class CartItemModel implements CartItemInterface
 
     protected function get_cart_item_data(array $cart_item): array
     {
-        $item_data = array();
+        $item_data = [];
 
         // Variation values are shown only if they are not found in the title as of 3.0.
         // This is because variation titles display the attributes.

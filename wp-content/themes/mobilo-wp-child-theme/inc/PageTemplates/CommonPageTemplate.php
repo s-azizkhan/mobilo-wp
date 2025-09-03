@@ -19,7 +19,9 @@ class CommonPageTemplate extends PageTemplateLoader
         add_action('wp_loaded', [$this, 'empty_existing_coupon'], 18);
         add_action('wp_loaded', [$this, 'empty_cart'], 20);
         // disable the admin bar on the frontend
-        add_filter('show_admin_bar', '__return_false');
+        if (env('WP_ENV') === 'prod') {
+            add_filter('show_admin_bar', '__return_false');
+        }
 
     }
 

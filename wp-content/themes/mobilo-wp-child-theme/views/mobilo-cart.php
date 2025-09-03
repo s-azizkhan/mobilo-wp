@@ -11,6 +11,7 @@ $cart_data = $cartData['cart_data'] ?? [];
 $currency = $cartData['currency'] ?? 'USD';
 $currency_symbol = $cartData['currency_symbol'] ?? '$';
 $plan = $cartData['plan'] ?? [];
+$cart_license = $cart_data['cart_license'][0] ?? [] ;
 ?>
 
 <!-- Main Content -->
@@ -133,7 +134,9 @@ $plan = $cartData['plan'] ?? [];
                     <?php foreach ($upsell_products as $product): ?>
                         <?php 
                         // Check if this upsell product is already in cart
-                        $is_in_cart = mc_is_product_in_cart($product['id']);
+                        // $is_in_cart = mc_is_product_in_cart($product['id']);
+                        // TODO: note: is is already handled in cart.js
+                        $is_in_cart = false;
                         ?>
                         <div class="bg-white p-6 rounded-lg shadow-sm">
                             <div class="flex justify-start mb-4">
@@ -172,40 +175,74 @@ $plan = $cartData['plan'] ?? [];
         <!-- Right Column - Cart Summary -->
         <div class="cart-card">
             <div class="card space-y-5">
+                <!-- Empty Cart Section -->
+                <div class="flex items-center gap-3 <?php echo $cart_data['is_cart_empty'] ? '' : 'hidden'; ?>" id="mobilo-empty-cart">
+                    <div class="w-12 h-12 rounded-full flex items-center justify-center">
+                        <img src="<?= MOBILO_THEME_URL ?>/assets/images/empty-cart.svg" alt="Card" class="">
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-600 m-0">Please select a card to continue.</p>
+                    </div>
+                </div>
                 <!-- Products Section -->
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3 <?php echo $cart_data['is_cart_empty'] ? 'hidden' : ''; ?>" id="mobilo-products-section">
                     <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center">
                         <img src="<?= MOBILO_THEME_URL ?>/assets/images/card.svg" alt="Card" class="w-6 h-6">
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-gray-900 m-0"><?php echo esc_html($cart_data['items']['title'] ?? __('Products', 'mobilo')); ?></h3>
-                        <p class="text-sm text-gray-600 m-0"><?php echo esc_html($cart_data['items']['sub_title'] ?? __('Cards & Accessories', 'mobilo')); ?></p>
+                        <h3 class="text-xl font-bold text-gray-900 m-0">Products</h3>
+                        <p class="text-sm text-gray-600 m-0">Cards & Accessories</p>
                     </div>
                 </div>
 
-                <!-- Cart Items -->
-                <div class="space-y-5 mobilo-cart-items">
-                    <?php if (!empty($cart_data['items']['products'])): ?>
-                        <?php foreach ($cart_data['items']['products'] as $item): ?>
-                            <div class="flex justify-between items-center mb-3 mobilo-cart-item" data-cart-item-key="<?php echo esc_attr($item['item_key']); ?>">
-                                <div class="flex items-center gap-3">
-                                    <div>
-                                        <h4 class="text-base font-bold text-gray-900 m-0"><?php echo esc_html($item['name']); ?></h4>
-                                        <?php if (!empty($item['card_color'])): ?>
-                                            <p class="text-sm text-gray-600 m-0"><?php echo esc_html($item['card_color']); ?></p>
-                                        <?php endif; ?>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-5">
-                                    <div class="text-right flex flex-col gap-1">
-                                        <span class="text-base font-bold text-gray-900 m-0"><?php echo $currency_symbol; ?><?php echo esc_html($item['subtotal']); ?></span>
-                                        <div class="input-quantity" data-quantity-control data-item-id="<?php echo esc_attr($item['item_key']); ?>">
-                                            <button class="mobilo-quantity-btn mobilo-decrease cursor-pointer" data-action="decrease">-</button>
-                                            <span class="mobilo-quantity" data-quantity><?php echo esc_html($item['quantity']); ?></span>
-                                            <button class="mobilo-quantity-btn mobilo-increase cursor-pointer" data-action="increase">+</button>
+                <div class="non-empty-cart <?php echo $cart_data['is_cart_empty'] ? 'hidden' : ''; ?>" id="mobilo-non-empty-cart">
+                    <!-- Cart Items -->
+                    <div class="space-y-5 mobilo-cart-items">
+                        <?php if (!empty($cart_data['items']['products'])): ?>
+                            <?php foreach ($cart_data['items']['products'] as $item): ?>
+                                <div class="flex justify-between items-center mb-3 mobilo-cart-item" data-cart-item-key="<?php echo esc_attr($item['item_key']); ?>">
+                                    <div class="flex items-center gap-3">
+                                        <div>
+                                            <h4 class="text-base font-bold text-gray-900 m-0"><?php echo esc_html($item['name']); ?></h4>
+                                            <?php if (!empty($item['card_color'])): ?>
+                                                <p class="text-sm text-gray-600 m-0"><?php echo esc_html($item['card_color']); ?></p>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
+                                    <div class="flex items-center gap-5">
+                                        <div class="text-right flex flex-col gap-1">
+                                            <span class="text-base font-bold text-gray-900 m-0"><?php echo $currency_symbol; ?><?php echo esc_html($item['subtotal']); ?></span>
+                                            <div class="input-quantity" data-quantity-control data-item-id="<?php echo esc_attr($item['item_key']); ?>">
+                                                <button class="mobilo-quantity-btn mobilo-decrease cursor-pointer" data-action="decrease">-</button>
+                                                <span class="mobilo-quantity" data-quantity><?php echo esc_html($item['quantity']); ?></span>
+                                                <button class="mobilo-quantity-btn mobilo-increase cursor-pointer" data-action="increase">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <button class="text-gray-600 hover:text-gray-900 mobilo-remove-item cursor-pointer" 
+                                                    data-action="remove"
+                                                    data-cart-item-key="<?php echo esc_attr($item['item_key']); ?>">
+                                                <img src="<?= MOBILO_THEME_URL ?>/assets/images/delete.svg" alt="Delete" class="w-4 h-4">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                        
+                        <?php if (!empty($cart_data['items']['accessories'])): ?>
+                            <?php foreach ($cart_data['items']['accessories'] as $item): ?>
+                                <div class="flex justify-between items-center mb-3 mobilo-cart-item" data-cart-item-key="<?php echo esc_attr($item['item_key']); ?>">
                                     <div class="flex items-center gap-3">
+                                        <div>
+                                            <h4 class="text-base font-bold text-gray-900 m-0"><?php echo esc_html($item['name']); ?></h4>
+                                            <p class="text-sm text-gray-600 m-0"><?php echo esc_html($item['quantity']); ?> units</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-5">
+                                        <div class="text-right">
+                                            <span class="text-base font-bold text-gray-900"><?php echo $currency_symbol; ?><?php echo esc_html($item['subtotal']); ?></span>
+                                        </div>
                                         <button class="text-gray-600 hover:text-gray-900 mobilo-remove-item cursor-pointer" 
                                                 data-action="remove"
                                                 data-cart-item-key="<?php echo esc_attr($item['item_key']); ?>">
@@ -213,67 +250,61 @@ $plan = $cartData['plan'] ?? [];
                                         </button>
                                     </div>
                                 </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+
+                    <hr class="border-gray-200">
+
+                    <!-- Plan Information -->
+                    <?php if (isset($cart_license) && !empty($cart_license)): ?>
+                        <div class="flex justify-between items-center my-3" id="mobilo-cart-license">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center">
+                                    <img src="<?= MOBILO_THEME_URL ?>/assets/images/team.svg" alt="plan">
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-900"><?php echo esc_html($cart_license['name']); ?> Plan</h4>
+                                    <p class="text-sm text-gray-600"><?php echo esc_html($cart_license['quantity'] ?? 1); ?> members</p>
+                                    <!-- <p class="text-sm text-gray-600">Per employee, billed annually.</p> -->
+                                </div>
                             </div>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
-                    
-                    <?php if (!empty($cart_data['items']['accessories'])): ?>
-                        <?php foreach ($cart_data['items']['accessories'] as $item): ?>
-                            <div class="flex justify-between items-center mb-3 mobilo-cart-item" data-cart-item-key="<?php echo esc_attr($item['item_key']); ?>">
-                                <div class="flex items-center gap-3">
-                                    <div>
-                                        <h4 class="text-base font-bold text-gray-900 m-0"><?php echo esc_html($item['name']); ?></h4>
-                                        <p class="text-sm text-gray-600 m-0"><?php echo esc_html($item['quantity']); ?> units</p>
+                            <div class="flex items-center gap-5">
+                                <div class="text-right flex flex-col gap-1">
+                                    <span class="text-base font-bold text-gray-900"><?php echo $currency_symbol; ?><?php echo esc_html($cart_license['sale_price']); ?></span>
+                                    <div class="input-quantity" data-quantity-control data-item-id="plan">
+                                        <button class="mobilo-quantity-btn mobilo-decrease cursor-pointer" data-action="decrease">-</button>
+                                        <span class="mobilo-quantity mobilo-seat-quantity" data-quantity><?php echo esc_html($cart_license['quantity'] ?? 1); ?></span>
+                                        <button class="mobilo-quantity-btn mobilo-increase cursor-pointer" data-action="increase">+</button>
                                     </div>
                                 </div>
-                                <div class="flex items-center gap-5">
-                                    <div class="text-right">
-                                        <span class="text-base font-bold text-gray-900"><?php echo $currency_symbol; ?><?php echo esc_html($item['subtotal']); ?></span>
-                                    </div>
+                                <div class="flex items-center gap-3">
                                     <button class="text-gray-600 hover:text-gray-900 mobilo-remove-item cursor-pointer" 
                                             data-action="remove"
-                                            data-cart-item-key="<?php echo esc_attr($item['item_key']); ?>">
+                                            data-cart-item-key="<?php echo esc_attr($cart_license['item_key']); ?>">
                                         <img src="<?= MOBILO_THEME_URL ?>/assets/images/delete.svg" alt="Delete" class="w-4 h-4">
                                     </button>
                                 </div>
                             </div>
-                        <?php endforeach; ?>
+                            
+                        </div>
                     <?php endif; ?>
+
                 </div>
-
-                <hr class="border-gray-200">
-
-                <!-- Plan Information -->
-                <?php if (isset($plan) && !empty($plan)): ?>
-                    <div class="flex justify-between items-center">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center">
-                                <img src="<?= MOBILO_THEME_URL ?>/assets/images/team.svg" alt="plan">
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-gray-900 m-0"><?php echo esc_html($plan['title']); ?></h4>
-                                <p class="text-sm text-gray-600 m-0"><?php echo esc_html($plan['short_description']); ?></p>
-                            </div>
-                        </div>
-                        <div class="text-right">
-                            <span class="text-base font-bold text-gray-900 m-0"><?php echo $currency_symbol; ?><?php echo esc_html($plan['sale_price']); ?>
-                            <span class="text-sm text-gray-600">/m/seat</span>
-                        </span>
-                        </div>
-                    </div>
-                <?php endif; ?>
-
+                
                 <hr class="border-gray-200">
 
                 <!-- Order Total -->
                 <div class="space-y-4">
-                    <div class="flex justify-between items-center m-0">
+                    <div class="flex justify-between items-center">
                         <h3 class="text-base font-bold text-gray-900"><?php _e('Order Total', 'mobilo'); ?></h3>
                         <span class="text-xl font-bold text-gray-900 mobilo-cart-total" data-cart-total><?php echo $currency_symbol; ?><?php echo esc_html($cart_data['total'] ?? '0.00'); ?></span>
                     </div>
 
                     <div class="space-y-3">
-                        <a href="<?php echo esc_url(wc_get_checkout_url()); ?>">    
+                        <a href="<?php echo esc_url(wc_get_checkout_url()); ?>" 
+                        <?php echo $cart_data['is_cart_empty'] ? 'disabled="disabled"' : ''; ?>
+                        >    
                         <button class="w-full btn-primary text-lg py-4 px-8 h-14 mobilo-checkout-btn" 
                                 data-action="checkout"
                                 data-checkout-url="<?php echo esc_url(wc_get_checkout_url()); ?>">
@@ -282,7 +313,7 @@ $plan = $cartData['plan'] ?? [];
                         </a>
 
                         <?php if (isset($cart_data['one_time']) && $cart_data['one_time'] !== '0.00'): ?>
-                            <p class="text-sm text-gray-600 text-center">
+                            <p class="text-sm text-gray-600 text-center mt-3">
                                 (<span class="mobilo-one-time"><?php echo $currency_symbol; ?><?php echo esc_html($cart_data['one_time']); ?></span> <?php _e('one-time', 'mobilo'); ?>, 
                                 <span class="mobilo-per-year"><?php echo $currency_symbol; ?><?php echo esc_html($cart_data['per_year'] ?? '0.00'); ?></span> <?php _e('per year', 'mobilo'); ?>)
                             </p>
@@ -291,7 +322,7 @@ $plan = $cartData['plan'] ?? [];
 
                     <!-- Info Cards -->
                     <?php if (!empty($cart_data['cart_notes'])): ?>
-                        <div class="space-y-2">
+                        <div class="space-y-2 cart-notes">
                             <?php foreach ($cart_data['cart_notes'] as $note_key => $note): ?>
                                 <div class="bg-gray-100 rounded px-4 py-3 flex items-center gap-2">
                                     <img src="<?= MOBILO_THEME_URL ?>/assets/images/<?php echo ($note_key === 'shipping') ? 'shipping' : 'pencil-ruler'; ?>.svg" 
@@ -301,7 +332,7 @@ $plan = $cartData['plan'] ?? [];
                             <?php endforeach; ?>
                         </div>
                     <?php else: ?>
-                        <div class="space-y-2">
+                        <div class="space-y-2 cart-notes">
                             <div class="bg-gray-100 rounded px-4 py-3 flex items-center gap-2">
                                 <img src="<?= MOBILO_THEME_URL ?>/assets/images/shipping.svg" alt="Shipping" class="w-5 h-5">
                                 <span class="text-sm text-gray-600"><?php _e('Shipping will be calculated at checkout', 'mobilo'); ?></span>
@@ -327,7 +358,10 @@ $plan = $cartData['plan'] ?? [];
                             </div>
                             <p class="text-sm text-gray-600 m-0">1 <?php _e('Per member, billed annually.', 'mobilo'); ?></p>
                         </div>
-                        <div class="mt-4 flex items-center justify-center gap-2">
+                        <div class="mt-4 flex flex-col items-center justify-center gap-2">
+                            <?php if ($plan['trial_text']): ?>
+                                <span class="text-sm font-bold text-gray-900"><?php echo $plan['trial_text']; ?></span>
+                            <?php endif; ?>
                             <span class="text-sm text-gray-900 m-0"><?php echo $plan['feature_tagline'] ?? 'All Mobilo features'; ?></span>
                         </div>
                     </div>

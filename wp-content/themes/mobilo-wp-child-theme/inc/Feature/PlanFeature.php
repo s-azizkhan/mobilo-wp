@@ -395,14 +395,16 @@ class PlanFeature extends BaseFeature
             }
 
             $billing_cycle = "mo";
-            $feature_tagline = '<strong style="color: #50A371;">All</strong> Mobilo features';
-
+            $feature_tagline = $sku == 'MCP_PRO' ? '<strong style="color: #50A371;">First year FREE</strong> with a physical card' : '<strong style="color: #50A371;">All</strong> Mobilo features';
+            $trial_length = $product->get_meta('_subscription_trial_length') ?? 0;
+            $trial_text = "{$trial_length}-Day Free Trial";
             $plan = [
                 'id' => $product->get_id(),
                 'sku' => $product->get_sku(),
                 'title' => $product->get_title(),
                 'price' => mc_format_price($regularPrice),
                 'sale_price' => mc_format_price($salePrice),
+                'trial_text' => $trial_text,
                 'billing_cycle' => $billing_cycle,
                 'short_description' => $short_desc,
                 'feature_tagline' => $feature_tagline,

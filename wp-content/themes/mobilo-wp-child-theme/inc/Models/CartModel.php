@@ -28,6 +28,7 @@ class CartModel extends WC_Cart
      * @var float The total price of yearly subscription items.
      */
     protected $yearly_price = 0;
+    protected $is_cart_empty = false;
 
     public $total_license = 0;
     public $total_card = 0;
@@ -41,6 +42,7 @@ class CartModel extends WC_Cart
     public function __construct()
     {
         global $woocommerce;
+        $this->is_cart_empty = $woocommerce->cart->is_empty();
         $cart_items = $woocommerce->cart->get_cart_contents();
 
         foreach ($cart_items as $key => $cart_item) {
@@ -270,7 +272,11 @@ class CartModel extends WC_Cart
 
                 // note: one subscription allowed in a cart
                 $total_license += $cart_item['quantity'];
-                $subtotal_license_price += $itemSubtotal ?: $cart_item['subtotal'];
+                $license_price = $itemSubtotal ?: $cart_item['subtotal'];
+                if ($license_price === '0.00') {
+                    $license_price = $cart_item['sale_price'] * $cart_item['quantity'];
+                }
+                $subtotal_license_price += $license_price;
 
                 unset($cart_item['raw_item']);
                 $cart_license[] = $cart_item;
@@ -316,6 +322,7 @@ class CartModel extends WC_Cart
         }
 
         $res = [
+            'is_cart_empty' => $this->is_cart_empty,
             'items' => $cart_cards,
             'total_license' => $total_license,
             'subtotal_license_price' => $subtotal_license_price,
