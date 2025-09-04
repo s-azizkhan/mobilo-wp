@@ -311,6 +311,9 @@ function bindShadowEvents(shadowRoot) {
     // Checkout button
     const checkoutButtons = shadowRoot.querySelectorAll('.mobilo-checkout-btn');
 
+    // Update plan quantity buttons
+    const updatePlanQuantityButtons = shadowRoot.querySelectorAll('.mobilo-update-plan-quantity');
+
     // Remove all event listeners from buttons
     [...materialButtons, ...colorButtons, ...addToCartButtons, ...quantityButtons, ...removeButtons, ...upsellButtons, ...checkoutButtons].forEach(button => {
         // Clone the button (deep clone)
@@ -423,6 +426,18 @@ function bindShadowEvents(shadowRoot) {
         }, { once: true });
     });
 
+    // Update plan quantity buttons
+    updatePlanQuantityButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+            if (button.hasAttribute('data-event-listener')) {
+                return;
+            }
+            e.preventDefault();
+            handleUpdatePlanShadow(e, shadowRoot);
+            button.setAttribute('data-event-listener', 'true');
+        }, { once: true });
+    });
+
     // Checkout button
     // checkoutButtons.forEach(button => {
     //     button.addEventListener('click', function (e) {
@@ -483,6 +498,40 @@ function handleAddToCartShadow(e, shadowRoot) {
         })
         .finally(() => {
             setButtonLoadingShadow(button, false);
+        });
+}
+
+function handleUpdatePlanShadow(e, shadowRoot) {
+    const button = e.currentTarget;
+    const action = button.dataset.action;
+    updateCartPlanShadow(action, shadowRoot);
+}
+function updateCartPlanShadow(action, shadowRoot) {
+    const data = {
+        action: window.mobiloCart.actions.update_cart_plan,
+        cart_action: action,
+        _ajaxNonce: window.mobiloCart.nonce
+    };
+
+    fetch(window.mobiloCart.ajaxUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(data)
+    })
+        .then(response => response.json())
+        .then(response => {
+            if (response.success) {
+                updateCartDisplayShadow(response.cart_data, shadowRoot);
+                window.showMessage(response.message, 'success');
+            } else {
+                window.showMessage(response.data || 'Failed to update cart', 'error');
+            }
+        })
+        .catch(error => {
+            window.showMessage('An error occurred while updating cart', 'error');
+            console.error('Update cart error:', error);
         });
 }
 
@@ -840,9 +889,9 @@ function renderCartLicenseItemShadow(item) {
                                 <div class="text-right flex flex-col gap-1">
                                     <span class="text-base font-bold text-gray-900">${window.mobiloCart.currency_symbol}${item.sale_price}</span>
                                     <div class="input-quantity" data-quantity-control data-item-id="plan">
-                                        <button class="mobilo-quantity-btn mobilo-decrease cursor-pointer" data-action="decrease">-</button>
+                                        <button class="mobilo-quantity-btn mobilo-update-plan-quantity cursor-pointer" data-action="decrease">-</button>
                                         <span class="mobilo-quantity mobilo-seat-quantity" data-quantity>${item.quantity}</span>
-                                        <button class="mobilo-quantity-btn mobilo-increase cursor-pointer" data-action="increase">+</button>
+                                        <button class="mobilo-quantity-btn mobilo-update-plan-quantity cursor-pointer" data-action="increase">+</button>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-3">

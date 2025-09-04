@@ -313,8 +313,12 @@ function mc_get_cookie($key, $default = '')
     return $data;
 }
 
-function mc_set_cookie($key, $val = '', $ttl = 2147483647)
+function mc_set_cookie($key, $val = '', $ttl = 0)
 {
+    if ($ttl == 0) {
+        $ttl = time() + MINUTE_IN_SECONDS * 10;
+    }
     setcookie($key, $val, $ttl, '/');
+    $_COOKIE[$key] = $val;
     return true;
 }

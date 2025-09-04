@@ -26,7 +26,7 @@ class CartPlanUpdateAction extends MobiloAjaxAction
         if (!$plan_sku) {
             return $this->errorResponse('invalid_plan_sku', 'Invalid plan SKU', [], 400);
         }
-        $action = $_POST['action'] ?? 'increment';
+        $action = $_POST['cart_action'] ?? 'increment';
         // get plan product
         $plan_id = wc_get_product_id_by_sku($plan_sku);
         if (!$plan_id) {
@@ -63,10 +63,10 @@ class CartPlanUpdateAction extends MobiloAjaxAction
                 $msg = "Plan removed successfully";
             } else {
                 $new_qty = $plan_cart_item['quantity'];
-                if ($action == 'increment') {
+                if ($action == 'increase') {
                     $new_qty += 1;
                 } else {
-                    $new_qty -= $plan_cart_item['quantity'];
+                    $new_qty -= 1;
                 }
                 $result = $cart->set_quantity($cart_item_key, $new_qty);
                 if (!$result) {

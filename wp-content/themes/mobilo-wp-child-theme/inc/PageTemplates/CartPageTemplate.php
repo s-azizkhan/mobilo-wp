@@ -70,13 +70,19 @@ class CartPageTemplate extends PageTemplateLoader
     }
     public static function mark_plan_manual_updated()
     {
+        global $is_manual_plan_updated;
+        $is_manual_plan_updated = true;
         $cookie_key = MOBILO_PREFIX . 'manual_plan_update';
         // set cookie for 10 min
-        mc_set_cookie($cookie_key, 1, MINUTE_IN_SECONDS * 10);
+        mc_set_cookie($cookie_key, 1, time() + MINUTE_IN_SECONDS * 10);
     }
 
     public static function is_plan_manual_updated()
     {
+        global $is_manual_plan_updated;
+        if (isset($is_manual_plan_updated) && $is_manual_plan_updated) {
+            return $is_manual_plan_updated;
+        }
         $cookie_key = MOBILO_PREFIX . 'manual_plan_update';
         $res = mc_get_cookie($cookie_key, 0);
         return $res == 1;

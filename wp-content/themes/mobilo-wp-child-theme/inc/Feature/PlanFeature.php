@@ -460,7 +460,7 @@ class PlanFeature extends BaseFeature
 
         // TODO: fix Warning: Cannot modify header information - headers already
         // Set cookie with never expiry
-        setcookie(self::$userPlanMetaKey, $sanitizedSku, 2147483647, '/');
+        mc_set_cookie(self::$userPlanMetaKey, $sanitizedSku, time() + DAY_IN_SECONDS * 30);
 
         // Update global variable
         global $lwmc_chosen_plan_sku;

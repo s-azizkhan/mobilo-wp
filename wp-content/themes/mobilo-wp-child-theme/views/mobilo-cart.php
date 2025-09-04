@@ -265,7 +265,9 @@ $cart_license = $cart_data['cart_license'][0] ?? [] ;
                                     <img src="<?= MOBILO_THEME_URL ?>/assets/images/team.svg" alt="plan">
                                 </div>
                                 <div>
-                                    <h4 class="text-xl font-bold text-gray-900"><?php echo esc_html($cart_license['name']); ?> Plan</h4>
+                                    <h4 class="text-xl font-bold text-gray-900">
+                                        <?php echo esc_html($cart_license['name']); ?> Plan
+                                    </h4>
                                     <p class="text-sm text-gray-600"><?php echo esc_html($cart_license['quantity'] ?? 1); ?> members</p>
                                     <!-- <p class="text-sm text-gray-600">Per employee, billed annually.</p> -->
                                 </div>
@@ -274,9 +276,9 @@ $cart_license = $cart_data['cart_license'][0] ?? [] ;
                                 <div class="text-right flex flex-col gap-1">
                                     <span class="text-base font-bold text-gray-900"><?php echo $currency_symbol; ?><?php echo esc_html($cart_license['sale_price']); ?></span>
                                     <div class="input-quantity" data-quantity-control data-item-id="plan">
-                                        <button class="mobilo-quantity-btn mobilo-decrease cursor-pointer" data-action="decrease">-</button>
+                                        <button class="mobilo-quantity-btn mobilo-plan-update-quantity cursor-pointer" data-action="decrease">-</button>
                                         <span class="mobilo-quantity mobilo-seat-quantity" data-quantity><?php echo esc_html($cart_license['quantity'] ?? 1); ?></span>
-                                        <button class="mobilo-quantity-btn mobilo-increase cursor-pointer" data-action="increase">+</button>
+                                        <button class="mobilo-quantity-btn mobilo-plan-update-quantity cursor-pointer" data-action="increase">+</button>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-3">
