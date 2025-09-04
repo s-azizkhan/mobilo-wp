@@ -2,7 +2,6 @@
 
 namespace Mobilo\WpTheme\Shortcode;
 
-use Mobilo\WpTheme\Feature\PlanFeature;
 use Mobilo\WpTheme\Models\CartItemModel;
 use Mobilo\WpTheme\Models\CartModel;
 
@@ -53,6 +52,7 @@ class MobiloCartShortcode
                 'update_cart_item_quantity' => 'mc_update_cart_item_quantity',
                 'get_cart_data' => 'mc_get_cart_data',
                 'add_upsell_all' => 'mc_add_upsell_all',
+                'update_cart_plan' => 'mc_update_cart_plan',
             ];
 
             wp_localize_script('mobilo-cart-js', 'mobiloCart', [

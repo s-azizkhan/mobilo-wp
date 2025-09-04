@@ -25,7 +25,7 @@ class CartPageTemplate extends PageTemplateLoader
         $autoApplyCouponPluginInstance = \WC_SC_Auto_Apply_Coupon::get_instance();
         add_action('woocommerce_ajax_after_added_to_cart', [$autoApplyCouponPluginInstance, 'auto_apply_coupons']);
         // if above query params are set(?product_sku=MBC&sku=MCP_PRO), empty the cart & set the plan sku in cookie & add the product to cart
-        $plan = PlanFeature::getCartPlan();
+        $plan = PlanFeature::get_cart_plan();
         if (isset($_GET['product_sku'])) {
             if (!empty($plan)) {
                 // check if product sku is valid
@@ -66,6 +66,19 @@ class CartPageTemplate extends PageTemplateLoader
     public function handle_cart_quantity_update()
     {
         // rearrage the cart quantity
-        PlanFeature::checkProductsInCart();
+        PlanFeature::check_products_in_cart();
+    }
+    public static function mark_plan_manual_updated()
+    {
+        $cookie_key = MOBILO_PREFIX . 'manual_plan_update';
+        // set cookie for 10 min
+        mc_set_cookie($cookie_key, 1, MINUTE_IN_SECONDS * 10);
+    }
+
+    public static function is_plan_manual_updated()
+    {
+        $cookie_key = MOBILO_PREFIX . 'manual_plan_update';
+        $res = mc_get_cookie($cookie_key, 0);
+        return $res == 1;
     }
 }

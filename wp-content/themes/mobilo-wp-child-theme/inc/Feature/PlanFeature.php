@@ -3,6 +3,7 @@
 namespace Mobilo\WpTheme\Feature;
 
 use Mobilo\WpTheme\Feature\BaseFeature;
+use Mobilo\WpTheme\PageTemplates\CartPageTemplate;
 
 defined('ABSPATH') || exit;
 
@@ -78,7 +79,7 @@ class PlanFeature extends BaseFeature
      *
      * @return array|null|string The plan data array or null if not found.
      */
-    public static function getCartPlan($return_only_sku = false)
+    public static function get_cart_plan($return_only_sku = false)
     {
         // 1. Try to get plan SKU from user meta
         $planSku = NewPlansUserMeta::get_plan_sku();
@@ -153,7 +154,7 @@ class PlanFeature extends BaseFeature
      * @return void
      */
 
-    public static function checkProductsInCart(): void
+    public static function check_products_in_cart(): void
     {
         try {
             $cart = mc_get_cart();
@@ -167,7 +168,7 @@ class PlanFeature extends BaseFeature
             }
 
             // Get the plan
-            $plan_sku = $plan_upgrade_sku ? $plan_upgrade_sku : self::getCartPlan(true);
+            $plan_sku = $plan_upgrade_sku ? $plan_upgrade_sku : self::get_cart_plan(true);
             // Get the product ID associated with the plan SKU.
             $plan_product_id = wc_get_product_id_by_sku($plan_sku);
             $plan = wc_get_product($plan_product_id);
@@ -234,18 +235,22 @@ class PlanFeature extends BaseFeature
                 return;
             }
 
-            // plan quantity
-            $plan_cart_item = mc_get_cart_item_by_product_sku($plan_sku);
-            if ($plan_cart_item) {
-                WC()->cart->set_quantity($plan_cart_item['key'], $plan_quantity);
-            } else {
-                $result = WC()->cart->add_to_cart($plan_product_id, $plan_quantity);
-                if (!$result) {
-                    mobilo_log(__METHOD__, "Failed to add plan to cart", 'error', [
-                        'plan_product_id' => $plan_product_id,
-                        'plan_quantity' => $plan_quantity,
-                    ]);
+            // plan quantity update, if not manual updated
+            if (!CartPageTemplate::is_plan_manual_updated()) {
+                $plan_cart_item = mc_get_cart_item_by_product_sku($plan_sku);
+                if ($plan_cart_item) {
+                    WC()->cart->set_quantity($plan_cart_item['key'], $plan_quantity);
+                } else {
+                    $result = WC()->cart->add_to_cart($plan_product_id, $plan_quantity);
+                    if (!$result) {
+                        mobilo_log(__METHOD__, "Failed to add plan to cart", 'error', [
+                            'plan_product_id' => $plan_product_id,
+                            'plan_quantity' => $plan_quantity,
+                        ]);
+                    }
                 }
+            } else {
+                mobilo_log(__METHOD__, "Plan manual updated, skipping plan quantity update", 'info');
             }
 
             if ($accessories_count > 0) {
@@ -537,7 +542,7 @@ class PlanFeature extends BaseFeature
                 return;
             }
             mobilo_log(__METHOD__, "maybeUpdateCart called after opt", "info");
-            self::checkProductsInCart();
+            self::check_products_in_cart();
         } catch (Throwable $th) {
             mobilo_log(__METHOD__, $th->getMessage());
         }

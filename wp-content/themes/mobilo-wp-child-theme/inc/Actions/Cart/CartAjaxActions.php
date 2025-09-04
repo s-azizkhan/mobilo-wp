@@ -40,6 +40,7 @@ class CartAjaxActions
         $this->add_action(new RemoveCartItemAction());
         $this->add_action(new GetCartDataAction());
         $this->add_action(new AddUpsellAllAction());
+        $this->add_action(new CartPlanUpdateAction());
     }
 
     /**
@@ -66,6 +67,7 @@ class CartAjaxActions
             'remove_item' => RemoveCartItemAction::class,
             'get_cart_data' => GetCartDataAction::class,
             'add_upsell_all' => AddUpsellAllAction::class,
+            'update_cart_plan' => CartPlanUpdateAction::class,
         ];
 
         foreach ($action_names as $action_name) {

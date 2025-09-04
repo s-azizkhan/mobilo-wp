@@ -266,6 +266,15 @@ function mc_empty_cart()
     }
     // empty the cart
     $cart->empty_cart();
+    // Clear the cart cookie 
+    // TODO: add more cookie keys here
+    $cookie_keys = [
+        MOBILO_PREFIX . 'manual_plan_update',
+        MOBILO_PREFIX . 'custom_order_mode',
+    ];
+    foreach ($cookie_keys as $cookie_key) {
+        mc_set_cookie($cookie_key, '', time() - 3600);
+    }
     return true;
 }
 
@@ -302,4 +311,10 @@ function mc_get_cookie($key, $default = '')
 {
     $data = isset($_COOKIE[$key]) ? $_COOKIE[$key] : $default;
     return $data;
+}
+
+function mc_set_cookie($key, $val = '', $ttl = 2147483647)
+{
+    setcookie($key, $val, $ttl, '/');
+    return true;
 }
