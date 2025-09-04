@@ -67,6 +67,7 @@
         "wpackagist-plugin/plugin-load-filter": "*",
         "wpackagist-plugin/plugin-organizer": "*",
         "wpackagist-plugin/redis-cache": "*",
+        "wpackagist-plugin/redirection": "*",
         "wpackagist-plugin/taxjar-simplified-taxes-for-woocommerce": "*",
         "wpackagist-plugin/updraftplus": "*",
         "wpackagist-plugin/user-menus": "*",

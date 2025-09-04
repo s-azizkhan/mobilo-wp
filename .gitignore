@@ -5,6 +5,8 @@
 *.log
 .env
 composer.lock
+node_modules
+package-lock.json
 # wp-config.php
 *.az
 *.bk
@@ -75,3 +77,4 @@ wp-content/plugins/wp-db-backup/
 wp-content/plugins/wp-file-manager/
 wp-content/plugins/wp-mail-logging/
 wp-content/plugins/wp-mail-smtp/
+wp-content/plugins/redirection/
