@@ -7,6 +7,7 @@ use Mobilo\WpTheme\Actions\Cart\UpdateCartQuantityAction;
 use Mobilo\WpTheme\Actions\Cart\RemoveCartItemAction;
 use Mobilo\WpTheme\Actions\Cart\GetCartDataAction;
 use Mobilo\WpTheme\Actions\Cart\AddUpsellAllAction;
+use Mobilo\WpTheme\Actions\Cart\CartPlanUpdateAction;
 use Mobilo\WpTheme\Actions\MobiloAjaxAction;
 
 defined('ABSPATH') || exit;
@@ -35,12 +36,36 @@ class CartAjaxActions
     private function load_default_actions()
     {
 
-        $this->add_action(new AddToCartAction());
-        $this->add_action(new UpdateCartQuantityAction());
-        $this->add_action(new RemoveCartItemAction());
-        $this->add_action(new GetCartDataAction());
-        $this->add_action(new AddUpsellAllAction());
-        $this->add_action(new CartPlanUpdateAction());
+        try {
+            $this->add_action(new AddToCartAction());
+        } catch (\Throwable $e) {
+            error_log('Failed to add AddToCartAction: ' . $e->getMessage());
+        }
+        try {
+            $this->add_action(new UpdateCartQuantityAction());
+        } catch (\Throwable $e) {
+            error_log('Failed to add UpdateCartQuantityAction: ' . $e->getMessage());
+        }
+        try {
+            $this->add_action(new RemoveCartItemAction());
+        } catch (\Throwable $e) {
+            error_log('Failed to add RemoveCartItemAction: ' . $e->getMessage());
+        }
+        try {
+            $this->add_action(new GetCartDataAction());
+        } catch (\Throwable $e) {
+            error_log('Failed to add GetCartDataAction: ' . $e->getMessage());
+        }
+        try {
+            $this->add_action(new AddUpsellAllAction());
+        } catch (\Throwable $e) {
+            error_log('Failed to add AddUpsellAllAction: ' . $e->getMessage());
+        }
+        try {
+            $this->add_action(new CartPlanUpdateAction());
+        } catch (\Throwable $e) {
+            error_log('Failed to add CartPlanUpdateAction: ' . $e->getMessage());
+        }
     }
 
     /**
