@@ -1,5 +1,5 @@
 .vscode
-vendor
+# vendor
 /json
 *.lock
 *.az
