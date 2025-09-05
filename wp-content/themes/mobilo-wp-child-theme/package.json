@@ -8,7 +8,8 @@
     "build:cart": "tailwindcss -i ./assets/css/cart.css -o ./assets/dist/cart.css",
     "watch:cart": "tailwindcss -i ./assets/css/cart.css -o ./assets/dist/cart.css --watch"
   },
-  "devDependencies": {
-    "tailwindcss": "^3.4.0"
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
   }
 }
