@@ -65,7 +65,7 @@ class EDOFeature
 
         // add_action('init', [$this, 'init_ajax'], 10);
         // add_action('woocommerce_applied_coupon', [$this, 'set_org_from_coupon'], 10);
-        add_action('wp_head', [$this, 'lwmc_enqueue_checkout_custom_scripts']);
+        add_action('wp_head', [$this, 'enqueue_checkout_custom_scripts']);
         add_action('cfw_checkout_after_main_container', [$this, 'enqueue_feat_script'], 10000 * 99999);
     }
 
@@ -106,7 +106,7 @@ class EDOFeature
     }
 
     // enqueue a checkout js script
-    public function lwmc_enqueue_checkout_custom_scripts()
+    public function enqueue_checkout_custom_scripts()
     {
         if (is_checkout() || is_page('checkout')) {
             $nonce = wp_create_nonce('mobilo_react_ajax_nonce');

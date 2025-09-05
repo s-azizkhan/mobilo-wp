@@ -2,7 +2,6 @@
 
 namespace Mobilo\WpTheme\PageTemplates;
 
-use Mobilo\WpTheme\Feature\EDOFeature;
 use Mobilo\WpTheme\Feature\OrganizationIdManager;
 use Mobilo\WpTheme\Feature\OrderProration;
 use Mobilo\WpTheme\Services\CouponLinkSupportService;
@@ -26,7 +25,6 @@ class CommonPageTemplate extends PageTemplateLoader
 
         $orderProration = new OrderProration();
         $orderProration->init();
-
     }
 
     public function empty_cart()
