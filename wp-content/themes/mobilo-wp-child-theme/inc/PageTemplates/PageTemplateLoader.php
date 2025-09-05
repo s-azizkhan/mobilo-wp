@@ -22,7 +22,7 @@ abstract class PageTemplateLoader
             // Initialize the template loader
             $current_url = home_url(add_query_arg([], $_SERVER["REQUEST_URI"]));
             if (strpos($current_url, $this->pageId) || $force) {
-                add_action('init', [$this, 'init']);
+                add_action('wp_loaded', [$this, 'init']);
                 return true;
             }
             return false;

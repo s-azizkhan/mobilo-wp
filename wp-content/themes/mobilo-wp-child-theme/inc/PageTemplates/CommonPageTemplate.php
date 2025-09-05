@@ -4,6 +4,7 @@ namespace Mobilo\WpTheme\PageTemplates;
 
 use Mobilo\WpTheme\Feature\EDOFeature;
 use Mobilo\WpTheme\Feature\OrganizationIdManager;
+use Mobilo\WpTheme\Feature\OrderProration;
 use Mobilo\WpTheme\Services\CouponLinkSupportService;
 
 defined('ABSPATH') || exit;
@@ -22,6 +23,9 @@ class CommonPageTemplate extends PageTemplateLoader
         if (env('WP_ENV') === 'prod') {
             add_filter('show_admin_bar', '__return_false');
         }
+
+        $orderProration = new OrderProration();
+        $orderProration->init();
 
     }
 
