@@ -162,7 +162,7 @@ class PlanFeature extends BaseFeature
                 return;
             }
 
-            $plan_upgrade_sku = PlanUpgradeFeature::isPlanUpgradeModeEnabled();
+            $plan_upgrade_sku = PlanUpgradeFeature::is_plan_upgrade_mode_enabled();
             if ($plan_upgrade_sku && !self::is_valid_plan_sku($plan_upgrade_sku)) {
                 mobilo_log(__METHOD__, "Invalid plan upgrade found on cookie, sku: {$plan_upgrade_sku}");
             }
@@ -257,7 +257,7 @@ class PlanFeature extends BaseFeature
                 self::set_accessories_quantity($card_count);
             }
             // If plan upgrade or custom order mode is enabled, adjust accessories and skip further processing.
-            if (!PlanUpgradeFeature::isPlanUpgradeModeEnabled() || !self::isCustomOrderModeEnabled()) {
+            if (!PlanUpgradeFeature::is_plan_upgrade_mode_enabled() || !self::is_custom_order_mode_enabled()) {
                 return;
             }
 
@@ -555,10 +555,10 @@ class PlanFeature extends BaseFeature
      * @version 1.0.0
      * @return void
      */
-    public static function enableCustomOrderMode()
+    public static function enable_custom_order_mode()
     {
         // disable the upgrade mode if enabled
-        PlanUpgradeFeature::disablePlanUpgradeMode();
+        PlanUpgradeFeature::disable_plan_upgrade_mode();
         setcookie(self::$customOrderCookieKey, '1', time() + 10 * 60, '/'); // for 10 min
     }
 
@@ -569,9 +569,9 @@ class PlanFeature extends BaseFeature
      * @version 1.0.0
      * @return void
      */
-    public static function disableCustomOrderMode()
+    public static function disable_custom_order_mode()
     {
-        if (self::isCustomOrderModeEnabled()) {
+        if (self::is_custom_order_mode_enabled()) {
             setcookie(self::$customOrderCookieKey, '', time() - 3600, '/');
         }
     }
@@ -583,7 +583,7 @@ class PlanFeature extends BaseFeature
      * @version 1.0.0
      * @return bool
      */
-    public static function isCustomOrderModeEnabled()
+    public static function is_custom_order_mode_enabled()
     {
         return isset($_COOKIE[self::$customOrderCookieKey]) && $_COOKIE[self::$customOrderCookieKey] == '1';
     }

@@ -1,0 +1,20 @@
+/* org-proration.css */
+.notice, .error {
+    display: none;
+}
+#orgProrationTable {
+    border-radius: 8px 8px 0 0;
+}
+
+.dataTables_length select {
+    padding-right: 23px !important;
+}
+
+div#orgProrationTable_filter {
+    margin-bottom: 10px;
+}
+
+.lwmc_is_org_admin {
+    background: white;
+    border: 1px solid red;
+}

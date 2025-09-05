@@ -25,7 +25,7 @@ class PlanUpgradeFeature extends BaseFeature
 
     public function actionInit()
     {
-        add_action('woocommerce_thankyou', [$this, 'disablePlanUpgradeMode']);
+        add_action('woocommerce_thankyou', [$this, 'disable_plan_upgrade_mode']);
         add_action('template_redirect', [$this, 'checkPlanUpgradeModeRedirection']);
 
         // try {
@@ -47,10 +47,10 @@ class PlanUpgradeFeature extends BaseFeature
         }
 
         // If the plan upgrade mode is enabled, perform the redirection.
-        if (self::isPlanUpgradeModeEnabled()) {
+        if (self::is_plan_upgrade_mode_enabled()) {
             // If the cart is empty, disable the plan upgrade mode and return.
             if (WC()->cart->is_empty()) {
-                self::disablePlanUpgradeMode();
+                self::disable_plan_upgrade_mode();
                 return;
             }
 
@@ -64,7 +64,7 @@ class PlanUpgradeFeature extends BaseFeature
      * Checks if the plan upgrade mode is enabled.
      *
      */
-    public static function isPlanUpgradeModeEnabled(): ?string
+    public static function is_plan_upgrade_mode_enabled(): ?string
     {
         global $lwmc_plan_upgrade_mode;
 
@@ -81,17 +81,17 @@ class PlanUpgradeFeature extends BaseFeature
      * @param string $planSku
      *
      */
-    public static function enablePlanUpgradeMode(string $planSku): void
+    public static function enable_plan_upgrade_mode(string $planSku): void
     {
         try {
 
-            if (!PlanFeature::isValidPlanSku($planSku)) {
+            if (!PlanFeature::is_valid_plan_sku($planSku)) {
                 mobilo_log(__METHOD__, "Invalid planSku provided sku: {$planSku}");
                 return;
             }
 
             // disable custom purchase mode if enabled
-            PlanFeature::disableCustomOrderMode();
+            PlanFeature::disable_custom_order_mode();
 
             setcookie(self::$cookieKey, $planSku, time() + 10 * 60, '/'); // for 10min
 
@@ -107,10 +107,10 @@ class PlanUpgradeFeature extends BaseFeature
      * Disables the plan upgrade mode by clearing the corresponding cookie and setting the global variable.
      *
      */
-    public static function disablePlanUpgradeMode(): void
+    public static function disable_plan_upgrade_mode(): void
     {
         try {
-            if (!self::isPlanUpgradeModeEnabled()) {
+            if (!self::is_plan_upgrade_mode_enabled()) {
                 return;
             }
             setcookie(self::$cookieKey, '', time() - 3600, '/');
