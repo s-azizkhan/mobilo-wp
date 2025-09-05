@@ -587,4 +587,29 @@ class PlanFeature extends BaseFeature
     {
         return isset($_COOKIE[self::$customOrderCookieKey]) && $_COOKIE[self::$customOrderCookieKey] == '1';
     }
+
+    /**
+     * Checks if the cart contains any products with card SKUs for trial modification
+     *
+     * @return bool True if cart contains card SKUs, false otherwise
+     */
+    public static function cart_contains_physical_card(): bool
+    {
+        $cart = mc_get_cart();
+        if (!$cart || $cart->is_empty()) {
+            return false;
+        }
+
+        $card_skus = self::$cardsSku;
+        $cart_items = $cart->get_cart_contents();
+
+        foreach ($cart_items as $cart_item) {
+            $product_sku = $cart_item['data']->get_sku();
+            if (in_array($product_sku, $card_skus)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

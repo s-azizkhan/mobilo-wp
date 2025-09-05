@@ -7,6 +7,7 @@ defined('ABSPATH') || exit;
 use Mobilo\WpTheme\Actions\Cart\CartAjaxActions;
 use Mobilo\WpTheme\Feature\EDOFeature;
 use Mobilo\WpTheme\PageTemplates\CartAjaxOnlyPageTemplate;
+use Mobilo\WpTheme\PageTemplates\CheckoutAjaxOnlyPageTemplate;
 use Mobilo\WpTheme\PageTemplates\CheckoutPageTemplate;
 use Mobilo\WpTheme\PageTemplates\CartPageTemplate;
 use Mobilo\WpTheme\PageTemplates\CommonPageTemplate;
@@ -41,8 +42,10 @@ class Enqueue
                 // if ajax request then load ajax actions
                 (new CartAjaxActions())->init();
             }
+            // on checkout only
             if (strpos($_SERVER['HTTP_REFERER'], "checkout")) {
                 (new EDOFeature())->init_ajax();
+                new CheckoutAjaxOnlyPageTemplate();
             }
         }
 
