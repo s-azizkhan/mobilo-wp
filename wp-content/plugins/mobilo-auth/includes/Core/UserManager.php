@@ -15,10 +15,16 @@ if (!defined('ABSPATH')) {
  */
 class UserManager
 {
+    private FirebaseAuth $firebase_auth;
     /**
      * Constructor
      */
     public function __construct()
+    {
+        $this->firebase_auth = new FirebaseAuth();
+    }
+
+    public function init()
     {
         add_action('wp_login', [$this, 'on_user_login'], 10, 2);
         add_action('wp_logout', [$this, 'on_user_logout']);
@@ -48,15 +54,17 @@ class UserManager
             }
 
             $email = $firebase_user->email;
-            $uid = $firebase_user->uid;
+            // $uid = $firebase_user->uid;
 
             // Check if user already exists
             $existing_user = get_user_by('email', $email);
             if ($existing_user) {
                 // Update Firebase ID if not set
-                if (!get_user_meta($existing_user->ID, 'firebase_uid', true)) {
-                    update_user_meta($existing_user->ID, 'firebase_uid', $uid);
-                }
+                // if (!get_user_meta($existing_user->ID, 'firebase_uid', true)) {
+                // update_user_meta($existing_user->ID, 'firebase_uid', $uid);
+                // }
+                $this->store_firebase_user_data($existing_user->ID, $firebase_user);
+
                 return $existing_user;
             }
 
@@ -79,7 +87,7 @@ class UserManager
             $user_id = wp_insert_user($user_data);
 
             if (is_wp_error($user_id)) {
-                $this->log_error('Failed to create WordPress user: ' . $user_id->get_error_message());
+                $this->logError(__METHOD__, 'Failed to create WordPress user: ' . $user_id->get_error_message());
                 return false;
             }
 
@@ -94,9 +102,28 @@ class UserManager
             return get_user_by('id', $user_id);
 
         } catch (Throwable $e) {
-            $this->log_error('Error creating WordPress user: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error creating WordPress user: ' . $e->getMessage());
             return false;
         }
+    }
+
+    public function update_firebase_user_password($wp_user, $password)
+    {
+        $firebase_uid = $this->get_firebase_uid_by_wordpress_id($wp_user->ID);
+        if (empty($firebase_uid)) {
+            // get email from user
+            $email = $wp_user->user_email;
+            if (!$email) {
+                return new \WP_Error('email_not_found', __('Email not found', 'mobilo-auth'));
+            }
+            $firebase_uid = $this->get_firebase_uid_by_email($email);
+        }
+        if (!$firebase_uid) {
+            return new \WP_Error('firebase_uid_not_found', __('Firebase UID not found', 'mobilo-auth'));
+        }
+        $this->firebase_auth->changeUserPassword($firebase_uid, $password);
+        $this->logError(__METHOD__, sprintf('Firebase user password updated for firebase uid: %s, wp-user id: %s', $firebase_uid, $wp_user->ID), 'info');
+        return true;
     }
 
     /**
@@ -166,7 +193,7 @@ class UserManager
             $result = wp_update_user($user_data);
 
             if (is_wp_error($result)) {
-                $this->log_error('Failed to update WordPress user: ' . $result->get_error_message());
+                $this->logError(__METHOD__, 'Failed to update WordPress user: ' . $result->get_error_message());
                 return false;
             }
 
@@ -176,7 +203,7 @@ class UserManager
             return true;
 
         } catch (Throwable $e) {
-            $this->log_error('Error updating WordPress user: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error updating WordPress user: ' . $e->getMessage());
             return false;
         }
     }
@@ -193,6 +220,15 @@ class UserManager
         ]);
 
         return !empty($users) ? $users[0]->ID : false;
+    }
+
+    public function get_firebase_uid_by_email($email)
+    {
+        $firebase_user = $this->firebase_auth->getUserByEmail($email);
+        if (!$firebase_user) {
+            return false;
+        }
+        return $firebase_user->uid;
     }
 
     public static function get_firebase_uid_by_wordpress_id($wordpress_id)
@@ -212,8 +248,7 @@ class UserManager
                 return false;
             }
 
-            $firebase_auth = new FirebaseAuth();
-            $firebase_user = $firebase_auth->getUserByUid($firebase_uid);
+            $firebase_user = $this->firebase_auth->getUserByUid($firebase_uid);
 
             if (!$firebase_user) {
                 return false;
@@ -222,7 +257,7 @@ class UserManager
             return $this->update_wordpress_user($firebase_user);
 
         } catch (Throwable $e) {
-            $this->log_error('Error syncing user data: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error syncing user data: ' . $e->getMessage());
             return false;
         }
     }
@@ -242,7 +277,7 @@ class UserManager
             }
 
         } catch (Throwable $e) {
-            $this->log_error('Error on user login: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error on user login: ' . $e->getMessage());
         }
     }
 
@@ -259,7 +294,7 @@ class UserManager
             setcookie('mobilo_auth_token', '', time() - 3600, '/', '', is_ssl(), true);
 
         } catch (Throwable $e) {
-            $this->log_error('Error on user logout: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error on user logout: ' . $e->getMessage());
         }
     }
 
@@ -273,7 +308,7 @@ class UserManager
             // update_user_meta($user_id, 'registration_date', current_time('mysql'));
             // update_user_meta($user_id, 'user_source', 'wordpress');
         } catch (Throwable $e) {
-            $this->log_error('Error on user registration: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error on user registration: ' . $e->getMessage());
         }
     }
 
@@ -293,7 +328,7 @@ class UserManager
             }
 
         } catch (Throwable $e) {
-            $this->log_error('Error on user update: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error on user update: ' . $e->getMessage());
         }
     }
 
@@ -313,7 +348,7 @@ class UserManager
             delete_user_meta($user_id, 'firebase_custom_claims');
 
         } catch (Throwable $e) {
-            $this->log_error('Error on user deletion: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error on user deletion: ' . $e->getMessage());
         }
     }
 
@@ -333,8 +368,6 @@ class UserManager
                 return false;
             }
 
-            $firebase_auth = new FirebaseAuth();
-
             $user_data = [];
             if ($user->display_name) {
                 $user_data['display_name'] = $user->display_name;
@@ -344,13 +377,13 @@ class UserManager
             }
 
             if (!empty($user_data)) {
-                $firebase_auth->updateUser($firebase_uid, $user_data);
+                $this->firebase_auth->updateUser($firebase_uid, $user_data);
             }
 
             return true;
 
         } catch (Throwable $e) {
-            $this->log_error('Error syncing to Firebase: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error syncing to Firebase: ' . $e->getMessage());
             return false;
         }
     }
@@ -466,17 +499,20 @@ class UserManager
 
             $message = sprintf(
                 __('Hello %s,
+                    <br>
+                    Welcome to %s! Your account has been created successfully.
 
-Welcome to %s! Your account has been created successfully.
+                    Your login credentials:
+                    <br>
+                    Username: %s
+                    Password: %s
 
-Your login credentials:
-Username: %s
-Password: %s
+                    You can log in at: %s
+                    <br>
 
-You can log in at: %s
-
-Best regards,
-%s Team', 'mobilo-auth'),
+                    Best regards,
+                    <br>
+                    %s Team', 'mobilo-auth'),
                 $user->display_name,
                 get_bloginfo('name'),
                 $user->user_login,
@@ -490,7 +526,7 @@ Best regards,
             return wp_mail($to, $subject, $message, $headers);
 
         } catch (Throwable $e) {
-            $this->log_error('Error sending welcome email: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error sending welcome email: ' . $e->getMessage());
             return false;
         }
     }
@@ -498,12 +534,12 @@ Best regards,
     /**
      * Log error message
      */
-    private function log_error($message, $level = 'error')
+    private function logError($from, $message, $level = 'error')
     {
-        if (function_exists('mobilo_log')) {
-            mobilo_log(__METHOD__, $message, $level);
+        if (function_exists('mobilo_auth_log')) {
+            mobilo_auth_log($from, $message, $level);
         } else {
-            error_log("Mobilo Auth UserManager: $message");
+            error_log("Mobilo Auth UserManager[$from]: $message");
         }
     }
 }

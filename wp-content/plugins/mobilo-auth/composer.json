@@ -35,7 +35,10 @@
     "autoload": {
         "psr-4": {
             "MobiloAuth\\": "includes/"
-        }
+        },
+        "files": [
+            "includes/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

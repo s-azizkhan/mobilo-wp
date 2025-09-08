@@ -49,11 +49,6 @@ class AuthenticationHooks
      */
     public function authenticate_user($user, $username, $password)
     {
-        // If already authenticated, return user
-        if ($user instanceof \WP_User) {
-            return $user;
-        }
-
         // Check if Firebase auth is enabled
         $settings = new Settings();
         if (!$settings->is_firebase_auth_enabled()) {
@@ -64,11 +59,13 @@ class AuthenticationHooks
         if (empty($username)) {
             return $user;
         }
+        // get user email from username
+        $user_email = filter_var($username, FILTER_VALIDATE_EMAIL) ? $username : get_user_by('login', $username)->user_email;
 
         try {
             // Try Firebase authentication
             $firebase_auth = new FirebaseAuth();
-            $firebase_result = $firebase_auth->signInWithEmailAndPassword($username, $password);
+            $firebase_result = $firebase_auth->signInWithEmailAndPassword($user_email, $password);
 
             if (is_wp_error($firebase_result)) {
                 // Firebase auth failed, return error
@@ -76,7 +73,7 @@ class AuthenticationHooks
             }
 
             // Firebase auth successful, get or create WordPress user
-            $firebase_user = $firebase_auth->getUserByEmail($username);
+            $firebase_user = $firebase_auth->getUserByEmail($user_email);
             if (!$firebase_user) {
                 return new \WP_Error('firebase_user_not_found', __('Firebase user not found', 'mobilo-auth'));
             }
@@ -90,10 +87,9 @@ class AuthenticationHooks
             }
 
             // Log the successful authentication
-            $this->log_auth_success($wordpress_user->ID, 'firebase');
+            $this->log_auth_success($wordpress_user->ID, __METHOD__);
 
             return $wordpress_user;
-
         } catch (Throwable $e) {
             $this->log_error('Firebase authentication error: ' . $e->getMessage());
             return new \WP_Error('firebase_auth_error', __('Firebase authentication error', 'mobilo-auth'));
@@ -109,7 +105,7 @@ class AuthenticationHooks
         if (!$settings->is_firebase_auth_enabled()) {
             return;
         }
-        ?>
+?>
         <div id="mobilo-auth-firebase-login" style="display: none;">
             <p>
                 <label for="firebase_token"><?php _e('Firebase Token', 'mobilo-auth'); ?></label>
@@ -122,12 +118,12 @@ class AuthenticationHooks
             </p>
         </div>
         <script>
-            jQuery(document).ready(function ($) {
+            jQuery(document).ready(function($) {
                 // Show Firebase login option
                 $('#mobilo-auth-firebase-login').show();
 
                 // Handle Firebase login
-                $('#mobilo-auth-login-btn').on('click', function () {
+                $('#mobilo-auth-login-btn').on('click', function() {
                     var token = $('#firebase_token').val();
                     if (token) {
                         // Submit Firebase token for authentication
@@ -140,7 +136,7 @@ class AuthenticationHooks
                 });
             });
         </script>
-        <?php
+    <?php
     }
 
     /**
@@ -152,7 +148,7 @@ class AuthenticationHooks
         if (!$settings->is_firebase_auth_enabled()) {
             return;
         }
-        ?>
+    ?>
         <div id="mobilo-auth-firebase-register">
             <p>
                 <label for="firebase_email"><?php _e('Email', 'mobilo-auth'); ?></label>
@@ -173,8 +169,8 @@ class AuthenticationHooks
             </p>
         </div>
         <script>
-            jQuery(document).ready(function ($) {
-                $('#mobilo-auth-register-btn').on('click', function () {
+            jQuery(document).ready(function($) {
+                $('#mobilo-auth-register-btn').on('click', function() {
                     var email = $('#firebase_email').val();
                     var password = $('#firebase_password').val();
                     var displayName = $('#firebase_display_name').val();
@@ -190,7 +186,7 @@ class AuthenticationHooks
                 });
             });
         </script>
-        <?php
+<?php
     }
 
     /**
@@ -236,7 +232,6 @@ class AuthenticationHooks
                 'message' => __('Login successful', 'mobilo-auth'),
                 'redirect_url' => $this->get_login_redirect_url($wordpress_user)
             ]);
-
         } catch (Throwable $e) {
             $this->log_error('AJAX login error: ' . $e->getMessage());
             wp_send_json_error(__('Login failed', 'mobilo-auth'));
@@ -293,7 +288,6 @@ class AuthenticationHooks
                 'message' => __('Registration successful', 'mobilo-auth'),
                 'redirect_url' => $this->get_login_redirect_url($wordpress_user)
             ]);
-
         } catch (Throwable $e) {
             $this->log_error('AJAX registration error: ' . $e->getMessage());
             wp_send_json_error(__('Registration failed', 'mobilo-auth'));
@@ -319,7 +313,6 @@ class AuthenticationHooks
                 'message' => __('Logout successful', 'mobilo-auth'),
                 'redirect_url' => $this->get_logout_redirect_url()
             ]);
-
         } catch (Throwable $e) {
             $this->log_error('AJAX logout error: ' . $e->getMessage());
             wp_send_json_error(__('Logout failed', 'mobilo-auth'));
@@ -527,8 +520,8 @@ class AuthenticationHooks
      */
     private function log_info($message)
     {
-        if (function_exists('mobilo_log')) {
-            mobilo_log(__METHOD__, $message, 'info');
+        if (function_exists('mobilo_auth_log')) {
+            mobilo_auth_log(__METHOD__, $message, 'info');
         } else {
             error_log("Mobilo Auth: $message");
         }
@@ -539,8 +532,8 @@ class AuthenticationHooks
      */
     private function log_error($message)
     {
-        if (function_exists('mobilo_log')) {
-            mobilo_log(__METHOD__, $message, 'error');
+        if (function_exists('mobilo_auth_log')) {
+            mobilo_auth_log(__METHOD__, $message, 'error');
         } else {
             error_log("Mobilo Auth Error: $message");
         }

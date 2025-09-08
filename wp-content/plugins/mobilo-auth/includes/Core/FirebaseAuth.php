@@ -123,7 +123,8 @@ class FirebaseAuth
             $sdk_file = 'firebase_eu.json';
             // $sdk_file = isset($settings['firebase_sdk_file_eu']) ? $settings['firebase_sdk_file_eu'] : $this->config['sdk_file'];
         } else {
-            $sdk_file = 'firebase.json';
+            // TODO: Remove this after testing
+            $sdk_file = 'firebase-dev.json';
             // $sdk_file = isset($settings['firebase_sdk_file']) ? $settings['firebase_sdk_file'] : $this->config['sdk_file'];
         }
 
@@ -235,7 +236,7 @@ class FirebaseAuth
             return $this->auth->createUser($userProperties);
         } catch (Throwable $e) {
             $this->error = $e->getMessage();
-            $this->logError('Error creating user: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error creating user: ' . $e->getMessage());
             return null;
         }
     }
@@ -257,7 +258,7 @@ class FirebaseAuth
 
             return $result;
         } catch (Throwable $e) {
-            $this->logError("Firebase sign in failed for $email: " . $e->getMessage());
+            $this->logError(__METHOD__, "Firebase sign in failed for $email: " . $e->getMessage());
             return new \WP_Error('firebase_auth_fail', $e->getMessage());
         }
     }
@@ -272,7 +273,7 @@ class FirebaseAuth
             $this->storeTokenData($result);
             return $result;
         } catch (Throwable $e) {
-            $this->logError('Error signing in with custom token: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error signing in with custom token: ' . $e->getMessage());
             return new \WP_Error('firebase_auth_fail', $e->getMessage());
         }
     }
@@ -292,7 +293,7 @@ class FirebaseAuth
             $data = $signInResult->data();
             return isset($data['idToken']) ? $data['idToken'] : null;
         } catch (Throwable $e) {
-            $this->logError('Error signing in by user ID: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error signing in by user ID: ' . $e->getMessage());
             return null;
         }
     }
@@ -305,7 +306,7 @@ class FirebaseAuth
         try {
             return $this->auth->verifyIdToken($token);
         } catch (Throwable $e) {
-            $this->logError('Error verifying ID token: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error verifying ID token: ' . $e->getMessage());
             return new \WP_Error('token_verification_failed', $e->getMessage());
         }
     }
@@ -318,7 +319,7 @@ class FirebaseAuth
         try {
             return $this->auth->createCustomToken($uid, $additionalClaims);
         } catch (Throwable $e) {
-            $this->logError('Error creating custom token: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error creating custom token: ' . $e->getMessage());
             return null;
         }
     }
@@ -334,10 +335,10 @@ class FirebaseAuth
             }
 
             $this->auth->sendPasswordResetLink($email);
-            $this->logInfo("Password reset email sent to: $email");
+            $this->logInfo(__METHOD__, "Password reset email sent to: $email");
             return true;
         } catch (Throwable $e) {
-            $this->logError('Error sending password reset: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error sending password reset: ' . $e->getMessage());
             return false;
         }
     }
@@ -348,10 +349,10 @@ class FirebaseAuth
     public function changeUserPassword($uid, $newPassword)
     {
         try {
-            $this->logInfo("Changing password for user: $uid");
+            $this->logInfo(__METHOD__, "Changing password for user: $uid");
             return $this->auth->changeUserPassword($uid, $newPassword);
         } catch (Throwable $e) {
-            $this->logError('Error changing password: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error changing password: ' . $e->getMessage());
             return null;
         }
     }
@@ -383,7 +384,7 @@ class FirebaseAuth
 
             return $this->auth->updateUser($uid, $properties);
         } catch (Throwable $e) {
-            $this->logError('Error updating user: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error updating user: ' . $e->getMessage());
             return null;
         }
     }
@@ -395,10 +396,10 @@ class FirebaseAuth
     {
         try {
             $this->auth->deleteUser($uid);
-            $this->logInfo("User deleted: $uid");
+            $this->logInfo(__METHOD__, "User deleted: $uid");
             return true;
         } catch (Throwable $e) {
-            $this->logError('Error deleting user: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error deleting user: ' . $e->getMessage());
             return false;
         }
     }
@@ -451,7 +452,7 @@ class FirebaseAuth
             // Return false if the token is invalid or not present
             return $result;
         } catch (Throwable $th) {
-            mobilo_log(__METHOD__, $th->getMessage(), 'warning');
+            mobilo_auth_log(__METHOD__, $th->getMessage(), 'warning');
             return false;
         }
     }
@@ -470,7 +471,7 @@ class FirebaseAuth
             setcookie('mobilo_auth_token', json_encode($token_data), time() + HOUR_IN_SECONDS, '/', '', is_ssl(), true);
 
         } catch (Throwable $e) {
-            $this->logError('Error storing token data: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error storing token data: ' . $e->getMessage());
         }
     }
 
@@ -484,7 +485,7 @@ class FirebaseAuth
             $this->storeTokenData($result);
             return $result;
         } catch (Throwable $e) {
-            $this->logError('Error refreshing token: ' . $e->getMessage());
+            $this->logError(__METHOD__, 'Error refreshing token: ' . $e->getMessage());
             return new \WP_Error('token_refresh_failed', $e->getMessage());
         }
     }
@@ -523,10 +524,10 @@ class FirebaseAuth
     /**
      * Log error message
      */
-    private function logError($message, $level = 'error')
+    private function logError($from, $message, $level = 'error')
     {
-        if (function_exists('mobilo_log')) {
-            mobilo_log(__METHOD__, $message, $level);
+        if (function_exists('mobilo_auth_log')) {
+            mobilo_auth_log($from, $message, $level);
         } else {
             error_log("Mobilo Auth: $message");
         }
@@ -535,9 +536,9 @@ class FirebaseAuth
     /**
      * Log info message
      */
-    private function logInfo($message)
+    private function logInfo($from, $message)
     {
-        $this->logError($message, 'info');
+        $this->logError($from, $message, 'info');
     }
 
     /**

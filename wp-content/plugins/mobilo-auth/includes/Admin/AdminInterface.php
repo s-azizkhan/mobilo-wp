@@ -21,10 +21,10 @@ class AdminInterface
         add_action('admin_menu', array($this, 'add_admin_menu'));
         add_action('admin_init', array($this, 'admin_init'));
         add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_scripts'));
-        
+
         // Add admin notices
         add_action('admin_notices', array($this, 'show_admin_notices'));
-        
+
         // Add plugin action links
         add_filter('plugin_action_links_' . plugin_basename(MOBILO_AUTH_PLUGIN_FILE), array($this, 'add_plugin_action_links'));
     }
@@ -113,7 +113,7 @@ class AdminInterface
     {
         // Register settings
         register_setting('mobilo_auth_settings_group', 'mobilo_auth_settings');
-        
+
         // Handle form submissions
         $this->handle_form_submissions();
     }
@@ -189,20 +189,20 @@ class AdminInterface
     private function save_settings()
     {
         $settings = array();
-        
+
         // General settings
         $settings['enable_firebase_auth'] = isset($_POST['enable_firebase_auth']);
         $settings['enable_wordpress_auth'] = isset($_POST['enable_wordpress_auth']);
         $settings['auto_create_users'] = isset($_POST['auto_create_users']);
         $settings['sync_user_meta'] = isset($_POST['sync_user_meta']);
-        
+
         // Firebase settings
         $settings['firebase_project_id'] = sanitize_text_field($_POST['firebase_project_id']);
         $settings['firebase_region'] = sanitize_text_field($_POST['firebase_region']);
         $settings['firebase_sdk_file'] = sanitize_text_field($_POST['firebase_sdk_file']);
         $settings['firebase_api_key'] = sanitize_text_field($_POST['firebase_api_key']);
         $settings['firebase_auth_domain'] = sanitize_text_field($_POST['firebase_auth_domain']);
-        
+
         // Advanced settings
         $settings['enable_debug_logging'] = isset($_POST['enable_debug_logging']);
         $settings['session_timeout'] = absint($_POST['session_timeout']);
@@ -210,7 +210,7 @@ class AdminInterface
         $settings['custom_logout_redirect'] = esc_url_raw($_POST['custom_logout_redirect']);
 
         update_option('mobilo_auth_settings', $settings);
-        
+
         add_settings_error(
             'mobilo_auth_messages',
             'mobilo_auth_message',
@@ -226,7 +226,7 @@ class AdminInterface
     {
         try {
             $firebase_auth = new \MobiloAuth\Core\FirebaseAuth();
-            
+
             if ($firebase_auth->getError()) {
                 add_settings_error(
                     'mobilo_auth_messages',
@@ -272,10 +272,10 @@ class AdminInterface
     private function clear_logs()
     {
         global $wpdb;
-        
+
         $table = $wpdb->prefix . 'mobilo_auth_firebase_logs';
         $wpdb->query("TRUNCATE TABLE $table");
-        
+
         add_settings_error(
             'mobilo_auth_messages',
             'mobilo_auth_message',
@@ -290,7 +290,7 @@ class AdminInterface
     public function render_dashboard_page()
     {
         $stats = \MobiloAuth\Core\Database::get_auth_statistics();
-        include MOBILO_AUTH_PLUGIN_DIR . 'includes/views/admin-dashboard.php';
+        include MOBILO_AUTH_PLUGIN_DIR . 'views/admin-dashboard.php';
     }
 
     /**
@@ -299,7 +299,7 @@ class AdminInterface
     public function render_settings_page()
     {
         $settings = get_option('mobilo_auth_settings', array());
-        include MOBILO_AUTH_PLUGIN_DIR . 'includes/views/admin-settings.php';
+        include MOBILO_AUTH_PLUGIN_DIR . 'views/admin-settings.php';
     }
 
     /**
@@ -308,11 +308,11 @@ class AdminInterface
     public function render_users_page()
     {
         global $wpdb;
-        
+
         $table = $wpdb->prefix . 'mobilo_auth_firebase_users';
         $users = $wpdb->get_results("SELECT * FROM $table WHERE is_active = 1 ORDER BY created_at DESC");
-        
-        include MOBILO_AUTH_PLUGIN_DIR . 'includes/views/admin-users.php';
+
+        include MOBILO_AUTH_PLUGIN_DIR . 'views/admin-users.php';
     }
 
     /**
@@ -321,11 +321,11 @@ class AdminInterface
     public function render_logs_page()
     {
         global $wpdb;
-        
+
         $table = $wpdb->prefix . 'mobilo_auth_firebase_logs';
         $logs = $wpdb->get_results("SELECT * FROM $table ORDER BY created_at DESC LIMIT 100");
-        
-        include MOBILO_AUTH_PLUGIN_DIR . 'includes/views/admin-logs.php';
+
+        include MOBILO_AUTH_PLUGIN_DIR . 'views/admin-logs.php';
     }
 
     /**
@@ -334,7 +334,7 @@ class AdminInterface
     public function render_regions_page()
     {
         $regions = \MobiloAuth\Core\Database::get_active_firebase_regions();
-        include MOBILO_AUTH_PLUGIN_DIR . 'includes/views/admin-regions.php';
+        include MOBILO_AUTH_PLUGIN_DIR . 'views/admin-regions.php';
     }
 
     /**
@@ -342,7 +342,7 @@ class AdminInterface
      */
     public function render_tools_page()
     {
-        include MOBILO_AUTH_PLUGIN_DIR . 'includes/views/admin-tools.php';
+        include MOBILO_AUTH_PLUGIN_DIR . 'views/admin-tools.php';
     }
 
     /**
@@ -360,7 +360,7 @@ class AdminInterface
     {
         $settings_link = '<a href="' . admin_url('admin.php?page=mobilo-auth-settings') . '">' . __('Settings', 'mobilo-auth') . '</a>';
         array_unshift($links, $settings_link);
-        
+
         return $links;
     }
 
@@ -370,7 +370,7 @@ class AdminInterface
     public function get_plugin_status()
     {
         $status = array();
-        
+
         // Check Firebase connection
         try {
             $firebase_auth = new \MobiloAuth\Core\FirebaseAuth();
@@ -380,17 +380,17 @@ class AdminInterface
             $status['firebase_connection'] = 'error';
             $status['firebase_error'] = $e->getMessage();
         }
-        
+
         // Check database tables
         $status['database_tables'] = \MobiloAuth\Core\Database::tables_exist() ? 'success' : 'error';
-        
+
         // Check settings
         $settings = get_option('mobilo_auth_settings', array());
         $status['settings_configured'] = !empty($settings['firebase_project_id']) ? 'success' : 'warning';
-        
+
         // Check PHP version
         $status['php_version'] = version_compare(PHP_VERSION, '7.4', '>=') ? 'success' : 'error';
-        
+
         return $status;
     }
 
@@ -400,15 +400,15 @@ class AdminInterface
     public function get_system_info()
     {
         global $wpdb;
-        
+
         $info = array();
-        
+
         $info['wordpress_version'] = get_bloginfo('version');
         $info['php_version'] = PHP_VERSION;
         $info['mysql_version'] = $wpdb->db_version();
         $info['plugin_version'] = MOBILO_AUTH_VERSION;
         $info['firebase_php_version'] = class_exists('Kreait\Firebase\Factory') ? 'Available' : 'Not Available';
-        
+
         return $info;
     }
 }

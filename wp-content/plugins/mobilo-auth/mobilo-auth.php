@@ -130,20 +130,20 @@ class MobiloAuth
     private function init_components()
     {
         // Initialize settings
-        // $this->settings = new MobiloAuth\Core\Settings();
+        $this->settings = new MobiloAuth\Core\Settings();
 
         // Initialize Firebase Auth
         $this->firebase_auth = new MobiloAuth\Core\FirebaseAuth();
 
         // Initialize user management
-        new MobiloAuth\Core\UserManager();
+        (new MobiloAuth\Core\UserManager())->init();
 
         // Initialize authentication hooks
         new MobiloAuth\Core\AuthenticationHooks();
 
         // Initialize admin interface
         if (is_admin()) {
-            // new MobiloAuth\Admin\AdminInterface();
+            new MobiloAuth\Admin\AdminInterface();
         }
 
         // Initialize REST API
@@ -174,7 +174,7 @@ class MobiloAuth
         add_action('init', [$this, 'load_textdomain']);
 
         // Add settings link to plugins page
-        add_filter('plugin_action_links_' . MOBILO_AUTH_PLUGIN_BASENAME, [$this, 'add_settings_link']);
+        // add_filter('plugin_action_links_' . MOBILO_AUTH_PLUGIN_BASENAME, [$this, 'add_settings_link']);
     }
 
     /**
@@ -211,7 +211,7 @@ class MobiloAuth
         delete_option('mobilo_auth_firebase_config');
 
         // Remove database tables
-        // MobiloAuth\Core\Database::drop_tables();
+        MobiloAuth\Core\Database::drop_tables();
     }
 
     /**
@@ -265,7 +265,7 @@ class MobiloAuth
 // Initialize the plugin
 function mobilo_auth_init()
 {
-    return MobiloAuth::getInstance();
+    return mobilo_auth();
 }
 
 // Start the plugin
